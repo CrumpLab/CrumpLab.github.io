@@ -1,2 +1,1 @@
-# CrumpLab.github.io
-Lab Website
+# Lab website

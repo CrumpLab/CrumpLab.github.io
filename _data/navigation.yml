@@ -1,0 +1,10 @@
+# Site navigation links
+
+- title: Courses
+  url: /projects/
+
+- title: People
+  url: /people/
+
+- title: Lab Resources
+  url: /lresources/

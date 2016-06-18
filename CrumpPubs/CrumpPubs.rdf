@@ -1,0 +1,1401 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/">
+    <bib:Article rdf:about="http://link.springer.com/article/10.3758/BF03193850">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>13</prism:volume>
+                <prism:number>2</prism:number>
+                <dc:title>Psychonomic Bulletin &amp; Review</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gong</foaf:surname>
+                        <foaf:givenname>Zhiyu</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Milliken</foaf:surname>
+                        <foaf:givenname>Bruce</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_755"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://link.springer.com/article/10.3758/BF03193850</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>316–321</bib:pages>
+        <dc:date>2006</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:24:19</dcterms:dateSubmitted>
+        <z:libraryCatalog>Google Scholar</z:libraryCatalog>
+        <dc:title>The context-specific proportion congruent Stroop effect: Location as a contextual cue</dc:title>
+        <z:shortTitle>The context-specific proportion congruent Stroop effect</z:shortTitle>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_755">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/755/Crump et al. - 2006.pdf"/>
+        <dc:title>Crump et al. - 2006.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.tandfonline.com/doi/abs/10.1080/17470210701257685">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1747-0218,%201747-0226"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hannah</foaf:surname>
+                        <foaf:givenname>Samuel D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Allan</foaf:surname>
+                        <foaf:givenname>Lorraine G.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hord</foaf:surname>
+                        <foaf:givenname>Lauren K.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_442"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.tandfonline.com/doi/abs/10.1080/17470210701257685</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>753-761</bib:pages>
+        <dc:date>06/2007</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:23</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Contingency judgements on the fly</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1747-0218,%201747-0226">
+        <prism:volume>60</prism:volume>
+        <prism:number>6</prism:number>
+        <dc:title>The Quarterly Journal of Experimental Psychology</dc:title>
+        <dc:identifier>ISSN 1747-0218, 1747-0226</dc:identifier>
+        <dc:identifier>DOI 10.1080/17470210701257685</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_442">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/442/Crump et al. - 2007.pdf"/>
+        <dc:title>Crump et al. - 2007.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://linkinghub.elsevier.com/retrieve/pii/S1053810006000675">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:10538100"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schmidt</foaf:surname>
+                        <foaf:givenname>James R.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cheesman</foaf:surname>
+                        <foaf:givenname>Jim</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Besner</foaf:surname>
+                        <foaf:givenname>Derek</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_422"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://linkinghub.elsevier.com/retrieve/pii/S1053810006000675</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>421-435</bib:pages>
+        <dc:date>6/2007</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:20</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Contingency learning without awareness: Evidence for implicit control</dc:title>
+        <z:shortTitle>Contingency learning without awareness</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:10538100">
+        <prism:volume>16</prism:volume>
+        <prism:number>2</prism:number>
+        <dc:title>Consciousness and Cognition</dc:title>
+        <dc:identifier>ISSN 10538100</dc:identifier>
+        <dc:identifier>DOI 10.1016/j.concog.2006.06.010</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_422">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/422/Schmidt et al. - 2007.pdf"/>
+        <dc:title>Schmidt et al. - 2007.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/0096-3445.137.2.226">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1939-2222,%200096-3445"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Allan</foaf:surname>
+                        <foaf:givenname>Lorraine G.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hannah</foaf:surname>
+                        <foaf:givenname>Samuel D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Siegel</foaf:surname>
+                        <foaf:givenname>Shepard</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_533"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://doi.apa.org/getdoi.cfm?doi=10.1037/0096-3445.137.2.226</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>226-243</bib:pages>
+        <dc:date>2008</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:14</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>The psychophysics of contingency assessment.</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1939-2222,%200096-3445">
+        <prism:volume>137</prism:volume>
+        <prism:number>2</prism:number>
+        <dc:title>Journal of Experimental Psychology: General</dc:title>
+        <dc:identifier>ISSN 1939-2222, 0096-3445</dc:identifier>
+        <dc:identifier>DOI 10.1037/0096-3445.137.2.226</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_533">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/533/Allan et al. - 2008.pdf"/>
+        <dc:title>Allan et al. - 2008.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://arsenopirita.boumort.cesca.cat/index.php/psi/article/view/155">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>29</prism:volume>
+                <prism:number>1</prism:number>
+                <dc:title>Psicológica</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Milliken</foaf:surname>
+                        <foaf:givenname>Bruce</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ansari</foaf:surname>
+                        <foaf:givenname>Imran</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_492"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://arsenopirita.boumort.cesca.cat/index.php/psi/article/view/155</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>97–114</bib:pages>
+        <dc:date>2008</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:44</dcterms:dateSubmitted>
+        <z:libraryCatalog>Google Scholar</z:libraryCatalog>
+        <dc:title>Shifting views on the symbolic cueing effect: Cueing attention through recent prior experience</dc:title>
+        <z:shortTitle>Shifting views on the symbolic cueing effect</z:shortTitle>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_492">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/492/Crump et al. - 2008.pdf"/>
+        <dc:title>Crump et al. - 2008.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://linkinghub.elsevier.com/retrieve/pii/S1053810007000086">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>17</prism:volume>
+                <prism:number>1</prism:number>
+                <dc:title>Consciousness and Cognition</dc:title>
+                <dc:identifier>ISSN 10538100</dc:identifier>
+                <dc:identifier>DOI 10.1016/j.concog.2007.01.004</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vaquero</foaf:surname>
+                        <foaf:givenname>Joaquín M.M.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Milliken</foaf:surname>
+                        <foaf:givenname>Bruce</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_748"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://linkinghub.elsevier.com/retrieve/pii/S1053810007000086</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>22-36</bib:pages>
+        <dc:date>2008</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:47</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Context-specific learning and control: The roles of awareness, task relevance, and relative salience</dc:title>
+        <z:shortTitle>Context-specific learning and control</z:shortTitle>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_748">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/748/Crump et al. - 2008.pdf"/>
+        <dc:title>Crump et al. - 2008.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.springerlink.com/index/10.3758/PP.70.6.935">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0031-5117,%201532-5962"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Leboe</foaf:surname>
+                        <foaf:givenname>J. P.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wong</foaf:surname>
+                        <foaf:givenname>J.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Stobbe</foaf:surname>
+                        <foaf:givenname>K.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_768"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.springerlink.com/index/10.3758/PP.70.6.935</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>935-945</bib:pages>
+        <dc:date>2008</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:14</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Probe-specific proportion task repetition effects on switching costs</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0031-5117,%201532-5962">
+        <prism:volume>70</prism:volume>
+        <prism:number>6</prism:number>
+        <dc:title>Perception &amp; Psychophysics</dc:title>
+        <dc:identifier>ISSN 0031-5117, 1532-5962</dc:identifier>
+        <dc:identifier>DOI 10.3758/PP.70.6.935</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_768">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/768/Leboe et al. - 2008.pdf"/>
+        <dc:title>Leboe et al. - 2008.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.tandfonline.com/doi/abs/10.1080/17470210902752096">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>62</prism:volume>
+                <prism:number>8</prism:number>
+                <dc:title>The Quarterly Journal of Experimental Psychology</dc:title>
+                <dc:identifier>ISSN 1747-0218, 1747-0226</dc:identifier>
+                <dc:identifier>DOI 10.1080/17470210902752096</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Milliken</foaf:surname>
+                        <foaf:givenname>Bruce</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_643"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.tandfonline.com/doi/abs/10.1080/17470210902752096</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1523-1532</bib:pages>
+        <dc:date>2009</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:41</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>The flexibility of context-specific control: Evidence for context-driven generalization of item-specific control settings</dc:title>
+        <z:shortTitle>The flexibility of context-specific control</z:shortTitle>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_643">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/643/Crump and Milliken - 2009.pdf"/>
+        <dc:title>Crump and Milliken - 2009.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/a0013521">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1878-7290,%201196-1961"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hannah</foaf:surname>
+                        <foaf:givenname>Samuel D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Allan</foaf:surname>
+                        <foaf:givenname>Lorraine G.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Siegel</foaf:surname>
+                        <foaf:givenname>Shepard</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_574"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://doi.apa.org/getdoi.cfm?doi=10.1037/a0013521</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>103-112</bib:pages>
+        <dc:date>2009</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:50</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Cue-interaction effects in contingency judgments using the streamed-trial procedure.</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1878-7290,%201196-1961">
+        <prism:volume>63</prism:volume>
+        <prism:number>2</prism:number>
+        <dc:title>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie expérimentale</dc:title>
+        <dc:identifier>ISSN 1878-7290, 1196-1961</dc:identifier>
+        <dc:identifier>DOI 10.1037/a0013521</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_574">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/574/Hannah et al. - 2009.pdf"/>
+        <dc:title>Hannah et al. - 2009.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://pss.sagepub.com/content/20/10/1296.short">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>20</prism:volume>
+                <prism:number>10</prism:number>
+                <dc:title>Psychological Science</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_815"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://pss.sagepub.com/content/20/10/1296.short</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1296–1300</bib:pages>
+        <dc:date>2009</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:05</dcterms:dateSubmitted>
+        <z:libraryCatalog>Google Scholar</z:libraryCatalog>
+        <dc:title>The left hand doesn't know what the right hand Is doing: The disruptive effects of attention to the hands in skilled typewriting</dc:title>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_815">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/815/Logan and Crump - 2009.pdf"/>
+        <dc:title>Logan and Crump - 2009.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://psyc.queensu.ca/ccbr/Vol4/Siegel.pdf">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:19114745"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Siegel</foaf:surname>
+                        <foaf:givenname>Shepard</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Allan</foaf:surname>
+                        <foaf:givenname>Lorraine G.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hannah</foaf:surname>
+                        <foaf:givenname>Samuel D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_603"/>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://psyc.queensu.ca/ccbr/Vol4/Siegel.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>116-134</bib:pages>
+        <dc:date>2009</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:23</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Applying Signal Detection Theory to Contingency Assessment</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:19114745">
+        <prism:volume>4</prism:volume>
+        <dc:title>Comparative Cognition &amp; Behavior Reviews</dc:title>
+        <dc:identifier>ISSN 19114745</dc:identifier>
+        <dc:identifier>DOI 10.3819/ccbr.2009.40012</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_603">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/603/Siegel et al. - 2009.pdf"/>
+        <dc:title>Siegel et al. - 2009.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://app.psychonomic-journals.org/cgi/doi/10.3758/APP.72.8.2047">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1943-3921,%201943-393X"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_491"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://app.psychonomic-journals.org/cgi/doi/10.3758/APP.72.8.2047</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>2047-2053</bib:pages>
+        <dc:date>2010</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:26</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Contextual control over task-set retrieval</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1943-3921,%201943-393X">
+        <prism:volume>72</prism:volume>
+        <prism:number>8</prism:number>
+        <dc:title>Attention, Perception &amp; Psychophysics</dc:title>
+        <dc:identifier>ISSN 1943-3921, 1943-393X</dc:identifier>
+        <dc:identifier>DOI 10.3758/APP.72.8.2047</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_491">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/491/Crump and Logan - 2010.pdf"/>
+        <dc:title>Crump and Logan - 2010.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/a0018390">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1939-1277,%200096-1523"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_484"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://doi.apa.org/getdoi.cfm?doi=10.1037/a0018390</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>662-672</bib:pages>
+        <dc:date>2010</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:29</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Episodic contributions to sequential control: Learning from a typist's touch.</dc:title>
+        <z:shortTitle>Episodic contributions to sequential control</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1939-1277,%200096-1523">
+        <prism:volume>36</prism:volume>
+        <prism:number>3</prism:number>
+        <dc:title>Journal of Experimental Psychology: Human Perception and Performance</dc:title>
+        <dc:identifier>ISSN 1939-1277, 0096-1523</dc:identifier>
+        <dc:identifier>DOI 10.1037/a0018390</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_484">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/484/Crump and Logan - 2010.pdf"/>
+        <dc:title>Crump and Logan - 2010.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/a0020696">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1939-1285,%200278-7393"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_620"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://doi.apa.org/getdoi.cfm?doi=10.1037/a0020696</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1369-1380</bib:pages>
+        <dc:date>2010</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:38</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Hierarchical control and skilled typing: Evidence for word-level control over the execution of individual keystrokes.</dc:title>
+        <z:shortTitle>Hierarchical control and skilled typing</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1939-1285,%200278-7393">
+        <prism:volume>36</prism:volume>
+        <prism:number>6</prism:number>
+        <dc:title>Journal of Experimental Psychology: Learning, Memory, and Cognition</dc:title>
+        <dc:identifier>ISSN 1939-1285, 0278-7393</dc:identifier>
+        <dc:identifier>DOI 10.1037/a0020696</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_620">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/620/Crump and Logan - 2010.pdf"/>
+        <dc:title>Crump and Logan - 2010.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.springerlink.com/index/10.3758/PBR.17.3.394">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1069-9384,%201531-5320"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_621"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.springerlink.com/index/10.3758/PBR.17.3.394</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>394-399</bib:pages>
+        <dc:date>6/2010</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:17</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Warning: This keyboard will deconstruct— The role of the keyboard in skilled typewriting</dc:title>
+        <z:shortTitle>Warning</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1069-9384,%201531-5320">
+        <prism:volume>17</prism:volume>
+        <prism:number>3</prism:number>
+        <dc:title>Psychonomic Bulletin &amp; Review</dc:title>
+        <dc:identifier>ISSN 1069-9384, 1531-5320</dc:identifier>
+        <dc:identifier>DOI 10.3758/PBR.17.3.394</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_621">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/621/Crump and Logan - 2010.pdf"/>
+        <dc:title>Crump and Logan - 2010.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/a0020886">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>64</prism:volume>
+                <prism:number>3</prism:number>
+                <dc:title>Canadian Journal of Experimental Psychology</dc:title>
+                <dc:identifier>ISSN 1878-7290, 1196-1961</dc:identifier>
+                <dc:identifier>DOI 10.1037/a0020886</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jamieson</foaf:surname>
+                        <foaf:givenname>Randall K.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hannah</foaf:surname>
+                        <foaf:givenname>Samuel D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_548"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://doi.apa.org/getdoi.cfm?doi=10.1037/a0020886</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>153-164</bib:pages>
+        <dc:date>2010</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:56</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>A memory-based account of retrospective revaluation.</dc:title>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_548">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/548/Jamieson et al. - 2010.pdf"/>
+        <dc:title>Jamieson et al. - 2010.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.springerlink.com/index/10.3758/MC.38.4.474">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0090-502X,%201532-5946"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Liu</foaf:surname>
+                        <foaf:givenname>Xianyun</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_774"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.springerlink.com/index/10.3758/MC.38.4.474</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>474-484</bib:pages>
+        <dc:date>6/2010</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:11</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Do you know where your fingers have been? Explicit knowledge of the spatial layout of the keyboard in skilled typists</dc:title>
+        <z:shortTitle>Do you know where your fingers have been?</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0090-502X,%201532-5946">
+        <prism:volume>38</prism:volume>
+        <prism:number>4</prism:number>
+        <dc:title>Memory &amp; Cognition</dc:title>
+        <dc:identifier>ISSN 0090-502X, 1532-5946</dc:identifier>
+        <dc:identifier>DOI 10.3758/MC.38.4.474</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_774">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/774/Liu et al. - 2010.pdf"/>
+        <dc:title>Liu et al. - 2010.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.sciencemag.org/cgi/doi/10.1126/science.1190483">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0036-8075,%201095-9203"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_520"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.sciencemag.org/cgi/doi/10.1126/science.1190483</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>683-686</bib:pages>
+        <dc:date>2010-10-28</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:02</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Cognitive illusions of authorship reveal hierarchical error detection in skilled typists</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0036-8075,%201095-9203">
+        <prism:volume>330</prism:volume>
+        <prism:number>6004</prism:number>
+        <dc:title>Science</dc:title>
+        <dc:identifier>ISSN 0036-8075, 1095-9203</dc:identifier>
+        <dc:identifier>DOI 10.1126/science.1190483</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_520">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/520/Logan and Crump - 2010.pdf"/>
+        <dc:title>Logan and Crump - 2010.pdf</dc:title>
+    </z:Attachment>
+    <bib:BookSection rdf:about="urn:isbn:978-0-12-385527-5">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <prism:volume>54</prism:volume>
+                <dc:identifier>ISBN 978-0-12-385527-5</dc:identifier>
+                <dc:title>Psychology of Learning and Motivation</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>Elsevier</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_501"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://linkinghub.elsevier.com/retrieve/pii/B9780123855275000012</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1-27</bib:pages>
+        <dc:date>2011</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:08</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Hierarchical control of cognitive processes: The case for skilled typewriting</dc:title>
+    </bib:BookSection>
+    <z:Attachment rdf:about="#item_501">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/501/Logan and Crump - 2011.pdf"/>
+        <dc:title>Logan and Crump - 2011.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.frontiersin.org/Cognition/10.3389/fpsyg.2012.00367/abstract">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1664-1078"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bugg</foaf:surname>
+                        <foaf:givenname>Julie M.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_728"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.frontiersin.org/Cognition/10.3389/fpsyg.2012.00367/abstract</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1-16</bib:pages>
+        <dc:date>2012</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:17</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>In support of a distinction between voluntary and stimulus-driven control: A review of the literature on proportion congruent effects</dc:title>
+        <z:shortTitle>In Support of a Distinction between Voluntary and Stimulus-Driven Control</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1664-1078">
+        <prism:volume>3</prism:volume>
+        <prism:number>367</prism:number>
+        <dc:title>Frontiers in Psychology</dc:title>
+        <dc:identifier>ISSN 1664-1078</dc:identifier>
+        <dc:identifier>DOI 10.3389/fpsyg.2012.00367</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_728">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/728/Bugg and Crump - 2012.pdf"/>
+        <dc:title>Bugg and Crump - 2012.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://psycnet.apa.org/journals/pmu/22/2/185/">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://psycnet.apa.org/journals/pmu/22/2/185/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>2012</dc:date>
+        <dcterms:dateSubmitted>2015-03-23 12:25:17</dcterms:dateSubmitted>
+        <z:libraryCatalog>Google Scholar</z:libraryCatalog>
+        <dc:title>Review of Guitar zero: The new musician and the science of learning.</dc:title>
+        <z:shortTitle>Review of Guitar zero</z:shortTitle>
+    </bib:Article>
+    <bib:Article rdf:about="http://www.jstor.org/stable/10.1525/mp.2012.30.1.37">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>30</prism:volume>
+                <prism:number>1</prism:number>
+                <dc:title>Music Perception: An Interdisciplinary Journal</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kimbrough</foaf:surname>
+                        <foaf:givenname>Jerry</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_472"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.jstor.org/stable/10.1525/mp.2012.30.1.37</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>37–47</bib:pages>
+        <dc:date>2012</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:35</dcterms:dateSubmitted>
+        <z:libraryCatalog>Google Scholar</z:libraryCatalog>
+        <dc:title>Keeping an eye on guitar skill: Visual representations of guitar chords</dc:title>
+        <z:shortTitle>Keeping an Eye on Guitar Skill</z:shortTitle>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_472">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/472/Crump et al. - 2012.pdf"/>
+        <dc:title>Crump et al. - 2012.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.springerlink.com/index/10.3758/s13420-011-0046-2">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1543-4494,%201543-4508"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jamieson</foaf:surname>
+                        <foaf:givenname>Randall K.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hannah</foaf:surname>
+                        <foaf:givenname>Samuel D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_789"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.springerlink.com/index/10.3758/s13420-011-0046-2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>61-82</bib:pages>
+        <dc:date>2012</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:53</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>An instance theory of associative learning</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1543-4494,%201543-4508">
+        <prism:volume>40</prism:volume>
+        <prism:number>1</prism:number>
+        <dc:title>Learning &amp; Behavior</dc:title>
+        <dc:identifier>ISSN 1543-4494, 1543-4508</dc:identifier>
+        <dc:identifier>DOI 10.3758/s13420-011-0046-2</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_789">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/789/Jamieson et al. - 2012.pdf"/>
+        <dc:title>Jamieson et al. - 2012.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/a0030014">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>142</prism:volume>
+                <dc:title>Journal of Experimental Psychology: General</dc:title>
+                <dc:identifier>ISSN 1939-2222, 0096-3445</dc:identifier>
+                <dc:identifier>DOI 10.1037/a0030014</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew JC</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_742"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://doi.apa.org/getdoi.cfm?doi=10.1037/a0030014</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>692-709</bib:pages>
+        <dc:date>2013</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:32</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Prevention and correction in post-error performance: An ounce of prevention, a pound of cure.</dc:title>
+        <z:shortTitle>Prevention and Correction in Post-Error Performance</z:shortTitle>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_742">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/742/Crump and Logan - 2013.pdf"/>
+        <dc:title>Crump and Logan - 2013.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://dx.plos.org/10.1371/journal.pone.0057410">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1932-6203"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>McDonnell</foaf:surname>
+                        <foaf:givenname>John V.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gureckis</foaf:surname>
+                        <foaf:givenname>Todd M.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gilbert</foaf:surname>
+                        <foaf:givenname>Sam</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <link:link rdf:resource="#item_487"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://dx.plos.org/10.1371/journal.pone.0057410</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>e57410</bib:pages>
+        <dc:date>2013</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:09:59</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Evaluating Amazon's Mechanical Turk as a tool for experimental behavioral research</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1932-6203">
+        <prism:volume>8</prism:volume>
+        <prism:number>3</prism:number>
+        <dc:title>PLoS ONE</dc:title>
+        <dc:identifier>ISSN 1932-6203</dc:identifier>
+        <dc:identifier>DOI 10.1371/journal.pone.0057410</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_487">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/487/Crump et al. - 2013.pdf"/>
+        <dc:title>Crump et al. - 2013.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/a0030512">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>39</prism:volume>
+                <prism:number>3</prism:number>
+                <dc:title>Journal of Experimental Psychology: Human Perception and Performance</dc:title>
+                <dc:identifier>ISSN 1939-1277, 0096-1523</dc:identifier>
+                <dc:identifier>DOI 10.1037/a0030512</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yamaguchi</foaf:surname>
+                        <foaf:givenname>Motonori</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Logan</foaf:surname>
+                        <foaf:givenname>Gordon D.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_551"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://doi.apa.org/getdoi.cfm?doi=10.1037/a0030512</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>678-699</bib:pages>
+        <dc:date>2013</dc:date>
+        <dcterms:dateSubmitted>2013-07-03 14:10:26</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <dc:title>Speed–accuracy trade-off in skilled typewriting: Decomposing the contributions of hierarchical control loops.</dc:title>
+        <z:shortTitle>Speed–accuracy trade-off in skilled typewriting</z:shortTitle>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_551">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/551/Yamaguchi et al. - 2013.pdf"/>
+        <dc:title>Yamaguchi et al. - 2013.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.tandfonline.com/doi/abs/10.1080/09658211.2014.982657">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0965-8211,%201464-0686"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Curtis</foaf:surname>
+                        <foaf:givenname>Evan T.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chubala</foaf:surname>
+                        <foaf:givenname>Chrissy M.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Spear</foaf:surname>
+                        <foaf:givenname>Jackie</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jamieson</foaf:surname>
+                        <foaf:givenname>Randall K.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hockley</foaf:surname>
+                        <foaf:givenname>William E.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>Matthew J. C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2677"/>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.tandfonline.com/doi/abs/10.1080/09658211.2014.982657</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1-12</bib:pages>
+        <dc:date>12/2014</dc:date>
+        <dcterms:dateSubmitted>2015-03-23 12:21:37</dcterms:dateSubmitted>
+        <z:libraryCatalog>CrossRef</z:libraryCatalog>
+        <z:language>en</z:language>
+        <dc:title>False recognition of instruction-set lures</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0965-8211,%201464-0686">
+        <dc:title>Memory</dc:title>
+        <dc:identifier>ISSN 0965-8211, 1464-0686</dc:identifier>
+        <dc:identifier>DOI 10.1080/09658211.2014.982657</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_2677">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2677/Curtis et al. - 2014.pdf"/>
+        <dc:title>Curtis et al. - 2014.pdf</dc:title>
+    </z:Attachment>
+    <bib:Article rdf:about="http://europepmc.org/abstract/med/26372055">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:title>Canadian journal of experimental psychology= Revue canadienne de psychologie experimentale</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>M. J.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_5037"/>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://europepmc.org/abstract/med/26372055</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>2015</dc:date>
+        <dcterms:dateSubmitted>2015-11-03 18:20:18</dcterms:dateSubmitted>
+        <z:libraryCatalog>Google Scholar</z:libraryCatalog>
+        <dc:title>Learning to Selectively Attend From Context-Specific Attentional Histories: A Demonstration and Some Constraints.</dc:title>
+        <z:shortTitle>Learning to Selectively Attend From Context-Specific Attentional Histories</z:shortTitle>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_5037">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/5037/26372055.html"/>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://europepmc.org/abstract/med/26372055</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2015-11-03 18:20:25</dcterms:dateSubmitted>
+        <dc:title>Snapshot</dc:title>
+    </z:Attachment>
+    <bib:BookSection rdf:about="#item_3478">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Book><dc:title>Big Data in Cognitive Science</dc:title></bib:Book>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Behmer</foaf:surname>
+                        <foaf:givenname>Lawrence</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crump</foaf:surname>
+                        <foaf:givenname>M. J. C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jones</foaf:surname>
+                        <foaf:givenname>Michael N.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:date>2016</dc:date>
+        <dc:title>Crunching big data with finger tips: How typists tune their performance towards the statistics of natural language</dc:title>
+    </bib:BookSection>
+</rdf:RDF>
