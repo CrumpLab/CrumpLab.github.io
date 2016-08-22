@@ -5,7 +5,6 @@ date:   2016-08-22
 excerpt: "Psych 3450"
 project: false
 comments: false
-
 ---
 
 Sample Lab Paper with Comments
