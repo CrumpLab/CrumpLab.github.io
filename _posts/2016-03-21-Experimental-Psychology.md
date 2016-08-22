@@ -2,17 +2,16 @@
 layout: post
 title:  "Experimental Psychology"
 date:   2016-06-14
-excerpt: "Psych 3450 Spring 2016"
+excerpt: "Psych 3450 Fall 2016"
 project: true
 tag:
 comments: false
 ---
-This is the class website for sections T2AL, BL, CL, DL & T9AL, BL, CL of Experimental Psychology (PSYC3450W), Spring 2016. Check this site for regular updates to course information.
+This is the class website for sections MTAB, BB, CB, and DB of Experimental Psychology (PSYC3450W), Fall 2016. Check this site for regular updates to course information.
 
 # Professor: Dr. Matthew Crump
 * Lecture Locations:
-  * T2 Sections: Tuesdays, 2:15p-3:55p, 113 NE
-  * T9 Sections: Tuesdays, 9:05a-10:45p, 113 NE
+  * Monday, 12:25pm - 2:05pm, IA -113
 * Office: 4307 James Hall
 * Email: mcrump@brooklyn.cuny.edu
 * Office hours: by appointment
@@ -53,18 +52,19 @@ The details and expectations for each assignment will be posted here throughout 
 
 ## Major Project 1         
 * [Instructions and roadmap for paper 1]()
-  * Background reading: [Roediger & Mcdermott (1995)]()
+  * Background reading: To be handed out in lab
   * Due dates are set by your individual lab instructor
 
 ## Major Project 2
 * [Instructions and roadmap for paper 2]()
-  * Background reading: [Monsell (2003)]()
+  * Background reading: [Yin (1969)]()
+  * Face Inversion Experiment Download PC version
   * Due dates are set by your individual lab instructor
 
 * Downloads
   * Task switching experiment -PC
   * Task switching experiment - Mac
-
+  
 ## Major Project 3 (Final Project)
 * [Instructions for Final Project]()
 * [Individual presentations (Example Powerpoint)]()
