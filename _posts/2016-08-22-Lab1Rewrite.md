@@ -8,30 +8,33 @@ project: false
 comments: false
 ---
 
-Sample Lab Paper with Comments
+# Sample Lab Paper with Comments
 
 
 This webpage provides an in-depth set of comments and revisions for a sample APA research report written for PSYC 3450 Experimental Psychology. The bottom of the page shows two version of the manuscript, the original version, and a revised and edited version. The main body of this webpage breaks down the original paper into sections, and provides discussion on the editing and comments for each section of the manuscript.
 
-Introduction
+## Introduction
 
 ### Original Paragraph #1:
-```
-Rapid changes in technology, social interface and work-place cost cutting have accelerated task switch demands on our society. For example, the ubiquity of cell-phone use seems to result in an almost irresistible instinct to respond to constant interruptions at any time and any place. This creates pressure to adapt to frequent interruption of any current task – even while driving or walking. Does this result in a reduction of response time leading to an increasing risk of avoidable accidents? Another example is the implementation of open office configurations (commonly known as the “bull-pen model”) to reduce overhead costs for businesses. This set-up requires a worker to switch quickly from one task to another due to an inability to control interruptions. Multi-tasking has become a desirable skill in the workplace, but do the costs of repeated task switching degenerate productivity and increase error thus decreasing any cost benefits of the open office model?  Because of the intensification of modern task-switching, it is becoming increasingly relevant to determine if rapid task-switching negatively impacts task performance.
-```
+
+> Rapid changes in technology, social interface and work-place cost cutting have accelerated task switch demands on our society. For example, the ubiquity of cell-phone use seems to result in an almost irresistible instinct to respond to constant interruptions at any time and any place. This creates pressure to adapt to frequent interruption of any current task – even while driving or walking. Does this result in a reduction of response time leading to an increasing risk of avoidable accidents? Another example is the implementation of open office configurations (commonly known as the “bull-pen model”) to reduce overhead costs for businesses. This set-up requires a worker to switch quickly from one task to another due to an inability to control interruptions. Multi-tasking has become a desirable skill in the workplace, but do the costs of repeated task switching degenerate productivity and increase error thus decreasing any cost benefits of the open office model?  Because of the intensification of modern task-switching, it is becoming increasingly relevant to determine if rapid task-switching negatively impacts task performance.
+
+
 ### Paragraph 1: General comments
+
 **The good:** The first paragraph should grab the reader’s attention and communicate the general topic of the research. This opening paragraph does both by relating task-switching performance costs to real-world situations like using cell-phones or working in an open-office environment.
+
 **The bad:** The introduction focuses too strongly on the real-world examples, and a reader of the paper might easily be led to think that this research is about multi-tasking in an open-office environment. Some of the claims made in the introduction are not self-evident and should be supported with citations or other evidence. The transition between the examples and the purpose of the present research is not smooth.
 
 ### Paragraph 1: Sentence by Sentence
 
 Original
 
-	Rapid changes in technology, social interface and work-place cost 	cutting have accelerated task switch demands on our society.
+> Rapid changes in technology, social interface and work-place cost 	cutting have accelerated task switch demands on our society.
 
 Rewrite:
 
-	Everyday situations often require people to juggle the demands of multiple 	tasks.
+> Everyday situations often require people to juggle the demands of multiple 	tasks.
 
 It is not self-evident that these factors are accelerating task switch demands, so this kind of statement should be followed by a citation. Terms like “social interface” and “task switch demands” are not well known, and need to be defined in order for the reader to understand their meaning. This sentence is functioning to introduce the idea that people are commonly faced with task-switching demands in everyday life, and this general idea could be expressed in a more direct, simple, and uncontroversial fashion.
 
