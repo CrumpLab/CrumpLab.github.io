@@ -41,9 +41,9 @@ Lecture notes will always be posted after class. If they are available before cl
 
 # Resources
 
-* Lab manual
+* [Lab manual](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab%20Manual.pdf)
 * Research Resources
-* APA style Microsoft Word Template
+* [APA style Microsoft Word Template](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/lab/APAtemplate.docx)
 * Example writing critique of a lab paper
 
 # Lab Assignments
@@ -64,7 +64,7 @@ The details and expectations for each assignment will be posted here throughout 
 * Downloads
   * Task switching experiment -PC
   * Task switching experiment - Mac
-  
+
 ## Major Project 3 (Final Project)
 * [Instructions for Final Project]()
 * [Individual presentations (Example Powerpoint)]()
