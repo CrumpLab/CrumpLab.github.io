@@ -6,6 +6,7 @@ excerpt: "Psych 3450"
 project: false
 tag:
 comments: false
+category: post
 ---
 
 Sample Lab Paper with Comments
