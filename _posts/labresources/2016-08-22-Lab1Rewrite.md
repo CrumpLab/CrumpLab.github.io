@@ -4,9 +4,8 @@ title:  "Sample Lab Paper with Comments"
 date:   2016-08-22
 excerpt: "Psych 3450"
 project: false
-tag:
 comments: false
-category: post
+
 ---
 
 Sample Lab Paper with Comments
