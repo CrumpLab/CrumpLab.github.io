@@ -7,7 +7,7 @@ comments: false
 ---
 
 # Current Courses
-## [PSYC 3450 Experimental Psychology Fall 2016](https://crumplab.github.io/Courses/Experimental/)
+## [PSYC 3450 Experimental Psychology Fall 2016](https://crumplab.github.io/courses/experimental/)
 
 
 # Previous Courses
