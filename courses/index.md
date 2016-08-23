@@ -1,16 +1,20 @@
 ---
 layout: page
-title: courses
+title: Courses
 tags: [courses]
 date: 2016-08-23
 comments: false
 ---
 
-# Current Courses
+Current Courses
+---
+
 ## [PSYC 3450 Experimental Psychology Fall 2016](https://crumplab.github.io/courses/experimental/)
 
 
-# Previous Courses
+Previous Courses
+---
+
 ## Cognitive Psychology
 
 ## Computer Programming for Psychologists
