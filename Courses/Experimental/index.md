@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "Experimental Psychology"
 date:   2016-06-14
 excerpt: "Psych 3450 Fall 2016"
