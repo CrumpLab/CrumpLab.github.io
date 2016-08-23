@@ -7,7 +7,7 @@ comments: false
 ---
 
 | Current | Info |
-|:--------:|-------:|
+|:--------|-------:|
 |Matthew Crump| PI, email: mcrump@brooklyn.cuny.edu|
 |Lawrence Behmer| Postdoc, email:|
 |Kevonte Mitchell| Doctoral Student, email: |
@@ -15,7 +15,7 @@ comments: false
 |======
 
 | Previous | Info |
-|:--------:|-------:|
+|:--------|-------:|
 |Ashot Balayan|2016: Master's|
 |Niles Uy| 2016: Undergraduate Macaulay Honors|
 |Ana Sanchez| 2016: Undergraduate REU|
