@@ -6,7 +6,7 @@ excerpt: "Psych 3450"
 tags: [writing]
 project: false
 comments: false
-permalink: /courses/experimental/
+permalink: courses/experimental/samplepaper
 ---
 
 # Sample Lab Paper with Comments
