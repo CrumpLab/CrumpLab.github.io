@@ -19,6 +19,8 @@ layout: compress
                     <h1>{{ page.title }}
                       {% if page.project %}
                       <a class="btn zoombtn" href="{{site.url}}/projects/">
+                      {% elseif page.course == 'experimental' %}
+                      <a class="btn zoombtn" href="{{site.url}}/courses/experimental/">
                       {% else %}
                       <a class="btn zoombtn" href="{{site.url}}/posts/">
                       {% endif %}
@@ -27,6 +29,8 @@ layout: compress
                     </h1>
                     <!--<h4>{{ page.date | date_to_string }}</h4>-->
                     </div>
+
+
                     <div>
                     {% if page.pubs %}
                         <p class="post-list ul">{{ page.citation }} <a href="{{ post.download }}"> pdf </a></p>
