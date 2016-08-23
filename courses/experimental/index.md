@@ -9,18 +9,14 @@ comments: false
 ---
 This is the class website for sections MTAB, BB, CB, and DB of Experimental Psychology (PSYC3450W), Fall 2016. Check this site for regular updates to course information.
 
-# Professor: Dr. Matthew Crump
+Professor: Dr. Matthew Crump
 * Lecture Locations:
   * Monday, 12:25pm - 2:05pm, IA -113
 * Office: 4307 James Hall
 * Email: mcrump@brooklyn.cuny.edu
 * Office hours: by appointment
 
-# Course Information
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimental/syllabus)
-
-# Lecture Notes
-Lecture notes will always be posted after class. If they are available before class, they are subject to change.
 
 | Lecture Notes | Links |
 |:--------|:-------:|
@@ -39,7 +35,9 @@ Lecture notes will always be posted after class. If they are available before cl
 |=====
 {: rules="groups"}
 
-# Resources
+Lecture notes will always be posted after class. If they are available before class, they are subject to change.
+
+### Resources
 
 * [Lab manual](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab%20Manual.pdf)
 * [Research Resources](https://crumplab.github.io/courses/experimental/researchresources)
