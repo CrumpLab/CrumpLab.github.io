@@ -12,7 +12,7 @@ Current Courses
 ___
 Previous Courses
 
-| #| Title |Level|
+| PSYC #| Title |Level|
 |:--------|:-------:|
 |3450|Experimental Psychology|Undergrad|
 |3530|Cognitive Psychology|Undergrad|
