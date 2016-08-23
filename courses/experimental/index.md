@@ -18,7 +18,7 @@ Professor: Dr. Matthew Crump
 
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimental/syllabus)
 
-| Lecture Notes | Links |
+| Lecture Notes | Supplementary material |
 |:--------|:-------:|
 | [Lecture 1](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture1.pdf)  | [Chaos in the Brickyard](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Brickyard.pdf)    |
 | [Lecture 2](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture2.pdf)  | [Carter, Ferguson, & Hassin (2011)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/Psychological%20Science-2011-Carter-0956797611414726.pdf) [Replication (2014)](http://econtent.hogrefe.com/doi/full/10.1027/1864-9335/a000178) [Commentary](https://www.researchgate.net/profile/Travis_Carter2/publication/278241189_Commentary_on_the_Attempt_to_Replicate_the_Effect_of_the_American_Flag_on_Increased_Republican_Attitudes/links/5589b1d308ae273b2876d3e5.pdf)|
