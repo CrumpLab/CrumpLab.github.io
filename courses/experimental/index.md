@@ -50,22 +50,26 @@ Lecture notes will always be posted after class. If they are available before cl
 
 The details and expectations for each assignment will be posted here throughout the semester. During the lab you will be expected to complete 3 papers, and several lab projects that do not require full lab reports. For each paper, you will be required to write a complete APA style research report. The final paper involves two in class presentations: one individual presentation, and one group presentation.
 
-## Major Project 1         
-* [Instructions and roadmap for paper 1]()
+## Paper Project 1         
+* [Instructions and roadmap for paper 1](https://crumplab.github.io/courses/experimental/paper1)
   * Background reading: To be handed out in lab
   * Due dates are set by your individual lab instructor
 
-## Major Project 2
+## Mini-Project Resources
+
+* Download for Multi-tasking miniproject
+  * Task switching experiment -PC
+  * Task switching experiment - Mac
+
+## Paper Project 2
 * [Instructions and roadmap for paper 2]()
   * Background reading: [Yin (1969)]()
   * Face Inversion Experiment Download PC version
   * Due dates are set by your individual lab instructor
 
-* Downloads
-  * Task switching experiment -PC
-  * Task switching experiment - Mac
 
-## Major Project 3 (Final Project)
+
+## Paper Project 3 (Final Project)
 * [Instructions for Final Project]()
 * [Individual presentations (Example Powerpoint)]()
 
