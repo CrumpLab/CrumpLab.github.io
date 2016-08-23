@@ -42,7 +42,7 @@ Lecture notes will always be posted after class. If they are available before cl
 # Resources
 
 * [Lab manual](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab%20Manual.pdf)
-* [Research Resources](/researchresources)
+* [Research Resources](https://crumplab.github.io/courses/experimental/researchresources)
 * [APA style Microsoft Word Template](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/lab/APAtemplate.docx)
 * [Example writing critique of a lab paper](https://crumplab.github.io/courses/experimental/samplepaper)
 
