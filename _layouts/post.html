@@ -21,6 +21,8 @@ layout: compress
                       <a class="btn zoombtn" href="{{site.url}}/projects/">
                       {% elsif page.course == 'experimental' %}
                       <a class="btn zoombtn" href="{{site.url}}/courses/experimental/">
+                      {% elsif page.pubs %}
+                      <a class="btn zoombtn" href="{{site.url}}/publications/">
                       {% else %}
                       <a class="btn zoombtn" href="{{site.url}}/posts/">
                       {% endif %}
