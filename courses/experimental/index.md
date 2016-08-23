@@ -68,7 +68,7 @@ The details and expectations for each assignment will be posted here throughout 
 
 
 ## Paper Project 3 (Final Project)
-* [Instructions for Final Project]()
+* [Instructions for Final Project](https://crumplab.github.io/courses/experimental/paper3)
 * [Individual presentations (Example Powerpoint)]()
 
 ## Lab FAQs
