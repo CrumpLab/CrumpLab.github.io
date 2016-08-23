@@ -10,8 +10,6 @@ course: experimental
 permalink: courses/experimental/samplepaper
 ---
 
-there is no title here
-
 This webpage provides an in-depth set of comments and revisions for a sample APA research report written for PSYC 3450 Experimental Psychology. The bottom of the page shows two version of the manuscript, the original version, and a revised and edited version. The main body of this webpage breaks down the original paper into sections, and provides discussion on the editing and comments for each section of the manuscript.
 
 ## Introduction
