@@ -12,8 +12,6 @@ The Human Cognition and Performance lab investigates these questions with experi
 
 [Current and previous lab members](https://crumplab.github.io/people/) include undergraduate, master's , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for running experiments and analyzing data, then you may be interested in joining the team.
 
-## Location
-
 The lab is located in the Department of Psychology at Brooklyn College of CUNY, and affiliated with the [Cognition, Language, and Development training area](http://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognition,-Language,-and-Development) of the Psychology Doctoral program at the Graduate Center of CUNY.
 
 |   Contact   |
