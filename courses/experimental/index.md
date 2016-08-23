@@ -17,7 +17,7 @@ This is the class website for sections MTAB, BB, CB, and DB of Experimental Psyc
 * Office hours: by appointment
 
 # Course Information
-Course Syllabus - all sections
+[Course Syllabus - all sections](https://crumplab.github.io/courses/experimental/syllabus)
 
 # Lecture Notes
 Lecture notes will always be posted after class. If they are available before class, they are subject to change.
