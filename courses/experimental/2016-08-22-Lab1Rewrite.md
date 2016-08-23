@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "Sample Lab Paper with Comments"
 date:   2016-08-22
 excerpt: "Psych 3450"
