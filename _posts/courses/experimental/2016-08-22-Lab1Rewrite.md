@@ -1,11 +1,12 @@
 ---
-layout: page
+layout: post
 title:  "Sample Lab Paper with Comments"
 date:   2016-08-22
 excerpt: "Psych 3450"
 tags: [writing]
 project: false
 comments: false
+permalink: /courses/experimental/
 ---
 
 # Sample Lab Paper with Comments
