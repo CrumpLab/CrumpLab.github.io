@@ -28,7 +28,5 @@ Recent research projects completed in the lab.
 
 |Year|Student|Project|Notes|
 |:---|:------|:------|:----|
-|2016|Ashot Balayan|Subjective Confidence in the Evaluations of Typing Speed:
-Testing the Self-Consistency Model
-|Master's Thesis|
+|2016|Ashot Balayan|Subjective Confidence in the Evaluations of Typing Speed:Testing the Self-Consistency Model|Master's Thesis|
 |2016|Michelle Villavicencio|Aesthetic Preference in Dance Movement: Motor Fluency and the Mere Exposure Effect|Master's Thesis|
