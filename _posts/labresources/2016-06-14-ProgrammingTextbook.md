@@ -22,7 +22,7 @@ This is an in-draft textbook providing a novice-level introduction to computer p
   * Very general ideas and introduction to motivate learning programming
 2. Programming in R Installing R and R Studio
   * Introduction to R (free-open source software)
-3. Progamming Challenges I: Learning the fundamentals
+3. Programming Challenges I: Learning the fundamentals
   * A series of problems to solve to learn fundamentals
 4. Dealing with Data Data
   * Introduction to general concepts for storing and analyzing data
