@@ -9,7 +9,9 @@ comments: false
 resources: true
 ---
 ## Programming for Psychologists: Data-creation and analysis
-<img src="http://127.0.0.1:4000/assets/img/Programming.png" style="width:200px;padding-left:20px" align="right">
+<img src="http://crumplab.github.io/assets/img/Programming.png" style="width:200px;padding-left:20px" align="right">
+
+<a href="https://dl.dropboxusercontent.com/u/14462007/Programming/ProgrammingTextBook/Latex/Programming_Crump.pdf"  target="_blank" onclick="ga('send','event','PDF','Download',"Programming Textbook");"> Download PDF </a>
 
 [Download PDF](https://dl.dropboxusercontent.com/u/14462007/Programming/ProgrammingTextBook/Latex/Programming_Crump.pdf)
 
