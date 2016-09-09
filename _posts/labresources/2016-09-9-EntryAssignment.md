@@ -29,4 +29,3 @@ Here are your instructions.
 1. You will be using the programming language R to complete the assignment (we use this in the lab for data-analysis, and lots of other things).
     1. Download and install the most recent version of R for your computer system (it's free). The R website is [https://www.r-project.org](https://www.r-project.org)
 		2. Download and install R-Studio (also free, R must be installed first). The website is [https://www.rstudio.com](https://www.rstudio.com)
-		
