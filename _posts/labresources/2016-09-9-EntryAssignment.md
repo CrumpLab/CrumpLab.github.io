@@ -6,6 +6,7 @@ excerpt: "Entry Assignment"
 tags: [research,assignment]
 project: false
 comments: false
+course: researchAssignment
 permalink: research/assignment
 ---
 
