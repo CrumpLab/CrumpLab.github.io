@@ -6,11 +6,11 @@ date: 2016-08-24
 comments: false
 ---
 
-# Research experience opportunities for Brooklyn College students
+# Research experience for Brooklyn College students
 
 We are always looking for students (undergraduate or master's) who are interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data.
 
-All students interested in joining the lab should first complete this entry assignment, which consists of writing a short computer program. The entry assignment takes a little bit of time and effort. Research takes a lot of time and effort, and completing the assignment will show us that you are motivated to spend time on research. More important, the assignment will help you decide if you will enjoy working on research problems in the lab. If you enjoy the process of completing the assignment, then we think you will look forward to working on research problems in the lab.
+All students interested in joining the lab should first complete this entry assignment, which consists of writing a short computer program. The entry assignment takes a little bit of time and effort. Research takes a lot of time and effort, and completing the assignment will show us that you are motivated to spend time on research. More important, the assignment will help you decide if you will enjoy working on research problems in the lab. If you enjoy the process of completing the assignment, then we think you will look forward to working on research problems in the lab. You should also [read some of the lab publications](https://crumplab.github.io/publications/) to see if you are interested in the research questions we are asking.
 
 ## Course credit for Research and Honor's Theses
 
