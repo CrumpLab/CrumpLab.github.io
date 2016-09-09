@@ -1,10 +1,27 @@
 ---
 layout: page
-title: Research
+title: Research Opportunities
 tags: [research,independent study,independent research,honor's thesis, thesis]
 date: 2016-08-24
 comments: false
 ---
+
+# Research experience opportunities for Brooklyn College students
+
+We are always looking for students (undergraduate or master's) who are interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data.
+
+All students interested in joining the lab should first complete this entry assignment, which consists of writing a short computer program. The entry assignment takes a little bit of time and effort. Research takes a lot of time and effort, and completing the assignment will show us that you are motivated to spend time on research. More important, the assignment will help you decide if you will enjoy working on research problems in the lab. If you enjoy the process of completing the assignment, then we think you will look forward to working on research problems in the lab.
+
+## Course credit for Research and Honor's Theses
+
+Most students who join the lab enroll in research classes so that they receive course credit as they gain research experience in the lab. If you are interested in taking one of the courses, please complete the entry assignment above, and then email Dr. Crump about availability. The classes include:
+
+- Psych 2001-4 Laboratory Experience (3 credits each)
+- Psych 5001-4 Independent Research (3 credits each)
+
+The Laboratory Experience courses are intended for students who are new to research, and the Independent Research courses are for more senior students. They are each one semester long, and involve conducting research in the lab and writing a research report as a final project.
+
+Several students have completed honor's theses in the lab ([see here for departmental requirements](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/students/honors.php)). An honor's thesis consists of two semesters of Independent Research (e.g., Psych 5001 and 5002) and culminates in writing a thesis covering the research conducted over the year. The honor's thesis option is a great opportunity for students interested in pursuing research in a Ph.D. program following undergraduate studies. The honor's thesis is a major commitment in time and effort for everyone involved, so students who complete honor's theses in lab are usually already members of the lab and have previous research experience in the lab (e.g., have taken Psyc 2001 with Dr. Crump).
 
 # Undergraduate Research
 
