@@ -28,14 +28,14 @@ Here are your instructions.
 
 1. You will be using the programming language R to complete the assignment (we use this in the lab for data-analysis, and lots of other things).
   * Download and install the most recent version of R for your computer system (it's free). The R website is [https://www.r-project.org](https://www.r-project.org). Once installed you will now have the R programming language on your computer
-  * Download and install R-Studio (also free, R must be installed first). The website is [https://www.rstudio.com](https://www.rstudio.com). Once installed you will have a GUI (graphic user-interface) that will help you use R. You will use R-studio to write and run R programs. it provides a text editor for writing the programs, a console or terminal for running the programs, and views for looking at variables, and graphs, and many other things.  
+  * Download and install R-Studio (also free, R must be installed first). The website is [https://www.rstudio.com](https://www.rstudio.com). Once installed you will have a GUI (graphic user-interface) that will help you use R. You will use R-studio to write and run R programs. It provides a text editor for writing programs, a console/terminal for running the programs, and views for looking at variables, and graphs, and many other things.  
 
 2. Familiarize yourself with R-studio by looking at tutorials and example code. There are lots of resources in blogs, and youtube videos, all a google search away.
 	* For a general introduction to R and R-studio you can [read chapters 2 and 3 in Dr. Crump's computer programming textbook](https://crumplab.github.io/ProgrammingTextbook/).
 
 3. Run and examine the example programs written by members of the lab.
+  * For students with no programming experience, we have created a set of example programs written in R to get you started. You can download and run these scripts in R-studio. The scripts are ordered in terms of difficulty, and contain many comments that explain what each line does.
 	* The example code is stored in this github repository. You can view the code for each program directly in your web-browser through github. You will need to run these programs in R-studio to see how they work. You can download all of the files to your computer using the download link.
-	* To run the code...
   * Now examine the code of the programs you just tried. We recommend examining the code of programs 1-5 in that order, because those experiments were designed to go from easier to harder. As you examine these programs, make use of the extensive comments (the text in green, marked by a # at the beginning of each line) that describe what’s going on.
 
 4. Write your own program. Having studied the programs that other people in the lab have written, now it is time to start your assignment: think of a program, any program, that does something interesting and that can be added to the list of programs that members of the lab have created for this assignment. Create Whatever program you like, really – as long as it shows that you’ve put in some time to learn a thing or two about R programming.
