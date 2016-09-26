@@ -26,7 +26,7 @@ Professor: Dr. Matthew Crump
 ||[Carter, Ferguson, & Hassin (2011)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/Psychological%20Science-2011-Carter-0956797611414726.pdf) [Replication (2014)](http://econtent.hogrefe.com/doi/full/10.1027/1864-9335/a000178) [Commentary](https://www.researchgate.net/profile/Travis_Carter2/publication/278241189_Commentary_on_the_Attempt_to_Replicate_the_Effect_of_the_American_Flag_on_Increased_Republican_Attitudes/links/5589b1d308ae273b2876d3e5.pdf)|
 | [Lecture 3](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture3.pdf)  | [Bargh, Chen, & Burrows (1996)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/socialbehavior.pdf)|
 | | [Doyen, Klein, Pichon, &Cleeremans (2012)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/Doyenetal2012_on%20Bargh1996.pdf) |
-| [Lecture 4](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture4.pdf)  | [Adam & Galinsky (2012)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/labcoatarticle.pdf)   |
+| [Lecture 4](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture4.pdf)  | [Nickerson (2009)](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/27784387.pdf)   |
 | [Lecture 5](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture5.pdf)  | [Bargh, Chen, & Burrows (1996)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/socialbehavior.pdf)   |
 | [Lecture 6](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture6.pdf)  | [Doyen, Klein, Pichon, &Cleeremans (2012)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/Doyenetal2012_on%20Bargh1996.pdf)   |
 | [Lecture 7](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture7.pdf)  | cell2   |
