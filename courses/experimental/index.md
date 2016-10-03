@@ -27,7 +27,11 @@ Professor: Dr. Matthew Crump
 | [Lecture 3](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture3.pdf)  | [Bargh, Chen, & Burrows (1996)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/socialbehavior.pdf)|
 | | [Doyen, Klein, Pichon, &Cleeremans (2012)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/Doyenetal2012_on%20Bargh1996.pdf) |
 | [Lecture 4](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture4.pdf)  | [Nickerson (2009)](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/27784387.pdf)   |
-| [Lecture 5](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture5.pdf)  | [Bargh, Chen, & Burrows (1996)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/socialbehavior.pdf)   |
+| [Lecture 5](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture5.pdf)  | [Carney, Cuddy, Yap (2010)](http://usmentor.qbcontent.com/wp-content/blogs.dir/1/uploads/in-press-carney-cuddy-yap-psych-science.pdf)|
+| | [Ranehill et al. (2015)](http://datacolada.org/wp-content/uploads/2015/05/5110-Ranehill-Dreber-Johannesson-Leiberg-Sul-Weber-PS-2015-Assessing-the-robustness-of-power-posing-no-effect-on-hormones-and-risk-rolerance-in-a-large-sample-of-men-and-women.pdf) |
+| | [Carney, Cuddy, Yap (2015)](https://www.researchgate.net/profile/Amy_Cuddy2/publication/274458966_Review_and_Summary_of_Research_on_the_Embodied_Effects_of_Expansive_vs_Contractive_Nonverbal_Displays/links/553e2efe0cf2522f1835fc2d.pdf) |
+| | [Carney's new position](http://faculty.haas.berkeley.edu/dana_carney/pdf_My%20position%20on%20power%20poses.pdf) |
+| | [Cuddy's response](http://nymag.com/scienceofus/2016/09/read-amy-cuddys-response-to-power-posing-critiques.html) |
 | [Lecture 6](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture6.pdf)  | [Doyen, Klein, Pichon, &Cleeremans (2012)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/Doyenetal2012_on%20Bargh1996.pdf)   |
 | [Lecture 7](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture7.pdf)  | cell2   |
 | [Lecture 8](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture8.pdf)  | [Excel Homework Tutorial](https://dl.dropbox.com/u/14462007/ExpPsych/lectures/EXCEL%20homework%20tutorial.pdf) [Data simulator tutorial](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/vids/SimulatorTutorial/SimulatorTutorial.html)   |
