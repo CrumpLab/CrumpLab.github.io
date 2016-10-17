@@ -16,6 +16,8 @@ Professor: Dr. Matthew Crump
 - Email: mcrump@brooklyn.cuny.edu
 - Office hours: by appointment
 
+[ Download midterm review questions ](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/MidtermReviewFall2016.pdf)
+
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimental/syllabus)
 
 | Lecture Notes | Supplementary material |
