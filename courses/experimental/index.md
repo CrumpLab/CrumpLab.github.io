@@ -71,7 +71,7 @@ The details and expectations for each assignment will be posted here throughout 
 ## Paper Project 2
 * [Instructions and roadmap for paper 2](https://crumplab.github.io/courses/experimental/paper2)
   * Background reading: [Yin (1969)]()
-  * [ Face Inversion Experiment Download PC version](https://www.dropbox.com/s/ktqjozbkxm8uf6v/Lab%202%20face%20inversion.zip?dl=0)
+  * [ Face Inversion Experiment Download PC version](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab2.zip)
   * Due dates are set by your individual lab instructor
 
 
