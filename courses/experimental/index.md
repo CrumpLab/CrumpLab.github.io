@@ -69,7 +69,7 @@ The details and expectations for each assignment will be posted here throughout 
   * Task switching experiment - Mac
 
 ## Paper Project 2
-* [Instructions and roadmap for paper 2](https://crumplab.github.io/courses/experimental/paper2)
+* [Instructions and roadmap for paper 2](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/5%20Yin%201969.pdf)
   * Background reading: [Yin (1969)]()
   * [ Face Inversion Experiment Download PC version](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab2.zip)
   * Due dates are set by your individual lab instructor
