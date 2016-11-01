@@ -17,7 +17,7 @@ The lab is located in the Department of Psychology at Brooklyn College of CUNY, 
 |   Contact   |
 |-------------|
 |Matthew Crump|
-|Assistant Professor|
+|Associate Professor|
 |[Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)|
 |[Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/)|
 |2900 Bedford Avenue, Brooklyn, NY 11210|
