@@ -18,6 +18,8 @@ Professor: Dr. Matthew Crump
 
 [ Download midterm review questions ](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/MidtermReviewFall2016.pdf)
 
+[ Download midterm answers](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/2016MidtermAnswers.txt)
+
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimental/syllabus)
 
 | Lecture Notes | Supplementary material |
