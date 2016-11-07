@@ -35,8 +35,8 @@ Professor: Dr. Matthew Crump
 | | [Carney's new position](http://faculty.haas.berkeley.edu/dana_carney/pdf_My%20position%20on%20power%20poses.pdf) |
 | | [Cuddy's response](http://nymag.com/scienceofus/2016/09/read-amy-cuddys-response-to-power-posing-critiques.html) |
 | [Lecture 6](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture6.pdf)  |    |
-| [Lecture 7](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture7.pdf)  |  [Excel Homework Tutorial](https://dl.dropbox.com/u/14462007/ExpPsych/lectures/EXCEL%20homework%20tutorial.pdf) [Data simulator tutorial](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/vids/SimulatorTutorial/SimulatorTutorial.html)   |
-| [Lecture 8](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture8.pdf)  |   |
+| [Lecture 7](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture7.pdf)  |  |
+| [Lecture 8](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture8.pdf)  |  [Excel Homework Tutorial](https://dl.dropbox.com/u/14462007/ExpPsych/lectures/EXCEL%20homework%20tutorial.pdf) [Data simulator tutorial](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/vids/SimulatorTutorial/SimulatorTutorial.html)    |
 | [Lecture 9](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture9.pdf)  | [ANOVAs in Excel](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/vids/ANOVAsinEXCEL.xlsx)  |
 | [Lecture 10](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture10.pdf)  |    |
 | [Lecture 11](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture11.pdf)  |    |
