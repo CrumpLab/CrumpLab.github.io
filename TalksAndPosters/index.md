@@ -47,3 +47,15 @@ Abstract: This talk presents evidence for predictions made by computational mode
 <img style="float: right; width:200px;" src="https://CrumpLab.github.io/assets/img/posters/BrosowskyEPA2016.png">
 </a>
 Abstract: Context has been shown to cue the automatic reinstatement of various psychological processes across domains. The current study investigates context-dependency in a previously unexamined aspect of cognitive control: the creation and execution of stimulus-response sets. Specifically, we investigate whether response subsets can become associated with, and retrieved by contextual cues. Over three choice reaction time experiments we found no evidence for contextual control over stimulus-response sets.
+
+## Typists develop sensitivity to the statistical frequencies of likely N-grams.
+
+2015, Behmer, L.P. & Crump, M. J. C, Eastern Psychological Association, Philadelphia.
+
+Abstract: We investigate how serial ordering abilities develop with practice in the context of skilled typing. Using a large N online study we show that poor typists’ individual keystroke typing times were strongly correlated with single letter frequency (faster when typing high-frequency single letters), whereas expert typists were correlated with bigram and trigram frequencies. These data show that skill acquisition for action sequencing relies on a learning process sensitive to statistical structure of produced actions.
+
+## Evidence for generalization of context-specific control in a flanker task
+
+2015, Brosowsky, N. P., & Crump, M. J. C., Eastern Psychological Association, Philadelphia.
+
+Abstract: The present work investigates stimulus-driven setting and adjusting of attention filtering demands. In a flanker task, the attentional sets applied to one set of congruent and incongruent items in particular location contexts were found to be applied in a general fashion to control processing of another set of frequency unbiased items presented in the same contexts. The results license further discussion of how learning and memory processes participate in attentional control.
