@@ -21,6 +21,7 @@ Abstract: This talk presents evidence for predictions made by computational mode
 ## Contextual control over stimulus-response sets.
 
 2016, Brosowsky, N. P. & Crump, M. J. C., Eastern Psychological Association, New York, NY.
+
 <a href="https://CrumpLab.github.io/CrumpPubs/Posters/BrosowskyEPA2016.pdf">
 <img style="float: right; width:150px;" src="https://CrumpLab.github.io/assets/img/posters/BrosowskyEPA2016.png">
 </a>
