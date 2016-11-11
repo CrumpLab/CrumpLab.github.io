@@ -10,6 +10,9 @@ comments: false
 
 2016, Crump, M. J. C., & Brosowsky, N. P., International Psychonomics, Granada
 
+<a href="https://CrumpLab.github.io/CrumpPubs/Posters/CrumpGranada2016.pdf">
+<img style="float: right; width:200px;" src="https://CrumpLab.github.io/assets/img/posters/CrumpGranada2016.png">
+</a>
 Abstract: Crump & Milliken (2009) showed that Stroop effects can be modulated by context-specific cues associated with different levels of proportion congruent, even for items that appeared equally frequently in each context. This result has important theoretical implications, because it ruled out frequency-driven learning explanations of context-specific proportion congruent (CSPC) effects, and left open the possibility that cue-driven retrieval process can reinstate attentional control setting in a rapid online fashion. The purpose of the present work was to address reproducibility concerns that have been raised about this finding. We conducted several replications and novels extensions of the Crump & Milliken procedures using Amazon's mechanical Turk in both Stroop and flanker tasks. We successfully replicated the major findings from prior work, and conducted new analyses of the role of sequential influences on CSPC effects that showed a critical role for context repetitions in CSPC flanker effects, but not in CSPC Stroop effects.  We also provide new monte-carlo simulation analyses to estimate reproducibility of the phenomena that show important limitations on these designs for measuring contextual control.
 
 ## How Typists Talk to Their Fingers: Evidence for Word-Level Verbal Control of Skilled Action Sequencing.
