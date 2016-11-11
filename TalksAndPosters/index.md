@@ -21,6 +21,7 @@ Abstract: This talk presents evidence for predictions made by computational mode
 ## Contextual control over stimulus-response sets.
 
 2016, Brosowsky, N. P. & Crump, M. J. C., Eastern Psychological Association, New York, NY.
-
+<a href="https://CrumpLab.github.io/CrumpPubs/Posters/BrosowskyEPA2016.pdf">
 <img style="float: right; width:150px;" src="https://CrumpLab.github.io/assets/img/posters/BrosowskyEPA2016.png">
+</a>
 Abstract: Context has been shown to cue the automatic reinstatement of various psychological processes across domains. The current study investigates context-dependency in a previously unexamined aspect of cognitive control: the creation and execution of stimulus-response sets. Specifically, we investigate whether response subsets can become associated with, and retrieved by contextual cues. Over three choice reaction time experiments we found no evidence for contextual control over stimulus-response sets.
