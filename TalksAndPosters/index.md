@@ -59,3 +59,9 @@ Abstract: We investigate how serial ordering abilities develop with practice in 
 2015, Brosowsky, N. P., & Crump, M. J. C., Eastern Psychological Association, Philadelphia.
 
 Abstract: The present work investigates stimulus-driven setting and adjusting of attention filtering demands. In a flanker task, the attentional sets applied to one set of congruent and incongruent items in particular location contexts were found to be applied in a general fashion to control processing of another set of frequency unbiased items presented in the same contexts. The results license further discussion of how learning and memory processes participate in attentional control.
+
+## Contextual control of attentional sampling: Exploring the role of volition.
+
+2015, Brosowsky, N. P., &  Crump, M. J. C. Psychonomics, Chicago, IL.
+
+Abstract: Contextual properties of the environment, through learning and memory processes, can rapidly and involuntarily adjust attentional control (Chun, 2000; Corballis & Gratton, 2003; Crump, Gong, & Milliken, 2006; Crump, Vaquero, & Milliken, 2008). The current study explores the obligatory nature of contextual cueing, specifically examining the role of volition in acquiring context-dependent attentional control in a bi-dimensional (colors vs. letters) stimulus sampling task. Subjects viewed briefly presented arrays of letters and colors presented above or below fixation, and identified specific stimuli given a task-cue associated to each location. Experiments 1 and 2 showed no contextual control over priority for sampling either dimension. Experiment 3 showed context-dependent prioritization when participants were instructed to voluntarily deploy different sampling strategies between contexts. Experiment 4 showed that context-specific sampling strategies also depends partly on non-voluntary learning processes.
