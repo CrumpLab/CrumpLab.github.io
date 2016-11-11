@@ -6,6 +6,10 @@ date: 2016-08-24
 comments: false
 ---
 
+# Ph.D. students
+
+Students interested in pursuing a Ph.D. with Dr. Crump should apply to the Cognition, Language, and Development training area in the Psychology Doctoral Program at the Graduate Center of CUNY. The deadline for applications December 1st, 2016. [You can apply directly here](http://www.gc.cuny.edu/Prospective-Current-Students/Prospective-Students/Admissions). Learn more about the [Cognition, Language, and Development training area here](http://cunycld.org). Interested applicants should also email Dr. Crump to introduce themselves and their research interests.
+
 # Research experience for Brooklyn College students
 
 We are always looking for students (undergraduate or master's) who are interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data.
