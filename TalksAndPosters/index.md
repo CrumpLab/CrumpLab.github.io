@@ -65,3 +65,45 @@ Abstract: The present work investigates stimulus-driven setting and adjusting of
 2015, Brosowsky, N. P., &  Crump, M. J. C. Psychonomics, Chicago, IL.
 
 Abstract: Contextual properties of the environment, through learning and memory processes, can rapidly and involuntarily adjust attentional control (Chun, 2000; Corballis & Gratton, 2003; Crump, Gong, & Milliken, 2006; Crump, Vaquero, & Milliken, 2008). The current study explores the obligatory nature of contextual cueing, specifically examining the role of volition in acquiring context-dependent attentional control in a bi-dimensional (colors vs. letters) stimulus sampling task. Subjects viewed briefly presented arrays of letters and colors presented above or below fixation, and identified specific stimuli given a task-cue associated to each location. Experiments 1 and 2 showed no contextual control over priority for sampling either dimension. Experiment 3 showed context-dependent prioritization when participants were instructed to voluntarily deploy different sampling strategies between contexts. Experiment 4 showed that context-specific sampling strategies also depends partly on non-voluntary learning processes.
+
+## False Memory for Previously Tested Items: Investigating Test-Induced Associative and Repetition Priming.
+
+2014, Crump, M. J. C., Blecher, M., & Jamieson, R., Psychonomics.
+
+Abstract: Studying thematically related words produces false memories for non-studied theme words (i.e., DRM effect). Test-induced priming (TIP) is known to increase false-recognition rates when source monitoring is impaired. Our experiments establish the reliability of associative and repetition TIP effects for non-studied lists, which have been inconsistently shown in the literature. In several online experiments, participants encoded words never presented at test. At test, thematically related new words were presented as lures before or after critical category lures. Participants showed reliable false memories for critical lures (E1). TIP effects remained when encoding time increased (E2), when warnings were given (E3 & E4), and when old words from the study phase were included in the test (E6). False-recognition rates were higher for lures primed by repetition rather than association during test (E5 & E6). The role of source- monitoring processes during retrieval in mediating false-
+recognition from TIP is discussed.
+
+## Stimulus-Driven Control of Explicitly Induced Attention Filtering Demands.
+
+2013, Crump, M. J. C., Psychonomics.
+
+Abstract: Demonstrations of item/context-specific proportion congruent (PC) effects suggest that early stimulus processing can rapidly control attention filtering (see Bugg & Crump, 2012). Yet, PC manipulations are typically confounded with item-frequency, and PC effects may be driven by a learning process sensitive to item-frequencies. The present work examines whether explicitly induced attention filtering demands can transition from strategic to stimulus-driven control without manipulating PC or biasing item-frequencies. Several web-based flanker studies were conducted via Amazon Mechanical Turk. Each involved a 50/50 PC design. Attention filtering demands were induced by a 1-back memory task following each trial prompting recall of the last target or flanking letter. Blocking recall demands produced list-wide PC-like effects with larger flanker effects for flanker than target recall conditions. Mixing recall demands and associating them with particular stimulus-cues (location, color, letters, font) produced item/context-specific PC-like effects, and show novel unambiguous evidence for
+stimulus-driven control of attention filtering.
+
+## Prevention or Cure? Error Detection and Correction in Skilled Typists.
+
+2012, Logan, G. D., & Crump, M. J. C., Psychonomics.
+
+Abstract: Error detection serves two different functions: prevention and cure. Prevention engages post-error slowing to reduce future errors. Cure engages processes that correct the error. Thus, prevention predicts post-error slowing and cure does not. Skilled typists prefer cure to prevention: In three experiments, we found post-error slowing only when correction was disallowed, and the slowing persisted only for a few keystrokes. Words that followed errors were typed as quickly as words that preceded errors. We found no post-error slowing when typists were allowed to correct errors. They corrected errors as soon as they detected them and then resumed typing at normal rates. Keystrokes that fell between the error and the error detection response were actually faster than keystrokes before the error, suggesting post-error speeding. These findings led us to propose the novel hypothesis that post-error slowing reflects
+the inhibition of pre-potent tendencies to correct mistakes.
+
+## An Instance-Based Account of Retrospective Revaluation.
+
+2012, RANDALL K. JAMIESON and CHRISSY M. CHUBALA, University of Manitoba, SAMUEL D. HANNAH, University of Saskatchewan, MATTHEW J. C. CRUMP, Brooklyn College, CUNY, Psychonomics.
+
+Abstract: After learning that a compound cue AB predicts an outcome X, learning that A alone predicts X forces a deflation in the predictive validity of B—a phenomenon called retrospective revaluation. We model retrospective revaluation using an instance model of associative learning based on the MINERVA 2 model of human memory. According to the model, each experience is stored to memory as a unique trace and response strength is determined by the similarity between the target outcome and the information that a cue retrieves from memory. We show that the model accommodates retrospective revaluation at the first and higher orders of association and we argue that associative learning is consistent
+with an instance-based approach to learning.
+
+
+## Can Internet Data be Trusted? Validating Mechanical Turk for Cognitive Research.
+
+2012, MATTHEW J. C. CRUMP, Brooklyn College, CUNY, TODD M. GURECKIS and JOHN V. MCDONNELL, New York University, Psychonomics.
+
+Abstract: Amazon Mechanical Turk is an online crowd sourcing service where anonymous online workers complete web-based tasks for small sums of money. There are many workers willing to perform tasks, and an experiment with n=100 can easily be conducted over night. Amazon Turk has become increasingly popular in the decision making literature, thereby partly demonstrating the viability of the service for running psychology experiments. However, the service has not been validated for cognitive research in general which typically requires multi-trial designs and millisecond accuracy for response recording and stimulus presentation. The service was validated by replicating several classic cognitive tasks including: Stroop, Task-switching, Flanker, Simon, Visual cuing, Attentional blink, Subliminal priming, and Category learning tasks. The replications were mostly successful and validated the approach. A wide-variety of behavioral research can be conducted in a rapid, cost- effective manner using Amazon Mechanical Turk.
+
+## Hitting the Wall in Skilled Typing: Speed/Accuracy Tradeoffs and Serial Processing.
+
+2011, MATTHEW JC CRUMP, Brooklyn College of CUNY, GORDON D. LOGAN, Vanderbilt University, Psychonomics.
+
+Abstract: Two experiments investigated speed-accuracy tradeoff functions in a continuous typing task. Experiment 1 had typists adjust their typing rate by 20% faster or slower than their normal rate by following a metronome, a speedometer, or a moving color cue. Accuracy was minimally influenced by changes in typing speed. Experiment 2 parametrically varied typing rate in 10% steps by having typists attempt to type up to 90% faster than their normal rate. Typists were able to maintain low error rates over large changes in speed. Analysis of the distribution of errors across speed stress shows increases to the number of letter omissions and substitutions, but not transpositions. We suggest that typists manage the speed- accuracy tradeoff by attempting to preserve serially-ordered
+responses.
