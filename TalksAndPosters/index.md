@@ -6,6 +6,39 @@ date: 2016-11-11
 comments: false
 ---
 
+## Motor evoked potentials reflect changes in rapid inhibitory control during serial ordering.
+
+2017, Behmer, L. P., Crump, M. J. C, Jantzen, K. J., Martinez, S., Walls, R., Amir-Brownstein, E., Jaye, A., Leytze, M., Lucier, K. Cognitive Neuroscience Society.
+
+Abstract: Theories of serial ordering assume all responses in a sequence are activated in parallel and held in a buffer for execution. An inhibition or timing process impedes responses in a graded fashion with earlier more active responses executed before more inhibited later responses. There is no direct evidence in humans that planned responses are inhibited as a function of serial order. The necessary evidence could be provided by a response activation “thermometer” measuring whether the current “temperature” or activation level is graded by position across all responses in the buffer. We used transcranial magnetic stimulation to probe the level of excitation for flexion of the right index finger (first dorsal interosius muscle mucle) during typing.  Motor evoked potentials (MEPs) were recorded at the onset of typing of 5-letter words and nonwords. A single letter typed by the right index finger varied across letter positions one to five. The amplitude of the MEP when the right index finger was used in letter positions one and two reflected the relatively active state of the FDI.  MEP amplitude decreased monotonically with further increases in position. Interestingly we also found smaller MEPs when the right index finger was the first rather than second response, indicative of a rapid deactivation at the completion of a key press. This is the most direct human evidence to date corroborating inhibition/timing theories, showing that completed responses are rapidly deactivated and future responses are activated in a graded fashion as a function of serial position.
+
+
+## Learning to Selectively Ignore Information
+
+2017, Brosowsky, N. B., & Crump, M. J. C. Eastern Psychological Association, Boston.
+
+Abstract: The goal of the current study was to use traditional learning procedures to examine how learning processes might participate in the adjustment of selective attention processing. Across three experiments, we found that participants could learn to ignore a particular word in a Stroop task, eliminating the traditional interference effect. However, in all three experiments the interference effect re-appeared when the trained items were intermixed with untrained items, demonstrating a consistent failure of transfer.
+
+## Cognitive Control for Action Sequencing
+
+2017, Behmer, L. P., & Crump, M. J. C. Eastern Psychological Association, Boston.
+
+Abstract: Here, we present evidence integrating cognitive control principles and neural networks into an account of action sequencing. While recording continuous EEG during typing tasks, we observed increased anterior cingulate theta-power as a function of co-activation of competing keypresses responses and increased frontal theta-power during conditions where proactive control was required, such as while explicitly monitoring typing output. These findings support the possibility that the neural mechanisms driving cognitive control also mediate control of actions.
+
+## Theta-Event Related Synchrony (ERS) as an Index of Outer- Loop Control During Typing: Neural Evidence Supporting the Two-Loop Theory of Typing.
+
+2016, Behmer, L. P., & Crump, M. J. C. Psychonomics, Boston
+
+Abstract: Skilled typists accurately type 4-5 letters per second, yet have poor declarative memory of key locations. This suggests typing may be controlled by two hierarchically nested control loops that are informationally encapsulated from one another. We present behavioral and EEG [frontal midline theta-event related synchrony (ERS)] evidence that examines the development of hierarchical control across trials. Participants typed a series of 7-letter words, ten times in a row, on a QWERTY keyboard and a keyboard where letter mappings had been jumbled. We found that typists were slower and showed increased theta-ERS for jumbled early compared to jumbled late, QWERTY early, and QWERTY late trials. Although typing speeds improved for jumbled late trials, theta- ERS was still greater than baseline. These findings suggest that theta-ERS may index levels of outer-loop control during typing, and even though inner loop control was rapidly established when typing on the jumbled keyboard, outer-loop engagement
+remained robust.
+
+## Long(er)-Term Item-Specific Gratton Effects.
+
+2016, Brosowsky, N. P., & Crump, M. J. C. Psychonomics, Boston
+
+Abstract: Gratton effects refer to the finding in selective attention tasks (e.g., Stroop, Flanker) that interference effects (incongruent minus congruent RTs) are smaller on trials immediately following an incongruent than congruent trial. Gratton effects are commonly explained by transient or reactive conflict-induced shifts in attentional weights on trial n-1 that carry forward to influence trial n. Separately from this short-term influence, episodic memory traces may also bind together attentional control settings associated with features of particular items that could allow for longer-term cue-driven reinstatement of prior attentional settings. In three related experiments, participants completed a color-identification flanker task. Colors were presented on different images, and specific images were paired with congruent or incongruent trial types. We found that re-presenting an image 4-8 trials later modulated congruency effects on an item-specific, and longer-
+term basis than the traditional Gratton effect.
+
 ## Context-Specific Proportion Congruent Effects for Frequency Unbiased Items: Novel Extensions and Analyses of Reproducibility.
 
 2016, Crump, M. J. C., & Brosowsky, N. P., International Psychonomics, Granada
