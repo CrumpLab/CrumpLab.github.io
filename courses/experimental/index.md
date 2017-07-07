@@ -16,16 +16,6 @@ Professor: Dr. Matthew Crump
 - Email: mcrump@brooklyn.cuny.edu
 - Office hours: by appointment
 
-## Final exam
-
-The final exam is on Wednesday, 14th of December from 1-3pm, LOCATION IS TBD.
-
-[ download final exam review questions ](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Fall2016FinalReviewb.pdf)
-
-[ Download midterm review questions ](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/MidtermReviewFall2016.pdf)
-
-[ Download midterm answers](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/2016MidtermAnswers.txt)
-
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimental/syllabus)
 
 | Lecture Notes | Supplementary material |
