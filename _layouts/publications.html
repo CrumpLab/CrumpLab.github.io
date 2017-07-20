@@ -29,6 +29,10 @@ layout: compress
                         <!-- <li class="wow fadeInLeft" data-wow-duration="1.5s"> -->
                             <p>{{ post.citation }} <a href="{{ site.url }}{{ post.url }}"> abstract |</a>
                             <a href="{{ post.download }}"  target="_blank" onclick="ga('send','event','PDF','Download',this.href);"> pdf </a></p>
+                            {% if post.gitdata %}
+                            <a href="{{ post.datalink }}"> | data </a>
+                            {% endif %}
+
                             <!-- <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a> -->
                         <!-- </li> -->
                     </ul>
