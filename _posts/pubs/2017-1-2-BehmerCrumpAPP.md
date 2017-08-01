@@ -2,7 +2,7 @@
 layout: post
 title: "Spatial knowledge during skilled action sequencing: Hierarchical versus non-hierarchical representations"
 date: 2017-7-7
-download: ""
+download: "https://link.springer.com/epdf/10.3758/s13414-017-1389-3?author_access_token=pC1d6ZZJjUEGlPh8A-Dr_pAH0g46feNdnc402WrhzyrjKH7VZxL1TlB4h4YRpn0uS0QB04xR9thfgo1BXVRyWDFRaZS_F7vH4mmG81H_7Q_cg7Ws-XByYvbO4fY4nUSFjfPfkjdr47xYjhn4U_A6Bg%3D%3D"
 abstract: "Accepted"
 citation: "Behmer, L. P. & Crump, M. J. C. (Accepted). Spatial knowledge during skilled action sequencing: Hierarchical versus non-hierarchical representations. Attention, Perception, & Psychophysics."
 pubs: true
