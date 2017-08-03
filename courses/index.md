@@ -8,12 +8,12 @@ comments: false
 
 Current Courses
 
-## [PSYC 3450 Experimental Psychology Fall 2016](https://crumplab.github.io/courses/experimental/)
+## [PSYC 3450 Experimental Psychology Fall 2017](https://crumplab.github.io/courses/experimentalFall2017/)
 ___
 Previous Courses
 
-| PSYC #| Title |Level|
-|:--------|:-------:|
+| PSYC #| Title |Level|Semester|
+|:--------|:-------:|:--------:|
 |3450|Experimental Psychology|Undergrad|[F2016](https://crumplab.github.io/courses/experimentalFall2016/)|
 |3530|Cognitive Psychology|Undergrad| |
 |2001|Laboratory Experience|Undergrad| |
