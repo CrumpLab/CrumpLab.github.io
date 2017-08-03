@@ -1,22 +1,22 @@
 ---
 layout: page
 title:  "Experimental Psychology"
-date:   2016-06-14
-excerpt: "Psych 3450 Fall 2016"
+date:   2017-03-8
+excerpt: "Psych 3450 Fall 2017"
 project: false
 tag:
 comments: false
 ---
-This is the class website for sections MTAB, BB, CB, and DB of Experimental Psychology (PSYC3450W), Fall 2016. Check this site for regular updates to course information.
+This is the class website for sections MTAB, BB, CB, and DB of Experimental Psychology (PSYC3450W), Fall 2017. Check this site for regular updates to course information.
 
 Professor: Dr. Matthew Crump
 
-- Lecture Monday, 12:25pm - 2:05pm, IA -113
+- Lecture Monday, 12:25pm - 2:05pm, IA -133
 - Office: 4307 James Hall
 - Email: mcrump@brooklyn.cuny.edu
 - Office hours: by appointment
 
-[Course Syllabus - all sections](https://crumplab.github.io/courses/experimental/syllabus)
+[Course Syllabus - all sections](https://crumplab.github.io/courses/experimentalFall2017/syllabus)
 
 | Lecture Notes | Supplementary material |
 |:--------|:-------:|
@@ -47,16 +47,16 @@ Lecture notes will always be posted after class. If they are available before cl
 ### Resources
 
 * [Lab manual](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab%20Manual.pdf)
-* [Research Resources](https://crumplab.github.io/courses/experimental/researchresources)
+* [Research Resources](https://crumplab.github.io/courses/experimentalFall2017/researchresources)
 * [APA style Microsoft Word Template](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/lab/APAtemplate.docx)
-* [Example writing critique of a lab paper](https://crumplab.github.io/courses/experimental/samplepaper)
+* [Example writing critique of a lab paper](https://crumplab.github.io/courses/experimentalFall2017/samplepaper)
 
 # Lab Assignments
 
 The details and expectations for each assignment will be posted here throughout the semester. During the lab you will be expected to complete 3 papers, and several lab projects that do not require full lab reports. For each paper, you will be required to write a complete APA style research report. The final paper involves two in class presentations: one individual presentation, and one group presentation.
 
 ## Paper Project 1         
-* [Instructions and roadmap for paper 1](https://crumplab.github.io/courses/experimental/paper1)
+* [Instructions and roadmap for paper 1](https://crumplab.github.io/courses/experimentalFall2017/paper1)
   * Background reading: To be handed out in lab
   * Due dates are set by your individual lab instructor
 
@@ -67,7 +67,7 @@ The details and expectations for each assignment will be posted here throughout 
   * Task switching experiment - Mac
 
 ## Paper Project 2
-* [Instructions and roadmap for paper 2](https://crumplab.github.io/courses/experimental/paper2)
+* [Instructions and roadmap for paper 2](https://crumplab.github.io/courses/experimentalFall2017/paper2)
   * Background reading: [Yin (1969)](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/5%20Yin%201969.pdf)
   * [ Face Inversion Experiment Download PC version](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab2.zip)
   * Due dates are set by your individual lab instructor
@@ -75,7 +75,7 @@ The details and expectations for each assignment will be posted here throughout 
 
 
 ## Paper Project 3 (Final Project)
-* [Instructions for Final Project](https://crumplab.github.io/courses/experimental/paper3)
+* [Instructions for Final Project](https://crumplab.github.io/courses/experimentalFall2017/paper3)
 * [Individual presentations (Example Powerpoint)]()
 
 ## Lab FAQs

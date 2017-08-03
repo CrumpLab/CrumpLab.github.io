@@ -7,7 +7,7 @@ tags: [writing,Psych 3450]
 project: false
 comments: false
 course: experimental
-permalink: courses/experimental/researchresources
+permalink: courses/experimentalFall2017/researchresources
 ---
 
 ## Zotero
