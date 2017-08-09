@@ -19,7 +19,7 @@ Professor: Dr. Matthew Crump
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimentalFall2017/syllabus)
 
 
-|#|	Lecture Date|	Topic|	Chapter| Lab| Supplemental |
+|#|	Lecture Date|	Topic & Notes|	Chapter| Lab| Supplemental |
 |:--|:--|:--|:--|:-- |:--|
 |1|	28-Aug|	Science|	1|Overview|[1](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/OSC2015.pdf)|
 ||4-Sep	|NO CLASS Labor Day	||||
@@ -39,7 +39,7 @@ Professor: Dr. Matthew Crump
 |=====
 {: rules="groups"}
 
-Lecture notes will always be posted after class. If they are available before class, they are subject to change.
+Lecture notes will always be posted after class. If they are available before class, they are subject to change. The dates listed are only for the lecture, check your lab section schedule for lab dates.
 
 ### Resources
 
@@ -57,19 +57,11 @@ The details and expectations for each assignment will be posted here throughout 
   * Background reading: To be handed out in lab
   * Due dates are set by your individual lab instructor
 
-## Mini-Project Resources
-
-* Download for Multi-tasking miniproject
-  * Task switching experiment -PC
-  * Task switching experiment - Mac
-
 ## Paper Project 2
 * [Instructions and roadmap for paper 2](https://crumplab.github.io/courses/experimentalFall2017/paper2)
   * Background reading: [Yin (1969)](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/5%20Yin%201969.pdf)
   * [ Face Inversion Experiment Download PC version](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab2.zip)
   * Due dates are set by your individual lab instructor
-
-
 
 ## Paper Project 3 (Final Project)
 * [Instructions for Final Project](https://crumplab.github.io/courses/experimentalFall2017/paper3)
