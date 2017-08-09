@@ -84,7 +84,7 @@ Whether you can revise and resubmit is determined by your individual lab instruc
 The ability to verbally communicate information is incredibly important, and it is a skill that requires practice. You will be given instruction during the labs and lectures about how to improve your presentation skills. Your first presentation will be a 5 minute individual presentation, and the second will be a 10 minute group presentation.
 
 ### Do I get to run my own experiment?
-YES. The lab is divided into projects and papers. For the first two papers you will be running predifned experiments on a computer. The third and final paper involves a group project where you will work with your group to come up with your own research project. However, before you join your group, you will create your own idea for a research project and propose your project to the class (this is your 5 minute individual presentation).
+YES. The lab is divided into projects and papers. For the first two papers you will be running predefined experiments on a computer. The third and final paper involves a group project where you will work with your group to come up with your own research project. However, before you join your group, you will create your own idea for a research project and propose your project to the class (this is your 5 minute individual presentation).
 
 For all of the lab projects you will be asked to create, implement, and analyze experimental procedures in class.
 
