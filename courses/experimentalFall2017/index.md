@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Experimental Psychology"
+title:  "PSYC 3450 Experimental Psychology"
 date:   2017-03-8
 excerpt: "Psych 3450 Fall 2017"
 project: false
@@ -18,27 +18,24 @@ Professor: Dr. Matthew Crump
 
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimentalFall2017/syllabus)
 
-| Lecture Notes | Supplementary material |
-|:--------|:-------:|
-| [Lecture 1](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture1.pdf)  |  [Open Science Collaboration (2015)](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/OSC2015.pdf)   |
-||Monte Hall Reasoning Links [1](https://en.wikipedia.org/wiki/Monty_Hall_problem) [2](http://math.ucsd.edu/~crypto/Monty/montybg.html) [3](http://tierneylab.blogs.nytimes.com/2008/04/07/monty-hall-meets-cognitive-dissonance/?_r=0)|
-| [Lecture 2](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture2.pdf)  | [Chaos in the Brickyard](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Brickyard.pdf)|
-||[Carter, Ferguson, & Hassin (2011)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/Psychological%20Science-2011-Carter-0956797611414726.pdf) [Replication (2014)](http://econtent.hogrefe.com/doi/full/10.1027/1864-9335/a000178) [Commentary](https://www.researchgate.net/profile/Travis_Carter2/publication/278241189_Commentary_on_the_Attempt_to_Replicate_the_Effect_of_the_American_Flag_on_Increased_Republican_Attitudes/links/5589b1d308ae273b2876d3e5.pdf)|
-| [Lecture 3](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture3.pdf)  | [Bargh, Chen, & Burrows (1996)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/socialbehavior.pdf)|
-| | [Doyen, Klein, Pichon, &Cleeremans (2012)](https://dl.dropbox.com/u/14462007/ExpPsych/pdfs/Doyenetal2012_on%20Bargh1996.pdf) |
-| [Lecture 4](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture4.pdf)  | [Nickerson (2009)](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/27784387.pdf)   |
-| [Lecture 5](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture5.pdf)  | [Carney, Cuddy, Yap (2010)](http://usmentor.qbcontent.com/wp-content/blogs.dir/1/uploads/in-press-carney-cuddy-yap-psych-science.pdf)|
-| | [Ranehill et al. (2015)](http://datacolada.org/wp-content/uploads/2015/05/5110-Ranehill-Dreber-Johannesson-Leiberg-Sul-Weber-PS-2015-Assessing-the-robustness-of-power-posing-no-effect-on-hormones-and-risk-rolerance-in-a-large-sample-of-men-and-women.pdf) |
-| | [Carney, Cuddy, Yap (2015)](https://www.researchgate.net/profile/Amy_Cuddy2/publication/274458966_Review_and_Summary_of_Research_on_the_Embodied_Effects_of_Expansive_vs_Contractive_Nonverbal_Displays/links/553e2efe0cf2522f1835fc2d.pdf) |
-| | [Carney's new position](http://faculty.haas.berkeley.edu/dana_carney/pdf_My%20position%20on%20power%20poses.pdf) |
-| | [Cuddy's response](http://nymag.com/scienceofus/2016/09/read-amy-cuddys-response-to-power-posing-critiques.html) |
-| [Lecture 6](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture6.pdf)  |    |
-| [Lecture 7](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture7.pdf)  |  |
-| [Lecture 8](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture8.pdf)  |  [Excel Homework Tutorial](https://dl.dropbox.com/u/14462007/ExpPsych/lectures/EXCEL%20homework%20tutorial.pdf) [Data simulator tutorial](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/vids/SimulatorTutorial/SimulatorTutorial.html)    |
-| [Lecture 9](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture9.pdf)  | [ANOVAs in Excel](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/vids/ANOVAsinEXCEL.xlsx)  |
-| [Lecture 10](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture10.pdf)  |    |
-| [Lecture 11](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture11.pdf)  |    |
-| [Lecture 12](http://dl.dropbox.com/u/14462007/ExpPsych/lectures/Lecture12.pdf)  | [Stapel & Lindenberg (2011)](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/Science-2011-Stapel-251-3.pdf)   |
+
+|#|	Lecture Date|	Topic|	Chapter| Lab| Supplemental |
+|:--|:--|:--|:--|:-- |:--|
+|1|	28-Aug|	Science|	1|Overview|[1](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/OSC2015.pdf)|
+||4-Sep	|NO CLASS Labor Day	||||
+|2|	11-Sep|	Intro Psych Science|	2|Paper 1|1,2|
+|3|	18-Sep|	Measurement	|3|Paper 1|1,2,3|
+|4|	25-Sep|	Experimental research|	4|Mini 1|1,2|
+|5|	2-Oct |	Factorial Designs I|	5|Mini 2||
+|6|16-Oct	|Factorial Designs II|	5|Mini 3||
+|7|23-Oct	|Factorial Designs III|	5|Paper 2||
+|8|30-Oct	|Midterm| |Paper 2||
+|9|6-Nov	|Theory and Phenomena|6|Brainstorm||
+|10|13-Nov	|Research Ethics|7|Individual Presentations||
+|11|20-Nov	|Control Problems I|TBD|Final Project||
+|12|27-Nov	|Control Problems II|TDB|Final Project||
+|13|4-Dec	|Communicating Research|12|Final Project||
+|14|11-Dec	|Open Science| TBD |Group presentation||
 |=====
 {: rules="groups"}
 
