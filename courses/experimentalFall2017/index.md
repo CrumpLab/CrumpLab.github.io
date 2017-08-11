@@ -7,7 +7,7 @@ project: false
 tag:
 comments: false
 ---
-This is the class website for sections MTAB, BB, CB, and DB of Experimental Psychology (PSYC3450W), Fall 2017. Check this site for regular updates to course information.
+This is the class website for sections MTAL, BL, CL, DL, EL, and FL of Experimental Psychology (PSYC3450W), Fall 2017. Check this site for regular updates to course information.
 
 Professor: Dr. Matthew Crump
 
