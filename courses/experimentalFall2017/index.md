@@ -21,7 +21,7 @@ Professor: Dr. Matthew Crump
 
 |#|	Lecture Date|	Topic & Notes|	Chapter| Lab| Supplemental |
 |:--|:--|:--|:--|:-- |:--|
-|1|	28-Aug|	Science|	1|Overview|[1](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/OSC2015.pdf)|
+|1|	28-Aug|	Science|	1|Overview|[1](http://science.sciencemag.org/content/349/6251/aac4716)|
 ||4-Sep	|NO CLASS Labor Day	||||
 |2|	11-Sep|	Intro Psych Science|	2|Paper 1|1,2|
 |3|	18-Sep|	Measurement	|3|Paper 1|1,2,3|
