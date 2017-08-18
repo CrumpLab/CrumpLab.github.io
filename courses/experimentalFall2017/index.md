@@ -18,6 +18,8 @@ Professor: Dr. Matthew Crump
 
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimentalFall2017/syllabus)
 
+[Textbook Download](https://github.com/CrumpLab/ResearchMethods/raw/master/Methods_Crump.pdf)
+
 
 |#|	Lecture Date|	Topic & Notes|	Chapter| Lab| Supplemental |
 |:--|:--|:--|:--|:-- |:--|
