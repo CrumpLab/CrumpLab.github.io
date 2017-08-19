@@ -45,14 +45,14 @@ Lecture notes will always be posted after class. If they are available before cl
 
 ### Resources
 
-* [Lab manual](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab%20Manual.pdf)
+* [Lab manual](https://github.com/CrumpLab/ResearchMethods/raw/master/LabManual/Lab_Manual.pdf)
 * [Research Resources](https://crumplab.github.io/courses/experimentalFall2017/researchresources)
 * [APA style Microsoft Word Template](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/lab/APAtemplate.docx)
 * [Example writing critique of a lab paper](https://crumplab.github.io/courses/experimentalFall2017/samplepaper)
 
-# Lab Assignments
+# Major Lab Assignments
 
-The details and expectations for each assignment will be posted here throughout the semester. During the lab you will be expected to complete 3 papers, and several lab projects that do not require full lab reports. For each paper, you will be required to write a complete APA style research report. The final paper involves two in class presentations: one individual presentation, and one group presentation.
+There are three major lab assignments and a few smaller lab assignments, that are all described in the [Lab manual](https://github.com/CrumpLab/ResearchMethods/raw/master/LabManual/Lab_Manual.pdf). The details and expectations for the paper assignments will be posted here throughout the semester. During the lab you will be expected to complete 3 papers, and several lab projects that do not require full lab reports. For each paper, you will be required to write a complete APA style research report. The final paper involves two in class presentations: one individual presentation, and one group presentation.
 
 ## Paper Project 1         
 * [Instructions and roadmap for paper 1](https://crumplab.github.io/courses/experimentalFall2017/paper1)
