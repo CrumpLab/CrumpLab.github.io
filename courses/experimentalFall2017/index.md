@@ -47,7 +47,7 @@ Lecture notes will always be posted after class. If they are available before cl
 
 * [Lab manual](https://github.com/CrumpLab/ResearchMethods/raw/master/LabManual/Lab_Manual.pdf)
 * [Research Resources](https://crumplab.github.io/courses/experimentalFall2017/researchresources)
-* [APA style Microsoft Word Template](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/lab/APAtemplate.docx)
+* [APA style Microsoft Word Template](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/APAtemplate.docx)
 * [Example writing critique of a lab paper](https://crumplab.github.io/courses/experimentalFall2017/samplepaper)
 
 # Major Lab Assignments
@@ -61,8 +61,8 @@ There are three major lab assignments and a few smaller lab assignments, that ar
 
 ## Paper Project 2
 * [Instructions and roadmap for paper 2](https://crumplab.github.io/courses/experimentalFall2017/paper2)
-  * Background reading: [Yin (1969)](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/pdfs/5%20Yin%201969.pdf)
-  * [ Face Inversion Experiment Download PC version](https://dl.dropboxusercontent.com/u/14462007/ExpPsych/Lab2.zip)
+  * Background reading: [Yin (1969)](https://login.ez-proxy.brooklyn.cuny.edu/login?url=http://psycnet.apa.org/record/1969-12269-001)
+  * [ Face Inversion Experiment Download PC version](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/Lab2.zip)
   * Due dates are set by your individual lab instructor
 
 ## Paper Project 3 (Final Project)
