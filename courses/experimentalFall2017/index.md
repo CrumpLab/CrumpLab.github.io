@@ -6,6 +6,7 @@ excerpt: "Psych 3450 Fall 2017"
 project: false
 tag:
 comments: false
+redirect_from: "https://crumplab.github.io/courses/experimental/"
 ---
 This is the class website for sections MTAL, BL, CL, DL, EL, and FL of Experimental Psychology (PSYC3450W), Fall 2017. Check this site for regular updates to course information.
 
