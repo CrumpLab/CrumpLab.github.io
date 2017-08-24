@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Essential readings in Cognitive Psychology"
-date: 2016-6-13
+date: 2017-8-24
 excerpt: "The beginnings of a list of essential readings in Cognitive Psychology"
 tags: [Cognition]
 category: labresources
