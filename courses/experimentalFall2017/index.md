@@ -21,6 +21,7 @@ Professor: Dr. Matthew Crump
 
 [Textbook Download](https://github.com/CrumpLab/ResearchMethods/raw/master/Methods_Crump.pdf)
 
+The dates listed are only for the lecture, check your lab section schedule for lab dates. All classes begin Friday, August 25th, so Friday lab sections begin on Friday, August 25th.
 
 |#|	Lecture Date|	Topic & Notes|	Chapter| Lab| Supplemental |
 |:--|:--|:--|:--|:-- |:--|
@@ -42,7 +43,7 @@ Professor: Dr. Matthew Crump
 |=====
 {: rules="groups"}
 
-Lecture notes will always be posted after class. If they are available before class, they are subject to change. The dates listed are only for the lecture, check your lab section schedule for lab dates.
+Lecture notes will always be posted after class. If they are available before class, they are subject to change.
 
 ### Resources
 
