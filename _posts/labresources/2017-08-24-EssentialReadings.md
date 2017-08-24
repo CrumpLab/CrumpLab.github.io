@@ -13,6 +13,8 @@ There are lots of foundational papers in Cognitive Psychology. Here are a few of
 
 Before the list, Cho, Tse, & Neely (2012, see the list for the full reference), have an excellent appendix of the top 500 most cited papers in cognitive psychology spanning 1950 - 2004. Lots of good things to read in there.
 
+Also, apologies for badly formatted references. Theses were all imported from google scholar into zotero, then compiled into a bibliography. When I get the chance I will fix them, but for now, blame Google.
+
 - Bartlett, F. C. (1932). Remembering. Cambridge. Cambridge Univ. Press.[LRS].
 - Bartlett, S. F. (1958). Thinking. Unwin.
 - Brooks, L. R. (1978). Nonanalytic concept formation and memory for instances. Retrieved from http://philpapers.org/rec/BRONCF
