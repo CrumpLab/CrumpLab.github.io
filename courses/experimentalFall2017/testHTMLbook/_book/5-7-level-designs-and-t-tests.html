@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Research methods for Psychology" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="A research methods for Psychology Textbook" />
+
+
+<meta name="author" content="Matthew Crump" />
+
+<meta name="date" content="2017-08-08" />
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="A research methods for Psychology Textbook">
+
+<title>Research methods for Psychology</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+
+<link rel="stylesheet" href="css/plugin-bookdown.css" type="text/css" />
+<link rel="stylesheet" href="css/plugin-highlight.css" type="text/css" />
+<link rel="stylesheet" href="css/plugin-search.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+<div class="row">
+<div class="col-sm-12">
+<!--bookdown:toc:end-->
+<!--bookdown:toc:start-->
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="level-designs-and-t-tests" class="section level2">
+<h2><span class="header-section-number">5.7</span> 2 level designs and t-tests</h2>
+<p>There are multiple ways to estimate whether chance is responsible for a difference in an experiment. By far the most common approach is to use a t-test. The t-test is a statitiscal method for analyzing the data in two conditions to determine the likelihood that any observed difference could have been produced by chance. You can refer to the inferential statistics chapter, your old notes from statistics, discussions of t-tests in the lab manual, and google t-tests to learn more about how they work. For now, we will briefly describe the three different kinds of t-tests, and give an example of how they are used to analyze data, and how the results from a t-test are reported in journal article.</p>
+<p>The three most common versions of the t-test are: one-sample t-test, independent samples t-test, and the paired samples t-test. The one sample t-test is used to test whether a sample mean could have come from a particular population. The independent samples t-test is used in between-subjects designs, to test whether the sample mean in one condition is different from the sample mean in another condition. The paired samples t-test is used in within-subjects designs, to test whether the sample mean in one condition is different from the sample mean in the other condition.</p>
+<p>All t-tests give the same basic information, a t-value, and a p-value. Simply, the p-value gives the probability that the observed difference between means could have been produced by chance alone. If we dive into the details, we will see that the p-value estimate depends on several assumptions being met, and also has more nuanced meanings. But for now, it gives us what we want, an estimate of the likelihood that chance could have produced the difference we observed. When the p-value is very small (e.g., less than .05, or 5%), many researchers would conclude that a difference “statistically significant”, and probably not produced by chance.</p>
+<div id="an-example" class="section level3">
+<h3><span class="header-section-number">5.7.1</span> An example</h3>
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<p class="caption marginnote shownote">
+Figure 5.2: Sample test scores for both groups were randomly drawn from this distribution, with mean 75, and standard deviation 5.
+</p>
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-5-1.png" alt="Sample test scores for both groups were randomly drawn from this distribution, with mean 75, and standard deviation 5." width="672"  />
+</div>
+<p>Imagine a between-subjects experiment on 20 students (10 in each group), asking whether wearing a red shirt or a blue shirt changes test performance on a midterm. The IV is shirt color (red vs. blue), and the DV is test performance (percentage on the midterm). We have no good reason to think that shirt color will change test performance, so we expect that the red and blue shirt groups will have similar averages. We can simulate this experiment by randomly sampling scores for both groups from the same underlying distribution (see the figure).</p>
+<p>Below are some imaginary results from the experiment.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">blue</th>
+<th align="right">red</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">73</td>
+<td align="right">74</td>
+</tr>
+<tr class="even">
+<td align="right">78</td>
+<td align="right">69</td>
+</tr>
+<tr class="odd">
+<td align="right">75</td>
+<td align="right">78</td>
+</tr>
+<tr class="even">
+<td align="right">73</td>
+<td align="right">70</td>
+</tr>
+<tr class="odd">
+<td align="right">80</td>
+<td align="right">72</td>
+</tr>
+<tr class="even">
+<td align="right">69</td>
+<td align="right">81</td>
+</tr>
+<tr class="odd">
+<td align="right">64</td>
+<td align="right">75</td>
+</tr>
+<tr class="even">
+<td align="right">67</td>
+<td align="right">73</td>
+</tr>
+<tr class="odd">
+<td align="right">80</td>
+<td align="right">70</td>
+</tr>
+<tr class="even">
+<td align="right">74</td>
+<td align="right">75</td>
+</tr>
+</tbody>
+</table>
+<p>Looking at the individual scores is informative, but doesn’t immediately give us a sense of the difference between groups. So, we can compute the group means:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">condition</th>
+<th align="right">scores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Blue</td>
+<td align="right">73.3</td>
+</tr>
+<tr class="even">
+<td align="left">Red</td>
+<td align="right">73.7</td>
+</tr>
+</tbody>
+</table>
+<p>The means are not exactly the same, so we might want to conclude that the studying manipulation influences test performance (after all, it probably does in the real world). However, the simulated data for both groups was actually sampled from the same distribution, with mean 75, and standard deviation 5. As a result, we know that the difference we observed between the sample means was due to random chance. We know this only because I simulated the data. If this was real data, then we wouldn’t know if the two sample means came from the the same distribution or different distributions.</p>
+<p>Even though we know the difference in this example was caused by random sampling, we can still compute a t-test on the simulated data.The following t-test was conducted using R.</p>
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  blue and red
+## t = -0.1926, df = 18, p-value = 0.8494
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -4.763314  3.963314
+## sample estimates:
+## mean of x mean of y 
+##      73.3      73.7</code></pre>
+<p>If this was a real experiment that was published in a manuscript, then we would want to report the results by: 1) reporting the means in each condition, and 2) reporting the t-test, including the t-value, the degrees of freedom, and the associated p-value. The write-up might look something like this:</p>
+<p>Mean test performance in the red shirt group (73.7) was not significantly different from mean test performance in the blue shirt group (73.3), t(18) = -0.193, p = 0.849.</p>
+</div>
+<div id="simulating-the-null" class="section level3">
+<h3><span class="header-section-number">5.7.2</span> Simulating the null</h3>
+<p>In the above example we found a small difference between the means of the red and blue shirt groups. We know this difference was produced by random sampling, and the t-test also returned a large p-value, indicating that chance could produce this small difference fairly often. This is all very sensible, as we don’t have a good reason to think that wearing different colored shirts should impact test performance.</p>
+<p>However, as previously discussed, just the act of measuring test performance and splitting people into two groups can produce differences between the sample means. Importantly, even when there are no true differences, analyzing the data with a t-test will sometimes produce small p-values (e.g., &lt; .05). For example, when there are no true differences, but there is variability in the measure, then approximately five percent of the time the t-test will return a p &lt; .05. In other words, if we conducted the t-shirt experiment 100 times, we would expect that 5 of those experiments would produce a difference between the red and blue shirts, that a t-test would claim is unlikely to be produced by chance.</p>
+<p>We can get a sense of this by repeating the above experiment 1000s of times. Each time we will take new random samples of test scores for the red and blue shirt groups, then we will compute the sample mean for each group, and then find the difference between the red and blue shirt groups. We can save the difference that we find for every replication, and then plot a histogram of the differences. This will show us the kind of differences that can be produced in this experiment by chance alone.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-10-1.png" width="672"  /></p>
+<p>The first histogram shows the range of differences that can occur by chance alone. The distribution is centered on 0, because on average there should be no differences between these two sample means (after all they come from the same parent distribution). We also see the range extends to around -5% to +5%. This shows that some replications have the red shirt group have up to a 5% higher test score than the blue shirt group, or vice versa.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672"  /></p>
+<p>For each replication, the resulting t-value and p-value was recorded. The second histogram shows the distribution of t-values, and the third histogram shows the distribution of p-values.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="672"  /></p>
+<p>The distribution of p-values is flat, meaning that any p-value between 0 and 100 should occur with the same frequency. This shows that, just by random sampling alone, we should expect to find significant differences (p&lt;.05), about 5% of the time.</p>
+</div>
+<div id="simulating-real-differences" class="section level3">
+<h3><span class="header-section-number">5.7.3</span> Simulating real differences</h3>
+<p>Imagine a between-subjects experiment on 20 students (10 in each group), asking whether studying or not changes test performance on a midterm. The IV is studying (studying vs. not studying), and the DV is test performance (percentage on the midterm). We assume that studying is important for passing a test, so the group who studies should have higher test scores than the group who doesn’t. We can simulate this experiment by randomly sampling scores for the study group from a distribution with a higher mean than the no study group.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="672"  /></p>
+<p>For example, the histograms on the right show that the sample scores in the study group will come from a distribution with mean = 80, and standard deviation = 5; and the sample scores in the no study group will come from a distribution with mean = 65, and standard deviation 5. The simulated scores in the experiment are in the table below:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">study</th>
+<th align="right">no_study</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">83</td>
+<td align="right">64</td>
+</tr>
+<tr class="even">
+<td align="right">72</td>
+<td align="right">75</td>
+</tr>
+<tr class="odd">
+<td align="right">81</td>
+<td align="right">59</td>
+</tr>
+<tr class="even">
+<td align="right">77</td>
+<td align="right">62</td>
+</tr>
+<tr class="odd">
+<td align="right">78</td>
+<td align="right">61</td>
+</tr>
+<tr class="even">
+<td align="right">81</td>
+<td align="right">74</td>
+</tr>
+<tr class="odd">
+<td align="right">84</td>
+<td align="right">73</td>
+</tr>
+<tr class="even">
+<td align="right">77</td>
+<td align="right">64</td>
+</tr>
+<tr class="odd">
+<td align="right">78</td>
+<td align="right">72</td>
+</tr>
+<tr class="even">
+<td align="right">77</td>
+<td align="right">68</td>
+</tr>
+</tbody>
+</table>
+<p>The group means are:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">condition</th>
+<th align="right">scores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">no_study</td>
+<td align="right">67.2</td>
+</tr>
+<tr class="even">
+<td align="left">study</td>
+<td align="right">78.8</td>
+</tr>
+</tbody>
+</table>
+<p>And, the t-test is:</p>
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  study and no_study
+## t = 5.3119, df = 18, p-value = 4.751e-05
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##   7.012051 16.187949
+## sample estimates:
+## mean of x mean of y 
+##      78.8      67.2</code></pre>
+<p>The results of the t-test could be reported as follows:</p>
+<p>Mean test performance in the study group group (78.8) was significantly higher than mean test performance in the no study group (67.2), t(18) = 5.312, p = 0.</p>
+<p>Or, more simply: Students who studied (78.8) had higher averages than students who didn’t study (67.2), t(18) = 5.312, p = 0.</p>
+</div>
+</div>
+<p style="text-align: center;">
+<a href="5-6-single-factor-designs-with-2-levels.html"><button class="btn btn-default">Previous</button></a>
+<a href="5-8-single-factor-designs-with-multiple-levels.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>
