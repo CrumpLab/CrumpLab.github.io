@@ -12,7 +12,7 @@ This is the class website for sections MTAL, BL, CL, DL, EL, and FL of Experimen
 
 Professor: Dr. Matthew Crump
 
-- Lecture Monday, 12:25pm - 2:05pm, IA -133
+- Lecture Monday, 12:25pm - 2:05pm, Ingersoll 1310
 - Office: 4307 James Hall
 - Email: mcrump@brooklyn.cuny.edu
 - Office hours: by appointment
