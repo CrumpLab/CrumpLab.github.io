@@ -19,6 +19,8 @@ Professor: Dr. Matthew Crump
 
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimentalFall2017/syllabus)
 
+[Web-based version of the textbook](https://crumplab.github.io/ResearchMethods/)
+
 [Textbook Download](https://github.com/CrumpLab/ResearchMethods/raw/master/Methods_Crump.pdf)
 
 The dates listed are only for the lecture, check your lab section schedule for lab dates. All classes begin Friday, August 25th, so Friday lab sections begin on Friday, August 25th.
