@@ -29,7 +29,7 @@ The dates listed are only for the lecture, check your lab section schedule for l
 |:--|:--|:--|:--|:-- |:--|
 |1|	28-Aug|	[Science](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture1.pdf)|	1|Overview|[1](https://login.ez-proxy.brooklyn.cuny.edu/login?url=http://science.sciencemag.org/content/349/6251/aac4716)|
 ||4-Sep	|NO CLASS Labor Day	||||
-|2|	11-Sep|	Intro Psych Science|	2|Paper 1|1,2|
+|2|	11-Sep|	[Intro Psych Science](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture2.pdf)|	2|Paper 1|[1](https://login.ez-proxy.brooklyn.cuny.edu/login?url=http://journals.sagepub.com/doi/abs/10.1177/0956797611414726)[2](https://login.ez-proxy.brooklyn.cuny.edu/login?url=http://econtent.hogrefe.com/doi/full/10.1027/1864-9335/a000178)|
 |3|	18-Sep|	Measurement	|3|Paper 1|1,2,3|
 |4|	25-Sep|	Experimental research|	4|Mini 1|1,2|
 |5|	2-Oct |	Factorial Designs I|	5|Mini 2||
