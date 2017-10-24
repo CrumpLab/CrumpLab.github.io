@@ -36,7 +36,7 @@ The dates listed are only for the lecture, check your lab section schedule for l
 |4|	25-Sep|	[Experimental research](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture4.pdf)|	4|Mini 1|[1](https://login.ez-proxy.brooklyn.cuny.edu/login?url=http://www.sciencedirect.com/science/article/pii/S0022103112000200)|
 |5|	2-Oct |	[Factorial Designs I](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture5.pdf)|	5|Mini 2||
 |6|16-Oct	|[Factorial Designs II](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture6.pdf)|	5|Mini 3||
-|7|23-Oct	|[Factorial Designs III](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture7.pdf)|	5|Paper 2|(Excel2x2)[https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/ExcelExample.xlsx]|
+|7|23-Oct	|[Factorial Designs III](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture7.pdf)|	5|Paper 2|[Excel2x2](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/ExcelExample.xlsx)|
 |8|30-Oct	|Midterm| |Paper 2||
 |9|6-Nov	|Theory and Phenomena|6|Brainstorm||
 |10|13-Nov	|Research Ethics|7|Individual Presentations||
