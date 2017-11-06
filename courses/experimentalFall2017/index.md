@@ -73,7 +73,7 @@ There are three major lab assignments and a few smaller lab assignments, that ar
 
 ## Paper Project 3 (Final Project)
 * [Instructions for Final Project](https://crumplab.github.io/courses/experimentalFall2017/paper3)
-* [Individual presentations (Example Powerpoint)]()
+* [Individual presentations (Example Powerpoint)](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/ExampleIndividual.pptx)
 
 ## Lab FAQs
 
