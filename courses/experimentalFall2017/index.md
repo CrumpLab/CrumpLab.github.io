@@ -17,6 +17,8 @@ Professor: Dr. Matthew Crump
 - Email: mcrump@brooklyn.cuny.edu
 - Office hours: by appointment
 
+[Final Grade Calculator](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/FinalGradeCalculator.xlsx)
+
 [Midterm testbank](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/MidtermTestBank1.pdf)
 
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimentalFall2017/syllabus)
