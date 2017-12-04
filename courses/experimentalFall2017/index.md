@@ -44,7 +44,7 @@ The dates listed are only for the lecture, check your lab section schedule for l
 |10|13-Nov	|[Research Ethics](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture9.pdf)|7|Individual Presentations||
 |11|20-Nov	|[Control Problems I](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture10.pdf)|TBD|Final Project||
 |12|27-Nov	|Control Problems II|TDB|Final Project||
-|13|4-Dec	|[Questionable Research Practices](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture11.pdf)|12|Final Project||
+|13|4-Dec	|[Questionable Research Practices](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Lecture11.pdf)||Final Project||
 |14|11-Dec	|Open Science| TBD |Group presentation||
 |=====
 {: rules="groups"}
