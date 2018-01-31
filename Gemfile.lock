@@ -45,7 +45,7 @@ GEM
     mercenary (0.3.6)
     minitest (5.9.0)
     multipart-post (2.0.0)
-    nokogiri (1.5.6)
+    nokogiri (1.8.1)
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
     rb-fsevent (0.9.7)
