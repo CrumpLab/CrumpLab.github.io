@@ -17,10 +17,6 @@ Professor: Dr. Matthew Crump
 - Email: mcrump@brooklyn.cuny.edu
 - Office hours: by appointment
 
-[Final testbank](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/PSYC3450_Final_testbank.pdf)
-
-[Long answer questions for final exam](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/Long_Answer_Questions.pdf)
-
 [Final Grade Calculator](https://github.com/CrumpLab/CrumpLab.github.io/raw/master/courses/experimentalFall2017/LectureNotes/FinalGradeCalculator.xlsx)
 
 [Course Syllabus - all sections](https://crumplab.github.io/courses/experimentalFall2017/syllabus)
