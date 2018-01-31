@@ -6,15 +6,15 @@ date: 2016-08-23
 comments: false
 ---
 
-Current Courses
+Current
 
-## [PSYC 3450 Experimental Psychology Fall 2017](https://crumplab.github.io/courses/experimentalFall2017/)
+## [PSYC 80103: Cognitive Technologies: From Theory and Data to Application, Spring 2018](https://crumplab.github.io/cognitivetechnologies)
 ___
-Previous Courses
+Previous
 
 | PSYC #| Title |Level|Semester|
 |:--------|:-------:|:--------:|
-|3450|Experimental Psychology|Undergrad|[F2016](https://crumplab.github.io/courses/experimentalFall2016/)|
+|3450|Experimental Psychology|Undergrad|[F2016](https://crumplab.github.io/courses/experimentalFall2016/) [F2017](https://crumplab.github.io/courses/experimentalFall2017/)|
 |3530|Cognitive Psychology|Undergrad| |
 |2001|Laboratory Experience|Undergrad| |
 |5001+|Independent Research|Undergrad| |
