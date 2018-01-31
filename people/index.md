@@ -14,7 +14,6 @@ comments: false
 |Kevonte Mitchell| Doctoral Student|
 |Mark Rayev| Undergraduate|
 |Walter Lai| Undergraduate|
-
 |======
 
 | Previous | Info |
