@@ -9,13 +9,18 @@ comments: false
 | Current | Info |
 |:--------|-------:|
 |Matthew Crump| PI, email: mcrump@brooklyn.cuny.edu|
-|Lawrence Behmer| Postdoc, email:|
-|Kevonte Mitchell| Doctoral Student, email: |
-|Nicholaus Brosowsky| Doctoral Student, email: |
+|Lawrence Behmer| Postdoc|
+|Nicholaus Brosowsky| Doctoral Student|
+|Kevonte Mitchell| Doctoral Student|
+|Mark Rayev| Undergraduate|
+|Walter Lai| Undergraduate|
+
 |======
 
 | Previous | Info |
 |:--------|-------:|
+|Chin Tan| 2017: Undergraduate|
+|Marissa Scotto| 2017: Undergraduate REU|
 |Ashot Balayan|2016: Master's|
 |Niles Uy| 2016: Undergraduate Macaulay Honors|
 |Ana Sanchez| 2016: Undergraduate REU|
