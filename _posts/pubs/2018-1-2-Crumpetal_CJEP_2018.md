@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Context-dependent control of attention capture: Evidence from proportion congruent effects."
-date: 2016-1-2
+date: 2018-1-2
 download: "https://CrumpLab.github.io/CrumpPubs/CrumpetalCJEP2018.pdf"
 citation: "Crump, M. J. C., Milliken, B., Leboe-McGowan, J., Leboe-McGowan, L., & Gao, X. (2018). Context-dependent control of attention capture: Evidence from proportion congruent effects. Canadian Journal of Experimental Psychology, onlineFirst."
 pubs: true
