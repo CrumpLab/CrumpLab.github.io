@@ -12,7 +12,8 @@ comments: false
 |Lawrence Behmer| Postdoc|
 |Nicholaus Brosowsky| Doctoral Student|
 |Kevonte Mitchell| Doctoral Student|
-|Mark Rayev| Undergraduate|
+|Rochell Hall| Undergraduate REU|
+|Mark Rayev| Undergraduate Macaulay Honors|
 |Walter Lai| Undergraduate|
 |======
 
