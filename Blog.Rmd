@@ -9,8 +9,11 @@ output:
     toc_depth: 1
 ---
 
+--------------------------
 
 # Why is the p-distribution flat under the null? {#flatp}
+
+2018-07-21, last compiled: `r Sys.Date()`
 
 The $p$-distribution is flat under the null, it is made to be this way. Let's understand why. First, a simulation to show that the $p$-distribution is flat under the null. We start with the null distribution. Here, I sampled data from a normal (u=0, sd=1), ran a t-test, saved the $p$-value, repeated 1000 times, then put the $p$-values into a histogram. You can see it's mostly flat across the range 0-1. 
 
@@ -108,6 +111,8 @@ qplot(abs(save_t))+
 
 # Make a free Introductory Cognitive Psych textbook with online experiments
 
+2018-07-21, last compiled: `r Sys.Date()`
+
 I recently wrote this proposal, plan is to do it during fall 2018-Spring 2019.
 
 From my email correspondence (note to self to edit this later):
@@ -125,6 +130,8 @@ To summarize, I would plan to write a textbook and write interactive online expe
 
 
 # How do I use R to list my publications on this webpage?
+
+2018-07-21, last compiled: `r Sys.Date()`
 
 Maybe get them to auto print from a .bib file. That way I can update everything in Zotero, output a .bib file, then automatically list everything... hmmm...
 
