@@ -416,7 +416,7 @@ qplot(abs(save_t))+
 <pre class="r"><code>library(bib2df)
 bib_df&lt;-bib2df(file=&quot;Crump.bib&quot;)</code></pre>
 <pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.4</code></pre>
-<p>That seemed to work nice. Needed to add a few missing years to the .bib file. Ok, just need to write a loop…need to remove special characters in bibfile</p>
+<p>That seemed to work nice. Needed to add a few missing years to the .bib file. Ok, just need to write a loop…need to remove special characters in bibfile…Cool, basically got it working. Need to update bib file to check for errors. Need to add a catch for papers that aren’t articles… Going to move this code over to the publications page and modify from there.</p>
 <pre class="r"><code>library(stringi)</code></pre>
 <pre><code>## Warning: package &#39;stringi&#39; was built under R version 3.4.4</code></pre>
 <pre class="r"><code>bib_df$TITLE&lt;-stri_replace_all_regex(bib_df$TITLE, &quot;[\\{\\}]&quot;, &quot;&quot;)
@@ -578,11 +578,6 @@ for(i in 1:dims[1]){
 <div id="the-context-specific-proportion-congruent-stroop-effect-location-as-a-contextual-cue" class="section level4">
 <h4>The context-specific proportion congruent Stroop effect: Location as a contextual cue</h4>
 <p>Crump, M. J. C., Gong, Zhiyu, Milliken, Bruce (2006). The context-specific proportion congruent Stroop effect: Location as a contextual cue. <em>Psychonomic Bulletin &amp; Review, 13</em>, 316–321. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/1832/Crump%20et%20al.%20-%202006%20-%20The%20context-specific%20proportion%20congruent%20Stroop%20e.pdf">pdf</a></p>
-<pre class="r"><code>#a&lt;-bib_df$FILE[5]
-#split_a&lt;-unlist(strsplit(a,&quot;:&quot;))
-#file_path&lt;-paste0(&quot;https://github.com/CrumpLab/CrumpLab.github.io/raw/master/&quot;,split_a[2])</code></pre>
-<p><a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/405/JamiesonCrumpHannah2012.pdf" class="uri">https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/405/JamiesonCrumpHannah2012.pdf</a></p>
-<p><a href="https://crumplab.github.io">test</a></p>
 </div>
 </div>
 

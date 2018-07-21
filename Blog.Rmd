@@ -146,7 +146,7 @@ library(bib2df)
 bib_df<-bib2df(file="Crump.bib")
 ```
 
-That seemed to work nice. Needed to add a few missing years to the .bib file. Ok, just need to write a loop...need to remove special characters in bibfile
+That seemed to work nice. Needed to add a few missing years to the .bib file. Ok, just need to write a loop...need to remove special characters in bibfile...Cool, basically got it working. Need to update bib file to check for errors. Need to add a catch for papers that aren't articles... Going to move this code over to the publications page and modify from there.
 
 ```{r, results='asis'}
 library(stringi)
@@ -180,18 +180,5 @@ for(i in 1:dims[1]){
   
 }
 
-#a<-bib_df$FILE[5]
-#split_a<-unlist(strsplit(a,":"))
-#file_path<-paste0("https://github.com/CrumpLab/CrumpLab.github.io/raw/master/",split_a[2])
-
-
-
-
 ```
-
-https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/405/JamiesonCrumpHannah2012.pdf
-
-[test](https://crumplab.github.io)
-
-
 
