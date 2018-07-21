@@ -23,6 +23,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -162,6 +163,14 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 
@@ -306,6 +315,14 @@ div.tocify {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Various musings</h1>
@@ -313,6 +330,7 @@ div.tocify {
 </div>
 
 
+<p>Using this mainly as a place to make notes for myself so I don’t forget what I’m doing. I own my spelling mistakes and sell them on e-bay.</p>
 <hr />
 <div id="flatp" class="section level1">
 <h1>Why is the p-distribution flat under the null?</h1>
@@ -415,11 +433,10 @@ qplot(abs(save_t))+
 </ol>
 <pre class="r"><code>library(bib2df)
 bib_df&lt;-bib2df(file=&quot;Crump.bib&quot;)</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.4</code></pre>
 <p>That seemed to work nice. Needed to add a few missing years to the .bib file. Ok, just need to write a loop…need to remove special characters in bibfile…Cool, basically got it working. Need to update bib file to check for errors. Need to add a catch for papers that aren’t articles… Going to move this code over to the publications page and modify from there.</p>
-<pre class="r"><code>library(stringi)</code></pre>
-<pre><code>## Warning: package &#39;stringi&#39; was built under R version 3.4.4</code></pre>
-<pre class="r"><code>bib_df$TITLE&lt;-stri_replace_all_regex(bib_df$TITLE, &quot;[\\{\\}]&quot;, &quot;&quot;)
+<pre class="r"><code>library(stringi)
+
+bib_df$TITLE&lt;-stri_replace_all_regex(bib_df$TITLE, &quot;[\\{\\}]&quot;, &quot;&quot;)
 bib_df$JOURNAL&lt;-stri_replace_all_regex(bib_df$JOURNAL, &quot;[\\{\\}]&quot;, &quot;&quot;)
 
 # sort bib_df by year

@@ -1,11 +1,13 @@
 ---
 title: "Publications"
-output: html_document
+output: 
+  html_document:
+    code_folding: hide
 ---
 
 Note: publications are compiled in Rmarkdown directly from a .bib file. Slowly working on making this work.
 
-```{r, results='asis', echo=F, message=F, warning=FALSE}
+```{r, results='asis', echo=T, message=F, warning=FALSE}
 library(bib2df)
 bib_df<-bib2df(file="Crump.bib")
 
@@ -35,6 +37,10 @@ for(i in 1:dims[1]){
     cat(c(" ", "[pdf](",file_path,")"), sep="")
   }
   
+  cat(c("\n"))
+  cat(c("\n"))
+  cat(bib_df[i,]$ABSTRACT)
+  cat(c("\n"))
   cat(c("\n"))
   cat(c("\n"))
   
