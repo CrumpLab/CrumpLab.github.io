@@ -1,0 +1,184 @@
+---
+title: "Books"
+output: html_document
+---
+
+I have developed a habit of writing books of various kinds, all free, open-source, and license on creative commons (note in the process of formalizing these licenses for each, still everything is intended to be totally open, remixable, editable etc.). These books were made using RMarkdown and compiled in Bookdown.
+
+---
+
+### Currently In Draft
+
+-----
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+#### Answering Questions with Data (In Draft, release Fall 2018)
+
+Introductory Statistics for Psychology Students
+
+**Authors**: TBD
+
+**Description**: This is a free introductory statistics textbook for undergraduates in Psychology. It is being developed as an Open Educational Resource @ Brooklyn College. It is pitched at the concepts behind statistics, and often uses simulation in R to convey foundational ideas. The writing style is sometimes a bit unconventional, and informal. It is for students who don't want to like statistics. 
+
+Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/statistics](https://github.com/CrumpLab/statistics).
+
+</div>
+<div class="col-sm-6">
+<a href="https://crumplab.github.io/statistics/">
+```{r statsTextbook, out.width=200, echo=F}
+knitr::include_graphics("images/TextbookCover.png")
+```
+</a>
+</div>
+</div>
+
+
+-----
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+#### Answering Questions with Data: The Lab Manual (In Draft, release Fall 2018)
+
+Lab activities using R, Excel, SPSS, and JAMOVI
+
+**Authors**: TBD
+
+**Description**: This is the companion lab manual to our free stats book. It contains lab activities for learning how to conduct statistical tests in R, Excel, SPSS, and JAMOVI. We use open data, often from psychology papers, and show step-by-step how to solve data-analysis problems in each software package. 
+
+Some of the labs are adapated from [Open Stats Lab](https://sites.trinity.edu/osl), which is another great resource.
+
+**Source code**: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/statisticsLab](https://github.com/CrumpLab/statisticsLab).
+
+</div>
+<div class="col-sm-6">
+<a href="https://crumplab.github.io/statisticsLab/">
+```{r StatsLab, out.width=200, echo=F}
+knitr::include_graphics("images/LabmanualCover.png")
+```
+</a>
+</div>
+</div>
+
+
+................................................
+-----
+
+### Finished Books
+
+
+----
+
+
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+#### Research Methods for Psychology
+
+**Description**:A free Research methods textbook for undergraduates in Psychology, creative commons license, remix, reuse, edit, contribute.
+
+**Authors**: Matthew J. C. Crump, Paul C. Price, Rajiv Jhangiani, I-Chant A. Chiang, Dana C. Leighton
+
+**Source code**: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/ResearchMethods](https://github.com/CrumpLab/ResearchMethods).
+
+</div>
+<div class="col-sm-6">
+<a href="https://crumplab.github.io/ResearchMethods/">
+```{r ResearchMethods, out.width=200, echo=F}
+knitr::include_graphics("images/ResearchMethods.png")
+```
+</a>
+</div>
+</div>
+
+
+-----
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+#### Cognitive Technologies: From Theory and Data to Application
+
+**Description**: [A series of chapters on cognitive technologies](https://crumplab.github.io/cognitivetechnologies/book/) written by doctoral students who took my course on Cognitive Technologies in Spring 2018. They wrote it, I compiled it using bookdown.
+
+**Editor**: Crump, M. J. C
+
+**Authors**: Crump, M. J. C.; Amada, N.; Bourque, K; Brosowsky, N.; Ergun, T.; Korovatskaya, A.; Ma, X.; Seoung, Y.; Wylie, J.
+
+</div>
+<div class="col-sm-6">
+<a href="https://crumplab.github.io/cognitivetechnologies/book/">
+```{r CogTech, out.width=200, echo=F}
+knitr::include_graphics("images/CogTech.png")
+```
+</a>
+</div>
+</div>
+
+
+-----
+
+#### Open tools for writing open interactive textbooks (and more)
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+**Description**: tutorial overview of the process I use to write books using R, R-studio, R-markdown, and compile them in bookdown. I've used this process for all of these books. Some other brief tidbits on using hypothes.is, and R-Shiny apps, also Zotero and hosting on github pages (where this website is hosted)
+
+**Author**: Matthew J. C. Crump
+
+[Link to the book](https://crumplab.github.io/OER_bookdown/)
+
+Note this is a meta-book. The tutorial above is for you to read so you can download the source code, then compile it yourself, then edit it to make your own.
+
+**Source code**: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/OER_bookdown](https://github.com/CrumpLab/OER_bookdown).
+</div>
+
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/OER_bookdown/">
+```{r OERs, out.width=200, echo=F}
+knitr::include_graphics("images/OER.png")
+```
+</a>
+</div>
+</div>
+
+
+-----
+
+#### Programming for Psychologists: Data Creation and Analysis
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+**Description**: Some notes that got big enough to make a book. Beginner introduction to coding in R, Livecode, and some web-programming, for the purposes of making data with computers (programming experiments), and analyzing it in R.
+
+**Author**: Matthew J. C. Crump
+
+[Link to Book](https://crumplab.github.io/programmingforpsych/)
+
+**Source code**: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/programmingforpsych](https://github.com/CrumpLab/programmingforpsych).
+
+
+</div>
+
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/programmingforpsych/">
+```{r Programming, out.width=200, echo=F}
+knitr::include_graphics("images/Programming.png")
+```
+</a>
+</div>
+</div>
+
+
+-----
+
+
+
+
