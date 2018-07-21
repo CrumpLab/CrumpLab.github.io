@@ -11,7 +11,7 @@
 
 
 
-<title>Blog</title>
+<title>Various musings</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -163,6 +166,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -210,17 +308,13 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Blog</h1>
+<h1 class="title toc-ignore">Various musings</h1>
 
 </div>
 
 
-<div id="section" class="section level2 tabset">
-<h2></h2>
-<div id="statistics" class="section level3">
-<h3>Statistics</h3>
-<div id="why-is-the-p-distribution-flat-under-the-null" class="section level4">
-<h4>Why is the p-distribution flat under the null?</h4>
+<div id="flatp" class="section level1">
+<h1>Why is the p-distribution flat under the null?</h1>
 <p>The <span class="math inline">\(p\)</span>-distribution is flat under the null, it is made to be this way. Let’s understand why. First, a simulation to show that the <span class="math inline">\(p\)</span>-distribution is flat under the null. We start with the null distribution. Here, I sampled data from a normal (u=0, sd=1), ran a t-test, saved the <span class="math inline">\(p\)</span>-value, repeated 1000 times, then put the <span class="math inline">\(p\)</span>-values into a histogram. You can see it’s mostly flat across the range 0-1.</p>
 <pre class="r"><code>library(ggplot2)
 save_p&lt;-length(1000)
@@ -231,8 +325,8 @@ hist(save_p)</code></pre>
 <p><img src="Blog_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>Roughly, this means you are just as likely to get a <span class="math inline">\(p\)</span>-value between 0 and 0.05, as you are to get one between .95 and 1. This is one reason why the size of the <span class="math inline">\(p\)</span>-value does not allow you to have more or less evidence for the null, because under the null, you have the same chances of getting any <span class="math inline">\(p\)</span>-value. A <span class="math inline">\(p\)</span>-value of 0.9 does not give more evidence for the null than a <span class="math inline">\(p\)</span>-value of .5.</p>
 <p>Ok, so the simulation shows that the <span class="math inline">\(p\)</span>-distribution is flat under the null, but why is it flat? The <span class="math inline">\(t\)</span>-distribution isn’t flat. Aren’t <span class="math inline">\(t\)</span>’s around 0 the most frequently occurring values? Aren’t those <span class="math inline">\(t\)</span>’s associated with particular <span class="math inline">\(p\)</span>-values, shouldn’t those particular <span class="math inline">\(p\)</span>-values occur with the same frequency as their associated <span class="math inline">\(t\)</span>s? This way of thinking is a bit of a trap, it might be one reason why people would expect the <span class="math inline">\(p\)</span>-distribution to go up and down.</p>
-<div id="ps-are-not-the-probability-of-specific-ts" class="section level5">
-<h5><span class="math inline">\(p\)</span>’s are not the probability of specific <span class="math inline">\(t\)</span>’s</h5>
+<div id="ps-are-not-the-probability-of-specific-ts" class="section level2">
+<h2><span class="math inline">\(p\)</span>’s are not the probability of specific <span class="math inline">\(t\)</span>’s</h2>
 <p>Perhaps a common misinterpretation of <span class="math inline">\(p\)</span>-values is that they represent the probability of getting a particular <span class="math inline">\(t\)</span>-value. This is not what they represent. Instead, <span class="math inline">\(p\)</span>’s represent ranges of t-values. Some examples:</p>
 <ol style="list-style-type: decimal">
 <li><p>When <span class="math inline">\(t\)</span> = 0, <span class="math inline">\(p\)</span> = 1. Obviously you do not have a 100% chance of getting a <span class="math inline">\(t\)</span> of 0 every time under the null. Instead, you have a 100% chance of getting a <span class="math inline">\(t\)</span> that is 0 or larger (in absolute value) than 0.</p></li>
@@ -291,11 +385,8 @@ qplot(abs(save_t))+
 <p><img src="Blog_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
 </div>
-</div>
-<div id="cognition" class="section level3">
-<h3>Cognition</h3>
-<div id="make-a-free-introductory-cognitive-psych-textbook-with-online-experiments" class="section level4">
-<h4>Make a free Introductory Cognitive Psych textbook with online experiments</h4>
+<div id="make-a-free-introductory-cognitive-psych-textbook-with-online-experiments" class="section level1">
+<h1>Make a free Introductory Cognitive Psych textbook with online experiments</h1>
 <p>I recently wrote this proposal, plan is to do it during fall 2018-Spring 2019.</p>
 <p>From my email correspondence (note to self to edit this later):</p>
 <ol style="list-style-type: decimal">
@@ -310,23 +401,19 @@ qplot(abs(save_t))+
 <p>To summarize, I would plan to write a textbook and write interactive online experiments for each chapter</p>
 <p>[let’s see if that happens]</p>
 </div>
-</div>
-<div id="musings" class="section level3">
-<h3>Musings</h3>
-<p>hmmm</p>
-<div id="how-do-i-use-r-to-list-my-publications-on-this-webpage" class="section level4">
-<h4>How do I use R to list my publications on this webpage?</h4>
+<div id="how-do-i-use-r-to-list-my-publications-on-this-webpage" class="section level1">
+<h1>How do I use R to list my publications on this webpage?</h1>
 <p>Maybe get them to auto print from a .bib file. That way I can update everything in Zotero, output a .bib file, then automatically list everything… hmmm…</p>
 <p>How about testing this here and seeing what happens.</p>
 <ol style="list-style-type: decimal">
 <li>Get .bib file from Zotero library of my papers, put it in this folder.</li>
 </ol>
 </div>
+
+
+
 </div>
 </div>
-
-
-
 
 </div>
 
