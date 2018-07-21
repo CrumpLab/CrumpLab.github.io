@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Blog</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Crump Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="People.html">People</a>
+</li>
+<li>
+  <a href="Publications.html">Publications</a>
+</li>
+<li>
+  <a href="Books.html">Books</a>
+</li>
+<li>
+  <a href="Courses.html">Courses</a>
+</li>
+<li>
+  <a href="Opportunities.html">Join The Lab</a>
+</li>
+<li>
+  <a href="Blog.html">Blog</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Blog</h1>
+
+</div>
+
+
+<div id="section" class="section level2 tabset">
+<h2></h2>
+<div id="statistics" class="section level3">
+<h3>Statistics</h3>
+<div id="why-is-the-p-distribution-flat-under-the-null" class="section level4">
+<h4>Why is the p-distribution flat under the null?</h4>
+<p>The <span class="math inline">\(p\)</span>-distribution is flat under the null, it is made to be this way. Let’s understand why. First, a simulation to show that the <span class="math inline">\(p\)</span>-distribution is flat under the null. We start with the null distribution. Here, I sampled data from a normal (u=0, sd=1), ran a t-test, saved the <span class="math inline">\(p\)</span>-value, repeated 1000 times, then put the <span class="math inline">\(p\)</span>-values into a histogram. You can see it’s mostly flat across the range 0-1.</p>
+<pre class="r"><code>library(ggplot2)
+save_p&lt;-length(1000)
+for(i in 1:1000){
+  save_p[i] &lt;- t.test(rnorm(20,0,1))$p.value
+}
+hist(save_p)</code></pre>
+<p><img src="Blog_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Roughly, this means you are just as likely to get a <span class="math inline">\(p\)</span>-value between 0 and 0.05, as you are to get one between .95 and 1. This is one reason why the size of the <span class="math inline">\(p\)</span>-value does not allow you to have more or less evidence for the null, because under the null, you have the same chances of gettin any <span class="math inline">\(p\)</span>-value. A <span class="math inline">\(p\)</span>-value of 0.9 does not give more evidence for the null than a <span class="math inline">\(p\)</span>-value of .5.</p>
+<p>Ok, so the simulation shows that the <span class="math inline">\(p\)</span>-distribution is flat under the null, but why is it flat? The <span class="math inline">\(t\)</span>-distribution isn’t flat. Aren’t <span class="math inline">\(t\)</span>’s around 0 the most frequently occuring values? Aren’t those <span class="math inline">\(t\)</span>’s associated with particular <span class="math inline">\(p\)</span>-values, shouldn’t those particular <span class="math inline">\(p\)</span>-values occur with the same frequency as their associated <span class="math inline">\(t\)</span>s? This way of thinking is a bit of a trap, it might be one reason why people would expect the <span class="math inline">\(p\)</span>-distribution to go up and down.</p>
+<div id="ps-are-not-the-probability-of-specific-ts" class="section level5">
+<h5><span class="math inline">\(p\)</span>’s are not the probability of specific <span class="math inline">\(t\)</span>’s</h5>
+<p>Perhaps a common misinterpretation of <span class="math inline">\(p\)</span>-values is that they represent the probability of getting a particular <span class="math inline">\(t\)</span>-value. This is not what they represent. Instead, <span class="math inline">\(p\)</span>’s represent ranges of t-values. Some examples:</p>
+<ol style="list-style-type: decimal">
+<li><p>When <span class="math inline">\(t\)</span> = 0, <span class="math inline">\(p\)</span> = 1. Obviously you do not have a 100% chance of getting a <span class="math inline">\(t\)</span> of 0 everytime under the null. Instead, you have a 100% chance of getting a <span class="math inline">\(t\)</span> that is 0 or larger (in absolute value) than 0.</p></li>
+<li><p>Under a two-tailed test, when <span class="math inline">\(p\)</span> = .95, this does not mean you have a 95% chance of getting the specific <span class="math inline">\(t\)</span> you observed. It means you have a 95% chance of getting the <span class="math inline">\(t\)</span> you observed or greater (absolute value).</p></li>
+<li><p>The percentage of <span class="math inline">\(t\)</span>’s associated with the <span class="math inline">\(p\)</span>-range: .9 and .95 are 5% of the total <span class="math inline">\(t\)</span>’s. THe percentage of <span class="math inline">\(t\)</span>’s associated with the <span class="math inline">\(p\)</span>-range: .5-.55 are 5% of the total <span class="math inline">\(t\)</span>’s. The percentage of <span class="math inline">\(t\)</span>’s associated with the <span class="math inline">\(p\)</span>-range: .05 - 0 are 5% of the total. It’s always 5%. If you split up the <span class="math inline">\(t\)</span>-distribution into regions of 5%, then there are 20 regions, each having the same proportion of t-values. These regions are the p-values, and they are why the p-distribution is flat.</p></li>
+</ol>
+<p>Let’s look at the <span class="math inline">\(t\)</span>-distribution, and see how it is split up into p-values. Here’s the <span class="math inline">\(t\)</span>-distribution for the null (1000 simulations).</p>
+<pre class="r"><code>save_t&lt;-length(1000)
+for(i in 1:1000){
+  save_t[i] &lt;- t.test(rnorm(20,0,1))$statistic
+}
+
+qplot(save_t)+
+  geom_histogram( aes(bins=50), color=&quot;white&quot;)+
+  theme_classic()</code></pre>
+<p><img src="Blog_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>The <span class="math inline">\(t\)</span>-distribution is certainly not flat. Most <span class="math inline">\(t\)</span>’s are around 0, and larger or smaller <span class="math inline">\(t\)</span>’s happen with increasingly smaller frequency.</p>
+<p>The whole point of the <span class="math inline">\(t\)</span>-distribution is to show the behavior of <span class="math inline">\(t\)</span> under the null. Once we obtain the distribution, we then apply decision boundaries to the distribution (at least under some philosophies). The <span class="math inline">\(p\)</span>-distribution is defined by how the decision rules are applied. And, the way we apply the rules makes the <span class="math inline">\(p\)</span>-distribution flat.</p>
+<p>For example, let’s say we want to only have two decisions boundaries, A and B. It would look like this:</p>
+<pre class="r"><code>qplot(save_t)+
+  geom_histogram( aes(bins=50), color=&quot;white&quot;)+
+  geom_vline(xintercept=0, color=&quot;red&quot;, size=2)+
+  annotate(&quot;text&quot;, x=-2.5, y=100, label=&quot;A (50%)&quot;)+
+  annotate(&quot;text&quot;, x=2.5, y=100, label=&quot;B (50%&quot;)+
+  theme_classic()</code></pre>
+<p><img src="Blog_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Under the null, you would make Decision A half of the time, and Decision B half of the time. If you simulated this a bunch of times, got a t-value, then saved your decision (A or B), and then made a bar plot of the number of times you said A or B, it would be roughly flat.</p>
+<p>Let’s do the above, but instead of splitting into two equal regions of 50%. We split the t-distribution into equal regions of 5%. This creates 20 regions. In the figure, the white space between each red line shows where 5% of <span class="math inline">\(t\)</span>’s will be found.</p>
+<pre class="r"><code>ordered_t&lt;-sort(save_t)
+spacing&lt;-ordered_t[seq(0,1000,50)]
+spacing[1]&lt;--4
+spacing[20]&lt;-4
+
+qplot(save_t)+
+  geom_histogram( aes(bins=50), color=&quot;white&quot;)+
+  geom_vline(xintercept=spacing, color=&quot;red&quot;, size=1)+
+  annotate(&quot;text&quot;, x=-2.5, y=100, label=&quot;5%&quot;)+
+  annotate(&quot;text&quot;, x=2.5, y=100, label=&quot;5%&quot;)+
+  theme_classic()</code></pre>
+<p><img src="Blog_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>If you used these decision regions, you would find <span class="math inline">\(t\)</span>’s inside each band 5% of the time. The bands have different widths to accomodate the fact that <span class="math inline">\(t\)</span>’s have different probabilities across the range.</p>
+<p>This top graph is a little deceiving with respect to two-tailed t-testing. We could see things a little more clearly if we plotted the absolute value of <span class="math inline">\(t\)</span>’s. This will make a right skewed histogram, with t starting at 0 and getting bigger. We can apply the same 20 regions.</p>
+<pre class="r"><code>ordered_t&lt;-sort(abs(save_t))
+spacing&lt;-ordered_t[seq(0,1000,50)]
+spacing[1]&lt;-0
+spacing[20]&lt;-4
+
+qplot(abs(save_t))+
+  geom_histogram( aes(bins=50), color=&quot;white&quot;)+
+  geom_vline(xintercept=spacing, color=&quot;red&quot;, size=1)+
+  annotate(&quot;text&quot;, x=3, y=100, label=&quot;5%: this bin is  \n p&lt;=.05&quot;)+
+  annotate(&quot;text&quot;, x=1.9, y=100, label=&quot;5%&quot;)+
+  annotate(&quot;text&quot;, x=1.65, y=100, label=&quot;5%&quot;)+
+  annotate(&quot;text&quot;, x=1.45, y=100, label=&quot;...&quot;)+
+  theme_classic()</code></pre>
+<p><img src="Blog_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="cognition" class="section level3">
+<h3>Cognition</h3>
+<div id="make-a-free-introductory-cognitive-psych-textbook-with-online-experiments" class="section level4">
+<h4>Make a free Introductory Cognitive Psych textbook with online experiments</h4>
+<p>I recently wrote this proposal, plan is to do it during fall 2018-Spring 2019.</p>
+<p>From my email correspondence (note to self to edit this later):</p>
+<ol style="list-style-type: decimal">
+<li><p>Create a new OER intro textbook for Cognitive Psychology, essentially from scratch. As I mentioned earlier, I have scoured the web for suitable existing OER material to build off of, but this area is lacking in OER content. So, I (and or a group of collaborators) would have to write the content for the proposed textbook. I would imagine the writing process would take 6-8 months. The book would be delivered in the same web-book format I have been using for other OERs, using the bookdown package</p></li>
+<li>Create online interactive experiments and embed them into the web-book.
+<ol style="list-style-type: lower-alpha">
+<li>Teaching students about the field of Cognitive Psychology primarily involves explaining how researchers use experiments to test theories of cognitive processes (how people learn, remember, pay attention, perceive, make decisions, etc.). Foundational concepts usually come in the unit of an experimental finding. To understand the concept, students must understand the question the experiment was asking, the method used to conduct the experiment, the result obtained from the experiment, and the inference made from the result about the original question.</li>
+<li>Standard print textbooks can describe some of the above to students, but they can’t give students the experience of what it is like to be a participant in a particular experiment. And, when students lack concrete understanding about what happened in an experiment, they often fail to grasp how to interpret the results. Some textbooks come with a pay-to-use online experiment platform. We’ll make a free one.</li>
+<li>Fortunately, many important experiments in Cognitive Psychology that are taught in intro classes can be programmed and implemented in web-browsers (and, I have expertise in this area because my lab has pioneered the use of web-browsers for running cognitive psychology experiments). This means that when a foundational experiment is introduced in the textbook, as a part of learning about the experiment, a student would participate in the experiment themselves via their web-browser. Using Shiny we would also be able to present student-generated experimental results alongside the classic findings.</li>
+</ol></li>
+</ol>
+<p>To summarize, I would plan to write a textbook and write interactive online experiments for each chapter</p>
+<p>[let’s see if that happens]</p>
+</div>
+</div>
+<div id="musings" class="section level3">
+<h3>Musings</h3>
+<p>hmmm</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
