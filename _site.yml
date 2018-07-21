@@ -1,4 +1,5 @@
 name: "Crump Lab"
+cover-image: "/images/logo.png"
 navbar:
   title: "Crump Lab"
   left:

@@ -1,5 +1,5 @@
 ---
-title: "Psyc 3400"
+title: "Crump Lab"
 output: html_document
 ---
 
