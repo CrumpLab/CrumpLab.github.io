@@ -1,13 +1,16 @@
 ---
-title: "Blog"
-output: html_document
+title: "Various musings"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
 ---
 
-## {.tabset } 
 
-### Statistics
-
-#### Why is the p-distribution flat under the null?
+# Why is the p-distribution flat under the null? {#flatp}
 
 The $p$-distribution is flat under the null, it is made to be this way. Let's understand why. First, a simulation to show that the $p$-distribution is flat under the null. We start with the null distribution. Here, I sampled data from a normal (u=0, sd=1), ran a t-test, saved the $p$-value, repeated 1000 times, then put the $p$-values into a histogram. You can see it's mostly flat across the range 0-1. 
 
@@ -24,7 +27,7 @@ Roughly, this means you are just as likely to get a $p$-value between 0 and 0.05
 
 Ok, so the simulation shows that the $p$-distribution is flat under the null, but why is it flat? The $t$-distribution isn't flat. Aren't $t$'s around 0 the most frequently occurring values? Aren't those $t$'s associated with particular $p$-values, shouldn't those particular $p$-values occur with the same frequency as their associated $t$s? This way of thinking is a bit of a trap, it might be one reason why people would expect the $p$-distribution to go up and down.
 
-##### $p$'s are not the probability of specific $t$'s
+## $p$'s are not the probability of specific $t$'s
 
 Perhaps a common misinterpretation of $p$-values is that they represent the probability of getting a particular $t$-value. This is not what they represent. Instead, $p$'s represent ranges of t-values. Some examples:
 
@@ -103,12 +106,7 @@ qplot(abs(save_t))+
 ```
 
 
-
-
-
-### Cognition
-
-#### Make a free Introductory Cognitive Psych textbook with online experiments
+# Make a free Introductory Cognitive Psych textbook with online experiments
 
 I recently wrote this proposal, plan is to do it during fall 2018-Spring 2019.
 
@@ -126,11 +124,7 @@ To summarize, I would plan to write a textbook and write interactive online expe
 [let's see if that happens]
 
 
-### Musings
-
-hmmm
-
-#### How do I use R to list my publications on this webpage?
+# How do I use R to list my publications on this webpage?
 
 Maybe get them to auto print from a .bib file. That way I can update everything in Zotero, output a .bib file, then automatically list everything... hmmm...
 
