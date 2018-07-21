@@ -130,6 +130,10 @@ To summarize, I would plan to write a textbook and write interactive online expe
 
 hmmm
 
+#### How do I use R to list my publications on this webpage?
+
+Maybe get them to auto print from a .bib file. That way I can update everything in Zotero, output a .bib file, then automatically list everything... hmmm...
+
 
 
 
