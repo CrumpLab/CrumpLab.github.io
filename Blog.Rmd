@@ -139,9 +139,47 @@ How about testing this here and seeing what happens.
 
 1. Get .bib file from Zotero library of my papers, put it in this folder.
 
+2. try install.packages("bib2df") to convert bib to a data.frame, then write something to do what I want to spit out everything nicely, maybe in a kable table, or something.
+
+```{r}
+library(bib2df)
+bib_df<-bib2df(file="Crump.bib")
+```
+
+That seemed to work nice. Needed to add a few missing years to the .bib file. Ok, just need to write a loop...need to remove special characters in bibfile
+
+```{r, results='asis'}
+library(stringi)
+
+bib_df$TITLE<-stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
+bib_df$JOURNAL<-stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
+
+# sort bib_df by year
+bib_df<-bib_df[order(bib_df$YEAR, decreasing=T),]
+
+dims<-dim(bib_df)
+
+for(i in 1:dims[1]){
+  cat(c("####",bib_df[i,]$TITLE)) #title
+  cat(c("\n"))
+  cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=", "), " (",
+        bib_df[i,]$YEAR, "). ",
+        bib_df[i,]$TITLE, ". *",
+        bib_df[i,]$JOURNAL, ", ",
+        bib_df[i,]$VOLUME, "*, ",
+        bib_df[i,]$PAGES, "."), sep="")
+  cat(c("\n"))
+  cat(c("\n"))
+}
+
+a<-bib_df$FILE[5]
+split_a<-strsplit(a,":")
+file_path<-split_a[2]
 
 
+```
 
+[test](https://crumplab.github.io)
 
 
 
