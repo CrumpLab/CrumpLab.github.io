@@ -1,0 +1,8 @@
+@media (max-width: 480px) {
+/* 	.fulltext-label {
+		float: left;
+	} */
+	.fulltext-link-image-loading {
+		float: right;
+	}
+}
