@@ -20,19 +20,19 @@ for(i in 1:1000){
 hist(save_p)
 ```
 
-Roughly, this means you are just as likely to get a $p$-value between 0 and 0.05, as you are to get one between .95 and 1. This is one reason why the size of the $p$-value does not allow you to have more or less evidence for the null, because under the null, you have the same chances of gettin any $p$-value. A $p$-value of 0.9 does not give more evidence for the null than a $p$-value of .5.
+Roughly, this means you are just as likely to get a $p$-value between 0 and 0.05, as you are to get one between .95 and 1. This is one reason why the size of the $p$-value does not allow you to have more or less evidence for the null, because under the null, you have the same chances of getting any $p$-value. A $p$-value of 0.9 does not give more evidence for the null than a $p$-value of .5.
 
-Ok, so the simulation shows that the $p$-distribution is flat under the null, but why is it flat? The $t$-distribution isn't flat. Aren't $t$'s around 0 the most frequently occuring values? Aren't those $t$'s associated with particular $p$-values, shouldn't those particular $p$-values occur with the same frequency as their associated $t$s? This way of thinking is a bit of a trap, it might be one reason why people would expect the $p$-distribution to go up and down.
+Ok, so the simulation shows that the $p$-distribution is flat under the null, but why is it flat? The $t$-distribution isn't flat. Aren't $t$'s around 0 the most frequently occurring values? Aren't those $t$'s associated with particular $p$-values, shouldn't those particular $p$-values occur with the same frequency as their associated $t$s? This way of thinking is a bit of a trap, it might be one reason why people would expect the $p$-distribution to go up and down.
 
 ##### $p$'s are not the probability of specific $t$'s
 
 Perhaps a common misinterpretation of $p$-values is that they represent the probability of getting a particular $t$-value. This is not what they represent. Instead, $p$'s represent ranges of t-values. Some examples:
 
-1. When $t$ = 0, $p$ = 1. Obviously you do not have a 100% chance of getting a $t$ of 0 everytime under the null. Instead, you have a 100% chance of getting a $t$ that is 0 or larger (in absolute value) than 0.
+1. When $t$ = 0, $p$ = 1. Obviously you do not have a 100% chance of getting a $t$ of 0 every time under the null. Instead, you have a 100% chance of getting a $t$ that is 0 or larger (in absolute value) than 0.
 
 2. Under a two-tailed test, when $p$ = .95, this does not mean you have a 95% chance of getting the specific $t$ you observed. It means you have a 95% chance of getting the $t$ you observed or greater (absolute value).
 
-3. The percentage of $t$'s associated with the $p$-range: .9 and .95 are 5% of the total $t$'s. THe percentage of $t$'s associated with the $p$-range: .5-.55 are 5% of the total $t$'s. The percentage of $t$'s associated with the $p$-range: .05 - 0 are 5% of the total. It's always 5%. If you split up the $t$-distribution into regions of 5%, then there are 20 regions, each having the same proportion of t-values. These regions are the p-values, and they are why the p-distribution is flat.
+3. The percentage of $t$'s associated with the $p$-range: .9 and .95 are 5% of the total $t$'s. The percentage of $t$'s associated with the $p$-range: .5-.55 are 5% of the total $t$'s. The percentage of $t$'s associated with the $p$-range: .05 - 0 are 5% of the total. It's always 5%. If you split up the $t$-distribution into regions of 5%, then there are 20 regions, each having the same proportion of t-values. These regions are the p-values, and they are why the p-distribution is flat.
 
 
 
@@ -82,7 +82,7 @@ qplot(save_t)+
   theme_classic()
 ```
 
-If you used these decision regions, you would find $t$'s inside each band 5% of the time. The bands have different widths to accomodate the fact that $t$'s have different probabilities across the range. 
+If you used these decision regions, you would find $t$'s inside each band 5% of the time. The bands have different widths to accommodate the fact that $t$'s have different probabilities across the range. 
 
 This top graph is a little deceiving with respect to two-tailed t-testing. We could see things a little more clearly if we plotted the absolute value of $t$'s. This will make a right skewed histogram, with t starting at 0 and getting bigger. We can apply the same 20 regions.
 
@@ -133,6 +133,12 @@ hmmm
 #### How do I use R to list my publications on this webpage?
 
 Maybe get them to auto print from a .bib file. That way I can update everything in Zotero, output a .bib file, then automatically list everything... hmmm...
+
+How about testing this here and seeing what happens. 
+
+1. Get .bib file from Zotero library of my papers, put it in this folder.
+
+
 
 
 
