@@ -3,39 +3,44 @@ title: "Publications"
 output: html_document
 ---
 
-NOTE: This page is in-flux as I migrate my old webpage to this webpage. None of the links are currently working. All the pubs are still available in my github repo for this site under CrumpPubs.
+Note: publications are compiled in Rmarkdown directly from a .bib file. Slowly working on making this work.
 
-* Behmer, L. & Crump, M. J. C. (Accepted). Crunching big data with finger tips: How typists tune their performance toward the statistics of natural language. Invited chapter for edited book. Ed. Michael Jones. Big Data in Cognitive Science, Taylor & Francis.
-* Crump, M. J. C. (2016). Learning to selectively attend from context-specific attentional histories: A demonstration and some constraints. Canadian Journal of Experimental Psychology, 70, 59-77.
-* Curtis, E. T., Chubala, C. M., Spear, J., Jamieson, R. K., Hockley, W. E., & Crump, M. J. C. (2016). False recognition of instruction-set lures. Memory, 24, 32-43. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Curtis et al. - 2014.pdf)
-* Crump, M. J. C., McDonnell, J. V., & Gureckis, T. M. (2013). Evaluating Amazon's Mechanical Turk as a tool for Experimental Behavioral Research. PLOS ONE, e57410. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump et al. - 2013.pdf)
-* Crump, M. J. C., & Logan, G. D. (2013). Prevention and correction in post-error performance: An ounce of prevention, a pound of cure. Journal of Experimental Psychology: General, 142, 692-709. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump and Logan - 2013.pdf)
-* Yamaguchi, M., Crump, M. J. C., & Logan, G. D. (2013). Speed-accuracy tradeoff in skilled typewriting: Decomposing the contributions of hierarchical control loops. Journal of Experimental Psychology: Human Perception and Performance, 39, 678-699. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Yamaguchi et al. - 2013.pdf)
-* Bugg, J. M., & Crump, M. J. C. (2012). In support of a distinction between voluntary and stimulus-driven control: A review of the literature on proportion congruent effects. Frontiers in Cognition. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Bugg and Crump - 2012.pdf)
-* Crump, M. J. C., Logan, G. D., & Kimbrough, J. (2012). Keeping an eye on guitar skill: Visual representations of guitar chords. Music Perception, 30, 37-47. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump et al. - 2012.pdf)
-* Jamieson, R. K., Crump, M. J. C., & Hannah, S. D. (2012). An instance theory of associative learning. Learning & Behavior, 40, 61-82. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Jamieson et al. - 2012.pdf)
-* Logan, G. D., & Crump, M. J. C. (2011). 'Response to M. Ullsperger and Danielmeier's E-Letter'.Science E-Letters, 9 February.
-* Logan, G. D., & Crump, M. J. C. (2011). Hierarchical control of cognition and action: The case for skilled typewriting. In Brian Ross (ed.). Psychology of Learning and Motivation, Vol. 54, * Burlington: Academic Press, 1-27. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Logan and Crump - 2011.pdf)
-* Logan, G. D., & Crump, M. J. C. (2010). Cognitive illusions of authorship reveal hierarchical error detection in skilled typists. Science, 330, 683-686. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Logan and Crump - 2010.pdf)
-* Crump, M. J. C., & Logan, G. D. (2010). Contextual control over task-set retrieval. Attention, Perception and Psychophysics, 72, 2047-2053. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump and Logan - 2010b.pdf)
-* Crump, M. J.C. & Logan, G.D. (2010). Hierarchical control and skilled typing: Evidence for word level control over the execution of individual keystrokes. Journal of Experimental Psychology: Learning, Memory, & Cognition, 36, 1369-1380. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump and Logan - 2010.pdf)
-* Jamieson, R. K., Hannah, S. D., & Crump, M. J. C. (2010). A memory-based account of retrospective revaluation. Canadian Journal of Experimental Psychology, 64, 153-164. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Jamieson et al. - 2010.pdf)
-* Crump, M. J. C., & Logan, G. D. (2010). Warning this keyboard will de-construct: The role of the keyboard in skilled typing. Psychonomic Bulletin & Review, 17, 394-399. [pdf](https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump and Logan - 2010c.pdf)
-* Liu, X., Crump, M. J. C., & Logan, G. D. (2010). Do you know where your fingers have been? Explicit knowledge of the spatial layout of the keyboard in skilled typists. Memory & Cognition, 38, 474-484. pdf
-* Crump, M. J. C., & Logan, G. D. (2010). Episodic contributions to sequential control: Learning from a typists touch. Journal of Experimental Psychology: Human Perception & Performance, 36, 662-672. pdf
-* Logan, G. D., & Crump, M. J. C. (2009). The left hand doesn't know what the right hand is doing: The disruptive effects of attention to the hands in skilled typewriting. Psychological Science, 20, 1296-1300.pdf
-* Crump, M. J. C., & Milliken, B. (2009). The flexibility of context-specific control: Evidence for context-driven generalization of item-specific control settings. Quarterly Journal of Experimental Psychology, 62, 1523-1532. pdf
-* Siegel, S. Allan, L. G., Hannah, S. D., & Crump, M. J. C. (2009). Applying signal detection theory to contingency assessment. Comparative Cognition & Behavior Reviews, 4, 116-134. pdf
-* Hannah, S. D., Crump, M. J. C., Allan. L. G., & Siegel, S. (2009). Cue-interaction effects in contingency judgments using the streamed-trials procedure. Canadian Journal of Experimental Psychology, 63, 103-112. pdf
-* Leboe, J. P., Wong, J., Crump M. J. C., & Stobbe, K. (2008). Probe-specific proportion task repetition effects on switching costs. Perception & Psychophysics, 70, 935-945. pdf
-* Allan, L. G., Hannah, S. D., Crump, M. J. C., Siegel, S. (2008). The psychophysics of contingency assessment. Journal of Experimental Psychology: General, 137, 226-243. pdf
-* Crump, M. J. C., Milliken, B., & Ansari, I. (2008). Shifting views on the symbolic cueing effect: Cueing attention through previous experience. Psicologica, 29, 97-114. pdf
-* Crump, M. J. C., Vaquero, J. M. M., & Milliken, B. (2008). Context-specific learning and control: The role of awareness, task-relevance, and relative salience. Consciousness & Cognition,17, 22-36. pdf
-* Allan, L. G., Hannah, S. D., Crump, M. J. C., & Siegel, S. (2008). More on the psychophysics of contingency assessment. In Schneider, B. A., Ben-David, B. M., Parker, S., & Wong, W. (Eds.), Proceedings of the 24th Annual Meeting of the International Society for Psychophysics. Toronto, Canada.
-* Crump, M. J. C., Hannah, S. D., Allan, L. G., & Hord, L. K. (2007). Contingency judgments on the fly.Quarterly Journal of Experimental Psychology, 60, 753-761. pdf
-* Schmidt, J., Crump, M. J. C., Cheesman, J., & Besner, D. (2007). Contingency learning without awareness: Evidence for implicit control. Consciousness & Cognition, 16, 421-435. pdf
-* Crump, M. J. C., Gong, Z., & Milliken, B. (2006). The context-specific proportion congruent effect: Location as a contextual cue. Psychonomic Bulletin & Review, 13, 316-321. pdf
-* Allan, L. G., Hannah, S. D., Crump, M. J. C., & Siegel, S. (2006). Psychophysics of causality: Detecting contingencies is like detecting signals (pp. 57-68). In D. E. Kornbrot, R. M. Msetfi, & A. W. MacRae (Eds.), Proceedings of the 22nd annual meeting of the international Society for Psychophysics. St Albans, England.
+```{r, results='asis', echo=F, message=F, warning=FALSE}
+library(bib2df)
+bib_df<-bib2df(file="Crump.bib")
+
+library(stringi)
+
+bib_df$TITLE<-stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
+bib_df$JOURNAL<-stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
+
+# sort bib_df by year
+bib_df<-bib_df[order(bib_df$YEAR, decreasing=T),]
+
+dims<-dim(bib_df)
+
+for(i in 1:dims[1]){
+  a<-bib_df$FILE[i]
+  split_a<-unlist(strsplit(a,":"))
+  file_path<-paste0("https://github.com/CrumpLab/CrumpLab.github.io/raw/master/",split_a[2])
+  cat(c("####",bib_df[i,]$TITLE)) #title
+  cat(c("\n"))
+  cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=", "), " (",
+        bib_df[i,]$YEAR, "). ",
+        bib_df[i,]$TITLE, ". *",
+        bib_df[i,]$JOURNAL, ", ",
+        bib_df[i,]$VOLUME, "*, ",
+        bib_df[i,]$PAGES, "."), sep="")
+  if(is.na(a)==FALSE){
+    cat(c(" ", "[pdf](",file_path,")"), sep="")
+  }
+  
+  cat(c("\n"))
+  cat(c("\n"))
+  
+}
+```
+
 
 **Copyright Notice:** Some of the documents listed below are available for downloading. These have been provided as a means to ensure timely dissemination of scholarly and technical work on a noncommercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author's copyright. These works may not be re-posted without the explicit permission of the copyright holder.
 
