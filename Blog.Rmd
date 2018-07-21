@@ -160,6 +160,9 @@ bib_df<-bib_df[order(bib_df$YEAR, decreasing=T),]
 dims<-dim(bib_df)
 
 for(i in 1:dims[1]){
+  a<-bib_df$FILE[i]
+  split_a<-unlist(strsplit(a,":"))
+  file_path<-paste0("https://github.com/CrumpLab/CrumpLab.github.io/raw/master/",split_a[2])
   cat(c("####",bib_df[i,]$TITLE)) #title
   cat(c("\n"))
   cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=", "), " (",
@@ -168,16 +171,25 @@ for(i in 1:dims[1]){
         bib_df[i,]$JOURNAL, ", ",
         bib_df[i,]$VOLUME, "*, ",
         bib_df[i,]$PAGES, "."), sep="")
+  if(is.na(a)==FALSE){
+    cat(c(" ", "[pdf](",file_path,")"), sep="")
+  }
+  
   cat(c("\n"))
   cat(c("\n"))
+  
 }
 
-a<-bib_df$FILE[5]
-split_a<-strsplit(a,":")
-file_path<-split_a[2]
+#a<-bib_df$FILE[5]
+#split_a<-unlist(strsplit(a,":"))
+#file_path<-paste0("https://github.com/CrumpLab/CrumpLab.github.io/raw/master/",split_a[2])
+
+
 
 
 ```
+
+https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/405/JamiesonCrumpHannah2012.pdf
 
 [test](https://crumplab.github.io)
 
