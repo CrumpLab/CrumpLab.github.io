@@ -1,2 +1,5 @@
 base
 ggplot2
+bib2df
+bindrcpp
+stringi
