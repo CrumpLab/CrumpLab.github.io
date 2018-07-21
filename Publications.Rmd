@@ -35,6 +35,10 @@ for(i in 1:dims[1]){
         bib_df[i,]$PAGES, "."), sep="")
   if(is.na(a)==FALSE){
     cat(c(" ", "[pdf](",file_path,")"), sep="")
+    get_data <- bib_df[i,]$NOTE
+    if(is.na(get_data)==FALSE){
+      cat(c(" | ", get_data), sep="")
+    }
   }
   
   cat(c("\n"))

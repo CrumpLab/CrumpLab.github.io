@@ -1,0 +1,47 @@
+#snippetSection {
+/* 	background-color: #E2ECF5; */
+/* 	padding: 15px; */
+	margin: 20px 0 10px 0;
+}
+
+#snippetSection ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#snippetSection h3 {
+	margin-top: 0;
+}
+
+[v-cloak] {
+  	display: none;
+}
+
+#snippetSection .fa {
+    font-size: 0.8em;
+}
+
+.snippet-highlight {
+  background-color: rgba(248, 231, 28, 0.4);
+}
+
+.snippet-fade-out  {
+	background-color: transparent;
+	-webkit-transition: background-color 3s linear;
+	-ms-transition: background-color 3s linear;
+	transition: background-color 3s linear;
+}
+
+#snippetSection a {
+	white-space:nowrap;
+}
+
+#snippetSection li > span {
+	background-color: rgba(248, 231, 28, 0.4);
+}
+
+#snippetSection em {
+	font-style: normal;
+	font-weight: bold;
+}
