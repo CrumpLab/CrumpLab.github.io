@@ -21,6 +21,17 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 --------------------------
 
+# Adding google analytics to R markdown websites
+
+2018-07-22, last compiled: `r Sys.Date()`
+
+I googled it, found this [https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page](https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page). Followed the intructions, very easy. TLDR:
+
+1. Copy google analytics script for your site in a text editor. Save as .html file.
+2. Add it to the yaml of your webpages in your site, see link for what the yaml add looks like
+3. compile, host your website
+4. Started working for me in real-time immediately. Neato!
+
 # What does typing research say about improving your typing speed? The difficulty of applying basic science
 
 2018-07-22, last compiled: `r Sys.Date()`
