@@ -3,6 +3,8 @@ title: "Publications"
 output: 
   html_document:
     code_folding: hide
+    includes:
+       in_header: g_analytics.html
 ---
 
 ```{r setup, include=FALSE}
