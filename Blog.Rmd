@@ -21,6 +21,8 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 # What does typing research say about improving your typing speed? The difficulty of applying basic science
 
+2018-07-22, last compiled: `r Sys.Date()`
+
 As far as I can tell not much. At least not much besides practice alot. Gee thanks science. I'm writing about this topic because a colleague of mine emailed me this morning and asked what, "I want to improve my typing speed, what should I do, what's the best resource you've come across?". I thought it would be interesting to give my advice, and think out loud about the topic.
 
 Why ask me? One of my science hobbies is to use the task of typing in the laboratory (or online using Amazon's Mechanical Turk) to study how basic cognitive processes shape skilled performance. Over the years I've published a few papers on typing [@behmer_crunching_2017; @behmer_spatial_2017; @crump_episodic_2010; @crump_hierarchical_2010; @crump_prevention_2013; @crump_warning_2010; @liu_you_2010; @logan_cognitive_2010; @logan_hierarchical_2011; @logan_left_2009; @yamaguchi_speedaccuracy_2013]. And, I've read way too many papers on typing.
@@ -148,6 +150,8 @@ It seems the auto-referencer deletes deletes author names when they are the same
 
 
 # Writing a paper in public on github
+
+2018-07-21, last compiled: `r Sys.Date()`
 
 One of the lab's summer projects was to write a paper in public on github. It's still happening right now. This is an interim update.
 
