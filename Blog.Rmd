@@ -8,6 +8,8 @@ output:
     number_sections: false
     toc_depth: 1
     code_folding: hide
+    includes:
+       in_header: g_analytics.html
 bibliography: [Crump.bib, typing.bib]
 ---
 

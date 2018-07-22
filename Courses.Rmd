@@ -1,6 +1,9 @@
 ---
 title: "Courses"
-output: html_document
+output: 
+  html_document:
+    includes:
+       in_header: g_analytics.html
 ---
 
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.

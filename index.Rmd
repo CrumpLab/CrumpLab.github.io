@@ -1,6 +1,9 @@
 ---
 title: "Crump Lab"
-output: html_document
+output: 
+  html_document:
+    includes:
+       in_header: g_analytics.html
 ---
 
 <style type="text/css">

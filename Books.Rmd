@@ -1,6 +1,9 @@
 ---
 title: "Books"
-output: html_document
+output: 
+  html_document:
+    includes:
+       in_header: g_analytics.html
 ---
 
 I have developed a habit of writing books of various kinds, all free, open-source, and license on creative commons (note in the process of formalizing these licenses for each, still everything is intended to be totally open, remixable, editable etc.). These books were made using RMarkdown and compiled in Bookdown.
