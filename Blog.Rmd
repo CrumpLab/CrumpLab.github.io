@@ -21,6 +21,39 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 --------------------------
 
+
+# I need to get my CC (creative commons) licenses in order
+
+I've been writing different kinds of open content and am revisiting the issue of licensing. So, I'm making notes about the process.
+
+
+The creative commons license has a website with their licenses, you can read about them, and download scripts to put in webpages. [https://creativecommons.org/licenses/](https://creativecommons.org/licenses/)
+
+
+
+I am hosting all of my works on github (repo and github pages to display). Github gives options for licenses when you create a repo. It used to support a basic CC license (0). Now CC licenses don't appear in the drop down menu, there's a thread requesting this feature be added
+
+Some threads for reference:
+
+1. Limitations about what licenses you can automatically choose on Github:  [https://github.com/github/choosealicense.com/issues/33](https://github.com/github/choosealicense.com/issues/33)
+
+2. What should go in a license file: [https://github.com/whatwg/sg/issues/51](https://github.com/whatwg/sg/issues/51)
+
+3. Github repo with CC licenses in html and plain text [https://github.com/creativecommons/legalcode](https://github.com/creativecommons/legalcode)
+
+4. Putting the plain text license into the repo is supposed to add the license (and show the license in the little github display...tried that, but didn't work.
+
+5. Github makes these kind of recommendations when the license you want is not in the dropdown menu [https://choosealicense.com](https://choosealicense.com).
+
+6. More from Github on setting licenses for repos [https://help.github.com/articles/licensing-a-repository/](https://help.github.com/articles/licensing-a-repository/), looks like a CC 4.0 license in here...
+
+7. I end up just searching cc-by-sa-4.0 in github looking for repos with that license that also get it to show in the top right corner of the repo. I'm assuming whatever license file is there is checkable by the ruby process which identifies the license. From, \#4 above, copying in plain text didn't work, maybe this will..
+
+## It worked
+
+I found a LICENSE file with a CC license that I wanted. It was not in plain text, it was a unix executable. ugh, that took way to long, and I still haven't added license to anything...
+
+
 # Adding google analytics to R markdown websites
 
 2018-07-22, last compiled: `r Sys.Date()`
