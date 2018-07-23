@@ -21,7 +21,7 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 --------------------------
 
-# Using R Markdown websites (and other R Markdown) things for undergraduate research projects.
+# Using R Markdown websites (and other R Markdown things) for undergraduate research projects.
 
 2018-07-22, last compiled: `r Sys.Date()`
 
