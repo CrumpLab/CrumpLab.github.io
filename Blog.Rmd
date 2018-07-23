@@ -21,6 +21,40 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 --------------------------
 
+# Using R Markdown websites (and other R Markdown) things for undergraduate research projects.
+
+Every year I usually take on a few undergraduates interested in gaining some research experience. Over the years I've tried lots of different approaches. This year, I will try another one I thought of yesterday. Time will tell if it will work. 
+
+Our department (Psychology Department @ Brooklyn College of CUNY) has a 2-year laboratory experience course. Student's can take this course to get credit towards their degree while gaining some research experience. We also have 4th year courses for more advanced students (e.g., honor's thesis courses). My ideal pipeline is to have students take the 2nd year as a precursor to doing more advanced things in later years. This way I can train the requisite skills, so that some independent research can be accomplished by the students in later years. Unlike some labs, I have no busy work for students to do. Most of my research (Cognitive Psych) is now conducted online, so the only things to do are: come up with good ideas, read the literature, program the experiments, get the data, program the analysis scripts, write the paper etc. So, students to need to learn the skills in order to do anything.
+
+**Training Goals**: I would like my new students to get some experience with some basics for data creation and and analysis. This means learning how to program a behavioral experiment from scratch to collect data, collect some data, and then learning how to analyze the data in R. For example, if a student can make a program to do something like collect reaction times in response to different stimuli, get some data, and then analyze it, they have some skills they can expand upon.
+
+In the past, I've been more and less flexible on the kinds of projects students get involved in when they first arrive. Usually I get students involved in an ongoing project where there is a clear tangent worth having a student explore. This gives them some ownership of the unique tangent, and the tangent feeds into my ongoing research program (so it's not a tangent for me). H
+
+owever, I'm thinking about making a canonical research training project, where every new student would go through this same project in their first semester in the lab. This would save mental bandwith for me to come up with new projects all the time (that often don't see the light of day), and potentially allow me to take on a few more students who are all working on the same thing. Ideally, this kind of project would be 1) asking a question that would remain relevant over the long term, 2) be somewhat personally interesting to the student and applicable to them, and 3) involve learning the skills I need students to learn (and that are generally super beneficial for the students to learn).
+
+**My plan**: All new students do these things:
+
+1. Get a github account (if they don't have one)
+2. Download R and R-studio (if they don't have it)
+3. Figure out how to serve there own R Markdown website in a github repository (using github pages) for the project they will work on
+4. Get up to speed with some R basics (working with me, and using all of the great resources out there)
+5. Use the R Markdown website a lab journal blog to record their work and progress
+6. Keep doing this all semester long while they work on the canonical research training example, involving programming code to collect data, collect data, analyze data in R.
+
+
+**Benefits**:
+
+1. Canonical example gives a clear (and rich) target problem, so there is always a general goal and lots of things to keep trying...students will never run out of things to try or do by themself. IMO having a clear goal is very important for learning programming, otherwise many programming things seem totally abstract.
+2. Students create a digital footprint of doing important things. Github stores their user activity, and they effectively begin building a portfolio that might be useful for them if they head in this kind of direction later in their careers.
+3. I can easily evaluate and help students with their work through github when I am not around in person
+4. Journaling helps with finding what you did later. When done in R Markdown, everything becomes reproducible. Doing it live in public, on a RMarkdown website, would be fun and potentially more motivating.
+5. Research progress is made, skills are learned. Things happen.
+
+
+
+
+
 
 # I need to get my CC (creative commons) licenses in order
 
@@ -28,8 +62,6 @@ I've been writing different kinds of open content and am revisiting the issue of
 
 
 The creative commons license has a website with their licenses, you can read about them, and download scripts to put in webpages. [https://creativecommons.org/licenses/](https://creativecommons.org/licenses/)
-
-
 
 I am hosting all of my works on github (repo and github pages to display). Github gives options for licenses when you create a repo. It used to support a basic CC license (0). Now CC licenses don't appear in the drop down menu, there's a thread requesting this feature be added
 
@@ -51,7 +83,7 @@ Some threads for reference:
 
 ## It worked
 
-I found a LICENSE file with a CC license that I wanted. It was not in plain text, it was a unix executable. ugh, that took way to long, and I still haven't added license to anything...
+I found a LICENSE file with a CC license that I wanted. It was not in plain text, it was a unix executable. ugh, that took way to long, and I still haven't added license to anything...update: added most of them...Things get a complicated with licenses, especially when remixing material with different kinds of licenses. Head spinner.
 
 
 # Adding google analytics to R markdown websites
