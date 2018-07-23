@@ -21,6 +21,21 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 --------------------------
 
+# Get up and running with an R Markdown website, and then mess around with R
+
+I'm posting this for a couple students who will be doing some research in the lab this fall. If you have the time this summer, you can get prepared for the fall by doing these things (they are all free things)
+
+1. Download [R](https://www.r-project.org) and [R-studio](https://www.rstudio.com) for your computer.
+2. Make yourself a [github account](https://github.com), and then let me know so I can find you on github.
+3. General info about making websites with R Markdown is here, but see next point for downloading an example you can use straight away. [https://rmarkdown.rstudio.com/rmarkdown_websites.htm](https://rmarkdown.rstudio.com/rmarkdown_websites.htm)
+4. I just made a downloadable/forkable github repository with everything you need to get started, and it's self-explanatory in the sense that all of the materials explain themselves
+    a. the repository is here [https://github.com/CrumpLab/LabJournalWebsite](https://github.com/CrumpLab/LabJournalWebsite)
+    b. Follow the instructions in the read me file for how to compile the website in R-studio, and then host it on github
+    c. You can see what the website will look like once you get it up and runnning here [https://crumplab.github.io/LabJournalWebsite/index.html](https://crumplab.github.io/LabJournalWebsite/index.html)
+    d. Follow the instructions inside the source for the website, and by reading the website to get started this summer learning R.
+    e. We'll talk more about lab research projects in the fall.
+
+
 # Using R Markdown websites (and other R Markdown things) for undergraduate research projects.
 
 2018-07-22, last compiled: `r Sys.Date()`
