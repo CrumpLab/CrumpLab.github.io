@@ -23,7 +23,7 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 # My experience with OER development at CUNY so far
 
-2018-07-22, last compiled: `r Sys.Date()`
+2018-07-24, last compiled: `r Sys.Date()`
 
 CUNY was awarded a [4 million dollar grant by New York State](http://www2.cuny.edu/libraries/open-educational-resources/) for all things OER (open-educational resources). OERs are transforming education right now because they create a zero-textbook cost course for students, saving them lots of moola. This is great, and there is a lot of fantastic, high quality OER content out there. Especially in Psych.
 
@@ -45,7 +45,7 @@ CUNY is a Medusa of public universities and colleges, it's never clear who is in
 
 5. Overall, the experience has been a no-brainer for me, because I was already doing zero-textbook cost courses, this just makes it official.
 
-## Rough waters with OERs at CUNY
+## "Rough waters" with OERs at CUNY
 
 The experience of OER development is not without it's issues. Here are some of them.
 
