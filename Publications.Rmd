@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 ```
 
 Note: publications are compiled in Rmarkdown directly from a .bib file. Slowly working on making this work. Below is a plot of the semantic similarity between the publications (using the BEAGLE Abstract vectors). Hover over the dots to see the title (still in beta).
