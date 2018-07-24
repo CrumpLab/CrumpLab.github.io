@@ -21,7 +21,67 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 --------------------------
 
+# My experience with OER development at CUNY so far
+
+2018-07-22, last compiled: `r Sys.Date()`
+
+CUNY was awarded a [4 million dollar grant by New York State](http://www2.cuny.edu/libraries/open-educational-resources/) for all things OER (open-educational resources). OERs are transforming education right now because they create a zero-textbook cost course for students, saving them lots of moola. This is great, and there is a lot of fantastic, high quality OER content out there. Especially in Psych.
+
+I've been participating in OER development at Brooklyn College of CUNY. I was awarded a small $2,000 grant from the library to create an OER for our [Research methods course](https://crumplab.github.io/ResearchMethods/), which I made last summer (2017). I created an [OER tutorial](https://crumplab.github.io/OER_bookdown/) on the process I use to make OERs using all free and open-source software. I made my [programming book for Psychologists](https://crumplab.github.io/programmingforpsych/) into an OER. And, this summer I was awarded another small grant to make an OER for statistics, creating both a [textbook](https://github.com/CrumpLab/statistics) and [lab manual](https://github.com/CrumpLab/statisticsLab). And, I've submitted a proposal to make another OER for a cognitive psychology textbook, with plans to write this year. That's a lot of OER development!
+
+I thought I would say a few things about this experience, because I think OER development in general, and at CUNY is vitally important. It's great that CUNY is supporting this. It's a relatively new development. It's gone fairly well so far, but there is some room for improvement. Below I talk about what's gone well, and what needs improvement.
+
+## Smooth Sailing with OERs at CUNY
+
+CUNY is a Medusa of public universities and colleges, it's never clear who is in charge of what, at different levels. My experience is limited to working with the Librarians at Brooklyn College of CUNY.
+
+1. The librarians I've been working with are FANTASTIC, and super helpful. They've spearheaded the task of managing the grant funds at BC, and encouraging faculty to convert to OERs. They've put on open-houses at BC, they've facilitated mini-conferences, they have excellent technical support. Nothing short of fantastic.
+
+2. I've been given the flexibility to development OERs in the way I want, with the tools I want to use. Thank you BC @ CUNY for letting me do this. This is vitally important, because there are lots of different work flows, and there should not be a single way of doing this. I am eternally grateful I don't have to "convert" my things into some "standard" format I don't want to use.
+
+3. There is a small bit of money for converting your course to an OER, this small bit of money is much appreciated, especially on our salaries at CUNY (considering cost of living in NYC). Most important, is that there is also a small bit of money for TAs and other instructors who adopt the materials that a lead instructor makes. This incentives the adoption of OERs that are made, and a little bit of extra money is great for adjuncts who should get paid more.
+
+4. The library has set up websites and databases to connect your new OER with the wider universe of searchable OER databases, this is great.
+
+5. Overall, the experience has been a no-brainer for me, because I was already doing zero-textbook cost courses, this just makes it official.
+
+## Rough waters with OERs at CUNY
+
+The experience of OER development is not without it's issues. Here are some of them.
+
+1. MONEY. Money is always an issue. So what's the issue if there is 4 million dollars for OERs at CUNY? First, us OER developers are really grateful for the small bit of money we get. That's nice, thank you. I realize there isn't an infinite amount of money for doing this. However, the $2,000 dollars someone gets appears to be mainly for OER conversion. That is adopting someone else's OER for your course, then figuring out how to use, and perhaps modifying it in a minimal way. This is different from developing entire OERs.
+  
+  a. One nice thing about OERs is that when you development you can stand on the shoulder's of previous developers. For example, I did this with my research methods book, and re-made an existing OER that had already been versioned a couple different times. However, this took an entire summer because of the amount of development I put into it. I also wrote an entire lab manual for the course from scratch. This was not reflected in the small grant I received. 
+  
+  b. Right now I am writing a stats textbook. I'm borrowing some existing material here and there, but mostly re-writing everything because I have things to say. It's difficult to estimate the amount of hours I'm putting in on this (A LOT!). Almost everything else I'm doing has come to a full-stop. I won't be submitting a grant this summer. I'm committed to getting this textbook done for my students! I'm not asking for more money, I already agreed to do this in a negotiation process that went very well. In fact, this is one the nice things about OER development. I was able to negotiate a larger grant to pay 4 other collaborators on the project, and the TAs that will adopt this OER, that's fantastic. However, from the perspective of writing entire textbooks, I'm leaving loads of money of the table (assuming I could get a publishing deal and force my students to by my textbook, which would make me a horrible human being.). I suppose I'm simply saying that CUNY could distinguish grants to faculty in terms of OER conversion and OER development. This is already done somewhat informally through negotiation with the Library, who apparently have some flexibility in how the funds are spent. Clearer guidelines on this would be useful, and incentivizing the massive amount of work it takes to develop entire course (e.g., with websites, slide-decks, textbooks, lab manuals, question banks, etc.) would take OER sponsorship at CUNY to the next level. Let's go to the next level.
+  
+  c. The CUNY grant gave slim to none pickings of the available money to Faculty and instructors who develop and adopt OERs, and tonnes of money to the library to hire technicians to support the OERs. This is great because many faculty aren't technicians. This sucks for faculty who are technical and do all of the technical work.
+  
+2.  Faculty buy-in. There has been a lack-luster response by the majority of faculty at BC to OER development. They apparently just don't care. The attendance of the library sponsored OER events was abysmal. I don't know what this is about. Likely a combination of low-bandwidth on the part of very busy people to do anything more than they are already doing.
+  
+**Faculty credit.** This one deserves it's own little section. In my earlier twitter post I wondered out loud to our Brooklyn College President, about whether BC recognizes OER development as part of the tenure process. I don't know if it is does. It doesn't matter for me anymore because they just gave me tenure. If BC already recognizes these things for tenure, that's great, my following agitation will be needless. However, if it does not, then I this is the agitation. I've seen posts on twitter from other faculty around the world lamenting the fact that external reviewers poo pooed their stated OER development as not scholarly work. You try writing a 600 page book teaching R and stats, or something similar, to students. 
+
+Of course research output is a super important aspect of the tenure process. I am totally and fully supportive of that aspect. In fact, I'm a little bit worried about what I am about to advocate for, because I hate seeing any opportunity to diminish the role of research. Junior Faculty are too often encouraged into teaching and service duties that massively unbalance their ability to do research, which is very important. In the ideal balancing case, the trifecta feeds into itself creating a positive feedback loop that simultaneously improves research, teaching, and service.
+
+The obvious culprit in all of this is TIME. There is not enough of it. When I develop an entire OER, all the TIME goes into that, and none of the time goes into writing grants etc. Junior faculty can't spend all their time doing teaching, so if they do OER development, under what I presume to be the current point system for tenure, they are losing. I'm worried about this for new faculty because they will probably be the ones making the OERs. The older faculty aren't the ones doing it, they are in the very slim minority of OER developers at BC. They already have tenure, so credit for OER just pads their CVs. 
+
+I was invited to lecture on OERs this August to the new incoming faculty at BC. What will I say to them? I can show them pictures of the things that I did (which I will), show them the tools I use (which are easy to learn, and super flexible), and then say what? Should I tell them to develop OERs? Or should I tell them to "RUN AWAY BECAUSE NO ONE WILL CARE, except your students". I want to tell them they should consider developing OERs. But, I'm not sure that I can, because I don't want to ruin their chances at tenure by suggesting they work their tail off and unbalance research and teaching.
+
+I will finish this by saying that Faculty who develop OERs from scratch, are spending huge amounts of their time (time away from other things in their life), to produce indispensable free materials for their students. They are contributing to a global movement, where the materials are being shared and updated and improved, making them even better, while maintaining them as free resources. I suspect some of the publishing companies are getting worried, what if no one buys their textbooks because the ones we are making are so much more AWESOME. We're leaving money on the table. It would be nice to have some academic recognition from the College. And, this isn't to say hey recognize me (I did already did this without caring about that, and I suspect it wasn't part of the tenure discussion for my case, maybe I'm wrong). I'm saying let the new faculty know they will be recognized. Give them that incentive. Support MORE BETTER OER AT CUNY.
+
+## Closing thoughts
+
+I am really glad about everything CUNY has done so far with respect to OERs. Some of my agitations are out of ignorance, for example, I don't know that OER development is recognized in any way at Brooklyn College for Junior Faculty (or I suppose for any facult looking to go up a level). If it already is great, let's make that known. If it isn't, let's fix that.
+
+------
+
+
+  
+
+
 # Making pre-prints with papaja
+
+2018-07-24, last compiled: `r Sys.Date()`
 
 `papaja` is a fantastic package written by Frederick Aust, for producing APA style papers by writing in R Markdown. This this is [the book on it](https://crsh.github.io/papaja_man/).
 
@@ -38,7 +98,7 @@ What's even more fun is that, because I set up my publications page to read from
 
 # Get up and running with an R Markdown website, and then mess around with R
 
-2018-07-22, last compiled: `r Sys.Date()`
+2018-07-23, last compiled: `r Sys.Date()`
 
 I'm posting this for a couple students who will be doing some research in the lab this fall. If you have the time this summer, you can get prepared for the fall by doing these things (they are all free things)
 
