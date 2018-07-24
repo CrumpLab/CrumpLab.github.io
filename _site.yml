@@ -17,4 +17,6 @@ navbar:
       href: Opportunities.html
     - text: "Blog"
       href: Blog.html
+    - text: "R"
+      href: "R.html"
 output_dir: "."

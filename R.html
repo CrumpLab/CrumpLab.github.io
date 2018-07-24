@@ -11,7 +11,7 @@
 
 
 
-<title>Courses</title>
+<title>R</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -172,6 +175,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -222,96 +320,80 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Courses</h1>
+<h1 class="title toc-ignore">R</h1>
 
 </div>
 
 
-<p>List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.</p>
-<hr />
-<div id="current-fall-2018" class="section level3">
-<h3>Current (Fall 2018)</h3>
-<hr />
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
-<h4 id="psyc-3400-statistical-methods-in-psychological-research">Psyc 3400: Statistical Methods in Psychological Research</h4>
-<p>THIS COURSE IS PRESENTLY BEING BUILT FOR FALL 2018, STILL IN DRAFT</p>
-<p>All materials are totally free and open, including <a href="https://crumplab.github.io/statistics/">textbook</a>, and <a href="https://crumplab.github.io/statisticsLab/">lab manual</a> which can be found on the <a href="https://crumplab.github.io/psyc3400/">course Website</a></p>
+<p>I forget how to do so many things in programming. I mainly use R now, so this is my elephants grave yard of forgotten code that I need to remember for later.</p>
+<div id="dplyr" class="section level2">
+<h2>dplyr</h2>
+<p><a href="https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf">dplyr cheatsheet</a></p>
+<pre class="r"><code>library(dplyr)</code></pre>
+<div id="summarize-data" class="section level3">
+<h3>Summarize data</h3>
+<pre class="r"><code>all_data   &lt;- mtcars
+
+summarise(all_data, mean=mean(mpg),
+                    sd=sd(mpg))</code></pre>
 </div>
-<div class="col-sm-6">
-<p><a href="https://crumplab.github.io/statistics/"> <img src="images/TextbookCover.png" width="100" /> </a></p>
+<div id="group-by" class="section level3">
+<h3>Group by</h3>
+<pre class="r"><code>summary_df &lt;- all_data %&gt;% 
+              group_by(cyl,am) %&gt;%
+              summarize(mean=mean(mpg),
+                        se=sd(mpg)/sqrt(length(mpg)))</code></pre>
 </div>
+<div id="filter-rows" class="section level3">
+<h3>Filter rows</h3>
+<pre class="r"><code>restricted_df &lt;- all_data %&gt;% 
+                 filter(gear &gt; 3)
+
+restricted_df &lt;- all_data %&gt;% 
+                 filter(gear &gt; 3,
+                        am == 1)</code></pre>
 </div>
-<hr />
-<div id="psyc-73800---cognitive-psychology" class="section level4">
-<h4>Psyc 73800 - Cognitive Psychology</h4>
-<p>Fall 2018 (2017) @ Graduate Center of CUNY</p>
-<p>Bi-weekly modules taught by different faculty.</p>
+<div id="mutate" class="section level3">
+<h3>Mutate</h3>
+<p>Add columns</p>
+<pre class="r"><code>dim(all_data)
+
+all_data &lt;- all_data %&gt;% 
+            mutate(newCol = rep(0,32))</code></pre>
 </div>
-</div>
-<div id="section" class="section level2">
-<h2>……………………………..</h2>
-<div id="previous-courses" class="section level3">
-<h3>Previous courses</h3>
-<p>Some of these courses have open materials, older courses may not.</p>
-<hr />
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
-<h4 id="psyc-80103-cognitive-technologies-from-theory-and-data-to-application">Psyc 80103: Cognitive Technologies: From theory and data to application</h4>
-<p>Spring 2018 @ Graduate Center of CUNY</p>
-<p>A doctoral seminar course (special topics) covering emerging and old cognitive technologies. Check out the <a href="https://crumplab.github.io/cognitivetechnologies">course website</a>, or <a href="https://crumplab.github.io/cognitivetechnologies/book/">read the book</a> my students (wrote the chapters) and I (put them together) wrote for the end of the semester.</p>
-</div>
-<div class="col-sm-6">
-<p><a href="https://crumplab.github.io/cognitivetechnologies/book/"> <img src="images/CogTech.png" width="100" /> </a></p>
-</div>
-</div>
-<hr />
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
-<h4 id="psyc-3450-experimental-psychology">Psyc 3450: Experimental Psychology</h4>
-<p>Fall 2017 (2016, 2015, 2013, 2012, 2011) @ Brooklyn College</p>
-<p>An undergraduate course on research methods, using a free OER textbook! Written by myself and many others. Check out the <a href="https://crumplab.github.io/ResearchMethods/">textbook here</a>. Check out the <a href="https://crumplab.github.io/psyc3450/">course website here</a>.</p>
-</div>
-<div class="col-sm-6">
-<p><a href="https://crumplab.github.io/ResearchMethods/"> <img src="images/ResearchMethods.png" width="100" /> </a></p>
+<div id="arrange-order" class="section level3">
+<h3>Arrange order</h3>
+<pre class="r"><code>arrange(mtcars, mpg)  # ascending (small to large)
+
+arrange(mtcars, desc(mpg)) # descending (large to small)</code></pre>
 </div>
 </div>
-<hr />
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
-<h4 id="psyc-80103-computer-programming-for-psychologists">Psyc 80103: Computer Programming for Psychologists</h4>
-<p>@ Brooklyn College</p>
-<p>I put my lecture notes into a <a href="https://crumplab.github.io/programmingforpsych/">book</a> (covers R, Livecode and a bit of web programming.)</p>
+<div id="papaja" class="section level2">
+<h2>Papaja</h2>
+<p>For apa style papers</p>
+<div id="figures" class="section level3">
+<h3>Figures</h3>
+<ol style="list-style-type: decimal">
+<li>jou mode doesn’t respect fig.width or fig.height, use out.width=“3in” for single column</li>
+<li>use out.width=“\textwidth” and fig.env=“figure*&quot; to span both columns</li>
+</ol>
 </div>
-<div class="col-sm-6">
-<p><a href="https://crumplab.github.io/programmingforpsych/"> <img src="images/Programming.png" width="100" /> </a></p>
+<div id="indentation-in-jou-mode" class="section level3">
+<h3>Indentation in jou mode</h3>
+<p>for yaml</p>
+<pre class="r"><code>header-includes:
+   - \setlength\parindent{24pt}</code></pre>
 </div>
-</div>
-<hr />
-<div id="psyc-3530-introduction-to-cognitive-psychology" class="section level4">
-<h4>Psyc 3530 : Introduction to Cognitive Psychology</h4>
-<p>@ Brooklyn College</p>
-<hr />
-</div>
-<div id="psyc-80103-special-topics-seminar-learning-attention" class="section level4">
-<h4>Psyc 80103 : Special Topics Seminar: Learning &amp; Attention</h4>
-<p>Special topics doctoral course @ GC Co-taught with Andrew Delamater</p>
-<hr />
-</div>
-<div id="psyc-80103-special-topics-memory-foundations-current-issues" class="section level4">
-<h4>Psyc 80103 : Special Topics: Memory: Foundations &amp; Current Issues</h4>
-<p>Special topics doctoral course @ GC Co-taught with Elizabeth Chua</p>
-<hr />
-</div>
-<div id="psyc-80103-career-development" class="section level4">
-<h4>Psyc 80103 : Career Development</h4>
-<p>Doctoral course @ GC Co-taught with Elizabeth Chua</p>
-</div>
+<div id="colons-in-yaml" class="section level3">
+<h3>colons in yaml</h3>
+<p>Use the code <code>&amp;#58;</code> for colons</p>
 </div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
