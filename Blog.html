@@ -346,7 +346,28 @@ div.tocify {
 <hr />
 <div id="list-of-websites-for-people-using-r-markdown-websites-to-learn-r" class="section level1">
 <h1>List of websites for people using R Markdown websites to learn R</h1>
-<p>This will be updated with a list populated from google forms. If you added to the google form and your web-address is not listed here, right now you will just have to wait for me to recompile this blog (when I figure out how to automate this daily, it will update by itself on some regular interval…maybe)</p>
+<p>This will be updated with a list populated from google forms. If you added to the google form and your web-address is not listed here, right now you will just have to wait for me to recompile this blog (when I figure out how to automate this daily, it will update by itself on some regular interval…maybe).</p>
+<p>If you want to add your website to this list, use this <a href="https://docs.google.com/forms/d/e/1FAIpQLScQOJ9OX4w4wIGrNuvGvmxLA-fUvq3o4UFouBZDx0XjIaZN9g/viewform?usp=sf_link">google form</a>.</p>
+<pre class="r"><code>library(googlesheets)
+#gs_ls()
+web_df &lt;- gs_title(&quot;LearningR (Responses)&quot;)
+ss_df &lt;- gs_read(ss=web_df, ws = &quot;Form Responses 1&quot;, skip=0)
+names(ss_df)&lt;-c(&quot;Date Added&quot;,&quot;Website&quot;)
+knitr::kable(ss_df)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Date Added</th>
+<th align="left">Website</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">7/24/2018 12:31:53</td>
+<td align="left"><a href="https://crumplab.github.io" class="uri">https://crumplab.github.io</a></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="my-experience-with-oer-development-at-cuny-so-far" class="section level1">
 <h1>My experience with OER development at CUNY so far</h1>
@@ -634,7 +655,7 @@ for(i in 1:1000){
   save_p[i] &lt;- t.test(rnorm(20,0,1))$p.value
 }
 hist(save_p)</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>Roughly, this means you are just as likely to get a <span class="math inline">\(p\)</span>-value between 0 and 0.05, as you are to get one between .95 and 1. This is one reason why the size of the <span class="math inline">\(p\)</span>-value does not allow you to have more or less evidence for the null, because under the null, you have the same chances of getting any <span class="math inline">\(p\)</span>-value. A <span class="math inline">\(p\)</span>-value of 0.9 does not give more evidence for the null than a <span class="math inline">\(p\)</span>-value of .5.</p>
 <p>Ok, so the simulation shows that the <span class="math inline">\(p\)</span>-distribution is flat under the null, but why is it flat? The <span class="math inline">\(t\)</span>-distribution isn’t flat. Aren’t <span class="math inline">\(t\)</span>’s around 0 the most frequently occurring values? Aren’t those <span class="math inline">\(t\)</span>’s associated with particular <span class="math inline">\(p\)</span>-values, shouldn’t those particular <span class="math inline">\(p\)</span>-values occur with the same frequency as their associated <span class="math inline">\(t\)</span>s? This way of thinking is a bit of a trap, it might be one reason why people would expect the <span class="math inline">\(p\)</span>-distribution to go up and down.</p>
 <div id="ps-are-not-the-probability-of-specific-ts" class="section level2">
@@ -654,7 +675,7 @@ for(i in 1:1000){
 qplot(save_t)+
   geom_histogram( aes(bins=50), color=&quot;white&quot;)+
   theme_classic()</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>The <span class="math inline">\(t\)</span>-distribution is certainly not flat. Most <span class="math inline">\(t\)</span>’s are around 0, and larger or smaller <span class="math inline">\(t\)</span>’s happen with increasingly smaller frequency.</p>
 <p>The whole point of the <span class="math inline">\(t\)</span>-distribution is to show the behavior of <span class="math inline">\(t\)</span> under the null. Once we obtain the distribution, we then apply decision boundaries to the distribution (at least under some philosophies). The <span class="math inline">\(p\)</span>-distribution is defined by how the decision rules are applied. And, the way we apply the rules makes the <span class="math inline">\(p\)</span>-distribution flat.</p>
 <p>For example, let’s say we want to only have two decisions boundaries, A and B. It would look like this:</p>
@@ -664,7 +685,7 @@ qplot(save_t)+
   annotate(&quot;text&quot;, x=-2.5, y=100, label=&quot;A (50%)&quot;)+
   annotate(&quot;text&quot;, x=2.5, y=100, label=&quot;B (50%&quot;)+
   theme_classic()</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>Under the null, you would make Decision A half of the time, and Decision B half of the time. If you simulated this a bunch of times, got a t-value, then saved your decision (A or B), and then made a bar plot of the number of times you said A or B, it would be roughly flat.</p>
 <p>Let’s do the above, but instead of splitting into two equal regions of 50%. We split the t-distribution into equal regions of 5%. This creates 20 regions. In the figure, the white space between each red line shows where 5% of <span class="math inline">\(t\)</span>’s will be found.</p>
 <pre class="r"><code>ordered_t&lt;-sort(save_t)
@@ -678,7 +699,7 @@ qplot(save_t)+
   annotate(&quot;text&quot;, x=-2.5, y=100, label=&quot;5%&quot;)+
   annotate(&quot;text&quot;, x=2.5, y=100, label=&quot;5%&quot;)+
   theme_classic()</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>If you used these decision regions, you would find <span class="math inline">\(t\)</span>’s inside each band 5% of the time. The bands have different widths to accommodate the fact that <span class="math inline">\(t\)</span>’s have different probabilities across the range.</p>
 <p>This top graph is a little deceiving with respect to two-tailed t-testing. We could see things a little more clearly if we plotted the absolute value of <span class="math inline">\(t\)</span>’s. This will make a right skewed histogram, with t starting at 0 and getting bigger. We can apply the same 20 regions.</p>
 <pre class="r"><code>ordered_t&lt;-sort(abs(save_t))
@@ -694,7 +715,7 @@ qplot(abs(save_t))+
   annotate(&quot;text&quot;, x=1.65, y=100, label=&quot;5%&quot;)+
   annotate(&quot;text&quot;, x=1.45, y=100, label=&quot;...&quot;)+
   theme_classic()</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 </div>
 <div id="make-a-free-introductory-cognitive-psych-textbook-with-online-experiments" class="section level1">
@@ -757,140 +778,144 @@ for(i in 1:dims[1]){
   
 }</code></pre>
 <div id="context-dependent-control-of-attention-capture-evidence-from-proportion-congruent-effects" class="section level4">
-<h4>Context-dependent control of attention capture: Evidence from proportion congruent effects</h4>
-<p>Crump, M. J. C., Milliken, Bruce, Leboe-McGowan, Jason P., Leboe-McGowan, Launa C., Gao, X (2018). Context-dependent control of attention capture: Evidence from proportion congruent effects. <em>Canadian Journal of Experimental Psychology, 72</em>, 91–104. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8752/Crump%20et%20al.%20-%202018.pdf">pdf</a></p>
+<h4>Context-Dependent Control of Attention Capture: Evidence from Proportion Congruent Effects</h4>
+<p>Crump, M. J. C., Milliken, Bruce, {Leboe-McGowan}, Jason P., {Leboe-McGowan}, Launa C., Gao, X (2018). Context-Dependent Control of Attention Capture: Evidence from Proportion Congruent Effects. <em>Canadian Journal of Experimental Psychology, 72</em>, 91-104. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="memory-guided-selective-attention-single-experiences-with-conflict-have-long-lasting-effects-on-cognitive-control" class="section level4">
-<h4>Memory-guided selective attention: Single experiences with conflict have long-lasting effects on cognitive control</h4>
-<p>Brosowsky, Nicholaus P., Crump, Matthew JC (2018). Memory-guided selective attention: Single experiences with conflict have long-lasting effects on cognitive control. <em>Journal of Experimental Psychology: General, NA</em>, NA. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8749/29771565.html">pdf</a></p>
+<h4>Memory-Guided Selective Attention: Single Experiences with Conflict Have Long-Lasting Effects on Cognitive Control</h4>
+<p>Brosowsky, Nicholaus P., Crump, Matthew JC (2018). Memory-Guided Selective Attention: Single Experiences with Conflict Have Long-Lasting Effects on Cognitive Control. <em>Journal of Experimental Psychology: General, NA</em>, NA. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
+</div>
+<div id="parallel-regulation-of-past-present-and-future-actions-during-sequencing" class="section level4">
+<h4>Parallel Regulation of Past, Present, and Future Actions during Sequencing</h4>
+<p>Behmer, L. P., Jantzen, K. J., Martinez, S., Walls, R., {Amir-Brownstein}, E., Jaye, A., Leytze, M., Lucier, K., Crump, M. J. C. (2018). Parallel Regulation of Past, Present, and Future Actions during Sequencing. <em>Journal of Experimental Psychology: Human Perception and Performance, NA</em>, NA. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="crunching-big-data-with-finger-tips-how-typists-tune-their-performance-towards-the-statistics-of-natural-language" class="section level4">
-<h4>Crunching big data with finger tips: How typists tune their performance towards the statistics of natural language</h4>
-<p>Behmer, Lawrence P., Crump, M. J. C. (2017). Crunching big data with finger tips: How typists tune their performance towards the statistics of natural language. <em>NA, NA</em>, 319–341. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8751/Behmer%20and%20Crump%20-%202017.pdf">pdf</a></p>
+<h4>Crunching Big Data with Finger Tips: How Typists Tune Their Performance towards the Statistics of Natural Language</h4>
+<p>Behmer, Lawrence P., Crump, M. J. C. (2017). Crunching Big Data with Finger Tips: How Typists Tune Their Performance towards the Statistics of Natural Language. <em>NA, NA</em>, 319-341. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="spatial-knowledge-during-skilled-action-sequencing-hierarchical-versus-non-hierarchical-representations" class="section level4">
-<h4>Spatial knowledge during skilled action sequencing: Hierarchical versus non-hierarchical representations</h4>
-<p>Behmer, Lawrence P., Crump, M. J. C. (2017). Spatial knowledge during skilled action sequencing: Hierarchical versus non-hierarchical representations. <em>Attention, Perception &amp; Psychophysics, 79</em>, 2435–2448. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8753/Behmer%20and%20Crump%20-%202017.pdf">pdf</a></p>
+<h4>Spatial Knowledge during Skilled Action Sequencing: Hierarchical versus Non-Hierarchical Representations</h4>
+<p>Behmer, Lawrence P., Crump, M. J. C. (2017). Spatial Knowledge during Skilled Action Sequencing: Hierarchical versus Non-Hierarchical Representations. <em>Attention, Perception &amp; Psychophysics, 79</em>, 2435-2448. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="false-recognition-of-instruction-set-lures" class="section level4">
-<h4>False recognition of instruction-set lures</h4>
-<p>Curtis, Evan T., Chubala, Chrissy M., Spear, Jackie, Jamieson, Randall K., Hockley, William E., Crump, M. J. C. (2016). False recognition of instruction-set lures. <em>Memory, 24</em>, 32–43. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/2677/Curtis%20et%20al.%20-%202016.pdf">pdf</a></p>
+<h4>False Recognition of Instruction-Set Lures</h4>
+<p>Curtis, Evan T., Chubala, Chrissy M., Spear, Jackie, Jamieson, Randall K., Hockley, William E., Crump, M. J. C. (2016). False Recognition of Instruction-Set Lures. <em>Memory, 24</em>, 32-43. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="learning-to-selectively-attend-from-context-specific-attentional-histories-a-demonstration-and-some-constraints" class="section level4">
 <h4>Learning to Selectively Attend From Context-Specific Attentional Histories: A Demonstration and Some Constraints</h4>
-<p>Crump, M. J. C. (2016). Learning to Selectively Attend From Context-Specific Attentional Histories: A Demonstration and Some Constraints. <em>Canadian Journal of Experimental Psychology, 70</em>, 59–77. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/5774/Crump%20-%202016.pdf">pdf</a></p>
+<p>Crump, M. J. C. (2016). Learning to Selectively Attend From Context-Specific Attentional Histories: A Demonstration and Some Constraints. <em>Canadian Journal of Experimental Psychology, 70</em>, 59-77. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="reproducing-the-location-based-context-specific-proportion-congruent-effect-for-frequency-unbiased-items-a-reply-to-hutcheon-spieler-2016" class="section level4">
-<h4>Reproducing the location-based context-specific proportion congruent effect for frequency unbiased items: A reply to Hutcheon &amp; Spieler (2016)</h4>
-<p>Crump, M. J. C., Brosowsky, Nicholaus P., Milliken, Bruce (2016). Reproducing the location-based context-specific proportion congruent effect for frequency unbiased items: A reply to Hutcheon &amp; Spieler (2016). <em>The Quarterly Journal of Experimental Psychology, 70</em>, 1–41. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/7656/Crump%20Brosowsky%20Milliken%20-%202016.pdf">pdf</a></p>
+<h4>Reproducing the Location-Based Context-Specific Proportion Congruent Effect for Frequency Unbiased Items: A Reply to Hutcheon &amp; Spieler (2016)</h4>
+<p>Crump, M. J. C., Brosowsky, Nicholaus P., Milliken, Bruce (2016). Reproducing the Location-Based Context-Specific Proportion Congruent Effect for Frequency Unbiased Items: A Reply to Hutcheon &amp; Spieler (2016). <em>The Quarterly Journal of Experimental Psychology, 70</em>, 1–41. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="context-specific-attentional-sampling-intentional-control-as-a-pre-requisite-for-contextual-control" class="section level4">
-<h4>Context-specific attentional sampling: Intentional control as a pre-requisite for contextual control</h4>
-<p>Brosowsky, Nicholaus P., Crump, M. J. C. (2016). Context-specific attentional sampling: Intentional control as a pre-requisite for contextual control. <em>Consciousness and Cognition, 44</em>, 146–160. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8750/Brosowsky%20and%20Crump%20-%202016.pdf">pdf</a></p>
+<h4>Context-Specific Attentional Sampling: Intentional Control as a Pre-Requisite for Contextual Control</h4>
+<p>Brosowsky, Nicholaus P., Crump, M. J. C. (2016). Context-Specific Attentional Sampling: Intentional Control as a Pre-Requisite for Contextual Control. <em>Consciousness and Cognition, 44</em>, 146-160. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
-<div id="speedaccuracy-trade-off-in-skilled-typewriting-decomposing-the-contributions-of-hierarchical-control-loops" class="section level4">
-<h4>Speed–accuracy trade-off in skilled typewriting: Decomposing the contributions of hierarchical control loops</h4>
-<p>Yamaguchi, Motonori, Crump, M. J. C., Logan, Gordon D. (2013). Speed–accuracy trade-off in skilled typewriting: Decomposing the contributions of hierarchical control loops. <em>Journal of Experimental Psychology: Human Perception and Performance, 39</em>, 678–699. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/634/YamaCrumpLogan2012.pdf">pdf</a></p>
+<div id="speedtrade-off-in-skilled-typewriting-decomposing-the-contributions-of-hierarchical-control-loops" class="section level4">
+<h4>SpeedTrade-off in Skilled Typewriting: Decomposing the Contributions of Hierarchical Control Loops</h4>
+<p>Yamaguchi, Motonori, Crump, M. J. C., Logan, Gordon D. (2013). SpeedTrade-off in Skilled Typewriting: Decomposing the Contributions of Hierarchical Control Loops. <em>Journal of Experimental Psychology: Human Perception and Performance, 39</em>, 678-699. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="prevention-and-correction-in-post-error-performance-an-ounce-of-prevention-a-pound-of-cure" class="section level4">
-<h4>Prevention and correction in post-error performance: An ounce of prevention, a pound of cure</h4>
-<p>Crump, M. J. C., Logan, Gordon D. (2013). Prevention and correction in post-error performance: An ounce of prevention, a pound of cure. <em>Journal of Experimental Psychology: General, 142</em>, 692–709. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/742/Crump%20and%20Logan%20-%202013.pdf">pdf</a></p>
+<h4>Prevention and Correction in Post-Error Performance: An Ounce of Prevention, a Pound of Cure</h4>
+<p>Crump, M. J. C., Logan, Gordon D. (2013). Prevention and Correction in Post-Error Performance: An Ounce of Prevention, a Pound of Cure. <em>Journal of Experimental Psychology: General, 142</em>, 692-709. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="evaluating-amazons-mechanical-turk-as-a-tool-for-experimental-behavioral-research" class="section level4">
-<h4>Evaluating Amazon’s Mechanical Turk as a tool for experimental behavioral research</h4>
-<p>Crump, M. J. C., McDonnell, John V., Gureckis, Todd M. (2013). Evaluating Amazon’s Mechanical Turk as a tool for experimental behavioral research. <em>PLoS ONE, 8</em>, e57410. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/487/Crump%20et%20al.%20-%202013.pdf">pdf</a></p>
+<h4>Evaluating Amazon’s Mechanical Turk as a Tool for Experimental Behavioral Research</h4>
+<p>Crump, M. J. C., McDonnell, John V., Gureckis, Todd M. (2013). Evaluating Amazon’s Mechanical Turk as a Tool for Experimental Behavioral Research. <em>PLoS ONE, 8</em>, e57410. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="an-instance-theory-of-associative-learning" class="section level4">
-<h4>An instance theory of associative learning</h4>
-<p>Jamieson, Randall K., Crump, M. J. C., Hannah, Samuel D. (2012). An instance theory of associative learning. <em>Learning &amp; Behavior, 40</em>, 61–82. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/789/Jamieson%20et%20al.%20-%202012.pdf">pdf</a></p>
+<h4>An Instance Theory of Associative Learning</h4>
+<p>Jamieson, Randall K., Crump, M. J. C., Hannah, Samuel D. (2012). An Instance Theory of Associative Learning. <em>Learning &amp; Behavior, 40</em>, 61-82. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="keeping-an-eye-on-guitar-skill-visual-representations-of-guitar-chords" class="section level4">
 <h4>Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords</h4>
-<p>Crump, M. J. C., Logan, Gordon D., Kimbrough, Jerry (2012). Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords. <em>Music Perception: An Interdisciplinary Journal, 30</em>, 37–47. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/472/Crump%20et%20al.%20-%202012.pdf">pdf</a></p>
+<p>Crump, M. J. C., Logan, Gordon D., Kimbrough, Jerry (2012). Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords. <em>Music Perception: An Interdisciplinary Journal, 30</em>, 37–47. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="in-support-of-a-distinction-between-voluntary-and-stimulus-driven-control-a-review-of-the-literature-on-proportion-congruent-effects" class="section level4">
-<h4>In support of a distinction between voluntary and stimulus-driven control: A review of the literature on proportion congruent effects</h4>
-<p>Bugg, Julie M., Crump, M. J. C. (2012). In support of a distinction between voluntary and stimulus-driven control: A review of the literature on proportion congruent effects. <em>Frontiers in Psychology, 3</em>, 1–16. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/728/Bugg%20and%20Crump%20-%202012.pdf">pdf</a></p>
+<h4>In Support of a Distinction between Voluntary and Stimulus-Driven Control: A Review of the Literature on Proportion Congruent Effects</h4>
+<p>Bugg, Julie M., Crump, M. J. C. (2012). In Support of a Distinction between Voluntary and Stimulus-Driven Control: A Review of the Literature on Proportion Congruent Effects. <em>Frontiers in Psychology, 3</em>, 1-16. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="review-of-guitar-zero-the-new-musician-and-the-science-of-learning" class="section level4">
-<h4>Review of Guitar zero: The new musician and the science of learning</h4>
-<p>Crump, M. J. C. (2012). Review of Guitar zero: The new musician and the science of learning. <em>NA, NA</em>, NA.</p>
+<h4>Review of Guitar Zero: The New Musician and the Science of Learning</h4>
+<p>Crump, M. J. C. (2012). Review of Guitar Zero: The New Musician and the Science of Learning. <em>NA, NA</em>, NA.</p>
 </div>
 <div id="hierarchical-control-of-cognitive-processes-the-case-for-skilled-typewriting" class="section level4">
-<h4>Hierarchical control of cognitive processes: The case for skilled typewriting</h4>
-<p>Logan, Gordon D., Crump, M. J. C. (2011). Hierarchical control of cognitive processes: The case for skilled typewriting. <em>NA, 54</em>, 1–27. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/501/Logan%20and%20Crump%20-%202011.pdf">pdf</a></p>
+<h4>Hierarchical Control of Cognitive Processes: The Case for Skilled Typewriting</h4>
+<p>Logan, Gordon D., Crump, M. J. C. (2011). Hierarchical Control of Cognitive Processes: The Case for Skilled Typewriting. <em>NA, 54</em>, 1-27. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="episodic-contributions-to-sequential-control-learning-from-a-typists-touch" class="section level4">
-<h4>Episodic contributions to sequential control: Learning from a typist’s touch</h4>
-<p>Crump, M. J. C., Logan, Gordon D. (2010). Episodic contributions to sequential control: Learning from a typist’s touch. <em>Journal of Experimental Psychology: Human Perception and Performance, 36</em>, 662–672. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/484/Crump%20and%20Logan%20-%202010.pdf">pdf</a></p>
+<h4>Episodic Contributions to Sequential Control: Learning from a Typist’s Touch</h4>
+<p>Crump, M. J. C., Logan, Gordon D. (2010). Episodic Contributions to Sequential Control: Learning from a Typist’s Touch. <em>Journal of Experimental Psychology: Human Perception and Performance, 36</em>, 662-672. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="cognitive-illusions-of-authorship-reveal-hierarchical-error-detection-in-skilled-typists" class="section level4">
-<h4>Cognitive illusions of authorship reveal hierarchical error detection in skilled typists</h4>
-<p>Logan, Gordon D., Crump, M. J. C. (2010). Cognitive illusions of authorship reveal hierarchical error detection in skilled typists. <em>Science, 330</em>, 683–686. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/520/Logan%20and%20Crump%20-%202010.pdf">pdf</a></p>
+<h4>Cognitive Illusions of Authorship Reveal Hierarchical Error Detection in Skilled Typists</h4>
+<p>Logan, Gordon D., Crump, M. J. C. (2010). Cognitive Illusions of Authorship Reveal Hierarchical Error Detection in Skilled Typists. <em>Science, 330</em>, 683-686. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
-<div id="warning-this-keyboard-will-deconstruct-the-role-of-the-keyboard-in-skilled-typewriting" class="section level4">
-<h4>Warning: This keyboard will deconstruct— The role of the keyboard in skilled typewriting</h4>
-<p>Crump, M. J. C., Logan, Gordon D. (2010). Warning: This keyboard will deconstruct— The role of the keyboard in skilled typewriting. <em>Psychonomic Bulletin &amp; Review, 17</em>, 394–399. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/621/Crump%20and%20Logan%20-%202010.pdf">pdf</a></p>
+<div id="warning-this-keyboard-will-deconstructthe-role-of-the-keyboard-in-skilled-typewriting" class="section level4">
+<h4>Warning: This Keyboard Will DeconstructThe Role of the Keyboard in Skilled Typewriting</h4>
+<p>Crump, M. J. C., Logan, Gordon D. (2010). Warning: This Keyboard Will DeconstructThe Role of the Keyboard in Skilled Typewriting. <em>Psychonomic Bulletin &amp; Review, 17</em>, 394-399. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="a-memory-based-account-of-retrospective-revaluation" class="section level4">
-<h4>A memory-based account of retrospective revaluation</h4>
-<p>Jamieson, Randall K., Hannah, Samuel D., Crump, M. J. C. (2010). A memory-based account of retrospective revaluation. <em>Canadian Journal of Experimental Psychology, 64</em>, 153–164. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/2040/Jamieson%20et%20al.%20-%202010%20-%20A%20memory-based%20account%20of%20retrospective%20revaluatio.pdf">pdf</a></p>
+<h4>A Memory-Based Account of Retrospective Revaluation</h4>
+<p>Jamieson, Randall K., Hannah, Samuel D., Crump, M. J. C. (2010). A Memory-Based Account of Retrospective Revaluation. <em>Canadian Journal of Experimental Psychology, 64</em>, 153-164. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="hierarchical-control-and-skilled-typing-evidence-for-word-level-control-over-the-execution-of-individual-keystrokes" class="section level4">
-<h4>Hierarchical control and skilled typing: Evidence for word-level control over the execution of individual keystrokes</h4>
-<p>Crump, M. J. C., Logan, Gordon D. (2010). Hierarchical control and skilled typing: Evidence for word-level control over the execution of individual keystrokes. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition, 36</em>, 1369–1380. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/620/Crump%20and%20Logan%20-%202010.pdf">pdf</a></p>
+<h4>Hierarchical Control and Skilled Typing: Evidence for Word-Level Control over the Execution of Individual Keystrokes</h4>
+<p>Crump, M. J. C., Logan, Gordon D. (2010). Hierarchical Control and Skilled Typing: Evidence for Word-Level Control over the Execution of Individual Keystrokes. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition, 36</em>, 1369-1380. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="contextual-control-over-task-set-retrieval" class="section level4">
-<h4>Contextual control over task-set retrieval</h4>
-<p>Crump, M. J. C., Logan, Gordon D. (2010). Contextual control over task-set retrieval. <em>Attention, Perception &amp; Psychophysics, 72</em>, 2047–2053. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/491/Crump%20and%20Logan%20-%202010.pdf">pdf</a></p>
+<h4>Contextual Control over Task-Set Retrieval</h4>
+<p>Crump, M. J. C., Logan, Gordon D. (2010). Contextual Control over Task-Set Retrieval. <em>Attention, Perception &amp; Psychophysics, 72</em>, 2047-2053. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="do-you-know-where-your-fingers-have-been-explicit-knowledge-of-the-spatial-layout-of-the-keyboard-in-skilled-typists" class="section level4">
-<h4>Do you know where your fingers have been? Explicit knowledge of the spatial layout of the keyboard in skilled typists</h4>
-<p>Liu, Xianyun, Crump, M. J. C., Logan, Gordon D. (2010). Do you know where your fingers have been? Explicit knowledge of the spatial layout of the keyboard in skilled typists. <em>Memory &amp; Cognition, 38</em>, 474–484. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/774/Liu%20et%20al.%20-%202010.pdf">pdf</a></p>
+<h4>Do You Know Where Your Fingers Have Been? Explicit Knowledge of the Spatial Layout of the Keyboard in Skilled Typists</h4>
+<p>Liu, Xianyun, Crump, M. J. C., Logan, Gordon D. (2010). Do You Know Where Your Fingers Have Been? Explicit Knowledge of the Spatial Layout of the Keyboard in Skilled Typists. <em>Memory &amp; Cognition, 38</em>, 474-484. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="applying-signal-detection-theory-to-contingency-assessment" class="section level4">
-<h4>Applying signal detection theory to contingency assessment</h4>
-<p>Siegel, Shepard, Allan, Lorraine G., Hannah, Samuel D., Crump, M. J. C. (2009). Applying signal detection theory to contingency assessment. <em>Comparative Cognition &amp; Behavior Reviews, 4</em>, 116–134. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/603/Siegel%20et%20al.%20-%202009.pdf">pdf</a></p>
+<h4>Applying Signal Detection Theory to Contingency Assessment</h4>
+<p>Siegel, Shepard, Allan, Lorraine G., Hannah, Samuel D., Crump, M. J. C. (2009). Applying Signal Detection Theory to Contingency Assessment. <em>Comparative Cognition &amp; Behavior Reviews, 4</em>, 116-134. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="cue-interaction-effects-in-contingency-judgments-using-the-streamed-trial-procedure" class="section level4">
-<h4>Cue-interaction effects in contingency judgments using the streamed-trial procedure</h4>
-<p>Hannah, Samuel D., Crump, M. J. C., Allan, Lorraine G., Siegel, Shepard (2009). Cue-interaction effects in contingency judgments using the streamed-trial procedure. <em>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie expérimentale, 63</em>, 103–112. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/574/Hannah%20et%20al.%20-%202009.pdf">pdf</a></p>
+<h4>Cue-Interaction Effects in Contingency Judgments Using the Streamed-Trial Procedure</h4>
+<p>Hannah, Samuel D., Crump, M. J. C., Allan, Lorraine G., Siegel, Shepard (2009). Cue-Interaction Effects in Contingency Judgments Using the Streamed-Trial Procedure. <em>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie exp'erimentale, 63</em>, 103-112. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="the-flexibility-of-context-specific-control-evidence-for-context-driven-generalization-of-item-specific-control-settings" class="section level4">
-<h4>The flexibility of context-specific control: Evidence for context-driven generalization of item-specific control settings</h4>
-<p>Crump, M. J. C., Milliken, Bruce (2009). The flexibility of context-specific control: Evidence for context-driven generalization of item-specific control settings. <em>The Quarterly Journal of Experimental Psychology, 62</em>, 1523–1532. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/643/Crump%20and%20Milliken%20-%202009.pdf">pdf</a></p>
+<h4>The Flexibility of Context-Specific Control: Evidence for Context-Driven Generalization of Item-Specific Control Settings</h4>
+<p>Crump, M. J. C., Milliken, Bruce (2009). The Flexibility of Context-Specific Control: Evidence for Context-Driven Generalization of Item-Specific Control Settings. <em>The Quarterly Journal of Experimental Psychology, 62</em>, 1523-1532. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="the-left-hand-doesnt-know-what-the-right-hand-is-doing-the-disruptive-effects-of-attention-to-the-hands-in-skilled-typewriting" class="section level4">
-<h4>The left hand doesn’t know what the right hand Is doing: The disruptive effects of attention to the hands in skilled typewriting</h4>
-<p>Logan, Gordon D., Crump, M. J. C. (2009). The left hand doesn’t know what the right hand Is doing: The disruptive effects of attention to the hands in skilled typewriting. <em>Psychological Science, 20</em>, 1296–1300. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/815/Logan%20and%20Crump%20-%202009.pdf">pdf</a></p>
+<h4>The Left Hand Doesn’t Know What the Right Hand Is Doing: The Disruptive Effects of Attention to the Hands in Skilled Typewriting</h4>
+<p>Logan, Gordon D., Crump, M. J. C. (2009). The Left Hand Doesn’t Know What the Right Hand Is Doing: The Disruptive Effects of Attention to the Hands in Skilled Typewriting. <em>Psychological Science, 20</em>, 1296–1300. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="probe-specific-proportion-task-repetition-effects-on-switching-costs" class="section level4">
-<h4>Probe-specific proportion task repetition effects on switching costs</h4>
-<p>Leboe, J. P., Wong, J., Crump, M. J. C., Stobbe, K. (2008). Probe-specific proportion task repetition effects on switching costs. <em>Perception &amp; Psychophysics, 70</em>, 935–945. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/768/Leboe%20et%20al.%20-%202008.pdf">pdf</a></p>
+<h4>Probe-Specific Proportion Task Repetition Effects on Switching Costs</h4>
+<p>Leboe, J. P., Wong, J., Crump, M. J. C., Stobbe, K. (2008). Probe-Specific Proportion Task Repetition Effects on Switching Costs. <em>Perception &amp; Psychophysics, 70</em>, 935-945. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="shifting-views-on-the-symbolic-cueing-effect-cueing-attention-through-recent-prior-experience" class="section level4">
-<h4>Shifting views on the symbolic cueing effect: Cueing attention through recent prior experience</h4>
-<p>Crump, M. J. C., Milliken, Bruce, Ansari, Imran (2008). Shifting views on the symbolic cueing effect: Cueing attention through recent prior experience. <em>Psicológica, 29</em>, 97–114. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/2023/Crump%20et%20al.%20-%202007%20-%20Shifting%20views%20on%20the%20symbolic%20cueing%20effect%20Cuei.pdf">pdf</a></p>
+<h4>Shifting Views on the Symbolic Cueing Effect: Cueing Attention through Recent Prior Experience</h4>
+<p>Crump, M. J. C., Milliken, Bruce, Ansari, Imran (2008). Shifting Views on the Symbolic Cueing Effect: Cueing Attention through Recent Prior Experience. <em>Psicol'ogica, 29</em>, 97–114. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="context-specific-learning-and-control-the-roles-of-awareness-task-relevance-and-relative-salience" class="section level4">
-<h4>Context-specific learning and control: The roles of awareness, task relevance, and relative salience</h4>
-<p>Crump, M. J. C., Vaquero, Joaquín M.M., Milliken, Bruce (2008). Context-specific learning and control: The roles of awareness, task relevance, and relative salience. <em>Consciousness and Cognition, 17</em>, 22–36. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/748/Crump%20et%20al.%20-%202008.pdf">pdf</a></p>
+<h4>Context-Specific Learning and Control: The Roles of Awareness, Task Relevance, and Relative Salience</h4>
+<p>Crump, M. J. C., Vaquero, Joaqu'in M.M., Milliken, Bruce (2008). Context-Specific Learning and Control: The Roles of Awareness, Task Relevance, and Relative Salience. <em>Consciousness and Cognition, 17</em>, 22-36. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="the-psychophysics-of-contingency-assessment." class="section level4">
-<h4>The psychophysics of contingency assessment.</h4>
-<p>Allan, Lorraine G., Hannah, Samuel D., Crump, M. J. C., Siegel, Shepard (2008). The psychophysics of contingency assessment.. <em>Journal of Experimental Psychology: General, 137</em>, 226–243. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/533/Allan%20et%20al.%20-%202008.pdf">pdf</a></p>
+<h4>The Psychophysics of Contingency Assessment.</h4>
+<p>Allan, Lorraine G., Hannah, Samuel D., Crump, M. J. C., Siegel, Shepard (2008). The Psychophysics of Contingency Assessment.. <em>Journal of Experimental Psychology: General, 137</em>, 226-243. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="contingency-judgements-on-the-fly" class="section level4">
-<h4>Contingency judgements on the fly</h4>
-<p>Crump, M. J. C., Hannah, Samuel D., Allan, Lorraine G., Hord, Lauren K. (2007). Contingency judgements on the fly. <em>The Quarterly Journal of Experimental Psychology, 60</em>, 753–761. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/442/Crump%20et%20al.%20-%202007.pdf">pdf</a></p>
+<h4>Contingency Judgements on the Fly</h4>
+<p>Crump, M. J. C., Hannah, Samuel D., Allan, Lorraine G., Hord, Lauren K. (2007). Contingency Judgements on the Fly. <em>The Quarterly Journal of Experimental Psychology, 60</em>, 753-761. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="contingency-learning-without-awareness-evidence-for-implicit-control" class="section level4">
-<h4>Contingency learning without awareness: Evidence for implicit control</h4>
-<p>Schmidt, James R., Crump, M. J. C., Cheesman, Jim, Besner, Derek (2007). Contingency learning without awareness: Evidence for implicit control. <em>Consciousness and Cognition, 16</em>, 421–435. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/1081/Schmidt%20et%20al.%20-%202007%20-%20Contingency%20learning%20without%20awareness%20Evidence%20f.pdf">pdf</a></p>
+<h4>Contingency Learning without Awareness: Evidence for Implicit Control</h4>
+<p>Schmidt, James R., Crump, M. J. C., Cheesman, Jim, Besner, Derek (2007). Contingency Learning without Awareness: Evidence for Implicit Control. <em>Consciousness and Cognition, 16</em>, 421-435. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 <div id="the-context-specific-proportion-congruent-stroop-effect-location-as-a-contextual-cue" class="section level4">
-<h4>The context-specific proportion congruent Stroop effect: Location as a contextual cue</h4>
-<p>Crump, M. J. C., Gong, Zhiyu, Milliken, Bruce (2006). The context-specific proportion congruent Stroop effect: Location as a contextual cue. <em>Psychonomic Bulletin &amp; Review, 13</em>, 316–321. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/1832/Crump%20et%20al.%20-%202006%20-%20The%20context-specific%20proportion%20congruent%20Stroop%20e.pdf">pdf</a></p>
+<h4>The Context-Specific Proportion Congruent Stroop Effect: Location as a Contextual Cue</h4>
+<p>Crump, M. J. C., Gong, Zhiyu, Milliken, Bruce (2006). The Context-Specific Proportion Congruent Stroop Effect: Location as a Contextual Cue. <em>Psychonomic Bulletin &amp; Review, 13</em>, 316–321. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/NA">pdf</a></p>
 </div>
 </div>
 

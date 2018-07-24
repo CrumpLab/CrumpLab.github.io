@@ -23,8 +23,20 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 # List of websites for people using R Markdown websites to learn R
 
-This will be updated with a list populated from google forms. If you added to the google form and your web-address is not listed here, right now you will just have to wait for me to recompile this blog (when I figure out how to automate this daily, it will update by itself on some regular interval...maybe)
+This will be updated with a list populated from google forms. If you added to the google form and your web-address is not listed here, right now you will just have to wait for me to recompile this blog (when I figure out how to automate this daily, it will update by itself on some regular interval...maybe).
 
+If you want to add your website to this list, use this [google form](https://docs.google.com/forms/d/e/1FAIpQLScQOJ9OX4w4wIGrNuvGvmxLA-fUvq3o4UFouBZDx0XjIaZN9g/viewform?usp=sf_link).
+
+
+```{r, cache=FALSE}
+library(googlesheets)
+#gs_ls()
+web_df <- gs_title("LearningR (Responses)")
+ss_df <- gs_read(ss=web_df, ws = "Form Responses 1", skip=0)
+names(ss_df)<-c("Date Added","Website")
+knitr::kable(ss_df)
+
+```
 
 # My experience with OER development at CUNY so far
 
@@ -518,7 +530,7 @@ bib_df<-bib2df(file="Crump.bib")
 
 That seemed to work nice. Needed to add a few missing years to the .bib file. Ok, just need to write a loop...need to remove special characters in bibfile...Cool, basically got it working. Need to update bib file to check for errors. Need to add a catch for papers that aren't articles... Going to move this code over to the publications page and modify from there.
 
-```{r, results='asis', warning=FALSE,message=FALSE}
+```{r, results='asis', warning=FALSE,message=FALSE, cache=TRUE}
 library(stringi)
 
 bib_df$TITLE<-stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
