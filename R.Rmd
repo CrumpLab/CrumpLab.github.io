@@ -59,13 +59,15 @@ restricted_df <- all_data %>%
 
 ### Mutate
 
-Add columns
+Add columns, delete columns
 
 ```{r}
 dim(all_data)
 
 all_data <- all_data %>% 
             mutate(newCol = rep(0,32))
+
+all_data <- all_data %>% `[<-`("mpg",value=NULL)
 
 
 ```
@@ -99,5 +101,16 @@ header-includes:
 ### colons in yaml
 
 Use the code `&#58;` for colons
+
+### add latex to header for journal name
+
+add to yaml
+
+```
+header-includes:
+  - \journal{Journal of Foobar}
+
+```
+
 
 

@@ -355,11 +355,13 @@ restricted_df &lt;- all_data %&gt;%
 </div>
 <div id="mutate" class="section level3">
 <h3>Mutate</h3>
-<p>Add columns</p>
+<p>Add columns, delete columns</p>
 <pre class="r"><code>dim(all_data)
 
 all_data &lt;- all_data %&gt;% 
-            mutate(newCol = rep(0,32))</code></pre>
+            mutate(newCol = rep(0,32))
+
+all_data &lt;- all_data %&gt;% `[&lt;-`(&quot;mpg&quot;,value=NULL)</code></pre>
 </div>
 <div id="arrange-order" class="section level3">
 <h3>Arrange order</h3>
@@ -387,6 +389,13 @@ arrange(mtcars, desc(mpg)) # descending (large to small)</code></pre>
 <div id="colons-in-yaml" class="section level3">
 <h3>colons in yaml</h3>
 <p>Use the code <code>&amp;#58;</code> for colons</p>
+</div>
+<div id="add-latex-to-header-for-journal-name" class="section level3">
+<h3>add latex to header for journal name</h3>
+<p>add to yaml</p>
+<pre><code>header-includes:
+  - \journal{Journal of Foobar}
+</code></pre>
 </div>
 </div>
 
