@@ -2,10 +2,23 @@
 title: "Publications"
 output: 
   html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 4
     code_folding: hide
     includes:
        in_header: g_analytics.html
 ---
+
+<style>
+    .toc-content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+</style>
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)

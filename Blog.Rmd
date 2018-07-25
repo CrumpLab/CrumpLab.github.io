@@ -10,8 +10,17 @@ output:
     code_folding: hide
     includes:
        in_header: g_analytics.html
+    css: blog.css
 bibliography: [Crump.bib, typing.bib]
 ---
+
+<style>
+    .toc-content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+</style>
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
@@ -20,6 +29,37 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
 --------------------------
+
+# Mess around with theming on this blog
+
+1. How do I change the width of the main text? 
+
+    a. Put a style block just after the yaml, % works best for compatibility between browser and mobile
+  
+    b. would be better to make a .css file and add it in.
+  
+    c. need to work out different widths for browsers and phones
+    
+```
+<style>
+    .toc-content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+</style>
+
+```
+
+2. Changing font-size
+
+    a. add blog.css to yaml css
+  
+    b. make h1, h2, h3, h4 classes
+  
+    c. adjust font sizes, e.g.: `font-size: 15pt;`
+
+
+-----
 
 # Skill learning and evaluation for intro undergraduate stats in psych
 
