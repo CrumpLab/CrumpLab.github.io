@@ -113,4 +113,14 @@ header-includes:
 ```
 
 
+## icon 
+
+`r icon::fa("twitter")`
+
+`r icon::fa("github")`
+
+[Example of adding icons to yaml](http://robertmitchellv.com/blog-building-site-with-rmarkdown.html)
+
+
+
 
