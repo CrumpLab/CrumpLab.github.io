@@ -36,11 +36,52 @@ writeLines('<meta name="twitter:title" content="Human Cognition and Performance 
 close(CON)
 ```
 
-```
 
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
 --------------------------
+
+# Adding meta tags to R Markdown websites for social media
+
+2018-07-26, last compiled: `r Sys.Date()`
+
+R Markdown seems to be a little bit inconsistent when attempting to add meta tags into html documents. Here's what I did to get them to work for twitter on this website. You can look at the [.rmd file for this post here](https://github.com/CrumpLab/CrumpLab.github.io/blob/master/Blog.Rmd). Or read this.
+
+1. You can include .html into the head in the yaml, the yaml for this blog looks like this, and the special sauce is in the `header_blog.html`
+
+```
+title: "Various musings"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+    code_folding: hide
+    includes:
+       in_header: [g_analytics.html,header_blog.html]
+    css: blog.css
+bibliography: [Crump.bib, typing.bib]
+```
+
+2. I found some example code for writing the .html to include, so I put this in the r setup, just underneath the yaml in this document. It writes the .html to your website folder. Also, code shows some use of meta tags for twitter.
+
+```{r, eval=FALSE, echo=TRUE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+
+# Create header.html
+CON <- file("header_blog.html")
+
+writeLines('<meta name="twitter:title" content="Human Cognition and Performance Lab ">
+<meta name="twitter:description" content=" Lab web page Blog - Matt Crump - Brooklyn College of CUNY">
+<meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png">
+<meta name="twitter:card" content="summary">',CON)
+
+close(CON)
+```
+
+-----
 
 
 # Mess around with theming on this blog
