@@ -19,4 +19,10 @@ navbar:
       href: Blog.html
     - text: "R"
       href: "R.html"
+    - text: ""
+      icon: fa-twitter
+      href: "https://twitter.com/MattCrump_"
+    - text: ""
+      icon: fa-github
+      href: "https://github.com/CrumpLab"
 output_dir: "."
