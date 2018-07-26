@@ -1,10 +1,24 @@
 ---
 title: "Crump Lab"
+cover-image: "/images/logo.png"
+description: "Human Cognition and Performance Lab"
 output: 
   html_document:
     includes:
-       in_header: g_analytics.html
+       in_header: [g_analytics.html,header.html]
 ---
+
+```{r setup, include=FALSE, echo=FALSE}
+# Create header.html
+CON <- file("header.html")
+
+writeLines('<meta name="twitter:title" content="Human Cognition and Performance Lab ">
+<meta name="twitter:description" content=" Lab web page - Matt Crump - Brooklyn College of CUNY">
+<meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png">
+<meta name="twitter:card" content="summary_small_image">',CON)
+
+close(CON)
+```
 
 <style type="text/css">
 .title {
