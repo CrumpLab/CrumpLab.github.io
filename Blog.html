@@ -42,6 +42,11 @@
 <meta name="twitter:description" content=" Lab web page Blog - Matt Crump - Brooklyn College of CUNY">
 <meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png">
 <meta name="twitter:card" content="summary">
+ <meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+        <link href="quizzes/css/reset.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="quizzes/css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="quizzes/css/master.css" media="screen" rel="stylesheet" type="text/css">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -375,6 +380,111 @@ div.tocify {
 </style>
 <p>Using this mainly as a place to make notes for myself so I don’t forget what I’m doing. I own my spelling mistakes and sell them on e-bay.</p>
 <hr />
+<div id="adding-quizzes-to-static-r-markdown-websites" class="section level1">
+<h1>Adding quizzes to static R Markdown websites</h1>
+<p>I’m writing a textbook in bookdown and I want to add some quizzes, but I don’t want to set up Shiny, just yet. Instead, I’d like to pop in little quizzes whenever I want. There’s a few options out there, but no official packages to do this in R markdown in a plug-and-play style. So, I hacked together something. It isn’t pretty, but it works. I’m putting a quiz here to test that it works and doesn’t destroy everything else (css conflict etc.). And, memory for later.</p>
+<div id="what-i-did" class="section level2">
+<h2>What I did</h2>
+<ol style="list-style-type: decimal">
+<li>downloaded the slickquiz jquery library <a href="https://github.com/jewlofthelotus/SlickQuiz" class="uri">https://github.com/jewlofthelotus/SlickQuiz</a></li>
+<li>Looked at it for a while. <code>index.html</code> loads right up and gives you a quiz.</li>
+<li>Edit the quiz content in the <code>slickQuiz-config.js</code> file. That’s in a javascript JSON variable, ugh.</li>
+<li>The index.html file has everything that you need set-up, and pipes the quiz in through the .js file. Edit that file, change the quiz.</li>
+<li>To use in R, I converted the json variable to YAML, then saved that file. YAML is much easier to write in.</li>
+<li>In R, read in YAML, then write it back as a .js file (with JSON) so the jquery library can be friends with it.</li>
+<li>Include important parts of the head from index.html as an include to the yaml of this page, it loads css files</li>
+<li>Use htmltools to insert another .html file that contains the important parts from the body in the index. knit.</li>
+<li>So, now I can insert a quiz. Next step improve the workflow, and make it work with more than one quize block per page.</li>
+</ol>
+<p>Here’s the quiz. The yaml for the quiz is beneath. Haven’t tried putting two quizzes into the same markdown document. Will probably be some issues there. At least this works…And, even though it’s one quiz, you can put a lot of questions into it. hmmm, maybe I’ll just put one quiz at the end of chapter. That would solve my problem, and prevent me from littering the textbook with quizzes everywhere.</p>
+<hr />
+<pre class="r"><code>library(yaml)
+library(rjson)
+a&lt;-read_yaml(file=&quot;quizzes/quizyaml/quiz1.yml&quot;)
+b&lt;-toJSON(a)
+CON &lt;- file(&quot;quizzes/quizjs/test.js&quot;)
+writeLines(c(&#39;var quizJSON = &#39;,b,&#39;;&#39;),CON, sep=&quot;&quot;)
+close(CON)
+
+htmltools::includeHTML(&quot;quizzes/html/body.html&quot;)</code></pre>
+<div id="slickQuiz">
+        <h2 class="quizName"><!-- where the quiz name goes --></h2>
+
+        <div class="quizArea">
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
+
+                <a class="button startQuiz" href="#">Get Started!</a>
+            </div>
+
+            <!-- where the quiz gets built -->
+        </div>
+
+        <div class="quizResults">
+            <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
+
+            <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>
+
+            <div class="quizResultsCopy">
+                <!-- where the quiz result copy goes -->
+            </div>
+        </div>
+        
+     <!--   <script src="quizzes/js/jquery.js"></script>  -->
+        <script src="quizzes/quizjs/test.js"></script>
+        <script src="quizzes/js/slickQuiz.js"></script>
+        <script src="quizzes/js/master.js"></script>
+
+    </div> 
+<hr />
+<pre><code>---
+info:
+  name: Quiz Central Tendency
+  main: &quot;&lt;p&gt;Test your knowledge about the mean, median and mode&lt;p&gt;&quot;
+  results: &quot;&lt;h5&gt;Learn More&lt;h5&gt;&lt;p&gt; Re-read the chapter and take the quiz again if you
+    weren&#39;t sure about some of the answers&lt;p&gt;&quot;
+  level1: Super Duper
+  level2: Great
+  level3: Doing good
+  level4: Keep at it
+  level5: Keep at it
+questions:
+- q: Which of these descriptive statistics is in the exact middle of a set of ordered numbers?
+  a:
+  - option: Mean
+    correct: false
+  - option: Median
+    correct: true
+  - option: Mode
+    correct: false
+  - option: Standard Deviation
+    correct: false
+  correct: &quot;&lt;p&gt;&lt;span&gt;That&#39;s right!&lt;span&gt; The median is the middle number of the ordered
+    numbers&lt;p&gt;&quot;
+  incorrect: &quot;&lt;p&gt;&lt;span&gt;Oops&lt;span&gt; The median is the middle number of the ordered numbers&lt;p&gt;&quot;
+- q: If you subtract all of the scores from this descriptive statistic, and then add
+    up all of the difference scores, your sum will be zero
+  a:
+  - option: Mean
+    correct: true
+  - option: Median
+    correct: false
+  - option: Mode
+    correct: false
+  - option: variance
+    correct: false
+  select_any: true
+  correct: &quot;&lt;p&gt;&lt;span&gt;Nice!&lt;span&gt; The mean balances the data, so the difference scores
+    sum to zero&lt;p&gt;&quot;
+  incorrect: &quot;&lt;p&gt;&lt;span&gt;Oops&lt;span&gt; The mean balances the data, so the difference scores
+    sum to zero&lt;p&gt;&quot;
+---
+
+
+</code></pre>
+<hr />
+</div>
+</div>
 <div id="adding-meta-tags-to-r-markdown-websites-for-social-media" class="section level1">
 <h1>Adding meta tags to R Markdown websites for social media</h1>
 <p>2018-07-26, last compiled: 2018-07-26</p>

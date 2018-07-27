@@ -9,7 +9,7 @@ output:
     toc_depth: 1
     code_folding: hide
     includes:
-       in_header: [g_analytics.html,header_blog.html]
+       in_header: [g_analytics.html,header_blog.html,quizzes/html/header.html]
     css: blog.css
 bibliography: [Crump.bib, typing.bib]
 ---
@@ -20,6 +20,9 @@ bibliography: [Crump.bib, typing.bib]
         padding-right: 10%;
     }
 </style>
+
+
+
 
 
 ```{r setup, include=FALSE}
@@ -40,6 +43,94 @@ close(CON)
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
 --------------------------
+
+# Adding quizzes to static R Markdown websites
+
+I'm writing a textbook in bookdown and I want to add some quizzes, but I don't want to set up Shiny, just yet. Instead, I'd like to pop in little quizzes whenever I want. There's a few options out there, but no official packages to do this in R markdown in a plug-and-play style. So, I hacked together something. It isn't pretty, but it works. I'm putting a quiz here to test that it works and doesn't destroy everything else (css conflict etc.). And, memory for later.
+
+## What I did
+
+1. downloaded the slickquiz jquery library [https://github.com/jewlofthelotus/SlickQuiz](https://github.com/jewlofthelotus/SlickQuiz)
+2. Looked at it for a while. `index.html` loads right up and gives you a quiz.
+3. Edit the quiz content in the `slickQuiz-config.js` file. That's in a javascript JSON variable, ugh. 
+4. The index.html file has everything that you need set-up, and pipes the quiz in through the .js file. Edit that file, change the quiz.
+5. To use in R,  I converted the json variable to YAML, then saved that file. YAML is much easier to write in.
+6. In R, read in YAML, then write it back as a .js file (with JSON) so the jquery library can be friends with it.
+7. Include important parts of the head from index.html as an include to the yaml of this page, it loads css files
+8. Use htmltools to insert another .html file that contains the important parts from the body in the index. knit.
+9. So, now I can insert a quiz. Next step improve the workflow, and make it work with more than one quize block per page.
+
+Here's the quiz. The yaml for the quiz is beneath. Haven't tried putting two quizzes into the same markdown document. Will probably be some issues there. At least this works...And, even though it's one quiz, you can put a lot of questions into it. hmmm, maybe I'll just put one quiz at the end of chapter. That would solve my problem, and prevent me from littering the textbook with quizzes everywhere.
+
+---
+
+```{r testquiz, echo=TRUE, eval=TRUE, cache=FALSE}
+library(yaml)
+library(rjson)
+a<-read_yaml(file="quizzes/quizyaml/quiz1.yml")
+b<-toJSON(a)
+CON <- file("quizzes/quizjs/test.js")
+writeLines(c('var quizJSON = ',b,';'),CON, sep="")
+close(CON)
+
+htmltools::includeHTML("quizzes/html/body.html")
+```
+
+---
+
+```
+---
+info:
+  name: Quiz Central Tendency
+  main: "<p>Test your knowledge about the mean, median and mode<p>"
+  results: "<h5>Learn More<h5><p> Re-read the chapter and take the quiz again if you
+    weren't sure about some of the answers<p>"
+  level1: Super Duper
+  level2: Great
+  level3: Doing good
+  level4: Keep at it
+  level5: Keep at it
+questions:
+- q: Which of these descriptive statistics is in the exact middle of a set of ordered numbers?
+  a:
+  - option: Mean
+    correct: false
+  - option: Median
+    correct: true
+  - option: Mode
+    correct: false
+  - option: Standard Deviation
+    correct: false
+  correct: "<p><span>That's right!<span> The median is the middle number of the ordered
+    numbers<p>"
+  incorrect: "<p><span>Oops<span> The median is the middle number of the ordered numbers<p>"
+- q: If you subtract all of the scores from this descriptive statistic, and then add
+    up all of the difference scores, your sum will be zero
+  a:
+  - option: Mean
+    correct: true
+  - option: Median
+    correct: false
+  - option: Mode
+    correct: false
+  - option: variance
+    correct: false
+  select_any: true
+  correct: "<p><span>Nice!<span> The mean balances the data, so the difference scores
+    sum to zero<p>"
+  incorrect: "<p><span>Oops<span> The mean balances the data, so the difference scores
+    sum to zero<p>"
+---
+
+
+
+```
+
+
+
+
+---
+
 
 # Adding meta tags to R Markdown websites for social media
 

@@ -1,0 +1,42 @@
+---
+info:
+  name: Quiz Central Tendency
+  main: "<p>Test your knowledge about the mean, median and mode<p>"
+  results: "<h5>Learn More<h5><p> Re-read the chapter and take the quiz again if you
+    weren't sure about some of the answers<p>"
+  level1: Super Duper
+  level2: Great
+  level3: Doing good
+  level4: Keep at it
+  level5: Keep at it
+questions:
+- q: Which of these descriptive statistics is in the exact middle of a set of ordered numbers?
+  a:
+  - option: Mean
+    correct: false
+  - option: Median
+    correct: true
+  - option: Mode
+    correct: false
+  - option: Standard Deviation
+    correct: false
+  correct: "<p><span>That's right!<span> The median is the middle number of the ordered
+    numbers<p>"
+  incorrect: "<p><span>Oops<span> The median is the middle number of the ordered numbers<p>"
+- q: If you subtract all of the scores from this descriptive statistic, and then add
+    up all of the difference scores, your sum will be zero
+  a:
+  - option: Mean
+    correct: true
+  - option: Median
+    correct: false
+  - option: Mode
+    correct: false
+  - option: variance
+    correct: false
+  select_any: true
+  correct: "<p><span>Nice!<span> The mean balances the data, so the difference scores
+    sum to zero<p>"
+  incorrect: "<p><span>Oops<span> The mean balances the data, so the difference scores
+    sum to zero<p>"
+---
