@@ -350,11 +350,17 @@ div.tocify {
 <h2>dplyr</h2>
 <p><a href="https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf">dplyr cheatsheet</a></p>
 <pre class="r"><code>library(dplyr)</code></pre>
-<div id="summarize-data" class="section level3">
-<h3>Summarize data</h3>
+<div id="select" class="section level3">
+<h3>select</h3>
+<p><code>select</code> for picking specific columns</p>
 <pre class="r"><code>all_data   &lt;- mtcars
 
-summarise(all_data, mean=mean(mpg),
+smaller_df &lt;- all_data %&gt;%
+                select(mpg,cyl)</code></pre>
+</div>
+<div id="summarize-data" class="section level3">
+<h3>Summarize data</h3>
+<pre class="r"><code>summarise(all_data, mean=mean(mpg),
                     sd=sd(mpg))</code></pre>
 </div>
 <div id="group-by" class="section level3">

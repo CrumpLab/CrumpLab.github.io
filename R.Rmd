@@ -25,10 +25,22 @@ I forget how to do so many things in programming. I mainly use R now, so this is
 library(dplyr)
 ```
 
-### Summarize data
+### select
+
+`select` for picking specific columns
 
 ```{r}
 all_data   <- mtcars
+
+smaller_df <- all_data %>%
+                select(mpg,cyl)
+
+
+```
+
+### Summarize data
+
+```{r}
 
 summarise(all_data, mean=mean(mpg),
                     sd=sd(mpg))
