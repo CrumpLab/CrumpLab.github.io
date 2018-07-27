@@ -46,6 +46,10 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 # Adding quizzes to static R Markdown websites
 
+2018-07-26, last compiled: `r Sys.Date()`
+
+update: here is this example in a github repo [https://github.com/CrumpLab/rmslickquiz](https://github.com/CrumpLab/rmslickquiz)
+
 I'm writing a textbook in bookdown and I want to add some quizzes, but I don't want to set up Shiny, just yet. Instead, I'd like to pop in little quizzes whenever I want. There's a few options out there, but no official packages to do this in R markdown in a plug-and-play style. So, I hacked together something. It isn't pretty, but it works. I'm putting a quiz here to test that it works and doesn't destroy everything else (css conflict etc.). And, memory for later.
 
 ## What I did
