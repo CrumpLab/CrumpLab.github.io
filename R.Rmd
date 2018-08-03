@@ -134,5 +134,12 @@ header-includes:
 [Example of adding icons to yaml](http://robertmitchellv.com/blog-building-site-with-rmarkdown.html)
 
 
+## kableextra
+
+For the grammar of tables...Makes awesome tables with ease!
+
+[http://haozhu233.github.io/kableExtra/awesome_table_in_html.html#overview](http://haozhu233.github.io/kableExtra/awesome_table_in_html.html#overview)
+
+
 
 
