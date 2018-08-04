@@ -58,8 +58,13 @@ The lab is located in the Department of Psychology at Brooklyn College of CUNY, 
 |Lab: 4303 James Hall|
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-6", style= "text-align:right;">
 
-![](images/logo.png)
+```{r, fig.height=2, fig.width=2, echo=FALSE}
+knitr::include_graphics("images/logo.png")
+```
+
+
+<a class="twitter-timeline" data-width="400" data-height="800" href="https://twitter.com/MattCrump_?ref_src=twsrc%5Etfw">Tweets by MattCrump_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
