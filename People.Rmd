@@ -9,7 +9,7 @@ output:
 | Current | Info |
 |:--------|-------:|
 |Matthew Crump| PI, email: mcrump@brooklyn.cuny.edu|
-|Nicholaus Brosowsky| Doctoral Student|
+|[Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html)| Doctoral Student|
 |Kevonte Mitchell| Doctoral Student|
 |Mark Rayev| Undergraduate Macaulay Honors|
 --------
