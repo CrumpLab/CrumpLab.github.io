@@ -269,6 +269,7 @@ $(document).ready(function () {
 <div id="undergraduate-research" class="section level3">
 <h3>Undergraduate Research</h3>
 <p>Recent research projects completed in the lab.</p>
+<pre><code>## Warning: package &#39;data.table&#39; was built under R version 3.4.4</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -386,43 +387,21 @@ $(document).ready(function () {
 </div>
 <div id="instructions" class="section level3">
 <h3>Instructions</h3>
-<p>Your assignment is to write a computer program that does something interesting, then email Dr. Crump with your completed assignment to set up a time to talk about gaining research experience in the lab.</p>
-<p>This page gives the instructions for completing the assignment. The files have been produced by various members of the lab, and each of them (with a few exceptions) contains a specific program. We keep all of the programs written by students who entered the lab before you, and your assignment is to write your own program so that we can add your file as well.</p>
-<p>Here are your instructions.</p>
+<p>Here is your assignment. By following these steps you will make a website, and then attempt to solve a problem in R. It sounds complicated, but everything you need to get started is right here, by following these steps:</p>
 <ol style="list-style-type: decimal">
-<li>You will be using the programming language R to complete the assignment (we use this in the lab for data-analysis, and lots of other things).</li>
+<li><p>Download <a href="https://www.r-project.org">R</a> and <a href="https://www.rstudio.com">R-studio</a> for your computer.</p></li>
+<li><p>Make yourself a <a href="https://github.com">github account</a>.</p></li>
+<li><p>General info about making websites with R Markdown is here, but see next point for downloading an example you can use straight away. <a href="https://rmarkdown.rstudio.com/rmarkdown_websites.htm" class="uri">https://rmarkdown.rstudio.com/rmarkdown_websites.htm</a></p></li>
+<li>I just made a downloadable/forkable github repository with everything you need to get started, and it’s self-explanatory in the sense that all of the materials explain themselves
+<ol style="list-style-type: lower-alpha">
+<li>the repository is here <a href="https://github.com/CrumpLab/LabJournalWebsite" class="uri">https://github.com/CrumpLab/LabJournalWebsite</a></li>
+<li>Follow the instructions in the read me file for how to compile the website in R-studio, and then host it on github</li>
+<li>You can see what the website will look like once you get it up and runnning here <a href="https://crumplab.github.io/LabJournalWebsite/index.html" class="uri">https://crumplab.github.io/LabJournalWebsite/index.html</a></li>
+<li>Follow the instructions inside the source for the website, and by reading the website to get started learning R. For example, in the example website, you can read the <a href="https://crumplab.github.io/LabJournalWebsite/Journal.html">journal page</a>, that explains the process. You will see there are some example problems to solve in R, and a link to more problems to solve. I solved the first three, you assignment is to attempt to solve one more problem.</li>
+</ol></li>
+<li><p>Assuming you got everything up and running, then you can send me an email (<a href="mailto:mcrump@brooklyn.cuny.edu">mcrump@brooklyn.cuny.edu</a>) introducing yourself. Link to your website that you made, and tell me a little bit about why you want to join the lab and we’ll set up a meeting.</p></li>
 </ol>
-<ul>
-<li>Download and install the most recent version of R for your computer system (it’s free). The R website is <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>. Once installed you will now have the R programming language on your computer</li>
-<li>Download and install R-Studio (also free, R must be installed first). The website is <a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a>. Once installed you will have a GUI (graphic user-interface) that will help you use R. You will use R-studio to write and run R programs. It provides a text editor for writing programs, a console/terminal for running the programs, and views for looking at variables, and graphs, and many other things.</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Familiarize yourself with R-studio by looking at tutorials and example code. There are lots of resources in blogs, and youtube videos, all a google search away.
-<ul>
-<li>For a general introduction to R and R-studio you can <a href="https://crumplab.github.io/ProgrammingTextbook/">read chapters 2 and 3 in Dr. Crump’s computer programming textbook</a>.</li>
-</ul></li>
-<li>Run and examine the example programs written by members of the lab.</li>
-</ol>
-<ul>
-<li>For students with no programming experience, we have created a set of example programs written in R to get you started. You can download and run these scripts in R-studio. The scripts are ordered in terms of difficulty, and contain many comments that explain what each line does.
-<ul>
-<li><a href="https://github.com/CrumpLab/EntryAssignment">The example code is stored in this github repository.</a> You can view the code for each program directly in your web-browser through github. You will need to run these programs in R-studio to see how they work. You can download all of the files to your computer using the “clone or download” button.</li>
-</ul></li>
-<li>Examine the code of the programs as you try them. We recommend examining the code of programs 1-5 in that order, because they were designed to go from easier to harder. As you examine these programs, make use of the comments (the text in green, marked by a # at the beginning of each line) that describe what’s going on.</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>Write your own program. Having studied the programs that other people in the lab have written, now it is time to start your assignment: think of a program, any program, that does something interesting and that can be added to the list of programs that members of the lab have created for this assignment. Create whatever program you like, really – as long as it shows that you’ve put in some time to learn a thing or two about R programming.</li>
-</ol>
-<ul>
-<li>This is what you do: In R-studio, create a new R-Script (file-&gt;new file-&gt;R-Script, or click the document icon with a green +). Save your script and give it a name. Then, use the text-editor window to code your program. You can try out all of the lines of code in the console, and you can run all of the lines at once by pressing the run button, or by copying and pasting all of the code into console and pressing enter.
-<ul>
-<li>You should write your program so that it can be loaded into R-studio and run, with the output of program producing some result the accomplishes the goal of the program. For example after running the program, the result might be displayed in the console, or saved as a file, or shown in a graph, you decide (it’s your program).</li>
-<li>If you are looking for suggestions for programs to write you could try one of the programming challenges listed in <a href="https://crumplab.github.io/ProgrammingTextbook/">chapter three of the programming textbook</a>.</li>
-</ul></li>
-</ul>
-<ol start="5" style="list-style-type: decimal">
-<li>Email your R-script to Dr. Crump (<a href="mailto:mcrump@brooklyn.cuny.edu">mcrump@brooklyn.cuny.edu</a>) and request a time to meet about gaining research experience in the lab.</li>
-</ol>
+<p>Email your R-script to Dr. Crump (<a href="mailto:mcrump@brooklyn.cuny.edu">mcrump@brooklyn.cuny.edu</a>) and request a time to meet about gaining research experience in the lab.</p>
 </div>
 </div>
 
