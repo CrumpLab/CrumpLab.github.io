@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -178,6 +181,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -249,89 +347,93 @@ $(document).ready(function () {
 
 <p>List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.</p>
 <hr />
-<div id="current-fall-2018" class="section level3">
-<h3>Current (Fall 2018)</h3>
+<div id="current-fall-2018" class="section level2">
+<h2>Current (Fall 2018)</h2>
 <hr />
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
-<h4 id="psyc-3400-statistical-methods-in-psychological-research">Psyc 3400: Statistical Methods in Psychological Research</h4>
-<p>THIS COURSE IS PRESENTLY BEING BUILT FOR FALL 2018, STILL IN DRAFT</p>
-<p>All materials are totally free and open, including <a href="https://crumplab.github.io/statistics/">textbook</a>, and <a href="https://crumplab.github.io/statisticsLab/">lab manual</a> which can be found on the <a href="https://crumplab.github.io/psyc3400/">course Website</a></p>
+<h3 id="psyc-3400-statistical-methods-in-psychological-research">Psyc 3400: Statistical Methods in Psychological Research</h3>
+<p>All materials are totally free and open, including the <a href="https://crumplab.github.io/psyc3400/">course Website</a>, <a href="https://crumplab.github.io/statistics/">textbook</a>, and <a href="https://crumplab.github.io/statisticsLab/">lab manual</a>.</p>
 </div>
 <div class="col-sm-6">
-<p><a href="https://crumplab.github.io/statistics/"> <img src="images/TextbookCover.png" width="100" /> </a></p>
+<p><a href="https://crumplab.github.io/psyc3400/"> <img src="images/TextbookCover.png" width="150" /> </a></p>
 </div>
 </div>
 <hr />
-<div id="psyc-73800---cognitive-psychology" class="section level4">
-<h4>Psyc 73800 - Cognitive Psychology</h4>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+<h3 id="psyc-73800---cognitive-psychology">Psyc 73800 - Cognitive Psychology</h3>
 <p>Fall 2018 (2017) @ Graduate Center of CUNY</p>
-<p>Bi-weekly modules taught by different faculty.</p>
+<p>Bi-weekly modules taught by different faculty. The <a href="https://crumplab.github.io/psyc73800/">course website</a> contains syllabus and readings.</p>
+</div>
+<div class="col-sm-6">
+<p><a href="https://crumplab.github.io/psyc73800/"> <img src="images/cognitive_science.png" width="200" /> </a></p>
 </div>
 </div>
-<div id="section" class="section level2">
-<h2>……………………………..</h2>
-<div id="previous-courses" class="section level3">
-<h3>Previous courses</h3>
+<hr />
+</div>
+<div id="previous-courses" class="section level2">
+<h2>Previous courses</h2>
 <p>Some of these courses have open materials, older courses may not.</p>
 <hr />
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
-<h4 id="psyc-80103-cognitive-technologies-from-theory-and-data-to-application">Psyc 80103: Cognitive Technologies: From theory and data to application</h4>
+<h3 id="psyc-80103-cognitive-technologies-from-theory-and-data-to-application">Psyc 80103: Cognitive Technologies: From theory and data to application</h3>
 <p>Spring 2018 @ Graduate Center of CUNY</p>
-<p>A doctoral seminar course (special topics) covering emerging and old cognitive technologies. Check out the <a href="https://crumplab.github.io/cognitivetechnologies">course website</a>, or <a href="https://crumplab.github.io/cognitivetechnologies/book/">read the book</a> my students (wrote the chapters) and I (put them together) wrote for the end of the semester.</p>
+<p>A doctoral seminar course (special topics) covering emerging and old cognitive technologies. Check out the <a href="https://crumplab.github.io/cognitivetechnologies">course website</a>, or <a href="https://crumplab.github.io/cognitivetechnologies/book/">read the book</a> we wrote on the topic (students in the course wrote the chapters).</p>
 </div>
 <div class="col-sm-6">
-<p><a href="https://crumplab.github.io/cognitivetechnologies/book/"> <img src="images/CogTech.png" width="100" /> </a></p>
+<p><a href="https://crumplab.github.io/cognitivetechnologies/book/"> <img src="images/CogTech.png" width="150" /> </a></p>
 </div>
 </div>
 <hr />
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
-<h4 id="psyc-3450-experimental-psychology">Psyc 3450: Experimental Psychology</h4>
+<h3 id="psyc-3450-experimental-psychology">Psyc 3450: Experimental Psychology</h3>
 <p>Fall 2017 (2016, 2015, 2013, 2012, 2011) @ Brooklyn College</p>
 <p>An undergraduate course on research methods, using a free OER textbook! Written by myself and many others. Check out the <a href="https://crumplab.github.io/ResearchMethods/">textbook here</a>. Check out the <a href="https://crumplab.github.io/psyc3450/">course website here</a>.</p>
 </div>
 <div class="col-sm-6">
-<p><a href="https://crumplab.github.io/ResearchMethods/"> <img src="images/ResearchMethods.png" width="100" /> </a></p>
+<p><a href="https://crumplab.github.io/ResearchMethods/"> <img src="images/ResearchMethods.png" width="150" /> </a></p>
 </div>
 </div>
 <hr />
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
-<h4 id="psyc-80103-computer-programming-for-psychologists">Psyc 80103: Computer Programming for Psychologists</h4>
+<h3 id="psyc-80103-computer-programming-for-psychologists">Psyc 80103: Computer Programming for Psychologists</h3>
 <p>@ Brooklyn College</p>
 <p>I put my lecture notes into a <a href="https://crumplab.github.io/programmingforpsych/">book</a> (covers R, Livecode and a bit of web programming.)</p>
 </div>
 <div class="col-sm-6">
-<p><a href="https://crumplab.github.io/programmingforpsych/"> <img src="images/Programming.png" width="100" /> </a></p>
+<p><a href="https://crumplab.github.io/programmingforpsych/"> <img src="images/Programming.png" width="150" /> </a></p>
 </div>
 </div>
 <hr />
-<div id="psyc-3530-introduction-to-cognitive-psychology" class="section level4">
-<h4>Psyc 3530 : Introduction to Cognitive Psychology</h4>
+<div id="psyc-3530-introduction-to-cognitive-psychology" class="section level3">
+<h3>Psyc 3530 : Introduction to Cognitive Psychology</h3>
 <p>@ Brooklyn College</p>
 <hr />
 </div>
-<div id="psyc-80103-special-topics-seminar-learning-attention" class="section level4">
-<h4>Psyc 80103 : Special Topics Seminar: Learning &amp; Attention</h4>
+<div id="psyc-80103-special-topics-seminar-learning-attention" class="section level3">
+<h3>Psyc 80103 : Special Topics Seminar: Learning &amp; Attention</h3>
 <p>Special topics doctoral course @ GC Co-taught with Andrew Delamater</p>
 <hr />
 </div>
-<div id="psyc-80103-special-topics-memory-foundations-current-issues" class="section level4">
-<h4>Psyc 80103 : Special Topics: Memory: Foundations &amp; Current Issues</h4>
+<div id="psyc-80103-special-topics-memory-foundations-current-issues" class="section level3">
+<h3>Psyc 80103 : Special Topics: Memory: Foundations &amp; Current Issues</h3>
 <p>Special topics doctoral course @ GC Co-taught with Elizabeth Chua</p>
 <hr />
 </div>
-<div id="psyc-80103-career-development" class="section level4">
-<h4>Psyc 80103 : Career Development</h4>
+<div id="psyc-80103-career-development" class="section level3">
+<h3>Psyc 80103 : Career Development</h3>
 <p>Doctoral course @ GC Co-taught with Elizabeth Chua</p>
 </div>
 </div>
+
+
+
 </div>
-
-
-
+</div>
 
 </div>
 

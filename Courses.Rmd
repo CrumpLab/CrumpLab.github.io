@@ -2,6 +2,11 @@
 title: "Courses"
 output: 
   html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
     includes:
        in_header: g_analytics.html
 ---
@@ -10,24 +15,22 @@ List of current and previous courses taught at Brooklyn College of CUNY and the 
 
 ---
 
-### Current (Fall 2018)
+## Current (Fall 2018)
 
 -----
 
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
 
-#### Psyc 3400: Statistical Methods in Psychological Research
+### Psyc 3400: Statistical Methods in Psychological Research
 
-THIS COURSE IS PRESENTLY BEING BUILT FOR FALL 2018, STILL IN DRAFT
-
-All materials are totally free and open, including [textbook](https://crumplab.github.io/statistics/), and [lab manual](https://crumplab.github.io/statisticsLab/) which can be found on the [course Website](https://crumplab.github.io/psyc3400/)
+All materials are totally free and open, including the [course Website](https://crumplab.github.io/psyc3400/),  [textbook](https://crumplab.github.io/statistics/), and [lab manual](https://crumplab.github.io/statisticsLab/).
 
 </div>
 <div class="col-sm-6">
 
-<a href="https://crumplab.github.io/statistics/">
-```{r statsTextbook, out.width=100, echo=F}
+<a href="https://crumplab.github.io/psyc3400/">
+```{r statsTextbook, out.width=150, echo=F}
 knitr::include_graphics("images/TextbookCover.png")
 ```
 </a>
@@ -37,16 +40,30 @@ knitr::include_graphics("images/TextbookCover.png")
 
 -------------------
 
-#### Psyc 73800 - Cognitive Psychology
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+### Psyc 73800 - Cognitive Psychology
 
 Fall 2018 (2017) @ Graduate Center of CUNY
 
-Bi-weekly modules taught by different faculty.
+Bi-weekly modules taught by different faculty. The [course website](https://crumplab.github.io/psyc73800/) contains syllabus and readings.
 
-...................................
+</div>
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/psyc73800/">
+```{r cogsci, out.width=200, echo=F}
+knitr::include_graphics("images/cognitive_science.png")
+```
+</a>
+
+</div>
+</div>
+
 -----
 
-### Previous courses
+## Previous courses
 
 Some of these courses have open materials, older courses may not.
 
@@ -55,18 +72,18 @@ Some of these courses have open materials, older courses may not.
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
 
-#### Psyc 80103: Cognitive Technologies: From theory and data to application
+### Psyc 80103: Cognitive Technologies: From theory and data to application
 
 Spring 2018 @ Graduate Center of CUNY
 
-A doctoral seminar course (special topics) covering emerging and old cognitive technologies. Check out the [course website](https://crumplab.github.io/cognitivetechnologies), or [read the book](https://crumplab.github.io/cognitivetechnologies/book/) my students (wrote the chapters) and I (put them together) wrote for the end of the semester.
+A doctoral seminar course (special topics) covering emerging and old cognitive technologies. Check out the [course website](https://crumplab.github.io/cognitivetechnologies), or [read the book](https://crumplab.github.io/cognitivetechnologies/book/) we wrote on the topic (students in the course wrote the chapters).
 
 
 </div>
 <div class="col-sm-6">
 
 <a href="https://crumplab.github.io/cognitivetechnologies/book/">
-```{r cogTech, out.width=100, echo=F}
+```{r cogTech, out.width=150, echo=F}
 knitr::include_graphics("images/CogTech.png")
 ```
 </a>
@@ -79,7 +96,7 @@ knitr::include_graphics("images/CogTech.png")
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
 
-#### Psyc 3450: Experimental Psychology
+### Psyc 3450: Experimental Psychology
 
 Fall 2017 (2016, 2015, 2013, 2012, 2011) @ Brooklyn College
 
@@ -91,7 +108,7 @@ An undergraduate course on research methods, using a free OER textbook! Written 
 <div class="col-sm-6">
 
 <a href="https://crumplab.github.io/ResearchMethods/">
-```{r researchmeth, out.width=100, echo=F}
+```{r researchmeth, out.width=150, echo=F}
 knitr::include_graphics("images/ResearchMethods.png")
 ```
 </a>
@@ -105,7 +122,7 @@ knitr::include_graphics("images/ResearchMethods.png")
 <div class="col-sm-6">
 
 
-#### Psyc 80103: Computer Programming for Psychologists
+### Psyc 80103: Computer Programming for Psychologists
 
 @ Brooklyn College
 
@@ -116,7 +133,7 @@ I put my lecture notes into a [book](https://crumplab.github.io/programmingforps
 <div class="col-sm-6">
 
 <a href="https://crumplab.github.io/programmingforpsych/">
-```{r programming, out.width=100, echo=F}
+```{r programming, out.width=150, echo=F}
 knitr::include_graphics("images/Programming.png")
 ```
 </a>
@@ -125,20 +142,20 @@ knitr::include_graphics("images/Programming.png")
 
 -----
 
-#### Psyc 3530 : Introduction to Cognitive Psychology
+### Psyc 3530 : Introduction to Cognitive Psychology
 
 @ Brooklyn College
 
 ---------
 
-#### Psyc 80103 : Special Topics Seminar: Learning & Attention
+### Psyc 80103 : Special Topics Seminar: Learning & Attention
 
 Special topics doctoral course @ GC 
 Co-taught with Andrew Delamater
 
 ------------
 
-#### Psyc 80103 : Special Topics: Memory: Foundations & Current Issues
+### Psyc 80103 : Special Topics: Memory: Foundations & Current Issues
 
 Special topics doctoral course @ GC 
 Co-taught with Elizabeth Chua
@@ -146,7 +163,7 @@ Co-taught with Elizabeth Chua
 --------------
 
 
-#### Psyc 80103 : Career Development
+### Psyc 80103 : Career Development
 
 Doctoral course @ GC 
 Co-taught with Elizabeth Chua
