@@ -15,7 +15,26 @@ List of current and previous courses taught at Brooklyn College of CUNY and the 
 
 ---
 
-## Current (Fall 2018)
+## Current (Spring 2019)
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+### Psyc 7709: Using R for reproducible research
+
+This is a special topics course for the Experimental Psychology Master's program. The course website is [https://crumplab.github.io/psyc7709](https://crumplab.github.io/psyc7709)
+
+</div>
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/psyc3400/">
+```{r rcourse, out.width=150, echo=F}
+knitr::include_graphics("images/Rstudio.png")
+```
+</a>
+
+</div>
+</div>
 
 -----
 
@@ -38,7 +57,13 @@ knitr::include_graphics("images/TextbookCover.png")
 </div>
 </div>
 
--------------------
+-----
+
+## Previous courses
+
+Some of these courses have open materials, older courses may not.
+
+-----
 
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
@@ -63,11 +88,6 @@ knitr::include_graphics("images/cognitive_science.png")
 
 -----
 
-## Previous courses
-
-Some of these courses have open materials, older courses may not.
-
------
 
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
