@@ -301,7 +301,7 @@ This will be updated with a list populated from google forms. If you added to th
 If you want to add your website to this list, use this [google form](https://docs.google.com/forms/d/e/1FAIpQLScQOJ9OX4w4wIGrNuvGvmxLA-fUvq3o4UFouBZDx0XjIaZN9g/viewform?usp=sf_link).
 
 
-```{r, cache=FALSE}
+```{r, cache=FALSE, eval=F}
 library(googlesheets)
 #gs_ls()
 web_df <- gs_title("LearningR (Responses)")

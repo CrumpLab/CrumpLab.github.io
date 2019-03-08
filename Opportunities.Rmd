@@ -2,21 +2,27 @@
 title: "Research opportunities"
 output: 
   html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 4
     includes:
-       in_header: g_analytics.html
+       in_header: [g_analytics.html,header_pubs.html]
+    css: front.css
 ---
 
-### Ph.D. students
+#### Ph.D. students
 
 Students interested in pursuing a Ph.D. with Dr. Crump should apply to the Cognition, Language, and Development training area in the Psychology Doctoral Program at the Graduate Center of CUNY. The deadline for applications December 1st, 2018. [You can apply directly here](http://www.gc.cuny.edu/Prospective-Current-Students/Prospective-Students/Admissions). Learn more about the [Cognition, Language, and Development training area here](http://cunycld.org). Interested applicants should also email Dr. Crump to introduce themselves and their research interests.
 
-### Research experience for Brooklyn College students
+#### Research experience for Brooklyn College students
 
 We are always looking for students (undergraduate or master's) who are interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data.
 
 All students interested in joining the lab should first [complete this entry assignment](#entry), which consists of writing a short computer program. The entry assignment takes a little bit of time and effort. Research takes a lot of time and effort, and completing the assignment will show us that you are motivated to spend time on research. More important, the assignment will help you decide if you will enjoy working on research problems in the lab. If you enjoy the process of completing the assignment, then we think you will look forward to working on research problems in the lab. You should also [read some of the lab publications](https://crumplab.github.io/publications/) to see if you are interested in the research questions we are asking.
 
-### Course credit for Research and Honor's Theses
+#### Course credit for Research and Honor's Theses
 
 Most students who join the lab enroll in research classes so that they receive course credit as they gain research experience in the lab. If you are interested in taking one of the courses, please complete the entry assignment above, and then email Dr. Crump about availability. The classes include:
 
@@ -27,18 +33,18 @@ The Laboratory Experience courses are intended for students who are new to resea
 
 Several students have completed honor's theses in the lab ([see here for departmental requirements](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/students/honors.php)). An honor's thesis consists of two semesters of Independent Research (e.g., Psych 5001 and 5002) and culminates in writing a thesis covering the research conducted over the year. The honor's thesis option is a great opportunity for students interested in pursuing research in a Ph.D. program following undergraduate studies. The honor's thesis is a major commitment in time and effort for everyone involved, so students who complete honor's theses in the lab are usually already members of the lab and have previous research experience in the lab (e.g., have taken Psyc 2001 with Dr. Crump). So, if you are interested in research you should plan to get involved as early as possible.
 
-### Undergraduate Research
+#### Undergraduate Research
 
 Recent research projects completed in the lab.
 
-```{r, echo=F}
+```{r, echo=F, warning=FALSE, message=FALSE}
 library(data.table)
 undergrad_df<-fread("undergrad_research.csv")
 knitr::kable(undergrad_df)
 
 ```
 
-### Master's Research
+#### Master's Research
 
 ```{r, echo=F}
 library(data.table)
@@ -49,17 +55,17 @@ knitr::kable(masters_df)
 
 ---
 
-## Entry Assignment {#entry}
+#### Entry Assignment {#entry}
 
 If you’re interested in becoming part of the lab (volunteering, taking a course etc.), the first thing to do is to complete this entry assignment. The assignment consists of writing a small computer program (no previous programming experience necessary, this is an invitation to start learning programming skills).
 
-### Why are we asking you to do this?
+#### Why are we asking you to do this?
 
 A lot of the activities in the lab involve computer programming: during experiments, the timing, stimulus presentation and key press registration are all controlled by programs we write ourselves. When we analyze the data from the experiments, we again do this in programs, written by us, which take the raw data, calculate things such as averages, display results in graphs, and perform statistical tests.
 
 This assignment allows you to demonstrate your interest in this type of activity, and by investing some time in this assignment you can show your commitment to becoming part of the lab.
 
-### Instructions
+#### Instructions
 
 Here is your assignment. By following these steps you will make a website, and then attempt to solve a problem in R. It sounds complicated, but everything you need to get started is right here, by following these steps:
 
@@ -70,7 +76,8 @@ Here is your assignment. By following these steps you will make a website, and t
 
 3. General info about making websites with R Markdown is here, but see next point for downloading an example you can use straight away. [https://rmarkdown.rstudio.com/rmarkdown_websites.htm](https://rmarkdown.rstudio.com/rmarkdown_websites.htm)
 
-4. I just made a downloadable/forkable github repository with everything you need to get started, and it's self-explanatory in the sense that all of the materials explain themselves
+4. Follow these steps to get started:
+
     a. the repository is here [https://github.com/CrumpLab/LabJournalWebsite](https://github.com/CrumpLab/LabJournalWebsite)
     b. Follow the instructions in the read me file for how to compile the website in R-studio, and then host it on github
     c. You can see what the website will look like once you get it up and runnning here [https://crumplab.github.io/LabJournalWebsite/index.html](https://crumplab.github.io/LabJournalWebsite/index.html)
