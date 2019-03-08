@@ -19,12 +19,14 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-1"></script>
 <script>
@@ -34,6 +36,9 @@
 
   gtag('config', 'UA-79429674-1');
 </script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abril+Fatface">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Archivo:400,700">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:200,300,400">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -80,6 +85,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="front.css" type="text/css" />
 
 </head>
 
@@ -108,6 +114,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -122,7 +131,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -142,6 +150,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -163,19 +208,173 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -247,17 +446,17 @@ $(document).ready(function () {
 </div>
 
 
-<div id="ph.d.students" class="section level3">
-<h3>Ph.D. students</h3>
+<div id="ph.d.-students" class="section level4">
+<h4>Ph.D. students</h4>
 <p>Students interested in pursuing a Ph.D. with Dr. Crump should apply to the Cognition, Language, and Development training area in the Psychology Doctoral Program at the Graduate Center of CUNY. The deadline for applications December 1st, 2018. <a href="http://www.gc.cuny.edu/Prospective-Current-Students/Prospective-Students/Admissions">You can apply directly here</a>. Learn more about the <a href="http://cunycld.org">Cognition, Language, and Development training area here</a>. Interested applicants should also email Dr. Crump to introduce themselves and their research interests.</p>
 </div>
-<div id="research-experience-for-brooklyn-college-students" class="section level3">
-<h3>Research experience for Brooklyn College students</h3>
+<div id="research-experience-for-brooklyn-college-students" class="section level4">
+<h4>Research experience for Brooklyn College students</h4>
 <p>We are always looking for students (undergraduate or master’s) who are interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data.</p>
 <p>All students interested in joining the lab should first <a href="#entry">complete this entry assignment</a>, which consists of writing a short computer program. The entry assignment takes a little bit of time and effort. Research takes a lot of time and effort, and completing the assignment will show us that you are motivated to spend time on research. More important, the assignment will help you decide if you will enjoy working on research problems in the lab. If you enjoy the process of completing the assignment, then we think you will look forward to working on research problems in the lab. You should also <a href="https://crumplab.github.io/publications/">read some of the lab publications</a> to see if you are interested in the research questions we are asking.</p>
 </div>
-<div id="course-credit-for-research-and-honors-theses" class="section level3">
-<h3>Course credit for Research and Honor’s Theses</h3>
+<div id="course-credit-for-research-and-honors-theses" class="section level4">
+<h4>Course credit for Research and Honor’s Theses</h4>
 <p>Most students who join the lab enroll in research classes so that they receive course credit as they gain research experience in the lab. If you are interested in taking one of the courses, please complete the entry assignment above, and then email Dr. Crump about availability. The classes include:</p>
 <ul>
 <li>Psych 2001-4 Laboratory Experience (3 credits each)</li>
@@ -266,10 +465,9 @@ $(document).ready(function () {
 <p>The Laboratory Experience courses are intended for students who are new to research, and the Independent Research courses are for more senior students. They are each one semester long, and involve conducting research in the lab and writing a research report as a final project.</p>
 <p>Several students have completed honor’s theses in the lab (<a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/students/honors.php">see here for departmental requirements</a>). An honor’s thesis consists of two semesters of Independent Research (e.g., Psych 5001 and 5002) and culminates in writing a thesis covering the research conducted over the year. The honor’s thesis option is a great opportunity for students interested in pursuing research in a Ph.D. program following undergraduate studies. The honor’s thesis is a major commitment in time and effort for everyone involved, so students who complete honor’s theses in the lab are usually already members of the lab and have previous research experience in the lab (e.g., have taken Psyc 2001 with Dr. Crump). So, if you are interested in research you should plan to get involved as early as possible.</p>
 </div>
-<div id="undergraduate-research" class="section level3">
-<h3>Undergraduate Research</h3>
+<div id="undergraduate-research" class="section level4">
+<h4>Undergraduate Research</h4>
 <p>Recent research projects completed in the lab.</p>
-<pre><code>## Warning: package &#39;data.table&#39; was built under R version 3.4.4</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -349,8 +547,8 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div id="masters-research" class="section level3">
-<h3>Master’s Research</h3>
+<div id="masters-research" class="section level4">
+<h4>Master’s Research</h4>
 <table>
 <thead>
 <tr class="header">
@@ -377,36 +575,38 @@ $(document).ready(function () {
 </table>
 <hr />
 </div>
-<div id="entry" class="section level2">
-<h2>Entry Assignment</h2>
+<div id="entry" class="section level4">
+<h4>Entry Assignment</h4>
 <p>If you’re interested in becoming part of the lab (volunteering, taking a course etc.), the first thing to do is to complete this entry assignment. The assignment consists of writing a small computer program (no previous programming experience necessary, this is an invitation to start learning programming skills).</p>
-<div id="why-are-we-asking-you-to-do-this" class="section level3">
-<h3>Why are we asking you to do this?</h3>
+</div>
+<div id="why-are-we-asking-you-to-do-this" class="section level4">
+<h4>Why are we asking you to do this?</h4>
 <p>A lot of the activities in the lab involve computer programming: during experiments, the timing, stimulus presentation and key press registration are all controlled by programs we write ourselves. When we analyze the data from the experiments, we again do this in programs, written by us, which take the raw data, calculate things such as averages, display results in graphs, and perform statistical tests.</p>
 <p>This assignment allows you to demonstrate your interest in this type of activity, and by investing some time in this assignment you can show your commitment to becoming part of the lab.</p>
 </div>
-<div id="instructions" class="section level3">
-<h3>Instructions</h3>
+<div id="instructions" class="section level4">
+<h4>Instructions</h4>
 <p>Here is your assignment. By following these steps you will make a website, and then attempt to solve a problem in R. It sounds complicated, but everything you need to get started is right here, by following these steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Download <a href="https://www.r-project.org">R</a> and <a href="https://www.rstudio.com">R-studio</a> for your computer.</p></li>
 <li><p>Make yourself a <a href="https://github.com">github account</a>.</p></li>
-<li><p>General info about making websites with R Markdown is here, but see next point for downloading an example you can use straight away. <a href="https://rmarkdown.rstudio.com/rmarkdown_websites.htm" class="uri">https://rmarkdown.rstudio.com/rmarkdown_websites.htm</a></p></li>
-<li>I just made a downloadable/forkable github repository with everything you need to get started, and it’s self-explanatory in the sense that all of the materials explain themselves
+<li><p>General info about making websites with R Markdown is here, but see next point for downloading an example you can use straight away. <a href="https://rmarkdown.rstudio.com/rmarkdown_websites.htm">https://rmarkdown.rstudio.com/rmarkdown_websites.htm</a></p></li>
+<li><p>Follow these steps to get started:</p>
 <ol style="list-style-type: lower-alpha">
-<li>the repository is here <a href="https://github.com/CrumpLab/LabJournalWebsite" class="uri">https://github.com/CrumpLab/LabJournalWebsite</a></li>
+<li>the repository is here <a href="https://github.com/CrumpLab/LabJournalWebsite">https://github.com/CrumpLab/LabJournalWebsite</a></li>
 <li>Follow the instructions in the read me file for how to compile the website in R-studio, and then host it on github</li>
-<li>You can see what the website will look like once you get it up and runnning here <a href="https://crumplab.github.io/LabJournalWebsite/index.html" class="uri">https://crumplab.github.io/LabJournalWebsite/index.html</a></li>
+<li>You can see what the website will look like once you get it up and runnning here <a href="https://crumplab.github.io/LabJournalWebsite/index.html">https://crumplab.github.io/LabJournalWebsite/index.html</a></li>
 <li>Follow the instructions inside the source for the website, and by reading the website to get started learning R. For example, in the example website, you can read the <a href="https://crumplab.github.io/LabJournalWebsite/Journal.html">journal page</a>, that explains the process. You will see there are some example problems to solve in R, and a link to more problems to solve. I solved the first three, you assignment is to attempt to solve one more problem.</li>
 </ol></li>
-<li><p>Assuming you got everything up and running, then you can send me an email (<a href="mailto:mcrump@brooklyn.cuny.edu">mcrump@brooklyn.cuny.edu</a>) introducing yourself. Link to your website that you made, and tell me a little bit about why you want to join the lab and we’ll set up a meeting.</p></li>
+<li><p>Assuming you got everything up and running, then you can send me an email (<a href="mailto:mcrump@brooklyn.cuny.edu" class="email">mcrump@brooklyn.cuny.edu</a>) introducing yourself. Link to your website that you made, and tell me a little bit about why you want to join the lab and we’ll set up a meeting.</p></li>
 </ol>
-<p>Email your R-script to Dr. Crump (<a href="mailto:mcrump@brooklyn.cuny.edu">mcrump@brooklyn.cuny.edu</a>) and request a time to meet about gaining research experience in the lab.</p>
+<p>Email your R-script to Dr. Crump (<a href="mailto:mcrump@brooklyn.cuny.edu" class="email">mcrump@brooklyn.cuny.edu</a>) and request a time to meet about gaining research experience in the lab.</p>
+</div>
+
+
+
 </div>
 </div>
-
-
-
 
 </div>
 

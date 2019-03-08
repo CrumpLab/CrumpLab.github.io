@@ -3,25 +3,22 @@ title: "Books"
 output: 
   html_document:
     includes:
-       in_header: g_analytics.html
+       in_header: [g_analytics.html,header_pubs.html]
+    css: front.css
 ---
 
-I have developed a habit of writing books of various kinds, all free, open-source, and license on creative commons (note in the process of formalizing these licenses for each, still everything is intended to be totally open, remixable, editable etc.). These books were made using RMarkdown and compiled in Bookdown.
+These books were made using RMarkdown and compiled in Bookdown. They are all free, open-source, and licensed on creative commons.
 
 ---
 
-### Currently In Draft
-
------
-
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
-#### Answering Questions with Data (In Draft, release Fall 2018)
+#### Answering Questions with Data
 
 Introductory Statistics for Psychology Students
 
-**Authors**: TBD
+**Authors**: Matthew Crump; Chapters 2 and 4 adapted from Navarro, D.; Videos: Jeffrey Suzuki
 
 **Description**: This is a free introductory statistics textbook for undergraduates in Psychology. It is being developed as an Open Educational Resource @ Brooklyn College. It is pitched at the concepts behind statistics, and often uses simulation in R to convey foundational ideas. The writing style is sometimes a bit unconventional, and informal. It is for students who don't want to like statistics. 
 
@@ -37,17 +34,16 @@ knitr::include_graphics("images/TextbookCover.png")
 </div>
 </div>
 
+----
 
------
-
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
-#### Answering Questions with Data: The Lab Manual (In Draft, release Fall 2018)
+#### Answering Questions with Data: The Lab Manual 
 
 Lab activities using R, Excel, SPSS, and JAMOVI
 
-**Authors**: TBD
+**Authors**: Matthew Crump (R); Stephen Volz (Excel); Alla Chavarga (SPSS); Anjali Krishnan (JAMOVI)
 
 **Description**: This is the companion lab manual to our free stats book. It contains lab activities for learning how to conduct statistical tests in R, Excel, SPSS, and JAMOVI. We use open data, often from psychology papers, and show step-by-step how to solve data-analysis problems in each software package. 
 
@@ -65,18 +61,9 @@ knitr::include_graphics("images/LabmanualCover.png")
 </div>
 </div>
 
-
-................................................
------
-
-### Finished Books
-
-
 ----
 
-
-
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
 #### Research Methods for Psychology
@@ -98,9 +85,9 @@ knitr::include_graphics("images/ResearchMethods.png")
 </div>
 
 
------
+----
 
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
 #### Cognitive Technologies: From Theory and Data to Application
@@ -124,10 +111,10 @@ knitr::include_graphics("images/CogTech.png")
 
 -----
 
-#### Open tools for writing open interactive textbooks (and more)
-
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
+
+#### Open tools for writing open interactive textbooks (and more)
 
 **Description**: tutorial overview of the process I use to write books using R, R-studio, R-markdown, and compile them in bookdown. I've used this process for all of these books. Some other brief tidbits on using hypothes.is, and R-Shiny apps, also Zotero and hosting on github pages (where this website is hosted)
 
@@ -138,10 +125,9 @@ knitr::include_graphics("images/CogTech.png")
 Note this is a meta-book. The tutorial above is for you to read so you can download the source code, then compile it yourself, then edit it to make your own.
 
 **Source code**: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/OER_bookdown](https://github.com/CrumpLab/OER_bookdown).
+
 </div>
-
 <div class="col-sm-6">
-
 <a href="https://crumplab.github.io/OER_bookdown/">
 ```{r OERs, out.width=200, echo=F}
 knitr::include_graphics("images/OER.png")
@@ -153,10 +139,10 @@ knitr::include_graphics("images/OER.png")
 
 -----
 
-#### Programming for Psychologists: Data Creation and Analysis
-
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
+
+#### Programming for Psychologists: Data Creation and Analysis
 
 **Description**: Some notes that got big enough to make a book. Beginner introduction to coding in R, Livecode, and some web-programming, for the purposes of making data with computers (programming experiments), and analyzing it in R.
 

@@ -8,7 +8,8 @@ output:
     number_sections: false
     toc_depth: 3
     includes:
-       in_header: g_analytics.html
+       in_header: [g_analytics.html,header_pubs.html]
+    css: front.css
 ---
 
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.
@@ -17,10 +18,12 @@ List of current and previous courses taught at Brooklyn College of CUNY and the 
 
 ## Current (Spring 2019)
 
-<div class="row" style="padding-top: 30px;">
+----
+
+<div class="row">
 <div class="col-sm-6">
 
-### Psyc 7709: Using R for reproducible research
+#### Psyc 7709: Using R for reproducible research
 
 This is a special topics course for the Experimental Psychology Master's program. The course website is [https://crumplab.github.io/psyc7709](https://crumplab.github.io/psyc7709)
 
@@ -38,10 +41,10 @@ knitr::include_graphics("images/Rstudio.png")
 
 -----
 
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
-### Psyc 3400: Statistical Methods in Psychological Research
+#### Psyc 3400: Statistical Methods in Psychological Research
 
 All materials are totally free and open, including the [course Website](https://crumplab.github.io/psyc3400/),  [textbook](https://crumplab.github.io/statistics/), and [lab manual](https://crumplab.github.io/statisticsLab/).
 
@@ -65,10 +68,10 @@ Some of these courses have open materials, older courses may not.
 
 -----
 
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
-### Psyc 73800 - Cognitive Psychology
+#### Psyc 73800 - Cognitive Psychology
 
 Fall 2018 (2017) @ Graduate Center of CUNY
 
@@ -89,10 +92,10 @@ knitr::include_graphics("images/cognitive_science.png")
 -----
 
 
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
-### Psyc 80103: Cognitive Technologies: From theory and data to application
+#### Psyc 80103: Cognitive Technologies: From theory and data to application
 
 Spring 2018 @ Graduate Center of CUNY
 
@@ -113,10 +116,10 @@ knitr::include_graphics("images/CogTech.png")
 
 ----------------
 
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
-### Psyc 3450: Experimental Psychology
+#### Psyc 3450: Experimental Psychology
 
 Fall 2017 (2016, 2015, 2013, 2012, 2011) @ Brooklyn College
 
@@ -138,11 +141,11 @@ knitr::include_graphics("images/ResearchMethods.png")
 
 -------------------
 
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
 
-### Psyc 80103: Computer Programming for Psychologists
+#### Psyc 80103: Computer Programming for Psychologists
 
 @ Brooklyn College
 
@@ -162,20 +165,20 @@ knitr::include_graphics("images/Programming.png")
 
 -----
 
-### Psyc 3530 : Introduction to Cognitive Psychology
+#### Psyc 3530 : Introduction to Cognitive Psychology
 
 @ Brooklyn College
 
 ---------
 
-### Psyc 80103 : Special Topics Seminar: Learning & Attention
+#### Psyc 80103 : Special Topics Seminar: Learning & Attention
 
 Special topics doctoral course @ GC 
 Co-taught with Andrew Delamater
 
 ------------
 
-### Psyc 80103 : Special Topics: Memory: Foundations & Current Issues
+#### Psyc 80103 : Special Topics: Memory: Foundations & Current Issues
 
 Special topics doctoral course @ GC 
 Co-taught with Elizabeth Chua
@@ -183,7 +186,7 @@ Co-taught with Elizabeth Chua
 --------------
 
 
-### Psyc 80103 : Career Development
+#### Psyc 80103 : Career Development
 
 Doctoral course @ GC 
 Co-taught with Elizabeth Chua

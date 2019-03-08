@@ -1,0 +1,64 @@
+/*
+ * customizing stuff
+
+/* Matt Crump */
+
+h1 {
+    font-family: 'Archivo';
+    font-weight: 700;
+    font-size: 40px;
+    text-align: left;
+    margin: 40px;
+    margin-left: 0px;
+}
+
+.section h1 {
+padding-top: 56px;
+margin-top: -30px !important;
+color: #49c5b6;
+}
+
+h2 {
+  font-family: 'Archivo';
+  font-weight: 400;
+}
+  
+
+h3 {
+  font-family: 'Archivo';
+  font-weight: 400;
+  font-size: 20px;
+  background-color: #fcdec4;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #fcdec4;
+}
+
+h4 {
+  font-family: 'Archivo';
+  font-weight: 400;
+  font-size: 20px;
+  background-color: #f2f2f2;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #f2f2f2;
+  margin-top: 5px;
+}
+
+.section h4 {
+  padding-top: 0px !important;
+  margin-top:  0px !important;
+}
+
+p {
+  font-family: 'Roboto';
+  font-weight: 200;
+  /*text-indent: 20px; */
+  line-height: 1.6;
+}
+
+
+
+#logo {
+  margin-top: -50px !important;
+}

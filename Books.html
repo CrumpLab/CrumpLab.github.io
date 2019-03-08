@@ -22,9 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-1"></script>
 <script>
@@ -34,6 +33,9 @@
 
   gtag('config', 'UA-79429674-1');
 </script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abril+Fatface">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Archivo:400,700">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:200,300,400">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -80,6 +82,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="front.css" type="text/css" />
 
 </head>
 
@@ -108,6 +111,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -122,7 +128,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -142,6 +147,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -163,18 +205,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -247,56 +348,48 @@ $(document).ready(function () {
 </div>
 
 
-<p>I have developed a habit of writing books of various kinds, all free, open-source, and license on creative commons (note in the process of formalizing these licenses for each, still everything is intended to be totally open, remixable, editable etc.). These books were made using RMarkdown and compiled in Bookdown.</p>
+<p>These books were made using RMarkdown and compiled in Bookdown. They are all free, open-source, and licensed on creative commons.</p>
 <hr />
-<div id="currently-in-draft" class="section level3">
-<h3>Currently In Draft</h3>
-<hr />
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
-<h4 id="answering-questions-with-data-in-draft-release-fall-2018">Answering Questions with Data (In Draft, release Fall 2018)</h4>
+<h4 id="answering-questions-with-data">Answering Questions with Data</h4>
 <p>Introductory Statistics for Psychology Students</p>
-<p><strong>Authors</strong>: TBD</p>
+<p><strong>Authors</strong>: Matthew Crump; Chapters 2 and 4 adapted from Navarro, D.; Videos: Jeffrey Suzuki</p>
 <p><strong>Description</strong>: This is a free introductory statistics textbook for undergraduates in Psychology. It is being developed as an Open Educational Resource @ Brooklyn College. It is pitched at the concepts behind statistics, and often uses simulation in R to convey foundational ideas. The writing style is sometimes a bit unconventional, and informal. It is for students who don’t want to like statistics.</p>
-<p>Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/statistics" class="uri">https://github.com/CrumpLab/statistics</a>.</p>
+<p>Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/statistics">https://github.com/CrumpLab/statistics</a>.</p>
 </div>
 <div class="col-sm-6">
 <p><a href="https://crumplab.github.io/statistics/"> <img src="images/TextbookCover.png" width="200" /> </a></p>
 </div>
 </div>
 <hr />
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
-<h4 id="answering-questions-with-data-the-lab-manual-in-draft-release-fall-2018">Answering Questions with Data: The Lab Manual (In Draft, release Fall 2018)</h4>
+<h4 id="answering-questions-with-data-the-lab-manual">Answering Questions with Data: The Lab Manual</h4>
 <p>Lab activities using R, Excel, SPSS, and JAMOVI</p>
-<p><strong>Authors</strong>: TBD</p>
+<p><strong>Authors</strong>: Matthew Crump (R); Stephen Volz (Excel); Alla Chavarga (SPSS); Anjali Krishnan (JAMOVI)</p>
 <p><strong>Description</strong>: This is the companion lab manual to our free stats book. It contains lab activities for learning how to conduct statistical tests in R, Excel, SPSS, and JAMOVI. We use open data, often from psychology papers, and show step-by-step how to solve data-analysis problems in each software package.</p>
 <p>Some of the labs are adapated from <a href="https://sites.trinity.edu/osl">Open Stats Lab</a>, which is another great resource.</p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/statisticsLab" class="uri">https://github.com/CrumpLab/statisticsLab</a>.</p>
+<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/statisticsLab">https://github.com/CrumpLab/statisticsLab</a>.</p>
 </div>
 <div class="col-sm-6">
 <p><a href="https://crumplab.github.io/statisticsLab/"> <img src="images/LabmanualCover.png" width="200" /> </a></p>
 </div>
 </div>
-</div>
-<div id="section" class="section level2">
-<h2>…………………………………………</h2>
-<div id="finished-books" class="section level3">
-<h3>Finished Books</h3>
 <hr />
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 <h4 id="research-methods-for-psychology">Research Methods for Psychology</h4>
 <p><strong>Description</strong>:A free Research methods textbook for undergraduates in Psychology, creative commons license, remix, reuse, edit, contribute.</p>
 <p><strong>Authors</strong>: Matthew J. C. Crump, Paul C. Price, Rajiv Jhangiani, I-Chant A. Chiang, Dana C. Leighton</p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/ResearchMethods" class="uri">https://github.com/CrumpLab/ResearchMethods</a>.</p>
+<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/ResearchMethods">https://github.com/CrumpLab/ResearchMethods</a>.</p>
 </div>
 <div class="col-sm-6">
 <p><a href="https://crumplab.github.io/ResearchMethods/"> <img src="images/ResearchMethods.png" width="200" /> </a></p>
 </div>
 </div>
 <hr />
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 <h4 id="cognitive-technologies-from-theory-and-data-to-application">Cognitive Technologies: From Theory and Data to Application</h4>
 <p><strong>Description</strong>: <a href="https://crumplab.github.io/cognitivetechnologies/book/">A series of chapters on cognitive technologies</a> written by doctoral students who took my course on Cognitive Technologies in Spring 2018. They wrote it, I compiled it using bookdown.</p>
@@ -308,39 +401,33 @@ $(document).ready(function () {
 </div>
 </div>
 <hr />
-<div id="open-tools-for-writing-open-interactive-textbooks-and-more" class="section level4">
-<h4>Open tools for writing open interactive textbooks (and more)</h4>
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
+<h4 id="open-tools-for-writing-open-interactive-textbooks-and-more">Open tools for writing open interactive textbooks (and more)</h4>
 <p><strong>Description</strong>: tutorial overview of the process I use to write books using R, R-studio, R-markdown, and compile them in bookdown. I’ve used this process for all of these books. Some other brief tidbits on using hypothes.is, and R-Shiny apps, also Zotero and hosting on github pages (where this website is hosted)</p>
 <p><strong>Author</strong>: Matthew J. C. Crump</p>
 <p><a href="https://crumplab.github.io/OER_bookdown/">Link to the book</a></p>
 <p>Note this is a meta-book. The tutorial above is for you to read so you can download the source code, then compile it yourself, then edit it to make your own.</p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/OER_bookdown" class="uri">https://github.com/CrumpLab/OER_bookdown</a>.</p>
+<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/OER_bookdown">https://github.com/CrumpLab/OER_bookdown</a>.</p>
 </div>
 <div class="col-sm-6">
 <p><a href="https://crumplab.github.io/OER_bookdown/"> <img src="images/OER.png" width="200" /> </a></p>
 </div>
 </div>
 <hr />
-</div>
-<div id="programming-for-psychologists-data-creation-and-analysis" class="section level4">
-<h4>Programming for Psychologists: Data Creation and Analysis</h4>
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
+<h4 id="programming-for-psychologists-data-creation-and-analysis">Programming for Psychologists: Data Creation and Analysis</h4>
 <p><strong>Description</strong>: Some notes that got big enough to make a book. Beginner introduction to coding in R, Livecode, and some web-programming, for the purposes of making data with computers (programming experiments), and analyzing it in R.</p>
 <p><strong>Author</strong>: Matthew J. C. Crump</p>
 <p><a href="https://crumplab.github.io/programmingforpsych/">Link to Book</a></p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/programmingforpsych" class="uri">https://github.com/CrumpLab/programmingforpsych</a>.</p>
+<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/programmingforpsych">https://github.com/CrumpLab/programmingforpsych</a>.</p>
 </div>
 <div class="col-sm-6">
 <p><a href="https://crumplab.github.io/programmingforpsych/"> <img src="images/Programming.png" width="200" /> </a></p>
 </div>
 </div>
 <hr />
-</div>
-</div>
-</div>
 
 
 

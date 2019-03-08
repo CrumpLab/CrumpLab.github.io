@@ -22,9 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-1"></script>
 <script>
@@ -38,6 +37,9 @@
 <meta name="twitter:description" content=" Lab web page - Matt Crump - Brooklyn College of CUNY">
 <meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png">
 <meta name="twitter:card" content="summary">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abril+Fatface">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Archivo:400,700">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:200,300,400">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -84,6 +86,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="front.css" type="text/css" />
 
 </head>
 
@@ -112,6 +115,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -126,7 +132,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -146,6 +151,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -167,18 +209,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -261,12 +362,13 @@ $(document).ready(function () {
 }
 
 </style>
+<div id="human-cognition-and-performance-lab" class="section level1">
+<h1>Human Cognition and Performance Lab</h1>
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
-<h1 id="human-cognition-and-performance-lab"><strong>Human Cognition and Performance Lab</strong></h1>
-<h3 id="learning-memory-attention-performance-skill-learning-computational-modelling-machine-learning-statistics" style="padding-top: 0px;"><em>Learning, Memory, Attention, Performance, Skill-learning, Computational Modelling, Machine Learning, Statistics</em></h3>
+<h3 id="learning-memory-attention-performance-skill-learning-computational-modeling-statistics" style="padding-top: 0px;">Learning | Memory | Attention | Performance | Skill-learning | Computational Modeling | Statistics</h3>
 <p>How do people learn new skills like playing a musical instrument or typing on a computer keyboard? How does memory work? How do people pay attention to their surroundings? How do people become sensitive to patterns and regularities in their environment?</p>
-<p>The Human Cognition and Performance lab investigates these questions with experiments that test theoretical and computational models of human cognition. Research associates are trained with a strong focus on computer programming skills for creating experiments and analyzing data. These include programming techniques for creating behavioral experiments from scratch, coding dynamic multi-trial experiments online and conducting them on Amazon’s Mechanical Turk, coding for batch data-analysis and for expressing cognitive theories in the form of computational models.</p>
+<p>We investigate these questions with experiments that test theoretical and computational models of human cognition. Research associates are trained with a strong focus on computer programming skills for creating experiments and analyzing data. These include programming techniques for creating behavioral experiments from scratch, coding dynamic multi-trial experiments online and conducting them on Amazon’s Mechanical Turk, coding for batch data-analysis and for expressing cognitive theories in the form of computational models.</p>
 <p><a href="https://crumplab.github.io/People.html">Current and previous lab members</a> include undergraduate, master’s , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for running experiments and analyzing data, <a href="https://crumplab.github.io/Opportunities.html">then you may be interested in joining the team</a>.</p>
 <p>The lab is located in the Department of Psychology at Brooklyn College of CUNY, and affiliated with the <a href="http://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognition,-Language,-and-Development">Cognition, Language, and Development training area</a> of the Psychology Doctoral program at the Graduate Center of CUNY.</p>
 <table>
@@ -306,10 +408,14 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
-<div class="col-sm-6" ,="" style="text-align:right;">
-<p><img src="images/logo.png" width="225" /></p>
-<a class="twitter-timeline" data-width="400" data-height="800" href="https://twitter.com/MattCrump_?ref_src=twsrc%5Etfw">Tweets by MattCrump_</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="col-sm-6", style= "text-align:right;">
+
+<img src="images/logo.png" width="225" id=logo style="display: block; margin: auto;" />
+
+
+<a class="twitter-timeline" data-width="400" data-height="800" href="https://twitter.com/MattCrump_?ref_src=twsrc%5Etfw">Tweets by MattCrump_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
 </div>
 
 
