@@ -4,8 +4,6 @@ description: "Human Cognition and Performance Lab"
 navbar:
   title: "Crump Lab"
   left:
-    - text: "Home"
-      href: index.html
     - text: "People"
       href: People.html
     - text: "Publications"
@@ -14,6 +12,8 @@ navbar:
       href: Books.html
     - text: "Courses"
       href: Courses.html
+    - text: "Apps"
+      href: Apps.html
     - text: "Join The Lab"
       href: Opportunities.html
     - text: "Blog"

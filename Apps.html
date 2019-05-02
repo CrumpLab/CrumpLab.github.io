@@ -11,7 +11,7 @@
 
 
 
-<title>README.utf8.md</title>
+<title>Apps</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +19,26 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79429674-1');
+</script>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Archivo:400,700">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -68,6 +85,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="front.css" type="text/css" />
 
 
 
@@ -260,6 +278,92 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -267,6 +371,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -333,17 +447,92 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Apps</h1>
 
 </div>
 
 
-<div id="crumplab.github.io" class="section level1">
-<h1>CrumpLab.github.io</h1>
-<p>Lab Website</p>
+<p>Shiny Apps, R packages, and various things</p>
+<hr />
+<div id="r-packages" class="section level2">
+<h2>R Packages</h2>
+<hr />
+<div id="conflictpower" class="section level4">
+<h4><a href="https://crumplab.github.io/conflictPower/">conflictPower</a></h4>
+<p>Monte-carlo based power analysis for cognitive control designs. <a href="https://crumplab.github.io/conflictPower/">https://crumplab.github.io/conflictPower/</a></p>
+<hr />
+</div>
+<div id="crumplabr" class="section level4">
+<h4><a href="https://github.com/CrumpLab/crumplabr">crumplabr</a></h4>
+<p>A few functions used around the lab. Contains functions for the Van Selst and Jolicoeur outlier procedure. <a href="https://github.com/CrumpLab/crumplabr">https://github.com/CrumpLab/crumplabr</a>.</p>
+<hr />
+</div>
+</div>
+<div id="shiny-apps" class="section level2">
+<h2>Shiny Apps</h2>
+<hr />
+<div id="athena" class="section level4">
+<h4>ATHENA</h4>
+<p>A semantic search engine for the APA abstract database (most of the experimental journals). It works, but in development. ATHENA stands for A THEory of Non-analytic Associations.</p>
+<p>We (Harinder Aujla, Randy Jamieson, and Matthew Crump) use semantic vectors from BEAGLE (Jones &amp; Mewhort, 2007) to compute the similarity between abstracts, and authors, and authors and abstracts.</p>
+<ul>
+<li><a href="https://crumplab.shinyapps.io/athena/">https://crumplab.shinyapps.io/athena/</a></li>
+<li>Dev version: <a href="https://crumplab.shinyapps.io/athenabeta/">https://crumplab.shinyapps.io/athenabeta/</a></li>
+</ul>
+<hr />
+</div>
+<div id="hypothesis_explorer" class="section level4">
+<h4><a href="hypothesis_explorer">hypothesis_explorer</a></h4>
+<p>A Shiny App for viewing annotations from the Hypothes.is database. Need to download and run locally.</p>
+<p><a href="https://github.com/CrumpLab/hypothesis_explorer">https://github.com/CrumpLab/hypothesis_explorer</a></p>
+<hr />
+</div>
+<div id="indttest" class="section level4">
+<h4><a href="https://crumplab.shinyapps.io/indTtest/">indTtest</a></h4>
+<p>An independent samples t-test simulator.</p>
+<p><a href="https://crumplab.shinyapps.io/indTtest/">https://crumplab.shinyapps.io/indTtest/</a></p>
+<hr />
+</div>
+<div id="pairedttest" class="section level4">
+<h4><a href="https://crumplab.shinyapps.io/pairedTtest/">pairedTtest</a></h4>
+<p>An paired samples t-test simulator.</p>
+<p><a href="https://crumplab.shinyapps.io/pairedTtest/">https://crumplab.shinyapps.io/pairedTtest/</a></p>
+<hr />
+</div>
+<div id="simpleexperimentsim" class="section level4">
+<h4><a href="https://crumplab.shinyapps.io/simpleexperimentsim/">simpleexperimentsim</a></h4>
+<p>A simple experiment simulator with monte-carlo power analysis</p>
+<p><a href="https://crumplab.shinyapps.io/simpleexperimentsim/">https://crumplab.shinyapps.io/simpleexperimentsim/</a></p>
+<hr />
+</div>
+</div>
+<div id="r-markdown-templates" class="section level2">
+<h2>R Markdown templates</h2>
+<hr />
+<div id="nsfrmarkdown" class="section level4">
+<h4><a href="https://github.com/CrumpLab/NSFrmarkdown">NSFrmarkdown</a></h4>
+<p>An R markdown template for NSF grants</p>
+<p><a href="https://github.com/CrumpLab/NSFrmarkdown">https://github.com/CrumpLab/NSFrmarkdown</a></p>
+<hr />
+</div>
+<div id="labjournalwebsite" class="section level4">
+<h4><a href="https://github.com/CrumpLab/LabJournalWebsite">LabJournalWebsite</a></h4>
+<p><a href="https://github.com/CrumpLab/LabJournalWebsite">https://github.com/CrumpLab/LabJournalWebsite</a></p>
+<p>Simple template for an R Markdown Website</p>
+<hr />
+</div>
+<div id="rmpatternlanguage" class="section level4">
+<h4><a href="https://github.com/CrumpLab/rmpatternlanguage">rmpatternlanguage</a></h4>
+<p>A bookdown theme reproducing the style of “A Pattern Language”.</p>
+<p><a href="https://github.com/CrumpLab/rmpatternlanguage">https://github.com/CrumpLab/rmpatternlanguage</a></p>
+<hr />
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
