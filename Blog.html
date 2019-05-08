@@ -483,9 +483,19 @@ div.tocify {
 </style>
 <p>Using this mainly as a place to make notes for myself so I don’t forget what I’m doing. I own my spelling mistakes and sell them on e-bay.</p>
 <hr />
+<div id="using-an-r-package-to-share-research" class="section level1">
+<h1>Using an R package to share research</h1>
+<p>2019-05-07, last compiled: 2019-05-07</p>
+<p>There’s so many ways to share research these days. Sure, get your paper through the review process and put it in a journal, and you’re done right? But, there’s preprint archives (for psych, <a href="https://psyarxiv.com">https://psyarxiv.com</a>), and open science framework (<a href="https://osf.io/">https://osf.io/</a>) where you can share the materials you used (say experimental files, data, and analysis scripts), or just put everything in a github repository (and then share that on OSF to get a DOI). And, that’s just a few good options for sharing.</p>
+<p>Today I realized that R packages could be a good option for sharing research. To see how this could work I messed around with combining <a href="https://crsh.github.io/papaja_man/">papaja</a>, a package for writing APA papers in R Markdown, and <a href="https://pkgdown.r-lib.org">pkgdown</a>, a package for creating website for R packages. What I came up with is small minimal reproducible example <a href="https://crumplab.github.io/papajadown/">https://crumplab.github.io/papajadown/</a>.</p>
+<p>Briefly, all I did was create a new R project folder in Rstudio, choosing the new package option. This creates a default template for making a basic R package. I installed <code>pkgdown</code>, <code>roxygen2</code> (for documenting R functions), and <code>papaja</code>. Then, I made a <code>vignettes</code> folder, and added a papaja template .Rmd file. The next step is just to run <code>pkgdown::build_site()</code> in the console. This generates a website, which would typically be for an R package, that displays information about the functions, and any vignettes (short articles) about how to use the functions in the package. What’s neat to me, is that the same tools could be useful for sharing research products, in the form of an R package.</p>
+<p>Why do this? For one, there are some nice bells and whistles. You get a snappy website to host your paper, an online version of the paper, and some relatively straightforward ways to provide documentation around the project. For example, any data that you might use and want to share can be saved in a data folder, and documentation for the data can be created using <code>roxygen2</code>. Similarly, if you use custom functions for data-analysis in the paper, it’s easy to include them in the package (after all these are the tools for building R packages).</p>
+<p>Here’s a few more reasons. It’s easy to share R packages that are on github (e.g., <code>devtools::install_github("package_name")</code>). So, if someone wanted to “get the data” and all the other stuff, they could do that by installing the package. I’ve found alternatives like OSF sometimes very confusing in terms getting access to open data. For one thing, there are no clear data formattin standards for OSF, and many times some pre-processing needs to be done in order to get the data into R. By putting everything into an R package, all of the stuff is already in R.</p>
+<p>R packages are already set up to share articles (e.g., vignettes about how to use R packages). I guess it’s just slowly dawning on me that these same tools are useful and convenient for packaging research too. Now, back to documenting my data frames so other people have a chance at understanding what I put in those columns.</p>
+</div>
 <div id="adding-quizzes-to-static-r-markdown-websites" class="section level1">
 <h1>Adding quizzes to static R Markdown websites</h1>
-<p>2018-07-26, last compiled: 2019-05-02</p>
+<p>2018-07-26, last compiled: 2019-05-07</p>
 <p>update: here is this example in a github repo <a href="https://github.com/CrumpLab/rmslickquiz">https://github.com/CrumpLab/rmslickquiz</a></p>
 <p>I’m writing a textbook in bookdown and I want to add some quizzes, but I don’t want to set up Shiny, just yet. Instead, I’d like to pop in little quizzes whenever I want. There’s a few options out there, but no official packages to do this in R markdown in a plug-and-play style. So, I hacked together something. It isn’t pretty, but it works. I’m putting a quiz here to test that it works and doesn’t destroy everything else (css conflict etc.). And, memory for later.</p>
 <div id="what-i-did" class="section level2">
@@ -592,7 +602,7 @@ questions:
 </div>
 <div id="adding-meta-tags-to-r-markdown-websites-for-social-media" class="section level1">
 <h1>Adding meta tags to R Markdown websites for social media</h1>
-<p>2018-07-26, last compiled: 2019-05-02</p>
+<p>2018-07-26, last compiled: 2019-05-07</p>
 <p>R Markdown seems to be a little bit inconsistent when attempting to add meta tags into html documents. Here’s what I did to get them to work for twitter on this website. You can look at the <a href="https://github.com/CrumpLab/CrumpLab.github.io/blob/master/Blog.Rmd">.rmd file for this post here</a>. Or read this.</p>
 <ol style="list-style-type: decimal">
 <li>You can include .html into the head in the yaml, the yaml for this blog looks like this, and the special sauce is in the <code>header_blog.html</code></li>
@@ -655,7 +665,7 @@ close(CON)</code></pre>
 </div>
 <div id="skill-learning-and-evaluation-for-intro-undergraduate-stats-in-psych" class="section level1">
 <h1>Skill learning and evaluation for intro undergraduate stats in psych</h1>
-<p>2018-07-24, last compiled: 2019-05-02</p>
+<p>2018-07-24, last compiled: 2019-05-07</p>
 <p>I need to put my thoughts together on how I am going to evaluate my students when I teach them Statistics this Fall. I already know what skills I want them to learn, that’s the easy part. And, I’m making lots of activities for them to do, so they will do skills, and hopeful learn them. But, the prospect of looming evaluation weighs heavily on mind. Fortunately, last night I had a great conversation about this, and achieved some more clarity than I had before.</p>
 <p>I was worried about the fact that students learn the test. This is a natural thing for them to do, it’s mainly how they get grades. IMO, many stats classes have an evaluation problem. I’m sure many don’t but, I’m equally sure many do. Often times, a stats class is the following:</p>
 <ol style="list-style-type: decimal">
@@ -716,7 +726,7 @@ close(CON)</code></pre>
 </div>
 <div id="list-of-websites-for-people-using-r-markdown-websites-to-learn-r" class="section level1">
 <h1>List of websites for people using R Markdown websites to learn R</h1>
-<p>2018-07-24, last compiled: 2019-05-02</p>
+<p>2018-07-24, last compiled: 2019-05-07</p>
 <p>This will be updated with a list populated from google forms. If you added to the google form and your web-address is not listed here, right now you will just have to wait for me to recompile this blog (when I figure out how to automate this daily, it will update by itself on some regular interval…maybe).</p>
 <p>If you want to add your website to this list, use this <a href="https://docs.google.com/forms/d/e/1FAIpQLScQOJ9OX4w4wIGrNuvGvmxLA-fUvq3o4UFouBZDx0XjIaZN9g/viewform?usp=sf_link">google form</a>.</p>
 <pre class="r"><code>library(googlesheets)
@@ -728,7 +738,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="my-experience-with-oer-development-at-cuny-so-far" class="section level1">
 <h1>My experience with OER development at CUNY so far</h1>
-<p>2018-07-24, last compiled: 2019-05-02</p>
+<p>2018-07-24, last compiled: 2019-05-07</p>
 <p>CUNY was awarded a <a href="http://www2.cuny.edu/libraries/open-educational-resources/">4 million dollar grant by New York State</a> for all things OER (open-educational resources). OERs are transforming education right now because they create a zero-textbook cost course for students, saving them lots of moola. This is great, and there is a lot of fantastic, high quality OER content out there. Especially in Psych.</p>
 <p>I’ve been participating in OER development at Brooklyn College of CUNY. I was awarded a small $2,000 grant from the library to create an OER for our <a href="https://crumplab.github.io/ResearchMethods/">Research methods course</a>, which I made last summer (2017). I created an <a href="https://crumplab.github.io/OER_bookdown/">OER tutorial</a> on the process I use to make OERs using all free and open-source software. I made my <a href="https://crumplab.github.io/programmingforpsych/">programming book for Psychologists</a> into an OER. And, this summer I was awarded another small grant to make an OER for statistics, creating both a <a href="https://github.com/CrumpLab/statistics">textbook</a> and <a href="https://github.com/CrumpLab/statisticsLab">lab manual</a>. And, I’ve submitted a proposal to make another OER for a cognitive psychology textbook, with plans to write this year. That’s a lot of OER development!</p>
 <p>I thought I would say a few things about this experience, because I think OER development in general, and at CUNY is vitally important. It’s great that CUNY is supporting this. It’s a relatively new development. It’s gone fairly well so far, but there is some room for improvement. Below I talk about what’s gone well, and what needs improvement.</p>
@@ -771,7 +781,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="making-pre-prints-with-papaja" class="section level1">
 <h1>Making pre-prints with papaja</h1>
-<p>2018-07-24, last compiled: 2019-05-02</p>
+<p>2018-07-24, last compiled: 2019-05-07</p>
 <p><code>papaja</code> is a fantastic package written by Frederick Aust, for producing APA style papers by writing in R Markdown. This this is <a href="https://crsh.github.io/papaja_man/">the book on it</a>.</p>
 <p>It seems this book doesn’t extol the virtues of papaja beyond writing papers. papaja is also useful for making journal quality pre-prints that look like journal copy. Papaja is a wrapper for latex, and the underlying latex packages can produce lots of different styles. For example, in papaja the default setting is to compile as <code>man</code>, which produces a double-spaced APA style manuscript. However, changing the default to <code>jou</code>, typesets the document as a 2-column journal, that looks virtually identical to the JEP APA journals.</p>
 <p>So, for example, this morning I found out that a paper of mine was finally onlineFirst at JEP:HPP. This paper was originally written in word, and I wanted to create a nice looking pre-print that I could upload to PsyArXiv. So, I opened up a new papaja document, copied everything over (took about 25 minutes to twiddle with this) and pressed compile. It was almost voila, but not quite. There were a few little things that needed fixing, like indenting paragraphs, changing whether a figure is one-column wide or two-columns wide, and figuring out how to insert colons into yaml. These are quirks of R Markdown, and would be easy fixes in Latex, but Latex is a beast, which is why R Markdown is more speedy to get going. Plus you can usually pass most things from R Markdown to Latex either directly in the text, or using knitr code blocks.</p>
@@ -781,7 +791,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="get-up-and-running-with-an-r-markdown-website-and-then-mess-around-with-r" class="section level1">
 <h1>Get up and running with an R Markdown website, and then mess around with R</h1>
-<p>2018-07-23, last compiled: 2019-05-02</p>
+<p>2018-07-23, last compiled: 2019-05-07</p>
 <p>I’m posting this for a couple students who will be doing some research in the lab this fall. If you have the time this summer, you can get prepared for the fall by doing these things (they are all free things)</p>
 <ol style="list-style-type: decimal">
 <li>Download <a href="https://www.r-project.org">R</a> and <a href="https://www.rstudio.com">R-studio</a> for your computer.</li>
@@ -799,7 +809,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="using-r-markdown-websites-and-other-r-markdown-things-for-undergraduate-research-projects." class="section level1">
 <h1>Using R Markdown websites (and other R Markdown things) for undergraduate research projects.</h1>
-<p>2018-07-22, last compiled: 2019-05-02</p>
+<p>2018-07-22, last compiled: 2019-05-07</p>
 <p>Every year I usually take on a few undergraduates interested in gaining some research experience. Over the years I’ve tried lots of different approaches. This year, I will try another one I thought of yesterday. Time will tell if it will work.</p>
 <p>Our department (Psychology Department @ Brooklyn College of CUNY) has a 2-year laboratory experience course. Students can take this course to get credit towards their degree while gaining some research experience. We also have 4th year courses for more advanced students (e.g., honor’s thesis courses). My ideal pipeline is to have students take the 2nd year as a precursor to doing more advanced things in later years. This way I can train the requisite skills, so that some independent research can be accomplished by the students in later years. Unlike some labs, I have no busy work for students to do. Most of my research (Cognitive Psych) is now conducted online, so the only things to do are: come up with good ideas, read the literature, program the experiments, get the data, program the analysis scripts, write the paper etc. So, students to need to learn the skills in order to do anything.</p>
 <p><strong>Training Goals</strong>: I would like my new students to get some experience with some basics for data creation and and analysis. This means learning how to program a behavioral experiment from scratch to collect data, collect some data, and then learning how to analyze the data in R. For example, if a student can make a program to do something like collect reaction times in response to different stimuli, get some data, and then analyze it, they have some skills they can expand upon.</p>
@@ -825,7 +835,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="i-need-to-get-my-cc-creative-commons-licenses-in-order" class="section level1">
 <h1>I need to get my CC (creative commons) licenses in order</h1>
-<p>2018-07-23, last compiled: 2019-05-02</p>
+<p>2018-07-23, last compiled: 2019-05-07</p>
 <p>I’ve been writing different kinds of open content and am revisiting the issue of licensing. So, I’m making notes about the process.</p>
 <p>The creative commons license has a website with their licenses, you can read about them, and download scripts to put in webpages. <a href="https://creativecommons.org/licenses/">https://creativecommons.org/licenses/</a></p>
 <p>I am hosting all of my works on github (repo and github pages to display). Github gives options for licenses when you create a repo. It used to support a basic CC license (0). Now CC licenses don’t appear in the drop down menu, there’s a thread requesting this feature be added</p>
@@ -846,7 +856,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="adding-google-analytics-to-r-markdown-websites" class="section level1">
 <h1>Adding google analytics to R markdown websites</h1>
-<p>2018-07-22, last compiled: 2019-05-02</p>
+<p>2018-07-22, last compiled: 2019-05-07</p>
 <p>I googled it, found this <a href="https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page">https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page</a>. Followed the intructions, very easy. TLDR:</p>
 <ol style="list-style-type: decimal">
 <li>Copy google analytics script for your site in a text editor. Save as .html file.</li>
@@ -857,7 +867,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="what-does-typing-research-say-about-improving-your-typing-speed-the-difficulty-of-applying-basic-science" class="section level1">
 <h1>What does typing research say about improving your typing speed? The difficulty of applying basic science</h1>
-<p>2018-07-22, last compiled: 2019-05-02</p>
+<p>2018-07-22, last compiled: 2019-05-07</p>
 <p>As far as I can tell not much. At least not much besides practice a lot. Gee thanks science. I’m writing about this topic because a colleague of mine emailed me this morning and asked what, “I want to improve my typing speed, what should I do, what’s the best resource you’ve come across?”. I thought it would be interesting to give my advice, and think out loud about the topic.</p>
 <p>Why ask me? One of my science hobbies is to use the task of typing in the laboratory (or online using Amazon’s Mechanical Turk) to study how basic cognitive processes shape skilled performance. Over the years I’ve published a few papers on typing <span class="citation">(<span class="citeproc-not-found" data-reference-id="behmer_crunching_2017"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="behmer_spatial_2017"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="crump_episodic_2010"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="crump_hierarchical_2010"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="crump_prevention_2013"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="crump_warning_2010"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="logan_hierarchical_2011"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="yamaguchi_speedaccuracy_2013"><strong>???</strong></span>; Liu, Crump, and Logan 2010; Logan and Crump 2010, 2009)</span>. And, I’ve read way too many papers on typing.</p>
 <p>I got into this research for lots of reason, I like skill learning, I like playing musical instruments, I like patterns, typing was easy to measure, it has a lot of interesting properties, it was kind of neglected as a research area since the 80s, and when I was a postdoc with Gordon Logan, he said I needed to make him famous, so I read all of Gordon’s papers, found that he had done some typing research, then started talking about how instance based memory might shape typing, and the rest was several more years to the present moment where I am using typing as a tool to ask and answer lots of different questions…But, I still can’t point to a paper, or to a typing training website, or program, and say, “this will be the the most optimal way to get your typing up to speed the fastest”. Ugh, what is basic science in typing of all things good for, if it can’t make recommendations about learning the task!</p>
@@ -976,7 +986,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="writing-a-paper-in-public-on-github" class="section level1">
 <h1>Writing a paper in public on github</h1>
-<p>2018-07-21, last compiled: 2019-05-02</p>
+<p>2018-07-21, last compiled: 2019-05-07</p>
 <p>One of the lab’s summer projects was to write a paper in public on github. It’s still happening right now. This is an interim update.</p>
 <p><a href="https://github.com/CrumpLab/EntropyTyping">https://github.com/CrumpLab/EntropyTyping</a></p>
 <p><a href="https://github.com/CrumpLab/EntropyTyping/blob/master/Entropy_typing_draft.pdf">.pdf of almost finished draft</a></p>
@@ -995,7 +1005,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="building-websites-with-rmarkdown" class="section level1">
 <h1>Building websites with RMarkdown</h1>
-<p>2018-07-21, last compiled: 2019-05-02</p>
+<p>2018-07-21, last compiled: 2019-05-07</p>
 <p>I just built this website in R Markdown. I’m already familiar with R Markdown. How much time did it take? It took a couple minutes to download the <a href="https://rmarkdown.rstudio.com/lesson-13.html">reproducible example from the R-studio website</a>. The tutorial and documentation is good. You can take a deep dive into all the possibilities and syntax by using <a href="https://bookdown.org/yihui/rmarkdown/">the Definitive guide to RMarkdown</a> by Yihui Xie.</p>
 <p>Overall, it took a couple hours to get everything in order and make sure the page would load on github pages. It loaded fine, no real issues there. Then, another half-day tweaking and having fun with the possibilities.</p>
 <p>The big benefit of this pipeline for me is for making copy-able websites that pair with free educational resources. I’ve written a few OER (open-educational resources) <a href="https://crumplab.github.io/Books.html">books previously</a>, and this summer am working on a <a href="https://crumplab.github.io/statistics/">Statistics book for undergraduates in Psychology</a>, along with a <a href="https://crumplab.github.io/statisticsLab">lab manual</a> teaching R, Excel, SPSS, and JAMOVI. I’m planning to use these resources, but am making them freely available so other people can use them too.</p>
@@ -1004,7 +1014,7 @@ knitr::kable(ss_df)</code></pre>
 </div>
 <div id="flatp" class="section level1">
 <h1>Why is the p-distribution flat under the null?</h1>
-<p>2018-07-21, last compiled: 2019-05-02</p>
+<p>2018-07-21, last compiled: 2019-05-07</p>
 <p>The <span class="math inline">\(p\)</span>-distribution is flat under the null, it is made to be this way. Let’s understand why. First, a simulation to show that the <span class="math inline">\(p\)</span>-distribution is flat under the null. We start with the null distribution. Here, I sampled data from a normal (u=0, sd=1), ran a t-test, saved the <span class="math inline">\(p\)</span>-value, repeated 1000 times, then put the <span class="math inline">\(p\)</span>-values into a histogram. You can see it’s mostly flat across the range 0-1.</p>
 <pre class="r"><code>library(ggplot2)
 save_p&lt;-length(1000)
@@ -1077,7 +1087,7 @@ qplot(abs(save_t))+
 </div>
 <div id="make-a-free-introductory-cognitive-psych-textbook-with-online-experiments" class="section level1">
 <h1>Make a free Introductory Cognitive Psych textbook with online experiments</h1>
-<p>2018-07-21, last compiled: 2019-05-02</p>
+<p>2018-07-21, last compiled: 2019-05-07</p>
 <p>I recently wrote this proposal, plan is to do it during fall 2018-Spring 2019.</p>
 <p>From my email correspondence (note to self to edit this later):</p>
 <ol style="list-style-type: decimal">
@@ -1094,7 +1104,7 @@ qplot(abs(save_t))+
 </div>
 <div id="how-do-i-use-r-to-list-my-publications-on-this-webpage" class="section level1">
 <h1>How do I use R to list my publications on this webpage?</h1>
-<p>2018-07-21, last compiled: 2019-05-02</p>
+<p>2018-07-21, last compiled: 2019-05-07</p>
 <p>Maybe get them to auto print from a .bib file. That way I can update everything in Zotero, output a .bib file, then automatically list everything… hmm…</p>
 <p>How about testing this here and seeing what happens.</p>
 <ol style="list-style-type: decimal">
