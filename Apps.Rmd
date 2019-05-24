@@ -36,14 +36,16 @@ A few functions used around the lab. Contains functions for the Van Selst and Jo
 
 -----
 
-#### ATHENA
+#### [Semantic librarian](https://crumplab.shinyapps.io/SemanticLibrarian/)
 
-A semantic search engine for the APA abstract database (most of the experimental journals). It works, but in development. ATHENA stands for A THEory of Non-analytic Associations.
+A semantic search engine for the APA abstract database (most of the Experimental journals from 1890s to 2016), formerly known as ATHENA.
 
 We (Harinder Aujla, Randy Jamieson, and Matthew Crump) use semantic vectors from BEAGLE (Jones & Mewhort, 2007) to compute the similarity between abstracts, and authors, and authors and abstracts.
 
-- [https://crumplab.shinyapps.io/athena/](https://crumplab.shinyapps.io/athena/)
-- Dev version:  [https://crumplab.shinyapps.io/athenabeta/](https://crumplab.shinyapps.io/athenabeta/)
+- [https://crumplab.shinyapps.io/SemanticLibrarian/](https://crumplab.shinyapps.io/SemanticLibrarian/)
+- source code: [https://github.com/CrumpLab/SemanticLibrarian](https://github.com/CrumpLab/SemanticLibrarian)
+- Open science framework project: [https://osf.io/wfcmg/](https://osf.io/wfcmg/)
+- Publication: currently under review at Behavioral Research Methods.
 
 -----
 
