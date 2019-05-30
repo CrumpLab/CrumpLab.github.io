@@ -5,3 +5,5 @@ bindrcpp
 stringi
 googlesheets
 exams
+yaml
+rjson

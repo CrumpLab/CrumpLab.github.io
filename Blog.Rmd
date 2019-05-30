@@ -44,6 +44,14 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 --------------------------
 
+# Blogging about the Semantic Librarian
+
+I've been collaborating with [Randall Jamieson](https://umcognitivesciencelaboratory.weebly.com) and Matt Cook (University of Manitoba), and [Harinder Aujla](http://ion.uwinnipeg.ca/~haujla/) (University of Winnipeg) on a really cool project (IMO). We created a search engine for select experimental journals from the APA database, using semantic vector representations. This allows us to compare abstracts and search terms, and even authors, in terms of their semantic similarity (associative knowledge about word co-occurence in the abstract texts.). Our work was recently accepted at Behavior research methods. You can read the pre-print here [https://psyarxiv.com/svmtd/](https://psyarxiv.com/svmtd/); and, you can try out the search engine here [https://crumplab.shinyapps.io/SemanticLibrarian](https://crumplab.shinyapps.io/SemanticLibrarian).
+
+This approach also allows us to ask questions about the semantic structure of the APA database. I'm going to be using this tool to examine some of those questions, and blog about what I find here [https://crumplab.github.io/SemanticLibrarian](https://crumplab.github.io/SemanticLibrarian). Check it out.
+
+2019-05-30, last compiled: `r Sys.Date()`
+
 # Using an R package to share research
 
 2019-05-07, last compiled: `r Sys.Date()`
@@ -506,7 +514,7 @@ I googled it, found this [https://stackoverflow.com/questions/41376989/how-to-in
 
 As far as I can tell not much. At least not much besides practice a lot. Gee thanks science. I'm writing about this topic because a colleague of mine emailed me this morning and asked what, "I want to improve my typing speed, what should I do, what's the best resource you've come across?". I thought it would be interesting to give my advice, and think out loud about the topic.
 
-Why ask me? One of my science hobbies is to use the task of typing in the laboratory (or online using Amazon's Mechanical Turk) to study how basic cognitive processes shape skilled performance. Over the years I've published a few papers on typing [@behmer_crunching_2017; @behmer_spatial_2017; @crump_episodic_2010; @crump_hierarchical_2010; @crump_prevention_2013; @crump_warning_2010; @liu_you_2010; @logan_cognitive_2010; @logan_hierarchical_2011; @logan_left_2009; @yamaguchi_speedaccuracy_2013]. And, I've read way too many papers on typing.
+Why ask me? One of my science hobbies is to use the task of typing in the laboratory (or online using Amazon's Mechanical Turk) to study how basic cognitive processes shape skilled performance. Over the years I've published a few papers on typing [@BehmerCrunchingbigdata2017; @BehmerSpatialknowledgeskilled2017; @CrumpEpisodiccontributionssequential2010; @CrumpHierarchicalcontrolskilled2010; @CrumpPreventioncorrectionposterror2013; @crump_warning:_2010; @liu_you_2010; @logan_cognitive_2010; @LoganHierarchicalcontrolcognitive2011; @logan_left_2009; @YamaguchiSpeedaccuracytradeoff2013]. And, I've read way too many papers on typing.
 
 I got into this research for lots of reason, I like skill learning, I like playing musical instruments, I like patterns, typing was easy to measure, it has a lot of interesting properties, it was kind of neglected as a research area since the 80s, and when I was a postdoc with Gordon Logan, he said I needed to make him famous, so I read all of Gordon's papers, found that he had done some typing research, then started talking about how instance based memory might shape typing, and the rest was several more years to the present moment where I am using typing as a tool to ask and answer lots of different questions...But, I still can't point to a paper, or to a typing training website, or program, and say, "this will be the the most optimal way to get your typing up to speed the fastest". Ugh, what is basic science in typing of all things good for, if it can't make recommendations about learning the task! 
 
@@ -545,7 +553,7 @@ This list could go on, but that's already lots of IVS, and tonnes of interaction
 
 #### Norms: Type higher frequency things faster than lower frequency things
 
-Here's one fact from a normative model of typing speed, from @behmer_crunching_2017. We asked the question, would typists benefit overall from typing higher frequency letters faster than lower frequency letters? It turns out that this is what typists do: they become sensitive to the frequency structure of the the things they type, and type higher frequency things faster than lower frequency (makes sense in terms of learning, you are faster for the things you did more). But, is this a good thing? Our modelling says, YES, it's a good thing. Here's a figure from the model:
+Here's one fact from a normative model of typing speed, from @BehmerCrunchingbigdata2017. We asked the question, would typists benefit overall from typing higher frequency letters faster than lower frequency letters? It turns out that this is what typists do: they become sensitive to the frequency structure of the the things they type, and type higher frequency things faster than lower frequency (makes sense in terms of learning, you are faster for the things you did more). But, is this a good thing? Our modelling says, YES, it's a good thing. Here's a figure from the model:
 
 ```{r}
 knitr::include_graphics("blogFigures/NormativeTyping.png")
@@ -565,7 +573,7 @@ Here are some theoretical implications:
 2. Transfer of training is limited, you mostly get better at the strings you type, small generalization window to other strings.
 3. You need lots of experience with all of the contexts in which particular letters appear in particular strings to get better at typing those letters in those contexts
 4. In typing, there will be no substitute for lots of practice to get experience with all of the contexts
-5. Typing strings is cue driven. The strings act as the cue for how you typed them last time. Recency matters even for experts, and the recent strings that you typed can modify how you type them and similar strings in the present [@crump_episodic_2010]
+5. Typing strings is cue driven. The strings act as the cue for how you typed them last time. Recency matters even for experts, and the recent strings that you typed can modify how you type them and similar strings in the present [@CrumpEpisodiccontributionssequential2010]
 6. The way you typed before will shape how you do it again. If you have bad habits, they will be a force to be reckoned with. If you have to compute the solution to where to put your fingers by looking, then you should learn to automatize that solution so you don't have to look.
 
 The most clear prescription from the instance theory of automatization [@logan1988toward], is that lots of practice will eventually populate your memory with "fast retrieval times" for every kind of keystroke that you experience in normal typing. This will take a long time because keystroke times are influences by context (surrounding letters etc.), and there are lots of contexts. 
@@ -813,14 +821,14 @@ How about testing this here and seeing what happens.
 
 2. try install.packages("bib2df") to convert bib to a data.frame, then write something to do what I want to spit out everything nicely, maybe in a kable table, or something.
 
-```{r, warning=FALSE,message=F}
+```{r, warning=FALSE,message=F, eval=FALSE}
 library(bib2df)
 bib_df<-bib2df(file="Crump.bib")
 ```
 
 That seemed to work nice. Needed to add a few missing years to the .bib file. Ok, just need to write a loop...need to remove special characters in bibfile...Cool, basically got it working. Need to update bib file to check for errors. Need to add a catch for papers that aren't articles... Going to move this code over to the publications page and modify from there.
 
-```{r, results='asis', warning=FALSE,message=FALSE, cache=TRUE}
+```{r, results='asis', warning=FALSE,message=FALSE, cache=TRUE, eval=FALSE}
 library(stringi)
 
 bib_df$TITLE<-stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
