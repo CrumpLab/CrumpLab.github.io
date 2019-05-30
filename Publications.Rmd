@@ -25,9 +25,9 @@ output:
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 ```
 
-Note: publications are compiled in Rmarkdown directly from a .bib file. Slowly working on making this work. Below is a plot of the semantic similarity between the publications (using the BEAGLE Abstract vectors). Hover over the dots to see the title (still in beta).
+<!--Note: publications are compiled in Rmarkdown directly from a .bib file. Slowly working on making this work. Below is a plot of the semantic similarity between the publications (using the BEAGLE Abstract vectors). Hover over the dots to see the title (still in beta).-->
 
-```{r, message=FALSE,echo=FALSE,warning=FALSE, fig.width=5,fig.height=3}
+```{r, message=FALSE,echo=FALSE,warning=FALSE, fig.width=5,fig.height=3, eval=FALSE}
 load('semantic_publicatins.RData')
 library(plotly)
 semantic_plot
@@ -63,11 +63,12 @@ for(i in 1:dims[1]){
         bib_df[i,]$PAGES, "."), sep="")
   if(is.na(a)==FALSE){
     cat(c(" ", "[pdf](",file_path,")"), sep="")
-    get_data <- bib_df[i,]$NOTE
-    if(is.na(get_data)==FALSE){
-      cat(c(" | ", get_data), sep="")
-    }
   }
+  get_data <- bib_df[i,]$NOTE
+  if(is.na(get_data)==FALSE){
+    cat(c(" | ", get_data), sep="")
+  }
+
   cat(c("</div>"))
   cat(c("\n"))
   cat(c("\n"))
