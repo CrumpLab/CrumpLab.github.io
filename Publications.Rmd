@@ -47,12 +47,17 @@ bib_df$JOURNAL<-stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
 bib_df<-bib_df[order(bib_df$YEAR, decreasing=T),]
 
 dims<-dim(bib_df)
-
+start_year <- 0 
 for(i in 1:dims[1]){
   a<-bib_df$FILE[i]
   split_a<-unlist(strsplit(a,";"))
   file_path<-paste0("https://github.com/CrumpLab/CrumpLab.github.io/raw/master/",split_a[1])
-  cat(c("####",bib_df[i,]$TITLE)) #title
+  if(bib_df[i,]$YEAR != start_year){
+    cat(c("##",bib_df[i,]$YEAR, "\n"))
+    start_year <- bib_df[i,]$YEAR
+  }
+  
+  cat(c("###",bib_df[i,]$TITLE)) #title
   cat(c("\n"))
   cat(c("<div id=citationstyle>"))
   cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=", "), " (",
