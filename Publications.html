@@ -40,6 +40,8 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Archivo:400,700">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400">
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -497,23 +499,44 @@ for(i in 1:dims[1]){
   }
   
   cat(c(&quot;###&quot;,bib_df[i,]$TITLE)) #title
+  
   cat(c(&quot;\n&quot;))
-  cat(c(&quot;&lt;div id=citationstyle&gt;&quot;))
-  cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=&quot;, &quot;), &quot; (&quot;,
-        bib_df[i,]$YEAR, &quot;). &quot;,
-        bib_df[i,]$TITLE, &quot;. *&quot;,
-        bib_df[i,]$JOURNAL, &quot;, &quot;,
-        bib_df[i,]$VOLUME, &quot;*, &quot;,
-        bib_df[i,]$PAGES, &quot;.&quot;), sep=&quot;&quot;)
-  if(is.na(a)==FALSE){
-    cat(c(&quot; &quot;, &quot;[pdf](&quot;,file_path,&quot;)&quot;), sep=&quot;&quot;)
-  }
-  get_data &lt;- bib_df[i,]$NOTE
-  if(is.na(get_data)==FALSE){
-    cat(c(&quot; | &quot;, get_data), sep=&quot;&quot;)
-  }
-
-  cat(c(&quot;&lt;/div&gt;&quot;))
+  
+  cat(&quot;&lt;div class=&#39;row&#39;&gt;&quot;)
+    cat(&quot;&lt;div class=&#39;column left&#39;&gt;&quot;)
+      cat(c(&quot;&lt;div id=citationstyle&gt;&quot;))
+      cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=&quot;, &quot;), &quot; (&quot;,
+            bib_df[i,]$YEAR, &quot;). &quot;,
+            bib_df[i,]$TITLE, &quot;. *&quot;,
+            bib_df[i,]$JOURNAL, &quot;, &quot;,
+            bib_df[i,]$VOLUME, &quot;*, &quot;,
+            bib_df[i,]$PAGES, &quot;.&quot;), sep=&quot;&quot;)
+      if(is.na(a)==FALSE){
+        cat(c(&quot; &quot;, &quot;[pdf](&quot;,file_path,&quot;)&quot;), sep=&quot;&quot;)
+      }
+      get_data &lt;- bib_df[i,]$NOTE
+      if(is.na(get_data)==FALSE){
+        cat(c(&quot; | &quot;, get_data), sep=&quot;&quot;)
+      }
+      
+      cat(c(&quot;&lt;/div&gt;&quot;))
+    
+    cat(&quot;&lt;/div&gt;&quot;)
+  cat(&quot;&lt;div class=&#39;column right&#39;&gt;&quot;)
+    get_doi &lt;- bib_df[i,]$DOI
+    if(is.na(get_doi)==FALSE){
+      cat(&quot;&lt;span class=&#39;__dimensions_badge_embed__&#39; data-doi=&#39;&quot;,get_doi,&quot;&#39; data-style=&#39;small_circle&#39; data-legend=&#39;hover-left&#39; style = &#39;text-align:right;&#39;&gt;&lt;/span&gt;&quot;, sep=&quot;&quot;)
+      cat(&quot;&lt;span data-badge-popover=&#39;left&#39; data-badge-type=&#39;donut&#39; data-doi=&#39;&quot;,get_doi,&quot;&#39; data-hide-no-mentions=&#39;true&#39; class=&#39;altmetric-embed&#39; style = &#39;text-align:right;&#39;&gt;&lt;/span&gt;&quot;, sep=&quot;&quot;)
+    }
+  
+  cat(&quot;&lt;/div&gt;&quot;)
+  cat(&quot;&lt;/div&gt;&quot;)
+  
+  
+  
+  
+  
+    
   cat(c(&quot;\n&quot;))
   cat(c(&quot;\n&quot;))
   cat(c(&quot;&lt;div id = abstractstyle&gt;&quot;))
@@ -528,8 +551,15 @@ for(i in 1:dims[1]){
 <h2>2019</h2>
 <div id="instance-theory-predicts-information-theory-episodic-uncertainty-as-a-determinant-of-keystroke-dynamics" class="section level3">
 <h3>Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, Matthew J. C., Lai, Walter, Brosowsky, Nicholaus P. (2019). Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics. <em>Under review at Canadian Journal of Experimental Psychology, preprint</em>, no pages yet. | <a href="https://crumplab.github.io/EntropyTyping/index.html">website, pre-print, data, and source code</a> <br><br> Notes: This is a full reproducible project. The website above contains all of the data and source code to reproduce the manuscript.
+</div>
+</div>
+<div class="column right">
+
+</div>
 </div>
 <div id="abstractstyle">
 How does prior experience shape skilled performance in structured environments? We use skilled typing of natural text to evaluate correspondence between performance (keystroke timing) and structure in the environment (letter uncertainty). We had ~350 typists copy-type english text. We reproduced Ostry’s (1983) analysis of interkeystroke interval as a function of letter position and word length, that showed prominent first-letter and mid-word slowing effects. We propose a novel account that letter position and word length effects on keystroke dynamics reflect informational uncertainty about letters in those locations, rather than resource limited planning/buffering processes. We computed positional uncertainty for letters in all positions of words from length one to nine using Google’s n-gram database. We show that variance in inter-keystroke interval by letter position and word length tracks natural variation in letter uncertainty. Finally, we provide a model showing how a general learning and memory process could acquire sensitivity to patterns of letter uncertainty in natural english. In doing so, we draw an equivalence between Logan’s (1988) instance theory of automatization and Shannon’s measure of entropy (H) from information theory. Instance theory’s predictions for automatization as a function of experience follow exactly the uncertainty in the choice set being automatized. As a result, instance theory stands as a general process model explaining how context-specific experiences in a structured environment tune skilled performance.
@@ -537,8 +567,15 @@ How does prior experience shape skilled performance in structured environments? 
 </div>
 <div id="the-semantic-librarian-a-search-engine-built-from-vector-space-models-of-semantics" class="section level3">
 <h3>The Semantic Librarian: A Search Engine Built from Vector-Space Models of Semantics</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Aujla, Harinder, Crump, Matthew J. C., Cook Matthew T., Jamieson Randall K. (2019). The Semantic Librarian: A Search Engine Built from Vector-Space Models of Semantics. <em>In press at Behavior Research Methods, preprint</em>, no pages yet. | <a href="https://psyarxiv.com/svmtd/">Pre-print</a> | <a href="https://crumplab.shinyapps.io/SemanticLibrarian">Shiny App</a> | <a href="https:://github.com/CrumpLab/SemanticLibrarian">Source Code</a> | <a href="https://crumplab.github.io/SemanticLibrarian/">Blog</a>
+</div>
+</div>
+<div class="column right">
+
+</div>
 </div>
 <div id="abstractstyle">
 Psychologists have made substantial progress at developing empirically validated formal expressions of how people perceive, learn, remember, think, and know. In this paper, we present an academic search engine for cognitive psychology that leverages computational expressions of human cognition (vector-space models of semantics) to represent and find papers in the psychological record. The method shows how psychological theory can be used to inform and aid the design of psychologically intuitive computer interfaces.
@@ -546,8 +583,15 @@ Psychologists have made substantial progress at developing empirically validated
 </div>
 <div id="contextual-recruitment-of-selective-attention-can-be-updated-via-changes-in-task-relevance" class="section level3">
 <h3>Contextual recruitment of selective attention can be updated via changes in task-relevance</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Brosowsky, Nicholaus P., Crump, Matthew J. C. (2019). Contextual recruitment of selective attention can be updated via changes in task-relevance. <em>Under review at Canadian Journal of Psychology, preprint</em>, no pages yet. | <a href="https://psyarxiv.com/43tj7/">Pre-print</a> | <a href="https://osf.io/ztcyb/">Data</a>
+</div>
+</div>
+<div class="column right">
+
+</div>
 </div>
 <div id="abstractstyle">
 Evidence across a wide variety of attention paradigms shows that environmental cues can trigger adjustments to ongoing priorities for attending to relevant and irrelevant information. This context-specific control over attention suggests that cognitive control can be both automatic and flexible. For instance, in selective attention tasks, congruency effects are larger for items that appear in a context associated with infrequent conflict than in a context associated with frequent conflict. Since the to-be-presented context cannot be predicted or prepared for in advance, attention is assumed to be rapidly updated on-the-fly, triggered by the currently presented context. Context-specific control exemplifies how learning and memory processes can influence attention to enable cognitive flexibility. However, what determines the use of previously learned associations still remains unclear. In the current study, we examined whether task-relevance would influence the learning and use of context cues in a flanker task. Using a secondary counting task, context dimensions associated with differing levels of conflict were made task-relevant or-irrelevant across the experiment. In short, we found that making new contextual information task-relevant caused participants to ignore a previously learned context-attention association and adopt a new context-specific control strategy; all without changing the experimental stimuli. This result suggests that task-relevance is a key determinant of context-specific control.
@@ -558,8 +602,15 @@ Evidence across a wide variety of attention paradigms shows that environmental c
 <h2>2018</h2>
 <div id="context-dependent-control-of-attention-capture-evidence-from-proportion-congruent-effects" class="section level3">
 <h3>Context-Dependent Control of Attention Capture: Evidence from Proportion Congruent Effects</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Milliken, Bruce, Leboe-McGowan, Jason P., Leboe-McGowan, Launa C., Gao, X (2018). Context-Dependent Control of Attention Capture: Evidence from Proportion Congruent Effects. <em>Canadian Journal of Experimental Psychology, 72</em>, 91-104. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8752/Crump%20et%20al.%20-%202018.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/cep0000145" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/cep0000145" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 There are several independent demonstrations that attentional phenomena can be controlled in a context-dependent manner by cues associated with differing attentional control demands. The present set of experiments provide converging evidence that attention-capture phenomena can be modulated in a context-dependent fashion. We determined whether methods from the proportion congruent literature (listwide and item- and context-specific proportion congruent designs) that are known to modulate distractor interference effects in Stroop and flanker tasks are capable of modulating attention capture by salient feature singletons. Across experiments we found evidence that attention capture can be modulated by listwide, item-specific, and context-specific manipulations of proportion congruent. We discuss challenges associated with interpreting results from proportion congruent studies but propose that our findings converge with existing work that has demonstrated context-dependent control of attention capture.
@@ -567,8 +618,15 @@ There are several independent demonstrations that attentional phenomena can be c
 </div>
 <div id="memory-guided-selective-attention-single-experiences-with-conflict-have-long-lasting-effects-on-cognitive-control" class="section level3">
 <h3>Memory-Guided Selective Attention: Single Experiences with Conflict Have Long-Lasting Effects on Cognitive Control</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Brosowsky, Nicholaus P., Crump, Matthew J. C. (2018). Memory-Guided Selective Attention: Single Experiences with Conflict Have Long-Lasting Effects on Cognitive Control. <em>Journal of Experimental Psychology: General, 147</em>, 1134-1153. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8749/29771565.html">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/xge0000431" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/xge0000431" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Adjustments in cognitive control, as measured by congruency sequence effects, are thought to be influenced by both external stimuli and internal goals. However, this dichotomy has often overshadowed the potential contribution of past experience stored in memory. Here, we examine the role of long-term episodic memory in guiding selective attention. Our aim was to demonstrate new evidence that selective attention can be modulated by long-term retrieval of stimulus-specific attentional control settings. All the experiments used a modified flanker task involving multiple unique stimuli. Critically, each stimulus was only presented twice during the experiment: first as a prime, and second as a probe. Experiments 1 and 2 varied the number of intervening trials between prime and probe and manipulated the amount of conflict using a secondary task. Experiment 3 ensured that specific colors assigned to prime stimuli were not repeated when presented as probes. Across both Experiments 1 and 2, we consistently found smaller congruency effects on probe trials when its associated prime trial was incongruent compared with congruent, demonstrating long-term congruency sequence effects. However, Experiment 3 showed no evidence for long-term effects. These findings suggest long-term preservation of selective attention processing at the episodic level, and implicate a role for memory in updating cognitive control.
@@ -576,8 +634,15 @@ Adjustments in cognitive control, as measured by congruency sequence effects, ar
 </div>
 <div id="parallel-regulation-of-past-present-and-future-actions-during-sequencing" class="section level3">
 <h3>Parallel Regulation of Past, Present, and Future Actions during Sequencing</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Behmer, L. P., Jantzen, K. J., Martinez, S., Walls, R., Amir-Brownstein, E., Jaye, A., Leytze, M., Lucier, K., Crump, M. J. C. (2018). Parallel Regulation of Past, Present, and Future Actions during Sequencing. <em>Journal of Experimental Psychology: Human Perception and Performance, 44</em>, 1147-1152. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8759/Behmer%20et%20al.%20-%202018.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/xhp0000507" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/xhp0000507" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Past, present, and future actions must be regulated online to produce sequences of actions, but the regulation process is not well understood because of measurement limitations. We provide the first direct tests of the parallel action regulation hypothesis during sequencing in humans. We used transcranial magnetic stimulation to probe the level of excitation for flexion of the right index finger during typing. Motor evoked potentials (MEPs) were recorded at the onset of typing 5-letter words and nonwords. A single letter typed by the right index finger varied across letter positions 1 to 5. MEP amplitude was largest for the upcoming action in the second position and decreased monotonically across future serial positions, suggesting a serial inhibition process regulates all future actions in parallel during sequencing. This is the most direct human evidence to date corroborating models of sequence production that assume parallel regulation of actions.
@@ -588,8 +653,15 @@ Past, present, and future actions must be regulated online to produce sequences 
 <h2>2017</h2>
 <div id="crunching-big-data-with-finger-tips-how-typists-tune-their-performance-towards-the-statistics-of-natural-language" class="section level3">
 <h3>Crunching Big Data with Finger Tips: How Typists Tune Their Performance towards the Statistics of Natural Language</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Behmer, Lawrence P., Crump, M. J. C. (2017). Crunching Big Data with Finger Tips: How Typists Tune Their Performance towards the Statistics of Natural Language. <em>NA, NA</em>, 319-341. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8751/Behmer%20and%20Crump%20-%202017.pdf">pdf</a> | <a href="https://github.com/CrumpLab/BehmerCrump2017_BigData">data</a>
+</div>
+</div>
+<div class="column right">
+
+</div>
 </div>
 <div id="abstractstyle">
 There is no abstract for this book chapter, but it’s one of the coolest things we’ve done. We look at how typists keystroke times become sensitive to letter, bigram, and trigram frequencies in the natural language as a function of expertise. We test some theories to boot!
@@ -597,8 +669,15 @@ There is no abstract for this book chapter, but it’s one of the coolest things
 </div>
 <div id="spatial-knowledge-during-skilled-action-sequencing-hierarchical-versus-non-hierarchical-representations" class="section level3">
 <h3>Spatial Knowledge during Skilled Action Sequencing: Hierarchical versus Non-Hierarchical Representations</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Behmer, Lawrence P., Crump, M. J. C. (2017). Spatial Knowledge during Skilled Action Sequencing: Hierarchical versus Non-Hierarchical Representations. <em>Attention, Perception &amp; Psychophysics, 79</em>, 2435-2448. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8753/Behmer%20and%20Crump%20-%202017.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3758/s13414-017-1389-3" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3758/s13414-017-1389-3" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Typists can type 4 to 5 keystrokes per second at around 95% accuracy, yet they appear to have poor declarative knowledge of key locations. Logan and Crump (2011, Psychology of Learning and Motivation, Vol. 54, pp. 127) accounted for this paradox by proposing that typing is hierarchically organized into two loops, with an outer loop that transforms sentences into words and passes each word, one at a time, to an inner loop that transforms each word into its constituent keystrokes; however, the nature of the inner loop’s spatial knowledge is not well understood. Key locations may be learned through the experiences of locating and traversing between keys. In daily life, people tend to type structured language, and, as a consequence, certain keys and key-to-key transitions are experienced more frequently than others. Here, we asked whether or not this knowledge is structured hierarchically. For example, knowledge of key locations may be nested within representations of words, or the inner loop may rely on knowledge that is independent from higher level structures. To test this, we had people type English, English-like, and random strings during normal, partially occluded, and occluded typing. In both partially occluded and occluded typing, error rates were higher while typing random strings compared to English and English-like strings, whereas there was no difference in error rates between English and English-like strings. This suggests that typists’ spatial knowledge of the keyboard is not driven by hierarchical word-level representations, but instead is likely driven by a collection of individual processes, such as knowledge of the sequential structure of language acquired by typing more frequently occurring letters.
@@ -606,8 +685,15 @@ Typists can type 4 to 5 keystrokes per second at around 95% accuracy, yet they a
 </div>
 <div id="the-dynamic-range-of-response-set-activation-during-action-sequencing." class="section level3">
 <h3>The Dynamic Range of Response Set Activation during Action Sequencing.</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Behmer, Lawrence P., Crump, Matthew J. C. (2017). The Dynamic Range of Response Set Activation during Action Sequencing.. <em>Journal of Experimental Psychology: Human Perception and Performance, 43</em>, 537-554. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/CrumpPubs/Behmer%20and%20Crump%20-%202017.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/xhp0000335" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/xhp0000335" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 During a paragraph typing task, we interrupted typist’s action planning by shifting them to an unexpected location in a word, forcing them to restart typing at the cued letter. Reaction times were fastest when the cue indicated the expected next letter in a sequence, and increased in a graded fashion as the cued letter moved away from the expected next letter. These findings contribute to our basic understanding of the processes enabling actions to be produced in an intended order, and are consistent with inhibitory theories suggesting that planned responses in a sequence inhibit one another allowing more active responses early in a sequence to be produced before less active responses later in a sequence.
@@ -618,8 +704,15 @@ During a paragraph typing task, we interrupted typist’s action planning by shi
 <h2>2016</h2>
 <div id="false-recognition-of-instruction-set-lures" class="section level3">
 <h3>False Recognition of Instruction-Set Lures</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Curtis, Evan T., Chubala, Chrissy M., Spear, Jackie, Jamieson, Randall K., Hockley, William E., Crump, M. J. C. (2016). False Recognition of Instruction-Set Lures. <em>Memory, 24</em>, 32-43. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/2677/Curtis%20et%20al.%20-%202016.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1080/09658211.2014.982657" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1080/09658211.2014.982657" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 False remembering has been examined using a variety of procedures, including the Deese-Roediger- McDermott procedure, the false fame procedure and the two-list recognition procedure. We present six experiments in a different empirical framework examining false recognition of words included in the experimental instructions (instruction-set lures). The data show that participants’ false alarm rate to instruction-set lures was twice their false alarm rate to standard lures. That result was statistically robust even when (1) the relative strength of targets to instruction-set lures was increased, (2) participants were warned about the instruction-set lures, (3) the instruction-set lures were camouflaged in the study instructions and (4) the instruction-set lures were presented verbally at study but visually at test. False recognition of instruction-set lures was only mitigated when participants were distracted between encountering the instruction-set lures and studying the training list. The results confirm the ease with which recognition succumbs to familiarity and demonstrate the robustness of false recognition.
@@ -627,8 +720,15 @@ False remembering has been examined using a variety of procedures, including the
 </div>
 <div id="learning-to-selectively-attend-from-context-specific-attentional-histories-a-demonstration-and-some-constraints" class="section level3">
 <h3>Learning to Selectively Attend From Context-Specific Attentional Histories: A Demonstration and Some Constraints</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C. (2016). Learning to Selectively Attend From Context-Specific Attentional Histories: A Demonstration and Some Constraints. <em>Canadian Journal of Experimental Psychology, 70</em>, 59-77. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/5774/Crump%20-%202016.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/cep0000066" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/cep0000066" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Multiple lines of evidence from the attention and performance literature show that attention filtering can be controlled by higher level voluntary processes and lower-level cue-driven processes (for recent reviews see Bugg, 2012; Bugg &amp; Crump, 2012; Egner, 2008). The experiments were designed to test a general hypothesis that cue-driven control learns from context-specific histories of prior acts of selective attention. Several web-based flanker studies were conducted via Amazon Mechanical Turk. Attention filtering demands were induced by a secondary one-back memory task after each trial prompting recall of the last target or distractor letter. Blocking recall demands produced larger flanker effects for the distractor than target recall conditions. Mixing recall demands and associating them with particular stimulus-cues (location, colour, letter, and font) sometimes showed rapid, contextual control of flanker interference, and sometimes did not. The results show that subtle methodological parameters can influence whether or not contextual control is observed. More generally, the results show that contextual control phenomena can be influenced by other sources of control, including other cue-driven sources competing for control.
@@ -636,8 +736,15 @@ Multiple lines of evidence from the attention and performance literature show th
 </div>
 <div id="reproducing-the-location-based-context-specific-proportion-congruent-effect-for-frequency-unbiased-items-a-reply-to-hutcheon-spieler-2016" class="section level3">
 <h3>Reproducing the Location-Based Context-Specific Proportion Congruent Effect for Frequency Unbiased Items: A Reply to Hutcheon &amp; Spieler (2016)</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Brosowsky, Nicholaus P., Milliken, Bruce (2016). Reproducing the Location-Based Context-Specific Proportion Congruent Effect for Frequency Unbiased Items: A Reply to Hutcheon &amp; Spieler (2016). <em>The Quarterly Journal of Experimental Psychology, 70</em>, 1–41. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/7656/Crump%20Brosowsky%20Milliken%20-%202016.pdf">pdf</a> | <a href="https://github.com/CrumpLab/CrumpBrosowskyMilliken_QJEP">data</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1080/17470218.2016.1206130" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1080/17470218.2016.1206130" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Stroop effects can be modulated by context-specific cues associated with different levels of proportion congruent, even for items that appear equally frequently in each context. This result has important theoretical implications, because it rules out frequency-driven learning explanations of context-specific proportion congruent (CSPC) effects and leaves open the possibility that a cue-driven retrieval process can reinstate attentional control settings in a rapid online fashion. The purpose of the present work was to address reproducibility concerns that have been raised about this finding. We conducted several reproductions and novel extensions using Amazon’s mechanical Turk in both Stroop and flanker tasks. We successfully replicated the central finding that CSPC effects can be observed for frequency- unbiased items. We also provide new Monte Carlo simulation analyses to estimate reproducibility of the phenomena that show important limitations on these designs for measuring contextual control.
@@ -645,8 +752,15 @@ Stroop effects can be modulated by context-specific cues associated with differe
 </div>
 <div id="context-specific-attentional-sampling-intentional-control-as-a-pre-requisite-for-contextual-control" class="section level3">
 <h3>Context-Specific Attentional Sampling: Intentional Control as a Pre-Requisite for Contextual Control</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Brosowsky, Nicholaus P., Crump, M. J. C. (2016). Context-Specific Attentional Sampling: Intentional Control as a Pre-Requisite for Contextual Control. <em>Consciousness and Cognition, 44</em>, 146-160. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/8750/Brosowsky%20and%20Crump%20-%202016.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1016/j.concog.2016.07.001" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1016/j.concog.2016.07.001" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Recent work suggests that environmental cues associated with previous attentional control settings can rapidly and involuntarily adjust attentional priorities. The current study tests predictions from adaptive-learning and memory-based theories of contextual control about the role of intentions for setting attentional priorities. To extend the empirical boundaries of contextual control phenomena, and to determine whether theoretical principles of contextual control are generalizable we used a novel bi-dimensional stimulus sampling task. Subjects viewed briefly presented arrays of letters and colors presented above or below fixation, and identified specific stimuli according to a dimensional (letter or color) and positional cue. Location was predictive of the cued dimension, but not the position or identity. In contrast to previous findings, contextual control failed to develop through automatic, adaptive-learning processes. Instead, previous experience with intentionally changing attentional sampling priorities between different contexts was required for contextual control to develop.
@@ -657,8 +771,15 @@ Recent work suggests that environmental cues associated with previous attentiona
 <h2>2013</h2>
 <div id="speedtrade-off-in-skilled-typewriting-decomposing-the-contributions-of-hierarchical-control-loops" class="section level3">
 <h3>SpeedTrade-off in Skilled Typewriting: Decomposing the Contributions of Hierarchical Control Loops</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Yamaguchi, Motonori, Crump, M. J. C., Logan, Gordon D. (2013). SpeedTrade-off in Skilled Typewriting: Decomposing the Contributions of Hierarchical Control Loops. <em>Journal of Experimental Psychology: Human Perception and Performance, 39</em>, 678-699. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/551/Yamaguchi%20et%20al.%20-%202013.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/a0030512" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/a0030512" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Typing performance involves hierarchically structured control systems: At the higher level, an outer loop generates a word or a series of words to be typed; at the lower level, an inner loop activates the keystrokes comprising the word in parallel and executes them in the correct order. The present experiments examined contributions of the outer- and inner-loop processes to the control of speed and accuracy in typewriting. Experiments 1 and 2 involved discontinuous typing of single words, and Experiments 3 and 4 involved continuous typing of paragraphs. Across experiments, typists were able to trade speed for accuracy but were unable to type at rates faster than 100 ms/keystroke, implying limits to the flexibility of the underlying processes. The analyses of the component latencies and errors indicated that the majority of the trade-offs were due to inner-loop processing. The contribution of outer-loop processing to the trade-offs was small, but it resulted in large costs in error rate. Implications for strategic control of automatic processes are discussed.
@@ -666,8 +787,15 @@ Typing performance involves hierarchically structured control systems: At the hi
 </div>
 <div id="prevention-and-correction-in-post-error-performance-an-ounce-of-prevention-a-pound-of-cure" class="section level3">
 <h3>Prevention and Correction in Post-Error Performance: An Ounce of Prevention, a Pound of Cure</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Logan, Gordon D. (2013). Prevention and Correction in Post-Error Performance: An Ounce of Prevention, a Pound of Cure. <em>Journal of Experimental Psychology: General, 142</em>, 692-709. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/453/CrumpLoganJEPG.pdf">pdf</a> | <a href="https://github.com/CrumpLab/CrumpLogan2013JEPG_data">data</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/a0030014" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/a0030014" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Error detection serves 2 different functions: prevention and cure. Prevention engages post-error slowing to reduce future errors, whereas cure engages processes that correct the error. Thus, prevention predicts post-error slowing, and cure does not. We investigated this distinction in skilled typists in 3 experiments. In Experiment 1, post-error performance was investigated in 800 typists who completed a short continuous typing test where correction was disallowed. In Experiments 2 and 3, post-error performance and post-correction performance were investigated by manipulating whether typists were allowed to correct their mistakes. Across experiments, there was limited evidence that typists used error detection for prevention; typists preferred the cure. After making mistakes, they corrected them and rapidly resumed typing at normal rates. Post-error slowing occurred only when correction was disabled; post-error speeding occurred when correction was enabled. This finding offers support for the novel hypothesis that post-error slowing reflects the inhibition of pre-potent tendencies to correct mistakes. Error-detection processes in general will be better understood by distinguishing between tasks that allow performers to cure their errors through correction rather than reduce their errors through prevention.
@@ -675,8 +803,15 @@ Error detection serves 2 different functions: prevention and cure. Prevention en
 </div>
 <div id="evaluating-amazons-mechanical-turk-as-a-tool-for-experimental-behavioral-research" class="section level3">
 <h3>Evaluating Amazon’s Mechanical Turk as a Tool for Experimental Behavioral Research</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., McDonnell, John V., Gureckis, Todd M. (2013). Evaluating Amazon’s Mechanical Turk as a Tool for Experimental Behavioral Research. <em>PLoS ONE, 8</em>, e57410. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/487/Crump%20et%20al.%20-%202013.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1371/journal.pone.0057410" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1371/journal.pone.0057410" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Amazon Mechanical Turk (AMT) is an online crowdsourcing service where anonymous online workers complete web-based tasks for small sums of money. The service has attracted attention from experimental psychologists interested in gathering human subject data more efficiently. However, relative to traditional laboratory studies, many aspects of the testing environment are not under the experimenter’s control. In this paper, we attempt to empirically evaluate the fidelity of the AMT system for use in cognitive behavioral experiments. These types of experiment differ from simple surveys in that they require multiple trials, sustained attention from participants, comprehension of complex instructions, and millisecond accuracy for response recording and stimulus presentation. We replicate a diverse body of tasks from experimental psychology including the Stroop, Switching, Flanker, Simon, Posner Cuing, attentional blink, subliminal priming, and category learning tasks using participants recruited using AMT. While most of replications were qualitatively successful and validated the approach of collecting data anonymously online using a web-browser, others revealed disparity between laboratory results and online results. A number of important lessons were encountered in the process of conducting these replications that should be of value to other researchers.
@@ -687,8 +822,15 @@ Amazon Mechanical Turk (AMT) is an online crowdsourcing service where anonymous 
 <h2>2012</h2>
 <div id="an-instance-theory-of-associative-learning" class="section level3">
 <h3>An Instance Theory of Associative Learning</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Jamieson, Randall K., Crump, M. J. C., Hannah, Samuel D. (2012). An Instance Theory of Associative Learning. <em>Learning &amp; Behavior, 40</em>, 61-82. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/3777/Jamieson%20et%20al.%20-%202012.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3758/s13420-011-0046-2" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3758/s13420-011-0046-2" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 We present and test an instance model of associative learning. The model, Minerva-AL, treats associative learning as cued recall. Memory preserves the events of individual trials in separate traces. A probe presented to memory contacts all traces in parallel and retrieves a weighted sum of the traces, a structure called the echo. Learning of a cueoutcome relationship is measured by the cue’s ability to retrieve a target outcome. The theory predicts a number of associative learning phenomena, including acquisition, extinction, reacquisition, conditioned inhibition, external inhibition, latent inhibition, discrimination, generalization, blocking, overshadowing, overexpectation, superconditioning, re- covery from blocking, recovery from overshadowing, recovery from overexpectation, backward blocking, back- ward conditioned inhibition, and second-order retrospec- tive revaluation. We argue that associative learning is consistent with an instance-based approach to learning and memory.
@@ -696,8 +838,15 @@ We present and test an instance model of associative learning. The model, Minerv
 </div>
 <div id="keeping-an-eye-on-guitar-skill-visual-representations-of-guitar-chords" class="section level3">
 <h3>Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Logan, Gordon D., Kimbrough, Jerry (2012). Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords. <em>Music Perception: An Interdisciplinary Journal, 30</em>, 37–47. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/472/Crump%20et%20al.%20-%202012.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1525/mp.2012.30.1.37" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1525/mp.2012.30.1.37" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 We investigate a role for vision in skilled guitar playing, focusing on visual contributions to the representation of basic first-position root chords (C, A, G, E, D). Experiment 1 involved naming or playing guitar chords displayed in different visual formats (letter, photograph, chart) and orientations. Experiment 2 employed a Stroop-like design, involving identification of the visual or auditory dimension for congruent or incongruent pairs of chord photographs and sounds. Our results demonstrate that visual represen- tations of guitar chords are orientation sensitive and associated with their corresponding actions and sounds. We discuss the implications of our findings for understanding the multimodal nature of musical skill, and consider how the format of visual information can impact acquisition of musical skill.
@@ -705,8 +854,15 @@ We investigate a role for vision in skilled guitar playing, focusing on visual c
 </div>
 <div id="in-support-of-a-distinction-between-voluntary-and-stimulus-driven-control-a-review-of-the-literature-on-proportion-congruent-effects" class="section level3">
 <h3>In Support of a Distinction between Voluntary and Stimulus-Driven Control: A Review of the Literature on Proportion Congruent Effects</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Bugg, Julie M., Crump, M. J. C. (2012). In Support of a Distinction between Voluntary and Stimulus-Driven Control: A Review of the Literature on Proportion Congruent Effects. <em>Frontiers in Psychology, 3</em>, 1-16. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/430/BuggCrump2012FC.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3389/fpsyg.2012.00367" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3389/fpsyg.2012.00367" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Cognitive control is by now a large umbrella term referring collectively to multiple processes that plan and coordinate actions to meet task goals. A common feature of paradigms that engage cognitive control is the task requirement to select relevant information despite a habitual tendency (or bias) to select goal-irrelevant information. At least since the 1970s, researchers have employed proportion congruent (PC) manipulations to experimentally establish selection biases and evaluate the mechanisms used to control attention. PC manipulations vary the frequency with which irrelevant information conflicts (i.e., is incon- gruent) with relevant information. The purpose of this review is to summarize the growing body of literature on PC effects across selective attention paradigms, beginning first with Stroop, and then describing parallel effects in flanker and task-switching paradigms. The review chronologically tracks the expansion of the PC manipulation from its initial imple- mentation at the list-wide level, to more recent implementations at the item-specific and context-specific levels. An important theoretical aim is demonstrating that PC effects at different levels (e.g., list-wide vs. item or context-specific) support a distinction between voluntary forms of cognitive control, which operate based on anticipatory information, and relatively automatic or reflexive forms of cognitive control, which are rapidly triggered by the processing of particular stimuli or stimulus features. A further aim is to highlight those PC manipulations that allow researchers to dissociate stimulus-driven control from other stimulus-driven processes (e.g., S-R responding; episodic retrieval). We conclude by dis- cussing the utility of PC manipulations for exploring the distinction between voluntary control and stimulus-driven control in other relevant paradigms.
@@ -714,8 +870,15 @@ Cognitive control is by now a large umbrella term referring collectively to mult
 </div>
 <div id="review-of-guitar-zero-the-new-musician-and-the-science-of-learning" class="section level3">
 <h3>Review of Guitar Zero: The New Musician and the Science of Learning</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C. (2012). Review of Guitar Zero: The New Musician and the Science of Learning. <em>NA, NA</em>, NA.
+</div>
+</div>
+<div class="column right">
+
+</div>
 </div>
 <div id="abstractstyle">
 NA
@@ -726,8 +889,15 @@ NA
 <h2>2011</h2>
 <div id="hierarchical-control-of-cognitive-processes-the-case-for-skilled-typewriting" class="section level3">
 <h3>Hierarchical Control of Cognitive Processes: The Case for Skilled Typewriting</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Logan, Gordon D., Crump, M. J. C. (2011). Hierarchical Control of Cognitive Processes: The Case for Skilled Typewriting. <em>NA, 54</em>, 1-27. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/501/Logan%20and%20Crump%20-%202011.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1016/B978-0-12-385527-5.00001-2" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1016/B978-0-12-385527-5.00001-2" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 The idea that cognition is controlled hierarchically is appealing to many but is difficult to demonstrate empirically. Often, nonhierarchical theories can account for the data as well as hierarchical ones do. The purpose of this chapter is to document the case for hierarchical control in skilled typing and present it as an example of a strategy for demonstrating hierarchical control in other cognitive acts. We propose that typing is controlled by two nested feedback loops that can be distinguished in terms of the factors that affect them, that communicate through intermediate representations (words), that know little about how each other work, and rely on different kinds of feedback. We discuss hierarchical control in other skills; the relation between hierarchical control and familiar concepts like automaticity, procedural memory, and implicit knowledge; and the development of hierarchical skills. We end with speculations about the role of hierarchical control in everyday cognition and the search for a meaningful life.
@@ -738,8 +908,15 @@ The idea that cognition is controlled hierarchically is appealing to many but is
 <h2>2010</h2>
 <div id="episodic-contributions-to-sequential-control-learning-from-a-typists-touch" class="section level3">
 <h3>Episodic Contributions to Sequential Control: Learning from a Typist’s Touch</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Logan, Gordon D. (2010). Episodic Contributions to Sequential Control: Learning from a Typist’s Touch. <em>Journal of Experimental Psychology: Human Perception and Performance, 36</em>, 662-672. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/484/Crump%20and%20Logan%20-%202010.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/a0018390" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/a0018390" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Sequential control over routine action is widely assumed to be controlled by stable, highly practiced representations. Our findings demonstrate that the processes controlling routine actions in the domain of skilled typing can be flexibly manipulated by memory processes coding recent experience with typing particular words and letters. In two experiments, we extended Masson’s (1986) procedure for measuring item-specific learning in the context of acquiring an unfamiliar skill to the highly skilled domain of typing. Skilled typists’ performance improved during practice with typing words composed from a specific set of letters. In a transfer phase, performance was fastest for trained words, followed by new words composed of trained letters, and slowest for new words composed of untrained letters. The finding that recent episodic experience with typing particular words and letters influences skilled typing performance holds widespread implications for theories of typing, sequence learning, and motor control.
@@ -747,8 +924,15 @@ Sequential control over routine action is widely assumed to be controlled by sta
 </div>
 <div id="cognitive-illusions-of-authorship-reveal-hierarchical-error-detection-in-skilled-typists" class="section level3">
 <h3>Cognitive Illusions of Authorship Reveal Hierarchical Error Detection in Skilled Typists</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Logan, Gordon D., Crump, M. J. C. (2010). Cognitive Illusions of Authorship Reveal Hierarchical Error Detection in Skilled Typists. <em>Science, 330</em>, 683-686. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/520/Logan%20and%20Crump%20-%202010.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1126/science.1190483" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1126/science.1190483" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 The ability to detect errors is an essential component of cognitive control. Studies of error detection in humans typically use simple tasks and propose single-process theories of detection. We examined error detection by skilled typists and found illusions of authorship that provide evidence for two error-detection processes. We corrected errors that typists made and inserted errors in correct responses. When asked to report errors, typists took credit for corrected errors and accepted blame for inserted errors, claiming authorship for the appearance of the screen. However, their typing rate showed no evidence of these illusions, slowing down after corrected errors but not after inserted errors. This dissociation suggests two error-detection processes: one sensitive to the appearance of the screen and the other sensitive to keystrokes.
@@ -756,8 +940,15 @@ The ability to detect errors is an essential component of cognitive control. Stu
 </div>
 <div id="warning-this-keyboard-will-deconstructthe-role-of-the-keyboard-in-skilled-typewriting" class="section level3">
 <h3>Warning: This Keyboard Will DeconstructThe Role of the Keyboard in Skilled Typewriting</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Logan, Gordon D. (2010). Warning: This Keyboard Will DeconstructThe Role of the Keyboard in Skilled Typewriting. <em>Psychonomic Bulletin &amp; Review, 17</em>, 394-399. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/621/Crump%20and%20Logan%20-%202010.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3758/PBR.17.3.394" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3758/PBR.17.3.394" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Skilled actions are commonly assumed to be controlled by precise internal schemas or cognitive maps. We challenge these ideas in the context of skilled typing, where prominent theories assume that typing is controlled by a well-learned cognitive map that plans finger movements without feedback. In two experiments, we dem- onstrate that online physical interaction with the keyboard critically mediates typing skill. Typists performed single-word and paragraph typing tasks on a regular keyboard, a laser-projection keyboard, and two decon- structed keyboards, made by removing successive layers of a regular keyboard. Averaged over the laser and de- constructed keyboards, response times for the first keystroke increased by 37%, the interval between keystrokes increased by 120%, and error rate increased by 177%, relative to those of the regular keyboard. A schema view predicts no influence of external motor feedback, because actions could be planned internally with high preci- sion. We argue that the expert knowledge mediating action control emerges during online interaction with the
@@ -765,8 +956,15 @@ Skilled actions are commonly assumed to be controlled by precise internal schema
 </div>
 <div id="a-memory-based-account-of-retrospective-revaluation" class="section level3">
 <h3>A Memory-Based Account of Retrospective Revaluation</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Jamieson, Randall K., Hannah, Samuel D., Crump, M. J. C. (2010). A Memory-Based Account of Retrospective Revaluation. <em>Canadian Journal of Experimental Psychology, 64</em>, 153-164. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/2040/Jamieson%20et%20al.%20-%202010%20-%20A%20memory-based%20account%20of%20retrospective%20revaluatio.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/a0020886" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/a0020886" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 We adapt an instance model of human memory, Minerva 2, to simulate retrospective revaluation. In the account, memory preserves the events of individual trials in separate traces. A probe presented to memory contacts all traces in parallel and causes each to become active. The information retrieved from memory is the sum of the activated traces. Learning is modelled as a process of cued-recall; encoding is modelled as a process of differential encoding of unexpected features in the probe (i.e., expectancy-encoding). The model captures three examples of retrospective revaluation: backward blocking, recovery from blocking, and backward conditioned inhibition. The work integrates an understanding of human memory and complex associative learning.
@@ -774,8 +972,15 @@ We adapt an instance model of human memory, Minerva 2, to simulate retrospective
 </div>
 <div id="hierarchical-control-and-skilled-typing-evidence-for-word-level-control-over-the-execution-of-individual-keystrokes" class="section level3">
 <h3>Hierarchical Control and Skilled Typing: Evidence for Word-Level Control over the Execution of Individual Keystrokes</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Logan, Gordon D. (2010). Hierarchical Control and Skilled Typing: Evidence for Word-Level Control over the Execution of Individual Keystrokes. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition, 36</em>, 1369-1380. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/562/CrumpLoganLMC2010.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/a0020696" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/a0020696" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Routine actions are commonly assumed to be controlled by hierarchically organized processes and representations. In the domain of typing theories, word-level information is assumed to activate the constituent keystrokes required to type each letter in a word. We tested this assumption directly using a novel single-letter probe technique. Subjects were primed with a visual or auditory word or a visually presented random consonant string and then probed to type a single letter from the prime or another randomly selected letter. Relative to randomly selected letters, probe responses were speeded for first, middle, and last letters contained in visual and auditory word primes but not for middle and last letters contained in random consonant primes. This suggests that word-level information causes parallel activation of constituent keystrokes, consistent with hierarchical processing. The role of hierarchical processing in typing and routine action is discussed.
@@ -783,8 +988,15 @@ Routine actions are commonly assumed to be controlled by hierarchically organize
 </div>
 <div id="contextual-control-over-task-set-retrieval" class="section level3">
 <h3>Contextual Control over Task-Set Retrieval</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Logan, Gordon D. (2010). Contextual Control over Task-Set Retrieval. <em>Attention, Perception &amp; Psychophysics, 72</em>, 2047-2053. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/491/Crump%20and%20Logan%20-%202010.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3758/APP.72.8.2047" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3758/APP.72.8.2047" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Contextual cues signaling task likelihood or the likelihood of task repetition are known to modulate the size of switch costs. We follow up on the finding by Leboe, Wong, Crump, and Stobbe (2008) that location cues predictive of the proportion of switch or repeat trials modulate switch costs. Their design employed one cue per task, whereas our experiment employed two cues per task, which allowed separate assessment of modulations to the cue-repetition benefit, a measure of lower level cue-encoding processes, and to the task-alternation cost, a measure of higher level processes representing task-set information. We demonstrate that location information predictive of switch proportion modulates performance at the level of task-set representations. Furthermore, we demonstrate that contextual control occurs even when subjects are unaware of the associations between context and switch likelihood. We discuss the notion that contextual information provides rapid, unconscious control over the extent to which prior task-set representations are retrieved in the service of guiding online performance.
@@ -792,8 +1004,15 @@ Contextual cues signaling task likelihood or the likelihood of task repetition a
 </div>
 <div id="do-you-know-where-your-fingers-have-been-explicit-knowledge-of-the-spatial-layout-of-the-keyboard-in-skilled-typists" class="section level3">
 <h3>Do You Know Where Your Fingers Have Been? Explicit Knowledge of the Spatial Layout of the Keyboard in Skilled Typists</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Liu, Xianyun, Crump, M. J. C., Logan, Gordon D. (2010). Do You Know Where Your Fingers Have Been? Explicit Knowledge of the Spatial Layout of the Keyboard in Skilled Typists. <em>Memory &amp; Cognition, 38</em>, 474-484. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/774/Liu%20et%20al.%20-%202010.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3758/MC.38.4.474" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3758/MC.38.4.474" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Two experiments evaluated skilled typists’ ability to report knowledge about the layout of keys on a standard keyboard. In Experiment 1, subjects judged the relative direction of letters on the computer keyboard. One group of subjects was asked to imagine the keyboard, one group was allowed to look at the keyboard, and one group was asked to type the letter pair before judging relative direction. The imagine group had larger angular error and longer response time than both the look and touch groups. In Experiment 2, subjects placed one key relative to another. Again, the imagine group had larger angular error, larger distance error, and longer response time than the other groups. The two experiments suggest that skilled typists have poor explicit knowl- edge of key locations. The results are interpreted in terms of a model with two hierarchical parts in the system controlling typewriting.
@@ -804,8 +1023,15 @@ Two experiments evaluated skilled typists’ ability to report knowledge about t
 <h2>2009</h2>
 <div id="applying-signal-detection-theory-to-contingency-assessment" class="section level3">
 <h3>Applying Signal Detection Theory to Contingency Assessment</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Siegel, Shepard, Allan, Lorraine G., Hannah, Samuel D., Crump, M. J. C. (2009). Applying Signal Detection Theory to Contingency Assessment. <em>Comparative Cognition &amp; Behavior Reviews, 4</em>, 116-134. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/603/Siegel%20et%20al.%20-%202009.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3819/ccbr.2009.40012" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3819/ccbr.2009.40012" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 In most studies of contingency assessment participants judge the magnitude of the relationship between cues and outcomes. This judgment is a conflated measure of the participant’s sensitivity to the cue-outcome relationship, and his or her response bias. A psychophysical model (signal detection theory, SDT) can be used to dissect the independent contributions of sensi- tivity and bias to contingency judgment. Results of an experiment concerning cue-interaction (blocking) illustrate the util- ity of applying SDT to understanding contingency assessment. Most accounts of such assessment are associative (derived primarily from Pavlovian conditioning experiments with non-human animals). A psychophysical analysis of contingency assessment is not an alternative to such associative accounts. The SDT analysis supplements (not replaces) learning prin- ciples with psychophysical principles.
@@ -813,8 +1039,15 @@ In most studies of contingency assessment participants judge the magnitude of th
 </div>
 <div id="cue-interaction-effects-in-contingency-judgments-using-the-streamed-trial-procedure" class="section level3">
 <h3>Cue-Interaction Effects in Contingency Judgments Using the Streamed-Trial Procedure</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Hannah, Samuel D., Crump, M. J. C., Allan, Lorraine G., Siegel, Shepard (2009). Cue-Interaction Effects in Contingency Judgments Using the Streamed-Trial Procedure. <em>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie exp'erimentale, 63</em>, 103-112. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/574/Hannah%20et%20al.%20-%202009.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/a0013521" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/a0013521" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 The authors previously described a procedure that permits rapid, multiple within-participant assessments of the contingency between a cue and an outcome (the ``streamed-trial’’ procedure, Crump, Hannah, Allan, &amp; Hord, 2007). In the present experiments, the authors modified this procedure to investigate cue-interaction effects, replicating conventional findings in both the one- and two-phase blocking paradigms. The authors show that the streamed-trial procedure is not restricted to the geometric forms used as cues and outcomes by Crump et al., and that it can incorporate the conventional allergy stimuli, where food is the cue and an allergic reaction is the outcome. The authors discuss the value of the streamed-trial procedure as a method for advancing our theoretical understanding of cue-interaction effects.
@@ -822,8 +1055,15 @@ The authors previously described a procedure that permits rapid, multiple within
 </div>
 <div id="the-flexibility-of-context-specific-control-evidence-for-context-driven-generalization-of-item-specific-control-settings" class="section level3">
 <h3>The Flexibility of Context-Specific Control: Evidence for Context-Driven Generalization of Item-Specific Control Settings</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Milliken, Bruce (2009). The Flexibility of Context-Specific Control: Evidence for Context-Driven Generalization of Item-Specific Control Settings. <em>The Quarterly Journal of Experimental Psychology, 62</em>, 1523-1532. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/643/Crump%20and%20Milliken%20-%202009.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1080/17470210902752096" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1080/17470210902752096" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 In two experiments we address an ongoing debate concerning the processes driving context-driven modulations to the Stroop effect (Crump, Gong, &amp; Milliken, 2006). In particular, we demonstrate that context-driven processes can modulate the size of the Stroop effect for frequency-unbiased item types. We also clarify the role of item frequency in producing context-driven modulations to the Stroop effect. Taken together, our results provide unambiguous support for the claim that contex- tual processing can impart fast and flexible control over the operation of selective attention processes during online performance.
@@ -831,8 +1071,15 @@ In two experiments we address an ongoing debate concerning the processes driving
 </div>
 <div id="the-left-hand-doesnt-know-what-the-right-hand-is-doing-the-disruptive-effects-of-attention-to-the-hands-in-skilled-typewriting" class="section level3">
 <h3>The Left Hand Doesn’t Know What the Right Hand Is Doing: The Disruptive Effects of Attention to the Hands in Skilled Typewriting</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Logan, Gordon D., Crump, M. J. C. (2009). The Left Hand Doesn’t Know What the Right Hand Is Doing: The Disruptive Effects of Attention to the Hands in Skilled Typewriting. <em>Psychological Science, 20</em>, 1296–1300. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/815/Logan%20and%20Crump%20-%202009.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1111/j.1467-9280.2009.02442.x" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1111/j.1467-9280.2009.02442.x" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 Everyone knows that attention to the details disrupts skilled performance, but little empirical evidence documents this fact. We show that attention to the hands disrupts skilled typewriting. We had skilled typists type words preceded by cues that told them to type only the letters assigned to one hand or to type all of the letters. Cuing the hands disrupted performance markedly, slowing typing and increasing the error rate (Experiment 1); these deleterious effects were observed even when no keystrokes were actually inhibited (Experiment 3). However, cuing the same letters with colors was not disruptive (Experi- ment 2). We account for the disruption with a hierarchical control model, in which an inner loop controls the hands and an outer loop controls what is typed. Typing letters using only one hand requires the outer loop to monitor the inner loop’s output; the outer loop slows inner-loop cycle time to increase the likelihood of inhibiting responses with the unwanted hand. This produces the disruption.
@@ -843,8 +1090,15 @@ Everyone knows that attention to the details disrupts skilled performance, but l
 <h2>2008</h2>
 <div id="probe-specific-proportion-task-repetition-effects-on-switching-costs" class="section level3">
 <h3>Probe-Specific Proportion Task Repetition Effects on Switching Costs</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Leboe, J. P., Wong, J., Crump, M. J. C., Stobbe, K. (2008). Probe-Specific Proportion Task Repetition Effects on Switching Costs. <em>Perception &amp; Psychophysics, 70</em>, 935-945. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/768/Leboe%20et%20al.%20-%202008.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3758/PP.70.6.935" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3758/PP.70.6.935" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 In two experiments, participants were presented with successive presentations of animal names (e.g., gorilla, whale)a prime display followed by a probe display. In response to each display, participants judged either the typical habitat or the relative size of those animals, repeating the same task in response to both displays on half of the experimental trials and switching from one task to the other on the other half of trials. Our results demonstrate that switch costs can be reduced when either the probe’s identity or its location is predictive of a change in task. This result establishes that the presentation of a stimulus can serve as a rapid cue for facilitating a switch in task, independent of processes occurring both at the time of the prime task and during the intervening period between the prime and probe tasks. We discuss the implications of these results for prevailing explana- tions of task switching costs.
@@ -852,8 +1106,15 @@ In two experiments, participants were presented with successive presentations of
 </div>
 <div id="shifting-views-on-the-symbolic-cueing-effect-cueing-attention-through-recent-prior-experience" class="section level3">
 <h3>Shifting Views on the Symbolic Cueing Effect: Cueing Attention through Recent Prior Experience</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Milliken, Bruce, Ansari, Imran (2008). Shifting Views on the Symbolic Cueing Effect: Cueing Attention through Recent Prior Experience. <em>Psicol'ogica, 29</em>, 97–114. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/2023/Crump%20et%20al.%20-%202007%20-%20Shifting%20views%20on%20the%20symbolic%20cueing%20effect%20Cuei.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+
+</div>
 </div>
 <div id="abstractstyle">
 Several studies have demonstrated that centrally presented, non-predictive, directional symbols (arrows, directional words, eye gaze) can influence response times to detect the onset of a target item presented in a peripheral location. Although symbolic cueing effects have been reliably demonstrated, the underlying mechanisms that produce these effects are not well understood. In two experiments we test the idea that perceptual integration between cue-target pairs mediates symbolic cueing effects. Our findings suggest symbolic cueing effects may not necessarily reflect the orienting power of highly over-learned directional symbols. Rather, symbolic cueing effects are also mediated by relatively recent experiences with coherent cue- target objects during the experimental session. We elaborate on the implications of our findings for conventional explanations of symbolic cueing effects.
@@ -861,8 +1122,15 @@ Several studies have demonstrated that centrally presented, non-predictive, dire
 </div>
 <div id="context-specific-learning-and-control-the-roles-of-awareness-task-relevance-and-relative-salience" class="section level3">
 <h3>Context-Specific Learning and Control: The Roles of Awareness, Task Relevance, and Relative Salience</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Vaquero, Joaqu'in M.M., Milliken, Bruce (2008). Context-Specific Learning and Control: The Roles of Awareness, Task Relevance, and Relative Salience. <em>Consciousness and Cognition, 17</em>, 22-36. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/748/Crump%20et%20al.%20-%202008.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1016/j.concog.2007.01.004" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1016/j.concog.2007.01.004" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 The processes mediating dynamic and flexible responding to rapidly changing task-environments are not well under- stood. In the present research we employ a Stroop procedure to clarify the contribution of context-sensitive control processes to online performance. In prior work Stroop interference varied as a function of probe location context, with larger Stroop interference occurring for contexts associated with a high proportion of congruent items [Crump, M. J., Gong, Z., &amp; Milliken, B. (2006). The context-specific proportion congruent stroop effect: location as a contextual cue. Psychonomic Bulletin &amp; Review, 13, 316321.] Here, we demonstrate that this effect does not depend on awareness of the context manipulation, but that it can depend on attention to the predictive context dimension, and on the relative salience of the target and predictive context dimensions. We discuss the implications of our results for current theories of cognitive control.
@@ -870,8 +1138,15 @@ The processes mediating dynamic and flexible responding to rapidly changing task
 </div>
 <div id="the-psychophysics-of-contingency-assessment." class="section level3">
 <h3>The Psychophysics of Contingency Assessment.</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Allan, Lorraine G., Hannah, Samuel D., Crump, M. J. C., Siegel, Shepard (2008). The Psychophysics of Contingency Assessment.. <em>Journal of Experimental Psychology: General, 137</em>, 226-243. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/533/Allan%20et%20al.%20-%202008.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1037/0096-3445.137.2.226" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1037/0096-3445.137.2.226" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 The authors previously described a procedure that permits rapid, multiple within-participant evaluations of contingency assessment (the ``streamed-trial’’ procedure, M. J. C. Crump, S. D. Hannah, L. G. Allan, &amp; L. K. Hord, 2007). In the present experiments, they used the streamed-trial procedure, combined with the method of constant stimuli and a binary classification response, to assess the psychophysics of contingency assessment. This strategy provides a methodology for evaluating whether variations in contingency assessment reflect changes in the participant’s sensitivity to the contingency or changes in the participant’s response bias (or decision criterion). The sign of the contingency (positive or negative), outcome density, and imposition of an explicit payoff structure had little influence on sensitivity to contingencies but did influence the decision criterion. The authors discuss how a psychophysical analysis can provide a better understanding of findings in the literature such as mood and age effects on contingency assessment. They also discuss the relation between a psychophysical approach and an associative account of contingency assessment.
@@ -882,8 +1157,15 @@ The authors previously described a procedure that permits rapid, multiple within
 <h2>2007</h2>
 <div id="contingency-judgements-on-the-fly" class="section level3">
 <h3>Contingency Judgements on the Fly</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Hannah, Samuel D., Allan, Lorraine G., Hord, Lauren K. (2007). Contingency Judgements on the Fly. <em>The Quarterly Journal of Experimental Psychology, 60</em>, 753-761. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/442/Crump%20et%20al.%20-%202007.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1080/17470210701257685" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1080/17470210701257685" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 The present research was conducted to establish the validity of a novel procedure for measuring human contingency judgements aimed at shortening the length of conventional procedures. Cues and outcomes were simple geometric shapes that were presented in a rapid streaming fashion, reducing the length of a block of trials from several minutes to a few seconds. We establish the reliability of the procedure by replicating two central findings in the contingency judgement literature, and we elaborate on the importance of this method for future research.
@@ -891,8 +1173,15 @@ The present research was conducted to establish the validity of a novel procedur
 </div>
 <div id="contingency-learning-without-awareness-evidence-for-implicit-control" class="section level3">
 <h3>Contingency Learning without Awareness: Evidence for Implicit Control</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Schmidt, James R., Crump, M. J. C., Cheesman, Jim, Besner, Derek (2007). Contingency Learning without Awareness: Evidence for Implicit Control. <em>Consciousness and Cognition, 16</em>, 421-435. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/1081/Schmidt%20et%20al.%20-%202007%20-%20Contingency%20learning%20without%20awareness%20Evidence%20f.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.1016/j.concog.2006.06.010" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.1016/j.concog.2006.06.010" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 The results of four experiments provide evidence for controlled processing in the absence of awareness. Participants identified the colour of a neutral distracter word. Each of four words (e.g., MOVE) was presented in one of the four col- ours 75% of the time (Experiments 1 and 4) or 50% of the time (Experiments 2 and 3). Colour identification was faster when the words appeared in the colour they were most often presented in relative to when they appeared in another colour, even for participants who were subjectively unaware of any contingencies between the words and the colours. An analysis of sequence effects showed that participants who were unaware of the relation between distracter words and colours none- theless controlled the impact of the word on performance depending on the nature of the previous trial. A block analysis of contingency-unaware participants revealed that contingencies were learned rapidly in the first block of trials. Experiment 3 showed that the contingency effect does not depend on the level of awareness, thus ruling out explicit strategy accounts. Finally, Experiment 4 showed that the contingency effect results from behavioural control and not from semantic associ- ation or stimulus familiarity. These results thus provide evidence for implicit control.
@@ -903,8 +1192,15 @@ The results of four experiments provide evidence for controlled processing in th
 <h2>2006</h2>
 <div id="the-context-specific-proportion-congruent-stroop-effect-location-as-a-contextual-cue" class="section level3">
 <h3>The Context-Specific Proportion Congruent Stroop Effect: Location as a Contextual Cue</h3>
+<div class="row">
+<div class="column left">
 <div id="citationstyle">
 Crump, M. J. C., Gong, Zhiyu, Milliken, Bruce (2006). The Context-Specific Proportion Congruent Stroop Effect: Location as a Contextual Cue. <em>Psychonomic Bulletin &amp; Review, 13</em>, 316–321. <a href="https://github.com/CrumpLab/CrumpLab.github.io/raw/master/files/1832/Crump%20et%20al.%20-%202006%20-%20The%20context-specific%20proportion%20congruent%20Stroop%20e.pdf">pdf</a>
+</div>
+</div>
+<div class="column right">
+<span class="__dimensions_badge_embed__" data-doi="10.3758/bf03193850" data-style="small_circle" data-legend="hover-left" style="text-align:right;"></span><span class="altmetric-embed" data-badge-popover="left" data-badge-type="donut" data-doi="10.3758/bf03193850" data-hide-no-mentions="true" style="text-align:right;"></span>
+</div>
 </div>
 <div id="abstractstyle">
 The Stroop effect has been shown to depend on the relative proportion of congruent and incongruent trials. This effect is commonly attributed to experiment-wide word-reading strategies that change as a function of proportion congruent. Recently, Jacoby, Lindsay, and Hessels (2003) reported an item-specific proportion congruent effect that cannot be due to these strategies and instead may reflect rapid, stimulus driven control over word-reading processes. However, an item-specific proportion congruent effect may also reflect learned associations between color word identities and responses. In two experiments, we demonstrate a context-specific proportion congruent effect that cannot be explained by such wordresponse associations. Our results suggest that processes other than learning of wordresponse associations can produce contextual control over Stroop interference.

@@ -58,23 +58,44 @@ for(i in 1:dims[1]){
   }
   
   cat(c("###",bib_df[i,]$TITLE)) #title
+  
   cat(c("\n"))
-  cat(c("<div id=citationstyle>"))
-  cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=", "), " (",
-        bib_df[i,]$YEAR, "). ",
-        bib_df[i,]$TITLE, ". *",
-        bib_df[i,]$JOURNAL, ", ",
-        bib_df[i,]$VOLUME, "*, ",
-        bib_df[i,]$PAGES, "."), sep="")
-  if(is.na(a)==FALSE){
-    cat(c(" ", "[pdf](",file_path,")"), sep="")
-  }
-  get_data <- bib_df[i,]$NOTE
-  if(is.na(get_data)==FALSE){
-    cat(c(" | ", get_data), sep="")
-  }
-
-  cat(c("</div>"))
+  
+  cat("<div class='row'>")
+    cat("<div class='column left'>")
+      cat(c("<div id=citationstyle>"))
+      cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=", "), " (",
+            bib_df[i,]$YEAR, "). ",
+            bib_df[i,]$TITLE, ". *",
+            bib_df[i,]$JOURNAL, ", ",
+            bib_df[i,]$VOLUME, "*, ",
+            bib_df[i,]$PAGES, "."), sep="")
+      if(is.na(a)==FALSE){
+        cat(c(" ", "[pdf](",file_path,")"), sep="")
+      }
+      get_data <- bib_df[i,]$NOTE
+      if(is.na(get_data)==FALSE){
+        cat(c(" | ", get_data), sep="")
+      }
+      
+      cat(c("</div>"))
+    
+    cat("</div>")
+  cat("<div class='column right'>")
+    get_doi <- bib_df[i,]$DOI
+    if(is.na(get_doi)==FALSE){
+      cat("<span class='__dimensions_badge_embed__' data-doi='",get_doi,"' data-style='small_circle' data-legend='hover-left' style = 'text-align:right;'></span>", sep="")
+      cat("<span data-badge-popover='left' data-badge-type='donut' data-doi='",get_doi,"' data-hide-no-mentions='true' class='altmetric-embed' style = 'text-align:right;'></span>", sep="")
+    }
+  
+  cat("</div>")
+  cat("</div>")
+  
+  
+  
+  
+  
+    
   cat(c("\n"))
   cat(c("\n"))
   cat(c("<div id = abstractstyle>"))
