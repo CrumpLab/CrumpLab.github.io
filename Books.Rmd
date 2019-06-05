@@ -20,7 +20,8 @@ These books and various OERs (open-educational resources) were made using RMarkd
 
 **Description**: This is a free introductory statistics textbook for undergraduates in Psychology. It is being developed as an Open Educational Resource @ Brooklyn College. It is pitched at the concepts behind statistics, and often uses simulation in R to convey foundational ideas. The writing style is sometimes a bit unconventional, and informal. It is for students who don't want to like statistics. 
 
-Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/statistics](https://github.com/CrumpLab/statistics).
+Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/statistics](https://github.com/CrumpLab/statistics)
+
 **Citation:** Crump, M. J. C., Navarro, D., & Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52
 
 </div>
