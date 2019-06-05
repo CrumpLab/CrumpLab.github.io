@@ -1,5 +1,5 @@
 ---
-title: "Books"
+title: "Books and OERs"
 output: 
   html_document:
     includes:
@@ -7,25 +7,25 @@ output:
     css: front.css
 ---
 
-These books were made using RMarkdown and compiled in Bookdown. They are all free, open-source, and licensed on creative commons.
+These books and various OERs (open-educational resources) were made using RMarkdown and compiled in Bookdown. They are all free, open-source, and licensed on creative commons.
 
 ---
 
 <div class="row">
 <div class="col-sm-6">
 
-#### Answering Questions with Data
-
-Introductory Statistics for Psychology Students
+#### Answering Questions with Data: Introductory Statistics for Psychology Students
 
 **Authors**: Matthew Crump; Chapters 2 and 4 adapted from Navarro, D.; Videos: Jeffrey Suzuki
 
 **Description**: This is a free introductory statistics textbook for undergraduates in Psychology. It is being developed as an Open Educational Resource @ Brooklyn College. It is pitched at the concepts behind statistics, and often uses simulation in R to convey foundational ideas. The writing style is sometimes a bit unconventional, and informal. It is for students who don't want to like statistics. 
 
 Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/statistics](https://github.com/CrumpLab/statistics).
+**Citation:** Crump, M. J. C., Navarro, D., & Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52
 
 </div>
 <div class="col-sm-6">
+<div data-badge-popover="right" data-badge-type="donut" data-doi="10.17605/OSF.IO/JZE52" data-hide-no-mentions="true" class="altmetric-embed"></div>
 <a href="https://crumplab.github.io/statistics/">
 ```{r statsTextbook, out.width=200, echo=F}
 knitr::include_graphics("images/TextbookCover.png")
@@ -47,15 +47,47 @@ Lab activities using R, Excel, SPSS, and JAMOVI
 
 **Description**: This is the companion lab manual to our free stats book. It contains lab activities for learning how to conduct statistical tests in R, Excel, SPSS, and JAMOVI. We use open data, often from psychology papers, and show step-by-step how to solve data-analysis problems in each software package. 
 
-Some of the labs are adapated from [Open Stats Lab](https://sites.trinity.edu/osl), which is another great resource.
+Some of the labs are adapated from [Open Stats Lab](https://sites.trinity.edu/osl), another great resource.
 
 **Source code**: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/statisticsLab](https://github.com/CrumpLab/statisticsLab).
 
+**Citation**: Crump, M. J. C., Krishnan, A., Volz, S., & Chavarga, A. (2019, June 5). Answering Questions with Data: The Lab Manual for R, Excel, SPSS and Jamovi. https://doi.org/10.17605/OSF.IO/M2NPJ 
+
 </div>
 <div class="col-sm-6">
+<div data-badge-popover="right" data-badge-type="donut" data-doi="10.17605/OSF.IO/M2NPJ" data-hide-no-mentions="true" class="altmetric-embed"></div>
 <a href="https://crumplab.github.io/statisticsLab/">
 ```{r StatsLab, out.width=200, echo=F}
 knitr::include_graphics("images/LabmanualCover.png")
+```
+</a>
+</div>
+</div>
+
+----
+
+
+<div class="row">
+<div class="col-sm-6">
+
+#### Answering Questions with Data: The Course Website
+
+A copiable course website for introductory statistisc
+
+**Authors**: Matthew Crump
+
+**Description**: This website was created in R Markdown. It contains most of the course materials I use when teaching undergraduate statistics for psychology. IT includes slide decks for presentations.
+
+**Source code**: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository [https://github.com/CrumpLab/psyc3400](https://github.com/CrumpLab/psyc3400).
+
+**Citation** : Crump, M. J. C. (2019, June 5). Answering Questions with Data: Course Website. https://doi.org/10.17605/OSF.IO/AWXU9
+
+</div>
+<div class="col-sm-6">
+<div data-badge-popover="right" data-badge-type="donut" data-doi="10.17605/OSF.IO/AWXU9" data-hide-no-mentions="true" class="altmetric-embed"></div>
+<a href="https://crumplab.github.io/psyc3400/">
+```{r StatsWeb, out.width=200, echo=F}
+knitr::include_graphics("images/Psyc3400.png")
 ```
 </a>
 </div>
