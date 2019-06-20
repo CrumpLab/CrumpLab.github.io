@@ -26,7 +26,7 @@ bibliography: [Crump.bib, typing.bib]
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 
 # Create header.html
 CON <- file("header_blog.html")
@@ -75,7 +75,23 @@ Much later...
 
 Ok, did some googling and tried out a bunch of things. I found some great packages that already exist, so am going to play around with them a bit. These packages include `textreuse` ([https://docs.ropensci.org/textreuse/](https://docs.ropensci.org/textreuse/)), and `tabulizer` (https://github.com/ropensci/tabulizer, which unfortunately depends on Java, but allows for importing pdfs with 2 columns, useful for scientific papers). Finally, there is the `cheatr` package [https://github.com/mattansb/cheatR](https://github.com/mattansb/cheatR), that comes with a shiny app, and a nice [story about how their package came to be.](https://mattansb.blogspot.com/2018/07/cheatr-r-package-for-catching-cheaters.html)
 
-Time to get back to playjareyesores.
+Time to get back to playjareyesores...I've made some progress and am slowly identifying what I'm looking for. The textreuse package is simply awesome, it's a heavyweight document comparator. It's got a really cool function called `align_local`, which attempts to find the best alignment between two documents. This works really well, and if you are in a pinch and want to see if there is substantial overlap between two texts, then go with align local. The cheatr package is also pretty snazzy. They use n-gram methods, which are great, and similar to what I was doing before. The n-gram method splits the documents into phrases of a set lenght, and then looks for overlap at the phrase level.
+
+However, I still found myself wanting something more specific. I wrote a handful of functions (wrappers mostly) to read and clean various kinds of text into R. I added my version of n-gram comparison, and now I'm about to focus on the reporting aspect. For example, I'd like to generate a nice, comprehensive report of the similarities between two documents. What should it include? Not sure yet...Maybe I should brainstorm with nomnoml.
+
+```{r report, echo= FALSE}
+
+nomnoml::nomnoml(
+"#direction: down
+[Report|one function|pops out html or pdf? |does these things] -> [ngram metrics| ngram proportion overlap | across multiple levels | expected overlap?]
+[Report] -> [the ngrams | print out the 
+ones that overlap]
+[Report] -> [The documents | Side by side? | overlap highlights]",
+height = 400, width=400)
+```
+
+
+
 
 # Blogging about the Semantic Librarian
 
