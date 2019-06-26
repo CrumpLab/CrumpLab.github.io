@@ -44,6 +44,14 @@ Using this mainly as a place to make notes for myself so I don't forget what I'm
 
 --------------------------
 
+# A Hodge-Podge Theory of Method (HP-TOM)
+
+I'm smoking a pork shoulder today, so naturally I felt compelled to produce a hodge-podge theory of method to express my cluttered views on science before I head out to buy potato buns.
+
+[My half-smoked HP-TOM is right here](https://crumplab.github.io/blogposts/hodgepodge/hodgepodge.Rmd). And, again for the record. I have been smoking a pork shoulder.
+
+--------------------------
+
 # playjareyesores | an R package for detecting  plagiarism
 
 2019-06-20, last compiled: `r Sys.Date()`
