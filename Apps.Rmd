@@ -20,9 +20,37 @@ Shiny Apps, R packages, and various things
 
 ----
 
+<div class="row">
+<div class="col-sm-8">
+
+#### [playjareyesores](https://crumplab.github.io/playjareyesores/)
+
+Functions for detecting textual overlap (e.g., possible plagiarism) between documents [https://crumplab.github.io/playjareyesores/](https://crumplab.github.io/playjareyesores/)
+
+</div>
+<div class="col-sm-4">
+```{r playjar, out.width=100, echo=F}
+knitr::include_graphics("images/playjareyesores.png")
+```
+</div>
+</div>
+
+----
+
+<div class="row">
+<div class="col-sm-8">
+
 #### [conflictPower](https://crumplab.github.io/conflictPower/)
 
 Monte-carlo based power analysis for cognitive control designs. [https://crumplab.github.io/conflictPower/](https://crumplab.github.io/conflictPower/)
+
+</div>
+<div class="col-sm-4">
+```{r CP, out.width=100, echo=F}
+knitr::include_graphics("images/ConflictPower.png")
+```
+</div>
+</div>
 
 -----
 
@@ -45,7 +73,7 @@ We (Harinder Aujla, Randy Jamieson, and Matthew Crump) use semantic vectors from
 - [https://crumplab.shinyapps.io/SemanticLibrarian/](https://crumplab.shinyapps.io/SemanticLibrarian/)
 - source code: [https://github.com/CrumpLab/SemanticLibrarian](https://github.com/CrumpLab/SemanticLibrarian)
 - Open science framework project: [https://osf.io/wfcmg/](https://osf.io/wfcmg/)
-- Publication: currently under review at Behavioral Research Methods.
+- Publication: In press at Behavioral Research Methods.
 
 -----
 
