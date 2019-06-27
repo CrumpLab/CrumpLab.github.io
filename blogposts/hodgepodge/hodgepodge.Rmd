@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 ---
 
-Once in a while the philosophies of science spin around my head making me wonder if I ascribe to any of them. Their proponents say I should, but the opponents say I shouldn't. At the end of the day, I just do things, make mistakes and learn from them. I'm guessing trying to form my own theory of method will be a mistake that I will learn from.
+<p class="subhead"><span class="first-letter">O</span>nce in a while the philosophies of science spin around my head making me wonder if I ascribe to any of them. Their proponents say I should, but the opponents say I shouldn't. At the end of the day, I just do things, make mistakes and learn from them. I'm guessing trying to form my own theory of method will be a mistake that I will learn from.</p>
 
 Because I'm very far behind in my reading of the philosophy of science, I don't know if anyone has proposed the hodge-podge theory of method. So, for fun, I'll propose it. The hodge-podge theory of method (HP-TOM) is: **do things that are useful for what you are doing**. Some additional tenets might be:
 
