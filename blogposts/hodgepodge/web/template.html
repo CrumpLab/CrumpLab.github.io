@@ -549,7 +549,15 @@ $if(title)$
 $if(subtitle)$
 <h3 class="subtitle">$subtitle$</h3>
 $endif$
-<div class="social_media">
+
+$if(author)$
+<span class="author">$author$  |  </span>
+$endif$
+$if(date)$
+<span class="date">$date$</span>
+$endif$
+
+<span class="social_media">
 $if(twitter)$
 <a href=$twitter$><i class="fa fa-twitter"></i></a>
 $endif$
@@ -559,24 +567,8 @@ $endif$
 $if(website)$
 <a  href="$website$"><i class="fa fa-university"></i></a>
 $endif$
-</div>
-$for(author)$
-$if(author.name)$
-<h4 class="author">$author.name$</h4>
-$if(author.affiliation)$
-<address class="author_afil">
-$author.affiliation$<br>$endif$
-$if(author.email)$
-<a class="author_email" href="mailto:#">$author.email$</a>
-</address>
-$endif$
-$else$
-<h4 class="author">$author$</h4>
-$endif$
-$endfor$
-$if(date)$
-<h4 class="date">$date$</h4>
-$endif$
+</span>
+
 $if(abstract)$
 <div class="abstract">
 <p class="abstract">Abstract</p>
