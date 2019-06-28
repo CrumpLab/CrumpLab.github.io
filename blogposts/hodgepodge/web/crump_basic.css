@@ -1,7 +1,7 @@
 
 /*Table of contents active color*/
 .list-group-item.active {
-  background-color: #72687a;
+  background-color: #72687a!important;
   border-color: #72687a;
 }
 
@@ -80,6 +80,7 @@ div.references p{
   padding: 10px;
   font-size: 15px;
   font-weight: 400;
+  background-color: #d8d1de;
 }
 
 .tocify-header {
