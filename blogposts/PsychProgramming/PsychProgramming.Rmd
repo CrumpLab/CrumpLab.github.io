@@ -63,8 +63,20 @@ Momentarilly got sucked down a rabbit hole trying to figure out how I want to li
 
 ```{r, results='asis', echo=FALSE}
 library(knitcitations)
+library(RefManageR)
 bib <- read.bibtex("refs.bib")
-bib[["bennedsenFailureRatesIntroductory2019"]]
+a<-bib[["bennedsenFailureRatesIntroductory2019"]]
+b<-unlist(a)
+
+in_text_ref <- function(x){
+  b<-capture.output(print(x,.opts = list(bib.style = "authoryear", first.inits = TRUE, style = "markdown",no.print.fields=c("URL","urldate","issn","doi"))))
+  cat("### ")
+  cat(b,collapse=" ")
+  
+}
+
+in_text_ref(bib["bennedsenFailureRatesIntroductory2019"])
+
 ```
 
 @bennedsenFailureRatesIntroductory2019 follow up on their previous paper looking at failure rates in introductory CS1 classes. The previously reported 33% failure rates (in 2007), and are now reporting 28%, a small reduction. One conclusion is the failure rate is not overwhelmingly bad. I remember failing CS1 as an undergrad, so count me in. Too bad CS1 isn't a liberal arts requirement (at least I don't think it is in general). It would be nice to know what the failure rate is for students who don't intend to major in CS.
@@ -72,7 +84,7 @@ bib[["bennedsenFailureRatesIntroductory2019"]]
 --- 
 
 ```{r, results='asis', echo=FALSE}
-bib[["linnCaseCaseStudies1992"]]
+in_text_ref(bib["linnCaseCaseStudies1992"])
 ```
 
 @linnCaseCaseStudies1992 describe and advocate a "case study" approach. Students are given a problem (e.g., write a program to print block letters given input letters), and are shown "expert" notes on how to organize an algorithm to solve the problem. Methods and results are minimal, but a graph is shown at the end with some data indicating a small benefit to scoring higher on the problem given info about other students solutions along with expert notes. The authors note that students complained about having to read 20 pages worth of expert commentary that was part of the "helpful" learning material, yikes.
@@ -96,6 +108,63 @@ Next, you might want to norm/validate the problems. How to do this? Well, you mi
 I suppose at the end of the day you might want some kind of standardized set of problems where "people" agree that being able to solve these problems (to some criterion score) means that you have picked up on some desirable skills for the domain. Then, if you have that, you can start working on optimizing training. This could be done without much theory, and a lot of artful guesswork; or it could be done with theory. For example without theory, and with access to a large body of students, one could go about "trying out" various transfer of training designs, having some students try X first, or try Y first, to determine which first thing is best, and which second thing to learn is next best etc. 
 
 I'm getting away from my task of reviewing the literature. Need to stay on target.
+
+## More papers
+
+--- 
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["winslowProgrammingPedagogyPsychological1996"])
+```
+
+@winslowProgrammingPedagogyPsychological1996 present a short, sort of review/opinion piece on some general features of novice to expert skill learning (from cognitive psych) as they relate to learning the skill of computer programming. Some nuggets:
+
+- "At all levels, people progress to the next level by solving problems. The old saw that practice makes perfect has solid psychological basis." Couldn't agree more that progress is made by solving problems. Part of the problem is figure out which problems are worth solving first
+- Some talk about mental models, which I always find to be vaguely defined. At the very least, I tend to agree that having frames to hang a concept on is helpful. Some frames that popped up as being helpful were these two acronynms:
+  - ICO pattern : Input -> Calculate -> Output
+  - IRT pattern : Initialize -> Repeat -> Terminate
+- Task vs. problem. Tasks are "goals with a known solution", and problems are "a goal with no familiar solution". With expertise goals that were previously "problems" become "tasks".
+
+--- 
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["robinsLearningTeachingProgramming2003"])
+```
+
+@robinsLearningTeachingProgramming2003 is a similar kind of general review as above. 
+
+---
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["lahtinenStudyDifficultiesNovice2005"])
+```
+
+@lahtinenStudyDifficultiesNovice2005 ask a large sample (n > 500) of students about to subjectively assess how difficult it was to learn various programming concepts.
+
+- students found example programs most helpful (e.g., compared to lecture, and other kind of curriculum)
+- the most difficult concepts were the ones that were the most complex
+
+---
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["fullerDevelopingComputerSciencespecific2007"])
+```
+
+@fullerDevelopingComputerSciencespecific2007 develops a matrix-like taxonomy of cognitive skills presumed to be a part of computer programming. Seems like a comprehensive method for assessing knowledge in the domain. Challenge would be to create an entire curriculum where the problem sets are validated in terms of the taxonomy. A big project.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["vihavainenExtremeApprenticeshipMethod2011"])
+
+```
+
+@vihavainenExtremeApprenticeshipMethod2011 is my favorite so far, probably because they teaching method they describe is so close to my own. The basic apprenticehip model is learning by doing, with these three stages: modelling, scaffolding, and fading. Modelling involves an expert walking through an example probelm, scaffolding is giving students a transfer problem with an expert around to give advice, and fading is having students "master" a problem without expert intervention. They ran a class with less lecturing (preaching as they call it), and more lab time with the problem sets as the focus. They reported a lower failure rate with this method, but didn't get into the weeds of the curriculum used in the course. 
+
+
+
+
+
 
 
 ## References
