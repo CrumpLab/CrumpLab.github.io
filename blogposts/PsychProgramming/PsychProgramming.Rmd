@@ -59,6 +59,8 @@ Thanks to [\@mariacdangelo](https://twitter.com/mariacdangelo) for pointing me t
 
 Momentarilly got sucked down a rabbit hole trying to figure out how I want to list things in this .Rmd document. It would be nice to have a function where I could pump in a citation key, and have it print out the full reference so that i can put my notes underneath it. I sort of have this working, but don't like the formatting...Oh, well, I should stop this and continue with the review...
 
+--- 
+
 ```{r, results='asis', echo=FALSE}
 library(knitcitations)
 bib <- read.bibtex("refs.bib")
@@ -66,6 +68,16 @@ bib[["bennedsenFailureRatesIntroductory2019"]]
 ```
 
 @bennedsenFailureRatesIntroductory2019 follow up on their previous paper looking at failure rates in introductory CS1 classes. The previously reported 33% failure rates (in 2007), and are now reporting 28%, a small reduction. One conclusion is the failure rate is not overwhelmingly bad. I remember failing CS1 as an undergrad, so count me in. Too bad CS1 isn't a liberal arts requirement (at least I don't think it is in general). It would be nice to know what the failure rate is for students who don't intend to major in CS.
+
+--- 
+
+```{r, results='asis', echo=FALSE}
+bib[["linnCaseCaseStudies1992"]]
+```
+
+@linnCaseCaseStudies1992 describe and advocate a "case study" approach. Students are given a problem (e.g., write a program to print block letters given input letters), and are shown "expert" notes on how to organize an algorithm to solve the problem. Methods and results are minimal, but a graph is shown at the end with some data indicating a small benefit to scoring higher on the problem given info about other students solutions along with expert notes. The authors note that students complained about having to read 20 pages worth of expert commentary that was part of the "helpful" learning material, yikes.
+
+I remember some the assignments I was given in an intro CS course, and most of them made no sense to me. In general I've personally found the [project euler](https://projecteuler.net) approach helpful. That website challenges anyone to provide code-based solutions to concrete math problems (e.g., what is the sum of the prime numbers from 1 to 1000), and if you enter the correct answer you get to see other people's answers to the problem in a variety of languages. The idea is that by trying to solve these problems, you end up learning about basic programming constructs like variables, loops, logic, functions etc. All this said, I'm a fan of learning by examples, and maybe I'll keep the "print block letters" problem in my back pocket...I'll also note that I've been creating lists of problems to solve as a means to learning basic programming here [https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html](https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html), maybe I should add this one to the list of advanced problems...
 
 
 
