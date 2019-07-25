@@ -204,6 +204,16 @@ in_text_ref(bib["solowayCognitiveStrategiesLooping1983"])
 
 @solowayCognitiveStrategiesLooping1983 This is the kind of paper I was expecting to see more of. A relatively clear problem is presented (solve a simple task of averaging some numbers), and the authors show that performance is worse when a "cognitively preferred" algorithm does not easily solve the problem at hand. Reminding of the Wason card task where people do better when the info on the cards is expressed in terms of socially meaningful information rather thant abstract variables. Still, compared to relatively simple cognitive behavioural tasks that I'm used, this task is pretty complicated stuff.
 
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["pirolliRoleLearningExamples1985"])
+
+```
+
+@pirolliRoleLearningExamples1985 Note to self to get this paper.
+
+
 
 
 
