@@ -162,6 +162,54 @@ in_text_ref(bib["vihavainenExtremeApprenticeshipMethod2011"])
 @vihavainenExtremeApprenticeshipMethod2011 is my favorite so far, probably because the teaching method they describe is so close to my own. The basic apprenticehip model is learning by doing, with these three stages: modelling, scaffolding, and fading. Modelling involves an expert walking through an example probelm, scaffolding is giving students a transfer problem with an expert around to give advice, and fading is having students "master" a problem without expert intervention. They ran a class with less lecturing (preaching as they call it), and more lab time with the problem sets as the focus. They reported a lower failure rate with this method, but didn't get into the weeds of the curriculum used in the course. 
 
 
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["daviesSnapshotCurrentPractices2011"])
+
+```
+
+@daviesSnapshotCurrentPractices2011 conducts a survey of many departments. They find numerous different languages are taught in intro classes (CS0), and JAVA is predominant in CS1 and CS2.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["taylorComputerScienceConcept2014"])
+
+```
+
+@taylorComputerScienceConcept2014 describe and evaluate "concept inventories" as they apply to computer science. Concept inventories are the list of concepts of relevant knowledge in a domain. It seems there are no settled concept inventories for computer science.
+
+## Interlude
+
+I'm finding a bunch of papers that have some similar characteristics. Need to distill these down before attempting to comment on them. Not sure I'm taking much away from this literature yet.
+
+I have been honing in on a few things that I usually keep my eyes out for. For example, what are the classics in this field? I've found a few books that I should probably dig through, but those aren't easy access for this very moment. I should probably make a tenative classics section.
+
+## Classic? papers
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["solowayStudyingNoviceProgrammer2013"])
+
+```
+
+@solowayStudyingNoviceProgrammer2013 This is a book I don't have, but Soloway keeps coming up on early papers.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["solowayCognitiveStrategiesLooping1983"])
+
+```
+
+@solowayCognitiveStrategiesLooping1983 This is the kind of paper I was expecting to see more of. A relatively clear problem is presented (solve a simple task of averaging some numbers), and the authors show that performance is worse when a "cognitively preferred" algorithm does not easily solve the problem at hand. Reminding of the Wason card task where people do better when the info on the cards is expressed in terms of socially meaningful information rather thant abstract variables. Still, compared to relatively simple cognitive behavioural tasks that I'm used, this task is pretty complicated stuff.
+
+
+
+
+
+
+
 
 
 
