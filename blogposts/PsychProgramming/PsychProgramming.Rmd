@@ -36,6 +36,8 @@ How do people learn to program a computer? I've got some opinions, some experien
 
 I'm hoping that the work I put in now might be useful for my self later on. So, I'm going to blog about doing this literature review while I do it. I've also got some useful tools at my disposal, namely [Zotero](https://www.zotero.org), a free reference manager, that I will use to store the papers the I find, and to create a .bib file that I can use to cite the papers. I'll probably also tweet about this a little bit (already got some nice hits after asking for refs that I should be looking it).
 
+Some time ago I remember wading through some literature on teaching computer programming...I'm sad to see that I didn't save any of that in a Zotero folder...ooops, all that work is now lost to time.
+
 ## Some questions that I have right now
 
 1. What kind of assessments are used to measure knowledge of computer programming concepts and skills?
@@ -48,15 +50,27 @@ I'm hoping that the work I put in now might be useful for my self later on. So, 
 
 5. I'm a cognitive psychologist with a general interest in skill learning...am I interested in wading into this research area as a part of my own research?
 
+
 ## [http://teachtogether.tech](http://teachtogether.tech)
 
 Thanks to [\@mariacdangelo](https://twitter.com/mariacdangelo) for pointing me to [http://teachtogether.tech](http://teachtogether.tech), a CC-licensed book that formed part of the Software Carptentry training program. Lot's to digest here, including a long reference section. I guess I'll start mining this reference section and see where it takes me. 
 
+## Papers
+
+Momentarilly got sucked down a rabbit hole trying to figure out how I want to list things in this .Rmd document. It would be nice to have a function where I could pump in a citation key, and have it print out the full reference so that i can put my notes underneath it. I sort of have this working, but don't like the formatting...Oh, well, I should stop this and continue with the review...
+
+```{r, results='asis', echo=FALSE}
+library(knitcitations)
+bib <- read.bibtex("refs.bib")
+bib[["bennedsenFailureRatesIntroductory2019"]]
+```
+
+@bennedsenFailureRatesIntroductory2019 follow up on their previous paper looking at failure rates in introductory CS1 classes. The previously reported 33% failure rates (in 2007), and are now reporting 28%, a small reduction. One conclusion is the failure rate is not overwhelmingly bad. I remember failing CS1 as an undergrad, so count me in. Too bad CS1 isn't a liberal arts requirement (at least I don't think it is in general). It would be nice to know what the failure rate is for students who don't intend to major in CS.
 
 
 
 
-
+## References
 
 
 
