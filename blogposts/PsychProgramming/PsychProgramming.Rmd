@@ -1,0 +1,69 @@
+---
+title: "What do we know about the psychology of learning to computer program? I don't know, so I'm doing a lit review..."
+author: "Matt Crump"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+twitter: "https://twitter.com/MattCrump_"
+github: "https://github.com/CrumpLab"
+website: "https://crumplab.gihub.io"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    code_folding: show
+    number_sections: false
+    toc_depth: 4
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: web/header.html
+    md_extensions: -autolink_bare_uris
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+---
+
+How do people learn to program a computer? I've got some opinions, some experience learning myself, and some experience teaching computer programming skills to students in Psychology. But, I'm not up to date on the literature on this topic. Time for a literature review. Let's see how far I can get in a couple hours (or more, let's see).
+
+## Setting up and notes for my future self
+
+I'm hoping that the work I put in now might be useful for my self later on. So, I'm going to blog about doing this literature review while I do it. I've also got some useful tools at my disposal, namely [Zotero](https://www.zotero.org), a free reference manager, that I will use to store the papers the I find, and to create a .bib file that I can use to cite the papers. I'll probably also tweet about this a little bit (already got some nice hits after asking for refs that I should be looking it).
+
+## Some questions that I have right now
+
+1. What kind of assessments are used to measure knowledge of computer programming concepts and skills?
+
+2. Are there good examples of specific exercises or interventions that have a measurable and reliable influence on learning/retaining/understanding a computer programming concept or skill.
+
+3. How is this literature organized? Are researchers primarily interested in the applied problem of "optimizing" curriculum for teaching computer programming, or using the domain of computer programming as a model learning environment to examine aspects of human cognition?
+
+4. Are their tips I can extract from this literature that I should (or should not I suppose) employ in the class room when I teach programming concepts?
+
+5. I'm a cognitive psychologist with a general interest in skill learning...am I interested in wading into this research area as a part of my own research?
+
+## [http://teachtogether.tech](http://teachtogether.tech)
+
+Thanks to [\@mariacdangelo](https://twitter.com/mariacdangelo) for pointing me to [http://teachtogether.tech](http://teachtogether.tech), a CC-licensed book that formed part of the Software Carptentry training program. Lot's to digest here, including a long reference section. I guess I'll start mining this reference section and see where it takes me. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

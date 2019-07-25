@@ -42,6 +42,12 @@ close(CON)
 
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
+# Psychology of learning to computer program
+
+I'd like to get up to speed on what we know about the psychology of learning to computer program. Time for another literature review. Let's see what I can accomplish on this front today. I'll keep track of everything here:
+
+[https://crumplab.github.io/blogposts/PsychProgramming/PsychProgramming.html](https://crumplab.github.io/blogposts/PsychProgramming/PsychProgramming.html)
+
 --------------------------
 
 # A Hodge-Podge Theory of Method (HP-TOM)
