@@ -159,7 +159,7 @@ in_text_ref(bib["vihavainenExtremeApprenticeshipMethod2011"])
 
 ```
 
-@vihavainenExtremeApprenticeshipMethod2011 is my favorite so far, probably because they teaching method they describe is so close to my own. The basic apprenticehip model is learning by doing, with these three stages: modelling, scaffolding, and fading. Modelling involves an expert walking through an example probelm, scaffolding is giving students a transfer problem with an expert around to give advice, and fading is having students "master" a problem without expert intervention. They ran a class with less lecturing (preaching as they call it), and more lab time with the problem sets as the focus. They reported a lower failure rate with this method, but didn't get into the weeds of the curriculum used in the course. 
+@vihavainenExtremeApprenticeshipMethod2011 is my favorite so far, probably because the teaching method they describe is so close to my own. The basic apprenticehip model is learning by doing, with these three stages: modelling, scaffolding, and fading. Modelling involves an expert walking through an example probelm, scaffolding is giving students a transfer problem with an expert around to give advice, and fading is having students "master" a problem without expert intervention. They ran a class with less lecturing (preaching as they call it), and more lab time with the problem sets as the focus. They reported a lower failure rate with this method, but didn't get into the weeds of the curriculum used in the course. 
 
 
 
