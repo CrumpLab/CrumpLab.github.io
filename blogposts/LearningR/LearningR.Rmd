@@ -251,6 +251,14 @@ R4DS is an online learning community (using slack) for learning data science wit
 
 ---
 
+### r-exercises.com
+
+**Website**: [https://www.r-exercises.com/start-here-to-learn-r/](https://www.r-exercises.com/start-here-to-learn-r/)
+
+Lots of exercises to learn R.
+
+---
+
 
 
 
