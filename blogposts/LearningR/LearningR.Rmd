@@ -242,6 +242,16 @@ Learn R, graphing, and data-analysis by participating in #TidyTuesday. Every Tue
 
 ---
 
+### R4DS R for data science online learning community
+
+**Website**: [https://www.rfordatasci.com](https://www.rfordatasci.com)
+**Book**: [https://r4ds.had.co.nz](https://r4ds.had.co.nz)
+
+R4DS is an online learning community (using slack) for learning data science with R. Maybe I should join! Looks pretty neat.
+
+---
+
+
 
 
 
