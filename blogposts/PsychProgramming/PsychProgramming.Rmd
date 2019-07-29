@@ -269,7 +269,68 @@ in_text_ref(bib["pirolliRoleLearningExamples1985"])
 
 ```
 
-@pirolliRoleLearningExamples1985 Note to self to get this paper.
+@pirolliRoleLearningExamples1985
+
+- Not much to say about this one as of yet.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["kesslerLearningFlowControl1986"])
+
+```
+
+@kesslerLearningFlowControl1986
+
+- Some transfer of training results regarding teaching iteration vs. recursion
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["grayChangeepisodesCodingWhen1987"])
+
+```
+
+@grayChangeepisodesCodingWhen1987
+
+- Some transfer of training results regarding teaching iteration vs. recursion
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["mckendreeFrequencyPracticeEffects1987"])
+
+```
+
+@mckendreeFrequencyPracticeEffects1987
+
+- title says it all
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["wuKnowledgeTransferProgramming1992"])
+
+```
+
+@wuKnowledgeTransferProgramming1992
+
+- Some evidence of positive transfer between programming languages
+
+## More recent papers
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["hansenExperimentCognitiveComplexity2013"])
+
+```
+
+@hansenExperimentCognitiveComplexity2013
+
+- Nice set of methods here. Used Mturk, along with python code. Task was to view code and report the output of the code. Measures included accuracy and reaction time.
+
+From the paper: (1) what common errors do participants make for different program types and versions?, (2) are some program versions more difficult than others?, and (3) what role does experience play in correctness and speed of response? Our results (summarized in Table 1) indicate that the relationship between program text, experience, and response is quite com- plex, even for these simple programs.
+
+
 
 
 
