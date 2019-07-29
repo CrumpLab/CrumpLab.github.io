@@ -42,6 +42,14 @@ close(CON)
 
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
+# Resources for learning and using R
+
+I thought I would start making a list of resources for beginners looking to learn R (for general progamming and datat analysis). Here it is:
+
+[https://crumplab.github.io/blogposts/LearningR/LearningR.html](https://crumplab.github.io/blogposts/LearningR/LearningR.html)
+
+---
+
 # Psychology of learning to computer program
 
 I'd like to get up to speed on what we know about the psychology of learning to computer program. Time for another literature review. Let's see what I can accomplish on this front today. I'll keep track of everything here:
