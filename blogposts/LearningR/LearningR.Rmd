@@ -234,6 +234,16 @@ This is a huge list of great resources (I suppose I could have just linked to th
 
 ---
 
+### TidyTuesday
+
+**Website**: [https://github.com/rfordatascience/tidytuesday](https://github.com/rfordatascience/tidytuesday)
+
+Learn R, graphing, and data-analysis by participating in #TidyTuesday. Every Tuesday a new data set is released, and people from all over load the data into R and produce visualizations (and share code). Most of the action is on Twitter.
+
+---
+
+
+
 
 ## R Packages worth knowing about
 
