@@ -259,8 +259,13 @@ Lots of exercises to learn R.
 
 ---
 
+### Awesome-R.com
 
+**Website**: [https://awesome-r.com](https://awesome-r.com)
 
+An awesomely awesome list of R packages and R-related stuff
+
+---
 
 
 ## R Packages worth knowing about
