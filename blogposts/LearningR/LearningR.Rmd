@@ -94,6 +94,14 @@ Danielle Navarro's fantastic undergraduate statisics textbook that also teaches 
 
 ---
 
+### R-Ladies
+
+**Website**: [https://rladies.org](https://rladies.org)
+
+Check out if there is a meet-up near you and get involved.
+
+---
+
 ### Statistical Thinking for the 21st Century
 
 **Website**: [http://statsthinking21.org](http://statsthinking21.org)
