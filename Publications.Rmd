@@ -7,7 +7,6 @@ output:
     collapsed: false
     number_sections: false
     toc_depth: 4
-    code_folding: hide
     css: pubs.css
     includes:
        in_header: [g_analytics.html,header_pubs.html]
@@ -34,7 +33,7 @@ semantic_plot
 ```
 
 
-```{r, results='asis', echo=T, message=F, warning=FALSE, eval=FALSE}
+```{r, results='asis', echo=F, message=F, warning=FALSE, eval=FALSE}
 library(bib2df)
 bib_df<-bib2df(file="Crump.bib")
 
