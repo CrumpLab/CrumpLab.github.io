@@ -20,7 +20,6 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -275,14 +274,6 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 
 
@@ -357,14 +348,6 @@ $(document).ready(function () {
 
 <div class="fluid-row" id="header">
 
-<div class="btn-group pull-right">
-<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-</ul>
-</div>
-
 
 
 <h1 class="title toc-ignore">Publications</h1>
@@ -379,88 +362,6 @@ $(document).ready(function () {
     }
 </style>
 <!--Note: publications are compiled in Rmarkdown directly from a .bib file. Slowly working on making this work. Below is a plot of the semantic similarity between the publications (using the BEAGLE Abstract vectors). Hover over the dots to see the title (still in beta).-->
-<pre class="r"><code>library(bib2df)
-bib_df&lt;-bib2df(file=&quot;Crump.bib&quot;)
-
-library(stringi)
-
-bib_df$TITLE&lt;-stri_replace_all_regex(bib_df$TITLE, &quot;[\\{\\}]&quot;, &quot;&quot;)
-bib_df$JOURNAL&lt;-stri_replace_all_regex(bib_df$JOURNAL, &quot;[\\{\\}]&quot;, &quot;&quot;)
-
-# sort bib_df by year
-bib_df&lt;-bib_df[order(bib_df$YEAR, decreasing=T),]
-
-dims&lt;-dim(bib_df)
-start_year &lt;- 0 
-for(i in 1:dims[1]){
-  a&lt;-bib_df$FILE[i]
-  split_a&lt;-unlist(strsplit(a,&quot;;&quot;))
-  file_path&lt;-paste0(&quot;https://github.com/CrumpLab/CrumpLab.github.io/raw/master/&quot;,split_a[1])
-  if(bib_df[i,]$YEAR != start_year){
-    cat(c(&quot;##&quot;,bib_df[i,]$YEAR, &quot;\n&quot;))
-    start_year &lt;- bib_df[i,]$YEAR
-  }
-  
-  cat(c(&quot;###&quot;,bib_df[i,]$TITLE)) #title
-  
-  cat(c(&quot;\n&quot;))
-  
-  cat(&quot;&lt;div class=&#39;row&#39;&gt;&quot;)
-    cat(&quot;&lt;div class=&#39;column left&#39;&gt;&quot;)
-      cat(c(&quot;&lt;div id=citationstyle&gt;&quot;))
-      cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=&quot;, &quot;), &quot; (&quot;,
-            bib_df[i,]$YEAR, &quot;). &quot;,
-            bib_df[i,]$TITLE, &quot;. *&quot;,
-            bib_df[i,]$JOURNAL, &quot;, &quot;,
-            bib_df[i,]$VOLUME, &quot;*, &quot;,
-            bib_df[i,]$PAGES, &quot;.&quot;), sep=&quot;&quot;)
-      if(is.na(a)==FALSE){
-        cat(c(&quot; &quot;, &quot;[pdf](&quot;,file_path,&quot;)&quot;), sep=&quot;&quot;)
-      }
-      get_data &lt;- bib_df[i,]$NOTE
-      if(is.na(get_data)==FALSE){
-        cat(c(&quot; | &quot;, get_data), sep=&quot;&quot;)
-      }
-      
-      cat(c(&quot;&lt;/div&gt;&quot;))
-    
-    cat(&quot;&lt;/div&gt;&quot;)
-  cat(&quot;&lt;div class=&#39;column right&#39;&gt;&quot;)
-    get_doi &lt;- bib_df[i,]$DOI
-    if(is.na(get_doi)==FALSE){
-      cat(&quot;&lt;span class=&#39;__dimensions_badge_embed__&#39; data-doi=&#39;&quot;,get_doi,&quot;&#39; data-style=&#39;small_circle&#39; data-legend=&#39;hover-left&#39; style = &#39;text-align:right;&#39;&gt;&lt;/span&gt;&quot;, sep=&quot;&quot;)
-      cat(&quot;&lt;span data-badge-popover=&#39;left&#39; data-badge-type=&#39;donut&#39; data-doi=&#39;&quot;,get_doi,&quot;&#39; data-hide-no-mentions=&#39;true&#39; class=&#39;altmetric-embed&#39; style = &#39;text-align:right;&#39;&gt;&lt;/span&gt;&quot;, sep=&quot;&quot;)
-    }
-  
-  cat(&quot;&lt;/div&gt;&quot;)
-  cat(&quot;&lt;/div&gt;&quot;)
-  
-  
-  
-  
-  
-    
-  cat(c(&quot;\n&quot;))
-  cat(c(&quot;\n&quot;))
-  cat(c(&quot;&lt;div id = abstractstyle&gt;&quot;))
-  cat(bib_df[i,]$ABSTRACT)
-  cat(c(&quot;&lt;/div&gt;&quot;))
-  cat(c(&quot;\n&quot;))
-  cat(c(&quot;\n&quot;))
-  cat(c(&quot;\n&quot;))
-  
-}
-
-# library(dplyr)
-# 
-# table_df &lt;- bib_df %&gt;%
-#             select(YEAR,
-#                    TITLE,
-#                    JOURNAL,
-#                    AUTHOR) %&gt;%
-#   mutate(AUTHOR = sapply(AUTHOR, function(x) paste(x,collapse=&quot;; &quot;)))
-# 
-# knitr::kable(table_df)</code></pre>
 <p><strong>Copyright Notice:</strong> Some of the documents listed below are available for downloading. These have been provided as a means to ensure timely dissemination of scholarly and technical work on a noncommercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author’s copyright. These works may not be re-posted without the explicit permission of the copyright holder.</p>
 <script src="https://bibbase.org/show?bib=https://crumplab.github.io/Crump.bib&jsonp=1&nocache=1&theme=side"></script>
 
