@@ -2,7 +2,7 @@
 title: "Publications"
 output: 
   html_document:
-    toc: true
+    toc: false
     toc_float: true
     collapsed: false
     number_sections: false
@@ -34,7 +34,7 @@ semantic_plot
 ```
 
 
-```{r, results='asis', echo=T, message=F, warning=FALSE}
+```{r, results='asis', echo=T, message=F, warning=FALSE, eval=FALSE}
 library(bib2df)
 bib_df<-bib2df(file="Crump.bib")
 
@@ -122,4 +122,6 @@ for(i in 1:dims[1]){
 
 
 **Copyright Notice:** Some of the documents listed below are available for downloading. These have been provided as a means to ensure timely dissemination of scholarly and technical work on a noncommercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author's copyright. These works may not be re-posted without the explicit permission of the copyright holder.
+
+ <script src="http://bibbase.org/show?bib=https://crumplab.github.io/Crump.bib&jsonp=1"></script> 
 
