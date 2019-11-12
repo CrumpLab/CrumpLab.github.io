@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -103,7 +104,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -264,48 +264,9 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3,h4",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -459,6 +420,36 @@ div.tocify {
 <hr />
 <div class="row">
 <div class="col-sm-8">
+<h4 id="vertical"><a href="https://crumplab.github.io/vertical/">vertical</a></h4>
+<p>R-studio project template and workflow for sharing psychological research projects in the form of a website.</p>
+</div>
+<div class="col-sm-4">
+<p><img src="images/vertical.png" width="100" /></p>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="col-sm-8">
+<h4 id="rsemanticlibrarian"><a href="https://crumplab.github.io/RsemanticLibrarian/">RsemanticLibrarian</a></h4>
+<p>R functions for creating semantic librarians, a tool for vectorizing and visualizing semantic spaces from text</p>
+</div>
+<div class="col-sm-4">
+<p><img src="images/sl_hex.png" width="100" /></p>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="col-sm-8">
+<h4 id="jspsychr"><a href="https://crumplab.github.io/jspsychr/">jspsychr</a></h4>
+<p>Write and run jspsych experiments using R studio.</p>
+</div>
+<div class="col-sm-4">
+<p><img src="images/jspsychr.png" width="100" /></p>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="col-sm-8">
 <h4 id="playjareyesores"><a href="https://crumplab.github.io/playjareyesores/">playjareyesores</a></h4>
 <p>Functions for detecting textual overlap (e.g., possible plagiarism) between documents <a href="https://crumplab.github.io/playjareyesores/">https://crumplab.github.io/playjareyesores/</a></p>
 </div>
@@ -486,8 +477,8 @@ div.tocify {
 <div id="shiny-apps" class="section level2">
 <h2>Shiny Apps</h2>
 <hr />
-<div id="semantic-librarian" class="section level4">
-<h4><a href="https://crumplab.shinyapps.io/SemanticLibrarian/">Semantic librarian</a></h4>
+<div id="semanticlibrarian.com" class="section level4">
+<h4><a href="https://www.semanticlibrarian.com/">semanticlibrarian.com</a></h4>
 <p>A semantic search engine for the APA abstract database (most of the Experimental journals from 1890s to 2016), formerly known as ATHENA.</p>
 <p>We (Harinder Aujla, Randy Jamieson, and Matthew Crump) use semantic vectors from BEAGLE (Jones &amp; Mewhort, 2007) to compute the similarity between abstracts, and authors, and authors and abstracts.</p>
 <ul>
@@ -564,6 +555,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

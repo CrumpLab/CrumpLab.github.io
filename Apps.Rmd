@@ -23,6 +23,58 @@ Shiny Apps, R packages, and various things
 <div class="row">
 <div class="col-sm-8">
 
+#### [vertical](https://crumplab.github.io/vertical/)
+
+R-studio project template and workflow for sharing psychological research projects in the form of a website.
+
+</div>
+<div class="col-sm-4">
+```{r vertical, out.width=100, echo=F}
+knitr::include_graphics("images/vertical.png")
+```
+</div>
+</div>
+
+----
+
+<div class="row">
+<div class="col-sm-8">
+
+#### [RsemanticLibrarian](https://crumplab.github.io/RsemanticLibrarian/)
+
+R functions for creating semantic librarians, a tool for vectorizing and visualizing semantic spaces from text
+
+</div>
+<div class="col-sm-4">
+```{r rsl, out.width=100, echo=F}
+knitr::include_graphics("images/sl_hex.png")
+```
+</div>
+</div>
+
+----
+
+<div class="row">
+<div class="col-sm-8">
+
+#### [jspsychr](https://crumplab.github.io/jspsychr/)
+
+Write and run jspsych experiments using R studio.
+
+</div>
+<div class="col-sm-4">
+```{r jspsychr, out.width=100, echo=F}
+knitr::include_graphics("images/jspsychr.png")
+```
+</div>
+</div>
+
+----
+
+
+<div class="row">
+<div class="col-sm-8">
+
 #### [playjareyesores](https://crumplab.github.io/playjareyesores/)
 
 Functions for detecting textual overlap (e.g., possible plagiarism) between documents [https://crumplab.github.io/playjareyesores/](https://crumplab.github.io/playjareyesores/)
@@ -64,7 +116,7 @@ A few functions used around the lab. Contains functions for the Van Selst and Jo
 
 -----
 
-#### [Semantic librarian](https://crumplab.shinyapps.io/SemanticLibrarian/)
+#### [semanticlibrarian.com](https://www.semanticlibrarian.com/)
 
 A semantic search engine for the APA abstract database (most of the Experimental journals from 1890s to 2016), formerly known as ATHENA.
 
