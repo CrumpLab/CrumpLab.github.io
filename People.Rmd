@@ -9,14 +9,15 @@ output:
 | Current | Info |
 |:--------|-------:|
 |Matthew Crump| PI, email: mcrump@brooklyn.cuny.edu|
-|[Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html)| Doctoral Student|
-|Kevonte Mitchell| Doctoral Student|
-|Mark Rayev| Undergraduate Macaulay Honors|
+
 --------
 
 | Previous | Info |
 |:--------|-------:|
+|[Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html)| Ph.D.|
+|Kevonte Mitchell| Doctoral Student|
 |Lawrence Behmer| 2014-2017 Postdoc|
+|Mark Rayev| Undergraduate Macaulay Honors|
 |Walter Lai| 2018: Undergraduate|
 |Rochelle Hall| 2018: Undergraduate REU|
 |Chin Tan| 2017: Undergraduate|

@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -94,7 +95,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -255,18 +255,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -301,7 +289,7 @@ $(document).ready(function () {
   <a href="Publications.html">Publications</a>
 </li>
 <li>
-  <a href="Books.html">Books</a>
+  <a href="Books.html">Books/OER</a>
 </li>
 <li>
   <a href="Courses.html">Courses</a>
@@ -361,18 +349,6 @@ $(document).ready(function () {
 <td align="left">Matthew Crump</td>
 <td align="right">PI, email: <a href="mailto:mcrump@brooklyn.cuny.edu" class="email">mcrump@brooklyn.cuny.edu</a></td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://nbrosowsky.github.io/index.html">Nicholaus Brosowsky</a></td>
-<td align="right">Doctoral Student</td>
-</tr>
-<tr class="odd">
-<td align="left">Kevonte Mitchell</td>
-<td align="right">Doctoral Student</td>
-</tr>
-<tr class="even">
-<td align="left">Mark Rayev</td>
-<td align="right">Undergraduate Macaulay Honors</td>
-</tr>
 </tbody>
 </table>
 <hr />
@@ -385,46 +361,58 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><a href="https://nbrosowsky.github.io/index.html">Nicholaus Brosowsky</a></td>
+<td align="right">Ph.D.</td>
+</tr>
+<tr class="even">
+<td align="left">Kevonte Mitchell</td>
+<td align="right">Doctoral Student</td>
+</tr>
+<tr class="odd">
 <td align="left">Lawrence Behmer</td>
 <td align="right">2014-2017 Postdoc</td>
 </tr>
 <tr class="even">
+<td align="left">Mark Rayev</td>
+<td align="right">Undergraduate Macaulay Honors</td>
+</tr>
+<tr class="odd">
 <td align="left">Walter Lai</td>
 <td align="right">2018: Undergraduate</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Rochelle Hall</td>
 <td align="right">2018: Undergraduate REU</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Chin Tan</td>
 <td align="right">2017: Undergraduate</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Marissa Scotto</td>
 <td align="right">2017: Undergraduate REU</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Ashot Balayan</td>
 <td align="right">2016: Master’s</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Niles Uy</td>
 <td align="right">2016: Undergraduate Macaulay Honors</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Ana Sanchez</td>
 <td align="right">2016: Undergraduate REU</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Elena Dominguez</td>
 <td align="right">2015: Undergraduate MARC</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Rebecca Colon</td>
 <td align="right">2015: Undergraduate REU</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Esthena Brutten</td>
 <td align="right">2014: Undergraduate Scholars</td>
 </tr>
@@ -449,6 +437,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

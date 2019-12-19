@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -104,7 +105,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -265,18 +265,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -374,7 +362,6 @@ $(document).ready(function () {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
 <h3 id="learning-memory-attention-performance-skill-learning-computational-modeling-statistics" style="padding-top: 0px;">Learning | Memory | Attention | Performance | Skill-learning | Computational Modeling | Statistics</h3>
-<p><strong>I will be considering Ph.D. applications for next Fall 2020, <a href="https://crumplab.github.io/Opportunities.html">applications due December 1st</a>, 2019; please email me if you are interested</strong></p>
 <p>How do people learn new skills like playing a musical instrument or typing on a computer keyboard? How does memory work? How do people pay attention to their surroundings? How do people become sensitive to patterns and regularities in their environment?</p>
 <p>We investigate these questions with experiments that test theoretical and computational models of human cognition. Research associates are trained with a strong focus on computer programming skills for creating experiments and analyzing data. These include programming techniques for creating behavioral experiments from scratch, coding dynamic multi-trial experiments online and conducting them on Amazon’s Mechanical Turk, coding for batch data-analysis and for expressing cognitive theories in the form of computational models.</p>
 <p><a href="https://crumplab.github.io/People.html">Current and previous lab members</a> include undergraduate, master’s , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for running experiments and analyzing data, <a href="https://crumplab.github.io/Opportunities.html">then you may be interested in joining the team</a>.</p>
@@ -443,6 +430,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
