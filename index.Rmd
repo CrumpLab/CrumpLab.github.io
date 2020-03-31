@@ -66,5 +66,5 @@ The lab is located in the Department of Psychology at Brooklyn College of CUNY, 
 knitr::include_graphics("images/logo.png")
 ```
 
-
+</div>
 
