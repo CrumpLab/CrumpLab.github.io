@@ -1,0 +1,105 @@
+---
+title: "Mea Culpa: My Sabbatical Part I"
+author: "Matt Crump"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+twitter: "https://twitter.com/MattCrump_"
+github: "https://github.com/CrumpLab"
+website: "https://crumplab.gihub.io"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    code_folding: hide
+    number_sections: false
+    toc_depth: 4
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: web/header.html
+    md_extensions: -autolink_bare_uris
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+---
+
+
+I'm sad, mad, and glad, and a bunch of other things. I haven't added to this blog in almost a year. I've been listening and learning. I have to do some personal work. This is part of it.
+
+I've been on sabbatical, it's almost over, two months left. Lots of things are changing and staying the same all at once. Maybe I should wait to reflect on my sabbatical after it is over, but screw that.
+
+This is my first ever sabbatical, a great priviledge. Who am I kidding, I've been waiting my entire career for this moment. Freedom. But, freedom from what, to do what? I took me until today to even ask this question to myself. I just made another decision. This will be part I, so that I can get to part II. I really want to get part II, because it is the thing that is making me glad. (spoiler alert, I haven't got there yet)
+
+OK, I should reflect on what I did so far on sabbatical. Some context is in order...roughly what I was doing/happening before sabbatical. 
+
+## Very short backstory
+
+Got interested in cognitive psychology as an undergrad, got a Ph.D., did a postdoc, got hired at Brooklyn College in 2011. Which meant I just needed to turn the crank until I get tenure so I can go on sabbatical for one year! I did research, service, and teaching. I got tenure. I'm on sabbatical. I've satisfied all of my life goals, hurray for me.
+
+I think it would be fair to say in general that I get interested in things, and also bothered by them. So, Cognitive Psychology is one of the things that interests me greatly, and also bothers me greatly. I am very interested in my job, and doing things like research, teaching, and service; and, all of those things have been bothering bothers to me too. I sometimes have to write self-evaluations and submit them to my department. I've never written one to myself, here goes.
+
+## A retrospective pre-sabbatical self-eval:
+
+### Research
+
+Yes, I did research on cognitive psychology. I could go on about my interests here. I mean ostensibly the discipline is about cognition, mind stuff, how people think their next thought, dream a dream, have an experience, how it all actually works, computation, transformation, and blah blah blah. What bothers me about cognitive psychology is that it is mostly not about people or any of that stuff I find interesting. Yet, I remain a student of cognition. There are many bits here and there that sustain my interest, and I have met many colleagues who I adore, and who challenge my way of thinking about cognition, and so on. And, I think that basic research in cognition can be a positive force, a good thing.
+
+Nevertheless, it has been several years where almost everytime I read an article in cognition I think WTF is the point of this. I just don't care about most of it, so I've been biding my time for sabbatical and tenure. My sincere hope was that I could find a way to be interested again. 
+
+I often mull around questions like: why I am doing this again, should I be doing this or that, is this worth doing? I just never really answer them, they just float around as questions that bother me that I don't know how to answer. Something is wrong, but I can't put my finger on it.
+
+### Teaching/Mentoring
+
+I did teaching and mentoring. I love it. I love my students. This is one of the best parts. It's hard work, not everything works out. I made mistakes. There are so many dimensions to things in teaching, and it bothers me to no end how to approach content from multiple dimensions at the same time, especially dimensions I don't know about, and need to learn about. But, this is the kind of bothering that I find interesting, so it works out as a sustaining cyclic force. 
+
+### Service
+
+I did some service, usually in places where I had interests. There are things that bother me here. Ideally, I have tried to be a positive force in my institution, with some kind of balanced engagement that allows me also to do research and teaching. In practice, I am ashamed to have lost my cool on more than one occasion. I want to be a better citizen. 
+
+But also, for real, just before my sabbatical started, I felt professionally perforated, often completely mentally distraught, and really fucking angry all the fucking time. I became unrecognizable to myself. I was used to exploring existential inner termoil (my version is usually something like, "but, what does this really tell us about cognition, argh, clutches pearls"); however, I wasn't used to being an angry ruminating anger machine. 
+
+I didn't like the new me, and I put everything on sabbatical...the time off would help, somehow. Also, this was an extremely ambivalent feeling, because I can say just as many good and super awesome things about my colleagues and department/university. But, I something had to give, I couldn't do another year like the one I just had.
+
+End. I guess I should submit this self-reflection to myself for approval. Next up, the sabbatical that is almost over.
+
+## The Sabbatical so far...
+
+I started Sabbatical more or less end of May 2019. My service commitments mostly tapered off by July, so it wasn't a clean break. But, I was pretty committed to trying out sabbatical. Finally, time to get stuff done. So, I spent most of the summer tweeting about secret societies in psychology that still exist today. You know, something that interests and bothers me at the same time. 
+
+I was still in decompression. I spent the summer trying not to ruminate about things I was really really angry about. I did not want unproductive anger permeating my sabbatical. And, I wasn't really that worried about it either. I figured it would go away eventually, and I was really excited about my sabbatical plan. I thought, and still think, that I had set up some collaborations that would reinvigorate me. That's still true (they did), so thanks to my awesome collaborators, even though this year some of that stuff kinda didn't work out.
+
+In late summer 2019, I started preparing for my first sabbatical stop in Winnipeg, for the month of October, to work with Randy Jamieson. That was such a great time. We had lots of good talks about cognition, we did a whack of experiments on memory and inference, we made an interesting computational account, this was fun. I'm still excited, the paper is mostly done, forthcoming somewhere at somepoint, fingers crossed.
+
+At some point in 2019, Matti Vuorre struck up a collaboration with me, and we ended up developing an R package called [vertical](https://crumplab.github.io/vertical/) for using R to make and share psych research assets. This was super fun, and we got a paper in at BRM. 
+
+After Winnipeg my plan was to spend time at NYU with Todd Gureckis, and also go to Brisbane to work with Jason Tangen. But, before digging in, my spouse and I took a trip. Singapore, Vietnam, Australia, in February-March 2020. In hindsight, travelling during a global pandemic wasn't the smartest thing we ever did.
+
+### Escape to New York
+
+Needless to say, by the time we got to Brisbane, we had to leave abruptly because the airlines were shutting down international travel, and borders were closing. It was a confusing time. But, we made it back to NYC two days before the covid-19 lockdown. Still here.
+
+Obvsiouly I've got problems, but being a tenured professor on sabbatical, who is normally mostly content staying at home, during a pandemic, is not a problem. We self-quarantined for 14 days, and are adapting to the new normal here in NYC. I am so proud of my fellow New Yorkers. I cry a bit sometimes. March and April are a bit of a blur. I didn't think about research, I just shut that part off. I'd been meaning to play more music, I did more of that. 
+
+In May, George Floyd was murdered the same day I turned 40. Black lives matter. Things need to change. The vitality of the protests removed all shreds of any "normal work thinking", which was totally impossible and gone.
+
+Questions about all sorts of things swirled around. I spent too much time being horrified by twitter. Admittedly, I have actively avoided all sorts of things. For example, there are large portions of dare I say psychology, that I actively haven't read about. One of those things is IQ research. Just missed the boat on it, never learned much about it, had a brief run-in with it in grad school, didn't make me inclined to think it would be useful for what I was interested in. More recently, I watched the debacle with the racist IQ paper that has now been retracted in Psych Science. This is now very recent history, and things get very blurry, in terms of what's going on.
+
+To put it simply, I'm learning about how IQ testing is the tip of the eugenicist iceberg in psychology. I'm learning about structural racism and eugenics in the discipline of Psychology. I feel like I'm in the movie sixth sense, only that now I see eugenicism everywhere. I knew Psychology was fucked up, but it's way more fucked up than I ever realized. 
+
+I'm now well out of my wheel-house. So, I'm pretty sure I need to learn more about this for so many reasons. To contextualize my own research, to improve my teaching, and to be a positive force in the institutions I work in. This learning process is profoundly horrifying and humiliating, and I have no idea how I'm going to participate in psychology in the future. 
+
+So, I am almost to the present moment. Except for one last thing, which is the best thing that happened so far this sabbatical. A way forward...I started reading the [Journal of Black Psychology](https://journals.sagepub.com/home/jbp) from the beginning. The massive brain explosions that followed from reading just the first couple issues confirmed to me that I need to digest this truly breathtaking scholarship. Before I was even born, the [Association of Black Psychologists](https://www.abpsi.org) has been describing and deconstructing white racist psychology. They've been reconstructing psychology, and they've been constructing their own psychology. That's what I call academic heroes.
+
+So, I've got two months left of sabbatical, and a bunch of reading to do. My plan is to write and reflect while I read, maybe sometimes here, maybe a bit on twitter, maybe somewhat more formally. And, also play synthesizer, because I gotta almagamate with my "psychological verve" too @boykinExperimentalPsychologyBlack1977. 
+
+to be continued...
+
+## References
+
