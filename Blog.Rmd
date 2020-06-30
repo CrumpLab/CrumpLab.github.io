@@ -42,6 +42,12 @@ close(CON)
 
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
+# Mea Culpa: My Sabbatical Part I
+
+June 30, 2020
+
+[https://crumplab.github.io/blogposts/sabbaticalp1/sabbatical1.html](https://crumplab.github.io/blogposts/sabbaticalp1/sabbatical1.html)
+
 # Resources for learning and using R
 
 I thought I would start making a list of resources for beginners looking to learn R (for general progamming and datat analysis). Here it is:
