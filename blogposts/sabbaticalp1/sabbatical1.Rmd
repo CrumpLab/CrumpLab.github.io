@@ -2,7 +2,8 @@
 title: "Mea Culpa: My Sabbatical Part I"
 author: "Matt Crump"
 date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
-twitter: true
+twitter:
+  card_description: "TLDR, some sabbatical thoughts"
 bibliography: refs.bib
 csl: web/apa.csl
 output: 
