@@ -13,7 +13,7 @@
       <meta name="twitter:creator" content="@MattCrump_" />
       $if(twitter.card_description)$<meta name="twitter:description" content="$twitter.card_description$" /> $endif$
       $if(twitter.card_img)$
-      <meta name="twitter:image" content="$twitter.card_img$"/> 
+      <meta name="twitter:image" content="$twitter.card_img$"/>
       $else$
       <meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png"/>
       $endif$
@@ -581,6 +581,9 @@ $if(toc_float)$
 <div class="row-fluid">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="$idprefix$TOC" class="tocify">
+$if(twitter.card_img)$
+<img src="$twitter.card_img$"" />
+$endif$
 </div>
 </div>
 
