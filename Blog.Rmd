@@ -42,8 +42,6 @@ close(CON)
 
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
-# Mea Culpa: My Sabbatical Part I
-
 
 ----
 
