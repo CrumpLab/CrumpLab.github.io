@@ -19,7 +19,6 @@ output:
     includes:
       in_header: web/header.html
     md_extensions: -autolink_bare_uris
-    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
