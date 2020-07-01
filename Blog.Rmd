@@ -2,7 +2,7 @@
 title: "Various musings"
 output:
   html_document:
-    toc: true
+    toc: false
     toc_float: true
     collapsed: false
     number_sections: false
@@ -16,7 +16,7 @@ bibliography: [Crump.bib, typing.bib]
 
 <style>
     .toc-content {
-        padding-left: 10%;
+        padding-left: 0%;
         padding-right: 10%;
     }
 </style>
@@ -42,17 +42,51 @@ close(CON)
 
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
+# Mea Culpa: My Sabbatical Part I
+
+
+----
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F}
+knitr::include_graphics("blogposts/sabbaticalp1/sabbatical.png")
+```
+</div>
+<div class="col-sm-8">
+
+# [Mea Culpa: My Sabbatical Part I](https://crumplab.github.io/blogposts/sabbaticalp1/sabbatical1.html)
+
+June 30, 2020
+
+Some personal reflections on sabbatical and responsibility. Work in progress.
+
+</div>
+</div>
+
+----
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F}
+knitr::include_graphics("blogposts/7_1_20_twittercard/test.png")
+```
+</div>
+<div class="col-sm-8">
+
+# [New Layout style](https://crumplab.github.io/blogposts/7_1_20_twittercard/7_1_20_twittercard.html)
+
+Just more testing out how I want this blog to look right now
+</div>
+</div>
+
+----
+
 # Upping my twitter card game?
 
 July 1, 2020
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Upping my twitter card game? just a test <a href="https://t.co/wvvXOGhela">https://t.co/wvvXOGhela</a></p>&mdash; Matt Crump (@MattCrump_) <a href="https://twitter.com/MattCrump_/status/1278344229459197953?ref_src=twsrc%5Etfw">July 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-# Mea Culpa: My Sabbatical Part I
-
-June 30, 2020
-
-[https://crumplab.github.io/blogposts/sabbaticalp1/sabbatical1.html](https://crumplab.github.io/blogposts/sabbaticalp1/sabbatical1.html)
 
 # Resources for learning and using R
 
