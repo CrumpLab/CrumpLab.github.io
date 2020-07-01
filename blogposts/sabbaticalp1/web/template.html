@@ -9,9 +9,9 @@
 
       $if(twitter)$
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content="hello" />
+      $if(title)$ <meta name="twitter:title" content="$title$"/> $endif$
       <meta name="twitter:creator" content="@MattCrump_" />
-      <meta name="twitter:description" content="test" />
+      $if(twitter.card_description)$<meta name="twitter:description" content="$twitter.card_description$" /> $endif$
 
 
       $endif$
