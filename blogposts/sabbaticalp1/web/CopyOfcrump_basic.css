@@ -5,24 +5,20 @@
   border-color: #72687a;
 }
 
-.main-container {
-  margin-top: 50px;
-}
-
 h2, h3, h5, h6, .h2, .h3, .h5, .h6 {
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
   /*font-family: 'Lato', sans-serif;*/
-  /*font-family: 'Source Serif Pro', serif;*/
-  font-weight: 400;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 300;
   font-style: normal;
   line-height: 1.4;
   color: inherit;
 }
 
 h1, h4, .h1, .h4 {
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
   /*font-family: 'Lato', sans-serif;*/
-  /*font-family: 'Source Serif Pro', serif;*/
+  font-family: 'Source Serif Pro', serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.2;
@@ -31,19 +27,18 @@ h1, h4, .h1, .h4 {
 
 p {
   text-indent: 5%;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 body {
   /*font-family: "Lato script=latin rev=1",'Lato', sans-serif;*/
-  font-family: 'Source Serif Pro', serif;
-  font-size: 21px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  line-height: 32px;
+  line-height: 1.6;
   color: #222222;
   background-color: #ffffff;
-  letter-spacing: -0.003em;
 }
 
 .twitter, .github, .social_media, .website{

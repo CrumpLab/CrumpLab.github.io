@@ -4,6 +4,15 @@
 
     <head>
 
+      $if(twitter)$
+
+      <meta name="twitter:title" content=$title$>
+      <meta name="twitter:description" content=" Lab web page Blog - Matt Crump - Brooklyn College of CUNY">
+      <meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png">
+      <meta name="twitter:card" content="summary">
+
+      $endif$
+
     <meta charset="utf-8" />
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="generator" content="pandoc" />
@@ -45,6 +54,7 @@
                         }
                       }
                     </script>
+
                       $endif$
 
                       $if(highlighting-css)$
@@ -497,6 +507,64 @@ $endif$
 
 <body>
 
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../index.html">Crump Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="../../People.html">People</a>
+</li>
+<li>
+  <a href="../../Publications.html">Publications</a>
+</li>
+<li>
+  <a href="../../Books.html">Books/OER</a>
+</li>
+<li>
+  <a href="../../Courses.html">Courses</a>
+</li>
+<li>
+  <a href="../../Apps.html">Apps</a>
+</li>
+<li>
+  <a href="../../Opportunities.html">Join The Lab</a>
+</li>
+<li>
+  <a href="../../Blog.html">Blog</a>
+</li>
+<li>
+  <a href="../../R.html">R</a>
+</li>
+<li>
+  <a href="https://twitter.com/MattCrump_">
+    <span class="fa fa-twitter"></span>
+
+
+  </a>
+</li>
+<li>
+  <a href="https://github.com/CrumpLab">
+    <span class="fa fa-github"></span>
+
+
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
 $if(theme)$
 
 <div class="container-fluid main-container">
@@ -559,13 +627,14 @@ $endif$
 
 <span class="social_media">
 $if(twitter)$
-<a href=$twitter$><i class="fa fa-twitter"></i></a>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 $endif$
 $if(github)$
 <a  href="$github$"><i class="fa fa-github"></i></a>
 $endif$
 $if(website)$
-<a  href="$website$"><i class="fa fa-university"></i></a>
+<a  href="$website$"><i class="fa fa-home"></i></a>
 $endif$
 </span>
 
