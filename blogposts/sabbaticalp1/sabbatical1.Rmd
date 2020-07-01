@@ -1,10 +1,8 @@
 ---
 title: "Mea Culpa: My Sabbatical Part I"
 author: "Matt Crump"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-twitter: "https://twitter.com/MattCrump_"
-github: "https://github.com/CrumpLab"
-website: "https://crumplab.gihub.io"
+date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
+twitter: true
 bibliography: refs.bib
 csl: web/apa.csl
 output: 
@@ -13,7 +11,6 @@ output:
     toc: true
     toc_float: true
     collapsed: false
-    code_folding: hide
     number_sections: false
     toc_depth: 4
     theme: yeti
@@ -29,7 +26,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
 ---
-
 
 I'm sad, mad, and glad, and a bunch of other things. I haven't added to this blog in almost a year. I've been listening and learning. I have to do some personal work. This is part of it.
 
