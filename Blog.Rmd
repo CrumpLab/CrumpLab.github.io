@@ -42,6 +42,24 @@ close(CON)
 
 Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
 
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F}
+knitr::include_graphics("blogposts/7_1_20_hiring/hiring.png")
+```
+</div>
+<div class="col-sm-8">
+
+# [Advocating to hire in black psychology in my department](https://crumplab.github.io/blogposts/7_1_20_hiring/7_1_20_hiring.html)
+
+July 1, 2020
+
+Some reflections on hiring and notes on what I can do to advocate for hiring a black psychologist in my department. More work in progress.
+
+</div>
+</div>
+
+----
 
 ----
 
