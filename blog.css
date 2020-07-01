@@ -10,6 +10,7 @@ p {
 
 h1 {
     font-size: 16pt;
+    color: black;
 }
 
 h2 {
@@ -18,4 +19,21 @@ h2 {
 
 h3 {
     font-size: 13pt;
+}
+
+.tocify .tocify-item a, .tocify .list-group-item {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: #d8d1de;
+}
+
+.btn-default {
+  background-color: #72687a;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
 }
