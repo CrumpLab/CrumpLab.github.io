@@ -12,7 +12,11 @@
       $if(title)$ <meta name="twitter:title" content="$title$"/> $endif$
       <meta name="twitter:creator" content="@MattCrump_" />
       $if(twitter.card_description)$<meta name="twitter:description" content="$twitter.card_description$" /> $endif$
-      $if(twitter.card_img)$<meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png"/> $endif$
+      $if(twitter.card_img)$
+      <meta name="twitter:image" content="$twitter.card_img$"/> 
+      $else$
+      <meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png"/>
+      $endif$
 
 
       $endif$
