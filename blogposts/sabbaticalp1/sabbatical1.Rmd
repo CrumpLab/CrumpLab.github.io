@@ -4,6 +4,7 @@ author: "Matt Crump"
 date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
 twitter:
   card_description: "TLDR, some sabbatical thoughts"
+  card_img: "default"
 bibliography: refs.bib
 csl: web/apa.csl
 output: 
