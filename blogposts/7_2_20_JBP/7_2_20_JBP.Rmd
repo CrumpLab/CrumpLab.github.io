@@ -1,0 +1,39 @@
+---
+title: "Reading the Journal of Black Psychology"
+author: "Matt Crump"
+date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
+twitter:
+  card_description: "I'm reading the Journal of Black Psychology from the beginning, and writing about it here."
+  card_img: "https://crumplab.github.io/blogposts/7_2_20_hiring/JBP.png"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 4
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: web/header.html
+    md_extensions: -autolink_bare_uris
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+---
+
+
+
+## References
+
+
+
+

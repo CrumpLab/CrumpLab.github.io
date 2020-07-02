@@ -40,7 +40,28 @@ close(CON)
 ```
 
 
-Using this mainly as a place to make notes for myself so I don't forget what I'm doing. I own my spelling mistakes and sell them on e-bay.
+Notes to self so I don't forget what I'm doing. I own my typos and sell them on e-bay.
+
+---
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F}
+knitr::include_graphics("blogposts/7_2_20_JBP/JBP.png")
+```
+</div>
+<div class="col-sm-8">
+
+# [Reading the Journal of Black Psychology](https://crumplab.github.io/blogposts/7_2_20_JBP/7_2_20_JBP.html)
+
+July 2, 2020
+
+I'm reading the Journal of Black Psychology from the beginning, and writing about it here.
+
+</div>
+</div>
+
+----
 
 <div class="row">
 <div class="col-sm-4">
@@ -58,8 +79,6 @@ Some reflections on hiring and notes on what I can do to advocate for hiring a b
 
 </div>
 </div>
-
-----
 
 ----
 
