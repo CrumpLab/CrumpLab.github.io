@@ -44,10 +44,52 @@ I'm in the process of climbing out of my research hole to learn about the racist
 
 I've already done some reading and skimming through the journal. So, even though I know this work will inform me about structural racism and eugenics in psychology, I also know it will inform me about many other issues that I wasn't thinking so much about. The papers I have read so far are building towers of perspective over the holes of psychology. I'm excited to read more, I need to start keeping notes:
 
+Let's start with Vol 1, Issue 1, 1974
+
+
+---
+
+```{r, results='asis', echo=FALSE}
+library(knitcitations)
+library(RefManageR)
+bib <- read.bibtex("refs.bib")
+
+in_text_ref <- function(x){
+  b<-capture.output(print(x,.opts = list(bib.style = "authoryear", first.inits = TRUE, style = "markdown",no.print.fields=c("URL","urldate","issn","doi"))))
+  cat("### ")
+  cat(b,collapse=" ")
+  
+}
+```
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["smithEditorial1974"])
+```
+
+It's interesting to flip through the first issue of journals. For example, I found it interesting to flip through the first issue in volume of Psychological Review, which at the time was the journal for the American Psychological Association.
+
+It is obvious when you read the Journal of Black Psychology, that the creation of the journal and new society (the Association of Black Psychologists) was partly motivated by a reaction against the APA. What was the reaction about?
+
+I'll consider this briefly from the lens of eugenics. Did you know that the founder of Psychological Review, James McKeen Catell, was a eugenicist? That's something. It's part of a deeply disturbing structural foundation of psychology. Some of this foundation is not particularly salient. For example, it's not easy to find the word eugenic or eugenics in Psychological Review (try to find it using Psycinfo). That's curious. However, if you know who is a eugenicist, because they for example founded the whole thing (e.g., Francis Galton), you can see that several known eugenicists published papers in the first issue of Psychological Review. You just have to connect those dots. 
+
+If you read about eugenics, you learn that eugenicists just want to breed the best people to make society a better place for eternity. They also want to enact negative eugenics on anyone they don't like, and attempt to eliminate them (e.g., forced sterilizations, Nazi genocide). This is just scratching the surface of the abhorrent practices and ideologies of eugenicists. They talk A LOT about doing this for the betterment of mankind. Their version of betterment is VERY SCARY. 
+
+It is very intriguing to read the very first editorial in Psych Review, which is written by an APA president at the time. Sidenote, did you know that between 1892 and 1947, there were 31 APA presidents that were members or leaders of eugenics societies [@yakushkoEugenicsItsEvolution2019]. Have you ever wondered why that is? Or, say how it was that psychology was both created and weaponized by eugenicists to propagate eugenics policies. 
+
+In any case, I haven't been able to determine precisely whether George Trumbull Ladd was a eugenicist or not when he wrote the presidential address for APA printed in the first issue of Psych review [@laddPresidentAddressNew1894]. However, I did read the address. It doesn't say eugenics anywhere. Ladd talks about three things, in order of most to least controversial. Roughly, 1) stats and methods issues, 2) Psychology as a science issues, and 3) Bettering mankind issues.
+
+When discussing 1 & 2, Ladd acknowledges that there are differences of opinion in the room about these issues. When he gets to issue number 3, he says, "on the third of my three points...no considerable divergence of opinion is to be anticipated here". I know how to read this room. Devoting the final piece of his address to the pressing need to better society is what it sounds like. A massive dogwhistle to eugenicists. In my opinion, Ladd is pointing out that he knows and the audience knows that they all agree that they are eugenicists. Maybe some of these psychologists weren't card carrying eugenicists. But, more than enough were, for way to long. 
+
+Also, the eugenics of white psychologists wasn't something that disappeared overnight. It hasn't dissappeared to this day. It became more deeply entrenched in psychology at many levels. Black psychology is partly a revolution against the structures of white racism and eugenics in psychology. And, it is with this context that I truly appreciate reading the first issue in the Journal of Black Psychology. This marks a line in their scholarship announcing their intention to deconstruct white racism in psychology, and also build their own psychology that is not fundamentally a tool for eugenics. Imagine having a psychology that was not used as a tool to wipe people out. It is a brave moment and an honor to read about the black psychologists who took up this mission.
+
 ---
 
 
-@williamsHistoryAssociationBlack1974
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["williamsHistoryAssociationBlack1974"])
+```
+
+I'm not a member of APA and I don't think I've ever been to an APA conference. But, if there was one APA conference I would've wanted to see, it would be the 77th meeting in 1969. Read the paper to find out why. The Association of Black Psychologists is an independent psychological society, this is a glimpse of the origin story.
 
 ---
 
