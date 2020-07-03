@@ -181,6 +181,20 @@ I need to read this paper again. It touches on several issues that are difficult
 
 Note to self to come back here, erase this sentence, and add thinking.
 
+@boykinExperimentalPsychologyBlack1977 begins by saying:
+
+```{r}
+knitr::include_graphics("img/Boykin77_1.png")
+```
+
+This aptly indicates both the content and style of the remaining prose. For content, as the title promises, we will get some reflections on the science/philosophy of experimental psychology, and some ideas specifically about educating Afro-American children. Basic/applied science is a hanging thread throughout. 
+
+As well, I appreciate the style. All too often I read about the science of psychology in terms of a warped purity ideology. You know the one, "There is only one true science, and only science done correctly by the pure and true scientist can be science." This is not that. There are no "ultimate answers" here, just a bunch of interesting ideas to think about.
+
+
+
+
+
 ---
 
 
