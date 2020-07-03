@@ -123,7 +123,7 @@ What is the broader context, why did APBsi advocate for a moratorium on testing?
 
 Full disclosure: I don't have kids, so I haven't thought about testing a whole lot. In our doctoral program we've recently debated whether we will require the GRE or not for admissions this year. We are doing a trial run of not requiring it. I read emails about pros and cons. I didn't have much to say really. I was/am on sabbatical, and didn't put time into the issue. I've put some time in now. I will now firmly advocate against requiring GREs ever again. Why? Perhaps, you can guess. Eugenics.
 
-If it is not abundantly clear. I despise eugenics. Guess who was behind the organized efforts to test the hell out of schoolchildren everywhere? Eugenicists. Why would they do this? So, they could separate people into desired and undesired groups with pretty science numbers, and then help the desired groups (whites), and hurt the undesired groups, as much as possible. Remember also that eugenicists is another word for many psychologists. I don't have time here to go into the psychologists responsible for promulgating IQ tests, and then school testing for the purposes of eugenics. But, obviously these horrendous policies impacted the black community in a profoundly negative way, for a very long time. If Eugenicist psychologists were trying to hurt your children, wouldn't you call for a moratorium on testing? WHY IS TESTING STILL HAPPENING TODAY?!?!?!?!? This is a fight that has been happening for a while. The Black Psychologists have been leading that fight.
+If it is not abundantly clear. I despise eugenics. Guess who was behind the organized efforts to test the hell out of schoolchildren everywhere? Eugenicists. Why would they do this? So, they could separate people into desired and undesired groups with pretty science numbers, and then help the desired groups (whites), and hurt the undesired groups, as much as possible. Remember also that eugenicists is another word for many psychologists. I don't have time here to go into the psychologists responsible for promulgating IQ tests, and then school testing for the purposes of eugenics. But, obviously these horrendous policies impacted the black community in a profoundly negative way, for a very long time. If Eugenicist psychologists were trying to hurt your children, wouldn't you call for a moratorium on testing? WHY IS TESTING STILL HAPPENING TODAY?!?!?!?!? This is a moratorium request that has been happening for a while. The Black Psychologists have been leading this movement.
 
 Can you believe we are only at the first actual article past the editorial? 
 
@@ -140,7 +140,6 @@ NOTE: I'm going to be bouncing back and forth a bit, and missing things here and
 in_text_ref(bib["hilliardReviewLeonKamin1976"])
 ```
 
-
 I just ordered the Kamin book on IQ testing. Also, this is a book review worth reading. Consider this table of notable early psychologists who were also eugenicists, from the book review.
 
 ```{r}
@@ -156,6 +155,20 @@ knitr::include_graphics("img/IQ_Review_A.png")
 ```{r}
 knitr::include_graphics("img/IQ_Review_B.png")
 ```
+
+---
+
+## @andrewsInvestigationAttitudesSexual1976
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["andrewsInvestigationAttitudesSexual1976"])
+```
+
+I can't remember ever being brought to tears by reading a psychology paper. @andrewsInvestigationAttitudesSexual1976 brought me to tears.
+
+This paper is about sexual behavior in Black mentally retarded adults. One of the reasons that this paper brought me tears was to consider what the paper would have said if it wasn't written by a black psychologist. For example, can you imagine what a white eugenicist psychologist would say? It's pretty damn clear they wouldn't advocate in favor of how to ensure that black mentally retarded adults have the freedom to enjoy their own expressions of sexuality. Compared to the prevailing alternative, black psychology is very human.
+
+
 
 
 ## References
