@@ -25,7 +25,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 ---
@@ -72,7 +72,15 @@ It's interesting to flip through the first issue of journals. For example, I fou
 
 It is obvious when you read the Journal of Black Psychology, that the creation of the journal and new society (the Association of Black Psychologists) was partly motivated by a reaction against the APA. What was the reaction about?
 
-I'll consider this briefly from the lens of eugenics. Did you know that the founder of Psychological Review, James McKeen Catell, was a eugenicist? That's something. It's part of a deeply disturbing structural foundation of psychology. Some of this foundation is not particularly salient. For example, it's not easy to find the word eugenic or eugenics in Psychological Review (try to find it using Psycinfo). That's curious. However, if you know who is a eugenicist, because they for example founded the whole thing (e.g., Francis Galton), you can see that several known eugenicists published papers in the first issue of Psychological Review. You just have to connect those dots. TBH, it's really more of a question of who isn't a eugenicist in that issue.
+I'll consider this briefly from the lens of eugenics. Did you know that the founder of Psychological Review, James McKeen Catell, was a eugenicist? That's something. It's part of a deeply disturbing structural foundation of psychology. Some of this foundation is not particularly salient. For example, it's not easy to find the word eugenic or eugenics in Psychological Review (try to find it using Psycinfo). 
+
+```{r}
+knitr::include_graphics("img/eugenic.png")
+```
+
+That's curious. 
+
+However, if you know who is a eugenicist, because they for example founded the whole thing (e.g., Francis Galton), you can see that several known eugenicists published papers in the first issue of Psychological Review. You just have to connect those dots. TBH, it's really more of a question of who isn't a eugenicist in that issue.
 
 If you read about eugenics, you learn that eugenicists just want to breed the best people to make society a better place for eternity. They also want to enact negative eugenics on anyone they don't like, and attempt to eliminate them (e.g., forced sterilizations, Nazi genocide). This is just scratching the surface of the abhorrent practices and ideologies of eugenicists. They talk A LOT about doing this for the betterment of mankind. Their version of betterment is VERY SCARY. 
 
@@ -120,6 +128,34 @@ If it is not abundantly clear. I despise eugenics. Guess who was behind the orga
 Can you believe we are only at the first actual article past the editorial? 
 
 ---
+
+NOTE: I'm going to be bouncing back and forth a bit, and missing things here and there. It's a big journal.
+
+---
+
+
+## @hilliardReviewLeonKamin1976
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["hilliardReviewLeonKamin1976"])
+```
+
+
+I just ordered the Kamin book on IQ testing. Also, this is a book review worth reading. Consider this table of notable early psychologists who were also eugenicists, from the book review.
+
+```{r}
+knitr::include_graphics("img/IQ_table.png")
+```
+
+Some excerpts that capture several important issues:
+
+```{r}
+knitr::include_graphics("img/IQ_Review_A.png")
+```
+
+```{r}
+knitr::include_graphics("img/IQ_Review_B.png")
+```
 
 
 ## References
