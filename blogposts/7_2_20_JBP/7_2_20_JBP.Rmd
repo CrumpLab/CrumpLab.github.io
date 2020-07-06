@@ -247,6 +247,8 @@ More important, Boykin does some constructing too. For example, he describes aff
 
 Finally, I appreciated the concluding paragraph, if someone didn't already do this kind of memory experiment, it's a thesis waiting to happen. Also, note to self, I wonder to what extent the Boykin's notion of vervacity has been incorporated into theories of embodied cognition. I just did a quick google scholar search. @boykinExperimentalPsychologyBlack1977 has been cited 64 times, I didn't see any articles from the embodied cognition literature citing Boykin. Too bad, vervacity seems like a concept worth exploring (this was the first I had come across it in psychology)...OK, just came back from google scholar again, this time searching "vervistic", and there are a bunch of papers using this word and exploring the concept. Very cool! I'd like to learn more about that, but must press on.
 
+Actually, one more thing. In this paper, Boykin does not kick the tires of his vervistic considerations with experiments, so check out @boykinTaskVariabilityPerformance1982 which does.
+
 ```{r}
 knitr::include_graphics("img/Boykin77_4.png")
 ```
