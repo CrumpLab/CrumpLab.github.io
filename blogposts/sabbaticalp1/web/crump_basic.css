@@ -77,9 +77,12 @@ div.references p{
   text-indent: -10%;
 }
 
-.toc-content {
+/*.toc-content {
   width: 60%;
 }
+
+*/
+
 
 .tocify .tocify-item a, .tocify .list-group-item {
   padding: 10px;
