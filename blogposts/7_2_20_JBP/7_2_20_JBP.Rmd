@@ -245,13 +245,17 @@ Boykin is not concerned about the productive nature of the scientific method, on
 
 More important, Boykin does some constructing too. For example, he describes affective and cognition dimensions of developing children, and argues for the inclusion of another dimension: vervacity. What is vervacity? It reminded me of umami. I grew up without the word umami, but I obviously ate things that had it. Umami is good stuff, just like verve. I'll leave it to Boykin describe behavioral and psychological vervacity. From him, my takeaway was the contrast between how people move and resonate with ascetic classroom environment versus the vervistic environment of the Black church. As Boyking says, maybe school needs more soulfuness.
 
-Finally, I appreciated the concluding paragraph, if someone didn't already do this kind of memory experiment, it's a thesis waiting to happen. Also, note to self, I wonder to what extent the Boykin's notion of vervacity has been incorporated into theories of embodied cognition. I just did a quick google scholar search. @boykinExperimentalPsychologyBlack1977 has been cited 64 times, I didn't see any articles from the embodied cognition literature citing Boykin. Too bad, vervacity seems like a concept worth exploring (this was the first I had come across it in psychology)...OK, just came back from google scholar again, this time searching "vervistic", and there are a bunch of papers using this word and exploring the concept. Very cool! I'd like to learn more about that, but must press on.
-
-Actually, one more thing. In this paper, Boykin does not kick the tires of his vervistic considerations with experiments, so check out @boykinTaskVariabilityPerformance1982 which does.
+Finally, I appreciated the concluding paragraph, if someone didn't already do this kind of memory experiment, it's a thesis waiting to happen. 
 
 ```{r}
 knitr::include_graphics("img/Boykin77_4.png")
 ```
+
+Also, note to self, I wonder to what extent the Boykin's notion of vervacity has been incorporated into theories of embodied cognition. I just did a quick google scholar search. @boykinExperimentalPsychologyBlack1977 has been cited 64 times, I didn't see any articles from the embodied cognition literature citing Boykin. Too bad, vervacity seems like a concept worth exploring (this was the first I had come across it in psychology)...OK, just came back from google scholar again, this time searching "vervistic", and there are a bunch of papers using this word and exploring the concept. Very cool! I'd like to learn more about that, but must press on.
+
+Actually, one more thing. In this paper, Boykin does not kick the tires of his vervistic considerations with experiments, so check out @boykinTaskVariabilityPerformance1982 which does.
+
+
 
 
 
