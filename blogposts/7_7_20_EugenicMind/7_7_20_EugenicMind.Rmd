@@ -162,6 +162,38 @@ where does "normalcy" come from
 
 This chapter is develops broad ideas and questions, and places them largely in an academic context
 
+## 6 A socio-cognitive framework for marked variation
+
+some theoretical development
+
+Thalidomiders
+
+## 7 Back doors, Newgenics, and eugenics Underground
+
+prenatal screening backdoor
+
+lots of stuff to think about here
+
+## 8 Eugenics as wrongful accusation
+
+"Question here is not about one about the extremes of eugenics, but about the routinezed, normalized forms that eugenics subsequently took." -- e.g., after the world was horrified by the Nazi atrocities in the name of eugenics, many eugenics practices went on as usual in many democratic countries.
+
+Talks about what went down in Alberta: Why did eugenics persist there
+
+1. Subhumanizing tendencies...survivors were held as subhumans
+2. Procedural indifference...institutions just didn't really care about contemporary knowledge, e.g., that IQ tests were seriously flawed and shouldn't be used
+
+How did ignorance about eugenics in Alberta contribute? How did value shifting contribute? Neither is enough to explain the persistence
+
+```{r}
+knitr::include_graphics("img/8A.png")
+```
+
+
+
+
+
+
 
 
 
