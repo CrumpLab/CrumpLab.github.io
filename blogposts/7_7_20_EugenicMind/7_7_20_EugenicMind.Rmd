@@ -189,6 +189,15 @@ How did ignorance about eugenics in Alberta contribute? How did value shifting c
 knitr::include_graphics("img/8A.png")
 ```
 
+Beyond moral panic
+
+Bystanders
+
+# Part 3 Eugenic Voices: Knowing agency at the margins
+
+## 9 Knowing Agency
+
+
 
 
 
