@@ -75,7 +75,7 @@ knitr::include_graphics("blogposts/7_2_20_JBP/JBP.png")
 
 July 2, 2020
 
-I'm reading the Journal of Black Psychology from the beginning, and writing about it here.
+I'm reading the Journal of Black Psychology from the beginning, and making notes here.
 
 </div>
 </div>
