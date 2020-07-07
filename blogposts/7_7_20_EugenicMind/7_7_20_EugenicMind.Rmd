@@ -126,6 +126,29 @@ forced sterilization in alberta, sterilization without consent
 
 eugenic traits in alberta legislation that called for sterilization
 
+## 4 Subhumanizing the targets of eugenics
+
+What sorts of people should there be? Eugenics and bioethics
+
+the black stork (film)
+
+```{r}
+knitr::include_graphics("img/4A.png")
+```
+
+Good question:
+
+```{r}
+knitr::include_graphics("img/4B.png")
+```
+
+Eugenic Now
+
+Ashley X
+
+# part II Eugenic variations: The persistence of Eugenics
+
+## 5 Where do ideas of human variation come from?
 
 
 
