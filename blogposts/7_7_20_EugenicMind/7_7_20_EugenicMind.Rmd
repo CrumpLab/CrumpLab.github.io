@@ -108,6 +108,26 @@ Here is an example geneological survey using the letters to identify "degeneracy
 knitr::include_graphics("img/ERO2.png")
 ```
 
+By 1939, the ERO had made ~ one million index cards tracing lineages using the above methodology. ERO in general gives an idea of eugenic traits in practice.
+
+pg 60 -- eugenic laws
+
+Intended to regulate human breeding generationally 
+
+- Forced sterilization
+- marriage restriction laws
+- immigration policy and law
+
+ 60+ Focus on sexual sterilization laws
+ 
+p 69. Institutionalization and eugenics
+
+forced sterilization in alberta, sterilization without consent
+
+eugenic traits in alberta legislation that called for sterilization
+
+
+
 
 
 
