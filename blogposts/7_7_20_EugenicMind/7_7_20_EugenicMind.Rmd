@@ -1,0 +1,44 @@
+---
+title: "The Eugenic Mind Project"
+author: "Matt Crump"
+date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
+twitter:
+  card_description: "I'm reading the Eugenic Mind Project by R. A. Wilson, and writing about it here."
+  card_img: "https://crumplab.github.io/blogposts/7_7_20_EugenicMind/EM.jpg"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 2
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: web/header.html
+    md_extensions: -autolink_bare_uris
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+---
+
+I'm working through the task of learning about influences of eugenics on psychology and society. As a part of this, I'm reading Robert A. Wilson's, "The Eugenic Mind Project". I'll use this page to write notes about what I'm reading.
+
+---
+
+
+
+
+## References
+
+
+
+

@@ -47,6 +47,25 @@ This blog is a public-facing expression of me working through various ideas and 
 <div class="row">
 <div class="col-sm-4">
 ```{r, echo=F}
+knitr::include_graphics("blogposts/7_7_20_EugenicMind/img/EM.jpg")
+```
+</div>
+<div class="col-sm-8">
+
+# [The Eugenic Mind Project](https://crumplab.github.io/blogposts/7_7_20_EugenicMind/7_7_20_EugenicMind.html)
+
+July 7, 2020
+
+I'm reading the Eugenic Mind Project by R. A. Wilson, and writing about it here.
+
+</div>
+</div>
+
+----
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F}
 knitr::include_graphics("blogposts/7_2_20_JBP/JBP.png")
 ```
 </div>
