@@ -42,11 +42,31 @@ close(CON)
 
 This blog is a public-facing expression of me working through various ideas and methods, mostly around cognitive psychology and how it sits within a scientific and social context. When I'm not working on these words, they sit here, and when I am working on them, they change. I'm attempting to use my writing process to evaluate and compose perspectives, some of which may be my own... it's confusing because I use writing to know if I think something, but I keep changing the words as I learn what I think.
 
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F, out.width="50%"}
+knitr::include_graphics("blogposts/7_8_20_HistoryEugenics/img/HE.png")
+```
+</div>
+<div class="col-sm-8">
+
+# [The Oxford Handbook of the History of Eugenics](https://crumplab.github.io/blogposts/7_8_20_HistoryEugenics/7_8_20_HistoryEugenics.html)
+
+July 8, 2020
+
+I'm reading through the Oxford Handbook of the History of Eugenics and collecting my notes here.
+
+</div>
+</div>
+
+----
+
 ---
 
 <div class="row">
 <div class="col-sm-4">
-```{r, echo=F}
+```{r, echo=F, out.width="50%"}
 knitr::include_graphics("blogposts/7_7_20_EugenicMind/img/EM.jpg")
 ```
 </div>
