@@ -33,6 +33,45 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 I'm working through the task of learning about influences of eugenics on psychology and society. As a part of this, I'm reading the Oxford Handbook of the History of Eugenics [@bashfordOxfordHandbookHistory2010]. I'll use this page to write notes about what I'm reading.
 
 
+# 1 Transnational Themes in the History of Eugenics
+
+
+```{r, results='asis', echo=FALSE}
+library(knitcitations)
+library(RefManageR)
+bib <- read.bibtex("refs.bib")
+
+in_text_ref <- function(x){
+  b<-capture.output(print(x,.opts = list(bib.style = "authoryear", first.inits = TRUE, style = "markdown",no.print.fields=c("URL","urldate","issn","doi"))))
+  cat("## ")
+  cat(b,collapse=" ")
+  
+}
+```
+
+---
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["paulDarwinianContextEvolution2010"])
+```
+
+Some history beginning with Darwin and his cousin Galton (coiner of eugenics). Galton develops that idea that "good" human traits can developed by human breeding. Somewhat contextu. alizes Galton among peers and related ideas. Some extended summary of Galton's ideas and Darwin's reaction to them.
+
+In short, load societies problems onto hereditary traits, propose to abolish societies problems by regulating which people are allowed to live over generations.
+
+Apparently Galton's "Hereditary Genius" [@galtonHereditaryGenius1869] sold poorly, perhaps because of its anti-religioun position.
+
+30 years later, Galton bankrolls the Eugenics Record Office (1904), and turned into "The Francis Galton Laboratory for the Study of National Eugenics". This lab still runs today. Back then it was directed by Galton's disciple Karl Pearson.
+
+August Weismann's germ cells and somatic cells (1883)
+
+Turn of the century, there is broad concern about degeneration, and that "hereditary weakness would fatally undermine" Britain's war machine. Statistics research shows that the highborn have a low birthrate, and the scum are over-producing.
+
+Galton gives address in 1901, "The possible improvement of the human breed, under the existing conditions of law and sentiment". The tenor is changed to identify the groups in Britain that are threatening society if they continue to reproduce. Some of the rhetoric apparently changes from mostly positive eugenics (encourage elite breeding), to include negative eugenics (preventing degenerates from breeding). "Raise the average by reducing the undesirables."
+
+
+
+
 
 ## References
 
