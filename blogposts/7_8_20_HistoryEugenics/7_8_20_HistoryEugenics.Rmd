@@ -203,14 +203,39 @@ I didn't see any mention of psychology as a context for discussion.
 ---
 
 ```{r, results='asis', echo=FALSE}
-in_text_ref(bib["roll-hansenEugenicsScienceGenetics2010"])
+in_text_ref(bib["klausenFertilityControlEugenics2010"])
+```
+
+Eugenics and birth control...a confluence of themes, some convergences with progressivism and feminism.
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/Popenoe1.png")
+```
+
+Tangent: Noted eugenicist [Paul Popenoe](https://en.wikipedia.org/wiki/Paul_Popenoe), hired an interesting protege at one point...[James Dobson](https://en.wikipedia.org/wiki/James_Dobson) founder of Focus on the Family. I've been wondering about the entanglements of eugenics and evangelicals. There are some strange ones here. E.g., The founder of planned parenthood was [Margaret Sanger](https://en.wikipedia.org/wiki/Margaret_Sanger) a eugenicist. Here we see [Jim Daly]() current president and CEO of [focus on the family](https://en.wikipedia.org/wiki/Focus_on_the_Family), calling out planned parenthood for the eugenicism of its founder [http://hiskingdom.us/wp-content/uploads/2019/11/Daly-Tipping-Point-on-Abortion.pdf](http://hiskingdom.us/wp-content/uploads/2019/11/Daly-Tipping-Point-on-Abortion.pdf). For some reason he doesn't complain about himself, because we was the protege of James Dobson, who was the protege of Paul Popenoe...hmmm.
+
+Early birth clinics kept track of the reasons for birth control...healt, eugenic etc.
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/Sterilization.png")
+```
+
+Lots of national variation in adoption of sterilization...more protestant (and also less christian) typically more adoption, more catholic typically less adoption.
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/Sterilization2.png")
+```
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/Abortion.png")
 ```
 
 
+```{r, echo=FALSE}
+knitr::include_graphics("img/Abortion2.png")
+```
 
-
-
-
+Lots of interesting discussion about the relationships between eugenics and feminism.
 
 
  
