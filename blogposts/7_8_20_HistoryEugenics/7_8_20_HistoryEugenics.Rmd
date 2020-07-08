@@ -148,6 +148,48 @@ knitr::include_graphics("img/Pearson3.png")
 
 Sigh, I guess I need to go and read part two. Hmm, haven't been able to find part II yet, but I did find part III and part III(cont.). This is a comprehensive method for using "data science" for the purpose of racial profiling in the name of eugenics. It is an obvious blueprint about measurement methods that eventually lead to Nazi genocide.
 
+Well, got a bit distracted...returning to the eugenics book
+
+---
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["turdaRaceScienceEugenics2010"])
+```
+
+~Race, class, and gender are essential to the changing matrix of eugenic thought~
+
+Aim is to chart out the racist - eugenicist linkage...alsoan argument about how to think about eugenics in a historical context.
+
+Lene Koch, "eugenics should not be dismisses as an unscientific, amateurish activity".
+
+Eugenics and Racial Hygiene, Alfred Ploetz (1860-1940) Grundlinien einer RassenHygiene (the foundations of racial hygiene), founder of German eugenic movement.
+
+Ploetz becomes interested in Galton after launching the Journal of Social and Racial Biology
+
+Ploetz wanted to "increase and further hereditarily "superior" individuals, and to decrease -if elimination was not possible- the racially undesirable. It was future oriented in terms of created a supreme Aryan society over the generations.
+
+Generally pretty consistent with British, American, and Scandinavian eugenics.
+
+Eugenics and anthropology were highly racialized in 1900-45. Lots of eugenic ideas of racial superiority raised in political discourse in the interwar period.
+
+As biological basis for race erodes, eugenicists have to deal with this in their rhetoric. Eugenicists saw themselves as scientists and modern-day nation builders. 
+
+Nature vs nurture debate...It's interesting read eugnics literature and see them contort their arguments so it doesn't matter if something is nature or nuture in terms of whether they advocate for getting rid of people they don't like.
+
+biochemical races, discovery of blood groups, serology
+
+Pauline Mazumdar "Blood-group serology offered a model system for human genetics, and for its practical arms, eugenics and racial hygiene." Blood could be a new way to define popuilations...i.e., more scientific ways to claim white supremacy
+
+Franz Boas (1858-1942) authority in 20th century anthropology...founder of cultural relativism, one of the first detractors of scientific racism.
+ - finally, I have come across a contemporary who advocates against eugenics [@boasEugenics1916] on several lines.
+ 
+More opponents of eugenics...Julian S Huxley, Alfred C. Haddon "We Europeans" (1935)
+
+usefulness and need for counternarrative
+
+
+
+
 
 
 
