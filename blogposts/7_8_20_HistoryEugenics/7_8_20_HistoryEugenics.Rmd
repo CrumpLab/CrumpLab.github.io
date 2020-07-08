@@ -187,7 +187,24 @@ More opponents of eugenics...Julian S Huxley, Alfred C. Haddon "We Europeans" (1
 
 usefulness and need for counternarrative
 
+---
 
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["roll-hansenEugenicsScienceGenetics2010"])
+```
+
+
+Sets eugenics within some contemporaneous scientific context, including developing views on genetics, and eventual rejection of a biological basis for race.
+
+Dissappearance of Eugenics from discourse 1950s onward.
+
+I didn't see any mention of psychology as a context for discussion.
+
+---
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["roll-hansenEugenicsScienceGenetics2010"])
+```
 
 
 
