@@ -52,7 +52,7 @@ knitr::include_graphics("blogposts/7_9_20_KaminIQ/img/IQ.png")
 </div>
 <div class="col-sm-8">
 
-# [The Oxford Handbook of the History of Eugenics](https://crumplab.github.io/blogposts/7_9_20_KaminIQ/7_9_20_KaminIQ.html)
+# [The Science and Politics of IQ](https://crumplab.github.io/blogposts/7_9_20_KaminIQ/7_9_20_KaminIQ.html)
 
 July 9, 2020
 
