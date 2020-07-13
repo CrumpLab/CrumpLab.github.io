@@ -95,6 +95,7 @@ A major overarching goal of compiling and documenting connections between psycho
   - Had an interest in psychic phenomena
   - [@jonesHistoryOverviewPsychometrics2006], describe how Jastrow was a proponent of Galton in the US, established a lab in Chicago alongside Franz Boas (an anthropologist who advocated against eugenics, @boasEugenics1916). 
   - Wrote on the science of "human quality" [@jastrowCharacterTemperament1921]
+  - listed in eugenical news as an active researcher
     
 ### 1901 Josiah Royce
 
@@ -169,28 +170,77 @@ A major overarching goal of compiling and documenting connections between psycho
 ### 1914 Robert Sessions Woodworth
 
   - obit appears in the Eugenics Review [@welfordCurrentPsychologicalIssues1961]
-  - see discussion on eugenics at Columbia [@rupertRaceScienceColumbia2019]
-    
-## Robert Yerkes
+  - see discussion on Woodworth's eugenics at Columbia [@rupertRaceScienceColumbia2019]
+  
+### 1915 John Broadus Watson
 
-  - APA president
+ - The famous behaviorist
+ - Listed as a eugenics researchers in the Eugenical News
+ - Angell was his advisor
+ 
+### 1916 Raymond Dodge
+
+ - From Doyle, "Dodge was also pleased that his research in human variability and psycho- psychology was so valued by the prospective Institute. While Dodge never publicly identified as a eugenicist, he applauded the National Origins Act of 1924 and was a proponent of applying psychological research to public discourse on selective immigration.93"
+ - did some IQ testing in the war
+ 
+ 
+### 1917  Robert Mearns Yerkes
+
   - Implemented the Alpha and Beta IQ tests on the Army (1.5 - 2 million army men tested).
-  - Pretty clear from his report [@yerkesEugenicBearingMeasurements1923], that he wanted the tests to validate whites becoming officers, and "morons" and immigrants and blacks becoming fodder for the front line.
+  - Pretty clear from his report [@yerkesEugenicBearingMeasurements1923], that he wanted the tests to validate whites becoming officers, and "morons" and immigrants and blacks to be fodder for the front line, or otherwise eliminated
+  
+### 1918 John Wallace Baird
+
+  - Canadian psychologist, connection to eugenics? 
+
+### 1919 Walter Dill Scott
+
+  - intelligence tester, early IO psychology, e.g., applying scientific selection to salesmen @scottScientificSelectionSalesmen1915
+  - wikipedia suggests Scott followed in the Galton eugenics tradition, maintained similar elitist views
+  
+### 1920 Shepard Ivory Franz
+
+  - went to school with Thorndike, studied under Cattell
+  - wrote "Psychology as life work" with Thorndike and others, @dodgePsychologyLifeWork1923
+  - Haven't found eugenic writings from Franz
+  
+### 1921 Margaret Floy Washburn
+  
+  - first woman to get a Ph.D. in Pysch
+  - studied under Cattell & Titchener, did comparative cognitive
+
+### 1922 Knight Dunlap
+
+  - Author of "Personal Beauty and Racial Betterment" @dunlapPersonalBeautyRacial1920
+  
+### 1923 Lewis Terman
+
+ - APA president 1923
+ - Adapts Alfred Binet's IQ test to English at Stanford, creating the Standford-Binet IQ test.
+ - See his eugenic views on feeble-mindedness in school children in California [@terman1917feeble]
+ 
+### 1924 Granville Stanley Hall (2nd time)
+
+ - see above
+ 
+### 1925 Madison Bentley
+
+ - author of Mental Inheritance (1909) [https://en.wikisource.org/wiki/Popular_Science_Monthly/Volume_75/November_1909/Mental_Inheritance](https://en.wikisource.org/wiki/Popular_Science_Monthly/Volume_75/November_1909/Mental_Inheritance)
+ 
+### 1926  Harvey A. Carr
+
+ - Carr, H. A., & Kingsbury, F. A. (1938). The concept of traits. Psychological Review, 45(6), @497–524. https://doi.org/10.1037/h0063048
+ - Carr, H. A., & Kingsbury, F. A. (1938). The concept of ability. Psychological Review, 45(5), 354–376. https://doi.org/10.1037/h0055419
+ - Haven't found specific eugenic writing
+ 
+### 1927 Harry Levi Hollingworth
+
+ -  advocates for eugenics in the book "Vocational Psychology" @hollingworthVocationalPsychologyIts1916
   
 ## Henry Goddard
 
  - Goddard argued for classifying “feeble-minded” people into classes by IQ, e.g., idiots ~ 20, Imbeciles ~ 40, Morons ~ 70, see Goddard’s “Who is a Moron?” [@goddardWhoMoron1927]. 
  - The fear was that morons are basically normal competent people who are able to hide in society, but they will also destroy the human race if they are allowed to breed. The only way to discover morons was to IQ test them, and then employ eugenics polices to prevent morons from breeding.
- 
-## Lewis Terman
-
- - APA president 1923
- - Adapts Alfred Binet's IQ test to English at Stanford, creating the Standford-Binet IQ test.
- - See his eugenic views on feeble-mindedness in school children in California [@terman1917feeble]
-
-## J. B. Watson
-
- - Listed as a eugenics researchers in the Eugenical News
  
 ## Karl Lashley
 
