@@ -1,0 +1,220 @@
+---
+title: "Psychology and Eugenics connections"
+author: "Matt Crump"
+date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
+twitter:
+  card_description: "Making notes and connecting dots about the pervasiveness of eugenics ideology among psychologists"
+  card_img: "https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/img/eugenics.jpg"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: web/header.html
+    md_extensions: -autolink_bare_uris
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+---
+
+I'm working through the task of learning about influences of eugenics on psychology and society. As a part of this, I'm documenting the eugenics views held by many psychologists, as well as connections between psychologists and eugenics. I will keep updating this page as I document the connections. There are many connections, it will take some time. So far, this is an emerging disorganized collection of factoids.
+
+## Sir Francis Galton
+
+  - Inventor of eugenics
+  - effectively initiates individual differences psychology, for the purposes of eugenics
+  - Obviously much more can be said about Galton...
+  
+## Karl Pearson
+
+  - Eminent Statistician. Inventor of many common statistics (e.g., Pearson's R)
+  - Galton appointed Pearson as the first Director of his Eugenics Laboratory at University College London, this is still in use today
+  - The depths of Pearson's eugenics are apparent in his length effort to measure jewish children like animals, and apply his statistical tools to eliminating "bad" jews from immigrated to the UK [@pearsonProblemAlienImmigration1925]. This reference is part I of III, and continues for several hundred pages. To my mind, this work is obviously used as a blueprint by the Nazi's.
+  
+## Ronald Fisher
+
+ - fill in refs 
+  
+## Alexander Graham Bell & Bell Labs
+
+  - Notable figure who was a prominent eugenicist
+  - Bell labs became central to the development of many communication technologies, and numerous important figures in the emerging discipline of cognitive science worked at Bell Labs. 
+  - I need to look more into the culture of eugenics at Bell labs, but perhaps not surprisingly there appears to be on, e.g.,  [https://en.wikipedia.org/wiki/William_Shockley](https://en.wikipedia.org/wiki/William_Shockley)
+    
+    
+## American Psychological Presidents
+ 
+ - @yakushkoEugenicsItsEvolution2019 writes that 31 APA presidents between 1892 -1947 were affiliated with or leaders in eugenics movements. Need to fill this list out (also it extends past 1947 as we will see)
+ 
+### 1892 Granville Stanley Hall 
+ 
+ - Noted as joining as new active member of the Eugenics Record Office in the Eugenical News
+   
+### 1893 George Trumball Ladd
+ 
+ - his presidential address is published in the first issue and volume of Psychological Review. He does not use the word eugenics, but appears to dogwhistle to the eugenicists in the room in his closing paragraphs about improving society. Also, many of the authors in the first issue of Psyc Review, were eugenicists
+   
+### 1895 James McKeen Cattell
+
+  - [wikipedia page](https://en.wikipedia.org/wiki/James_McKeen_Cattell)
+  - Founded Psychological Review, as journal of APA
+  - bought Science, editor for 50 years
+  - APA president 1895
+  - Eugenicist, attempted to development intelligence tests that didn't quite work out, presumably for the purposes of eugenics. This is a nice example of efforts that pre-date Binet's IQ test to develop "scientific" mental tests for the purposes of eugenics.
+    - Note to self to locate if Cattell expresses his eugenics in writing.
+
+### 1897 James Mark Baldwin
+
+ - The mental development in the child and race: methods ands processes [@baldwinMentalDevelopmentChild1900]
+
+### 1898 Hugo Munsterberg
+
+ - Is written up in the eugenical news as a fine speciman, "Sensorium of a Psychologist", Eugenical News, Vol VII, No. 10, October 1922
+    
+### 1899 John Dewey
+
+ - Keeps coming up in the context of eugenics and education...need to learn more
+    
+### 1900 Joseph Jastrow
+
+  - Had an interest in psychic phenomena
+  - [@jonesHistoryOverviewPsychometrics2006], describe how Jastrow was a proponent of Galton in the US, established a lab in Chicago alongside Franz Boas (an anthropologist who advocated against eugenics, @boasEugenics1916). 
+  - Wrote on the science of "human quality" [@jastrowCharacterTemperament1921]
+    
+### 1901 Josiah Royce
+
+  - Philosopher (American Idealism)
+  - At harvard, apparently convinced Robert Yerkes to combine his interests and do psychology
+  - Gets written up in the eugenical news at least once
+  - haven't spent time to look into his writing (or lack thereof on eugenics)
+
+### 1902 Edmund Clark Sanford
+
+ - Supervised Lewis Terman, who created Stanford-Binet IQ test
+ - Acknowledged as helping out with a dissertation on "The Psychology of Superior Children" [@richards-nashPsychologySuperiorChildren1924]
+
+### 1903 William Lowe Bryan
+
+  - did some work on aquiring telegraph skill, touched all the bases of modern work on transcription skill.
+  - President of the Indiana Society for Mental Hygiene (elected 1919)
+
+### 1904 William James
+
+  - doesn't appear to discuss eugenics?
+    
+### 1905 Mary Whiton Calkins
+
+  - First Female APA president!
+  - Student of William James
+  - has some writing on ethics, espouses progressive views [@calkinsGoodManGood1918]
+
+### 1906  James Rowland Angell
+
+  - Also eventual president of Yale and eugenics proponent
+  - Supervisor of J. B. Watson
+  - See @doyleMeasuringProblemsHuman2014 on eugenics in Psychology at Yale
+  - Did early mental chronometry research
+  - Expressed some of his racialized views of intelligence in @angellEvolutionIntelligence1922
+
+### 1907  Henry Rutgers Marshall
+
+  - interested in aesthetics
+
+### 1908  George Malcolm Stratton
+
+  - From wikipedia, Stratton served in the Army during World War I, developing psychological tests to select airmen for Army aviation
+  - Did prism experiments (upside-down looking)
+  - published lots of different esoteric things, on feats of memory, to anger in cattle, to how cattle get excited by blood
+  - Some discussion of Stratton's role in driving research effort into African Americans [@yudellRaceUnmaskedBiology2014].
+
+### 1909  Charles Hubbard Judd
+
+  -  educational psychologist
+
+### 1910  Walter Bowers Pillsbury
+
+  - from [http://www.cyberus.ca/~pballan/Pillfina.htm](http://www.cyberus.ca/~pballan/Pillfina.htm): This personal brush with political prejudice did not change Pillsbury's official scientific stance on race and mental degeneracy. His Education as the Psychologist Sees It (1920), for instance, was part of a successful nationwide postwar marketing campaign advocating the use of new group "mental testing" techniques in American schools. Here, Pillsbury uncritically combined past eugenic twin-studies with the new "Army Alpha and Beta" intelligence testing data. Surprisingly, his personal conclusion after thirty-three years of teaching is "that one can never produce intelligence by education, that one must begin much farther back in actually insuring the birth of intelligent people" (p. 46). [p. 525] At this time, however, Pillsbury was just one of many psychologists who accepted such notions (e.g., R. M. Yerkes, Psychological Examination in the United States Army [1921]; W. S. Hunter, General Psychology [1919]; R. S. Woodworth, Psychology [1921]).
+
+### 1911  Carl Emil Seashore
+
+  - Seashore, music and eugenics: [http://www.brooklyn.cuny.edu/web/academics/centers/hitchcock/publications/amr/v48-2/devaney.php](http://www.brooklyn.cuny.edu/web/academics/centers/hitchcock/publications/amr/v48-2/devaney.php)
+  - Seashore wrote extensively on eugenics and euthenics
+
+### 1912 Edward Lee Thorndike
+
+  - wrote extensively on eugenics
+    - @thorndikeHumanNatureSocial1940
+    - @thorndikeEugenicsSpecialReference1913
+
+### 1913 Howard Crosby Warren
+
+  - SEP society gives the HC Warren medal every year
+  - Listed as a new active member of Eugenics Research Association in Eugenical News
+
+### 1914 Robert Sessions Woodworth
+
+  - obit appears in the Eugenics Review [@welfordCurrentPsychologicalIssues1961]
+  - see discussion on eugenics at Columbia [@rupertRaceScienceColumbia2019]
+    
+## Robert Yerkes
+
+  - APA president
+  - Implemented the Alpha and Beta IQ tests on the Army (1.5 - 2 million army men tested).
+  - Pretty clear from his report [@yerkesEugenicBearingMeasurements1923], that he wanted the tests to validate whites becoming officers, and "morons" and immigrants and blacks becoming fodder for the front line.
+  
+## Henry Goddard
+
+ - Goddard argued for classifying “feeble-minded” people into classes by IQ, e.g., idiots ~ 20, Imbeciles ~ 40, Morons ~ 70, see Goddard’s “Who is a Moron?” [@goddardWhoMoron1927]. 
+ - The fear was that morons are basically normal competent people who are able to hide in society, but they will also destroy the human race if they are allowed to breed. The only way to discover morons was to IQ test them, and then employ eugenics polices to prevent morons from breeding.
+ 
+## Lewis Terman
+
+ - APA president 1923
+ - Adapts Alfred Binet's IQ test to English at Stanford, creating the Standford-Binet IQ test.
+ - See his eugenic views on feeble-mindedness in school children in California [@terman1917feeble]
+
+## J. B. Watson
+
+ - Listed as a eugenics researchers in the Eugenical News
+ 
+## Karl Lashley
+
+ - note to self to find the Lashley references
+
+## Claude Shannon
+
+ - completed his masters thesis at Cold Springs Harbor Laboratory (Eugenics Record Office) [https://liorpachter.wordpress.com/2013/11/05/claude-shannon-population-geneticist/](https://liorpachter.wordpress.com/2013/11/05/claude-shannon-population-geneticist/)
+ - switched to invent information theory aftwerward
+
+## George A. Miller
+ 
+ - wrote on eugenics in Daedalus, @millerPsychologicalPerspectivesYear1967
+
+## Abraham Maslow
+
+ - Posthumous journal notes suggest his humanism was rooted in eugenics
+ - @maslowJournalsAbrahamMaslow1982
+
+
+
+
+
+
+## References
+
+
+
+

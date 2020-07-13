@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+
+    <meta charset="utf-8" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+            <meta name="twitter:card" content="summary" />
+       <meta name="twitter:title" content="Psychology and Eugenics connections"/> 
+      <meta name="twitter:creator" content="@MattCrump_" />
+      <meta name="twitter:description" content="Making notes and connecting dots about the pervasiveness of eugenics ideology among psychologists" /> 
+            <meta name="twitter:image" content="https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/img/eugenics.jpg"/>
+      
+
+      
+        <meta name="generator" content="pandoc" />
+
+                    
+                        <meta name="author" content="Matt Crump" />
+              
+              
+                <title>Psychology and Eugenics connections</title>
+
+                                <script src="7_13_20_PsychEugenics_files/jquery-1.11.3/jquery.min.js"></script>
+                                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                                <link href="7_13_20_PsychEugenics_files/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+                                <script src="7_13_20_PsychEugenics_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+                                <script src="7_13_20_PsychEugenics_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+                                <script src="7_13_20_PsychEugenics_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+                                <script src="7_13_20_PsychEugenics_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+                                <link href="7_13_20_PsychEugenics_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+                                <script src="7_13_20_PsychEugenics_files/tocify-1.9.1/jquery.tocify.js"></script>
+                                <script src="7_13_20_PsychEugenics_files/navigation-1.1/tabsets.js"></script>
+                                <style>
+                                @import url('https://fonts.googleapis.com/css?family=Serif+Pro|Open+Sans&display=swap');
+                                </style>
+
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+                
+                      
+                          
+                                                    <style type="text/css">
+                          h1 {
+                            font-size: 34px;
+                          }
+                        h1.title {
+                          font-size: 38px;
+                        }
+                        h2 {
+                          font-size: 30px;
+                        }
+                        h3 {
+                          font-size: 24px;
+                        }
+                        h4 {
+                          font-size: 18px;
+                        }
+                        h5 {
+                          font-size: 16px;
+                        }
+                        h6 {
+                          font-size: 12px;
+                        }
+                        .table th:not([align]) {
+                          text-align: left;
+                        }
+                          </style>
+  
+    <link rel="stylesheet" href="web/crump_basic.css" type="text/css" />
+    
+
+
+        <style type = "text/css">
+      .main-container {
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    code {
+      color: inherit;
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    img {
+      max-width:100%;
+      height: auto;
+    }
+    .tabbed-pane {
+      padding-top: 12px;
+    }
+    .html-widget {
+      margin-bottom: 20px;
+    }
+    button.code-folding-btn:focus {
+      outline: none;
+    }
+    summary {
+      display: list-item;
+    }
+    </style>
+
+      
+      
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../index.html">Crump Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="../../People.html">People</a>
+</li>
+<li>
+  <a href="../../Publications.html">Publications</a>
+</li>
+<li>
+  <a href="../../Books.html">Books/OER</a>
+</li>
+<li>
+  <a href="../../Courses.html">Courses</a>
+</li>
+<li>
+  <a href="../../Apps.html">Apps</a>
+</li>
+<li>
+  <a href="../../Opportunities.html">Join The Lab</a>
+</li>
+<li>
+  <a href="../../Blog.html">Blog</a>
+</li>
+<li>
+  <a href="../../R.html">R</a>
+</li>
+<li>
+  <a href="https://twitter.com/MattCrump_">
+    <span class="fa fa-twitter"></span>
+
+
+  </a>
+</li>
+<li>
+  <a href="https://github.com/CrumpLab">
+    <span class="fa fa-github"></span>
+
+
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+<img src="https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/img/eugenics.jpg"" />
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Psychology and Eugenics connections</h1>
+
+<span class="author">Matt Crump  |  </span>
+<span class="date">Last edited: 13 July, 2020</span>
+
+<span class="social_media">
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</span>
+
+
+</div>
+
+
+<hr />
+<p>I’m working through the task of learning about influences of eugenics on psychology and society. As a part of this, I’m documenting the eugenics views held by many psychologists, as well as connections between psychologists and eugenics. I will keep updating this page as I document the connections. There are many connections, it will take some time. So far, this is an emerging disorganized collection of factoids.</p>
+<div id="sir-francis-galton" class="section level2">
+<h2>Sir Francis Galton</h2>
+<ul>
+<li>Inventor of eugenics</li>
+<li>effectively initiates individual differences psychology, for the purposes of eugenics</li>
+<li>Obviously much more can be said about Galton…</li>
+</ul>
+</div>
+<div id="karl-pearson" class="section level2">
+<h2>Karl Pearson</h2>
+<ul>
+<li>Eminent Statistician. Inventor of many common statistics (e.g., Pearson’s R)</li>
+<li>Galton appointed Pearson as the first Director of his Eugenics Laboratory at University College London, this is still in use today</li>
+<li>The depths of Pearson’s eugenics are apparent in his length effort to measure jewish children like animals, and apply his statistical tools to eliminating “bad” jews from immigrated to the UK <span class="citation">(Pearson &amp; Moul, 1925)</span>. This reference is part I of III, and continues for several hundred pages. To my mind, this work is obviously used as a blueprint by the Nazi’s.</li>
+</ul>
+</div>
+<div id="ronald-fisher" class="section level2">
+<h2>Ronald Fisher</h2>
+<ul>
+<li>fill in refs</li>
+</ul>
+</div>
+<div id="alexander-graham-bell-bell-labs" class="section level2">
+<h2>Alexander Graham Bell &amp; Bell Labs</h2>
+<ul>
+<li>Notable figure who was a prominent eugenicist</li>
+<li>Bell labs became central to the development of many communication technologies, and numerous important figures in the emerging discipline of cognitive science worked at Bell Labs.</li>
+<li>I need to look more into the culture of eugenics at Bell labs, but perhaps not surprisingly there appears to be on, e.g., <a href="https://en.wikipedia.org/wiki/William_Shockley">https://en.wikipedia.org/wiki/William_Shockley</a></li>
+</ul>
+</div>
+<div id="american-psychological-presidents" class="section level2">
+<h2>American Psychological Presidents</h2>
+<ul>
+<li><span class="citation">Yakushko (2019)</span> writes that 31 APA presidents between 1892 -1947 were affiliated with or leaders in eugenics movements. Need to fill this list out (also it extends past 1947 as we will see)</li>
+</ul>
+<div id="granville-stanley-hall" class="section level3">
+<h3>1892 Granville Stanley Hall</h3>
+<ul>
+<li>Noted as joining as new active member of the Eugenics Record Office in the Eugenical News</li>
+</ul>
+</div>
+<div id="george-trumball-ladd" class="section level3">
+<h3>1893 George Trumball Ladd</h3>
+<ul>
+<li>his presidential address is published in the first issue and volume of Psychological Review. He does not use the word eugenics, but appears to dogwhistle to the eugenicists in the room in his closing paragraphs about improving society. Also, many of the authors in the first issue of Psyc Review, were eugenicists</li>
+</ul>
+</div>
+<div id="james-mckeen-cattell" class="section level3">
+<h3>1895 James McKeen Cattell</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/James_McKeen_Cattell">wikipedia page</a></li>
+<li>Founded Psychological Review, as journal of APA</li>
+<li>bought Science, editor for 50 years</li>
+<li>APA president 1895</li>
+<li>Eugenicist, attempted to development intelligence tests that didn’t quite work out, presumably for the purposes of eugenics. This is a nice example of efforts that pre-date Binet’s IQ test to develop “scientific” mental tests for the purposes of eugenics.
+<ul>
+<li>Note to self to locate if Cattell expresses his eugenics in writing.</li>
+</ul></li>
+</ul>
+</div>
+<div id="james-mark-baldwin" class="section level3">
+<h3>1897 James Mark Baldwin</h3>
+<ul>
+<li>The mental development in the child and race: methods ands processes <span class="citation">(Baldwin, 1900)</span></li>
+</ul>
+</div>
+<div id="hugo-munsterberg" class="section level3">
+<h3>1898 Hugo Munsterberg</h3>
+<ul>
+<li>Is written up in the eugenical news as a fine speciman, “Sensorium of a Psychologist”, Eugenical News, Vol VII, No. 10, October 1922</li>
+</ul>
+</div>
+<div id="john-dewey" class="section level3">
+<h3>1899 John Dewey</h3>
+<ul>
+<li>Keeps coming up in the context of eugenics and education…need to learn more</li>
+</ul>
+</div>
+<div id="joseph-jastrow" class="section level3">
+<h3>1900 Joseph Jastrow</h3>
+<ul>
+<li>Had an interest in psychic phenomena</li>
+<li><span class="citation">(Jones &amp; Thissen, 2006)</span>, describe how Jastrow was a proponent of Galton in the US, established a lab in Chicago alongside Franz Boas (an anthropologist who advocated against eugenics, <span class="citation">Boas (1916)</span>).</li>
+<li>Wrote on the science of “human quality” <span class="citation">(Jastrow, 1921)</span></li>
+</ul>
+</div>
+<div id="josiah-royce" class="section level3">
+<h3>1901 Josiah Royce</h3>
+<ul>
+<li>Philosopher (American Idealism)</li>
+<li>At harvard, apparently convinced Robert Yerkes to combine his interests and do psychology</li>
+<li>Gets written up in the eugenical news at least once</li>
+<li>haven’t spent time to look into his writing (or lack thereof on eugenics)</li>
+</ul>
+</div>
+<div id="edmund-clark-sanford" class="section level3">
+<h3>1902 Edmund Clark Sanford</h3>
+<ul>
+<li>Supervised Lewis Terman, who created Stanford-Binet IQ test</li>
+<li>Acknowledged as helping out with a dissertation on “The Psychology of Superior Children” <span class="citation">(Richards-Nash, 1924)</span></li>
+</ul>
+</div>
+<div id="william-lowe-bryan" class="section level3">
+<h3>1903 William Lowe Bryan</h3>
+<ul>
+<li>did some work on aquiring telegraph skill, touched all the bases of modern work on transcription skill.</li>
+<li>President of the Indiana Society for Mental Hygiene (elected 1919)</li>
+</ul>
+</div>
+<div id="william-james" class="section level3">
+<h3>1904 William James</h3>
+<ul>
+<li>doesn’t appear to discuss eugenics?</li>
+</ul>
+</div>
+<div id="mary-whiton-calkins" class="section level3">
+<h3>1905 Mary Whiton Calkins</h3>
+<ul>
+<li>First Female APA president!</li>
+<li>Student of William James</li>
+<li>has some writing on ethics, espouses progressive views <span class="citation">(Calkins, 1918)</span></li>
+</ul>
+</div>
+<div id="james-rowland-angell" class="section level3">
+<h3>1906 James Rowland Angell</h3>
+<ul>
+<li>Also eventual president of Yale and eugenics proponent</li>
+<li>Supervisor of J. B. Watson</li>
+<li>See <span class="citation">Doyle (2014)</span> on eugenics in Psychology at Yale</li>
+<li>Did early mental chronometry research</li>
+<li>Expressed some of his racialized views of intelligence in <span class="citation">Angell (1922)</span></li>
+</ul>
+</div>
+<div id="henry-rutgers-marshall" class="section level3">
+<h3>1907 Henry Rutgers Marshall</h3>
+<ul>
+<li>interested in aesthetics</li>
+</ul>
+</div>
+<div id="george-malcolm-stratton" class="section level3">
+<h3>1908 George Malcolm Stratton</h3>
+<ul>
+<li>From wikipedia, Stratton served in the Army during World War I, developing psychological tests to select airmen for Army aviation</li>
+<li>Did prism experiments (upside-down looking)</li>
+<li>published lots of different esoteric things, on feats of memory, to anger in cattle, to how cattle get excited by blood</li>
+<li>Some discussion of Stratton’s role in driving research effort into African Americans <span class="citation">(Yudell, 2014)</span>.</li>
+</ul>
+</div>
+<div id="charles-hubbard-judd" class="section level3">
+<h3>1909 Charles Hubbard Judd</h3>
+<ul>
+<li>educational psychologist</li>
+</ul>
+</div>
+<div id="walter-bowers-pillsbury" class="section level3">
+<h3>1910 Walter Bowers Pillsbury</h3>
+<ul>
+<li>from <a href="http://www.cyberus.ca/~pballan/Pillfina.htm">http://www.cyberus.ca/~pballan/Pillfina.htm</a>: This personal brush with political prejudice did not change Pillsbury’s official scientific stance on race and mental degeneracy. His Education as the Psychologist Sees It (1920), for instance, was part of a successful nationwide postwar marketing campaign advocating the use of new group “mental testing” techniques in American schools. Here, Pillsbury uncritically combined past eugenic twin-studies with the new “Army Alpha and Beta” intelligence testing data. Surprisingly, his personal conclusion after thirty-three years of teaching is “that one can never produce intelligence by education, that one must begin much farther back in actually insuring the birth of intelligent people” (p. 46). [p. 525] At this time, however, Pillsbury was just one of many psychologists who accepted such notions (e.g., R. M. Yerkes, Psychological Examination in the United States Army [1921]; W. S. Hunter, General Psychology [1919]; R. S. Woodworth, Psychology [1921]).</li>
+</ul>
+</div>
+<div id="carl-emil-seashore" class="section level3">
+<h3>1911 Carl Emil Seashore</h3>
+<ul>
+<li>Seashore, music and eugenics: <a href="http://www.brooklyn.cuny.edu/web/academics/centers/hitchcock/publications/amr/v48-2/devaney.php">http://www.brooklyn.cuny.edu/web/academics/centers/hitchcock/publications/amr/v48-2/devaney.php</a></li>
+<li>Seashore wrote extensively on eugenics and euthenics</li>
+</ul>
+</div>
+<div id="edward-lee-thorndike" class="section level3">
+<h3>1912 Edward Lee Thorndike</h3>
+<ul>
+<li>wrote extensively on eugenics
+<ul>
+<li><span class="citation">Thorndike (1940)</span></li>
+<li><span class="citation">Thorndike (1913)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="howard-crosby-warren" class="section level3">
+<h3>1913 Howard Crosby Warren</h3>
+<ul>
+<li>SEP society gives the HC Warren medal every year</li>
+<li>Listed as a new active member of Eugenics Research Association in Eugenical News</li>
+</ul>
+</div>
+<div id="robert-sessions-woodworth" class="section level3">
+<h3>1914 Robert Sessions Woodworth</h3>
+<ul>
+<li>obit appears in the Eugenics Review <span class="citation">(Welford, 1961)</span></li>
+<li>see discussion on eugenics at Columbia <span class="citation">(Rupert &amp; Jones, 2019)</span></li>
+</ul>
+</div>
+</div>
+<div id="robert-yerkes" class="section level2">
+<h2>Robert Yerkes</h2>
+<ul>
+<li>APA president</li>
+<li>Implemented the Alpha and Beta IQ tests on the Army (1.5 - 2 million army men tested).</li>
+<li>Pretty clear from his report <span class="citation">(Yerkes, 1923)</span>, that he wanted the tests to validate whites becoming officers, and “morons” and immigrants and blacks becoming fodder for the front line.</li>
+</ul>
+</div>
+<div id="henry-goddard" class="section level2">
+<h2>Henry Goddard</h2>
+<ul>
+<li>Goddard argued for classifying “feeble-minded” people into classes by IQ, e.g., idiots ~ 20, Imbeciles ~ 40, Morons ~ 70, see Goddard’s “Who is a Moron?” <span class="citation">(Goddard, 1927)</span>.</li>
+<li>The fear was that morons are basically normal competent people who are able to hide in society, but they will also destroy the human race if they are allowed to breed. The only way to discover morons was to IQ test them, and then employ eugenics polices to prevent morons from breeding.</li>
+</ul>
+</div>
+<div id="lewis-terman" class="section level2">
+<h2>Lewis Terman</h2>
+<ul>
+<li>APA president 1923</li>
+<li>Adapts Alfred Binet’s IQ test to English at Stanford, creating the Standford-Binet IQ test.</li>
+<li>See his eugenic views on feeble-mindedness in school children in California <span class="citation">(Terman, 1917)</span></li>
+</ul>
+</div>
+<div id="j.-b.-watson" class="section level2">
+<h2>J. B. Watson</h2>
+<ul>
+<li>Listed as a eugenics researchers in the Eugenical News</li>
+</ul>
+</div>
+<div id="karl-lashley" class="section level2">
+<h2>Karl Lashley</h2>
+<ul>
+<li>note to self to find the Lashley references</li>
+</ul>
+</div>
+<div id="claude-shannon" class="section level2">
+<h2>Claude Shannon</h2>
+<ul>
+<li>completed his masters thesis at Cold Springs Harbor Laboratory (Eugenics Record Office) <a href="https://liorpachter.wordpress.com/2013/11/05/claude-shannon-population-geneticist/">https://liorpachter.wordpress.com/2013/11/05/claude-shannon-population-geneticist/</a></li>
+<li>switched to invent information theory aftwerward</li>
+</ul>
+</div>
+<div id="george-a.-miller" class="section level2">
+<h2>George A. Miller</h2>
+<ul>
+<li>wrote on eugenics in Daedalus, <span class="citation">Miller (1967)</span></li>
+</ul>
+</div>
+<div id="abraham-maslow" class="section level2">
+<h2>Abraham Maslow</h2>
+<ul>
+<li>Posthumous journal notes suggest his humanism was rooted in eugenics</li>
+<li><span class="citation">Maslow, Lowry, &amp; Maslow (1982)</span></li>
+</ul>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references hanging-indent">
+<div id="ref-angellEvolutionIntelligence1922">
+<p>Angell, J. R. (1922). <em>The evolution of intelligence</em>.</p>
+</div>
+<div id="ref-baldwinMentalDevelopmentChild1900">
+<p>Baldwin, J. M. (1900). <em>Mental Development in the Child and the Race: Methods and Processes</em>. Retrieved from <a href="http://books.google.com?id=6sycAAAAMAAJ">http://books.google.com?id=6sycAAAAMAAJ</a></p>
+</div>
+<div id="ref-boasEugenics1916">
+<p>Boas, F. (1916). Eugenics. <em>The Scientific Monthly</em>, <em>3</em>(5), 471–478.</p>
+</div>
+<div id="ref-calkinsGoodManGood1918">
+<p>Calkins, M. W. (1918). <em>The good man and the good: An introduction to ethics</em>. Retrieved from <a href="http://books.google.com?id=wL8TAAAAYAAJ">http://books.google.com?id=wL8TAAAAYAAJ</a></p>
+</div>
+<div id="ref-doyleMeasuringProblemsHuman2014">
+<p>Doyle, J. (2014). <em>Measuring "Problems of Human Behavior": The Eugenic Origins of Yale’s Institute of Psychology, 1921-1929</em>. 70.</p>
+</div>
+<div id="ref-goddardWhoMoron1927">
+<p>Goddard, H. H. (1927). Who is a moron? <em>The Scientific Monthly</em>, <em>24</em>(1), 41–46.</p>
+</div>
+<div id="ref-jastrowCharacterTemperament1921">
+<p>Jastrow, J. (1921). <em>Character and Temperament</em>. Retrieved from <a href="http://books.google.com?id=rew_AQAAMAAJ">http://books.google.com?id=rew_AQAAMAAJ</a></p>
+</div>
+<div id="ref-jonesHistoryOverviewPsychometrics2006">
+<p>Jones, L. V., &amp; Thissen, D. (2006). 1 A History and Overview of Psychometrics. <em>Handbook of Statistics</em>, <em>26</em>, 1–27. <a href="https://doi.org/10/fp2qm4">https://doi.org/10/fp2qm4</a></p>
+</div>
+<div id="ref-maslowJournalsAbrahamMaslow1982">
+<p>Maslow, A. H., Lowry, R., &amp; Maslow, B. G. (1982). <em>The journals of Abraham Maslow</em>. Lewis Pub. Co.</p>
+</div>
+<div id="ref-millerPsychologicalPerspectivesYear1967">
+<p>Miller, G. A. (1967). Some Psychological Perspectives on the Year 2000. <em>Daedalus</em>, <em>96</em>(3), 883–896.</p>
+</div>
+<div id="ref-pearsonProblemAlienImmigration1925">
+<p>Pearson, K., &amp; Moul, M. (1925). The problem of alien immigration into Great Britain, illustrated by an examination of Russian and Polish Jewish children. <em>Annals of Eugenics</em>, <em>1</em>(1), 5–54. <a href="https://doi.org/10/cvn6gq">https://doi.org/10/cvn6gq</a></p>
+</div>
+<div id="ref-richards-nashPsychologySuperiorChildren1924">
+<p>Richards-Nash, A. A. (1924). The Psychology of Superior Children. <em>The Pedagogical Seminary</em>, <em>31</em>(3), 209–246. <a href="https://doi.org/10/gg4q5b">https://doi.org/10/gg4q5b</a></p>
+</div>
+<div id="ref-rupertRaceScienceColumbia2019">
+<p>Rupert, A., &amp; Jones, T. (2019). Race Science at Columbia University in the Early 20th Century. <em>Psychology</em>, <em>139</em>, 152.</p>
+</div>
+<div id="ref-terman1917feeble">
+<p>Terman, I. (1917). Feeble-minded children in the public schools of california. <em>School and Society</em>, <em>5</em>(111), 161–165.</p>
+</div>
+<div id="ref-thorndikeEugenicsSpecialReference1913">
+<p>Thorndike, E. L. (1913). Eugenics, with special reference to Intellect and Character. <em>Popular Science Monthly</em>.</p>
+</div>
+<div id="ref-thorndikeHumanNatureSocial1940">
+<p>Thorndike, E. L. (1940). <em>Human nature and the social order</em> (pp. xx, 1019). Oxford, England: Macmillan.</p>
+</div>
+<div id="ref-welfordCurrentPsychologicalIssues1961">
+<p>Welford, A. T. (1961). Current psychological issues: Essays in honour of Robert S. Woodworth. <em>The Eugenics Review</em>, <em>53</em>(2), 108.</p>
+</div>
+<div id="ref-yakushkoEugenicsItsEvolution2019">
+<p>Yakushko, O. (2019). Eugenics and its evolution in the history of western psychology: A critical archival review. <em>Psychotherapy and Politics International</em>, <em>17</em>(2). <a href="https://doi.org/10/gg3hsf">https://doi.org/10/gg3hsf</a></p>
+</div>
+<div id="ref-yerkesEugenicBearingMeasurements1923">
+<p>Yerkes, R. M. (1923). Eugenic Bearing of Measurements of Intelligence in the United States Army. <em>The Eugenics Review</em>, <em>14</em>(4), 225–245.</p>
+</div>
+<div id="ref-yudellRaceUnmaskedBiology2014">
+<p>Yudell, M. (2014). <em>Race Unmasked: Biology and Race in the Twentieth Century</em>. Retrieved from <a href="http://books.google.com?id=RNU3BAAAQBAJ">http://books.google.com?id=RNU3BAAAQBAJ</a></p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>
