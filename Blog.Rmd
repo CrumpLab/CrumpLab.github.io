@@ -42,6 +42,26 @@ close(CON)
 
 This blog is a public-facing expression of me working through various ideas and methods, mostly around cognitive psychology and how it sits within a scientific and social context. When I'm not working on these words, they sit here, and when I am working on them, they change. I'm attempting to use my writing process to evaluate and compose perspectives, some of which may be my own... it's confusing because I use writing to know if I think something, but I keep changing the words as I learn what I think.
 
+
+---
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F, out.width="50%"}
+knitr::include_graphics("blogposts/7_13_20_PsychEugenics/img/eugenics.jpg")
+```
+</div>
+<div class="col-sm-8">
+
+# [Psychology and Eugenics connections](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html)
+
+July 13, 2020
+
+Making notes and connecting dots about the pervasiveness of eugenics ideology among psychologists
+
+</div>
+</div>
+
 ---
 
 <div class="row">
