@@ -236,16 +236,28 @@ A major overarching goal of compiling and documenting connections between psycho
 ### 1927 Harry Levi Hollingworth
 
  -  advocates for eugenics in the book "Vocational Psychology" @hollingworthVocationalPsychologyIts1916
+ 
+### 1928  Edwin Garrigues Boring
+
+ - credited with founding the history of psychology discipline
+ - worked with Yerkes doing IQ testing in the military
+ - Eugenics views unclear, seems to not discuss the topic so much when he writes his histories
+ 
+### 1929 Karl Lashley
+
+ - detailed analysis of Lashley's racism and hereditarianism @weidmanConstructingScientificPsychology1999
+ 
+### 1930 Herbert Sidney Langfeld
+
+ - writes on eugenics related issues here @langfeldIIHeredityExperience1949, but focuses more on the nature/nuture debate, and seems to take a neutral side on eugenics, which references in terms of "political" takes on the issues. 
+ 
+### 1931 Walther Samuel Hunter
   
 ## Henry Goddard
 
  - Goddard argued for classifying “feeble-minded” people into classes by IQ, e.g., idiots ~ 20, Imbeciles ~ 40, Morons ~ 70, see Goddard’s “Who is a Moron?” [@goddardWhoMoron1927]. 
  - The fear was that morons are basically normal competent people who are able to hide in society, but they will also destroy the human race if they are allowed to breed. The only way to discover morons was to IQ test them, and then employ eugenics polices to prevent morons from breeding.
  
-## Karl Lashley
-
- - note to self to find the Lashley references
-
 ## Claude Shannon
 
  - completed his masters thesis at Cold Springs Harbor Laboratory (Eugenics Record Office) [https://liorpachter.wordpress.com/2013/11/05/claude-shannon-population-geneticist/](https://liorpachter.wordpress.com/2013/11/05/claude-shannon-population-geneticist/)
