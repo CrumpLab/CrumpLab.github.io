@@ -57,6 +57,19 @@ A major overarching goal of compiling and documenting connections between psycho
   - I need to look more into the culture of eugenics at Bell labs, but perhaps not surprisingly there appears to be on, e.g.,  [https://en.wikipedia.org/wiki/William_Shockley](https://en.wikipedia.org/wiki/William_Shockley)
     
     
+## Membership lists
+
+I haven't found too many membership lists yet about affiliations with eugenics societies. So, just a few screenshots for now:
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/EugenicsCommittee.png")
+```
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/EugenicalNews.png")
+```
+
+
 ## American Psychological Presidents
  
  - @yakushkoEugenicsItsEvolution2019 writes that 31 APA presidents between 1892 -1947 were affiliated with or leaders in eugenics movements. Need to fill this list out (also it extends past 1947 as we will see)
@@ -76,7 +89,7 @@ A major overarching goal of compiling and documenting connections between psycho
   - bought Science, editor for 50 years
   - APA president 1895
   - Eugenicist, attempted to development intelligence tests that didn't quite work out, presumably for the purposes of eugenics. This is a nice example of efforts that pre-date Binet's IQ test to develop "scientific" mental tests for the purposes of eugenics.
-    - Note to self to locate if Cattell expresses his eugenics in writing.
+  - CATTELL, J. M . Families of American Men of Science. Pop. Sci. Mo., 1915, 86, 504-515.
 
 ### 1897 James Mark Baldwin
 
@@ -164,6 +177,7 @@ A major overarching goal of compiling and documenting connections between psycho
     - @thorndikeHumanNatureSocial1940
     - @thorndikeEugenicsSpecialReference1913
   - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
+  - "the human nature club"
 
 ### 1913 Howard Crosby Warren
 
@@ -225,6 +239,7 @@ A major overarching goal of compiling and documenting connections between psycho
  - Adapts Alfred Binet's IQ test to English at Stanford, creating the Standford-Binet IQ test.
  - See his eugenic views on feeble-mindedness in school children in California [@terman1917feeble]
  - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
+ - TERMAN, L. M . Research in Mental Deviation Among Children. Research Lab. Buckel Foundation, Stanford Univ., 1915, 2, 1-15.
  
 ### 1924 Granville Stanley Hall (2nd time)
 
@@ -261,13 +276,16 @@ A major overarching goal of compiling and documenting connections between psycho
 ### 1931 Walther Samuel Hunter
 
  - From wikipedia, this is a perfect description of accidental eugenics, "Hunter served in the military for sixteen months during World War I. He was the chief psychological examiner in three army camps.[2] During that time he compiled bar graphs with E.S. Jones that showed the predictive value of group psychological tests.[3] His work persuaded government officials to continue the testing program, which ultimately led military officials to order the recording of data on the national origins of the troops tested.[3] The data collected was used in a way that Hunter did not approve; combining the psychological test scores with the location of where the individual grew up supported the notion of Nordic superiority, which was not his intention.[3]"
- - 
+ - Might be worth reading Hunter's delayed reaction research in animals and children [@hunterDelayedReactionChild1917]. On the hand, it seems that Yerkes advocated that tests of delayed reaction ability could distinguish humans from infra-humans. And, on the other hand, the results were used in the context of debate about mental representations.
   
 ## Henry Goddard
 
  - Goddard argued for classifying “feeble-minded” people into classes by IQ, e.g., idiots ~ 20, Imbeciles ~ 40, Morons ~ 70, see Goddard’s “Who is a Moron?” [@goddardWhoMoron1927]. 
  - The fear was that morons are basically normal competent people who are able to hide in society, but they will also destroy the human race if they are allowed to breed. The only way to discover morons was to IQ test them, and then employ eugenics polices to prevent morons from breeding.
  - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
+ - GODDARD,H.H. TheAdaptation Board asaMeasureof
+Intelligence. TrainingSchoolBull.,1915,11,182–188.
+ - Terman, L. M., Lyman, G., Ordahl, G., Ordahl, L., Galbreath, N., & Talbert, W. (1915). The Stanford revision of the Binet-Simon scale and some results from its application to 1000 non-selected children. Journal of Educational Psychology, 6(9), 551.
  
 ## Claude Shannon
 
@@ -284,7 +302,11 @@ A major overarching goal of compiling and documenting connections between psycho
  - @maslowJournalsAbrahamMaslow1982
 
 
+# Eugenics Publications
 
+- Eugenical News
+- The Eugenics Review
+- Psychological Index had some eugenics sections
 
 
 
