@@ -156,12 +156,14 @@ A major overarching goal of compiling and documenting connections between psycho
 
   - Seashore, music and eugenics: [http://www.brooklyn.cuny.edu/web/academics/centers/hitchcock/publications/amr/v48-2/devaney.php](http://www.brooklyn.cuny.edu/web/academics/centers/hitchcock/publications/amr/v48-2/devaney.php)
   - Seashore wrote extensively on eugenics and euthenics
+  - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
 
 ### 1912 Edward Lee Thorndike
 
   - wrote extensively on eugenics
     - @thorndikeHumanNatureSocial1940
     - @thorndikeEugenicsSpecialReference1913
+  - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
 
 ### 1913 Howard Crosby Warren
 
@@ -172,6 +174,7 @@ A major overarching goal of compiling and documenting connections between psycho
 
   - obit appears in the Eugenics Review [@welfordCurrentPsychologicalIssues1961]
   - see discussion on Woodworth's eugenics at Columbia [@rupertRaceScienceColumbia2019]
+  - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
   
 ### 1915 John Broadus Watson
 
@@ -189,6 +192,7 @@ A major overarching goal of compiling and documenting connections between psycho
 
   - Implemented the Alpha and Beta IQ tests on the Army (1.5 - 2 million army men tested).
   - Pretty clear from his report [@yerkesEugenicBearingMeasurements1923], that he wanted the tests to validate whites becoming officers, and "morons" and immigrants and blacks to be fodder for the front line, or otherwise eliminated
+  - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
   
 ### 1918 John Wallace Baird
 
@@ -203,7 +207,7 @@ A major overarching goal of compiling and documenting connections between psycho
 
   - went to school with Thorndike, studied under Cattell
   - wrote "Psychology as life work" with Thorndike and others, @dodgePsychologyLifeWork1923
-  - Haven't found eugenic writings from Franz
+  - Haven't found specific eugenic writings from Franz
   
 ### 1921 Margaret Floy Washburn
   
@@ -213,12 +217,14 @@ A major overarching goal of compiling and documenting connections between psycho
 ### 1922 Knight Dunlap
 
   - Author of "Personal Beauty and Racial Betterment" @dunlapPersonalBeautyRacial1920
+  - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
   
 ### 1923 Lewis Terman
 
  - APA president 1923
  - Adapts Alfred Binet's IQ test to English at Stanford, creating the Standford-Binet IQ test.
  - See his eugenic views on feeble-mindedness in school children in California [@terman1917feeble]
+ - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
  
 ### 1924 Granville Stanley Hall (2nd time)
 
@@ -253,11 +259,15 @@ A major overarching goal of compiling and documenting connections between psycho
  - writes on eugenics related issues here @langfeldIIHeredityExperience1949, but focuses more on the nature/nuture debate, and seems to take a neutral side on eugenics, which references in terms of "political" takes on the issues. 
  
 ### 1931 Walther Samuel Hunter
+
+ - From wikipedia, this is a perfect description of accidental eugenics, "Hunter served in the military for sixteen months during World War I. He was the chief psychological examiner in three army camps.[2] During that time he compiled bar graphs with E.S. Jones that showed the predictive value of group psychological tests.[3] His work persuaded government officials to continue the testing program, which ultimately led military officials to order the recording of data on the national origins of the troops tested.[3] The data collected was used in a way that Hunter did not approve; combining the psychological test scores with the location of where the individual grew up supported the notion of Nordic superiority, which was not his intention.[3]"
+ - 
   
 ## Henry Goddard
 
  - Goddard argued for classifying “feeble-minded” people into classes by IQ, e.g., idiots ~ 20, Imbeciles ~ 40, Morons ~ 70, see Goddard’s “Who is a Moron?” [@goddardWhoMoron1927]. 
  - The fear was that morons are basically normal competent people who are able to hide in society, but they will also destroy the human race if they are allowed to breed. The only way to discover morons was to IQ test them, and then employ eugenics polices to prevent morons from breeding.
+ - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
  
 ## Claude Shannon
 
