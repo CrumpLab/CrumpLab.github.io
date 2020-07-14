@@ -302,7 +302,7 @@ Intelligence. TrainingSchoolBull.,1915,11,182–188.
  - @maslowJournalsAbrahamMaslow1982
 
 
-# Eugenics Publications
+## Eugenics Publications
 
 - Eugenical News
 - The Eugenics Review
