@@ -77,10 +77,13 @@ knitr::include_graphics("img/EugenicalNews.png")
 ### 1892 Granville Stanley Hall 
  
  - Noted as joining as new active member of the Eugenics Record Office in the Eugenical News
+ - Founded the "Journal of Race Development", see @blattBringOutBest2004
+ - on the point of view toward primitive races @hallPointViewPrimitive1910
    
 ### 1893 George Trumball Ladd
  
  - his presidential address is published in the first issue and volume of Psychological Review. He does not use the word eugenics, but appears to dogwhistle to the eugenicists in the room in his closing paragraphs about improving society. Also, many of the authors in the first issue of Psyc Review, were eugenicists
+ - contributing editor and author at Journal of Race Development
    
 ### 1895 James McKeen Cattell
 
@@ -103,6 +106,7 @@ knitr::include_graphics("img/EugenicalNews.png")
 
  - Keeps coming up in the context of eugenics and education...need to learn more
  - @yakushkoEugenicsItsEvolution2019 points out that Dewey & Gordon Allport were anti-eugenics.
+ - Dewey, J. (1917). Internal social reorganization after the war. J. Race Dev., 8, 385.
     
 ### 1900 Joseph Jastrow
 
@@ -207,6 +211,7 @@ knitr::include_graphics("img/EugenicalNews.png")
   - Implemented the Alpha and Beta IQ tests on the Army (1.5 - 2 million army men tested).
   - Pretty clear from his report [@yerkesEugenicBearingMeasurements1923], that he wanted the tests to validate whites becoming officers, and "morons" and immigrants and blacks to be fodder for the front line, or otherwise eliminated
   - Member of Advisory Council: International commission on eugenics, Eugenics committee of the United States of America
+  - Yerkes, R. M. (1918). Psychology in relation to the war. Psychological Review, 25(2), 85–115.
   
 ### 1918 John Wallace Baird
 
@@ -277,6 +282,21 @@ knitr::include_graphics("img/EugenicalNews.png")
 
  - From wikipedia, this is a perfect description of accidental eugenics, "Hunter served in the military for sixteen months during World War I. He was the chief psychological examiner in three army camps.[2] During that time he compiled bar graphs with E.S. Jones that showed the predictive value of group psychological tests.[3] His work persuaded government officials to continue the testing program, which ultimately led military officials to order the recording of data on the national origins of the troops tested.[3] The data collected was used in a way that Hunter did not approve; combining the psychological test scores with the location of where the individual grew up supported the notion of Nordic superiority, which was not his intention.[3]"
  - Might be worth reading Hunter's delayed reaction research in animals and children [@hunterDelayedReactionChild1917]. On the hand, it seems that Yerkes advocated that tests of delayed reaction ability could distinguish humans from infra-humans. And, on the other hand, the results were used in the context of debate about mental representations.
+ 
+### 1932  Walter Richard Miles
+ - hired by Terman at Stanford, trained by Carl Seashore, married a psychologist who studied gifted children.
+ - A funny story about not getting to meet Pearson on a lab visit [https://thepsychologist.bps.org.uk/volume-25/edition-8/looking-back-walter-miles-and-his-grand-tour](https://thepsychologist.bps.org.uk/volume-25/edition-8/looking-back-walter-miles-and-his-grand-tour)
+ - wrote a biography of RM Yerkes. Miles, W. R. (1946). Robert Mearns Yerkes. American Psychologist, 1(6), 175–178. This biography leaves out Yerkes' eugenics. Although it show a painting of Yerkes set in front of a tree, which seemse obviously connected to his eugenics.
+ - did a bunch of intelligence testing work
+ - @milesTRAININGPRACTICEMENTAL1935 talks around eugenics issues and human superiority in terms of longevity, calls for more developmental research in the tradition of Cattell's individual difference work.
+ 
+### 1933 Leon Luis Thurstone
+
+  - famous for his statistical approaches to intelligence testing. 
+  - So far haven't read Thurstone closely and haven't found clear indications of his views on eugenics. However, it is interesting to read comments on his work by eugenicists (e.g., @thomsonTRENDNATIONALINTELLIGENCE1946). So, how does Thurstone explain his work knowing that eugenicists are highly interested in it for the purposes of eugenics?
+  - consider Thurstone in the context of racist ideologies of the time @samelsonRacePsychologyStudies1978
+  
+### 1934
   
 ## Henry Goddard
 
@@ -307,6 +327,7 @@ Intelligence. TrainingSchoolBull.,1915,11,182–188.
 - Eugenical News
 - The Eugenics Review
 - Psychological Index had some eugenics sections
+- The Journal of Race development
 
 
 
