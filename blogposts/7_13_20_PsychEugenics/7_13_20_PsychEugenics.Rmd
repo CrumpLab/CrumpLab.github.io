@@ -70,7 +70,7 @@ knitr::include_graphics("img/EugenicalNews.png")
 ```
 
 
-## American Psychological Presidents
+## American Psychological Presidents (first 50)
  
  - @yakushkoEugenicsItsEvolution2019 writes that 31 APA presidents between 1892 -1947 were affiliated with or leaders in eugenics movements. Need to fill this list out (also it extends past 1947 as we will see)
  
@@ -407,6 +407,21 @@ knitr::include_graphics("img/Hull2.png")
  - Burlingame, M., & Stone, C. P. (1928). Family resemblance in maze-learning ability in white rats. Publ. School Publishing Company.
  - Commins, W. D., & Stone, C. P. (1932). Effects of castration on the behavior of mammals. Psychological Bulletin, 29(7), 493.
  - Stone, C. P. (1921). Comparative Study of the Intelligence of 399 Inmates of the Indiana Reformatory and 653 Men of the United States Army. J. Am. Inst. Crim. L. & Criminology, 12, 238.
+
+
+## First 50 notes
+
+I need to pause for a bit. I've been quickly trying to sketch out some connections between APA presidents and eugenics. Mostly this involves googling their name and eugenics, and pulling the string.
+
+My main aim in making these connections is to draw attention to the larger pattern of institutional eugenics within the discipline of Psychology. I am less interested about whether or not specific individuals were "card-carrying" eugenicists, or really truly held eugenics views in their "soul" or not. I think it is enough to establish the pattern and spread of eugenic ideology to consider how eugenics shaped the discipline. For example, I suspect that rampant eugenics had a part to play in systemically limiting the diversity of faculty in Psychology. I suspect it also guided the questions we ask, and continue to ask.
+
+So, as a part of reflecting on what I am doing, I drew up a quick spreadsheet of the APP presidents. For the first 50, I gave them each a eugenics score from 0 to 1, with some intermediate scores representing eugenics adjacent work. These are just some rough personal qualitative estimates, to put a number on things. My rough numberization adds up to 34.75 of 50 APA presidents were into eugenics or eugenics adjacent research. Very few were ever explicitly anti-eugenics.
+
+Consider a sentence like, "It is overwhelming the case that the first 50 years of American Psychology as measured by APA presidents research interests and leadership demonstrate that the discpline of psychology was primarily constructed as arm of the national eugenics movement in the USA". I just wrote that sentence, and I'm starting to think that I'm not exaggerating.
+
+ 
+---
+
   
 ## Henry Goddard
 
@@ -416,6 +431,7 @@ knitr::include_graphics("img/Hull2.png")
  - GODDARD,H.H. TheAdaptation Board asaMeasureof
 Intelligence. TrainingSchoolBull.,1915,11,182–188.
  - Terman, L. M., Lyman, G., Ordahl, G., Ordahl, L., Galbreath, N., & Talbert, W. (1915). The Stanford revision of the Binet-Simon scale and some results from its application to 1000 non-selected children. Journal of Educational Psychology, 6(9), 551.
+ 
  
 ## Claude Shannon
 
