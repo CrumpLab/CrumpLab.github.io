@@ -57,7 +57,7 @@ knitr::include_graphics("blogposts/7_13_20_PsychEugenics/img/eugenics.jpg")
 
 July 13, 2020
 
-Making notes and connecting dots about the pervasiveness of eugenics ideology among psychologists
+Making notes and connecting dots about the pervasiveness of eugenics ideology among psychologists. 
 
 </div>
 </div>
