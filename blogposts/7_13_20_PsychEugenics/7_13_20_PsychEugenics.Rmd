@@ -308,6 +308,37 @@ knitr::include_graphics("img/EugenicalNews.png")
  - Some work on testing and predicting success in life from school grades. Poffenberger, A.T. (1925). School achievement and success in life. Journal of Applied Psychology, 9(1), 22–28.
  - Poffenberger, A. T., & Carpenter, F. L. (1924). Character Traits in School Success. Journal of Experimental Psychology, 7(1), 67–74. This paper is a good example of value-free science. There is an effort to expand testing in schools beyond IQ tests to include other tests measuring traits that also predict performance...e.g., fill in the gaps that IQ misses in terms of variance explained. However, very little is said about what how these tests would be used in society, even though it is clear from the authors own collegial associations that "better" tests would certainly be put to use for eugenics purposes.
  - @poffenbergerMeasuresIntelligenceCharacter1922 This paper is basically full on eugenics without using the word. Poffenberger describes how IQ tests can be used to slot people into professions that they are "suitable" for given their IQ. It is an argument to keep "low IQ workers" in their place as laborers, and given the best jobs to people with high IQ, and to worry about how the economy may collapse if people aren't slotted in based on their IQ.
+ - @poffenbergerDevelopmentMenScience1930 carries on in the tradition of Galton & Cattell to ask what factors make men of science great. Maintains a thin veneer with respect to avoiding commentary on eugenics.
+ - Highly relevant account of the activities of the national research council 1919-1933 (division of anthropology & Psychology), wherein it obvious just how many activities were eugenic in nature. @poffenbergerVIIIDIVISIONANTHROPOLOGY1933
+   - consider also the previous chairmen of the committee:
+   
+```{r, echo=FALSE}
+knitr::include_graphics("img/NRC.png")
+```
+
+- W.V. Bingham is registered as an active researcher int he Eugenical NEws
+- Clark Wissler is on the Eugenics commitee of the USA
+- C. E. Seashore is on the Eugenics commitee of the USA
+- Raymond Dodge, see above
+- Albert E. Jenks wrote “Some Aspects of the Negro Problem,” Science 35 (April 26, 1912): 667.
+- R.S. Woodworth is on the Eugenics commitee of the USA
+- George M Stratton see above
+- AV Kidder, noted as having extended correspondence with Charles Davenport (director of the Eugenics record office) @societyNewGuideCollections1987
+- Knight Dunlap is on the Eugenics commitee of the USA
+- Fay-cooper cole, discussing the role of anthropology in eugenics here @RecentTrendsAnthropology2020, 
+    - see also his role in the Scopes trial (need to clarify what the role was) @pavukAmericanAssociationAdvancement2018
+- Madison Bentley see above, author of "mental inheritance"
+- Robert H Lowie - anthropologist, criticizes aspects of Galton and eugenics here @lowieFatherEugenics1920, wonders what to about equality in society given the reality of individual differences
+- Poffenberger, see above
+
+
+List of correspondence between C Davenport (director of eugenics record office) and other folks, from @societyNewGuideCollections1987
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/DaveportCorrespondence.png")
+```
+
+
  
  
  
