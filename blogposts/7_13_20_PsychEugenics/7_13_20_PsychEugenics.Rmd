@@ -407,6 +407,138 @@ knitr::include_graphics("img/Hull2.png")
  - Burlingame, M., & Stone, C. P. (1928). Family resemblance in maze-learning ability in white rats. Publ. School Publishing Company.
  - Commins, W. D., & Stone, C. P. (1932). Effects of castration on the behavior of mammals. Psychological Bulletin, 29(7), 493.
  - Stone, C. P. (1921). Comparative Study of the Intelligence of 399 Inmates of the Indiana Reformatory and 653 Men of the United States Army. J. Am. Inst. Crim. L. & Criminology, 12, 238.
+ 
+## More APA presidents from 1943
+ 
+### 1943 John Edward Anderson
+
+  - The modern baby book, similar to Galton. From Smith in @schwartzNineteenthcenturyVisualCulture2004
+  
+```{r, echo= FALSE}
+knitr::include_graphics("img/JEAnderson.png")
+```
+
+### 1944 Gardner Murphy
+
+  - psi, worked with W McDougall
+  - His correspondence in a Eugenics Society is preserved [https://www.kshs.org/index.php?url=archives/297369](https://www.kshs.org/index.php?url=archives/297369)
+  - <https://slowlorisblog.files.wordpress.com/2014/03/2013-history-of-science-society-these-hindering-forces.pdf>
+  - Gardner Murphy, A research Program for Qualitative Eugenics, Eugenics Quarterly, 1, 1954, 209-12.
+  
+### 1945 Edwin R. Guthrie
+
+  - involved in testing with military, mainly a learning psychologist in the behaviorist tradition?
+  - Guthrie, E. R. (1950). The status of systematic psychology. American Psychologist, 5(4), 97.
+  - Guthrie, E. R. (1927). Measuring introversion and extroversion. The Journal of Abnormal and Social Psychology, 22(1), 82.
+  - Guthrie, E. R. (1924). Purpose and mechanism in psychology. The Journal of Philosophy, 21(25), 673-681.
+  - Guthrie, E. R. (1938). The Psychology of Human Conflict; Harper and Brothers.
+  - Maybe get a sense of what he thought about Hull's aptitude testing book in this review: Guthrie, E. R. (1929). Review of Aptitude Testing [Review of the book Aptitude testing, by C. L. Hull]. Journal of Educational Psychology, 20(3), 236–237. Basically an  uncritical take.
+  
+### 1946 Henry E. Garrett
+
+  - his wikipedia entry is enough to establish Garrett's racist and eugenics views <https://en.wikipedia.org/wiki/Henry_Garrett_(psychologist)>
+  
+### 1947 Carl R. Rogers
+
+  - a humanist psychologist (hopefully not like Maslow's version of eugenical humanism?)
+  - relation to genetics counseling? @restaEugenicsNondirectivenessGenetic
+  - nondirectional counselling, seems to be doing something different than genetic counseling, perhaps not into eugenics, or at least doing something in response to eugenics in the clinical domain
+  
+### 1948 Donald G. Marquis
+
+  - worked with Terman and Woodworth
+  - Marquis, D. G. (1948). Research planning at the frontiers of science. American Psychologist, 3(10), 430.
+  - Wolfle, D., Likert, R., Marquis, D. G., & Sears, R. R. (1949). Standards for appraising psychological research. American Psychologist, 4(8), 320.
+  - Marquis, D. G. (1930). The criterion of innate behavior. Psychological Review, 37(4), 334.
+  - Marquis, D. G. (1944). The mobilization of psychologists for war service. Psychological Bulletin, 41(7), 469.
+  - Marquis, Donald G. "Social psychologists in national war agencies." Psychological Bulletin 41, no. 2 (1944): 115.
+  - Marquis, D. G. (1944). Research program on psychomotor tests in the army air forces. Psychological Bulletin, 41, 307-321.
+  - Marquis, D. G. (1947). Psychology of social change. The Annals of the American Academy of Political and Social Science, 249(1), 75-80.
+  - Marquis, D. G. (1950). Report of the social science division of the study committee. New York: Ford Foundation Archives.
+  - racial categories in the Woodworth and Marquis (1947) edition of his text, from "Winston, A. S., Butzer, B., & Ferris, M. D. (2004). Constructing difference: Heredity, intelligence, and race in textbooks, 1930-1970. In A. S. Winston (Ed.), Defining difference: Race and racism in the history of psychology (p. 199–229). American Psychological Association."
+  
+### 1949 Ernest R. Hilgard
+
+  - did hypnosis, learning
+  - wrote a bio on yerkes, Hilgard, Earnest R. 1965. Biographical Memoir of Robert Mearns Yerkes, 1876–1956. Vol. 38,
+National Academy of Sciences Biographical Memoirs. Washington, DC: National Academy of
+Sciences, 1877–2014.
+  - Hilgard, E. R. (1987). Psychology in America: A historical survey. Harcourt Brace Jovanovich.
+  - Hilgard, E. R. (1949). Human motives and the concept of the self. American Psychologist, 4(9), 374.
+  - Hilgard, E. R. (1974). Ernest Ropiequet Hilgard. In G. Lindzey (Ed.), Century psychology series. A history of psychology in autobiography, Vol. 6 (p. 131–160).
+  - Morgan, A. H., Hilgard, E. R., & Davert, E. C. (1970). The heritability of hypnotic susceptibility of twins: A preliminary report. Behavior Genetics, 1(3-4), 213-224.
+  - Hilgard, E. R., Weitzenhoffer, A. M., Landes, J., & Moore, R. K. (1961). The distribution of susceptibility to hypnosis in a student population: A study using the Stanford Hypnotic Susceptibility Scale. Psychological Monographs: General and Applied, 75(8), 1.
+  - Hilgard, E. R., Leary, D. E., & McGuire, G. R. (1991). The history of psychology: A survey and critical assessment. Annual Review of Psychology, 42(1), 79-107.
+  - Hilgard, E. R. (1978). American psychology in historical perspective: Addresses of the presidents of the American Psychological Association, 1892–1977. American Psychological Association.
+  
+### 1950  Joy Paul Guilford
+
+  - intelligence tester, titchener student
+  - Guilford, J. P. (1967). The nature of human intelligence.
+  - Guilford, J. P. (1956). The structure of intellect. Psychological bulletin, 53(4), 267.
+  - Guilford, J. P. (1957). Creative abilities in the arts. Psychological review, 64(2), 110.
+  - Guilford, J. P. (1982). Cognitive psychology's ambiguities: Some suggested remedies. Psychological review, 89(1), 48.
+  - Guilford, J. P., & Guilford, R. B. (1936). Personality factors S, E, and M, and their measurement. The journal of Psychology, 2(1), 109-127.
+  - How does Guilford address eugenics?
+  - Guilford, J. P. (1968). Intelligence Has Three Facets: There are numerous intellectual abilities, but they fall neatly into a rational system. Science, 160(3828), 615-620.
+  - Guilford, J. P. (1939). A study in psychodynamics. Psychometrika, 4(1), 1-23.
+  
+### 1951  Robert R. Sears
+
+  - https://psychology.wikia.org/wiki/Genetic_Studies_of_Genius
+  - Sears, R. R. (1977). Sources of life satisfactions of the Terman gifted men. American Psychologist, 32(2), 119.
+  - Sears, R. R. (1950). Ordinal position in the family as a psychological variable. American Sociological Review, 15(3), 397-401.
+  - Farber, M. L., Lewin, K., & Sears, R. R. (1944). Suffering and time perspective of the prisoner. University of Iowa Press.
+  - Davalos, L. M., Sears, R. R., Raygorodetsky, G., Simmons, B. L., Cross, H., Grant, T., ... & Porzecanski, A. L. (2003). Regulating access to genetic resources under the Convention on Biological Diversity: an analysis of selected case studies. Biodiversity & Conservation, 12(7), 1511-1524.
+  - Sears, R. R., & Feldman, S. S. (Eds.). (1973). The seven ages of man. W. Kaufmann.
+  - Sears, R. R. (1951). Symposium on genetic psychology: 3. Effects of frustration and anxiety on fantasy aggression. American Journal of Orthopsychiatry, 21(3), 498.
+  - Sears, R. R. (1947). Child psychology.
+  
+### 1952 JMV HUNT
+
+  - Hunt, J. M. (1969). Has compensatory education failed? Has it been attempted?. Harvard Educational Review, 39(2), 278-300.  Argues against Jensen.
+  - Hunt, J. M. (1961). Intelligence and experience.
+  - Hunt, J. M. (1969). challenge of incompetence and poverty.
+  - Hunt, J. M. (1970). Attentional preference and experience: I. Introduction. The Journal of Genetic Psychology, 117(1), 99-107.
+  - Hunt, J. M. (1966). The psychological basis for using preschool enrichment as an antidote for cultural deprivation. In Experience Structure & Adaptability (pp. 235-276). Springer, Berlin, Heidelberg.
+  - Hunt, J. M. (1982). Toward equalizing the developmental opportunities of infants and preschool children. Journal of Social Issues, 38(4), 163-191.
+  - Hunt, J. M. (1981). A Critical Look at Intelligence Testing.
+  - Some pushback from Hunt
+  
+### 1953 Laurance F. Shaffer
+
+  - Mental hygiene promoter
+  - Shaffer, L. F., & Shoben, E. J. (1936). The psychology of adjustment: An objective approach to mental hygiene (Vol. 487). Houghton Mifflin.
+  - Why does that sound so similar to racial hygiene?
+  
+### 1954 O. H. Mowrer
+
+  - involved in the Harvard Department of Social Relations, apparently a response to the Yale Institute of Human Relations
+  - interesting stuff on the wikipedia page <https://en.wikipedia.org/wiki/Orval_Hobart_Mowrer>... you are your secrets
+  - "Hobart Mowrer was an advocate of the idea that mental illness has a substantial biological and genetic basis. He held this conviction in spite of his equally strong belief in the importance of the "pathogenic secret." Mowrer accepted the importance of biological factors at a time when many people did not, and was in this respect ahead of his time. He regarded his own affliction as in some sense a "gift," the driving force behind his innovative ideas, but also the great misery of his life."
+  - Page, C. (2017). Preserving guilt in the “age of psychology”: The curious career of O. Hobart Mowrer. History of Psychology, 20(1), 1.
+  - Mowrer, O. H. (1979). Is Much Psychotherapy Still Misdirected or Misapplied?. Canadian Journal of Counselling and Psychotherapy, 13(3).
+  - Fiordo, R. (1981). Integrity training: A moral code and method for moral education. The Journal of Educational Thought (JET)/Revue de la Pensée Educative, 47-60.
+  - Weiss, R. P. (2006). The American Culture of Torture: A Review Essay.
+  
+### 1955 E. Lowell Kelly
+
+  - worked with Terman
+  - marital compatibility Kelly, E. L., & Conley, J. J. (1987). Personality and compatibility: A prospective analysis of marital stability and marital satisfaction. Journal of personality and social psychology, 52(1), 27.
+  - Kelly, E. L. (1955). Consistency of the adult personality. American Psychologist, 10(11), 659.
+  - Westoff, C. F., Mishler, E. G., & Kelly, E. L. (1957). Preferences in size of family and eventual fertility twenty years after. American Journal of Sociology, 62(5), 491-497.
+  - Seems like eugenics adjacent work...e.g., how to get good people to have marriages that allow good people to breed? Maybe I'm reading to much into it
+  
+### 1956 Theodore M. Newcomb
+
+  - worked with several other psychologists interested in eugenics <https://en.wikipedia.org/wiki/Theodore_Newcomb>
+  - Newcomb, T. M. (1956). The prediction of interpersonal attraction. American psychologist, 11(11), 575.
+  - need to follow up more here, maybe @smithAmericanPsychologicalAssociation1992
+  
+### 1957 
+  
+  
+
 
 
 ## First 50 notes
@@ -468,6 +600,8 @@ Some American Institutions to consider in terms of Psychology & Eugenics
 - Federal government research councils and chairs
 
 Test to see why html is not updating on github
+
+Albett, R. S. (1969). Genius: Present-day status of the concept and its implications for the study of creativity and giftedness. American Psychologist, 24(8), 743.
 
 
 ## References
