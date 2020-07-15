@@ -335,7 +335,7 @@ knitr::include_graphics("img/NRC.png")
 List of correspondence between C Davenport (director of eugenics record office) and other folks, from @societyNewGuideCollections1987
 
 ```{r, echo=FALSE}
-knitr::include_graphics("img/DaveportCorrespondence.png")
+knitr::include_graphics("img/DavenportCorrespondence.png")
 ```
 
 
