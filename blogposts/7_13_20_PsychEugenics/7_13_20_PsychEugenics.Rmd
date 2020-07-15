@@ -339,7 +339,21 @@ List of correspondence between C Davenport (director of eugenics record office) 
 knitr::include_graphics("img/DavenportCorrespondence.png")
 ```
 
+### 1936  Clark Leonard Hull
+  
+  - from wikipedia, early on did some aptitude testing, enjoyed debating Lashley on his views of inherited intelligence
+  - Hull worked within a theoretical context of Pavlov, Watson, & Thorndike, all of whom were proponents of eugenics
+  - Read this to begin to grasp Hull's eugenics @morawskiOrganizingKnowledgeBehavior1986
+  - Read Hull's idea books "Idea Book, 1927-1930,' Clark L. Hull Papers, Sterling Library, Yale University.
+  
+```{r, echo=FALSE}
+knitr::include_graphics("img/Hull.png")
+```
 
+```{r, echo=FALSE}
+knitr::include_graphics("img/Hull2.png")
+```
+  
  
  
  
