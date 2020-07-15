@@ -54,7 +54,7 @@ A major overarching goal of compiling and documenting connections between psycho
 
   - Notable figure who was a prominent eugenicist
   - Bell labs became central to the development of many communication technologies, and numerous important figures in the emerging discipline of cognitive science worked at Bell Labs. 
-  - I need to look more into the culture of eugenics at Bell labs, but perhaps not surprisingly there appears to be on, e.g.,  [https://en.wikipedia.org/wiki/William_Shockley](https://en.wikipedia.org/wiki/William_Shockley)
+  - I need to look more into the culture of eugenics at Bell labs, but perhaps not surprisingly there appears to be one, e.g.,  [https://en.wikipedia.org/wiki/William_Shockley](https://en.wikipedia.org/wiki/William_Shockley)
     
     
 ## Membership lists
@@ -296,7 +296,21 @@ knitr::include_graphics("img/EugenicalNews.png")
   - So far haven't read Thurstone closely and haven't found clear indications of his views on eugenics. However, it is interesting to read comments on his work by eugenicists (e.g., @thomsonTRENDNATIONALINTELLIGENCE1946). So, how does Thurstone explain his work knowing that eugenicists are highly interested in it for the purposes of eugenics?
   - consider Thurstone in the context of racist ideologies of the time @samelsonRacePsychologyStudies1978
   
-### 1934
+### 1934 Joseph Peterson
+
+ - Peterson, J., & Lanier, L. H. (1929). Studies in the comparative abilities of whites and negroes. Mental Measurement Monographs.
+    - where they conclude whites are superior.
+ 
+### 1935  Albert Theodore Poffenberger
+
+ - Relation to Thomas Poffenberger? of Poffenberger, T. (1963). Two thousand voluntary vasectomies performed in California: background factors and comments. Marriage and Family Living, 25(4), 469-474.
+ - Generally an advocate for appling testing everywhere to make sure everyone goes into their pre-ordained slot in life.
+ - Some work on testing and predicting success in life from school grades. Poffenberger, A.T. (1925). School achievement and success in life. Journal of Applied Psychology, 9(1), 22–28.
+ - Poffenberger, A. T., & Carpenter, F. L. (1924). Character Traits in School Success. Journal of Experimental Psychology, 7(1), 67–74. This paper is a good example of value-free science. There is an effort to expand testing in schools beyond IQ tests to include other tests measuring traits that also predict performance...e.g., fill in the gaps that IQ misses in terms of variance explained. However, very little is said about what how these tests would be used in society, even though it is clear from the authors own collegial associations that "better" tests would certainly be put to use for eugenics purposes.
+ - @poffenbergerMeasuresIntelligenceCharacter1922 This paper is basically full on eugenics without using the word. Poffenberger describes how IQ tests can be used to slot people into professions that they are "suitable" for given their IQ. It is an argument to keep "low IQ workers" in their place as laborers, and given the best jobs to people with high IQ, and to worry about how the economy may collapse if people aren't slotted in based on their IQ.
+ 
+ 
+ 
   
 ## Henry Goddard
 
