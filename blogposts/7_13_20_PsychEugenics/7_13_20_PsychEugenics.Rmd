@@ -227,11 +227,13 @@ knitr::include_graphics("img/EugenicalNews.png")
   - went to school with Thorndike, studied under Cattell
   - wrote "Psychology as life work" with Thorndike and others, @dodgePsychologyLifeWork1923
   - Haven't found specific eugenic writings from Franz
+  - From Yakushko, "For example, S. Franz (APA president in 1920) and J. Dashiell (APA president in 1938), while not listed as eugenic leaders, published numerous positive reviews of eugenic works with titles such as “The Field of Eugenic Reform”. "
   
 ### 1921 Margaret Floy Washburn
   
   - first woman to get a Ph.D. in Pysch
   - studied under Cattell & Titchener, did comparative cognitive
+  - from Yakushko, "M. Washburn, APA president in 1921, one of few female APA presidents, not only published positive reviews of eugenic books but also produced studies on supposed differences in national character showing the “striking national difference” apparently found between Jewish participants' lack of empathy in contrast to their non‐Jewish counterparts (Washburn, 1923, p. 429)."
 
 ### 1922 Knight Dunlap
 
@@ -354,9 +356,36 @@ knitr::include_graphics("img/Hull.png")
 knitr::include_graphics("img/Hull2.png")
 ```
   
- 
- 
- 
+### 1937 Edward Chace Tolman
+
+  - 1950s U of C oath 
+  - did some mental testing
+     - Tolman, E. C. (1918). Performance Norms for Thirteen Tests.
+     - Tolman, E. C. (1918). Mental Examination.
+  - E.C. Tolman The inheritance of maze-running abiliity in rats, J. Comp. Psychol., 4 (1924), pp. 1-18
+     - So this is where Tolman actually attempts to breed rats to see if they improve in their intelligence at running a maze, seemed to have abandoned this line of work after basically finding nothing.@wahlstenGeneticExperimentsAnimal1972
+     
+### 1938  John Frederick Dashiell
+
+  - advised by John Dewey
+  - from Yakushko, ...J. Dashiell (APA president in 1938), while not listed as eugenic leaders, published numerous positive reviews of eugenic works with titles such as “The Field of Eugenic Reform”. 
+  
+### 1939 Gordon Willard Allport
+
+  - An advocate against eugenics (from Tucker, W. H. (1996). The science and politics of racial research. Urbana‐Champaign, IL: University of Illinois Press.)
+  - personality psychologist
+  - Interested to learn more about how Allport was anti-eugenics while also continuing to do research of interest to eugenicists. Allport, G. W. (1921). Personality and character. Psychological Bulletin, 18(9), 441–455.
+  - Allport's prejudice scale, research into the racism and prejudice as components for explaining the Holocaust.
+  
+### 1940 Leonard Carmichael
+
+  - wrote a bio on Yerkes. Carmichael, L. (1957). Robert Mearns Yerkes 1876-1956. Psychological Review, 64(1), 1–7
+  - Carmichael, L. (1934, September). The psychology of genius. In National Forum (Vol. 14, No. 3, p. 149). Honor Society of Phi Kappa Phi.
+  - Carmichael, L. (1925). Heredity and environment: Are they antithetical? Journal of Abnormal and Social Psychology,
+20, 245–260.
+  - connection to W. McDougall @roseWILLIAMMCDOUGALLAMERICAN2016
+  
+### 1941
   
 ## Henry Goddard
 
