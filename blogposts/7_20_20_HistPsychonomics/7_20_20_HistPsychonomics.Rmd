@@ -32,7 +32,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 I'm working through the task of learning about influences of eugenics on psychology and society. As a part of this, I'm documenting the eugenics views held by many psychologists, as well as connections between psychologists and eugenics. 
 
-Currently my research is highly disorganized, and unfolding across various blog posts. In this post I am interested in possible connections between eugenics and the Psychonomics Society, of which I am a member and fellow. I've been attending Psychonomics since the mid 2000s. I never really looked into the history and formation of Psychonomics. Let's do that with an eye out for eugenics. 
+Currently my research is highly disorganized and provisional, and unfolding across various blog posts. In this post I am interested in possible connections between eugenics and the Psychonomics Society, of which I am a member and fellow. I've been attending Psychonomics since the mid 2000s. I never really looked into the history and formation of Psychonomics. Let's do that with an eye out for eugenics. 
 
 Before jumping in I will say a few things. First, I'm a 40 year old recently Cognitive Psychologist at Brooklyn College of CUNY. I've been around the cognition block in Canada and the US. It never occured to me, and I was never taught, that there were extraordinarily deep connections between eugenics and psychology in the US and Canada. In learning about these connection now, I am very dissappointed, and I am still learning. For a quick primer on some of the connections one could read @yakushkoEugenicsItsEvolution2019. Although, here one might get the sense that the "pre-history" of psychology (e.g., before 1950s) was heavily influenced by eugenics, and "didn't that just die away?".
 
@@ -140,7 +140,22 @@ It seems that this effort of organization didn't really work, and the group fizz
 knitr::include_graphics("img/p8.png")
 ```
 
-But, it's interesting that very notable people ("stalwarts") were in attendance: Harvey Carr, Clark Hull, Joseph Jastrow, H. C. Warren, and Robert S. Woodworth. T. All of these men are notably deeply into eugenics, and they are also all one-time presidents of the APA. 
+But, it's interesting that very notable people ("stalwarts") were in attendance: Harvey Carr, Clark Hull, Joseph Jastrow, H. C. Warren, and Robert S. Woodworth. T. All of these men are notably deeply into eugenics, and they are also all one-time presidents of the APA [see some notes on each here](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html).
+
+Huh, next we learn about another fascinating society in Psychology, the psychological round table, or PRT...If you followed my twitter account last summer, you would know that I tweeted a bunch about them. They are "well-kept-secret" honor society that still exists today. They have a smelly history of mysogyny. The keep their member list close to their chests. Who knows what their members think about eugenics? It's just one of those questions that has to be asked in a blog post using the lens of eugenics to explore this paper.
+
+```{r}
+knitr::include_graphics("img/p9.png")
+```
+
+
+```{r}
+knitr::include_graphics("img/p10.png")
+```
+
+I think the TLDR here is that Psychonomics should be proud that among its founders were esteemed members of PRT. Hurray, give yourself a pat on the back.
+
+
 
 
  
