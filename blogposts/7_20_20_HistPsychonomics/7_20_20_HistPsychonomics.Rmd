@@ -268,7 +268,11 @@ It seems that Psychonomics could be the place where science happened, and still 
 knitr::include_graphics("img/p24.png")
 ```
 
+What's in a name...Also, more in the appendix, which I will get to later. Also, some icky quotes in here.
 
+```{r}
+knitr::include_graphics("img/p25.png")
+```
 
 
 
