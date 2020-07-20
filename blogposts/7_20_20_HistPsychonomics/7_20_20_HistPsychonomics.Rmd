@@ -298,10 +298,27 @@ So this is why Psychonomics is just about coffee...keeps the cost of the confere
 knitr::include_graphics("img/p29.png")
 ```
 
+Then some more stuff about restricting papers and talks to members. LET THE GRADUATE STUDENTS GIVE TALKS ALREADY. 
 
+Governance structure is supposedly lean and in the style of PRT...not sure if that is good or bad. I've never been involved with governance at Psychonomics. Can't say anything about what it's like now.
 
+```{r}
+knitr::include_graphics("img/p30.png")
+```
 
+Psychonomics journals didn't work out right away, but eventually started happening, courtesy of Clifford Morgan.
 
+The concluding paragraph.
+
+```{r}
+knitr::include_graphics("img/p31.png")
+```
+
+So a simple history of Psychonomics is that it is a lean organization for scientific psychologists to talk about their science. And it is does that very well.
+
+---
+
+Time for a small break. 
 
 
 
