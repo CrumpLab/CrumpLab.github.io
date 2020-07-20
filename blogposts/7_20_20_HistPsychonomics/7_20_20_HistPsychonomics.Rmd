@@ -215,6 +215,12 @@ There was some discussion and dissent about the purposes and directions of the n
 knitr::include_graphics("img/p18.png")
 ```
 
+Some of the tension in the story appears to be the need to fight for science in psychology, and to make a society that shows everyone why science and psychology is so important. A story like this has been drilled into me over the years. IMO, Science shouldn't be an excuse to do psychology.
+
+```{r}
+knitr::include_graphics("img/p19.png")
+```
+
 
 
 
