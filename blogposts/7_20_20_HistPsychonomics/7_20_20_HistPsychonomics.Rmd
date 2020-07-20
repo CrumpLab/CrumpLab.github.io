@@ -254,6 +254,21 @@ Well, maybe spoke to soon. I can do things like search "paper presented to the P
 
 - Jerison, H. J. (1961). Quantitative analysis of evolution of the brain in mammals. Science, 133(3457), 1012-1014.
 
+Alright, some stuff happened at the first conference. We learn that it wasn't really too much different than division 3 APA conferences. Then there is the first business meeting, a first newsletter, etc.
+
+Some thorns in the side, or additional reasons why Psyshonomics needed to be created, it seems APA was making actual presentations of research more difficult. Kind of funny to imagine Estes' apparatus solution to the problem.
+
+```{r}
+knitr::include_graphics("img/p23.png")
+```
+
+It seems that Psychonomics could be the place where science happened, and still be affiliated with the APA
+
+```{r}
+knitr::include_graphics("img/p24.png")
+```
+
+
 
 
 
