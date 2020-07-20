@@ -316,11 +316,43 @@ knitr::include_graphics("img/p31.png")
 
 So a simple history of Psychonomics is that it is a lean organization for scientific psychologists to talk about their science. And it is does that very well.
 
+Societies have many members and viewpoints and it's unclear what kinds of views Psychonomics members have had over time about issues such as eugenics, or about tolerating or not tolerating other members' views on such issues. 
+
 ---
 
 Time for a small break. 
 
+Aside from eugenics, I wonder how many folks from the governing board of Psychonomics and say all of the journals are also members of PRT and GUV? I would guess quite a few. If so, there is a "hidden" layer of elitism to the society, and if you are not part of the club...like moi, then I guess sucks to be you (or me as it happens).
 
+---
+
+On the naming of Psychonomics from the appendix:
+
+```{r}
+knitr::include_graphics("img/p32.png")
+```
+ 
+I'll just point out that James Mark Baldwin also wrote, "The mental development in the child and race: methods ands processes (Baldwin, 1900)". And, that curiously the word "flow" is often used in eugenics literature (see chpt 6 of @yakushkoScientificPollyannaismInquisition2019). These are obviously juxtaposition to eugenics, and I don't know the eugenics literature well enough yet to know if there are additional connections. Anyway, I thought these connections were worth noting.
+
+---
+
+There are three more papers on the history of Psychonomics on their website, and I'll read those a little bit later. Some of the next steps that I should take include looking more closely at the scholarship of the organizers. Considering the large amount of eugenics oriented research in the APA up to this time, and considering that Psychonomics was mainly planning to be a society that continued APA division 3 research, it would be surprising if the early days of Psychonomics did not include eugenics oriented research.
+
+At the same time, we are now talking about 1960 and onward, a time in history when it became more unpopular to use the word eugenics (often attributed to widespread public rejection of eugenics following revelations of Nazi war crimes), and to talk openly about promoting eugenics. So, unlike pre 1945 where it was rather easy to line up psychologists who published in psychology and eugenics journals, or otherwise self-identified as being a eugenicist, it seems like more of a challenge to determine whether psychologists in the 60s were involved in eugenics. 
+
+Before I start to look more closely at the scholarship of organizing members, I'd like to mention a few points of interest. For myself, I have been wondering about the connections between eugenics and the cognitive revolution. Psychonomics appears right in the same time frame as the cognitive revolution. I have spent many years thinking about cognition, and basically never thought of myself as contributing in anyway to programs of eugenics. I've been asking basic questions about basic psychological processes. How is that related to eugenics?
+
+In any case, here are a few tidbits that have started to inform my thinking about the cognitive revolution. First, it is obvious that the history of individual differences psychology is tightly interwoven with eugenics. The development of IQ testing and psychometrics were employed as tools of eugenics many times over in many different venues in society. It was less obvious to me how experimental psychology was involved. One way was that many formative psychologists in experimental psychology were eugenicisists, Thorndike, Watson, Lashley, Hull...the list goes on.
+
+At one point I jumped ahead of myself (in terms of going through the APA presidents), and I looked George A. Miller & eugenics. Most of us know Miller for his magic number 7 + or - 2 paper. That paper was also  about applying ideas from Claude Shannon's information theory to information processing limitations in psychology. Well, guess where Claude Shannon did his master's thesis. At the eugenics record office in Cold Springs Harbor (Long Island New York). This is one of those weird eugenics connections. 
+
+It took some googling but eventually I found George Miller explain his version of eugenics in 1967 in @millerPsychologicalPerspectivesYear1967. Miller inverts a common fear of morons that eugenicists usually foment about. PEugnicists like H. Goddard [@goddardWhoMoron1927] exclaim that morons are everywhere, they look like everyone else, but they are morons because of their IQ, and they must be removed from society or else society will collapse. Miller, in his futurism about the year 2000, says the society will become too complex rendering everyone morons, so basically we need to do something about it or else. Miller cryptically talks about when "the day comes that we have the necessary facts to support a realistic eugenics program, such information could be valuable." Miller doesn't say who he wishes to eliminate, he's cryptic. Still, he thanks his buddy R.J. Hernnstein at the beginning, probably for all the chats about eugenics (Hernnstein would later publish "the Bell curve").
+
+Still, what did this have to do with cognition? Well, Miller also explains how it obvious that information processing capacity needs to be increased in order for society to survive. It's plain old Intelligence-exhaulting, fear-mongering, Galtonian eugenics with fancy words. So, there is some ideology between Miller's magic number. And it apparently has to do with eugenics.
+
+Second, although I still have to confirm this, it appears that Abraham Maslow was deeply into eugenics, but only wrote about it privately, and this was only made generally available to public upon publishing of some of his private notes. 
+
+I mention these two examples primarily because it may be difficult to suss out eugenic ideology among psychologists who don't share their views publicly, but continue nevertheless to conduct science that has eugenic implications. So, it's a bit of a warning to myself to not get carried away with wondering if someone is really a eugenicist or not. One of primary aims is to document more clearly the structural eugenics aspects. In other words, I think at some point it will become clear enough that there was a bunch of eugenics going on, and that this shaped our discipline, and if this is true, it is something Psychonomics has to deal with. 
 
 
 
