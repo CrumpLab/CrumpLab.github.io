@@ -168,7 +168,60 @@ from Kuhl:
 "The ten other scholars were Jack A. Adams, Raymond B. Cattell, Francis H. Crick,
 C. D. Darlington, Charles W. Eriksen, Eric F. Gardner, Quinn McNemar, Eliot Slater, Robert L. Thorndike, Frederick C. Thorne, and Philip E. Vernon; cf. JBA Oxford, G. 14. The activity was at first coordinated by the psychologist Ellis B. Page of the University of Connecticut; cf. Jensen to Dobzhansky, 9/2/1972, THA Philadelphia: Jensen, Arthur R."
 
-Anyway, let's continue with the paper.
+Anyway, let's continue with the paper. 
+
+```{r}
+knitr::include_graphics("img/p12.png")
+```
+
+Huh, I did not know that there was a failed attempt to remove division 3 (exp psyc) from APA in 1948. But, I certainly have learned somethings about big names in Experimental Psychology who were eugenicists, like Thorndike, Watson and Lashley. I haven't looked at Spence or Graham. For Spence I will just point out that we worked under Yerkes and Hull, so it seems very likely he was exposed to his mentors' eugenics. It would be interesting to look at Spence's scholarship from the lens of the eugenics ideology of his mentors.
+
+Alright, we have arrived at the beginning of the Psychonomics Society:
+
+```{r}
+knitr::include_graphics("img/p13.png")
+```
+
+Let's take a look at the table events:
+
+```{r}
+knitr::include_graphics("img/p14.png")
+```
+
+More names:
+
+```{r}
+knitr::include_graphics("img/p15.png")
+```
+
+And a table of membership of the organizing committee (from the American Men of Science):
+
+```{r}
+knitr::include_graphics("img/p16.png")
+```
+
+Interesting to note the ages, so any memebers were all kicked out of PRT and GUV. Earlier in the paper we learned that 6 of these men were members of PRT.
+
+
+More people get involved. I love how "diverse" and "white males" was working into the paragraph. 
+
+```{r}
+knitr::include_graphics("img/p17.png")
+```
+
+There was some discussion and dissent about the purposes and directions of the new society. I wonder how much of that discussion had to do with restorative justice for survivors of eugenics at that time. I wasn't there, maybe it wasn't on the radar.
+
+```{r}
+knitr::include_graphics("img/p18.png")
+```
+
+
+
+
+
+
+
+
 
 
 
