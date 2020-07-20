@@ -71,7 +71,9 @@ Oops, I got interrupted. FYI, I'm going to write this like a detective novel, so
 knitr::include_graphics("img/war.png")
 ```
 
-This is an indiciation to me that the society at one point condoned aspects of eugenics, and also that some eugenics directed archeology of Psychonomics is necessary.
+This is an indiciation to me that the society at one point condoned aspects of eugenics, and also that some eugenics directed archeology of Psychonomics is necessary. Edit, I recently learned that at this time (1979) members could publish in this venue effectively without scrutiny, so this paper could easily reflect more on the authors than on the society.
+
+## The founding of Psychonomic Society
 
 OK, back to the first paper on the history of Psychomics. This one is titled, "The founding of the psychonomics society" [@dewsburyFoundingPsychonomicSociety1995]. Before I go through it, it's worth reminding myself (I used to be a history major) what I learned about "history" in undergrad. There is opinion and perspective in historical retellings. What lens is used here to discuss the beginnings of Psychonomics? Historical retellings often use the same kinds of tricks. For example, @pressEugenicMindProject refers to Ebbinghaus's quip that "psychology has a long past, but only a short history". Wilson uses this quip to point out a common narrative structure in historical retelling. In histories of psychology as a science we see the "long" pointers back to the early greek philosophers. It is often the case that "long" pointing is a way of using juxtaposition to connect some current issue with the significance or value of "well-accepted" historical figures. E.g., psychology is continues in the supremely wonderful and great tradition of the righteous and true great traditions of the past...That kind of thing. I'll have an eye out for the "long" pointers as I "read between the lines" of the "The founding of Psychonomics". Let's go.
 
