@@ -221,6 +221,21 @@ Some of the tension in the story appears to be the need to fight for science in 
 knitr::include_graphics("img/p19.png")
 ```
 
+And now, we go back to the bar:
+
+```{r}
+knitr::include_graphics("img/p20.png")
+```
+
+Should I go to Appendix D now, or later...it's choose your own adventure. Let's do it, Appendix D says :
+
+```{r}
+knitr::include_graphics("img/p21.png")
+```
+
+For my two cents, the part at the bottom resonates very strongly. It seems there was an elitist contingent from the PRT. Ever wonder why graduate students don't give talks at Psychonomics? Maybe this is why. The elitists won.
+
+
 
 
 
