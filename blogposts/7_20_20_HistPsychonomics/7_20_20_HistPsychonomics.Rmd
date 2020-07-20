@@ -235,6 +235,18 @@ knitr::include_graphics("img/p21.png")
 
 For my two cents, the part at the bottom resonates very strongly. It seems there was an elitist contingent from the PRT. Ever wonder why graduate students don't give talks at Psychonomics? Maybe this is why. The elitists won.
 
+Back to the paper. So, 950 invitations were sent out to potential members, the name Psychonomics was adopted and incorporated in 1960. There is an appendix on the name "psychonomics". I'll get to that later.
+
+"The First Annual Scientific Meeting ofthe Psychonomic Society
+The first meeting ofthe Psychonomic Society was held at the University of Chicago on September 1-3, 1960, just before the 1960 APA meetings. Approximately 294 individuals attended, ofwhom 195were members, 79 were guests, and approximately 20 were unregistered. The pro- gramincluded119papersin24sessionsarrangedineight time blocks with three concurrent sessions each; four blocks on Thursday, three blocks and an afternoon busi- ness meeting on Friday, and one block on Saturday morn- ing. They were grouped into 15 categories. The nature of the experimental psychology ofthe time, at least for the members of the new Psychonomic Society, can be seen in the distribution of papers across sessions; these are presented in Table 3."
+
+Let's look at Table 3:
+
+```{r}
+knitr::include_graphics("img/p22.png")
+```
+
+Oh no, it seems that potpourri session has basically dissappeared in terms of modern Psychonomics. Now, should I stay or should I go find the 1960 conference abstracts. I guess I should do that. I'm going to do that now, wish me luck.
 
 
 
