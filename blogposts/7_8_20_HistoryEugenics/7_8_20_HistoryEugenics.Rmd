@@ -237,8 +237,17 @@ knitr::include_graphics("img/Abortion2.png")
 
 Lots of interesting discussion about the relationships between eugenics and feminism.
 
+---
 
- 
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["thomsonDisabilityPsychiatryEugenics2010"])
+```
+
+- Institutionalization and its associated problems
+- British Mental Deficiency Act (eugenics lobby)
+- colony style institution
+- marriage laws in US preventing feeble-minded people from marrying
+- forced sterilization
 
 
 

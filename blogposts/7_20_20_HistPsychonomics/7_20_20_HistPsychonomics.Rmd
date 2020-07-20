@@ -1,0 +1,107 @@
+---
+title: "Psychonomics and Eugenics connections"
+author: "Matt Crump"
+date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
+twitter:
+  card_description: "Revisiting the history of the Psychonomics society"
+  card_img: "https://crumplab.github.io/blogposts/7_20_20_HistPsychonomics/img/psychonomics.png"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: web/header.html
+    md_extensions: -autolink_bare_uris
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+---
+
+I'm working through the task of learning about influences of eugenics on psychology and society. As a part of this, I'm documenting the eugenics views held by many psychologists, as well as connections between psychologists and eugenics. 
+
+Currently my research is highly disorganized, and unfolding across various blog posts. In this post I am interested in possible connections between eugenics and the Psychonomics Society, of which I am a member and fellow. I've been attending Psychonomics since the mid 2000s. I never really looked into the history and formation of Psychonomics. Let's do that with an eye out for eugenics. 
+
+Before jumping in I will say a few things. First, I'm a 40 year old recently Cognitive Psychologist at Brooklyn College of CUNY. I've been around the cognition block in Canada and the US. It never occured to me, and I was never taught, that there were extraordinarily deep connections between eugenics and psychology in the US and Canada. In learning about these connection now, I am very dissappointed, and I am still learning. For a quick primer on some of the connections one could read @yakushkoEugenicsItsEvolution2019. Although, here one might get the sense that the "pre-history" of psychology (e.g., before 1950s) was heavily influenced by eugenics, and "didn't that just die away?".
+
+I've been slowly tracing eugenics and psychology connections leading up to the cognitive revolution, and am about to continue forward past the 1950s. So, a good place to start is in my own backyard, in other words, does the Psychonomics Society have any eugenics connections? As a member I'd like to know.
+
+@yakushkoEugenicsItsEvolution2019 had mentioned that 31 APA presidents from 1892 - 1947 were involved in eugenics in explicit ways (wrote on eugenics, members of eugenics societies, etc.). I found this shocking, and have started noting connections between [APA presidents and eugenics here](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html). My assessment so far is that there are way more than 31 APA presidents who were deeply into eugenics.
+
+Some books I have found useful in describing the vast ways with which eugenics permeated society and psychology are the following. @kuhlBettermentRaceRise2013 presents an astounding history of the international organization of eugenics movements, including some discussion of the organization of eugenics within the discipline of psychology. If you thought eugenics was just a minor historical detail, this book may change your mind. An important point here is to better understand the organized ways in which eugenicists were involved in leadership positions within societies and governments. These actions by eugenicists created deep structures of eugenics within society which continue to influence society today. @yakushkoScientificPollyannaismInquisition2019 presents a critical look at some aspects of scientific psychology, especially those rooted in eugenics and positive psychology. If you want a primer on some of atrocities committed by well-known psychologists, this is an eye-opener. It may also challenge some of your notions about the role of psychology as a science in society. Last, @pressEugenicMindProject discusses eugenics in the context of western Canada (I'm an Alberta boy), where the eugenics policy of forced sterilization was legalized; and he develops a "standpoint theory" of eugenics, which attempts to discuss eugenics from a survivor perspective, as well as advocate for modern society to understand hallmarks of eugenic thinking so as to guard against modern versions of eugenics campaigns. Wilson was also the project director for the wonderful website <http://eugenicsarchive.ca>.
+
+I found one story in from Wilson very inspiring. It turns out the first chair of the Philosophy/Psychology Department at the University of Alberta was the same man who sat on the eugenics board and authorized forced sterilizations until the law was repealed. That department has an instituational legacy of eugenics. That department formed a sub committe in 1998 to assess its own legacy of eugenics, and do something in response for the purposes of restorative justice. I commend them for doing that. More Departments need to do this. More societies need to do this. Does Psychonomics need to do this? I don't know, maybe so...let's see.
+
+A last word on labelling and offending people. As I am about to go into my own academic backyard and start asking whether my own colleagues have a history of espousing racist and eugenics ideology, I'm assuming some feathers may be ruffled.
+My intention is to be constructive in learning about these issues and eventually portraying them back to the society (if there is anything to reflect on...haven't yet started the research). Certainly, some of the terminology may sound offensive, perjorative, and disparaging. However, labels such as "white racist-eugenicist-psychologist" are appopriate for psychologists, who explicitly in their own writing, identify themselves in those terms. For example, white racist-eugenicist-psychologists advocate for the supremacy of the "Nordic races" through positive eugenic policies, and advocate for the oppression,segregation and/or elimination of non-white races through negative eugenics policies.
+
+I'm still thinking through how to discuss connections between eugenics and individual psychologists. For example, some psychologists may justify a label of racist-eugenicist because of their explicit self-identification under those terms, wherease, other psychologists may not because of a lack of explicit evidence. Nevertheless, I'll entertain the concept of adjacency in considering connections between eugenics and psychology. For example, many psychologists were trained by white racist eugenicists, or worked on topic areas that are of high interest to eugenicists. These psychologists are adjacent to eugenics in some important ways, and may or may not espouse eugenics ideology. In any case, I guess what I am saying is that I will attempt to use labels in a way that elucidates eugenics connections in psychology, for the purposes of understanding potential structural and systemic issues in our discipline that may be fundamentally related to eugenics. 
+
+One question I have often wondered when I have attended Psychonomics is "Why is Psychonomics so white?". Given my newfound interest in eugenics, I am interested in determining whether structural eugenics in Psychology, including Psychonomics could possibly explain some of the overwhelming lack of diversity.
+
+The above prelude is a work in progress where I am attempting to explain/discover my motivations for doing this work.
+
+## History of Psychonomics
+
+I must confess, I am newbie when it comes to the history of Psychology, and specifically the history of its organizational structure in Canada and in the US. I've learned a couple things so far. E. G. Boring (1928 APA president) is often credited with starting the History of Psychology. When I read Boring, I find he doesn't do a good job of contextualizing the history of Psychology in terms of eugenics. I wonder why (I have my suspicions), he certainly worked with and new a whole bunch of eugenicist psychologists, and it is incredible to believe that he didn't know about the ideologies of his colleagues. Maybe he thought the eugenics part was so obvious it went without saying...or maybe not.
+
+As I write this I'm aware that I haven't read all of the History of Psych journals, so i don't know whether or how they reconstruct the history of Psychology from the lens of eugenics. Need to read more about this for myself.
+
+There is a tradition in American Psychology of breaking away from the APA (American Psychological Association). The more I learn about the APA, the more I understand why. Psychonomics broke away from the APA, and before looking at that, I wanted to juxtapose the formation of Psychonomics with the formation of another society, [The Association of Black Psychology](http://www.abpsi.org) who has been publishing the [Journal of Black Psychology](https://journals.sagepub.com/home/jbp) since 1974. The ABPsi broke from the APA and in the last half-century have constructed an entire new field in Psychology, that is notable for several reasons, including the pursuit of restorative justice for the actions of white racist and eugenicist psychologists against the Black Community. So, I wonder if Psychonomics broke away from the APA for any related reasons...(hint not really).
+
+## Plan for connecting dots
+
+I went to the Psychonomics website <https://www.psychonomic.org/page/about>, and found that I could read four papers on the history of Psychomomics. Cool! Thanks Psychomonics. Let's start with the first paper.
+
+Oops, I got interrupted. FYI, I'm going to write this like a detective novel, so it will be contemporaneous with my discoveries, and sometimes tangential. I admit, I already read the first paper, which is why I am going to talk more about it here. At the end of the paper there was some discussion about the word psychonomics, and around that discussion there was some word usage common among eugenic texts. So, I ended up doing the thing I always do, but should have done from the beginning, and that is, google "psychonomics and eugenics". I did that and I straightaway I found a paper @clelandWarPeaceRevisited1979 published by the Psychonomic Society:
+
+```{r}
+knitr::include_graphics("img/war.png")
+```
+
+This is an indiciation to me that the society at one point condoned aspects of eugenics, and also that some eugenics directed archeology of Psychonomics is necessary.
+
+OK, back to the first paper on the history of Psychomics. This one is titled, "The founding of the psychonomics society" [@dewsburyFoundingPsychonomicSociety1995]. Before I go through it, it's worth reminding myself (I used to be a history major) what I learned about "history" in undergrad. There is opinion and perspective in historical retellings. What lens is used here to discuss the beginnings of Psychonomics? Historical retellings often use the same kinds of tricks. For example, @pressEugenicMindProject refers to Ebbinghaus's quip that "psychology has a long past, but only a short history". Wilson uses this quip to point out a common narrative structure in historical retelling. In histories of psychology as a science we see the "long" pointers back to the early greek philosophers. It is often the case that "long" pointing is a way of using juxtaposition to connect some current issue with the significance or value of "well-accepted" historical figures. E.g., psychology is continues in the supremely wonderful and great tradition of the righteous and true great traditions of the past...That kind of thing. I'll have an eye out for the "long" pointers as I "read between the lines" of the "The founding of Psychonomics". Let's go.
+
+Here's the first bit of the paper:
+
+```{r}
+knitr::include_graphics("img/psycho1.png")
+```
+
+TLDR, the Psychonomics origin story begins with a bunch of white dudes at a bar. I can totally relate to that, because that is pretty much what my experience is like when I go to Psychonomics.
+
+We learn that this meet-up was at a AAAS meeting (American Association for the Advancemet of Science). Now, far be it from me to criticize the AAAS. And, I have not looked to closely at this organization yet. Suffice it to say, let me connect the AAAS with an important person in its history, James McKeen Cattell. Cattell is a notable eugenicist, as well he was an APA president, and he founded Psychological Review, and he bought Science and edited it for 50 years. I haven't read this paper yet, but it apparently covers some of the eugenic aspects of AAAS [@farberScientistsRoleEugenics2008].
+
+OK, so some AAAS affiliated Psychologists go to a bar...and two years later Psychonomics was born. Some of those psychologists were "Clarence Graham of Columbia University, Clifford T. Morgan of Johns Hopkins, S. S. Stevens of Harvard, and William S. Verplanck of Hunter College." At some point I'll look into these individuals much in the same way I have looked at the APA presidents. I guess I need to start making a list though. And to be honest, I'd like a more structured database about individuals and their eugenics connections. I'd want to work in excel, but it might be fast...I could try YAML, do I dare do that? Excel it is for now. I'll probably attempt connections between individuals after going through the paper, and for now make notes about the major players are.
+
+So, after the origin story, the founding of psychonomics is set in context of the tradition of splintering off from APA, which many other groups do for various reasons.
+
+```{r}
+knitr::include_graphics("img/psycho2.png")
+```
+
+We are pulled back to into the living of G. Stanley Hall in 1892, at the dawn of the APA. I would say that Hall was a eugenicist, [for some connections see](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html#1892_granville_stanley_hall).
+
+
+
+ 
+
+
+## References
+
+
+
+
