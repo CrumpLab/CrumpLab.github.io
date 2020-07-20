@@ -93,8 +93,52 @@ So, after the origin story, the founding of psychonomics is set in context of th
 knitr::include_graphics("img/psycho2.png")
 ```
 
-We are pulled back to into the living of G. Stanley Hall in 1892, at the dawn of the APA. I would say that Hall was a eugenicist, [for some connections see](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html#1892_granville_stanley_hall).
+We are pulled back to into the living of G. Stanley Hall in 1892, at the dawn of the APA. I would say that Hall was deeply into eugenics, [for some connections see](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html#1892_granville_stanley_hall). I think it is also fair to say that the first presidential address published in the first issue of Psych Review in 1894 by George Trumball Ladd (2nd APA president, also frequent contributor to the Journal of Race Development...) was about establishing the place of psychology in Science. From the very beginning the eugenicists involved in Psychology were very eager to establish and maintain the scientific purity of Psychology. This a theme that sometimes is used to give psychologists cover to conduct "science" in a "value-free", "objectively neutral" way (see @yakushkoScientificPollyannaismInquisition2019 on scientism). FYI, I also think that Ladd was dogwhistling to the eugenicists in the crowd in his final thoughts about using psychology for the betterment of society. It is also highly interesting to inspect the first issue of Psyc Review for known eugenicists (e.g., Francis Galton, founder of eugenics, publishes on his ability to arirthmetic by smell).
 
+Next, we learn about some previous splits within the APA. 
+
+```{r}
+knitr::include_graphics("img/psycho3.png")
+```
+
+Would you be surprised if Leta Hollingworth was a racist and eugnicist? See here [wikipedia page](https://en.wikipedia.org/wiki/Leta_Stetter_Hollingworth). She was also married to another eugenicist psychologist Harry Levi Hollingworth, who was president of the APA in 1927. You could read Wallin's eugenics here [@wallinHygieneEugenicGeneration1914]. This split didn't last long and the APA recouped the AACP, and established the first "section" in the APA. Neato, I didn't know that.
+
+```{r}
+knitr::include_graphics("img/psycho4.png")
+```
+
+There is an acknoweldgement of the role that WW II played in the discipline of psychology. There are many connections between psychologists and war efforts in the US, and without going into that history, let me point out a primary theme is eugenics, and many of the psyhcologists involved were also members of eugenics societies. We see some mention of some other societies, like SEP (Society of Experimental Psychologists)...notably this exclusive honor club of psychologists still gives the Howard Crosby Warren medal every year as its primary honor award. HC Warren was another APA president (1913), and he is listed in the Eugenical News as an active researcher. But, the main point of this paragraph is the italicized two words "and practice", whereby the new bylaws of the APA included "
+practice" alongside science, as a way into the APA. It seems like the scientists didn't like this very much.
+
+We are then treated to a context of previous attempts to make scientific clubs of psychologists, where psychologists could just finally hang out and be scientists with each other.
+
+```{r}
+knitr::include_graphics("img/p5.png")
+```
+
+The experimentalists were notable mysogynists, and they grew into the SEP, which maintained its mysogonistic roots. I won't go into the membership of SEP, because this about Psychonomics, and SEP is another day.
+
+```{r}
+knitr::include_graphics("img/p6.png")
+```
+
+Part of the point in this history could be to establish the "long" roots of Psychonomics by tying it to preceding exclusive honor societies. There is much cross-fertilization between the societies, as noted throughout this paper (and even today).
+
+Next, we learn about earlier efforts by Titchener's group to create scientific space within APA conferences of the 20s.
+
+```{r}
+knitr::include_graphics("img/p7.png")
+```
+
+I haven't found Titchener connect himself with eugenics in his writing, but Boring is certainly eugenics adjacent (having with worked with Yerkes in the army IQ testing effort). Dallenbach and Fernberger I don't know much about. Dallenbach was on an NRC committee with several other known eugenics proponents. Fernberger wrote a biography for HC Warren, wrote on "the problem of mental disorders", and seems eugenics adjacent at first glance. J. E. Anderson was APA president in 1943, and wrote "The Modern baby Book and Child Development Record", which follows in the footsteps of Galtons eugenics approach. Raymond Dodge was APA president in 1916, did some IQ testing during the war, and supported some eugenics policies, but doesn't appear to be a major public advocate of eugenics. Haven't looked into Robinson, but he writes about the great need to apply science to "the problem of public intelligence". Shepard like many his contemporaries worked in testing of the military during the war. 
+
+It seems that this effort of organization didn't really work, and the group fizzled.
+
+```{r}
+knitr::include_graphics("img/p8.png")
+```
+
+But, it's interesting that very notable people ("stalwarts") were in attendance: Harvey Carr, Clark Hull, Joseph Jastrow, H. C. Warren, and Robert S. Woodworth. T. All of these men are notably deeply into eugenics, and they are also all one-time presidents of the APA. 
 
 
  

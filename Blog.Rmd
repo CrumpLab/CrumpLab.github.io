@@ -42,6 +42,24 @@ close(CON)
 
 This blog is a public-facing expression of me working through various ideas and methods, mostly around cognitive psychology and how it sits within a scientific and social context. When I'm not working on these words, they sit here, and when I am working on them, they change. I'm attempting to use my writing process to evaluate and compose perspectives, some of which may be my own... it's confusing because I use writing to know if I think something, but I keep changing the words as I learn what I think.
 
+---
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F, out.width="50%"}
+knitr::include_graphics("blogposts/7_20_20_HistPsychonomics/img/psychonomics.png")
+```
+</div>
+<div class="col-sm-8">
+
+# [Revisiting the history of Psychonomics from a eugenics lens](https://crumplab.github.io/blogposts/7_20_20_HistPsychonomics/7_20_20_HistPsychonomics.html)
+
+July 20, 2020
+
+I am in the process of researching connections between eugenics and psychology. In this effort I am now attempting to understand possible connection points within the Psychonomics Society, of which I am member. My intention is to be constructive. This blog is a work in progress and entirely provisional in nature. I'm sharing my learning and research process publicly in case others are interested. 
+
+</div>
+</div>
 
 ---
 
