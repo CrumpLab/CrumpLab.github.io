@@ -352,8 +352,25 @@ Still, what did this have to do with cognition? Well, Miller also explains how i
 
 Second, although I still have to confirm this, it appears that Abraham Maslow was deeply into eugenics, but only wrote about it privately, and this was only made generally available to public upon publishing of some of his private notes. 
 
-I mention these two examples primarily because it may be difficult to suss out eugenic ideology among psychologists who don't share their views publicly, but continue nevertheless to conduct science that has eugenic implications. So, it's a bit of a warning to myself to not get carried away with wondering if someone is really a eugenicist or not. One of primary aims is to document more clearly the structural eugenics aspects. In other words, I think at some point it will become clear enough that there was a bunch of eugenics going on, and that this shaped our discipline, and if this is true, it is something Psychonomics has to deal with. 
+I mention these two examples primarily because it may be difficult to suss out eugenic ideology among psychologists who don't share their views publicly, but continue nevertheless to conduct science that has eugenic implications. So, it's a bit of a warning to myself to not get carried away with wondering if someone is really a eugenicist or not. It's not for me to decide. One of primary aims is to document more clearly the structural eugenics aspects. In other words, I think at some point it will become clear enough that there was a bunch of eugenics going on, and that this shaped our discipline, and if this is true, it is something Psychonomics has to deal with. 
 
+---
+
+## Psychonomics Originators
+
+Eugenicists were very good at getting into the APA, especially as APA presidents. They were also very good at sitting as chairmen in US government committees (see the NRC 1919-1933 division of anthropology & Psychology). It would be kind of astounding to me if there was no interest among eugenicists in having a piece of Psychonomics from the very beginning. Let's take a look.
+
+### Wendell R. Garner 
+
+ - Had a meeting following SEP that was important for starting up Psychonomics
+ - Sidenote, I always enjoyed reading Garner's ideas, especially inferred subsets.
+ - Garner was the James Rowland Angell Professor of Psychology at Yale, [Angell of course was a eugenicist](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html#1906_james_rowland_angell), so even if Garner wasn't he had to deal with this association. This is a pattern of structural eugenics.
+ - Garner WR, Wigdor AK, editors. National Research Council, Committee on Ability Testing. Ability testing: Uses, consequences, and controversies. Washington, DC: National Academy Press; 1982. (and part II)
+ - Chapanis, A., Garner, W. R., Morgan, C. T., & Sanford, F. H. (1947). Lectures on men and machines. An introduction to human engineering. JOHNS HOPKINS UNIV BALTIMORE MD.
+ - if you read Garner without thinking about the context of eugenics, you might think he was just doing basic sensory psychology with a bit statistical uncertainty thrown in, and some apparent interest in rating scales...
+ - and stuff like this pops up: Chauncey, H., Wigdor, A. K., & Garner, W. R. (1958). How tests help us identify the academically talented. NEA Journal, 47, 230-31.
+ - looks interesting: Garner, W. R. (1959). Applications of Information Theory to Psychology. The Journal of Nervous and Mental Disease, 129(5), 501.
+ - Another connection: Miller, G. A., & Garner, W. R. (1948). Masking by Interrupted Random Noise. The Journal of the Acoustical Society of America, 20(4), 593-593.
 
 
 
