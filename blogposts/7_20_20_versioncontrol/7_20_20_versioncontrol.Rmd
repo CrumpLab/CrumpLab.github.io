@@ -42,6 +42,10 @@ The process can be seen by looking at some of my recent posts around eugenics in
 
 More to the point, I'm writing this blog in text editor (R-studio), and I'm posting the content as a website (using R markdown) hosted on a github repository that I use for my lab website, here: <https://github.com/CrumpLab/CrumpLab.github.io>. All of the blog posts on the website are contained in the `blogposts` folder in that repository. Not only that, every edit and change I have ever committed to all of my blog posts are stored. It's github, it does version control. I'm using a version controlled blog in public with a fairly complete record of all of the words I wrote and deleted and kept etc. 
 
+It's not a perfect record of every entry and deletion. I have to make a choice to preserve the record at any moment. So, I could write and delete a bunch of things before making a commit, and those changes are lost. Oh well. I try to do my best. Most of the time I spray these text files with words, and then make a commit after an hour or two. More recently, I'm trying to make commits that reflect sections of content in my writing. I assume that could be useful later on if I ever want to take a look at "my process". But, I haven't spent too much time doing that. Even this foray into a meta-level discourse on my own blog is relatively new to me. I should probably be researching eugenics right now. Instead, what is this that I'm doing?
+
+
+
 
 
 
