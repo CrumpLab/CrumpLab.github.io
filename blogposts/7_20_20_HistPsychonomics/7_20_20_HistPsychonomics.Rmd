@@ -55,7 +55,7 @@ The above prelude is a work in progress where I am attempting to explain/discove
 
 ## History of Psychonomics
 
-I must confess, I am newbie when it comes to the history of Psychology, and specifically the history of its organizational structure in Canada and in the US. I've learned a couple things so far. E. G. Boring (1928 APA president) is often credited with starting the History of Psychology. When I read Boring, I find he doesn't do a good job of contextualizing the history of Psychology in terms of eugenics. I wonder why (I have my suspicions), he certainly worked with and new a whole bunch of eugenicist psychologists, and it is incredible to believe that he didn't know about the ideologies of his colleagues. Maybe he thought the eugenics part was so obvious it went without saying...or maybe not.
+I must confess, I am a newbie when it comes to the history of Psychology, and specifically the history of its organizational structure in Canada and in the US. I've learned a couple things so far. E. G. Boring (1928 APA president) is often credited with starting the History of Psychology. When I read Boring, I find he doesn't do a good job of contextualizing the history of Psychology in terms of eugenics. I wonder why (I have my suspicions), he certainly worked with and knew a whole bunch of eugenicist psychologists, and it is incredible to believe that he didn't know about the ideologies of his colleagues. Maybe he thought the eugenics part was so obvious it went without saying...or maybe not.
 
 As I write this I'm aware that I haven't read all of the History of Psych journals, so i don't know whether or how they reconstruct the history of Psychology from the lens of eugenics. Need to read more about this for myself.
 
@@ -63,19 +63,19 @@ There is a tradition in American Psychology of breaking away from the APA (Ameri
 
 ## Plan for connecting dots
 
-I went to the Psychonomics website <https://www.psychonomic.org/page/about>, and found that I could read four papers on the history of Psychomomics. Cool! Thanks Psychomonics. Let's start with the first paper.
+I went to the Psychonomics website <https://www.psychonomic.org/page/about>, and found that I could read four papers on the history of Psychonomics. Cool! Thanks Psychonomics. Let's start with the first paper.
 
-Oops, I got interrupted. FYI, I'm going to write this like a detective novel, so it will be contemporaneous with my discoveries, and sometimes tangential. I admit, I already read the first paper, which is why I am going to talk more about it here. At the end of the paper there was some discussion about the word psychonomics, and around that discussion there was some word usage common among eugenic texts. So, I ended up doing the thing I always do, but should have done from the beginning, and that is, google "psychonomics and eugenics". I did that and I straightaway I found a paper @clelandWarPeaceRevisited1979 published by the Psychonomic Society:
+Oops, I got interrupted. FYI, I'm going to write this like a detective novel, so it will be contemporaneous with my discoveries, and sometimes tangential. I admit, I already read the first paper, which is why I am going to talk more about it here. At the end of the paper there was some discussion about the word Psychonomics, and around that discussion there was some word usage common among eugenic texts. So, I ended up doing the thing I always do, but should have done from the beginning, and that is, Google "Psychonomics and eugenics". I did that and I straightaway I found a paper @clelandWarPeaceRevisited1979 published by the Psychonomic Society:
 
 ```{r}
 knitr::include_graphics("img/war.png")
 ```
 
-This is an indiciation to me that the society at one point condoned aspects of eugenics, and also that some eugenics directed archeology of Psychonomics is necessary. Edit, I recently learned that at this time (1979) members could publish in this venue effectively without scrutiny, so this paper could easily reflect more on the authors than on the society.
+This is an indication to me that the society at one point condoned aspects of eugenics, and also that some eugenics directed archaeology of Psychonomics is necessary. Edit, I recently learned that at this time (1979) members could publish in this venue effectively without scrutiny, so this paper could easily reflect more on the authors than on the society.
 
 ## The founding of Psychonomic Society
 
-OK, back to the first paper on the history of Psychomics. This one is titled, "The founding of the psychonomics society" [@dewsburyFoundingPsychonomicSociety1995]. Before I go through it, it's worth reminding myself (I used to be a history major) what I learned about "history" in undergrad. There is opinion and perspective in historical retellings. What lens is used here to discuss the beginnings of Psychonomics? Historical retellings often use the same kinds of tricks. For example, @pressEugenicMindProject refers to Ebbinghaus's quip that "psychology has a long past, but only a short history". Wilson uses this quip to point out a common narrative structure in historical retelling. In histories of psychology as a science we see the "long" pointers back to the early greek philosophers. It is often the case that "long" pointing is a way of using juxtaposition to connect some current issue with the significance or value of "well-accepted" historical figures. E.g., psychology is continues in the supremely wonderful and great tradition of the righteous and true great traditions of the past...That kind of thing. I'll have an eye out for the "long" pointers as I "read between the lines" of the "The founding of Psychonomics". Let's go.
+OK, back to the first paper on the history of Psychonomics. This one is titled, "The founding of the Psychonomics society" [@dewsburyFoundingPsychonomicSociety1995]. Before I go through it, it's worth reminding myself (I used to be a history major) what I learned about "history" in undergrad. There is opinion and perspective in historical retelling. What lens is used here to discuss the beginnings of Psychonomics? Historical retellings often use the same kinds of tricks. For example, @pressEugenicMindProject refers to Ebbinghaus' quip that "psychology has a long past, but only a short history". Wilson uses this quip to point out a common narrative structure in historical retelling. In histories of psychology as a science we see the "long" pointers back to the early Greek philosophers. It is often the case that "long" pointing is a way of using juxtaposition to connect some current issue with the significance or value of "well-accepted" historical figures. E.g., psychology is continues in the supremely wonderful and great tradition of the righteous and true great traditions of the past...That kind of thing. I'll have an eye out for the "long" pointers as I "read between the lines" of the "The founding of Psychonomics". Let's go.
 
 Here's the first bit of the paper:
 
@@ -85,17 +85,17 @@ knitr::include_graphics("img/psycho1.png")
 
 TLDR, the Psychonomics origin story begins with a bunch of white dudes at a bar. I can totally relate to that, because that is pretty much what my experience is like when I go to Psychonomics.
 
-We learn that this meet-up was at a AAAS meeting (American Association for the Advancemet of Science). Now, far be it from me to criticize the AAAS. And, I have not looked to closely at this organization yet. Suffice it to say, let me connect the AAAS with an important person in its history, James McKeen Cattell. Cattell is a notable eugenicist, as well he was an APA president, and he founded Psychological Review, and he bought Science and edited it for 50 years. I haven't read this paper yet, but it apparently covers some of the eugenic aspects of AAAS [@farberScientistsRoleEugenics2008].
+We learn that this meet-up was at a AAAS meeting (American Association for the Advancement of Science). Now, far be it from me to criticize the AAAS. And, I have not looked to closely at this organization yet. Suffice it to say, let me connect the AAAS with an important person in its history, James McKeen Cattell. Cattell is a notable eugenicist, as well he was an APA president, and he founded Psychological Review, and he bought Science and edited it for 50 years. I haven't read this paper yet, but it apparently covers some of the eugenic aspects of AAAS [@farberScientistsRoleEugenics2008].
 
 OK, so some AAAS affiliated Psychologists go to a bar...and two years later Psychonomics was born. Some of those psychologists were "Clarence Graham of Columbia University, Clifford T. Morgan of Johns Hopkins, S. S. Stevens of Harvard, and William S. Verplanck of Hunter College." At some point I'll look into these individuals much in the same way I have looked at the APA presidents. I guess I need to start making a list though. And to be honest, I'd like a more structured database about individuals and their eugenics connections. Excel it is for now. I'll probably attempt connections between individuals after going through the paper, and for now make notes about the major players are.
 
-So, after the origin story, the founding of psychonomics is set in context of the tradition of splintering off from APA, which many other groups do for various reasons.
+So, after the origin story, the founding of Pscyhonomics is set in context of the tradition of splintering off from APA, which many other groups do for various reasons.
 
 ```{r}
 knitr::include_graphics("img/psycho2.png")
 ```
 
-We are pulled back to into the living room of G. Stanley Hall in 1892, at the dawn of the APA. I would say that Hall was deeply into eugenics, [for some connections see](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html#1892_granville_stanley_hall). I think it is also fair to say that the first presidential address published in the first issue of Psych Review in 1894 by George Trumball Ladd (2nd APA president, also frequent contributor to the Journal of Race Development...) was about establishing the place of psychology in Science. From the very beginning the eugenicists involved in Psychology were very eager to establish and maintain the scientific purity of Psychology. This a theme that sometimes is used to give psychologists cover to conduct "science" in a "value-free", "objectively neutral" way (see @yakushkoScientificPollyannaismInquisition2019 on scientism). FYI, I also think that Ladd was dogwhistling to the eugenicists in the crowd in his final thoughts about using psychology for the betterment of society. It is also highly interesting to inspect the first issue of Psyc Review for known eugenicists (e.g., Francis Galton, founder of eugenics, publishes on his ability to arirthmetic by smell).
+We are pulled back to into the living room of G. Stanley Hall in 1892, at the dawn of the APA. I would say that Hall was deeply into eugenics, [for some connections see](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html#1892_granville_stanley_hall). I think it is also fair to say that the first presidential address published in the first issue of Psych Review in 1894 by George Trumball Ladd (2nd APA president, also frequent contributor to the Journal of Race Development...) was about establishing the place of psychology in Science. From the very beginning the eugenicists involved in Psychology were very eager to establish and maintain the scientific purity of Psychology. This a theme that sometimes is used to give psychologists cover to conduct "science" in a "value-free", "objectively neutral" way (see @yakushkoScientificPollyannaismInquisition2019 on scientism). FYI, I also think that Ladd was dog-whistling to the eugenicists in the crowd in his final thoughts about using psychology for the betterment of society. It is also highly interesting to inspect the first issue of Psych Review for known eugenicists (e.g., Francis Galton, founder of eugenics, publishes on his ability to arithmetic by smell).
 
 Next, we learn about some previous splits within the APA. 
 
@@ -103,13 +103,13 @@ Next, we learn about some previous splits within the APA.
 knitr::include_graphics("img/psycho3.png")
 ```
 
-Would you be surprised if Leta Hollingworth was a racist and eugnicist? See here [wikipedia page](https://en.wikipedia.org/wiki/Leta_Stetter_Hollingworth). She was also married to another eugenicist psychologist Harry Levi Hollingworth, who was president of the APA in 1927. You could read Wallin's eugenics here [@wallinHygieneEugenicGeneration1914]. This split didn't last long and the APA recouped the AACP, and established the first "section" in the APA. Neato, I didn't know that.
+Would you be surprised if Leta Hollingworth was a racist and eugenicist? See here [wikipedia page](https://en.wikipedia.org/wiki/Leta_Stetter_Hollingworth). She was also married to another eugenicist psychologist Harry Levi Hollingworth, who was president of the APA in 1927. You could read Wallin's eugenics here [@wallinHygieneEugenicGeneration1914]. This split didn't last long and the APA recouped the AACP, and established the first "section" in the APA. Neato, I didn't know that.
 
 ```{r}
 knitr::include_graphics("img/psycho4.png")
 ```
 
-There is an acknoweldgement of the role that WW II played in the discipline of psychology. There are many connections between psychologists and war efforts in the US, and without going into that history, let me point out a primary theme is eugenics, and many of the psyhcologists involved were also members of eugenics societies. We see some mention of some other societies, like SEP (Society of Experimental Psychologists)...notably this exclusive honor club of psychologists still gives the Howard Crosby Warren medal every year as its primary honor award. HC Warren was another APA president (1913), and he is listed in the Eugenical News as an active researcher. But, the main point of this paragraph is the italicized two words "and practice", whereby the new bylaws of the APA included "
+There is an acknowledgement of the role that WW II played in the discipline of psychology. There are many connections between psychologists and war efforts in the US, and without going into that history, let me point out a primary theme is eugenics, and many of the psychologists involved were also members of eugenics societies. We see some mention of some other societies, like SEP (Society of Experimental Psychologists)...notably this exclusive honor club of psychologists still gives the Howard Crosby Warren medal every year as its primary honor award. HC Warren was another APA president (1913), and he is listed in the Eugenical News as an active researcher. But, the main point of this paragraph is the italicized two words "and practice", whereby the new bylaws of the APA included "
 practice" alongside science, as a way into the APA. It seems like the scientists didn't like this very much.
 
 We are then treated to a context of previous attempts to make scientific clubs of psychologists, where psychologists could just finally hang out and be scientists with each other.
@@ -118,7 +118,7 @@ We are then treated to a context of previous attempts to make scientific clubs o
 knitr::include_graphics("img/p5.png")
 ```
 
-The experimentalists were notable mysogynists, and they grew into the SEP, which maintained its mysogonistic roots. I won't go into the membership of SEP, because this about Psychonomics, and SEP is another day.
+The experimentalists were notable mysogynists, and they grew into the SEP, which maintained its misogynistic roots. I won't go into the membership of SEP, because this about Psychonomics, and SEP is another day.
 
 ```{r}
 knitr::include_graphics("img/p6.png")
@@ -132,7 +132,7 @@ Next, we learn about earlier efforts by Titchener's group to create scientific s
 knitr::include_graphics("img/p7.png")
 ```
 
-I haven't found Titchener connect himself with eugenics in his writing, but Boring is certainly eugenics adjacent (having with worked with Yerkes in the army IQ testing effort). Dallenbach and Fernberger I don't know much about. Dallenbach was on an NRC committee with several other known eugenics proponents. Fernberger wrote a biography for HC Warren, wrote on "the problem of mental disorders", and seems eugenics adjacent at first glance. J. E. Anderson was APA president in 1943, and wrote "The Modern baby Book and Child Development Record", which follows in the footsteps of Galtons eugenics approach. Raymond Dodge was APA president in 1916, did some IQ testing during the war, and supported some eugenics policies, but doesn't appear to be a major public advocate of eugenics. Haven't looked into Robinson, but he writes about the great need to apply science to "the problem of public intelligence". Shepard like many his contemporaries worked in testing of the military during the war. 
+I haven't found Titchener connect himself with eugenics in his writing, but Boring is certainly eugenics adjacent (having with worked with Yerkes in the army IQ testing effort). Dallenbach and Fernberger I don't know much about. Dallenbach was on an NRC committee with several other known eugenics proponents. Fernberger wrote a biography for HC Warren, wrote on "the problem of mental disorders", and seems eugenics adjacent at first glance. J. E. Anderson was APA president in 1943, and wrote "The Modern baby Book and Child Development Record", which follows in the footsteps of Galton's eugenics approach. Raymond Dodge was APA president in 1916, did some IQ testing during the war, and supported some eugenics policies, but doesn't appear to be a major public advocate of eugenics. Haven't looked into Robinson, but he writes about the great need to apply science to "the problem of public intelligence". Shepard like many his contemporaries worked in testing of the military during the war. 
 
 It seems that this effort of organization didn't really work, and the group fizzled.
 
@@ -142,7 +142,7 @@ knitr::include_graphics("img/p8.png")
 
 But, it's interesting that very notable people ("stalwarts") were in attendance: Harvey Carr, Clark Hull, Joseph Jastrow, H. C. Warren, and Robert S. Woodworth. T. All of these men are notably deeply into eugenics, and they are also all one-time presidents of the APA [see some notes on each here](https://crumplab.github.io/blogposts/7_13_20_PsychEugenics/7_13_20_PsychEugenics.html).
 
-Huh, next we learn about another fascinating society in Psychology, the psychological round table, or PRT...If you followed my twitter account last summer, you would know that I tweeted a bunch about them. They are "well-kept-secret" honor society that still exists today. They have a smelly history of mysogyny. The keep their member list close to their chests. Who knows what their members think about eugenics? It's just one of those questions that has to be asked in a blog post using the lens of eugenics to explore this paper.
+Huh, next we learn about another fascinating society in Psychology, the psychological round table, or PRT...If you followed my twitter account last summer, you would know that I tweeted a bunch about them. They are "well-kept-secret" honor society that still exists today. They have a smelly history of misogyny. The keep their member list close to their chests. Who knows what their members think about eugenics? It's just one of those questions that has to be asked in a blog post using the lens of eugenics to explore this paper.
 
 ```{r}
 knitr::include_graphics("img/p9.png")
@@ -153,7 +153,7 @@ knitr::include_graphics("img/p9.png")
 knitr::include_graphics("img/p10.png")
 ```
 
-I think the TLDR here is that Psychonomics should be proud that among its founders were esteemed members of PRT. Hurray, give yourself a pat on the back.
+I think the TLDR here is that Psychonomics should be proud that among its founders were esteemed members of PRT. Congrats, give yourself a pat on the back.
 
 PRT had GUV as a sister "secret society", so ya. Hi GUV friends, wave.
 
@@ -162,7 +162,7 @@ knitr::include_graphics("img/p11.png")
 ```
 
 
-Again we have a list of names of well known psychologists. I'll point to one small puzzle. I know C. W. Erikson because he invented the flanker task. I've been asking myself, what does that have to do eugenics? After all, I have used that task on numerous occasions. Well, the puzzle is not about the flanker task. Nope, it is why does C. W. Eriksen appear in a footnote in @kuhlBettermentRaceRise2013 book on eugenics? It's because Eriksen was among several other psychologists (who have deep eugenics connections) who signed a letter supporting [Arthur Jensen](https://en.wikipedia.org/wiki/Arthur_Jensen), who has often been characterized as a racist psychologist.
+Again we have a list of names of well known psychologists. I'll point to one small puzzle. I know C. W. Eriksen because he invented the flanker task. I've been asking myself, what does that have to do eugenics? After all, I have used that task on numerous occasions. Well, the puzzle is not about the flanker task. Nope, it is why does C. W. Eriksen appear in a footnote in @kuhlBettermentRaceRise2013 book on eugenics? It's because Eriksen was among several other psychologists (who have deep eugenics connections) who signed a letter supporting [Arthur Jensen](https://en.wikipedia.org/wiki/Arthur_Jensen), who has often been characterized as a racist psychologist.
 
 from Kuhl:
 "The ten other scholars were Jack A. Adams, Raymond B. Cattell, Francis H. Crick,
@@ -174,7 +174,7 @@ Anyway, let's continue with the paper.
 knitr::include_graphics("img/p12.png")
 ```
 
-Huh, I did not know that there was a failed attempt to remove division 3 (exp psyc) from APA in 1948. But, I certainly have learned somethings about big names in Experimental Psychology who were eugenicists, like Thorndike, Watson and Lashley. I haven't looked at Spence or Graham. For Spence I will just point out that we worked under Yerkes and Hull, so it seems very likely he was exposed to his mentors' eugenics. It would be interesting to look at Spence's scholarship from the lens of the eugenics ideology of his mentors.
+Huh, I did not know that there was a failed attempt to remove division 3 (exp in psych) from APA in 1948. But, I certainly have learned somethings about big names in Experimental Psychology who were eugenicists, like Thorndike, Watson and Lashley. I haven't looked at Spence or Graham. For Spence I will just point out that we worked under Yerkes and Hull, so it seems very likely he was exposed to his mentors' eugenics. It would be interesting to look at Spence's scholarship from the lens of the eugenics ideology of his mentors.
 
 Alright, we have arrived at the beginning of the Psychonomics Society:
 
@@ -200,7 +200,7 @@ And a table of membership of the organizing committee (from the American Men of 
 knitr::include_graphics("img/p16.png")
 ```
 
-Interesting to note the ages, so any memebers were all kicked out of PRT and GUV. Earlier in the paper we learned that 6 of these men were members of PRT.
+Interesting to note the ages, so any members were all kicked out of PRT and GUV. Earlier in the paper we learned that 6 of these men were members of PRT.
 
 
 More people get involved. I love how "diverse" and "white males" was working into the paragraph. 
@@ -235,10 +235,10 @@ knitr::include_graphics("img/p21.png")
 
 For my two cents, the part at the bottom resonates very strongly. It seems there was an elitist contingent from the PRT. Ever wonder why graduate students don't give talks at Psychonomics? Maybe this is why. The elitists won.
 
-Back to the paper. So, 950 invitations were sent out to potential members, the name Psychonomics was adopted and incorporated in 1960. There is an appendix on the name "psychonomics". I'll get to that later.
+Back to the paper. So, 950 invitations were sent out to potential members, the name Psychonomics was adopted and incorporated in 1960. There is an appendix on the name "Psychonomics". I'll get to that later.
 
-"The First Annual Scientific Meeting ofthe Psychonomic Society
-The first meeting ofthe Psychonomic Society was held at the University of Chicago on September 1-3, 1960, just before the 1960 APA meetings. Approximately 294 individuals attended, ofwhom 195were members, 79 were guests, and approximately 20 were unregistered. The pro- gramincluded119papersin24sessionsarrangedineight time blocks with three concurrent sessions each; four blocks on Thursday, three blocks and an afternoon busi- ness meeting on Friday, and one block on Saturday morn- ing. They were grouped into 15 categories. The nature of the experimental psychology ofthe time, at least for the members of the new Psychonomic Society, can be seen in the distribution of papers across sessions; these are presented in Table 3."
+"The First Annual Scientific Meeting of the Psychonomic Society
+The first meeting of the Psychonomic Society was held at the University of Chicago on September 1-3, 1960, just before the 1960 APA meetings. Approximately 294 individuals attended, of whom 195were members, 79 were guests, and approximately 20 were unregistered. The program included 119 papers in 24 sessions arranged in eight time blocks with three concurrent sessions each; four blocks on Thursday, three blocks and an afternoon business meeting on Friday, and one block on Saturday morning. They were grouped into 15 categories. The nature of the experimental psychology ofthe time, at least for the members of the new Psychonomic Society, can be seen in the distribution of papers across sessions; these are presented in Table 3."
 
 Let's look at Table 3:
 
@@ -246,17 +246,17 @@ Let's look at Table 3:
 knitr::include_graphics("img/p22.png")
 ```
 
-Oh no, it seems that potpourri session has basically dissappeared in terms of modern Psychonomics. Now, should I stay or should I go find the 1960 conference abstracts. I guess I should do that. I'm going to do that now, wish me luck.
+Oh no, it seems that potpourri session has basically disappeared in terms of modern Psychonomics. Now, should I stay or should I go find the 1960 conference abstracts. I guess I should do that. I'm going to do that now, wish me luck.
 
 No dice yet, couldn't find the conference abstracts after a quick search. Not sure which archive they are in. In any case, it would be interesting read about the genetics session and a few others.
 
-Well, maybe spoke to soon. I can do things like search "paper presented to the Psychonomic Society, 2 September 1960" in google scholar, and restrict the dates to 1960. Then a few papers that were read at psychonomics in 1960 come up. A start anyway. Here's an example, still would be nice to get the full list at some point.
+Well, maybe spoke to soon. I can do things like search "paper presented to the Psychonomic Society, 2 September 1960" in Google scholar, and restrict the dates to 1960. Then a few papers that were read at psychonomics in 1960 come up. A start anyway. Here's an example, still would be nice to get the full list at some point.
 
 - Jerison, H. J. (1961). Quantitative analysis of evolution of the brain in mammals. Science, 133(3457), 1012-1014.
 
 Alright, some stuff happened at the first conference. We learn that it wasn't really too much different than division 3 APA conferences. Then there is the first business meeting, a first newsletter, etc.
 
-Some thorns in the side, or additional reasons why Psyshonomics needed to be created, it seems APA was making actual presentations of research more difficult. Kind of funny to imagine Estes' apparatus solution to the problem.
+Some thorns in the side, or additional reasons why Psychonomics needed to be created, it seems APA was making actual presentations of research more difficult. Kind of funny to imagine Estes' apparatus solution to the problem.
 
 ```{r}
 knitr::include_graphics("img/p23.png")
@@ -280,7 +280,7 @@ Some membership features:
 knitr::include_graphics("img/p26.png")
 ```
 
-I guess this part went out the window, said the fellow researching the foundations of the fellowless society he is a fellow of.
+I guess this part went out the window, said the fellow researching the foundations of the fellow-less society he is a fellow of.
 
 ```{r}
 knitr::include_graphics("img/p27.png")
@@ -332,7 +332,7 @@ On the naming of Psychonomics from the appendix:
 knitr::include_graphics("img/p32.png")
 ```
  
-I'll just point out that James Mark Baldwin also wrote, "The mental development in the child and race: methods ands processes (Baldwin, 1900)". And, that curiously the word "flow" is often used in eugenics literature (see chpt 6 of @yakushkoScientificPollyannaismInquisition2019). These are obviously juxtaposition to eugenics, and I don't know the eugenics literature well enough yet to know if there are additional connections. Anyway, I thought these connections were worth noting.
+I'll just point out that James Mark Baldwin also wrote, "The mental development in the child and race: methods and processes (Baldwin, 1900)". And, that curiously the word "flow" is often used in eugenics literature (see chpt 6 of @yakushkoScientificPollyannaismInquisition2019). These are obviously juxtaposition to eugenics, and I don't know the eugenics literature well enough yet to know if there are additional connections. Anyway, I thought these connections were worth noting.
 
 ---
 
@@ -342,13 +342,13 @@ At the same time, we are now talking about 1960 and onward, a time in history wh
 
 Before I start to look more closely at the scholarship of organizing members, I'd like to mention a few points of interest. For myself, I have been wondering about the connections between eugenics and the cognitive revolution. Psychonomics appears right in the same time frame as the cognitive revolution. I have spent many years thinking about cognition, and basically never thought of myself as contributing in anyway to programs of eugenics. I've been asking basic questions about basic psychological processes. How is that related to eugenics?
 
-In any case, here are a few tidbits that have started to inform my thinking about the cognitive revolution. First, it is obvious that the history of individual differences psychology is tightly interwoven with eugenics. The development of IQ testing and psychometrics were employed as tools of eugenics many times over in many different venues in society. It was less obvious to me how experimental psychology was involved. One way was that many formative psychologists in experimental psychology were eugenicisists, Thorndike, Watson, Lashley, Hull...the list goes on.
+In any case, here are a few tidbits that have started to inform my thinking about the cognitive revolution. First, it is obvious that the history of individual differences psychology is tightly interwoven with eugenics. The development of IQ testing and psychometrics were employed as tools of eugenics many times over in many different venues in society. It was less obvious to me how experimental psychology was involved. One way was that many formative psychologists in experimental psychology were eugenicists, Thorndike, Watson, Lashley, Hull...the list goes on.
 
 At one point I jumped ahead of myself (in terms of going through the APA presidents), and I looked George A. Miller & eugenics. Most of us know Miller for his magic number 7 + or - 2 paper. That paper was also  about applying ideas from Claude Shannon's information theory to information processing limitations in psychology. Well, guess where Claude Shannon did his master's thesis. At the eugenics record office in Cold Springs Harbor (Long Island New York). This is one of those weird eugenics connections. 
 
-It took some googling but eventually I found George Miller explain his version of eugenics in 1967 in @millerPsychologicalPerspectivesYear1967. Miller inverts a common fear of morons that eugenicists usually foment about. PEugnicists like H. Goddard [@goddardWhoMoron1927] exclaim that morons are everywhere, they look like everyone else, but they are morons because of their IQ, and they must be removed from society or else society will collapse. Miller, in his futurism about the year 2000, says the society will become too complex rendering everyone morons, so basically we need to do something about it or else. Miller cryptically talks about when "the day comes that we have the necessary facts to support a realistic eugenics program, such information could be valuable." Miller doesn't say who he wishes to eliminate, he's cryptic. Still, he thanks his buddy R.J. Hernnstein at the beginning, probably for all the chats about eugenics (Hernnstein would later publish "the Bell curve").
+It took some googling but eventually I found George Miller explain his version of eugenics in 1967 in @millerPsychologicalPerspectivesYear1967. Miller inverts a common fear of morons that eugenicists usually foment about. Eugenicists like H. Goddard [@goddardWhoMoron1927] exclaim that morons are everywhere, they look like everyone else, but they are morons because of their IQ, and they must be removed from society or else society will collapse. Miller, in his futurism about the year 2000, says the society will become too complex rendering everyone morons, so basically we need to do something about it or else. Miller cryptically talks about when "the day comes that we have the necessary facts to support a realistic eugenics program, such information could be valuable." Miller doesn't say who he wishes to eliminate, he's cryptic. Still, he thanks his buddy R.J. Hernnstein at the beginning, probably for all the chats about eugenics (Hernnstein would later publish "the Bell curve").
 
-Still, what did this have to do with cognition? Well, Miller also explains how it obvious that information processing capacity needs to be increased in order for society to survive. It's plain old Intelligence-exhaulting, fear-mongering, Galtonian eugenics with fancy words. So, there is some ideology between Miller's magic number. And it apparently has to do with eugenics.
+Still, what did this have to do with cognition? Well, Miller also explains how it obvious that information processing capacity needs to be increased in order for society to survive. It's plain old Intelligence-exalting, fear-mongering, Galtonian eugenics with fancy words. So, there is some ideology between Miller's magic number. And it apparently has to do with eugenics.
 
 Second, although I still have to confirm this, it appears that Abraham Maslow was deeply into eugenics, but only wrote about it privately, and this was only made generally available to public upon publishing of some of his private notes. 
 
