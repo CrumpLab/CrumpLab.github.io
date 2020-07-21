@@ -1,0 +1,41 @@
+---
+title: "Version control, public discourse, and epistemic access"
+author: "Matt Crump"
+date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
+twitter:
+  card_description: "Some thoughts on using version control systems as a process for public discourse"
+  card_img: "https://crumplab.github.io/blogposts/7_20_20_versioncontrol/img/git.png"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: [web/header.html,web/g_analytics.html]
+    md_extensions: -autolink_bare_uris
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+---
+
+What's so great about this post is that I get to rewrite it over and over again, and I'm not sure I can make my point unless I do that.
+
+Also, who knows, maybe I could do it in one shot and be done with what I'm trying to say. But, where's the discovery in that?
+
+## References
+
+
+
+
