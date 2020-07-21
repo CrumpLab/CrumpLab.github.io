@@ -56,6 +56,12 @@ The whole thing is a process. So, I think that a version-controlled blog post is
 
 I didn't have time to read for typos.
 
+---
+
+End thought. Nobody wants to read the version control history of a blog. Maybe except wikipedia editors who spend time doing that. Nevertheless, there is something about the layers of version control that symbolizes the process of epistemic discovery and change that is lost in a final "perfect" draft. This is not an argument in support of foisting sloppy word messes upon unsuspecting readers.
+
+---
+
 
 ## References
 
