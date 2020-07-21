@@ -47,6 +47,25 @@ This blog is a public-facing expression of me working through various ideas and 
 <div class="row">
 <div class="col-sm-4">
 ```{r, echo=F, out.width="50%"}
+knitr::include_graphics("blogposts/7_20_20_versioncontrol/img/git.png")
+```
+</div>
+<div class="col-sm-8">
+
+# [Version control, public discourse, and epistemic access](https://crumplab.github.io/blogposts/7_20_20_versioncontrol/7_20_20_versioncontrol.html)
+
+July 20, 2020
+
+Some thoughts on using version control systems as a process for public discourse
+
+</div>
+</div>
+
+---
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F, out.width="50%"}
 knitr::include_graphics("blogposts/7_20_20_HistPsychonomics/img/psychonomics.png")
 ```
 </div>

@@ -374,6 +374,17 @@ $(document).ready(function () {
 <hr />
 <div class="row">
 <div class="col-sm-4">
+<p><img src="blogposts/7_20_20_versioncontrol/img/git.png" width="50%" /></p>
+</div>
+<div id="version-control-public-discourse-and-epistemic-access" class="section level1 col-sm-8">
+<h1><a href="https://crumplab.github.io/blogposts/7_20_20_versioncontrol/7_20_20_versioncontrol.html">Version control, public discourse, and epistemic access</a></h1>
+<p>July 20, 2020</p>
+<p>Some thoughts on using version control systems as a process for public discourse</p>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="col-sm-4">
 <p><img src="blogposts/7_20_20_HistPsychonomics/img/psychonomics.png" width="50%" /></p>
 </div>
 <div id="revisiting-the-history-of-psychonomics-from-a-eugenics-lens" class="section level1 col-sm-8">
@@ -511,14 +522,14 @@ Upping my twitter card game? just a test <a href="https://t.co/wvvXOGhela">https
 </ul>
 <p>What will this code do? Well, I’m reviewing a paper right now. It’s very similar to another paper I’ve read by the same author. Whole chunks are copied from one previous paper to another, and it’s not just the methods section. When things like this happen, I usually don’t have time to thoroughly check which parts are the same. It would be nice to have some R functions for that.</p>
 <p>I made this little chart to start thinking about what I’m going to add to the package.</p>
-<div id="htmlwidget-6cffadf8c77edad1e784" style="width:400px;height:150px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6cffadf8c77edad1e784">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   [paper 1 | get into R] -> [clean]\n[paper 2 | get into R] -> [clean]\n[clean | keep parts you want] -> [compare]\n[compare | lots of methods to try] -> [Report | Stuff you want to learn]","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6925c37e4df855627490" style="width:400px;height:150px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6925c37e4df855627490">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   [paper 1 | get into R] -> [clean]\n[paper 2 | get into R] -> [clean]\n[clean | keep parts you want] -> [compare]\n[compare | lots of methods to try] -> [Report | Stuff you want to learn]","svg":false},"evals":[],"jsHooks":[]}</script>
 <p>Much later…</p>
 <p>Ok, did some googling and tried out a bunch of things. I found some great packages that already exist, so am going to play around with them a bit. These packages include <code>textreuse</code> (<a href="https://docs.ropensci.org/textreuse/">https://docs.ropensci.org/textreuse/</a>), and <code>tabulizer</code> (<a href="https://github.com/ropensci/tabulizer" class="uri">https://github.com/ropensci/tabulizer</a>, which unfortunately depends on Java, but allows for importing pdfs with 2 columns, useful for scientific papers). Finally, there is the <code>cheatr</code> package <a href="https://github.com/mattansb/cheatR">https://github.com/mattansb/cheatR</a>, that comes with a shiny app, and a nice <a href="https://mattansb.blogspot.com/2018/07/cheatr-r-package-for-catching-cheaters.html">story about how their package came to be.</a></p>
 <p>Time to get back to playjareyesores…I’ve made some progress and am slowly identifying what I’m looking for. The textreuse package is simply awesome, it’s a heavyweight document comparator. It’s got a really cool function called <code>align_local</code>, which attempts to find the best alignment between two documents. This works really well, and if you are in a pinch and want to see if there is substantial overlap between two texts, then go with align local. The cheatr package is also pretty snazzy. They use n-gram methods, which are great, and similar to what I was doing before. The n-gram method splits the documents into phrases of a set lenght, and then looks for overlap at the phrase level.</p>
 <p>However, I still found myself wanting something more specific. I wrote a handful of functions (wrappers mostly) to read and clean various kinds of text into R. I added my version of n-gram comparison, and now I’m about to focus on the reporting aspect. For example, I’d like to generate a nice, comprehensive report of the similarities between two documents. What should it include? Not sure yet…Maybe I should brainstorm with nomnoml.</p>
-<div id="htmlwidget-6f97bcac720d4e0bcdb6" style="width:400px;height:400px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6f97bcac720d4e0bcdb6">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n[Report|one function|pops out html or pdf? |does these things] -> [ngram metrics| ngram proportion overlap | across multiple levels | expected overlap?]\n[Report] -> [the ngrams | print out the \nones that overlap]\n[Report] -> [The documents | Side by side? | overlap highlights]","svg":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2a7bb61eec5951f07692" style="width:400px;height:400px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2a7bb61eec5951f07692">{"x":{"code":"\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   #direction: down\n[Report|one function|pops out html or pdf? |does these things] -> [ngram metrics| ngram proportion overlap | across multiple levels | expected overlap?]\n[Report] -> [the ngrams | print out the \nones that overlap]\n[Report] -> [The documents | Side by side? | overlap highlights]","svg":false},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="blogging-about-the-semantic-librarian" class="section level1">
 <h1>Blogging about the Semantic Librarian</h1>
@@ -1089,7 +1100,7 @@ for(i in 1:1000){
   save_p[i] &lt;- t.test(rnorm(20,0,1))$p.value
 }
 hist(save_p)</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Roughly, this means you are just as likely to get a <span class="math inline">\(p\)</span>-value between 0 and 0.05, as you are to get one between .95 and 1. This is one reason why the size of the <span class="math inline">\(p\)</span>-value does not allow you to have more or less evidence for the null, because under the null, you have the same chances of getting any <span class="math inline">\(p\)</span>-value. A <span class="math inline">\(p\)</span>-value of 0.9 does not give more evidence for the null than a <span class="math inline">\(p\)</span>-value of .5.</p>
 <p>Ok, so the simulation shows that the <span class="math inline">\(p\)</span>-distribution is flat under the null, but why is it flat? The <span class="math inline">\(t\)</span>-distribution isn’t flat. Aren’t <span class="math inline">\(t\)</span>’s around 0 the most frequently occurring values? Aren’t those <span class="math inline">\(t\)</span>’s associated with particular <span class="math inline">\(p\)</span>-values, shouldn’t those particular <span class="math inline">\(p\)</span>-values occur with the same frequency as their associated <span class="math inline">\(t\)</span>s? This way of thinking is a bit of a trap, it might be one reason why people would expect the <span class="math inline">\(p\)</span>-distribution to go up and down.</p>
 <div id="ps-are-not-the-probability-of-specific-ts" class="section level2">
@@ -1109,7 +1120,7 @@ for(i in 1:1000){
 qplot(save_t)+
   geom_histogram( aes(bins=50), color=&quot;white&quot;)+
   theme_classic()</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>The <span class="math inline">\(t\)</span>-distribution is certainly not flat. Most <span class="math inline">\(t\)</span>’s are around 0, and larger or smaller <span class="math inline">\(t\)</span>’s happen with increasingly smaller frequency.</p>
 <p>The whole point of the <span class="math inline">\(t\)</span>-distribution is to show the behavior of <span class="math inline">\(t\)</span> under the null. Once we obtain the distribution, we then apply decision boundaries to the distribution (at least under some philosophies). The <span class="math inline">\(p\)</span>-distribution is defined by how the decision rules are applied. And, the way we apply the rules makes the <span class="math inline">\(p\)</span>-distribution flat.</p>
 <p>For example, let’s say we want to only have two decisions boundaries, A and B. It would look like this:</p>
@@ -1119,7 +1130,7 @@ qplot(save_t)+
   annotate(&quot;text&quot;, x=-2.5, y=100, label=&quot;A (50%)&quot;)+
   annotate(&quot;text&quot;, x=2.5, y=100, label=&quot;B (50%&quot;)+
   theme_classic()</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>Under the null, you would make Decision A half of the time, and Decision B half of the time. If you simulated this a bunch of times, got a t-value, then saved your decision (A or B), and then made a bar plot of the number of times you said A or B, it would be roughly flat.</p>
 <p>Let’s do the above, but instead of splitting into two equal regions of 50%. We split the t-distribution into equal regions of 5%. This creates 20 regions. In the figure, the white space between each red line shows where 5% of <span class="math inline">\(t\)</span>’s will be found.</p>
 <pre class="r"><code>ordered_t&lt;-sort(save_t)
@@ -1133,7 +1144,7 @@ qplot(save_t)+
   annotate(&quot;text&quot;, x=-2.5, y=100, label=&quot;5%&quot;)+
   annotate(&quot;text&quot;, x=2.5, y=100, label=&quot;5%&quot;)+
   theme_classic()</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 <p>If you used these decision regions, you would find <span class="math inline">\(t\)</span>’s inside each band 5% of the time. The bands have different widths to accommodate the fact that <span class="math inline">\(t\)</span>’s have different probabilities across the range.</p>
 <p>This top graph is a little deceiving with respect to two-tailed t-testing. We could see things a little more clearly if we plotted the absolute value of <span class="math inline">\(t\)</span>’s. This will make a right skewed histogram, with t starting at 0 and getting bigger. We can apply the same 20 regions.</p>
 <pre class="r"><code>ordered_t&lt;-sort(abs(save_t))
@@ -1149,7 +1160,7 @@ qplot(abs(save_t))+
   annotate(&quot;text&quot;, x=1.65, y=100, label=&quot;5%&quot;)+
   annotate(&quot;text&quot;, x=1.45, y=100, label=&quot;...&quot;)+
   theme_classic()</code></pre>
-<p><img src="Blog_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="Blog_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
 </div>
 <div id="make-a-free-introductory-cognitive-psych-textbook-with-online-experiments" class="section level1">
