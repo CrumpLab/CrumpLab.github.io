@@ -326,13 +326,35 @@ Aside from eugenics, I wonder how many folks from the governing board of Psychon
 
 ---
 
+## Naming Psychonomics
+
 On the naming of Psychonomics from the appendix:
 
 ```{r}
 knitr::include_graphics("img/p32.png")
 ```
  
-I'll just point out that James Mark Baldwin also wrote, "The mental development in the child and race: methods and processes (Baldwin, 1900)". And, that curiously the word "flow" is often used in eugenics literature (see chpt 6 of @yakushkoScientificPollyannaismInquisition2019). These are obviously juxtaposition to eugenics, and I don't know the eugenics literature well enough yet to know if there are additional connections. Anyway, I thought these connections were worth noting.
+I'll point out that James Mark Baldwin also wrote, "The mental development in the child and race: methods and processes (Baldwin, 1900)". And, that curiously the word "flow" is often used in eugenics literature (see chpt 6 of @yakushkoScientificPollyannaismInquisition2019). These are obviously juxtaposition to eugenics, and I don't know the eugenics literature well enough yet to know if there are additional connections. Anyway, I thought these connections were worth noting.
+
+The rest of the appendix reads:
+
+```{r}
+knitr::include_graphics("img/p33.png")
+```
+
+I've had a little bit more time to look at "Psychonomic" in the context of eugenics and social darwinism, and I found that it also has a meaning in terms of the "general psychonomic law". I found this in a footnote from @goodchildStanleyHallAmerican2012 who discusses G. Stanley Hall (one-time APA president and eugenicist)
+
+"Cremin, Transformation of the School, 101–2. Cremin described Hall’s foundational idea exceptionally well. “Hall’s basic thesis—the ‘general psychonomic law,’ which he borrowed from Haeckel and Spencer—was that ontogeny, the development of the indi- vidual organism, recapitulates phylogeny, the evolution of the race. "
+
+I dunno, seems like the general psychonomic law also has a meaning in terms of eugenics writing. Or maybe I'm just reading way too much into this. Here's Hall in his own words...
+
+```{r}
+knitr::include_graphics("img/p34.png")
+```
+
+Yup, psychonomics is a word that also has meaning in eugenics writing. So, there's that.
+
+
 
 ---
 
@@ -584,10 +606,43 @@ e.g., Neff, W. D. (1957). Fifty-Third Annual Meeting of the Society of Experimen
 
 ---
 
-Running out of steam a bit. I've purused a bit through the journal [Psychonomic Science](https://link.springer.com/journal/40628/volumes-and-issues), which runs from 1964 to 1972. There are a smattering of papers that are eugenics adjacent IMO, but it mostly seems like fairly standard psychonomics fare. It's really great most of these papers are open access, I love this about Psychonomics. The journal also publishes some of the abstracts from Psychonomics conferences. I took a quick look at a few of them, and didn't see any more papers with eugenics in the title like this @clelandWarPeaceRevisited1979, which seems like a rarity. Also, the word "eugenic" and "eugenics" returns no results from the journal.
+## Psychonomic Journals
+
+The second paper on the history of Psychonomics discusses the journals and issues around publishing them. Some interesting stories about the publishing side of things. [@dewsburyHistoryPsychonomicSociety1996]
+
+### Psychonomic Science
+
+Running out of steam a bit. I've perused a bit through the journal [Psychonomic Science](https://link.springer.com/journal/40628/volumes-and-issues), which runs from 1964 to 1972. There are a smattering of papers that are eugenics adjacent IMO, but it mostly seems like fairly standard psychonomics fare. It's really great most of these papers are open access, I love this about Psychonomics. The journal also publishes some of the abstracts from Psychonomics conferences. I took a quick look at a few of them, and didn't see any more papers with eugenics in the title like this @clelandWarPeaceRevisited1979, which seems like a rarity. Also, the word "eugenic" and "eugenics" return no results from the journal.
+
+### Psychonomic Monograph Supplements
+
+For whatever reason I didn't have an easy time searching the table of context of Psychonomic monograph supplements. It seems that Springer does not index this one?
+
+### Bulletin of the Psychonomic Society
+
+1973-1993
+
+Interesting new concept that members are their own editors, so they can publish things and take responsibility for them. I think this means no peer review (see Morgan's editorial in first issue). This is the journal that published the one positive eugenics paper mentioned earlier. One other paper used the word eugenics when they references an article from a eugenics journal.
+
+There are several papers returned by genetics, lots of intelligence papers, and some race-based papers. There's 20 years of publications, and that's a whole of reading, maybe some other time.
+
+Oops, spoke to soon. @grayHereditaryGeniusRevisited1983 is a very real eugenics treat in 1983, straight out of Galton's playbook. Wow. Maybe peer-review is a good idea after all?
+
+Rushton, J. P., & Ankney, C. D. (1996). Brain size and cognitive ability: Correlations with age, sex, social class, and race. Psychonomic Bulletin & Review, 3(1), 21-36.
+
+---
+
+## Random stuff
+
+I would never recommend reading the journal "Mankind Quarterly". However, it is interesting to read one author's perspective on the founding of Psychonomics, in the paper title "Raymond B Cattell and the Fourth Inqusition", by W Glade. Basically, Cattell is a racist and the APA declines to give him an award even though he showed up to receive it. Anyway, it's a head spinning dose of WTF. Nevertheless, the claim is that Psychonomics scientists were tired of this kind of "leftist" crap, and left APA because it was getting too "political".
+
+```{r}
+knitr::include_graphics("img/ManQ.png")
+```
 
 
- 
+This article from Rushton (a notable racist) suggest that the Pioneer Fund (notorious funder of racist science) has funded a past Psychonomics president (chair I assume).
+  - <https://philipperushton.net/wp-content/uploads/2015/02/The-Pioneer-Fund-and-the-Scientific-Study-of-Human-Differences-2002-by-John-Philippe-Rushton.pdf>
 
 
 ---
