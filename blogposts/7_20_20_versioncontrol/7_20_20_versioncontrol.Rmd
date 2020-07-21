@@ -48,19 +48,36 @@ Most of the time I spray these text files with words, and then make a commit aft
 
 This current excursion into meta-level discourse on my own blog is new to me. I should probably be doing something else. Instead, what is this that I'm doing?
 
-I came across an eye-catching sub-heading in a book by Robert Wilson, called "The eugenic mind". That sub-heading was: "The politics of epistemic apartheid". It's one of those phrases that would normally pass me by because either I'm too dense, or it's too dense, or a combination of both. Wilson develops a standpoint theory of eugenics, which partly has to do with arguing that survivors of eugenics, people on the margins of society with lived experience as targets of eugenics polices, have important knowledge and perspective to bring to the table. Hard to disagree.
+I came across an eye-catching sub-heading in a book by Robert Wilson, called "The eugenic mind". That sub-heading was: "The politics of epistemic apartheid". It's one of those phrases that would normally pass me by because either I'm too dense, or it's too dense, or a combination of both. Wilson develops a standpoint theory of eugenics and argues that survivors of eugenics, people on the margins of society with lived experience as targets of eugenics polices, have important knowledge and perspective to bring to the table. Hard to disagree.
 
-I gather there are considerations about knowledge within social science discourse, especially concerning the question of who can know what. This is an important question when lived experience provides unique sources of knowledge, because it becomes fairly obvious that there are impossibilities of knowledge. Somethings can't be known. Additionally, arguments about knowledge could revolve around who can know what given the existence of knowledge gaps. I think this is partly what Wilson describes when he refers to the politics of epistemic apartheid.
+I'm gathering there are considerations about knowledge within social science discourse, especially concerning the question of who can know what. This is an important question when lived experience provides unique sources of knowledge, because it becomes fairly obvious that there are impossibilities of knowledge. Some things can't be known. Additionally, arguments about knowledge could revolve around who can know what given the existence of knowledge gaps. I think this is partly what Wilson describes when he refers to the politics of epistemic apartheid.
 
-I suppose I was reflecting on these concepts, and this prompted the present mass of disorganized words. I don't have answers to who gets to claim knowledge. I am in engaging in a process of creating and refining my own understanding, through writing. I'm doing it in public. I'm doing it with version control. I am attempting to break down epistemic apartheid for myself to the extent possible. I'm looking for epistemic access.
+I've been reflecting on these concepts, and this reflection has prompted the present mass of disorganized words. I don't have answers about who gets to claim knowledge. 
 
-The whole thing is a process. So, I think that a version-controlled blog post is a nice example. This post will change wheneve I edit it. Right now it is a rough scattershot of some vague point I thought was worth aiming at. Maybe I'll delete the whole thing because of some perspective I'll adopt later on. Maybe, I'll keep changing it, like an art experiment. Maybe it will stay here like this forever, threatening to not have a long history of changes preserved in version control. Only time will tell.
+I am in engaging in a process of creating and refining my own understanding, through writing. I'm doing it in public. I'm doing it with version control. I am attempting to break down epistemic apartheid for myself to the extent possible. I'm looking for epistemic access. I'm wondering if something about this process, of representing the discovery process of word usage over time, over revision, somehow symbolizes and energizes the dance around knowledge.
 
-I didn't have time to read for typos.
+This post is a process example. This post will change whenever I edit it. Right now it is a rough scattershot of some vague point I thought was worth aiming at. Maybe I'll delete the whole thing because of some perspective I'll adopt later on.
+
+Maybe, I'll keep changing it, like an art experiment. 
+
+Maybe it will stay here like this forever, threatening to not have a long history of changes preserved in version control. (nope: already edited it too much)
+
+Only time will tell.
+
+(note: have some kind of conclusion, maybe make a point first, and the work around that toward a conclusion)
 
 ---
 
-End thought. Nobody wants to read the version control history of a blog. Maybe except wikipedia editors who spend time doing that. Nevertheless, there is something about the layers of version control that symbolizes the process of epistemic discovery and change that is lost in a final "perfect" draft. This is not an argument in support of foisting sloppy word messes upon unsuspecting readers.
+End thought (from yesterday). Nobody wants to read the version control history of a blog. There is something about the layers of version control that symbolizes the process of epistemic discovery and change that is lost in a final "perfect" draft. This is not an argument in support of foisting sloppy word messes upon unsuspecting readers.
+
+---
+
+things to work in later
+
+- revisionist history
+- war of the ghosts (reconstruction)
+- what are my views given that all the things I shave said are preserved in my record of deletion
+- allowance of changing viewpoint
 
 ---
 
