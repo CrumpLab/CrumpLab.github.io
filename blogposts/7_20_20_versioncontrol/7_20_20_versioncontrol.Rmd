@@ -32,17 +32,19 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 What's so great about this post is that I get to rewrite it over and over again, and I'm not sure I can make my point unless I do that.
 
-Also, who knows, maybe I could do it in one shot and be done with what I'm trying to say. But, where's the discovery in that? (edit: I already didn't do that, and I'm scared to delete this line).
+Also, who knows, maybe I could do it in one shot and be done with what I'm trying to say. But, where's the discovery in that? (edit: I already didn't do that).
 
 ___
 
-I have recently settled in on a blogging process for myself, and here I talk about that process a bit.
+I have recently settled in on a blogging process for myself, and here I talk about that process a bit. (note: I think I need some kind of thesis statement or point at the beginning, to make it worth reading, will come back for that).
 
 The process is evident in my recent posts about eugenics and psychology. I'm using these posts as my learning process. My blog is notebook in public. Perhaps there is a performative function to this, but to speak for myself, I am hoping there is some value in sharing my notes. 
 
-More to the point of this post, I'm writing this blog in a text editor (R-studio), and I'm posting the content as a website (using R markdown) hosted on a github repository that I use for my lab website, here: <https://github.com/CrumpLab/CrumpLab.github.io>. All of the blog posts on the website are contained in the `blogposts` folder. Because I am using github version control, every edit and change I have committed are all stored in the repository. That makes this a version controlled blog in public with a fairly complete record of all of the words I wrote and deleted and kept etc. 
+I'm writing this blog in a text editor (R-studio), and I'm posting the content as a website (using R markdown) hosted on a github repository that I use for my lab website, here: <https://github.com/CrumpLab/CrumpLab.github.io>. All of the blog posts on the website are contained in the `blogposts` folder. Github's version control records every edit and change I have committed. That makes this a version controlled blog in public with a fairly complete record of all of the words I wrote and deleted and kept etc. It's a layered document with the history of revisions stacked behind it.
 
-It's not a perfect record of every entry and deletion. I have to make a choice to preserve the record at any moment. So, I could write and delete a bunch of things before making a commit, and those changes are lost. Oh well. I try to do my best. Most of the time I spray these text files with words, and then make a commit after an hour or two. More recently, I'm trying to make commits that reflect sections of content in my writing. I assume that could be useful later on if I ever want to take a look at "my process". But, I haven't spent too much time doing that. Even this foray into a meta-level discourse on my own blog is relatively new to me. I should probably be researching eugenics right now. Instead, what is this that I'm doing?
+It's not a perfect record of every entry and deletion. I have to make a choice to preserve the record at any moment. So, I could write and delete a bunch of things before making a commit, and those changes are lost. Oh well. I try to do my best. 
+
+Most of the time I spray these text files with words, and then make a commit after an hour or two. More recently, I'm trying to make commits that reflect sections of content in my writing. For example, when I feel like I did something coherent and identifiable, I make a commit and give it a label. I assume these labels could be useful later on if I ever want to take a look at "my process". But, I haven't spent too much time doing that. Even this foray into a meta-level discourse on my own blog is relatively new to me. I should probably be researching eugenics right now. Instead, what is this that I'm doing?
 
 I'll be brief and wrap this up...partly recognizing that what I hope this post will be, will undergo many changes, so today what I say is less important than me figuring out eventually what I'm discovering about what I'm saying.
 
