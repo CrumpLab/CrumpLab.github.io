@@ -639,7 +639,68 @@ There are several papers returned by genetics, lots of intelligence papers, and 
 
 Oops, spoke to soon. @grayHereditaryGeniusRevisited1983 is a very real eugenics treat in 1983, straight out of Galton's playbook. Wow. Maybe peer-review is a good idea after all?
 
+### Perception and Psychophysics (now APP)
+
+A search of "eugenic" returns no results, and "eugenics" returns 5 papers involving references to papers eugenics journals. 
+
+### Psychobiology
+
+Neat, I didn't even know this journal existed. It's on the [list of retired journals](https://www.psychonomic.org/page/other_publications).
+
+No articles are returned when searching 'eugenic' or 'eugenics'. Certainly no shortage of interesting papers. 
+
+I searched "Galton" and found these two papers that I had never come across before.
+
+Burton, P. G. (1990). A search for explanation of the brain and learning: Elements of the psychonomic interface between psychology and neurophysiology I. A cognitive approach to early learning. Psychobiology, 18(2), 119-161.
+
+Burton, P. G. (1990). A search for explanation of the brain and learning: Elements of the psychonomic interface between psychology and neurophysiology II. Early behavior and its control, the origin of consciousness, and the rise of symbolic thought. Psychobiology, 18(2), 162-194.
+
+These are pretty interesting papers in terms of their theoretical scope. Kinda neat that the theory is about "psychonomic" processes, which is a word that doesn't get used too often to refer to processes.
+
+
+
+### Psychonomic Bulletin and Review
+
+Two papers show up in a search for "eugenics", that reference papers in eugenics journals. One of them is slightly on the eugenics nose in how it references and uses RA Fishers ideas (not about statistics).
+
+There is this paper:
+
 Rushton, J. P., & Ankney, C. D. (1996). Brain size and cognitive ability: Correlations with age, sex, social class, and race. Psychonomic Bulletin & Review, 3(1), 21-36.
+
+### Memory and Cognition
+
+eugenic and eugenics returns no results, see interim question below
+
+### Learning and Behavior
+
+"eugenics" comes up in one citation
+
+### Behavior Research Methods
+
+6 papers returned searching "eugenics", all occurring in citations, mostly RA Fisher stats stuff.
+
+This is an interesting paper to pluck out:
+
+Davenport, J. W., Benson, R. W., Hagquist, W. W., Rankin, G. R., & Shelton, S. E. (1972). Computerized animal intelligence testing. Behavior Research Methods & Instrumentation.
+
+I bet Tolman would have loved to have this automated contraption when he attempted to breed rats for maze learning ability.
+
+Tolman, E. C. (1924). The Inheritance of Maze-Learning Ability in Rats. Journal of Comparative Psychology, 4(1), 1.
+
+### Cognitive Research: Principles and Implications
+
+This is a new journal, and in general I think use-based cognitive research is pretty great, so there is much to like about this journal. I haven't submitted anything here, but I do some work on cognitive technologies, such as with the [semantic librarian project](https://www.semanticlibrarian.com).
+
+The words "eugenic" and "eugenics" don't appear yet in this journal. It's a new journal, and probably many researchers, like me only a couple weeks ago, aren't thinking about eugenics everyday or at all. I could imagine the story of eugenics in psychology as it relates to "use-based" practices of "psychological research" being relevant to guiding modern discussion of applied cognitive research.
+
+
+---
+
+Interim question: Why doesn't the word eugenics appear more often in Psychonomics journals?
+
+I'm not wondering about the absence of papers that explicitly advocate in favor of eugenics (it is still pretty wierd that there are papers like this in the Psychonomic record). I'm wondering about the distinct lack of discussion and contextualization of reseach in terms of eugenics. For example, there doesn't appear to be a paper that examines historical and contemporary research aims and methods in Psychonomics from the lens of eugenics. Maybe, I'm just motivating myself to fill a gap in the literature.
+
+For example, there are numerous papers about "intelligence". And, even though that area has extensive connections to eugenics, and remains a controversial area, it doesn't appear that these issues are discussed directly in papers that use the word intelligence. (I'm inferring this by the fact that searching "intelligence AND eugenics" returns zero results).
 
 ---
 
@@ -654,7 +715,13 @@ knitr::include_graphics("img/ManQ.png")
 
 This article from Rushton (a notable racist) suggest that the Pioneer Fund (notorious funder of racist science) has funded a past Psychonomics president (chair I assume).
   - <https://philipperushton.net/wp-content/uploads/2015/02/The-Pioneer-Fund-and-the-Scientific-Study-of-Human-Differences-2002-by-John-Philippe-Rushton.pdf>
-
+  
+- These pieces are not about psychonomics, but I came across them in current efforts so am placing them here. They are reviews by R Held and GA Miller.
+  1.  Reviewed Work(s): Group Processes: Transactions of the First Conference by Bertram Schaffner
+Review by: Richard Held, The American Journal of Psychology, Vol. 69, No. 4 (Dec., 1956), pp. 690-692
+  2. Reviewed Work(s): Cybernetics: Circular Causal and Feedback Mechanisms in Biological and Social Systems, Transactions of the Eighth Conference by Heinz von Foerster, Margaret Mead and Hans Lukas Teuber, Review by: George A. Miller, The American Journal of Psychology, Vol. 66, No. 4 (Oct., 1953), pp. 661-663
+  
+What is interesting about these reviews is that both authors illustrate how to talk elliptically or cryptically about ideas that loom over the discipline. Both reviews are about conference books/proceedings, and both authors use subtext and allusion to reference ideologies that appear to loom large at the conferences. Could be fun to read the book review sections of AJP! More broadly, this time period is very different from the earlier decades in terms of open discussion of the subtext. For example, in decades prior some eugenicists published their views in eugenics journals and their methods in psychology journals. That kind of parallelism of ideology and method isn't very common anymore, making dot connection more difficult.
 
 ---
 
