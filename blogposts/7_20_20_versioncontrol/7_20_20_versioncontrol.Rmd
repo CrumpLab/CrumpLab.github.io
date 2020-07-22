@@ -79,6 +79,8 @@ things to work in later
 - what are my views given that all the things I shave said are preserved in my record of deletion
 - allowance of changing viewpoint
 
+I spent another looking at eugenics connections. Just like here, I am doing all of that work using this process. So, I am incrementally saving commits to github as I add and edit my own words. I don't want to go back and read through all of those changes. But, the record is there. It's possible I could do some kind of self-analysis of my own word usage over time. For example, as I learn about eugenics, I'm becoming sensitive to different kinds of issues over time, and I'm pretty sure that I am modifying how I write to reflect these emerging considerations.I assume my "semantic space" of eugenics is changing as I learn and write about it, maybe it would be fun to chart out those changes using NLP or something sometime.
+
 ---
 
 
