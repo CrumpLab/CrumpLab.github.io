@@ -798,9 +798,30 @@ I've been meaning to take the semantic librarian project into the domain of digi
 
 TBH, I've been anticipating a day like today for a while. For example, I've been trying to make semantic librarian's easier to use by sharing R code necessary to create your own <https://crumplab.github.io/RsemanticLibrarian/>. Most of the semantic librarians I've built are for abstracts, so they are structured in a particular way that supports searching by author and year etc. However, there is a much more general notion to the semantic librarian, which is a kind of semantic mixed-methods database. The minimal example is here <https://crumplab.github.io/RsemanticLibrarian/articles/Alice.html>. Actually, the best example a wine "Sommeantic Librarian" that I made with a mixed database (basically wine reviews coded by several factors) <https://crumplab.shinyapps.io/somme/>.
 
-So, partly I guess I'm sayng I should use this stuff here somehow.
+So, partly I guess I'm sayng I should use this stuff here somehow. The semantic librarian approach will take a while. And, sure I could create semantic vector for eugenics and then compare similarity to names and authors in the database. That would be interesting I suspect, but it would be difficulty to know what the similarity scores actually represent. Still, something worth doing I think.
 
+Aside from that, I could try some related methods.
 
+I'm imagining each person as a JSON object, where each person can have properties.
+
+- Person = Name
+  - eugenics = total score?
+  - Properties
+    - eugenics membership: TRUE/FALSE
+    - eugenics in private correpsondence: TRUE/FALSE
+    
+Something like the above, where it could be expandable as I learn that I need to add different kinds of attributes, and then I could develop some way of assessing the "data" for each person, potentially assigning a eugencis score.
+
+At the end of the day it would be nice to figure out these kinds of flavors about individuals
+
+- pro and active in eugenics
+- anti-eugenics
+- not involved or associated in eugenics
+- accidental eugenics
+- eugenics adjacent
+- functional contributions in the service of eugenics
+
+I guess I'm most interested in assessing a society or organization for its functional contributions to eugenics, as a way of determining the amount and quality of instutional/systemic eugenics for an organization. So, obviously I need to take heed of SS Stevens, and do a better job of operationalizing these things.
 
 ---
 ## note collection
