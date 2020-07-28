@@ -1,0 +1,44 @@
+---
+title: "Learning to code for Ornament and Crime Hemisphere suite"
+author: "Matt Crump"
+date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
+twitter:
+  card_description: "I'm making some notes on coding for the open-source eurorack module called Ornament and Crime"
+  card_img: "https://crumplab.github.io/blogposts/7_28_20_OC/img/OC.png"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: [web/header.html,web/g_analytics.html]
+    md_extensions: -autolink_bare_uris
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+---
+
+I don't really blog about synthesizers, but I like them, and I am slowly building a modular eurorack system. I've been playing around with [Ornament and Crime](https://ornament-and-cri.me), and then recently installed the alternative firmware [hemisphere suite](https://github.com/Chysn/O_C-HemisphereSuite/wiki) by Chysn. Both firmwares are very good. I forked the Hemisphere repo, and am now trying to code my own applets using the hemisphere approach. Using this page to make some notes as I go along.
+
+I got started messing with O_C yesterday, and made some decent progress (although I don't really know C++, so it's slow going). 
+
+---
+
+
+## References
+
+
+
+

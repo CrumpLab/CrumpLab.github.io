@@ -94,6 +94,8 @@ knitr::include_graphics("img/EugenicalNews.png")
   - Eugenicist, attempted to development intelligence tests that didn't quite work out, presumably for the purposes of eugenics. This is a nice example of efforts that pre-date Binet's IQ test to develop "scientific" mental tests for the purposes of eugenics.
   - CATTELL, J. M . Families of American Men of Science. Pop. Sci. Mo., 1915, 86, 504-515.
   - APS has been a giving a yearly Cattell award for contributions to science since 1992 <https://en.wikipedia.org/wiki/James_McKeen_Cattell_Fellow_Award>
+  - see his paper: THE CAUSES OF THE DECLINING BIRTH RATE
+Professor J. McKeen Cattell, in Proceedings of the First National Conference on Race betterment 
 
 ### 1897 James Mark Baldwin
 
@@ -693,6 +695,14 @@ Intelligence. TrainingSchoolBull.,1915,11,182–188.
 - Psychological Index had some eugenics sections
 - The Journal of Race development
 
+Human Betterment foundation
+Eugenics society of America
+International eugenics conferences
+
+Proceedings of the First National Conference on Race betterment
+  - january 8-12, 1914, Battle Creek Michigan
+  - published by the race betterment foundation
+
 ## Institutional considerations
 
 Part of the impetus for all of this research is to characterize the widespread acceptance of eugenics in terms of institutions. So far my perspective is that psychology as a discipline has a problem with instutional forms of eugenics and racism. Institutional eugenics is term that could carry broad meaning from literal institutions (e.g., such as the APA), to widely adopted policies in society inspired and propagated by eugenics leaders (e.g., IQ testing).
@@ -704,6 +714,21 @@ Some American Institutions to consider in terms of Psychology & Eugenics
 - SEP membership (honorary societies in psychology)
 - AAAS 
 - Federal government research councils and chairs
+
+## Responses by institutions
+
+How have institutions with some involvement in eugenics responded to their involvement? I've been wondering about this question the whole time that I've learning about eugenics. With respect to eugenics I'm still in the "what happened" phase, and perhaps slowly coming to the "what happened next" phase, which could lead into the "what's going on right now phase".
+
+In any case. When I have time I will extract this section and make a post out of it to keep track of info I'm finding. I've discovered the internet archive <https://archive.org> contains an ample amount of historical eugenics literature, so have been collecting some of it. It's also interesting to search for indvidual psychologists in this database because all sorts of old textbooks come up. More recently, I've started coming across government documents, for example the National Research Council has convened multiple panels to assess the impact of certain practices on society, some of these include eugenics related practices. 
+
+- University of Alberta, eugenics project in Philosophy department
+that led to <http://eugenicsarchive.ca>
+- I've come across a few department level papers exploring eugenics at Yale, Harvard, need to find them again
+- NRC council work: Wigdor, A. K. (1982). Ability Testing: Uses, Consequences, and Controversies. Educational Measurement: Issues and Practice, 1(3), 6–8. https://doi.org/10/cr8p3x
+  - There's a two volume book, the above is a short summary
+  - Wigdor has several other related works
+
+
 
 ## even more unorganized notes
 
