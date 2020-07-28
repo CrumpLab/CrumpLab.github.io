@@ -257,13 +257,41 @@ I'll point out a few pieces. First, passing CV from in to out happens in the Con
 
 ```
 
-Note, that `ForEachChannel()` is defined in `HemisphereApplet.h` as, which is just a simple way of looping through an operation to apply it to the first and second channel of a hemisphere applet.
+Note, that `ForEachChannel()` is defined in `HemisphereApplet.h` as
 
 ```
 #define ForEachChannel(ch) for(int ch = 0; ch < 2; ch++)
 ```
 
-`Out()` and `In()` are also defined in `HemisphereApplet.h`
+which gives a convenient way to loop over channel one and two. `Out()` and `In()` are also defined in `HemisphereApplet.h`. In this case the `ch` variable just cycles between 0 and 1, covering both the first and second channel. The `Controller()` function runs at 16667 time per second, and this is the heart where we apply transformations to the digitized signal from the inputs, and send them back to outputs. I'll note that the above code is sufficient to allow CV inputs 0 and 1 to pass their signal (unmodified) to the outputs 0 and 1. 
+
+The other thing I wanted to do was print the value of the incoming CV to the screen. This would help me get a sense of the internal values that I'm working with, and also, a PrintCV function could be a useful way to measure actual CV values, especially offset values that are often static (e.g., precision adder). This part is taken care of in two places:
+
+```
+	/* Draw the screen */
+    void View() {
+        gfxHeader(applet_name());
+        DrawInterface();
+        // Add other view code as private methods
+    }
+```
+
+The `DrawInterface()` function is defined later in the private methods, there are several existing `gfx...()` functions for drawing to the screen, some of them located in the Offset graphics methods of `HemisphereApplet.h`.
+
+```
+private:
+
+  void DrawInterface() {
+    gfxPrint(1, 15, "1: ");
+    gfxPrintVoltage(In(0));
+    gfxPrint(1, 25, "2: ");
+    gfxPrintVoltage(In(1));
+  }
+
+```
+
+I use `gfxPrint()` to print character values on different lines (controlled by the second y-value, 15, 25, goes down the screen). The `gfxPrintVoltage()` function will convert the digitized internal value of a current cv channel input to a cv value ranging between -3 and 5 volts (need to double-check this, it's supposed to be the range of what the O_C hardware is capable of outputting).
+
 
 
 
