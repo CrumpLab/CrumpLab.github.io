@@ -404,7 +404,7 @@ div.tocify {
 </div>
 <div id="brief-code-overview" class="section level2">
 <h2>Brief code overview</h2>
-<p>Chysn provides the basic steps to write a new hemisphere module in <code>software/HEM_Boilerplate.ino.txt</code>, copied below. The short story is that all of the applets in hemisphere are listed as <code>HEM_Classname.ino</code> files in <code>software/o_c_REV</code>. You can add your own new ones, list them in <code>hemisphere_config.h</code>m and incremement <code>HEMISPHERE_AVAILABLE_APPLETS</code> to the new number of total apps. Then compile and upload. There are memory limitations, and this suite is already packed to the brim, so delete stuff as necessary. I’m super duper happy with the template for coding an applet. This one file takes care of everything, including the code for the display.</p>
+<p>Chysn provides the basic steps to write a new hemisphere module in <code>software/HEM_Boilerplate.ino.txt</code>, copied below. The short story is that all of the applets in hemisphere are listed as <code>HEM_Classname.ino</code> files in <code>software/o_c_REV</code>. You can add your own new ones, list them in <code>hemisphere_config.h</code> and incremement <code>HEMISPHERE_AVAILABLE_APPLETS</code> to the new number of total apps. Then compile and upload. There are memory limitations, and this suite is already packed to the brim, so delete stuff as necessary. I’m super duper happy with the template for coding an applet. This one file takes care of everything, including the code for the display.</p>
 <pre><code>// Hemisphere Applet Boilerplate. Follow these steps to add a Hemisphere app:
 //
 // (1) Save this file as HEM_ClassName.ino
@@ -525,7 +525,54 @@ void ClassName_ToggleHelpScreen(bool hemisphere) {ClassName_instance[hemisphere]
 uint32_t ClassName_OnDataRequest(bool hemisphere) {return ClassName_instance[hemisphere].OnDataRequest();}
 void ClassName_OnDataReceive(bool hemisphere, uint32_t data) {ClassName_instance[hemisphere].OnDataReceive(data);}
 </code></pre>
+</div>
+<div id="first-attempts-at-coding" class="section level2">
+<h2>First attempts at coding</h2>
+<div id="change-one-thing-to-make-sure-it-works" class="section level3">
+<h3>Change one thing to make sure it works</h3>
+<p>The first thing I did was try to make single change in the source that I could verify would compile correctly and not brick the O_C. I went into <code>HEM_BootsNCat.ino</code> and modified line 29-30 to change the <code>t</code> in Boots to a <code>p</code>.</p>
+<pre><code>    const char* applet_name() {
+        return &quot;BoopsNCat&quot;;
+    }
+</code></pre>
+<p>Sure, enough, I press upload, scroll to that applet, and voila, it worked, and suddenly I feel like Jeff Bridges from TRON (the recent one where he says he “got in” in that Daft Punk song).</p>
+</div>
+<div id="fiddle-around-a-bunch" class="section level3">
+<h3>Fiddle around a bunch</h3>
+<p>After changing a single letter, I then started changing numbers and a few other things, while also scanning through the code to see how it was connected.</p>
+<p>Some of the problems that I ran into right away were questions about the DAC (digital analog converter) and ADC (analog digital converter). The input voltages are digitized, transformed if necessary, and then converted back to analog and sent out. The issue is knowing what range of values you are dealing once they are digitized so you know what kind of math to apply to the signals. Fortunately, a lot of these details are sorted out in the hemisphere and original o_c code base, it just takes some time to figure everything out. This post was helpful for me to think about the conversion issues <a href="http://butmostlycrime.blogspot.com/2018/09/pitch-calculation-and-output.html" class="uri">http://butmostlycrime.blogspot.com/2018/09/pitch-calculation-and-output.html</a>. But, I still think I need to understand these issues more clearly.</p>
+<p>Also, it’s worth reading the specs on the unit <a href="https://ornament-and-cri.me/hardware-basics/" class="uri">https://ornament-and-cri.me/hardware-basics/</a>.</p>
+<p>Some additional poking around helped me understand some of the structure of hemisphere suite. For example, in hemisphere there is a function <code>In()</code> that will read in cv values from the 0 or 1 (e.g., <code>In(0)</code>) channel. This function is defined in the Offset I/O methods section of <code>HemisphereApplet.h</code>. This file further defines other general hemisphere functions for ins and outs, some which are borrowed from the original firmware codebase. For example, the <code>OC::DAC::set_pitch()</code> function is defined in <code>OC_DAC.h</code>. Also, an inspection of <code>software/o_c_Rev</code> will show there are lots of <code>OC</code> files and various others that are recruited as libraries. So, lot’s of great stuff to work with. But, I haven’t seen any documentation about this, beyond the source code itself.</p>
+</div>
+</div>
+<div id="next-steps" class="section level2">
+<h2>Next steps</h2>
+<p>Right now my plan is to learn hemisphere essentially by deleting it re-writing it…up to a point. I need to learn super basic stuff like what values I get when I read in inputs, what values I get when I look at the encoder data, what values I need to send out CV in desired ways…how to deal with clock sinking…all the stuff basically. The hemisphere is already well suited to learning from examples, and all I am doing at the moment is copying and modifying existing applets to try and work out what does what.</p>
+<p>To be a little bit more programmatic about my learning, and perhaps even be useful to other people wanted to try this out I’ve started a copy of hemisphere called O_C-MINERVA <a href="https://github.com/CrumpLab/O_C-MINERVA" class="uri">https://github.com/CrumpLab/O_C-MINERVA</a>. My goal is to make a set of really basic applets that serve as working examples of really basic stuff. These applets won’t necessarilly be useful for eurorack purposes, but they should be useful as examples for me to return to when I want to start to doing more complicated things. I often tell my students when they are learning to program that they should go through the motions of programming functions for common statistics like the mean, or standard deviation. It’s a good way to learn about details. So, I will take my own advice and try to program basic applets and see what happens.</p>
+</div>
+<div id="basic-applets" class="section level2">
+<h2>Basic Applets</h2>
+<div id="printcv" class="section level3">
+<h3>PrintCV</h3>
+<p>The first applet I made was PrintCV. The goal here was to make a copy of the boilerplate <code>software/HEM_Boilerplate.ino.txt</code>, rename everything to PrintCV, and then figure out how to do two things.</p>
+<ol style="list-style-type: decimal">
+<li><p>Pass CV from the CV in of a channel to CV out of a channel</p></li>
+<li><p>Take the digitized CV input value and print it to the screen</p></li>
+</ol>
+<p>This little applet is at <a href="https://github.com/CrumpLab/O_C-MINERVA/blob/master/software/o_c_REV/HEM_PrintCV.ino" class="uri">https://github.com/CrumpLab/O_C-MINERVA/blob/master/software/o_c_REV/HEM_PrintCV.ino</a></p>
+<p>I’ll point out a few pieces. First, passing CV from in to out happens in the Controller function.</p>
+<pre><code>    /* Run during the interrupt service routine, 16667 times per second */
+    void Controller() {
+      ForEachChannel(ch) {  /* Sends CV Ins to Outs */
+        Out(ch, In(ch));
+      }
+    }
+</code></pre>
+<p>Note, that <code>ForEachChannel()</code> is defined in <code>HemisphereApplet.h</code> as, which is just a simple way of looping through an operation to apply it to the first and second channel of a hemisphere applet.</p>
+<pre><code>#define ForEachChannel(ch) for(int ch = 0; ch &lt; 2; ch++)</code></pre>
+<p><code>Out()</code> and <code>In()</code> are also defined in <code>HemisphereApplet.h</code></p>
 <hr />
+</div>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>

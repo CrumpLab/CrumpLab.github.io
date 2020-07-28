@@ -77,7 +77,7 @@ Hemisphere splits the O_C into two sides, and each side can load pretty much any
 
 ## Brief code overview
 
-Chysn provides the basic steps to write a new hemisphere module in `software/HEM_Boilerplate.ino.txt`, copied below. The short story is that all of the applets in hemisphere are listed as `HEM_Classname.ino` files in `software/o_c_REV`. You can add your own new ones, list them in `hemisphere_config.h`m and incremement `HEMISPHERE_AVAILABLE_APPLETS` to the new number of total apps. Then compile and upload. There are memory limitations, and this suite is already packed to the brim, so delete stuff as necessary. I'm super duper happy with the template for coding an applet. This one file takes care of everything, including the code for the display.
+Chysn provides the basic steps to write a new hemisphere module in `software/HEM_Boilerplate.ino.txt`, copied below. The short story is that all of the applets in hemisphere are listed as `HEM_Classname.ino` files in `software/o_c_REV`. You can add your own new ones, list them in `hemisphere_config.h` and incremement `HEMISPHERE_AVAILABLE_APPLETS` to the new number of total apps. Then compile and upload. There are memory limitations, and this suite is already packed to the brim, so delete stuff as necessary. I'm super duper happy with the template for coding an applet. This one file takes care of everything, including the code for the display.
 
 ```
 // Hemisphere Applet Boilerplate. Follow these steps to add a Hemisphere app:
@@ -204,6 +204,8 @@ void ClassName_OnDataReceive(bool hemisphere, uint32_t data) {ClassName_instance
 
 ## First attempts at coding
 
+### Change one thing to make sure it works
+
 The first thing I did was try to make single change in the source that I could verify would compile correctly and not brick the O_C. I went into `HEM_BootsNCat.ino` and modified line 29-30 to change the `t` in Boots to a `p`.
 
 ```
@@ -215,6 +217,53 @@ The first thing I did was try to make single change in the source that I could v
 
 Sure, enough, I press upload, scroll to that applet, and voila, it worked, and suddenly I feel like Jeff Bridges from TRON (the recent one where he says he "got in" in that Daft Punk song).
 
+### Fiddle around a bunch
+
+After changing a single letter, I then started changing numbers and a few other things, while also scanning through the code to see how it was connected. 
+
+Some of the problems that I ran into right away were questions about the DAC (digital analog converter) and ADC (analog digital converter). The input voltages are digitized, transformed if necessary, and then converted back to analog and sent out. The issue is knowing what range of values you are dealing once they are digitized so you know what kind of math to apply to the signals. Fortunately, a lot of these details are sorted out in the hemisphere and original o_c code base, it just takes some time to figure everything out. This post was helpful for me to think about the conversion issues <http://butmostlycrime.blogspot.com/2018/09/pitch-calculation-and-output.html>. But, I still think I need to understand these issues more clearly.
+
+Also, it's worth reading the specs on the unit <https://ornament-and-cri.me/hardware-basics/>.
+
+Some additional poking around helped me understand some of the structure of hemisphere suite. For example, in hemisphere there is a function `In()` that will read in cv values from the 0 or 1 (e.g., `In(0)`) channel. This function is defined in the Offset I/O methods section of `HemisphereApplet.h`. This file further defines other general hemisphere functions for ins and outs, some which are borrowed from the original firmware codebase. For example, the `OC::DAC::set_pitch()` function is defined in `OC_DAC.h`. Also, an inspection of `software/o_c_Rev` will show there are lots of `OC` files and various others that are recruited as libraries. So, lot's of great stuff to work with. But, I haven't seen any documentation about this, beyond the source code itself.
+
+## Next steps
+
+Right now my plan is to learn hemisphere essentially by deleting it re-writing it...up to a point. I need to learn super basic stuff like what values I get when I read in inputs, what values I get when I look at the encoder data, what values I need to send out CV in desired ways...how to deal with clock sinking...all the stuff basically. The hemisphere is already well suited to learning from examples, and all I am doing at the moment is copying and modifying existing applets to try and work out what does what. 
+
+To be a little bit more programmatic about my learning, and perhaps even be useful to other people wanted to try this out I've started a copy of hemisphere called O_C-MINERVA <https://github.com/CrumpLab/O_C-MINERVA>. My goal is to make a set of really basic applets that serve as working examples of really basic stuff. These applets won't necessarilly be useful for eurorack purposes, but they should be useful as examples for me to return to when I want to start to doing more complicated things. I often tell my students when they are learning to program that they should go through the motions of programming functions for common statistics like the mean, or standard deviation. It's a good way to learn about details. So, I will take my own advice and try to program basic applets and see what happens. 
+
+## Basic Applets
+
+### PrintCV
+
+The first applet I made was PrintCV. The goal here was to make a copy of the boilerplate `software/HEM_Boilerplate.ino.txt`, rename everything to PrintCV, and then figure out how to do two things.
+
+1. Pass CV from the CV in of a channel to CV out of a channel
+
+2. Take the digitized CV input value and print it to the screen
+
+This little applet is at <https://github.com/CrumpLab/O_C-MINERVA/blob/master/software/o_c_REV/HEM_PrintCV.ino>
+
+I'll point out a few pieces. First, passing CV from in to out happens in the Controller function.
+
+```
+	/* Run during the interrupt service routine, 16667 times per second */
+    void Controller() {
+      ForEachChannel(ch) {  /* Sends CV Ins to Outs */
+        Out(ch, In(ch));
+      }
+    }
+
+```
+
+Note, that `ForEachChannel()` is defined in `HemisphereApplet.h` as, which is just a simple way of looping through an operation to apply it to the first and second channel of a hemisphere applet.
+
+```
+#define ForEachChannel(ch) for(int ch = 0; ch < 2; ch++)
+```
+
+`Out()` and `In()` are also defined in `HemisphereApplet.h`
 
 
 
