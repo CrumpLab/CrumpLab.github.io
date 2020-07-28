@@ -642,7 +642,7 @@ void ClassName_OnDataReceive(bool hemisphere, uint32_t data) {ClassName_instance
 </div>
 <div id="lofiaudio" class="section level3">
 <h3>LofiAudio</h3>
-<p>The specs suggest that OC can output around 16bit, but it is effectively sampling input at around 1khz. This means that if I send an audio source to a cv in, and listen to the output (e.g., I could use PrintCV which has passes in to out) then I should hear low-fi audio…And, yup that works, super fun. I’m going to use this to make a super simple lofi audio applet, now <code>HEM_lofiAudio.ino</code>. I think I’ll leave this, and mention that hemisphere does some audio input processing examples with the drcrusher and lofitape applets.</p>
+<p>The specs suggest that OC can output around 16bit, but it is effectively sampling input at around 1khz. This means that if I send an audio source to a cv in, and listen to the output (e.g., I could use PrintCV which has passes in to out) then I should hear low-fi audio…And, yup that works, super fun. I’m going to use this to make a super simple lofi audio applet, now <code>HEM_LofiAudio.ino</code>. I think I’ll leave this, and mention that hemisphere does some audio input processing examples with the drcrusher and lofitape applets.</p>
 </div>
 <div id="attenuate" class="section level3">
 <h3>Attenuate</h3>
@@ -682,11 +682,21 @@ void ClassName_OnDataReceive(bool hemisphere, uint32_t data) {ClassName_instance
         level[ch] = constrain(level[ch] + direction, 0, 63);
       }
     }</code></pre>
-<p>The <code>level[2]</code> variable is defined later in private. We find the incredibly useful <code>Proportion()</code> and <code>constrain()</code> functions helping us keep transform cv in values with the ranges we need them in. This basic attenuator shows the math, but doesn’t do anything fancy in terms of channel control. There are two channels here, but the encoder value applies the same amount of attenuation to both channels. To implement separate control of each I would look at the hemisphere <code>AttenuateOffset</code> example.</p>
+<p>The <code>level[2]</code> variable is defined later in private. We find the incredibly useful <code>Proportion()</code> and <code>constrain()</code> functions helping us keep cv values in the ranges we need them in. This basic attenuator shows the math, but doesn’t do anything fancy in terms of channel control. There are two channels here, but the encoder value applies the same amount of attenuation to both channels. To implement separate control of each I would look at the hemisphere <code>AttenuateOffset</code> example.</p>
 </div>
-<div id="vca" class="section level3">
-<h3>VCA</h3>
-<p>Hemisphere already has a VCA algorithm called GatedVCA. I haven’t looked at that yet, and am about to. I thought I should learn how to program a VCA. The point will be to have the level of CV 1 control attenuate a CV 2 input for some output, say output 2. Actually before I do this I should make an attenuator.</p>
+<div id="simplevca" class="section level3">
+<h3>SimpleVCA</h3>
+<p>Hemisphere already has a VCA algorithm called GatedVCA. I haven’t looked at that yet, and am about to. I thought I should learn how to program a VCA. The point will be to have the level of CV 1 control attenuate a CV 2 input for some output, say output 2. Actually before I do this I should make an attenuator…OK did that above. Onto VCA. Let’s modify by copying <code>Attenuate</code>, and working in some code from <code>GatedVCA</code>.</p>
+<p>This is pretty much all you need for a simple VCA. CV 1 is a signal input. CV 2 is another CV whose value will control attenuation of CV1, the attenuated output is out 2 (send channel is 1, first is 0). Works like a charm.</p>
+<pre><code>    /* Run during the interrupt service routine, 16667 times per second */
+    void Controller() {
+          int signal = In(0);
+          int amplitude = In(1);
+          int output = ProportionCV(amplitude, signal);
+          output = constrain(output, -HEMISPHERE_MAX_CV, HEMISPHERE_MAX_CV);
+          Out(1, output);
+    }
+</code></pre>
 </div>
 </div>
 <div id="functions" class="section level2">
