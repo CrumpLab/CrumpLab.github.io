@@ -589,11 +589,61 @@ void ClassName_OnDataReceive(bool hemisphere, uint32_t data) {ClassName_instance
   }
 </code></pre>
 <p>I use <code>gfxPrint()</code> to print character values on different lines (controlled by the second y-value, 15, 25, goes down the screen). The <code>gfxPrintVoltage()</code> function will convert the digitized internal value of a current cv channel input to a cv value ranging between -3 and 5 volts (need to double-check this, it’s supposed to be the range of what the O_C hardware is capable of outputting).</p>
-<hr />
+</div>
+<div id="cvoffset" class="section level3">
+<h3>CVOffset</h3>
+<p>The point of CVOffset was to figure out how to use the rotary encoder to control a cv out voltage. As of right now this applet works, but doesn’t prevent itself from doing things that might cause problems.</p>
+<ol style="list-style-type: decimal">
+<li>Assign some starting value of 0 that will be sent out when the applet loads</li>
+</ol>
+<pre><code>    /* Run when the Applet is selected */
+    void Start() {
+      digital_cv = 0;
+    }</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Here we constantly send out the value in <code>send_cv</code>, which is defined in private</li>
+</ol>
+<pre><code>    /* Run during the interrupt service routine, 16667 times per second */
+    void Controller() {
+      Out(0,send_cv);
+    }
+</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><code>OnEncoderMove()</code> returns 1 or -1 depending on direction, so I increment or decrement <code>digital_cv</code> on each turn. Then I use the <code>Proportion()</code> function from <code>HemisphereApplet.h</code> (which also defines HEMISPHERE_MAX_CV), to scale a value in terms of 0 to 100, to a voltage. O_C only outputs -3 to 5 so this function doesn’t attempt to control going over or under.</li>
+</ol>
+<pre><code>    /* Called when the encoder for this hemisphere is rotated
+     * direction 1 is clockwise
+     * direction -1 is counterclockwise
+     */
+    void OnEncoderMove(int direction) {
+      /* output range is -3V and 6V -4608 ~ 9216*/
+      if(direction == 1) {
+        digital_cv++;
+      } else {
+        digital_cv--;
+      }
+      send_cv = Proportion(digital_cv, 100, HEMISPHERE_MAX_CV);
+    }</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>I draw some stuff on the screen to see some values and get a sense of the transformations.</li>
+</ol>
+<pre><code>private:
+
+  int digital_cv;
+  int send_cv;
+
+  void DrawInterface() {
+    gfxPrint(1, 15, &quot;1: &quot;);
+    gfxPrint(1, 25, digital_cv);
+    gfxPrint(1, 35, send_cv);
+    gfxPrint(1, 45, HEMISPHERE_MAX_CV);
+  }
+};</code></pre>
 </div>
 </div>
-<div id="references" class="section level2">
-<h2>References</h2>
+<div id="functions" class="section level2">
+<h2>Functions</h2>
+<p>This could be a half-baked list of functions that I’m discovering…Not sure yet if I’ll have the time to dive into documentation.</p>
 </div>
 
 
