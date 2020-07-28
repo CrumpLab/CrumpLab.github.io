@@ -350,6 +350,73 @@ private:
 };
 ```
 
+### LofiAudio
+
+The specs suggest that OC can output around 16bit, but it is effectively sampling input at around 1khz. This means that if I send an audio source to a cv in, and listen to the output (e.g., I could use PrintCV which has passes in to out) then I should hear low-fi audio...And, yup that works, super fun. I'm going to use this to make a super simple lofi audio applet, now `HEM_lofiAudio.ino`. I think I'll leave this, and mention that hemisphere does some audio input processing examples with the drcrusher and lofitape applets. 
+
+### Attenuate
+
+Hemisphere has AttenuateOffset already. But, I should learn how to make just a plain and simple attenuator. E.g., Take CV in, attenuate it by an encoder value, and send the attenuated value out. I can copy PrintCV and make Attenuate from there using some of the AttenuateOffset code. OK, this works as an attenuator. 
+
+```
+	/* Run when the Applet is selected */
+    void Start() {
+      ForEachChannel(ch) level[ch] = 63;
+    }
+
+	/* Run during the interrupt service routine, 16667 times per second */
+    void Controller() {
+      ForEachChannel(ch)
+      {
+          int signal = Proportion(level[ch], 63, In(ch));
+          signal = constrain(signal, -HEMISPHERE_3V_CV, HEMISPHERE_MAX_CV);
+          Out(ch, signal);
+      }
+    }
+
+	/* Draw the screen */
+    void View() {
+        gfxHeader(applet_name());
+        DrawInterface();
+        // Add other view code as private methods
+    }
+
+	/* Called when the encoder button for this hemisphere is pressed */
+    void OnButtonPress() {
+    }
+
+	/* Called when the encoder for this hemisphere is rotated
+	 * direction 1 is clockwise
+	 * direction -1 is counterclockwise
+	 */
+    void OnEncoderMove(int direction) {
+      ForEachChannel(ch) {
+        level[ch] = constrain(level[ch] + direction, 0, 63);
+      }
+    }
+```
+
+The `level[2]` variable is defined later in private. We find the incredibly useful `Proportion()` and `constrain()` functions helping us keep cv values in the ranges we need them in. This basic attenuator shows the math, but doesn't do anything fancy in terms of channel control. There are two channels here, but the encoder value applies the same amount of attenuation to both channels. To implement separate control of each I would look at the hemisphere `AttenuateOffset` example.
+
+
+
+### VCA
+
+Hemisphere already has a VCA algorithm called GatedVCA. I haven't looked at that yet, and am about to. I thought I should learn how to program a VCA. The point will be to have the level of CV 1 control attenuate a CV 2 input for some output, say output 2. Actually before I do this I should make an attenuator.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Functions
 
