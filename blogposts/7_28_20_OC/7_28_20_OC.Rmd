@@ -30,13 +30,13 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 ---
 
-I don't really blog about synthesizers, but I like them, and I am slowly building a modular eurorack system. I've been playing around with [Ornament and Crime](https://ornament-and-cri.me), and then recently installed the alternative firmware [hemisphere suite](https://github.com/Chysn/O_C-HemisphereSuite/wiki) by Chysn. Both firmwares are very good. I forked the Hemisphere repo, and am now trying to code my own applets using the hemisphere approach. Using this page to make some notes as I go along.
+I don't really blog about synthesizers, but I like them, and I'm slowly building a modular eurorack system. I've been playing around with [Ornament and Crime](https://ornament-and-cri.me), and then recently installed the alternative firmware [hemisphere suite](https://github.com/Chysn/O_C-HemisphereSuite/wiki) by Chysn. Both firmwares are very good. I forked the Hemisphere repo, and am now trying to code my own applets using the hemisphere approach. Using this page to make some notes as I go along.
 
 I got started messing with O_C yesterday, and made some decent progress (although I don't really know C++, so it's slow going). 
 
 I made a copy of the hemisphere source code and am modifying it in my own github repo <https://github.com/CrumpLab/O_C-MINERVA>. My basic plan is twofold. My overall goal is to start programming essentially weird versions of shift-register/turing machine style sequencers. Ultimately, I have plans to implement some computational models of human memory as eurorack sequencers, in particular Minerva II (Hintzman, 1984, 86, 88). But, to get there I need to learn how to do some more basic stuff.
 
-My plan for learning is to systematically re-write my own version of the hemisphere suite to figure out what's going on, and then hopefully learn enough to start messing with it in musically interesting ways.
+My plan for learning is to systematically re-write my own version of the hemisphere suite to figure out what's going on, and then hopefully learn enough to start messing with it in musically interesting ways. The rewrite will be way less interesting than what is there already, and will focus on me learning basic operations.
 
 ## Getting Started
 
@@ -65,13 +65,13 @@ Finally, you need your O_C powered on through the eurorack power source, and you
 
 ## General observations
 
-I'm taking a combination of staring at the code and poking around various website to try and figure out how everything works. I haven't found any clear documentation anywhere, but I could have easily missed it. The code base is really well thought out, so it almost reads like an instruction manual.
+I'm taking a combination of staring at the code and poking around various websites to try and figure out how everything works. I haven't found any clear documentation anywhere, but I could have easily missed it. The code base is really well thought out, so it almost reads like an instruction manual.
 
-[Chysn blogged about developing hemisphere suite](http://butmostlycrime.blogspot.com/2018/06/introducing-hemisphere.html), and there are numerous helpful tidbits there. He also has another repository with some tutorials on programming O_C firmware <https://github.com/Chysn/O_C_Tutorial1>. 
+[Chysn blogged about developing hemisphere suite](http://butmostlycrime.blogspot.com/2018/06/introducing-hemisphere.html), and there are numerous helpful tidbits there. He also has another repository with some tutorials on programming O_C firmware <https://github.com/Chysn/O_C_Tutorial1>. There is a support forum for hemishpere here <https://llllllll.co/t/hemisphere-suite-support/21704>.
 
 When you load the hemisphere suite firmware, you will get a bunch of "apps", including the hemisphere suite. For example, some of the apps are the game Pong, the darkest timeline (cool sequencer), ENIGMA (Turing machine variant), others, and hemisphere.
 
-So, depending on what you want to do, you could write another "app" that gets added to this list and/or you could write additional modules/applets for the hemisphere suite. Right now I'm only focusing on modules for the hemisphere suite.
+So, depending on what you want to do, you could write another "app" that gets added to this list and/or you could write additional modules/applets for the hemisphere suite (there are memory issues, so have to delete something first). Right now I'm only focusing on modules for the hemisphere suite.
 
 Hemisphere splits the O_C into two sides, and each side can load pretty much any of the applets. So, you could have the BootsNCats module loaded on one side to make kicks and snares, and a two channel euclidean sequencer on the other side controlling the kick and snare. Hemisphere has something like 51 different modules that can be loaded. Each side of hemisphere has one button, one endless encoder (with push), two gate inputs, two cv inputs, and two cv outputs, and half of a small screen for graphics.
 
@@ -417,6 +417,10 @@ This is pretty much all you need for a simple VCA. CV 1 is a signal input. CV 2 
     }
 
 ```
+
+### SimpleVCO
+
+The outputs are 16 bit I think, and can support some VCO action. The original OC had the bytebeat algorithm which sounded really cool. I should try and make some kind of simple VCO with V/Oct pitch control...OK, tried messing with this, and haven't completed the task. The VectorLFO applet can go into the audio range. BootsNCats shows another example. 
 
 
 

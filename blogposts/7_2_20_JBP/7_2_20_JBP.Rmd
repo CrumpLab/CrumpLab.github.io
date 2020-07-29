@@ -256,11 +256,90 @@ Also, note to self, I wonder to what extent the Boykin's notion of vervacity has
 Actually, one more thing. In this paper, Boykin does not kick the tires of his vervistic considerations with experiments, so check out @boykinTaskVariabilityPerformance1982 which does.
 
 
+---
+
+I'm coming back to my reading project. This time I'm going to move a little more quickly across the journal.
+
+## Volume 4 Issue 1-2, August 1978
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["boykinBlackPsychologyResearch1978"])
+```
+
+Asking great questions about the objectivity of psychological science, and how a black psychology should be explicit in addressing concerns about bias in question asking, and ascertaining merit of the knowledge produced by a research program.
+
+Discusses some examples of subjectivity and philosophical orientation guiding research questions in learning.
+
+Describes Sherwood and Nataupsky (1968, Predicting the conclusions of Negro-white intelligence research from biographical characteristics of the investigator.)
+
+Describes the Milwaukee Project (Strickland, 1973), where black children are systematically extracted from their homes for increasingly longer periods of time  (for enrichment), and then show larger IQ gains than children not extracted through the program.
+
+Considers some heuristic values for a 12 stage research process that is reflective about bias concerns for the Black Community.
 
 
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["pierceFundingDeinstitutionalizationImpact1978"])
+```
+
+Overview of several problems with underfunding and equity in community-based programs for mental health that followed from deinstitutionalization (Community Mental Health Centers Act 1963).
 
 
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["williamsWhatHappenedABPsi1978"])
+```
 
+Absolutely fantastic paper covering how multiple organizations respond to the call for a moratorium on testing (by Black Psychologists in 1968) up to 1977.
+
+## Volume 6 Issue 1, August 1979
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["alexswanResearchExperimentationPrisons1979"])
+```
+
+Critical discussion of research in prisons, "The real question is: Whose concerns have social and behavioral scientists served, and what is the principal ideological guide for research in prisons?"
+
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["simmonsRelationshipAcademicStatus1979"])
+```
+
+
+## Early 80s
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["jonesTeachingChildrenMake1980"])
+```
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["clarkRacialGroupConcept1982"])
+```
+
+"The primary purpose of this study was to investigate the relationship of racial group concepts (racial attitudes and racial preferences) to general and specific self-esteem in Black children. The data indicate that no apparent relationship exists, a finding that is supportive of McAdoo (1973, 1978) and Rosenberg (1979). McAdoo (1973, 1978) reported Black children holding negative own-race attitudes and positive self-concepts, and concluded that Black children learn to compartmentalize their racial attitudes and prevent them from influencing self-evaluation. The present results raise serious questions concerning the construct validity of instruments employed by previous researchers who utilized racial preference or racial attitude measures to make implications about self-concept or self-esteem (Bunton & Weissbach, 1974; Rice, Ruiz, & Padilla, 1974). Other researchers have also questioned the past methodologies of racial preference research. Gordon (1976) indicated that many researchers utilized preference measures to assess self-concept in Blacks during 1939-1963, leading to much of the low self-concept results. Banks (1976) questioned the ability of many previous preference studies to statistical- ly prove Black preference for White. The present findings are also contrary to the Black self-hatred doctrine&dquo; posed so frequently by many previous social scientists (see Baldwin, 1979) by providing empirical data to negate the belief that Blacks who internalize negative racial group attitudes from the larger White society would inevitably possess negative self-evaluations."
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["jonesFindingBlackSelf1980"])
+```
+
+Abstract: "This brief paper develops a humanistic strategy for study of Black self-definition. It contrasts the distinction between personality and culture traditionally conceived in the social sciences with the way in which these important constructs are regarded by those utilizing humanistic strategies. Particular attention is given to the utility of humanistic strategy for penetrating Afro-American pre- sentations of self, and an effort has been made to explore humanistic developments in anthropology, history, and sociology, as well as psychology."
+
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["washingtonFieldStudyBlaxploitation1981"])
+```
+
+Two thumbs up for this paper.
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["wilkinsonPlayObjectsTools1980"])
+```
+
+Looks at how racism is embedded in toys over a period from the civil war to the depression. Methods include surveying catalogues of toys.
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["willieDominanceFamilyBlack1981"])
+```
+
+"Robert Staples (1970) and Jacquelyne Johnson Jackson ( 1973) have called 'the black matriarchy'; a myth. Jackson stated that even in the presence of evidence against it, some White social scientists continue to write about ';black female dominance over black society'; (Jackson, 1973, pp. 186-199). The purpose of this discussion is twofold: (a) to examine patterns of dominance in Black and White families by social class, and (b) to speculate on the reasons why White social scientists continue to ignore these findings."
 
 ---
 
