@@ -82,7 +82,7 @@ That's curious.
 
 However, if you know who is a eugenicist, because they for example founded the whole thing (e.g., Francis Galton), you can see that several known eugenicists published papers in the first issue of Psychological Review. You just have to connect those dots. TBH, it's really more of a question of who isn't a eugenicist in that issue.
 
-If you read about eugenics, you learn that eugenicists just want to breed the best people to make society a better place for eternity. They also want to enact negative eugenics on anyone they don't like, and attempt to eliminate them (e.g., forced sterilizations, Nazi genocide). This is just scratching the surface of the abhorrent practices and ideologies of eugenicists. They talk A LOT about doing this for the betterment of mankind. Their version of betterment is VERY SCARY. 
+If you read about eugenics, you learn that eugenicists just want to breed the best people to make society a better place for eternity. They also want to enact negative eugenics on anyone they don't like, and attempt to eliminate them (e.g., forced sterilizations, Nazi genocide). This is just scratching the surface of the abhorrent practices and ideologies of eugenicists. They talk A LOT about doing this for the betterment of mankind. Their version of betterment is VERY SCARY. Eugenics is also a very complicated and heterogeneous movement that varied over time and place, was widely accepted in society, and often dovetailed with numerous other socially progressive movements. 
 
 It is very intriguing to read the very first editorial in Psych Review, which is written by an APA president at the time. Sidenote, did you know that between 1892 and 1947, there were 31 APA presidents that were members or leaders of eugenics societies [@yakushkoEugenicsItsEvolution2019]. Have you ever wondered why that is? Or, say how it was that psychology was both created and weaponized by eugenicists to propagate eugenics policies. 
 
@@ -473,20 +473,82 @@ Jackson, L. A., & Ervin, K. S. (1991). The Frequency and Portrayal of Black Fema
 
 Johnson, R. (1993). Clinical Issues in the Use of the DSM-III-R with African American Children: A Diagnostic Paradigm. Journal of Black Psychology, 19(4), 447–460. https://doi.org/10/djvn98
 
-Molock, S. D., Kimbrough, R., Lacy, M. B., McClure, K. P., & Williams, S. (1994). Suicidal Behavior among African American College Students: A Preliminary Study. Journal of Black Psychology, 20(2), 234–251. https://doi.org/10/fcdz33
+ - Another fantastic paper
 
+Molock, S. D., Kimbrough, R., Lacy, M. B., McClure, K. P., & Williams, S. (1994). Suicidal Behavior among African American College Students: A Preliminary Study. Journal of Black Psychology, 20(2), 234–251. https://doi.org/10/fcdz33
+ 
 Ogbonnaya, A. O. (1994). Person as Community: An African Understanding of the Person as an Intrapsychic Community. Journal of Black Psychology, 20(1), 75–87. https://doi.org/10/bgtc67
 
 Payne, M. A., & Furnham, A. (1992). Parental Self-Reports of Child Rearing Practices in the Caribbean. Journal of Black Psychology, 18(2), 19–36. https://doi.org/10/bgnpzc
 
 Schiele, J. H. (1991). An Epistemological Perspective on Intelligence Assessment among African American Children. Journal of Black Psychology, 17(2), 23–36. https://doi.org/10/b3snw2
 
+ - more criticism of IQ testing on African American children, with some consideration of expanding tests to include additional desired features. 
+
 Sellers, R. M. (1993). A Call to Arms for Researchers Studying Racial Identity. Journal of Black Psychology, 19(3), 327–332. https://doi.org/10/cjvrhh
+
+ - more thoughts on developing racial idenity theories
 
 Taylor, D. L., Chitwood, D. D., McElrath, K., & Belgrave, L. L. (1994). Ethnicity, Social Support, and Injection Drug Use. Journal of Black Psychology, 20(1), 36–46. https://doi.org/10/c3r2w3
 
+## Late 90s
+
+Allen, B. A., & Butler, L. (1996). The Effects of Music and Movement Opportunity on the Analogical Reasoning Performance of African American and White School Children: A Preliminary Study. Journal of Black Psychology, 22(3), 316–328. https://doi.org/10/cbmsp2
+
+ - some positive evidence, in the tradition of Boykin
+
+Bailey, W., Nowicki, S., & Cole, S. P. (1998). The Ability to Decode Nonverbal Information in African American, African and Afro-Caribbean, and European American Adults. Journal of Black Psychology, 24(4), 418–431. https://doi.org/10/chtjbs
 
 
+Bazargan, M., & Bazargan, S. (1997). Self-Reported Memory Function and Psychological Well-Being Among Elderly African American Persons. Journal of Black Psychology, 23(2), 103–119. https://doi.org/10/bzhqh3
+
+Bowler, R. M., Mergler, D., Huel, G., & Cone, J. E. (1996). Adverse Health Effects in African American Residents Living Adjacent to Chemical Industries. Journal of Black Psychology, 22(4), 470–497. https://doi.org/10/bzn34x
+
+Broman, C. L. (1997). Race-Related Factors and Life Satisfaction Among African Americans. Journal of Black Psychology, 23(1), 36–49. https://doi.org/10/cbtqkd
+
+Dixon, P., & ya Azibo, D. A. (1998). African Self-Consciousness, Misorientation Behavior, and a Self-Destructive Disorder: African American Male Crack-Cocaine Users. Journal of Black Psychology, 24(2), 226–247. https://doi.org/10/fmvnw9
+
+Doverspike, D., & Arthur, Winfred. (1995). Race and Sex Differences in Reactions to a Simulated Selection Decision Involving Race-Based Affirmative Action. Journal of Black Psychology, 21(2), 181–200. https://doi.org/10/d94sb8
+
+ - role of competence information
+ 
+Ewing, K. M., Richardson, T. Q., James-Myers, L., & Russell, R. K. (1996). The Relationship between Racial Identity Attitudes, Worldview, and African American Graduate Students’ Experience of the Imposter Phenomenon. Journal of Black Psychology, 22(1), 53–66. https://doi.org/10/bf32v3
+
+
+
+Harrison, A. O., McAdoo, J. L., & McAdoo, H. P. (1995). History of the Empirical Conference on Black Psychology. Journal of Black Psychology, 21(4), 329–331. https://doi.org/10/c23qjc
+
+ - short history of this conference, and its role in shaping research/methodology among Black Psychologists
+
+Haynes, N. (1995). How Skewed is the Bell Curve? Journal of Black Psychology, 21(3), 275–292. https://doi.org/10/d2sn8k
+
+ - Yet again JBP is a source for critiquing scientific racism, this time the Bell Curve. 
+
+Onwuegbuzie, A. J. (1999). Statistics Anxiety among African American Graduate Students: An Affective Filter? Journal of Black Psychology, 25(2), 189–209. https://doi.org/10/cdhhfn
+
+ - " The recruitment and retention of African Americans in graduate schools remains a significant problem. Statistics anxiety has been found to be prevalent among graduate students, being implicated both as a barrier to success in quantitative courses and a barrier to completion of theses and dissertations. To date, it is un- clear whether African American graduate students experience higher levels of statistics anxiety. Thus, the purpose of this study was to compare levels of statis- tics anxiety between African American and Caucasian American graduate stu- dents. A series of t tests revealed that the African American graduate students had higher levels of statistics anxiety than did their Caucasian American coun- terparts. Recommendations for future research are provided. Also, implications for educators responsible for recruiting and retaining African American gradu- ate students are discussed."
+
+Oshodi, J. E. (1999). The Empty-Pot Healing Approach: Its Origins, Nature, and Practice. Journal of Black Psychology, 25(1), 23–35. https://doi.org/10/d473jw
+ 
+ - "The Oshodi Empty-Pot Healing Approach (OEPHA) is rooted in African ancient traditions and is characterized by Afrocentric-based psychological theories on therapeutic and personality dimensions. The OEPHA aims to create and fortify processes of optimal balance, vitality, harmony, and an index of achievement- survival motives. Therapy undergoes a circle of therapeutic actions in response to the 11 phases of the OEPHA: Entrustment, Expressivement, Ejectment, Elabo- ration, Enactment, Embankment, Empowerment, Ensemblement, Encirclement, Enlightenment, and Enrichment. The operationalization of the OEPHA was shown through a case study."
+
+Penn, M. L., & Coverdale, C. (1996). Transracial Adoption: A Human Rights Perspective. Journal of Black Psychology, 22(2), 240–245. https://doi.org/10/fmwh2z
+
+ - Special issue devoted to this topic
+
+Richard, O. C., & Kirby, S. L. (1997). African Americans’ Reactions to Diversity Programs: Does Procedural Justice Matter? Journal of Black Psychology, 23(4), 388–397. https://doi.org/10/dk8tnz
+
+
+Utsey, S. O. (1998). Assessing the Stressful Effects of Racism: A Review of Instrumentation. Journal of Black Psychology, 24(3), 269–288. https://doi.org/10/fwbdbh
+
+ - Special issue
+ - psychometric scales
+
+Warfield-Coppock, N. (1995). Toward a Theory of Afrocentric Organizations. Journal of Black Psychology, 21(1), 30–48. https://doi.org/10/d6k36r
+
+Williams, R. L. (1997). The Ebonics Controversy. Journal of Black Psychology, 23(3), 208–214. https://doi.org/10/d5xkv5
+
+ - Special issue 
 
 ---
 
