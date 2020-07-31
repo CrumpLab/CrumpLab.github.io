@@ -422,7 +422,7 @@ This is pretty much all you need for a simple VCA. CV 1 is a signal input. CV 2 
 
 The outputs are 16 bit I think, and can support some VCO action. The original OC had the bytebeat algorithm which sounded really cool. I should try and make some kind of simple VCO with V/Oct pitch control...OK, tried messing with this, and haven't completed the task. The VectorLFO applet can go into the audio range. BootsNCats shows another example. 
 
-
+## functions
 
 
 
