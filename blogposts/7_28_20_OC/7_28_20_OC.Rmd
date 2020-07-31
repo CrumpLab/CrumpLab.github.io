@@ -428,24 +428,3 @@ The outputs are 16 bit I think, and can support some VCO action. The original OC
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-## Functions
-
-This could be a half-baked list of functions that I'm discovering...Not sure yet if I'll have the time to dive into documentation.
-
-
-
-
-
-
