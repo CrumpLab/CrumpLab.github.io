@@ -26,4 +26,7 @@ navbar:
     - text: ""
       icon: fa-github
       href: "https://github.com/CrumpLab"
+    - text: ""
+      icon: fa-youtube
+      href: "https://www.youtube.com/channel/UCSaZ1htKwtZ1GuqI1xGjuSA?"
 output_dir: "."

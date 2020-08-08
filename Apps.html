@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -14,6 +13,7 @@
 
 <title>Apps</title>
 
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -252,6 +252,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -280,6 +281,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -396,6 +403,13 @@ div.tocify {
     
   </a>
 </li>
+<li>
+  <a href="https://www.youtube.com/channel/UCSaZ1htKwtZ1GuqI1xGjuSA?">
+    <span class="fa fa-youtube"></span>
+     
+    
+  </a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -419,8 +433,8 @@ div.tocify {
 <h2>R Packages</h2>
 <hr />
 <div class="row">
-<div class="col-sm-8">
-<h4 id="vertical"><a href="https://crumplab.github.io/vertical/">vertical</a></h4>
+<div id="vertical" class="section level4 col-sm-8">
+<h4><a href="https://crumplab.github.io/vertical/">vertical</a></h4>
 <p>R-studio project template and workflow for sharing psychological research projects in the form of a website.</p>
 </div>
 <div class="col-sm-4">
@@ -429,8 +443,8 @@ div.tocify {
 </div>
 <hr />
 <div class="row">
-<div class="col-sm-8">
-<h4 id="rsemanticlibrarian"><a href="https://crumplab.github.io/RsemanticLibrarian/">RsemanticLibrarian</a></h4>
+<div id="rsemanticlibrarian" class="section level4 col-sm-8">
+<h4><a href="https://crumplab.github.io/RsemanticLibrarian/">RsemanticLibrarian</a></h4>
 <p>R functions for creating semantic librarians, a tool for vectorizing and visualizing semantic spaces from text</p>
 </div>
 <div class="col-sm-4">
@@ -439,8 +453,8 @@ div.tocify {
 </div>
 <hr />
 <div class="row">
-<div class="col-sm-8">
-<h4 id="jspsychr"><a href="https://crumplab.github.io/jspsychr/">jspsychr</a></h4>
+<div id="jspsychr" class="section level4 col-sm-8">
+<h4><a href="https://crumplab.github.io/jspsychr/">jspsychr</a></h4>
 <p>Write and run jspsych experiments using R studio.</p>
 </div>
 <div class="col-sm-4">
@@ -449,8 +463,8 @@ div.tocify {
 </div>
 <hr />
 <div class="row">
-<div class="col-sm-8">
-<h4 id="playjareyesores"><a href="https://crumplab.github.io/playjareyesores/">playjareyesores</a></h4>
+<div id="playjareyesores" class="section level4 col-sm-8">
+<h4><a href="https://crumplab.github.io/playjareyesores/">playjareyesores</a></h4>
 <p>Functions for detecting textual overlap (e.g., possible plagiarism) between documents <a href="https://crumplab.github.io/playjareyesores/">https://crumplab.github.io/playjareyesores/</a></p>
 </div>
 <div class="col-sm-4">
@@ -459,8 +473,8 @@ div.tocify {
 </div>
 <hr />
 <div class="row">
-<div class="col-sm-8">
-<h4 id="conflictpower"><a href="https://crumplab.github.io/conflictPower/">conflictPower</a></h4>
+<div id="conflictpower" class="section level4 col-sm-8">
+<h4><a href="https://crumplab.github.io/conflictPower/">conflictPower</a></h4>
 <p>Monte-carlo based power analysis for cognitive control designs. <a href="https://crumplab.github.io/conflictPower/">https://crumplab.github.io/conflictPower/</a></p>
 </div>
 <div class="col-sm-4">
@@ -587,7 +601,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
