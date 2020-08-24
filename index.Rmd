@@ -60,11 +60,17 @@ The lab is located in the Department of Psychology at Brooklyn College of CUNY, 
 |Lab: 4303 James Hall|
 
 </div>
-<div class="col-sm-6", style= "text-align:right;">
+<div class="col-sm-6", style= "text-align:left;">
 
 ```{r logo, fig.height=2, fig.width=2, echo=FALSE, fig.align="center", out.extra="id=logo"}
 knitr::include_graphics("images/logo.png")
 ```
 
+<iframe src="news/news.html" title="news" style='height:400px;width:100%;overflow:auto;border:8px solid #49c5b6;padding:2%'></iframe>
+
 </div>
+</div>
+
+
+
 
