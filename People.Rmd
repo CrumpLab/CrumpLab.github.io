@@ -9,13 +9,15 @@ output:
 | Current | Info |
 |:--------|-------:|
 |Matthew Crump| PI, email: mcrump@brooklyn.cuny.edu|
+|Kevonte Mitchell| Doctoral Student|
+|Patrick Ihejirika| Undergraduate MARC|
+|Austin Kaplan| Undergraduate Honors|
 
 --------
 
 | Previous | Info |
 |:--------|-------:|
 |[Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html)| Ph.D.|
-|Kevonte Mitchell| Doctoral Student|
 |Lawrence Behmer| 2014-2017 Postdoc|
 |Mark Rayev| Undergraduate Macaulay Honors|
 |Walter Lai| 2018: Undergraduate|
