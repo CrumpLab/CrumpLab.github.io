@@ -1,0 +1,52 @@
+---
+title: "News"
+output: html_document
+---
+
+August 2020
+
+ - Rebooting my youtube channel [Programming for Psychologists](https://www.youtube.com/channel/UCSaZ1htKwtZ1GuqI1xGjuSA?), preparing for online teaching, and creating tutorials for vertical
+ - Create course website for PSYC 73800 Cognitive Psychology <https://crumplab.github.io/psyc73800/>
+ - Create course website for PSYC 7709G Stats Lab <https://crumplab.github.io/psyc7709Lab/>
+ - Submitted OER proposal to develop graduate statistics and undergraduate cognitive psychology content
+
+---
+
+April-July 2020
+
+ - Crump, M. J. C.; Jamieson, R. K.; Johns, B. T.; and Jones, M. N. Controlling the retrieval of general vs specific semantic knowledge in the instance theory of semantic memory. In Denison, S.; Mack, M.; Xu, Y.; and Armstrong, B. C., editor(s), *Proceedings of the 42nd Annual Conference of the Cognitive Science Society*, pages 3261–3267. [Project Website](https://crumplab.github.io/ITS2/)
+ - Vuorre, M.; and Crump, M. J. C. Sharing and organizing research products as R packages. *Behavioral Research Methods.* Accepted.[Project Website](https://crumplab.github.io/vertical/)
+ - Johns, B. T.; Jamieson, R. K.; Crump, M. J. C.; Jones, M. N.; and K., M. D. J. Production without Rules: Using an Instance Memory Model to Exploit Structure in Natural Language. *Journal of Memory and Language.* Accepted.
+
+---
+
+Februrary-March 2020
+
+ - Sabbatical Trip...came home early :(
+
+---
+
+January 2020
+
+ - Submitted to CogSci 2020: Crump, M. J. C.; Jamieson, R. K.; Johns, B. T.; and Jones, M. N. Controlling the retrieval of general vs specific semantic knowledge in the instance theory of semantic memory. 
+
+---
+
+December 2019
+
+ - Visiting Scholar @ NYU with Todd Gureckis
+ - Developing [vertical](https://crumplab.github.io/vertical/),  an R-package to assist with creating, curating, communicating reproducible research assets with Matti Vourre.
+
+---
+
+November 2019
+
+ - Presented Semantic Librarian @ SCIP 2019
+ - <https://www.semanticlibrarian.com>
+
+-----
+
+October 2019
+
+ - Visiting Scholar @ University of Manitoba
+ - working on the role of instance-based memory processes underlying inferential reasoning with Randy Jamieson
