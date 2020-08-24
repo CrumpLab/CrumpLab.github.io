@@ -14,9 +14,60 @@ output:
 
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.
 
+
+
+## Fall 2020
+
 ---
 
-## Current (Spring 2019)
+<div class="row">
+<div class="col-sm-6">
+
+#### Psyc 73800 - Cognitive Psychology
+
+Graduate Center of CUNY
+
+Bi-weekly modules taught by different faculty. The [course website](https://crumplab.github.io/psyc73800/) contains syllabus and readings.
+
+</div>
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/psyc73800/">
+```{r cogsci2020, out.width=200, echo=F}
+knitr::include_graphics("images/cognitive_science.png")
+```
+</a>
+
+</div>
+</div>
+
+-----
+
+<div class="row">
+<div class="col-sm-6">
+
+#### Psyc 7709G - Statistical Methods Practicum I
+
+Brooklyn College of CUNY
+
+The [course website](https://crumplab.github.io/psyc7709Lab/) contains syllabus and readings.
+
+</div>
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/psyc7709Lab/">
+```{r statsLab, out.width=150, echo=F}
+knitr::include_graphics("images/Rstudio.png")
+```
+</a>
+
+</div>
+</div>
+
+
+-----
+
+## Spring 2019
 
 ----
 
