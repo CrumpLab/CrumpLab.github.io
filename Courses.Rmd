@@ -57,7 +57,7 @@ The [course website](https://crumplab.github.io/psyc7709Lab/) contains syllabus 
 
 <a href="https://crumplab.github.io/psyc7709Lab/">
 ```{r statsLab, out.width=150, echo=F}
-knitr::include_graphics("images/Rstudio.png")
+knitr::include_graphics("images/Psyc7709G.png")
 ```
 </a>
 
