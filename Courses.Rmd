@@ -76,12 +76,12 @@ knitr::include_graphics("images/Psyc7709G.png")
 
 #### Psyc 7709: Using R for reproducible research
 
-This is a special topics course for the Experimental Psychology Master's program. The course website is [https://crumplab.github.io/psyc7709](https://crumplab.github.io/psyc7709)
+This is a special topics course for the Experimental Psychology Master's program. The course website is <https://crumplab.github.io/psyc7709_2019/>
 
 </div>
 <div class="col-sm-6">
 
-<a href="https://crumplab.github.io/psyc3400/">
+<a href="https://crumplab.github.io/psyc7709_2019/">
 ```{r rcourse, out.width=150, echo=F}
 knitr::include_graphics("images/Rstudio.png")
 ```
