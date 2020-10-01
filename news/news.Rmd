@@ -3,6 +3,14 @@ title: "News"
 output: html_document
 ---
 
+September 2020
+
+ - In a lab unrelated activity, I released an album with lots of synthesizer sounds 
+ 
+ <iframe src="https://open.spotify.com/embed/album/6gRMnY4p8Qxlz5ObK7EV8m" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+---
+
 August 2020
 
  - Rebooting my youtube channel [Programming for Psychologists](https://www.youtube.com/channel/UCSaZ1htKwtZ1GuqI1xGjuSA?), preparing for online teaching, and creating tutorials for vertical
