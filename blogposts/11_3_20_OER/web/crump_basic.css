@@ -1,7 +1,7 @@
 
 /*Table of contents active color*/
 .list-group-item.active {
-  background-color: #72687a!important;
+  background-color: #7d7d7d!important;
   border-color: #72687a;
 }
 
@@ -84,10 +84,20 @@ div.references p{
 */
 
 .tocify .tocify-item a, .tocify .list-group-item {
-  padding: 10px;
+  padding: 5px;
   font-size: 15px;
   font-weight: 400;
-  background-color: #d8d1de;
+  background-color: #ffffff;
+  text-align: right;
+}
+
+.tocify {
+  border: 0px solid #ccc;
+  border-radius: 0;
+}
+
+.tocify img {
+  margin-bottom: 10px!important;
 }
 
 .tocify-header {
