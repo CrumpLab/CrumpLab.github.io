@@ -50,7 +50,7 @@ knitr::include_graphics("blogposts/11_3_20_OER/img/OER.png")
 </div>
 <div class="col-sm-8">
 
-# [Developing open educational resources](https://crumplab.github.io/blogposts/11_3_20_OER/11_3_20_OER.html)
+# [Looking back on a few years of OER development](https://crumplab.github.io/blogposts/11_3_20_OER/11_3_20_OER.html)
 
 November 3, 2020
 
