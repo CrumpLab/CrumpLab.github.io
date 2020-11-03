@@ -106,3 +106,7 @@ div.references p{
 .subhead {
   text-indent: 0;
 }
+
+.toc-content{
+  padding-right: 200px;
+}
