@@ -4,7 +4,7 @@ author: "Matt Crump"
 date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
 twitter:
   card_description: "Some thoughts on developing open educational resources while at Brooklyn College of CUNY"
-  card_img: "https://crumplab.github.io/blogposts/11_3_20_OC/img/OER.png"
+  card_img: "https://crumplab.github.io/blogposts/11_3_20_OER/img/OER.png"
 bibliography: refs.bib
 csl: web/apa.csl
 output: 
