@@ -45,6 +45,25 @@ This blog is a public-facing expression of me working through various ideas and 
 <div class="row">
 <div class="col-sm-4">
 ```{r, echo=F, out.width="50%"}
+knitr::include_graphics("blogposts/11_3_20_OER/img/OER.png")
+```
+</div>
+<div class="col-sm-8">
+
+# [Developing open educational resources](https://crumplab.github.io/blogposts/11_3_20_OER/11_3_20_OER.html)
+
+November 3, 2020
+
+Some new and old thoughts on developing open educational resources while at Brooklyn College of CUNY. 
+
+</div>
+</div>
+
+---
+
+<div class="row">
+<div class="col-sm-4">
+```{r, echo=F, out.width="50%"}
 knitr::include_graphics("blogposts/7_28_20_OC/img/OC.png")
 ```
 </div>
@@ -605,19 +624,6 @@ I need to eat something. Done here.
 2018-07-24, last compiled: `r Sys.Date()`
 
 This will be updated with a list populated from google forms. If you added to the google form and your web-address is not listed here, right now you will just have to wait for me to recompile this blog (when I figure out how to automate this daily, it will update by itself on some regular interval...maybe).
-
-If you want to add your website to this list, use this [google form](https://docs.google.com/forms/d/e/1FAIpQLScQOJ9OX4w4wIGrNuvGvmxLA-fUvq3o4UFouBZDx0XjIaZN9g/viewform?usp=sf_link).
-
-
-```{r, cache=FALSE, eval=F}
-library(googlesheets)
-#gs_ls()
-web_df <- gs_title("LearningR (Responses)")
-ss_df <- gs_read(ss=web_df, ws = "Form Responses 1", skip=0)
-names(ss_df)<-c("Date Added","Website")
-knitr::kable(ss_df)
-
-```
 
 # My experience with OER development at CUNY so far
 

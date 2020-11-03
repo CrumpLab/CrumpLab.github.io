@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+
+    <meta charset="utf-8" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+            <meta name="twitter:card" content="summary" />
+       <meta name="twitter:title" content="Developing open educational resources"/> 
+      <meta name="twitter:creator" content="@MattCrump_" />
+      <meta name="twitter:description" content="Some thoughts on developing open educational resources while at Brooklyn College of CUNY" /> 
+            <meta name="twitter:image" content="https://crumplab.github.io/blogposts/11_3_20_OC/img/OER.png"/>
+      
+
+      
+        <meta name="generator" content="pandoc" />
+
+                    
+                        <meta name="author" content="Matt Crump" />
+              
+              
+                <title>Developing open educational resources</title>
+
+                                <script src="11_3_20_OER_files/header-attrs-2.3/header-attrs.js"></script>
+                                <script src="11_3_20_OER_files/jquery-1.11.3/jquery.min.js"></script>
+                                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                                <link href="11_3_20_OER_files/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+                                <script src="11_3_20_OER_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+                                <script src="11_3_20_OER_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+                                <script src="11_3_20_OER_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+                                <script src="11_3_20_OER_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+                                <link href="11_3_20_OER_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+                                <script src="11_3_20_OER_files/tocify-1.9.1/jquery.tocify.js"></script>
+                                <script src="11_3_20_OER_files/navigation-1.1/tabsets.js"></script>
+                                <script src="11_3_20_OER_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
+                                <style>
+                                @import url('https://fonts.googleapis.com/css?family=Serif+Pro|Open+Sans&display=swap');
+                                </style>
+
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                <!-- Global site tag (gtag.js) - Google Analytics -->
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-1"></script>
+                                <script>
+                                  window.dataLayer = window.dataLayer || [];
+                                  function gtag(){dataLayer.push(arguments);}
+                                  gtag('js', new Date());
+
+                                  gtag('config', 'UA-79429674-1');
+                                </script>
+                
+                
+                      
+                          
+                                                    <style type="text/css">
+                          h1 {
+                            font-size: 34px;
+                          }
+                        h1.title {
+                          font-size: 38px;
+                        }
+                        h2 {
+                          font-size: 30px;
+                        }
+                        h3 {
+                          font-size: 24px;
+                        }
+                        h4 {
+                          font-size: 18px;
+                        }
+                        h5 {
+                          font-size: 16px;
+                        }
+                        h6 {
+                          font-size: 12px;
+                        }
+                        .table th:not([align]) {
+                          text-align: left;
+                        }
+                          </style>
+  
+    <link rel="stylesheet" href="web/crump_basic.css" type="text/css" />
+    
+
+
+        <style type = "text/css">
+      .main-container {
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    code {
+      color: inherit;
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    img {
+      max-width:100%;
+      height: auto;
+    }
+    .tabbed-pane {
+      padding-top: 12px;
+    }
+    .html-widget {
+      margin-bottom: 20px;
+    }
+    button.code-folding-btn:focus {
+      outline: none;
+    }
+    summary {
+      display: list-item;
+    }
+    </style>
+
+      
+      
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../index.html">Crump Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="../../People.html">People</a>
+</li>
+<li>
+  <a href="../../Publications.html">Publications</a>
+</li>
+<li>
+  <a href="../../Books.html">Books/OER</a>
+</li>
+<li>
+  <a href="../../Courses.html">Courses</a>
+</li>
+<li>
+  <a href="../../Apps.html">Apps</a>
+</li>
+<li>
+  <a href="../../Opportunities.html">Join The Lab</a>
+</li>
+<li>
+  <a href="../../Blog.html">Blog</a>
+</li>
+<li>
+  <a href="../../R.html">R</a>
+</li>
+<li>
+  <a href="https://twitter.com/MattCrump_">
+    <span class="fa fa-twitter"></span>
+
+
+  </a>
+</li>
+<li>
+  <a href="https://github.com/CrumpLab">
+    <span class="fa fa-github"></span>
+
+
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+<img src="https://crumplab.github.io/blogposts/11_3_20_OC/img/OER.png"" />
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Developing open educational resources</h1>
+
+<span class="author">Matt Crump  |  </span>
+<span class="date">Last edited: 03 November, 2020</span>
+
+<span class="social_media">
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</span>
+
+
+</div>
+
+
+<hr />
+<div id="my-experience-with-oer-development-at-cuny-so-far" class="section level2">
+<h2>My experience with OER development at CUNY so far</h2>
+<p>2018-07-24, last compiled: 2020-11-03</p>
+<p>CUNY was awarded a <a href="http://www2.cuny.edu/libraries/open-educational-resources/">4 million dollar grant by New York State</a> for all things OER (open-educational resources). OERs are transforming education right now because they create a zero-textbook cost course for students, saving them lots of moola. This is great, and there is a lot of fantastic, high quality OER content out there. Especially in Psych.</p>
+<p>I’ve been participating in OER development at Brooklyn College of CUNY. I was awarded a small $2,000 grant from the library to create an OER for our <a href="https://crumplab.github.io/ResearchMethods/">Research methods course</a>, which I made last summer (2017). I created an <a href="https://crumplab.github.io/OER_bookdown/">OER tutorial</a> on the process I use to make OERs using all free and open-source software. I made my <a href="https://crumplab.github.io/programmingforpsych/">programming book for Psychologists</a> into an OER. And, this summer I was awarded another small grant to make an OER for statistics, creating both a <a href="https://github.com/CrumpLab/statistics">textbook</a> and <a href="https://github.com/CrumpLab/statisticsLab">lab manual</a>. And, I’ve submitted a proposal to make another OER for a cognitive psychology textbook, with plans to write this year. That’s a lot of OER development!</p>
+<p>I thought I would say a few things about this experience, because I think OER development in general, and at CUNY is vitally important. It’s great that CUNY is supporting this. It’s a relatively new development. It’s gone fairly well so far, but there is some room for improvement. Below I talk about what’s gone well, and what needs improvement.</p>
+</div>
+<div id="smooth-sailing-with-oers-at-cuny" class="section level2">
+<h2>Smooth Sailing with OERs at CUNY</h2>
+<p>CUNY is a Medusa of public universities and colleges, it’s never clear who is in charge of what, at different levels. My experience is limited to working with the Librarians at Brooklyn College of CUNY.</p>
+<ol style="list-style-type: decimal">
+<li><p>The librarians I’ve been working with are FANTASTIC, and super helpful. They’ve spearheaded the task of managing the grant funds at BC, and encouraging faculty to convert to OERs. They’ve put on open-houses at BC, they’ve facilitated mini-conferences, they have excellent technical support. Nothing short of fantastic.</p></li>
+<li><p>I’ve been given the flexibility to development OERs in the way I want, with the tools I want to use. Thank you BC @ CUNY for letting me do this. This is vitally important, because there are lots of different work flows, and there should not be a single way of doing this. I am eternally grateful I don’t have to “convert” my things into some “standard” format I don’t want to use.</p></li>
+<li><p>There is a small bit of money for converting your course to an OER, this small bit of money is much appreciated, especially on our salaries at CUNY (considering cost of living in NYC). Most important, is that there is also a small bit of money for TAs and other instructors who adopt the materials that a lead instructor makes. This incentives the adoption of OERs that are made, and a little bit of extra money is great for adjuncts who should get paid more.</p></li>
+<li><p>The library has set up websites and databases to connect your new OER with the wider universe of searchable OER databases, this is great.</p></li>
+<li><p>Overall, the experience has been a no-brainer for me, because I was already doing zero-textbook cost courses, this just makes it official.</p></li>
+</ol>
+</div>
+<div id="rough-waters-with-oers-at-cuny" class="section level2">
+<h2>“Rough waters” with OERs at CUNY</h2>
+<p>The experience of OER development is not without it’s issues. Here are some of them.</p>
+<ol style="list-style-type: decimal">
+<li>MONEY. Money is always an issue. So what’s the issue if there is 4 million dollars for OERs at CUNY? First, us OER developers are really grateful for the small bit of money we get. That’s nice, thank you. I realize there isn’t an infinite amount of money for doing this. However, the $2,000 dollars someone gets appears to be mainly for OER conversion. That is adopting someone else’s OER for your course, then figuring out how to use, and perhaps modifying it in a minimal way. This is different from developing entire OERs.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>One nice thing about OERs is that when you develop them you can extend the work by previous developers. For example, I did this with my research methods book, and re-made an existing OER that had already been versioned a couple different times. However, this took an entire summer because of the amount of development I put into it. I also wrote an entire lab manual for the course from scratch. This was not reflected in the small grant I received.</p></li>
+<li><p>Right now I am writing a stats textbook. I’m borrowing some existing material here and there, but mostly re-writing everything because I have things to say. It’s difficult to estimate the amount of hours I’m putting in on this (A LOT!). Almost everything else I’m doing has come to a full-stop. I won’t be submitting a grant this summer. I’m committed to getting this textbook done for my students! I’m not asking for more money, I already agreed to do this in a negotiation process that went very well. In fact, this is one the nice things about OER development. I was able to negotiate a larger grant to pay 4 other collaborators on the project, and the TAs that will adopt this OER, that’s fantastic. However, from the perspective of writing entire textbooks, I’m leaving loads of money of the table (assuming I could get a publishing deal and force my students to buy my textbook, which would make me a horrible human being.). I suppose I’m simply saying that CUNY could distinguish grants to faculty in terms of OER conversion and OER development. This is already done somewhat informally through negotiation with the Library, which apparently has some flexibility in how the funds are spent. Clearer guidelines on this would be useful, and incentivizing the massive amount of work it takes to develop entire course (e.g., with websites, slide-decks, textbooks, lab manuals, question banks, etc.) would take OER sponsorship at CUNY to the next level. Let’s go to the next level.</p></li>
+<li><p>The CUNY grant gave slim to none pickings of the available money to Faculty and instructors who develop and adopt OERs, and tonnes of money to the library to hire technicians to support the OERs. This is great because many faculty aren’t technicians. This sucks for faculty who are technical and do all of the technical work.</p></li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Faculty buy-in. There has been a lack-luster response by the majority of faculty at BC to OER development. They apparently just don’t know about it. The attendance of the library sponsored OER events was abysmal. I don’t know what this is about. Likely a combination of low-bandwidth on the part of very busy people to do anything more than they are already doing.</li>
+</ol>
+<p><strong>Faculty credit.</strong> This one deserves it’s own little section. In my earlier twitter post I wondered out loud to our Brooklyn College President, about whether BC recognizes OER development as part of the tenure process. I don’t know if it is does. It doesn’t matter for me anymore because they just gave me tenure. If BC already recognizes these things for tenure, that’s great, my following agitation will be needless. However, if it does not, then this is the agitation. I’ve seen posts on twitter from other faculty around the world lamenting the fact that external reviewers poo-pooed their stated OER development as not scholarly work. You try writing a 600 page book teaching R and stats, or something similar, to students.</p>
+<p>Of course research output is a super important aspect of the tenure process. I am totally and fully supportive of that aspect. In fact, I’m a little bit worried about what I am about to advocate for, because I hate seeing any opportunity to diminish the role of research. Junior Faculty are too often encouraged into teaching and service duties that massively unbalance their ability to do research, which is very important. In the ideal balancing case, the trifecta feeds into itself creating a positive feedback loop that simultaneously improves research, teaching, and service.</p>
+<p>The obvious culprit in all of this is TIME. There is not enough of it. When I develop an entire OER, all the TIME goes into that, and none of the time goes into writing grants etc. Junior faculty can’t spend all their time doing teaching, so if they do OER development, under what I presume to be the current point system for tenure, they are losing. I’m worried about this for new faculty because they will probably be the ones making the OERs. The older faculty aren’t the ones doing it, they are in the very slim minority of OER developers at BC. They already have tenure, so credit for OER just pads their CVs.</p>
+<p>I was invited to lecture on OERs this August to the new incoming faculty at BC. What will I say to them? I can show them pictures of the things that I did (which I will), show them the tools I use (which are easy to learn, and super flexible), and then say what? Should I tell them to develop OERs? Or should I tell them to “RUN AWAY BECAUSE NO ONE WILL CARE, except your students”. I want to tell them they should consider developing OERs. But, I’m not sure that I can, because I don’t want to ruin their chances at tenure by suggesting they work their tail off and unbalance research and teaching.</p>
+<p>I will finish this by saying that Faculty who develop OERs from scratch, are spending huge amounts of their time (time away from other things in their life), to produce indispensable free materials for their students. They are contributing to a global movement, where the materials are being shared and updated and improved, making them even better, while maintaining them as free resources. I suspect some of the publishing companies are getting worried, what if no one buys their textbooks because the ones we are making are so much more AWESOME. We’re leaving money on the table. It would be nice to have some academic recognition from the College. And, this isn’t to say hey recognize me (I did already did this without caring about that, and I suspect it wasn’t part of the tenure discussion for my case, maybe I’m wrong). I’m saying let the new faculty know they will be recognized. Give them that incentive. Support MORE BETTER OER AT CUNY.</p>
+</div>
+<div id="closing-thoughts" class="section level2">
+<h2>Closing thoughts</h2>
+<p>I am really glad about everything CUNY has done so far with respect to OERs. Some of my agitations are out of ignorance, for example, I don’t know that OER development is recognized in any way at Brooklyn College for Junior Faculty (or I suppose for any facult looking to go up a level). If it already is great, let’s make that known. If it isn’t, let’s fix that.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>
