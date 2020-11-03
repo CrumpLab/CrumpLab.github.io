@@ -107,6 +107,8 @@ div.references p{
   text-indent: 0;
 }
 
-.col-md-9 {
-width: 60%;
+@media (min-width: 768px) {
+  .col-md-9 {
+        width:60%
+    }
 }
