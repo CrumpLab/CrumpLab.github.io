@@ -13,9 +13,9 @@ h2, h3, h5, h6, .h2, .h3, .h5, .h6 {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   /*font-family: 'Lato', sans-serif;*/
   /*font-family: 'Source Serif Pro', serif;*/
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
-  line-height: 1.4;
+  line-height: 1.8;
   color: inherit;
 }
 
@@ -23,27 +23,28 @@ h1, h4, .h1, .h4 {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   /*font-family: 'Lato', sans-serif;*/
   /*font-family: 'Source Serif Pro', serif;*/
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   line-height: 1.2;
   color: inherit;
 }
 
 p {
-  text-indent: 5%;
-  line-height: 1.7;
+  text-indent: 0%;
+  line-height: 2.55rem;
+  margin-bottom: 1.5rem;
 }
 
 body {
   /*font-family: "Lato script=latin rev=1",'Lato', sans-serif;*/
   font-family: 'Source Serif Pro', serif;
-  font-size: 21px;
+  font-size: 1.8rem;
   font-weight: 400;
   font-style: normal;
   line-height: 32px;
   color: #222222;
   background-color: #ffffff;
-  letter-spacing: -0.003em;
+  letter-spacing: -0.001em;
 }
 
 .twitter, .github, .social_media, .website{
@@ -119,6 +120,6 @@ div.references p{
 
 @media (min-width: 768px) {
   .col-md-9 {
-        width:60%
+        width:50%
     }
 }
