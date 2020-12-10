@@ -1,7 +1,7 @@
 ---
 title: "Crump Lab"
 cover-image: "/images/logo.png"
-description: "Human Cognition and Performance Lab"
+description: "Computational Cognition Lab"
 output: 
   html_document:
     includes:
@@ -32,41 +32,35 @@ close(CON)
 
 </style>
 
-# Human Cognition and Performance Lab
-
-<div class="row" style="padding-top: 30px;">
+<div class="row">
 <div class="col-sm-6">
 
-### Learning | Memory | Attention | Performance | Skill-learning | Computational Modeling | Statistics {style="padding-top: 0px;"}
-
-How do people learn new skills like playing a musical instrument or typing on a computer keyboard? How does memory work? How do people pay attention to their surroundings? How do people become sensitive to patterns and regularities in their environment?
-
-We investigate these questions with experiments that test theoretical and computational models of human cognition. Research associates are trained with a strong focus on computer programming skills for creating experiments and analyzing data. These include programming techniques for creating behavioral experiments from scratch, coding dynamic multi-trial experiments online and conducting them on Amazon's Mechanical Turk, coding for batch data-analysis and for expressing cognitive theories in the form of computational models.
-
-[Current and previous lab members](https://crumplab.github.io/People.html) include undergraduate, master's , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for running experiments and analyzing data, [then you may be interested in joining the team](https://crumplab.github.io/Opportunities.html).
-
-The lab is located in the Department of Psychology at Brooklyn College of CUNY, and affiliated with the [Cognition, Language, and Development training area](http://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognition,-Language,-and-Development) of the Psychology Doctoral program at the Graduate Center of CUNY.
-
-|   Contact   |
-|-------------|
-|Matthew Crump|
-|Associate Professor|
-|[Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)|
-|[Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/)|
-|2900 Bedford Avenue, Brooklyn, NY 11210|
-|Office: 4401 James Hall|
-|Phone: 718-951-5000 x. 6068|
-|email: mcrump@brooklyn.cuny.edu |
-|Lab: 4303 James Hall|
-
-</div>
-<div class="col-sm-6", style= "text-align:left;">
-
-```{r logo, fig.height=2, fig.width=2, echo=FALSE, fig.align="center", out.extra="id=logo"}
-knitr::include_graphics("images/logo.png")
+```{r logo, out.width="100%", echo=FALSE, fig.align="center", out.extra="id=logo"}
+knitr::include_graphics("images/logo2.png")
 ```
 
-<iframe src="news/news.html" title="news" style='height:400px;width:100%;overflow:auto;border:4px solid #49c5b6;padding:2%'></iframe>
+### Contact 
+
+Matthew Crump
+Associate Professor
+[Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)
+[Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/)
+2900 Bedford Avenue, Brooklyn, NY 11210
+Office: 4401 James Hall
+Phone: 718-951-5000 x. 6068
+email: mcrump@brooklyn.cuny.edu 
+Lab: 4303 James Hall
+
+</div>
+<div class="col-sm-6"  style="padding-top: 50px;">
+
+[Current and previous lab members](https://crumplab.github.io/People.html) include undergraduate, master's , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for theorizing, running experiments, analyzing data, and developing new technologies [then you may be interested in joining the team](https://crumplab.github.io/Opportunities.html).
+
+The lab is located in the [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php) at [Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/), and affiliated with the [Cognitive and Comparative Psychology Training area](https://ccp-cuny.github.io) of the [Psychology Doctoral program at the Graduate Center of CUNY](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology).
+
+### News
+
+<iframe src="news/news.html" title="news" style='height:400px;width:100%;overflow:auto;border:2px solid #49c5b6;padding:2%'></iframe>
 
 </div>
 </div>
