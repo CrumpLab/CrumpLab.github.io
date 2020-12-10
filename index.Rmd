@@ -1,6 +1,6 @@
 ---
 title: "Crump Lab"
-cover-image: "/images/logo.png"
+cover-image: "/images/logo2.png"
 description: "Computational Cognition Lab"
 output: 
   html_document:
@@ -13,9 +13,9 @@ output:
 # Create header.html
 CON <- file("header.html")
 
-writeLines('<meta name="twitter:title" content="Human Cognition and Performance Lab ">
+writeLines('<meta name="twitter:title" content="Computational Cognition Lab ">
 <meta name="twitter:description" content=" Lab web page - Matt Crump - Brooklyn College of CUNY">
-<meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png">
+<meta name="twitter:image" content=" https://crumplab.github.io/images/logo2.png">
 <meta name="twitter:card" content="summary">',CON)
 
 close(CON)

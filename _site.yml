@@ -21,14 +21,14 @@ navbar:
     - text: "Fun"
       href: Fun.html
     - text: "R"
-      href: "R.html"
-    - text: ""
-      icon: fa-twitter
+      href: R.html
+    - text: " "
+      icon: fab fa-twitter
       href: "https://twitter.com/MattCrump_"
     - text: ""
-      icon: fa-github
+      icon: fab fa-github
       href: "https://github.com/CrumpLab"
     - text: ""
-      icon: fa-youtube
+      icon: fab fa-youtube
       href: "https://www.youtube.com/channel/UCSaZ1htKwtZ1GuqI1xGjuSA?"
 output_dir: "."
