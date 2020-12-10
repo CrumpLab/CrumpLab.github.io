@@ -2,7 +2,7 @@
 title: "Courses"
 output: 
   html_document:
-    toc: true
+    toc: false
     toc_float: true
     collapsed: false
     number_sections: false
@@ -12,9 +12,7 @@ output:
     css: front.css
 ---
 
-List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.
-
-
+List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. 
 
 ## Fall 2020
 
@@ -67,7 +65,10 @@ knitr::include_graphics("images/Psyc7709G.png")
 
 -----
 
-## Spring 2019
+## Previous courses
+
+Some of these courses have open materials, older courses may not.
+
 
 ----
 
@@ -110,12 +111,6 @@ knitr::include_graphics("images/TextbookCover.png")
 
 </div>
 </div>
-
------
-
-## Previous courses
-
-Some of these courses have open materials, older courses may not.
 
 -----
 
