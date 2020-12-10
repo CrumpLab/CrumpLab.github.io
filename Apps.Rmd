@@ -2,7 +2,7 @@
 title: "Apps"
 output: 
   html_document:
-    toc: true
+    toc: false
     toc_float: true
     collapsed: false
     number_sections: false
