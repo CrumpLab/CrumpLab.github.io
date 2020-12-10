@@ -16,15 +16,13 @@ These books  were made using R Markdown and compiled in Bookdown. They are all f
 
 #### [Reproducible statistics for psychologists with R: Lab Tutorials](https://crumplab.github.io/rstatsforpsych/)
 
-**Authors**: Matthew Crump
-
 **Description**: This is a series of labs/tutorials currently under development (2020-2021) for a two-semester graduate-level statistics sequence in Psychology @ Brooklyn College of CUNY. The first set of 13 labs roughly tracks "Thinking with Data" (Vokey & Allen, 2018) and "Answering questions with data" (Crump et al., 2018); the second set of labs (to be written on a weekly basis during the Spring 2021 semester) will roughly track "Experimental Design and Analysis for Psychology" (Abdi et al., 2009). 
 
 Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <https://github.com/CrumpLab/rstatsforpsych>
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-**Citation:** Crump, M. J. C. (2020). Reproducible statistics for psychologists with R: Lab Tutorials.
+**Citation:** Crump, M. J. C. (2020, December 10). Reproducible statistics for psychologists with R: Lab Tutorials. https://doi.org/10.17605/OSF.IO/KBHGA
 
 </div>
 <div class="col-sm-6">
@@ -45,8 +43,6 @@ knitr::include_graphics("images/RstatsCover.png")
 <div class="col-sm-6">
 
 #### [Using R for Reproducible Research: Student contributed tutorials](https://crumplab.github.io/psyc7709_2019/book/docs/index.html)
-
-**Editor**: Matthew Crump
 
 **Description**: These chapters were written by students in [PSYC 7709: Using R for Reproducible research](https://crumplab.github.io/psyc7709_2019/), Spring 2019 @ Brooklyn College of CUNY, as a part of their final project to write a tutorial about an R package. 
 
