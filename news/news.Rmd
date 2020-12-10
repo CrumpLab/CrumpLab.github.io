@@ -1,13 +1,20 @@
 ---
 title: "News"
+css: notitle.css
+self_contained: true
 output: html_document
+---
+
+December 2020
+
+ - Crump, M. J. C. (2020, December 10). Reproducible statistics for psychologists with R: Lab Tutorials. https://doi.org/10.17605/OSF.IO/KBHGA
+ - Updated this website
+ 
 ---
 
 September 2020
 
- - In a lab unrelated activity, I released an album with lots of synthesizer sounds 
- 
- <iframe src="https://open.spotify.com/embed/album/6gRMnY4p8Qxlz5ObK7EV8m" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+ - In a lab unrelated activity, I released an album with lots of synthesizer sounds <https://distrokid.com/hyperfollow/homophony/vo>
 
 ---
 
