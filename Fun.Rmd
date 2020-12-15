@@ -24,7 +24,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 <div class="row">
 <div class="col-sm-8">
 
-### [RS](https://distrokid.com/hyperfollow/homophony/rs)
+#### [RS](https://distrokid.com/hyperfollow/homophony/rs)
 
 Released in Fall 2020, available on most major music streaming services <https://distrokid.com/hyperfollow/homophony/rs>. 
 
@@ -46,7 +46,7 @@ knitr::include_graphics("images/fun/RS.jpg")
 <div class="row">
 <div class="col-sm-8">
 
-### [VO](https://distrokid.com/hyperfollow/homophony/vo)
+#### [VO](https://distrokid.com/hyperfollow/homophony/vo)
 
 Released in Fall 2020, available on most major music streaming services <https://distrokid.com/hyperfollow/homophony/vo>. 
 
