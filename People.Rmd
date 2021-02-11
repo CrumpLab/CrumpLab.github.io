@@ -17,24 +17,24 @@ Last updated: 2/11/2021
 
 --------
 
-## Previous Lab Members
+### Previous Lab Members
 
-### Postdoctoral
+#### Postdoctoral
 
 - [Dr. Lawrence Behmer](https://www.luc.edu/psychology/people/faculty/facultystaff/lawrencebehmer/) (2014-2017), currently @ Loyola University Chicago
 
-### Doctoral
+#### Doctoral
 
 - [Dr. Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html) (2014-2019), currently a postdoc @ Duke University
 
-### Masters
+#### Masters
 
 - 2016: Ashot Balayan, "Subjective Confidence in the Evaluations of Typing Speed:Testing the Self-Consistency Model", Master's Thesis
 - 2016: Michelle Villavicencio, "Aesthetic Preference in Dance Movement: Motor Fluency and the Mere Exposure Effect", Master's Thesis
 
-## Undergraduate
+#### Undergraduate
 
-- 2018: Mark Rayev, "Deception detection through word usage and word production time in typing", Undergraduate Macaulay Honors
+- 2019: Mark Rayev, "Deception detection through word usage and word production time in typing", Undergraduate Macaulay Honors
 - 2018: [Walter Lai](https://www.linkedin.com/in/walter-lai-31395b181), Undergraduate; Contributing author on ["Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics"](https://crumplab.github.io/EntropyTyping/index.html), currently completing a Masters in Data Science at Southern Methodist University
 - 2018: Rochelle Hall, Undergraduate REU
 - 2017: Chin Tan, "Examining cognitive control and information theory accounts of mid-word slowing in skilled typing", Undergraduate
