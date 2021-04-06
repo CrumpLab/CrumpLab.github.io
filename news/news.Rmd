@@ -8,6 +8,23 @@ output:
        in_header: [open_parent.html]
 ---
 
+March 2021
+
+- updated links so they actually work
+- Excited that Drew Shives will be joining the lab as a doctoral student in Fall 2021!!! Welcome Drew!
+
+February 2021
+
+Teaching PSYC 7709G Pt II, and writing lots of new content for the grad stats OER:
+
+- <https://crumplab.github.io/psyc7709Lab/>
+
+January 2021
+
+Submitted a grant! Fingers crossed.
+
+- Answering questions with data: Teaching computational skills in introductory statistics to psychology undergraduates. NSF: IUSE (EHR: ESL I), Submitted February 2021, PI Crump, Co-PI: Krishnan. 
+
 December 2020
 
  - Crump, M. J. C. (2020, December 10). Reproducible statistics for psychologists with R: Lab Tutorials. https://doi.org/10.17605/OSF.IO/KBHGA
