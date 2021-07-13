@@ -8,6 +8,43 @@ output:
        in_header: [open_parent.html]
 ---
 
+July 2021
+
+:::: {style="display: flex;"}
+
+::: {}
+
+Thanks to the CUNY OER initiative, I got a small grant to write another textbook. This time it is for Cognitive Psychology (an undergraduate intro textbook). Writing is in progress, and should be mostly done by September 2021. The book will be an OER (open-educational resource) and free to use, edit, and remix. 
+
+<https://www.crumplab.com/cognition/textbook/>
+
+The textbook is being written in R Markdown and [hosted on github](https://github.com/CrumpLab/cognition). The link is already public, and the content is constantly changing as I write it.
+
+:::
+
+::: {}
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("imgs/cognition_cover.png")
+```
+
+:::
+
+::::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 March 2021
 
 - updated links so they actually work
