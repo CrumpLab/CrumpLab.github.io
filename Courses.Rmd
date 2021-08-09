@@ -14,6 +14,8 @@ output:
 
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. 
 
+## Fall 2021
+
 ## Spring 2021
 
 <div class="row">
