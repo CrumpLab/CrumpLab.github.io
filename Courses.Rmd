@@ -16,6 +16,30 @@ List of current and previous courses taught at Brooklyn College of CUNY and the 
 
 ## Fall 2021
 
+<div class="row">
+<div class="col-sm-6">
+
+#### Psyc 7765/66G - Statistical Methods Applications I
+
+Brooklyn College of CUNY
+
+The [course website](https://crumplab.github.io/rstatsmethods/) contains syllabus and readings.
+
+</div>
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/rstatsmethods/">
+```{r stats7765, out.width=150, echo=F}
+knitr::include_graphics("images/psyc7765.png")
+```
+</a>
+
+</div>
+</div>
+
+
+---
+
 ## Spring 2021
 
 <div class="row">
