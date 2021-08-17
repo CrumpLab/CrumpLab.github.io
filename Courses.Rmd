@@ -19,9 +19,32 @@ List of current and previous courses taught at Brooklyn College of CUNY and the 
 <div class="row">
 <div class="col-sm-6">
 
+#### Psyc 2530 Introduction to Cognitive Psychology
+
+Brooklyn College of CUNY, Undergraduate, Psychology
+
+The [course website](https://crumplab.github.io/cognition/) contains syllabus and readings.
+
+</div>
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/cognition/">
+```{r 2530, out.width=150, echo=F}
+knitr::include_graphics("images/2530_image.jpg")
+```
+</a>
+
+</div>
+</div>
+
+-----
+
+<div class="row">
+<div class="col-sm-6">
+
 #### Psyc 7765/66G - Statistical Methods Applications I
 
-Brooklyn College of CUNY
+Brooklyn College of CUNY, Master's, Experimental Psychology
 
 The [course website](https://crumplab.github.io/rstatsmethods/) contains syllabus and readings.
 
@@ -37,10 +60,37 @@ knitr::include_graphics("images/psyc7765.png")
 </div>
 </div>
 
+-----
+
+<div class="row">
+<div class="col-sm-6">
+
+#### Psyc 73800 - Cognitive Psychology
+
+Graduate Center of CUNY, Doctoral, Cognitive and Comparative Psychology Training (CCP) area
+
+Bi-weekly modules taught by different faculty. The [course website](https://crumplab.github.io/psyc73800/) contains syllabus and readings.
+
+</div>
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/psyc73800/">
+```{r cogsci2021, out.width=200, echo=F}
+knitr::include_graphics("images/cognitive_science.png")
+```
+</a>
+
+</div>
+</div>
+
+-----
+
+## Recent courses
+
+Some of these courses have open materials, older courses may not.
 
 ---
 
-## Spring 2021
 
 <div class="row">
 <div class="col-sm-6">
@@ -63,10 +113,6 @@ knitr::include_graphics("images/logo2statsII.png")
 </div>
 </div>
 
-
----
-
-## Fall 2020
 
 ---
 
@@ -113,14 +159,6 @@ knitr::include_graphics("images/Psyc7709G.png")
 
 </div>
 </div>
-
-
------
-
-## Previous courses
-
-Some of these courses have open materials, older courses may not.
-
 
 ----
 
