@@ -6,14 +6,15 @@ output:
        in_header: g_analytics.html
 ---
 
-Last updated: 2/11/2021
+Last updated: 9/20/2021
 
 | Current | Info |
 |:--------|-------:|
 |Matthew Crump| PI, email: mcrump@brooklyn.cuny.edu|
 |Kevonte Mitchell| Doctoral Student|
+|Drew Shives| Doctoral Student|
 |Patrick Ihejirika| Undergraduate MARC|
-|Austin Kaplan| Undergraduate Honors|
+|Kendra Scarlett Reynoso Moreno | Undergraduate CUNY BA Program|
 
 --------
 
@@ -21,11 +22,11 @@ Last updated: 2/11/2021
 
 #### Postdoctoral
 
-- [Dr. Lawrence Behmer](https://www.luc.edu/psychology/people/faculty/facultystaff/lawrencebehmer/) (2014-2017), currently @ Loyola University Chicago
+- [Dr. Lawrence Behmer](https://www.isu.edu/psych/people/faculty/facultyandstaff/lawrence-p-behmer-jr-phd.html) (2014-2017), currently @ Idaho State University
 
 #### Doctoral
 
-- [Dr. Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html) (2014-2019), currently a postdoc @ Duke University
+- [Dr. Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html) (2014-2019), currently@ University of Manitoba
 
 #### Masters
 
