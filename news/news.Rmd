@@ -8,63 +8,27 @@ output:
        in_header: [open_parent.html]
 ---
 
-July 2021
+Oct 2020
 
 :::: {style="display: flex;"}
 
 ::: {}
 
-Thanks to the CUNY OER initiative, I got a small grant to write another textbook. This time it is for Cognitive Psychology (an undergraduate intro textbook). Writing is in progress, and should be mostly done by September 2021. The book will be an OER (open-educational resource) and free to use, edit, and remix. 
-
-<https://www.crumplab.com/cognition/textbook/>
-
-The textbook is being written in R Markdown and [hosted on github](https://github.com/CrumpLab/cognition). The link is already public, and the content is constantly changing as I write it.
+My first journal article [Training and transfer effects of response inhibition training with online feedback on adolescents and adults’ executive function](http://journal.psych.ac.cn/acps/EN/10.3724/SP.J.1041.2020.01212) have been successfully published on the Top 1 Psychology journal in China, named Acta Psychologica Sinica (心理学报).
 
 :::
 
 ::: {}
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("imgs/cognition_cover.png")
+knitr::include_graphics("imgs/actapsy.jpeg")
 ```
 
 :::
 
 ::::
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 March 2021
-
 - updated links so they actually work
 - Excited that Drew Shives will be joining the lab as a doctoral student in Fall 2021!!! Welcome Drew!
-
-February 2021
-
-Teaching PSYC 7709G Pt II, and writing lots of new content for the grad stats OER:
-
-- <https://crumplab.github.io/psyc7709Lab/>
-
-January 2021
-
-Submitted a grant! Fingers crossed.
-
-- Answering questions with data: Teaching computational skills in introductory statistics to psychology undergraduates. NSF: IUSE (EHR: ESL I), Submitted February 2021, PI Crump, Co-PI: Krishnan. 
-
-December 2020
-
- - Crump, M. J. C. (2020, December 10). Reproducible statistics for psychologists with R: Lab Tutorials. https://doi.org/10.17605/OSF.IO/KBHGA
- - Updated this website
- 
 ---

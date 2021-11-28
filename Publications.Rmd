@@ -19,112 +19,23 @@ output:
     }
 </style>
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
-```
-
-<!--Note: publications are compiled in Rmarkdown directly from a .bib file. Slowly working on making this work. Below is a plot of the semantic similarity between the publications (using the BEAGLE Abstract vectors). Hover over the dots to see the title (still in beta).-->
-
-```{r, message=FALSE,echo=FALSE,warning=FALSE, fig.width=5,fig.height=3, eval=FALSE}
-load('semantic_publicatins.RData')
-library(plotly)
-semantic_plot
-```
-
-
-```{r, results='asis', echo=F, message=F, warning=FALSE, eval=FALSE}
-library(bib2df)
-bib_df<-bib2df(file="Crump.bib")
-
-library(stringi)
-
-bib_df$TITLE<-stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
-bib_df$JOURNAL<-stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
-
-# sort bib_df by year
-bib_df<-bib_df[order(bib_df$YEAR, decreasing=T),]
-
-dims<-dim(bib_df)
-start_year <- 0 
-for(i in 1:dims[1]){
-  a<-bib_df$FILE[i]
-  split_a<-unlist(strsplit(a,";"))
-  file_path<-paste0("https://github.com/CrumpLab/CrumpLab.github.io/raw/master/",split_a[1])
-  if(bib_df[i,]$YEAR != start_year){
-    cat(c("##",bib_df[i,]$YEAR, "\n"))
-    start_year <- bib_df[i,]$YEAR
-  }
-  
-  cat(c("###",bib_df[i,]$TITLE)) #title
-  
-  cat(c("\n"))
-  
-  cat("<div class='row'>")
-    cat("<div class='column left'>")
-      cat(c("<div id=citationstyle>"))
-      cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=", "), " (",
-            bib_df[i,]$YEAR, "). ",
-            bib_df[i,]$TITLE, ". *",
-            bib_df[i,]$JOURNAL, ", ",
-            bib_df[i,]$VOLUME, "*, ",
-            bib_df[i,]$PAGES, "."), sep="")
-      if(is.na(a)==FALSE){
-        cat(c(" ", "[pdf](",file_path,")"), sep="")
-      }
-      get_data <- bib_df[i,]$NOTE
-      if(is.na(get_data)==FALSE){
-        cat(c(" | ", get_data), sep="")
-      }
-      
-      cat(c("</div>"))
-    
-    cat("</div>")
-  cat("<div class='column right'>")
-    get_doi <- bib_df[i,]$DOI
-    if(is.na(get_doi)==FALSE){
-      cat("<span class='__dimensions_badge_embed__' data-doi='",get_doi,"' data-style='small_circle' data-legend='hover-left' style = 'text-align:right;'></span>", sep="")
-      cat("<span data-badge-popover='left' data-badge-type='donut' data-doi='",get_doi,"' data-hide-no-mentions='true' class='altmetric-embed' style = 'text-align:right;'></span>", sep="")
-    }
-  
-  cat("</div>")
-  cat("</div>")
-  
-  
-  
-  
-  
-    
-  cat(c("\n"))
-  cat(c("\n"))
-  cat(c("<div id = abstractstyle>"))
-  cat(bib_df[i,]$ABSTRACT)
-  cat(c("</div>"))
-  cat(c("\n"))
-  cat(c("\n"))
-  cat(c("\n"))
-  
-}
-
-# library(dplyr)
-# 
-# table_df <- bib_df %>%
-#             select(YEAR,
-#                    TITLE,
-#                    JOURNAL,
-#                    AUTHOR) %>%
-#   mutate(AUTHOR = sapply(AUTHOR, function(x) paste(x,collapse="; ")))
-# 
-# knitr::kable(table_df)
-
-```
-
-
 **Copyright Notice:** Some of the documents listed below are available for downloading. These have been provided as a means to ensure timely dissemination of scholarly and technical work on a noncommercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author's copyright. These works may not be re-posted without the explicit permission of the copyright holder.
 
+**[Google Scholar Citations](https://scholar.google.com/citations?user=Umy26vIAAAAJ&hl=en)**
+
+```{r logo, out.width="50%", echo=FALSE, fig.align="left", out.extra="id=logo"}
+knitr::include_graphics("images/googlescholar.png")
+```
+
 ## In progress
- <script src="https://bibbase.org/show?bib=https://crumplab.github.io/Crump_inprogress.bib&jsonp=1&nocache=1&theme=side&authorFirst=1"></script> 
+
+Wang. Y, **Cao. YF**, Wang. B, Wang. Y (2021) How Negative Emotions Influence the Conflict Adaptation Effect: The Roles of Research Paradigm and Emotional Stimulus Task-Relevance. _Under Review_
+
+Tang. C, **Cao. YF**, Huang. T, Huang. JP (2021) Various types of cognitive training improves activity of human multiple demand region: an ALE meta-analysis on fMRI studies. _In Prep_
 
 ## Published
- <script src="https://bibbase.org/show?bib=https://crumplab.github.io/Crump.bib&jsonp=1&nocache=1&theme=side&authorFirst=1"></script> 
 
+**Cao. YF**, Huang. T, Huang. JP, Xie. XC, Wang. Y (2020) Effects and moderators of computer-based training on children's executive functions: a systematic review and meta-analysis. _Frontiers in Psychology_. <https://www.frontiersin.org/articles/10.3389/fpsyg.2020.580329/full>
+
+Wang. Y,Li. K, Gai. XS, **Cao. YF** (2020) Training and Transfer Effects of Response Inhibition Training with on-line Feedback on Adolescents’ and Adults’ Executive Function. _Acta Psychologica Sinica_. 
+<http://journal.psych.ac.cn/xlxb/CN/10.3724/SP.J.1041.2020.01212>

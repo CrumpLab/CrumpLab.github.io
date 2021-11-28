@@ -1,54 +1,44 @@
 ---
-title: "AboutMe"
+title: "About Me"
 output: 
   html_document:
     includes:
        in_header: g_analytics.html
 ---
 
-Last updated: 9/20/2021
-
-| Current | Info |
-|:--------|-------:|
-|Matthew Crump| PI, email: mcrump@brooklyn.cuny.edu|
-|Kevonte Mitchell| Doctoral Student|
-|Drew Shives| Doctoral Student|
-|Patrick Ihejirika| Undergraduate MARC|
-|Kendra Scarlett Reynoso Moreno | Undergraduate CUNY BA Program|
+Last updated: 11/28/2021
 
 --------
 
-### Previous Lab Members
+### Previous Experience
 
-#### Postdoctoral
+#### Educational Background
 
-- [Dr. Lawrence Behmer](https://www.isu.edu/psych/people/faculty/facultyandstaff/lawrence-p-behmer-jr-phd.html) (2014-2017), currently @ Idaho State University
+- [State Key Laboratory of Cognitive Neuroscience and Learning & IDG/McGovern Institute for Brain Research](http://imibr.bnu.edu.cn/), [Beijing Normal University](https://english.bnu.edu.cn/) (2021-2024), Master student in Cognitive Neuroscience
 
-#### Doctoral
+- [School of Psychology](http://psy.nenu.edu.cn/English/ywsy.htm), [Northeast Normal University](https://en.nenu.edu.cn/) (2017-2021), Undergraduate student in Psychology
 
-- [Dr. Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html) (2014-2019), currently@ University of Manitoba
+#### Research Experience
 
-#### Masters
+1. Fractionating Human Intelligence _2020.10 to 2024.6_`Master Student Researcher`
 
-- 2016: Ashot Balayan, "Subjective Confidence in the Evaluations of Typing Speed:Testing the Self-Consistency Model", Master's Thesis
-- 2016: Michelle Villavicencio, "Aesthetic Preference in Dance Movement: Motor Fluency and the Mere Exposure Effect", Master's Thesis
+    - Converting traditional cognitive tasks into interesting online games, and using the developed game system (containing over **60** cognitive games) to collect big behavioural data over a sample size over **1,000** adults.
+    - Developing cognitive tasks for fMRI tests using Psychtoolbox, and conduct experiment with 30 adults play over 40 cognitive games covering various spects of previous defined cognitve aspects
+    - Using factor analysis, machine learning and cognitive models to analyze the behavioural and fMRI data acquired during the previous process
 
-#### Undergraduate
+1. Efficincy of Executve Functions Training _2018.9 to 2022.5_`Project Leader`
 
-- 2019: Mark Rayev, "Deception detection through word usage and word production time in typing", Undergraduate Macaulay Honors
-- 2018: [Walter Lai](https://www.linkedin.com/in/walter-lai-31395b181), Undergraduate; Contributing author on ["Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics"](https://crumplab.github.io/EntropyTyping/index.html), currently completing a Masters in Data Science at Southern Methodist University
-- 2018: Rochelle Hall, Undergraduate REU
-- 2017: Chin Tan, "Examining cognitive control and information theory accounts of mid-word slowing in skilled typing", Undergraduate
-- 2017: Marissa Scotto, Undergraduate REU
-- 2016: Niles Uy, "A twofold investigation into the nature of dual-task interference", Honor's Thesis
-- 2016: Ana Sanchez, "EEG and learning to type on a novel keyboard", REU program
-- 2015: [Shawn Lauzon](https://ca.linkedin.com/public-profile/in/shawnlauzon?challengeId=AQFcIfKDBrAmIwAAAXeRzrHYBkBMThytBYhCccIDOoXwmYQi8c63SVZAcQYiJ3KmAnk1nUFkmVmCtZt_uAQLcprxdAvToBGp4g&submissionId=07d8640c-98bc-6216-77a1-f4946022cd2e), "Escape from the canyon: an objective measure of insight through convergent and divergent thinking", Independent Study
-- 2015: Rebecca Colon, "Resource Demands of a Dual-Task Disrupts Skilled Typing", REU program
-- 2014-2015: [Elena Dominguez](https://www.blackinneuro.com/profiles/elena-dominguez), "Explaining the list-wide proportion congruent effect", "Reliability and precision of basic and manipulated flanker tasks", MARC program, currently a [Ph.D. Candidate at UCI](https://faculty.sites.uci.edu/starklab/elena-dominguez/) 
-- 2014: Michael Blecher, "False-recognition by test-induced priming for non-studied lists", Independent Study
-- 2014: [Niles Uy](https://www.linkedin.com/in/niles-uy?trk=public_profile_browsemap_profile-result-card_result-card_full-click), "Is the flanker task reliable?", Independent Study, went on to KU Leuven for a Masters in Statistics
-- 2013: [Emily Paolillo](https://clinpsyc.sdsu.edu/emily-paolillo/), "The role of explicit and implicit knowledge in typing skill", Honor's Thesis. Completing a Ph.D. in Neuropsychology @ UC San Diego
-- 2013: Esthena Brutten, "Online investigations of contextual interference in motor learning", Independent Study
-- 2013: Esthena Brutten, "Proportion congruent manipulations on Amazon's mechanical Turk", Honor's thesis
+    - Conducting executive functions training in various way, including VR game, video game, dance training on different target participants including kindergarten children, middle school students, and healthy adults.
+    - Combining behavioural data, fNIRS data, and meta-analysis to investigate approaches for improving executive functions training benefits
+
+#### Research Skills
+
+| Skill | Tool Name |
+|:--------|-------:|
+|Programming| R, Python, Matlab|
+|Neuroimaging| fMRI, fNIRS, EEG, MEG|
+|Computational Models| Drift Difusion Model, Bayesian Model|
+|Advanced Statistics| Factor analysis, Machine learning, Deep learning, Meta-analysis|
+|Language | Chinese, English|
 
 
