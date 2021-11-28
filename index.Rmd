@@ -1,7 +1,7 @@
 ---
-title: "Crump Lab"
+title: "Yifei Cao"
 cover-image: "/images/logo2.png"
-description: "Computational Cognition Lab"
+description: "Cognitive Neuroscience Graduate Student"
 output: 
   html_document:
     includes:
@@ -41,20 +41,20 @@ knitr::include_graphics("images/logo2.png")
 
 ### Contact 
 
-Matthew Crump
-Associate Professor
-[Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)
-[Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/)
-2900 Bedford Avenue, Brooklyn, NY 11210
-Office: 4401 James Hall
-Phone: 718-951-5000 x. 6068
-email: mcrump@brooklyn.cuny.edu 
-Lab: 4303 James Hall
+Yifei Cao
+Master Student
+[Center for Brain and Learning Science](http://cbls.bnu.edu.cn/a/PEOPLE/Students/20210827/254.html), 
+[IDG/McGovern Institute for Brain Research](http://imibr.bnu.edu.cn/),
+[Beijing Normal University](http://www.brooklyn.cuny.edu/).
+No. 19 Xinjiekou Avenue, Beijing, China 102218.
+Office: 204 Center for Brain Imaging Building.
+Phone: (+86) 13080049712.
+email: 202121061013@mail.bnu.edu.cn
 
 </div>
 <div class="col-sm-6"  style="padding-top: 50px;">
 
-The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition. We ask questions like how do people learn new skills like playing an instrument or typing on a keyboard? How does memory work? How do people learn the meaning of words? How do people learn patterns and regularities in their environment? These kinds of questions are investigated using behavioral experiments and computational modeling of cognitive processes. The lab also uses a variety of computational methods and tools to conduct and communicate research. 
+This is Yifei, a master student major in cognitive neuroscience at Beijing Normal University. Studying in Chinese's Top 1 brain research institute, I am conducting research on several domains under the supervison of Prof. [Xue, Gui](https://scholar.google.com/citations?user=Gyms-jgAAAAJ&hl=zh-CN). My current research interest includes: (1) uncovering the mental structure of human intelligence using both behavioural and meuroimaging approaches, (2) investigating the cognitive and neural basis of human cognitive control combining computational and neuroscience models, (3) finding the efficient way of training executive functions of different age period.
 
 [Current and previous lab members](https://crumplab.github.io/People.html) include undergraduate, master's , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for theorizing, running experiments, analyzing data, and developing new technologies [then you may be interested in joining the team](https://crumplab.github.io/Opportunities.html).
 

@@ -1,11 +1,11 @@
-name: "Crump Lab"
+name: "Yifei Cao (Cog Neuro)"
 cover-image: "/images/logo.png"
-description: "Human Cognition and Performance Lab"
+description: "Cognitive Neuroscience Graduate student @ IDG/McGovern Institite for Brain Research, BNU"
 navbar:
-  title: "Crump Lab"
+  title: "Yifei Cao"
   left:
-    - text: "People"
-      href: People.html
+    - text: "About Me"
+      href: AboutMe.html
     - text: "Publications"
       href: Publications.html
     - text: "Books/OER"
