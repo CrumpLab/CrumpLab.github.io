@@ -24,11 +24,8 @@ navbar:
       href: R.html
     - text: " "
       icon: fab fa-twitter
-      href: "https://twitter.com/MattCrump_"
+      href: "https://twitter.com/YifeiBNU1"
     - text: ""
       icon: fab fa-github
-      href: "https://github.com/CrumpLab"
-    - text: ""
-      icon: fab fa-youtube
-      href: "https://www.youtube.com/channel/UCSaZ1htKwtZ1GuqI1xGjuSA?"
+      href: "https://github.com/YifeiCAO"
 output_dir: "."
