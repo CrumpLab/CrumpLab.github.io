@@ -1,5 +1,5 @@
 ---
-title: "People"
+title: "AboutMe"
 output: 
   html_document:
     includes:

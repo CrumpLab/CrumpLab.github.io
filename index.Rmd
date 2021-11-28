@@ -56,9 +56,9 @@ email: 202121061013@mail.bnu.edu.cn
 
 This is Yifei, a master student major in cognitive neuroscience at Beijing Normal University. Studying in Chinese's Top 1 brain research institute, I am conducting research on several domains under the supervison of Prof. [Xue, Gui](https://scholar.google.com/citations?user=Gyms-jgAAAAJ&hl=zh-CN). My current research interest includes: (1) uncovering the mental structure of human intelligence using both behavioural and meuroimaging approaches, (2) investigating the cognitive and neural basis of human cognitive control combining computational and neuroscience models, (3) finding the efficient way of training executive functions of different age period.
 
-[Current and previous lab members](https://crumplab.github.io/People.html) include undergraduate, master's , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for theorizing, running experiments, analyzing data, and developing new technologies [then you may be interested in joining the team](https://crumplab.github.io/Opportunities.html).
+During my undergraduate and master years, by leading and participating several research projects, I have gained some different research skills including: (1) data analysis using R programming, Python, and Matlab, (2) brhavioral test programming using PsychoPy, E-prime, and PsychToolbox, (3) neuroimaging techniques such as fMRI, EEG, MEG, and fNIRS, (4) academic writing (see my [publications](https://yifeicao.github.io/YifeiCaoWebsite/Publications.html)).
 
-The lab is located in the [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php) at [Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/), and affiliated with the [Cognitive and Comparative Psychology Training area](https://ccp-cuny.github.io) of the [Psychology Doctoral program at the Graduate Center of CUNY](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology).
+If you are interested in something about me (e.g., recruiting me as your PhD candidate, or having question regarding my previous research etc.), please feel free to send me e-mail, or DM me via [twitter](https://twitter.com/YifeiBNU1)
 
 ### News
 
