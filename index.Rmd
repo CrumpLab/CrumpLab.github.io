@@ -1,6 +1,6 @@
 ---
 title: "Yifei Cao"
-cover-image: "/images/logo2.png"
+cover-image: "/images/1.png"
 description: "Cognitive Neuroscience Graduate Student"
 output: 
   html_document:
@@ -36,7 +36,7 @@ close(CON)
 <div class="col-sm-6">
 
 ```{r logo, out.width="100%", echo=FALSE, fig.align="center", out.extra="id=logo"}
-knitr::include_graphics("images/logo2.png")
+knitr::include_graphics("images/1.png")
 ```
 
 ### Contact 
