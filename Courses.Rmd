@@ -14,6 +14,31 @@ output:
 
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. 
 
+## Spring 2022
+
+<div class="row">
+<div class="col-sm-6">
+
+#### Psyc 2530 Introduction to Cognitive Psychology (Asynchronous online)
+
+Brooklyn College of CUNY, Undergraduate, Psychology, Asynchronous online
+
+The [course website](https://crumplab.github.io/cognition/) contains syllabus, textbook, slide decks and more.
+
+</div>
+<div class="col-sm-6">
+
+<a href="https://crumplab.github.io/cognition/">
+```{r 2530_2022, out.width=150, echo=F}
+knitr::include_graphics("images/2530_image.jpg")
+```
+</a>
+
+</div>
+</div>
+
+-----
+
 ## Fall 2021
 
 <div class="row">
