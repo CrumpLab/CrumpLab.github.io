@@ -25,6 +25,8 @@ Brooklyn College of CUNY, Undergraduate, Psychology, Asynchronous online
 
 The [course website](https://crumplab.github.io/cognition/) contains syllabus, textbook, slide decks and more.
 
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
 </div>
 <div class="col-sm-6">
 
@@ -48,11 +50,12 @@ Some of these courses have open materials, older courses may not.
 <div class="row">
 <div class="col-sm-6">
 
-#### Psyc 2530 Introduction to Cognitive Psychology
+#### Psyc 2530 Introduction to Cognitive Psychology, Fall 2021
 
 Brooklyn College of CUNY, Undergraduate, Psychology
 
-The [course website](https://crumplab.github.io/cognition/) contains syllabus and readings.
+All materials for Fall 2021 are stored as a branch in the github repository for this course <https://github.com/CrumpLab/cognition>.
+
 
 </div>
 <div class="col-sm-6">
