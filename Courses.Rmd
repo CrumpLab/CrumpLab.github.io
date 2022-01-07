@@ -19,7 +19,7 @@ List of current and previous courses taught at Brooklyn College of CUNY and the 
 <div class="row">
 <div class="col-sm-6">
 
-#### Psyc 2530 Introduction to Cognitive Psychology (Asynchronous online)
+#### [Psyc 2530 Introduction to Cognitive Psychology (Asynchronous online)](https://crumplab.github.io/cognition/)
 
 Brooklyn College of CUNY, Undergraduate, Psychology, Asynchronous online
 
@@ -39,7 +39,11 @@ knitr::include_graphics("images/2530_image.jpg")
 
 -----
 
-## Fall 2021
+## Recent courses
+
+Some of these courses have open materials, older courses may not.
+
+---
 
 <div class="row">
 <div class="col-sm-6">
@@ -109,13 +113,6 @@ knitr::include_graphics("images/cognitive_science.png")
 </div>
 
 -----
-
-## Recent courses
-
-Some of these courses have open materials, older courses may not.
-
----
-
 
 <div class="row">
 <div class="col-sm-6">
