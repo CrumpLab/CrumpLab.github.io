@@ -44,7 +44,7 @@ knitr::include_graphics("images/2530_image.jpg")
 <div class="row">
 <div class="col-sm-6">
 
-#### Psyc 7709G - Using R for Reproducible research
+#### [Psyc 7709G - Using R for Reproducible research](https://crumplab.github.io/rstatsmethods/)
 
 Brooklyn College of CUNY, Master's, Experimental Psychology
 
