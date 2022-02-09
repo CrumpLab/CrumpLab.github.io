@@ -35,7 +35,7 @@ close(CON)
 <div class="row">
 <div class="col-sm-6">
 
-```{r logo, out.width="100%", echo=FALSE, fig.align="center", out.extra="id=logo"}
+```{r logo, out.width="65%", echo=FALSE, fig.align="center", out.extra="id=logo"}
 knitr::include_graphics("images/logo2.png")
 ```
 
