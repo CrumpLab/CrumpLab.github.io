@@ -8,6 +8,12 @@ output:
        in_header: [open_parent.html]
 ---
 
+Feb 2022
+
+Excited to see this paper by colleagues in print at the new Nature Reviews Psychology!
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Perspectives Paper on Instance Theory by CJEP Editor Randy Jamieson <a href="https://twitter.com/NatRevPsych?ref_src=twsrc%5Etfw">@NatRevPsych</a> with Brendan Johns, John Vokey, and Mike Jones<br><br>Readcube: <a href="https://t.co/gP5RCGMdUR">https://t.co/gP5RCGMdUR</a> <a href="https://t.co/E2RRLyOCmV">https://t.co/E2RRLyOCmV</a></p>&mdash; Canadian Journal of Experimental Psychology (@CanJournExpPsyc) <a href="https://twitter.com/CanJournExpPsyc/status/1491520020114862083?ref_src=twsrc%5Etfw">February 9, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 July 2021
 
 :::: {style="display: flex;"}
