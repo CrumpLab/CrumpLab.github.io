@@ -22,9 +22,6 @@ navbar:
       href: Fun.html
     - text: "R"
       href: R.html
-    - text: " "
-      icon: fab fa-twitter
-      href: "https://twitter.com/MattCrump_"
     - text: ""
       icon: fab fa-github
       href: "https://github.com/CrumpLab"
