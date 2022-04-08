@@ -35,14 +35,12 @@ Several students have completed honor's theses in the lab ([see here for departm
 
 #### Undergraduate Research
 
-Recent research projects completed in the lab.
+Recent undergraduate research projects completed in the lab.
 
-```{r, echo=F, warning=FALSE, message=FALSE}
-library(data.table)
-undergrad_df<-fread("undergrad_research.csv")
-knitr::kable(undergrad_df)
+- 2022: Patrick Ihejirika, ["Try and forget this image: The role of stimulus duration in directed forgetting for natural scenes"](https://www.crumplab.com/PatrickHonorsThesis/), Undergraduate MARC Honors thesis, Barry Goldwater Scholar
+- 2019: Mark Rayev, "Deception detection through word usage and word production time in typing", Undergraduate Macaulay Honors
+- 2018: [Walter Lai](https://www.linkedin.com/in/walter-lai-31395b181), Contributing author on ["Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics"](https://crumplab.github.io/EntropyTyping/index.html), currently completing a Masters in Data Science at Southern Methodist University
 
-```
 
 #### Master's Research
 
