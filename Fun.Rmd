@@ -16,13 +16,14 @@ output:
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 ```
 
+<br>
 
 ## Music
 
 ----
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 
 #### [RS](https://distrokid.com/hyperfollow/homophony/rs)
 
@@ -34,7 +35,7 @@ More synthpop, less vocoder
 
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 ```{r rs, out.width='100%', echo=F}
 knitr::include_graphics("images/fun/RS.jpg")
 ```
@@ -44,7 +45,7 @@ knitr::include_graphics("images/fun/RS.jpg")
 ----
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 
 #### [VO](https://distrokid.com/hyperfollow/homophony/vo)
 
@@ -56,7 +57,7 @@ Synthpop, lots of vocoder.
 
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 ```{r vo, out.width='100%', echo=F}
 knitr::include_graphics("images/fun/VO.jpg")
 ```
@@ -70,14 +71,14 @@ knitr::include_graphics("images/fun/VO.jpg")
 ----
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 
 ### [things](https://crumplab.github.io/things/)
 
 When I find to make visual things I take pictures of them, and post them here <https://crumplab.github.io/things/>
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 ```{r things, out.width='100%', echo=F}
 knitr::include_graphics("images/fun/things.jpg")
 ```

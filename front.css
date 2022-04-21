@@ -30,10 +30,14 @@ h3 {
   font-size: 20px;
   background-color: #fcdec4;
   border-style: solid;
-  border-width: 10px;
+  border-width: 0px;
   border-color: #fcdec4;
   margin-top: 0px !important;
-  padding-top: 0px !important;
+  padding-top: 10px !important;
+  padding-left: 10px !important;
+  padding-bottom: 10px !important;
+  border-radius: 5px;
+  background-image: linear-gradient(to left, #fff, #fcdec4);
 }
 
 h4 {
@@ -42,13 +46,16 @@ h4 {
   font-size: 20px;
   background-color: #f2f2f2;
   border-style: solid;
-  border-width: 10px;
-  border-color: #f2f2f2;
-  margin-top: 5px;
+  border-width: 0px;
+  padding-top: 10px !important;
+  padding-left: 10px !important;
+  padding-bottom: 10px !important;
+  margin-top: 0px !important;
+  border-radius: 5px;
+  background-image: linear-gradient(to left, #fff, #f2f2f2);
 }
 
 .section h4 {
-  padding-top: 0px !important;
   margin-top:  0px !important;
 }
 

@@ -5,7 +5,7 @@ description: "Computational Cognition Lab"
 output: 
   html_document:
     includes:
-       in_header: [g_analytics.html,header.html,header_pubs.html]
+       in_header: [g_analytics.html,header.html,header_index.html]
     css: front.css
 ---
 

@@ -13,7 +13,7 @@
 
 <title>Research opportunities</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -52,6 +52,12 @@
 <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
+<script>
+  $(document).ready(function() {
+    $('#header').prepend('<img src="images/opportunities_banner.jpg" style= width="100%"/>');
+  });
+</script>
+
 <style type="text/css">
   code{white-space: pre-wrap;}
   span.smallcaps{font-variant: small-caps;}
@@ -71,6 +77,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -100,6 +107,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -325,7 +335,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -359,9 +369,6 @@ div.tocify {
   <a href="Fun.html">Fun</a>
 </li>
 <li>
-  <a href="R.html">R</a>
-</li>
-<li>
   <a href="https://github.com/CrumpLab">
     <span class="fab fa-github"></span>
      
@@ -387,7 +394,6 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Research opportunities</h1>
 
 </div>
 

@@ -17,7 +17,7 @@ List of current and previous courses taught at Brooklyn College of CUNY and the 
 ## Spring 2022
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Psyc 2530 Introduction to Cognitive Psychology (Asynchronous online)](https://crumplab.github.io/cognition/)
 
@@ -28,7 +28,7 @@ The [course website](https://crumplab.github.io/cognition/) contains syllabus, t
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/cognition/">
 ```{r 2530_2022, out.width=150, echo=F}
@@ -42,7 +42,7 @@ knitr::include_graphics("images/2530_image.jpg")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Psyc 7709G - Using R for Reproducible research](https://crumplab.github.io/rstatsmethods/)
 
@@ -51,7 +51,7 @@ Brooklyn College of CUNY, Master's, Experimental Psychology
 The [course website](https://crumplab.github.io/rstatsmethods/) contains syllabus and readings.
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/rstatsmethods/">
 ```{r r7709G2022, out.width=150, echo=F}
@@ -73,7 +73,7 @@ Some of these courses have open materials, older courses may not.
 ---
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 2530 Introduction to Cognitive Psychology, Fall 2021
 
@@ -83,7 +83,7 @@ All materials for Fall 2021 are stored as a branch in the github repository for 
 
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/cognition/">
 ```{r 2530, out.width=150, echo=F}
@@ -97,7 +97,7 @@ knitr::include_graphics("images/2530_image.jpg")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 7765/66G - Statistical Methods Applications I
 
@@ -106,7 +106,7 @@ Brooklyn College of CUNY, Master's, Experimental Psychology
 The [course website](https://crumplab.github.io/rstatsmethods/) contains syllabus and readings.
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/rstatsmethods/">
 ```{r stats7765, out.width=150, echo=F}
@@ -120,7 +120,7 @@ knitr::include_graphics("images/psyc7765.png")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 73800 - Cognitive Psychology
 
@@ -129,7 +129,7 @@ Graduate Center of CUNY, Doctoral, Cognitive and Comparative Psychology Training
 Bi-weekly modules taught by different faculty. The [course website](https://crumplab.github.io/psyc73800/) contains syllabus and readings.
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/psyc73800/">
 ```{r cogsci2021, out.width=200, echo=F}
@@ -143,7 +143,7 @@ knitr::include_graphics("images/cognitive_science.png")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 7709G - Statistical Methods Practicum II
 
@@ -152,7 +152,7 @@ Brooklyn College of CUNY
 The [course website](https://crumplab.github.io/psyc7709Lab/) contains syllabus and readings.
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/psyc7709Lab/">
 ```{r statsLab2, out.width=150, echo=F}
@@ -167,7 +167,7 @@ knitr::include_graphics("images/logo2statsII.png")
 ---
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 73800 - Cognitive Psychology
 
@@ -176,7 +176,7 @@ Graduate Center of CUNY
 Bi-weekly modules taught by different faculty. The [course website](https://crumplab.github.io/psyc73800/) contains syllabus and readings.
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/psyc73800/">
 ```{r cogsci2020, out.width=200, echo=F}
@@ -190,7 +190,7 @@ knitr::include_graphics("images/cognitive_science.png")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 7709G - Statistical Methods Practicum I
 
@@ -199,7 +199,7 @@ Brooklyn College of CUNY
 The [course website](https://crumplab.github.io/psyc7709Lab/) contains syllabus and readings.
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/psyc7709Lab/">
 ```{r statsLab, out.width=150, echo=F}
@@ -213,14 +213,14 @@ knitr::include_graphics("images/Psyc7709G.png")
 ----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 7709: Using R for reproducible research
 
 This is a special topics course for the Experimental Psychology Master's program. The course website is <https://crumplab.github.io/psyc7709_2019/>
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/psyc7709_2019/">
 ```{r rcourse, out.width=150, echo=F}
@@ -234,14 +234,14 @@ knitr::include_graphics("images/Rstudio.png")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 3400: Statistical Methods in Psychological Research
 
 All materials are totally free and open, including the [course Website](https://crumplab.github.io/psyc3400/),  [textbook](https://crumplab.github.io/statistics/), and [lab manual](https://crumplab.github.io/statisticsLab/).
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/psyc3400/">
 ```{r statsTextbook, out.width=150, echo=F}
@@ -255,7 +255,7 @@ knitr::include_graphics("images/TextbookCover.png")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 73800 - Cognitive Psychology
 
@@ -264,7 +264,7 @@ Fall 2018 (2017) @ Graduate Center of CUNY
 Bi-weekly modules taught by different faculty. The [course website](https://crumplab.github.io/psyc73800/) contains syllabus and readings.
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/psyc73800/">
 ```{r cogsci, out.width=200, echo=F}
@@ -279,7 +279,7 @@ knitr::include_graphics("images/cognitive_science.png")
 
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 80103: Cognitive Technologies: From theory and data to application
 
@@ -289,7 +289,7 @@ A doctoral seminar course (special topics) covering emerging and old cognitive t
 
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/cognitivetechnologies/book/">
 ```{r cogTech, out.width=150, echo=F}
@@ -303,7 +303,7 @@ knitr::include_graphics("images/CogTech.png")
 ----------------
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### Psyc 3450: Experimental Psychology
 
@@ -314,7 +314,7 @@ An undergraduate course on research methods, using a free OER textbook! Written 
 
 </div>
 
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/ResearchMethods/">
 ```{r researchmeth, out.width=150, echo=F}
@@ -328,7 +328,7 @@ knitr::include_graphics("images/ResearchMethods.png")
 -------------------
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 
 #### Psyc 80103: Computer Programming for Psychologists
@@ -339,7 +339,7 @@ I put my lecture notes into a [book](https://crumplab.github.io/programmingforps
 
 </div>
 
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/programmingforpsych/">
 ```{r programming, out.width=150, echo=F}
