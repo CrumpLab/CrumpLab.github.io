@@ -21,14 +21,14 @@ Shiny Apps, R packages, and various things
 ----
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 
 #### [vertical](https://crumplab.github.io/vertical/)
 
 R-studio project template and workflow for sharing psychological research projects in the form of a website.
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 ```{r vertical, out.width=100, echo=F}
 knitr::include_graphics("images/vertical.png")
 ```
@@ -38,14 +38,14 @@ knitr::include_graphics("images/vertical.png")
 ----
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 
 #### [RsemanticLibrarian](https://crumplab.github.io/RsemanticLibrarian/)
 
 R functions for creating semantic librarians, a tool for vectorizing and visualizing semantic spaces from text
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 ```{r rsl, out.width=100, echo=F}
 knitr::include_graphics("images/sl_hex.png")
 ```
@@ -55,14 +55,14 @@ knitr::include_graphics("images/sl_hex.png")
 ----
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 
 #### [jspsychr](https://crumplab.github.io/jspsychr/)
 
 Write and run jspsych experiments using R studio.
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 ```{r jspsychr, out.width=100, echo=F}
 knitr::include_graphics("images/jspsychr.png")
 ```
@@ -73,14 +73,14 @@ knitr::include_graphics("images/jspsychr.png")
 
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 
 #### [playjareyesores](https://crumplab.github.io/playjareyesores/)
 
 Functions for detecting textual overlap (e.g., possible plagiarism) between documents [https://crumplab.github.io/playjareyesores/](https://crumplab.github.io/playjareyesores/)
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 ```{r playjar, out.width=100, echo=F}
 knitr::include_graphics("images/playjareyesores.png")
 ```
@@ -90,14 +90,14 @@ knitr::include_graphics("images/playjareyesores.png")
 ----
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 
 #### [conflictPower](https://crumplab.github.io/conflictPower/)
 
 Monte-carlo based power analysis for cognitive control designs. [https://crumplab.github.io/conflictPower/](https://crumplab.github.io/conflictPower/)
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 ```{r CP, out.width=100, echo=F}
 knitr::include_graphics("images/ConflictPower.png")
 ```

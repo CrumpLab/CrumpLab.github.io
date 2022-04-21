@@ -20,8 +20,6 @@ navbar:
       href: Blog.html
     - text: "Fun"
       href: Fun.html
-    - text: "R"
-      href: R.html
     - text: ""
       icon: fab fa-github
       href: "https://github.com/CrumpLab"

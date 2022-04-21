@@ -12,7 +12,7 @@ These books  were made using R Markdown and compiled in Bookdown. They are all f
 ---
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Reproducible statistics for psychologists with R: Lab Tutorials](https://crumplab.github.io/rstatsforpsych/)
 
@@ -25,7 +25,7 @@ Written in Rmarkdown, and compiled with the bookdown package. The source code is
 **Citation:** Crump, M. J. C. (2020, December 10). Reproducible statistics for psychologists with R: Lab Tutorials. https://doi.org/10.17605/OSF.IO/KBHGA
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/rstatsforpsych/">
 ```{r rstatsTextbook, out.width=200, echo=F}
@@ -40,7 +40,7 @@ knitr::include_graphics("images/RstatsCover.png")
 ---
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Using R for Reproducible Research: Student contributed tutorials](https://crumplab.github.io/psyc7709_2019/book/docs/index.html)
 
@@ -53,7 +53,7 @@ Written in Rmarkdown, and compiled with the bookdown package. The source code is
 **Citation:** Abdelrahman, K., Contreras, A., Degtyarev, Z., Deng, J., Foster, J., Franz, A., Funderburk, T., Horger, M., Kravitz, J., Lakshin A., Manigat, M., Trois, R., Vasquez, A., Vo, A., Wilson, N., and Yeremenko, M. (2019). *Using R for Reproducible Research: Student Contributed Tutorials.* (M. J. C. Crump, Ed.).
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 
 <a href="https://crumplab.github.io/psyc7709_2019/book/docs/index.html">
 ```{r rstudentbook, out.width=200, echo=F}
@@ -68,7 +68,7 @@ knitr::include_graphics("images/ReproStudentBook.png")
 ---
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Answering Questions with Data: Introductory Statistics for Psychology Students](https://crumplab.github.io/statistics/)
 
@@ -83,7 +83,7 @@ Written in Rmarkdown, and compiled with the bookdown package. The source code is
 **Citation:** Crump, M. J. C., Navarro, D., & Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 <div data-badge-popover="right" data-badge-type="donut" data-doi="10.17605/OSF.IO/JZE52" data-hide-no-mentions="true" class="altmetric-embed"></div>
 <a href="https://crumplab.github.io/statistics/">
 ```{r statsTextbook, out.width=200, echo=F}
@@ -96,7 +96,7 @@ knitr::include_graphics("images/TextbookCover.png")
 ----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Answering Questions with Data: The Lab Manual](https://crumplab.github.io/statisticsLab/) 
 
@@ -115,7 +115,7 @@ Some of the labs are adapated from [Open Stats Lab](https://sites.trinity.edu/os
 **Citation**: Crump, M. J. C., Krishnan, A., Volz, S., & Chavarga, A. (2019, June 5). Answering Questions with Data: The Lab Manual for R, Excel, SPSS and Jamovi. https://doi.org/10.17605/OSF.IO/M2NPJ 
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 <div data-badge-popover="right" data-badge-type="donut" data-doi="10.17605/OSF.IO/M2NPJ" data-hide-no-mentions="true" class="altmetric-embed"></div>
 <a href="https://crumplab.github.io/statisticsLab/">
 ```{r StatsLab, out.width=200, echo=F}
@@ -129,7 +129,7 @@ knitr::include_graphics("images/LabmanualCover.png")
 
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Answering Questions with Data: The Course Website](https://crumplab.github.io/psyc3400/)
 
@@ -146,7 +146,7 @@ A copiable course website for introductory statistics
 **Citation** : Crump, M. J. C. (2019, June 5). Answering Questions with Data: Course Website. https://doi.org/10.17605/OSF.IO/AWXU9
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 <div data-badge-popover="right" data-badge-type="donut" data-doi="10.17605/OSF.IO/AWXU9" data-hide-no-mentions="true" class="altmetric-embed"></div>
 <a href="https://crumplab.github.io/psyc3400/">
 ```{r StatsWeb, out.width=200, echo=F}
@@ -159,7 +159,7 @@ knitr::include_graphics("images/Psyc3400.png")
 ----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Research Methods for Psychology](https://crumplab.github.io/ResearchMethods/)
 
@@ -172,7 +172,7 @@ knitr::include_graphics("images/Psyc3400.png")
 [![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 <a href="https://crumplab.github.io/ResearchMethods/">
 ```{r ResearchMethods, out.width=200, echo=F}
 knitr::include_graphics("images/ResearchMethods.png")
@@ -185,7 +185,7 @@ knitr::include_graphics("images/ResearchMethods.png")
 ----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Cognitive Technologies: From Theory and Data to Application](https://crumplab.github.io/cognitivetechnologies/book/)
 
@@ -196,7 +196,7 @@ knitr::include_graphics("images/ResearchMethods.png")
 **Authors**: Crump, M. J. C.; Amada, N.; Bourque, K; Brosowsky, N.; Ergun, T.; Korovatskaya, A.; Ma, X.; Seoung, Y.; Wylie, J.
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 <a href="https://crumplab.github.io/cognitivetechnologies/book/">
 ```{r CogTech, out.width=200, echo=F}
 knitr::include_graphics("images/CogTech.png")
@@ -209,7 +209,7 @@ knitr::include_graphics("images/CogTech.png")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Open tools for writing open interactive textbooks (and more)](https://crumplab.github.io/OER_bookdown/)
 
@@ -224,7 +224,7 @@ Note this is a meta-book. The tutorial above is for you to read so you can downl
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 </div>
-<div class="col-sm-6">
+<div class="col-sm-3">
 <a href="https://crumplab.github.io/OER_bookdown/">
 ```{r OERs, out.width=200, echo=F}
 knitr::include_graphics("images/OER.png")
@@ -237,7 +237,7 @@ knitr::include_graphics("images/OER.png")
 -----
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-9">
 
 #### [Programming for Psychologists: Data Creation and Analysis](https://crumplab.github.io/programmingforpsych/)
 
@@ -251,7 +251,7 @@ knitr::include_graphics("images/OER.png")
 
 </div>
 
-<div class="col-sm-6">
+<div class="col-sm-3">
 <a href="https://crumplab.github.io/programmingforpsych/">
 ```{r Programming, out.width=200, echo=F}
 knitr::include_graphics("images/Programming.png")

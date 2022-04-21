@@ -1,5 +1,5 @@
 ---
-title: "Research opportunities"
+pagetitle: "Research opportunities"
 output: 
   html_document:
     toc: true
@@ -8,7 +8,7 @@ output:
     number_sections: false
     toc_depth: 4
     includes:
-       in_header: [g_analytics.html,header_pubs.html]
+       in_header: [g_analytics.html,header_opportunities.html]
     css: front.css
 ---
 
