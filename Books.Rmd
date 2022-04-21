@@ -1,9 +1,9 @@
 ---
-title: "Books and OERs"
+pagetitle: "Books and OERs"
 output: 
   html_document:
     includes:
-       in_header: [g_analytics.html,header_pubs.html]
+       in_header: [g_analytics.html,header_books.html]
     css: front.css
 ---
 
