@@ -9,9 +9,9 @@ output:
 
 | Current | Info |
 |:--------|-------:|
-|Matthew Crump| PI, email: mcrump@brooklyn.cuny.edu|
+|[Matthew Crump](https://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059)| PI, email: mcrump@brooklyn.cuny.edu|
 |Kevonte Mitchell| Doctoral Student|
-|Drew Shives| Doctoral Student|
+|[Drew Shives](https://djshives.netlify.app)| Doctoral Student|
 |Patrick Ihejirika| Undergraduate MARC|
 |Kendra Scarlett Reynoso Moreno | Undergraduate CUNY BA Program|
 
