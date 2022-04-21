@@ -1,5 +1,5 @@
 ---
-title: "Courses"
+pagetitle: "Courses"
 output: 
   html_document:
     toc: false
@@ -8,7 +8,7 @@ output:
     number_sections: false
     toc_depth: 3
     includes:
-       in_header: [g_analytics.html,header_pubs.html]
+       in_header: [g_analytics.html,header_courses.html]
     css: front.css
 ---
 
