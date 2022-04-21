@@ -3,10 +3,9 @@ title: "People"
 output: 
   html_document:
     includes:
-       in_header: g_analytics.html
+       in_header: [g_analytics.html,header_people.html]
+    css: front.css
 ---
-
-Last updated: 9/20/2021
 
 | Current | Info |
 |:--------|-------:|
