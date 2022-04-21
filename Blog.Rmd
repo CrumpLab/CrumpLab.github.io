@@ -1,5 +1,5 @@
 ---
-title: "Various musings"
+pagetitle: "Various musings"
 output:
   html_document:
     toc: false
@@ -28,15 +28,6 @@ bibliography: [Crump.bib, typing.bib]
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 
-# Create header.html
-CON <- file("header_blog.html")
-
-writeLines('<meta name="twitter:title" content="Human Cognition and Performance Lab ">
-<meta name="twitter:description" content=" Lab web page Blog - Matt Crump - Brooklyn College of CUNY">
-<meta name="twitter:image" content=" https://crumplab.github.io/images/logo.png">
-<meta name="twitter:card" content="summary">',CON)
-
-close(CON)
 ```
 
 
