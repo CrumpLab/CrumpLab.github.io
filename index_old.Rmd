@@ -1,0 +1,72 @@
+---
+title: "Crump Lab"
+cover-image: "/images/logo2.png"
+description: "Computational Cognition Lab"
+output: 
+  html_document:
+    includes:
+       in_header: [g_analytics.html,header.html,header_index.html]
+    css: front.css
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+# Create header.html
+CON <- file("header.html")
+
+writeLines('<meta name="twitter:title" content="Computational Cognition Lab ">
+<meta name="twitter:description" content=" Lab web page - Matt Crump - Brooklyn College of CUNY">
+<meta name="twitter:image" content=" https://crumplab.github.io/images/logo2.png">
+<meta name="twitter:card" content="summary">',CON)
+
+close(CON)
+```
+
+<style type="text/css">
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-right: 10px;
+}
+
+</style>
+
+<div class="row">
+<div class="col-sm-6">
+
+```{r logo, out.width="65%", echo=FALSE, fig.align="center", out.extra="id=logo"}
+knitr::include_graphics("images/logo2.png")
+```
+
+### Contact 
+
+Matthew Crump
+Associate Professor
+[Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)
+[Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/)
+2900 Bedford Avenue, Brooklyn, NY 11210
+Office: 4401 James Hall
+Phone: 718-951-5000 x. 6068
+email: mcrump@brooklyn.cuny.edu 
+Lab: 4303 James Hall
+
+</div>
+<div class="col-sm-6"  style="padding-top: 50px;">
+
+The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition. We ask questions like how do people learn new skills like playing an instrument or typing on a keyboard? How does memory work? How do people learn the meaning of words? How do people learn patterns and regularities in their environment? These kinds of questions are investigated using behavioral experiments and computational modeling of cognitive processes. The lab also uses a variety of computational methods and tools to conduct and communicate research. 
+
+[Current and previous lab members](https://crumplab.github.io/People.html) include undergraduate, master's , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for theorizing, running experiments, analyzing data, and developing new technologies [then you may be interested in joining the team](https://crumplab.github.io/Opportunities.html).
+
+The lab is located in the [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php) at [Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/), and affiliated with the [Cognitive and Comparative Psychology Training area](https://ccp-cuny.github.io) of the [Psychology Doctoral program at the Graduate Center of CUNY](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology).
+
+### News
+
+<iframe src="news/news.html" title="news" style='height:400px;width:100%;overflow:auto;border:0px solid #49c5b6;padding:2%'></iframe>
+
+</div>
+</div>
+
+
+
+

@@ -8,9 +8,9 @@ output:
        in_header: [open_parent.html]
 ---
 
-April 2022
+**April 2022**
 
-Adding lots of new content the lab's youtube channel.
+Adding lots of new content to the lab's youtube channel.
 
 Check it out and subscribe here:
 
