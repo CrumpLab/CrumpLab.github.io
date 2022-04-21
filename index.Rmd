@@ -37,7 +37,7 @@ close(CON)
 
 ::: {.row}
 
-::: {.col-xs-9}
+::: {.col-sm-9}
 
 ::: {.row}
 
