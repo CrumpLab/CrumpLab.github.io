@@ -11,6 +11,36 @@ These books  were made using R Markdown and compiled in Bookdown. They are all f
 
 ---
 
+::: {.row}
+:::: {.col-sm-9}
+
+#### [Instances of Cognition](https://www.crumplab.com/cognition/textbook/index.html)
+
+**Description**: This is a free, open-educational textbook and set of course materials for an introductory undergraduate course in cognition. The materials are not yet complete, and I am continuing to develop them across the Fall 2021 and Spring 2022 semesters. All of the materials are CC BY-SA 4.0 creative-commons licensed and free for others to use, copy, remix, re-use.
+
+Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <https://github.com/CrumpLab/cognition>
+
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+CITATION IS TBD WHILE THE PROJECT IS UNDER DEVELOPMENT.
+
+Crump, M. J. C. (2022, April 21). Instances of Cognition: Questions, Methods, Findings, Explanations, Applications, and Implications.
+::::
+
+:::: {.col-sm-3}
+
+<a href="https://www.crumplab.com/cognition/textbook/index.html">
+```{r cognitionTextbook, out.width=200, echo=F}
+knitr::include_graphics("images/2530_image.jpg")
+```
+</a>
+
+::::
+:::
+
+---
+
+
 <div class="row">
 <div class="col-sm-9">
 
