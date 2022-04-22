@@ -110,7 +110,9 @@ image_link("images/front/contact-logos_black.png","https://www.crumplab.com/inde
 
 :::: {.col-xs-3}
 
-
+```{r}
+image_link("images/front/youtube.png","https://www.youtube.com/c/CrumpsComputationalCognitionLab?sub_confirmation=1", class = "hovericon")
+```
 
 ::::
 :::
