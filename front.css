@@ -71,3 +71,9 @@ p {
 #logo {
   margin-top: 50px !important;
 }
+
+
+.hovericon:hover {
+  background-color: #edfcfc;
+  border-radius: 10px;
+}
