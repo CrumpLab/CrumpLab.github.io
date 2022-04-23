@@ -89,13 +89,13 @@
 
 The Computational Cognition Lab at Brooklyn College of CUNY investigates
 learning, memory, attention, performance, and semantic cognition. We ask
-questions like how do people learn new skills like playing an instrument
-or typing on a keyboard? How does memory work? How do people learn the
-meaning of words? How do people learn patterns and regularities in their
-environment? These kinds of questions are investigated using behavioral
-experiments and computational modeling of cognitive processes. The lab
-also uses a variety of computational methods and tools to conduct and
-communicate research.
+questions like how do people learn new skills such as playing an
+instrument or typing on a keyboard? How does memory work? How do people
+learn the meaning of words? How do people learn patterns and
+regularities in their environment? These kinds of questions are
+investigated using behavioral experiments and computational modeling of
+cognitive processes. The lab also uses a variety of computational
+methods and tools to conduct and communicate research.
 
 [Current and previous lab
 members](https://crumplab.github.io/People.html) include undergraduate,
