@@ -1,16 +1,4 @@
 
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Archivo:400,700">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400">
-<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-
-<script>
-  $(document).ready(function() {
-    $('#header').prepend('<img src="images/front_banner.jpg" style= width="100%"/>');
-  });
-</script>
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <img src="man/figures/front/front_banner.jpg" style= width="100%"/>
 <style type="text/css">
