@@ -1,0 +1,75 @@
+url: ~
+template:
+  bootstrap: 5
+  params:
+    ganalytics: G-HPGGT4QZ8Q
+  
+home:
+  links:
+    - text: Github
+      href: https://github.com/CrumpLab
+    - text: Youtube
+      href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
+    - text: Google Scholar
+      href: https://scholar.google.com/citations?user=49EVuVcAAAAJ&hl=en
+    - text: Brooklyn College
+      href: http s://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059
+    - text: CCP
+      href: https://ccp-cuny.github.io/index.html
+  sidebar:
+    structure: [links, toc, authors, custom]
+    components:
+      custom:
+        title: Announcements
+        text: Congratulations to Patrick Ihejirika for winning the Shortt award from the U of Georgia, Department of Kinesiology!
+          
+  
+navbar:
+  structure:
+    left:
+    - people
+    - pubs
+    - books
+    - courses
+    - apps
+    - join
+    - fun
+    right: 
+    - github
+    - youtube
+    - news
+    - reference
+  components:
+    reference:
+      text: Reference
+      href: reference/index.html
+    people:
+      text: People
+      href: articles/People.html
+    pubs:
+      text: Pubs
+      href: articles/Publications.html
+    books:
+      text: Books
+      href: articles/Books.html
+    courses:
+      text: Courses
+      href: articles/Courses.html
+    apps:
+      text: Apps
+      href: articles/Apps.html
+    join:
+      text: Join
+      href: articles/Opportunities.html
+    fun:
+      text: Fun
+      href: articles/Fun.html
+    news:
+      text: news
+      href: news/index.html
+    youtube:
+      icon: fa-lg fa-youtube
+      href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
+    github:
+      icon: fa-lg fa-github
+      href: https://github.com/CrumpLab
