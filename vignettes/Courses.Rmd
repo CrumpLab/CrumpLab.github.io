@@ -51,7 +51,7 @@ knitr::include_graphics("images/2530_image.jpg")
 
 ### [Psyc 7709G - Using R for Reproducible research](https://crumplab.github.io/rstatsmethods/)
 
-Brooklyn College of CUNY, Master's, Experimental Psychology
+Brooklyn College of CUNY, Experimental Psychology MA program
 
 The [course website](https://crumplab.github.io/rstatsmethods/) contains syllabus and readings.
 
@@ -60,7 +60,7 @@ The [course website](https://crumplab.github.io/rstatsmethods/) contains syllabu
 
 <a href="https://crumplab.github.io/rstatsmethods/">
 ```{r r7709G2022, out.width=150, echo=F}
-knitr::include_graphics("images/Rstudio.png")
+knitr::include_graphics("images/RStudio.png")
 ```
 </a>
 
