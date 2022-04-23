@@ -15,7 +15,7 @@
 
 <div class="col-sm-3">
 
-<a href="https://www.crumplab.com/People.html">
+<a href="https://www.crumplab.com/articles/People.html">
 <img src="man/figures/front/people-logos_black.png" class="hovericon"/>
 </a>
 
@@ -23,7 +23,7 @@
 
 <div class="col-sm-3">
 
-<a href="https://www.crumplab.com/Publications.html">
+<a href="https://www.crumplab.com/articles/Publications.html">
 <img src="man/figures/front/publications-logos_black.png" class="hovericon"/>
 </a>
 
@@ -31,7 +31,7 @@
 
 <div class="col-sm-3">
 
-<a href="https://www.crumplab.com/Books.html">
+<a href="https://www.crumplab.com/articles/Books.html">
 <img src="man/figures/front/books.png" class="hovericon"/>
 </a>
 
@@ -39,7 +39,7 @@
 
 <div class="col-sm-3">
 
-<a href="https://www.crumplab.com/Courses.html">
+<a href="https://www.crumplab.com/articles/Courses.html">
 <img src="man/figures/front/courses.png" class="hovericon"/>
 </a>
 
@@ -51,7 +51,7 @@
 
 <div class="col-sm-3">
 
-<a href="https://www.crumplab.com/Apps.html">
+<a href="https://www.crumplab.com/articles/Apps.html">
 <img src="man/figures/front/apps.png" class="hovericon"/>
 </a>
 
@@ -59,7 +59,7 @@
 
 <div class="col-sm-3">
 
-<a href="https://www.crumplab.com/Opportunities.html">
+<a href="https://www.crumplab.com/articles/Opportunities.html">
 <img src="man/figures/front/join.png" class="hovericon"/>
 </a>
 

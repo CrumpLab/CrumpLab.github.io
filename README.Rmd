@@ -37,7 +37,7 @@ image_link <- function(image,url,...){
     )
 }
 
-image_link("man/figures/front/people-logos_black.png","https://www.crumplab.com/People.html", class = "hovericon")
+image_link("man/figures/front/people-logos_black.png","https://www.crumplab.com/articles/People.html", class = "hovericon")
 ```
 
 ::::
@@ -45,7 +45,7 @@ image_link("man/figures/front/people-logos_black.png","https://www.crumplab.com/
 :::: {.col-sm-3}
 
 ```{r}
-image_link("man/figures/front/publications-logos_black.png","https://www.crumplab.com/Publications.html", class = "hovericon")
+image_link("man/figures/front/publications-logos_black.png","https://www.crumplab.com/articles/Publications.html", class = "hovericon")
 ```
 
 
@@ -54,7 +54,7 @@ image_link("man/figures/front/publications-logos_black.png","https://www.crumpla
 :::: {.col-sm-3}
 
 ```{r}
-image_link("man/figures/front/books.png","https://www.crumplab.com/Books.html", class = "hovericon")
+image_link("man/figures/front/books.png","https://www.crumplab.com/articles/Books.html", class = "hovericon")
 ```
 
 ::::
@@ -62,7 +62,7 @@ image_link("man/figures/front/books.png","https://www.crumplab.com/Books.html", 
 :::: {.col-sm-3}
 
 ```{r}
-image_link("man/figures/front/courses.png","https://www.crumplab.com/Courses.html", class = "hovericon")
+image_link("man/figures/front/courses.png","https://www.crumplab.com/articles/Courses.html", class = "hovericon")
 ```
 
 ::::
@@ -73,7 +73,7 @@ image_link("man/figures/front/courses.png","https://www.crumplab.com/Courses.htm
 
 
 ```{r}
-image_link("man/figures/front/apps.png","https://www.crumplab.com/Apps.html", class = "hovericon")
+image_link("man/figures/front/apps.png","https://www.crumplab.com/articles/Apps.html", class = "hovericon")
 ```
 
 ::::
@@ -81,7 +81,7 @@ image_link("man/figures/front/apps.png","https://www.crumplab.com/Apps.html", cl
 :::: {.col-sm-3}
 
 ```{r}
-image_link("man/figures/front/join.png","https://www.crumplab.com/Opportunities.html", class = "hovericon")
+image_link("man/figures/front/join.png","https://www.crumplab.com/articles/Opportunities.html", class = "hovericon")
 ```
 
 ::::
