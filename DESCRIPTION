@@ -1,6 +1,6 @@
 Package: crumplab
 Title: Website for CrumpLab
-Version: 0.0.1.0000
+Version: 0.0.1.0001
 Authors@R: 
     person("Matthew J. C.", "Crump", , "mcrump@brooklyn.cuny.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5612-0090"))
