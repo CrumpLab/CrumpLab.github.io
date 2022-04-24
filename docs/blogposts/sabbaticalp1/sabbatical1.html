@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+
+    <meta charset="utf-8" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+            <meta name="twitter:card" content="summary" />
+       <meta name="twitter:title" content="Mea Culpa: My Sabbatical Part I"/> 
+      <meta name="twitter:creator" content="@MattCrump_" />
+      <meta name="twitter:description" content="TLDR, some sabbatical thoughts" /> 
+            <meta name="twitter:image" content="https://crumplab.github.io/blogposts/sabbaticalp1/sabbatical.png"/>
+      
+
+      
+        <meta name="generator" content="pandoc" />
+
+                    
+                        <meta name="author" content="Matt Crump" />
+              
+              
+                <title>Mea Culpa: My Sabbatical Part I</title>
+
+                                <script src="sabbatical1_files/jquery-1.11.3/jquery.min.js"></script>
+                                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                                <link href="sabbatical1_files/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+                                <script src="sabbatical1_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+                                <script src="sabbatical1_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+                                <script src="sabbatical1_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+                                <script src="sabbatical1_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+                                <link href="sabbatical1_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+                                <script src="sabbatical1_files/tocify-1.9.1/jquery.tocify.js"></script>
+                                <script src="sabbatical1_files/navigation-1.1/tabsets.js"></script>
+                                <style>
+                                @import url('https://fonts.googleapis.com/css?family=Serif+Pro|Open+Sans&display=swap');
+                                </style>
+
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+                
+                      
+                          
+                                                    <style type="text/css">
+                          h1 {
+                            font-size: 34px;
+                          }
+                        h1.title {
+                          font-size: 38px;
+                        }
+                        h2 {
+                          font-size: 30px;
+                        }
+                        h3 {
+                          font-size: 24px;
+                        }
+                        h4 {
+                          font-size: 18px;
+                        }
+                        h5 {
+                          font-size: 16px;
+                        }
+                        h6 {
+                          font-size: 12px;
+                        }
+                        .table th:not([align]) {
+                          text-align: left;
+                        }
+                          </style>
+  
+    <link rel="stylesheet" href="web/crump_basic.css" type="text/css" />
+    
+
+
+        <style type = "text/css">
+      .main-container {
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    code {
+      color: inherit;
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    img {
+      max-width:100%;
+      height: auto;
+    }
+    .tabbed-pane {
+      padding-top: 12px;
+    }
+    .html-widget {
+      margin-bottom: 20px;
+    }
+    button.code-folding-btn:focus {
+      outline: none;
+    }
+    summary {
+      display: list-item;
+    }
+    </style>
+
+      
+      
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../index.html">Crump Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="../../People.html">People</a>
+</li>
+<li>
+  <a href="../../Publications.html">Publications</a>
+</li>
+<li>
+  <a href="../../Books.html">Books/OER</a>
+</li>
+<li>
+  <a href="../../Courses.html">Courses</a>
+</li>
+<li>
+  <a href="../../Apps.html">Apps</a>
+</li>
+<li>
+  <a href="../../Opportunities.html">Join The Lab</a>
+</li>
+<li>
+  <a href="../../Blog.html">Blog</a>
+</li>
+<li>
+  <a href="../../R.html">R</a>
+</li>
+<li>
+  <a href="https://twitter.com/MattCrump_">
+    <span class="fa fa-twitter"></span>
+
+
+  </a>
+</li>
+<li>
+  <a href="https://github.com/CrumpLab">
+    <span class="fa fa-github"></span>
+
+
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+<img src="https://crumplab.github.io/blogposts/sabbaticalp1/sabbatical.png"" />
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Mea Culpa: My Sabbatical Part I</h1>
+
+<span class="author">Matt Crump  |  </span>
+<span class="date">Last edited: 01 July, 2020</span>
+
+<span class="social_media">
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</span>
+
+
+</div>
+
+
+<hr />
+<p>I’m sad, mad, and glad, and a bunch of other things. I haven’t added to this blog in almost a year. I’ve been listening and learning. I have to do some personal work. This is part of it.</p>
+<p>I’ve been on sabbatical, it’s almost over, two months left. Lots of things are changing and staying the same all at once. Maybe I should wait to reflect on my sabbatical after it is over, but screw that.</p>
+<p>This is my first ever sabbatical, a great priviledge. Who am I kidding, I’ve been waiting my entire career for this moment. Freedom. But, freedom from what, to do what? I took me until today to even ask this question to myself. I just made another decision. This will be part I, so that I can get to part II. I really want to get part II, because it is the thing that is making me glad. (spoiler alert, I haven’t got there yet)</p>
+<p>OK, I should reflect on what I did so far on sabbatical. Some context is in order…roughly what I was doing/happening before sabbatical.</p>
+<div id="very-short-backstory" class="section level2">
+<h2>Very short backstory</h2>
+<p>Got interested in cognitive psychology as an undergrad, got a Ph.D., did a postdoc, got hired at Brooklyn College in 2011. Which meant I just needed to turn the crank until I get tenure so I can go on sabbatical for one year! I did research, service, and teaching. I got tenure. I’m on sabbatical. I’ve satisfied all of my life goals, hurray for me.</p>
+<p>I think it would be fair to say in general that I get interested in things, and also bothered by them. So, Cognitive Psychology is one of the things that interests me greatly, and also bothers me greatly. I am very interested in my job, and doing things like research, teaching, and service; and, all of those things have been bothering bothers to me too. I sometimes have to write self-evaluations and submit them to my department. I’ve never written one to myself, here goes.</p>
+</div>
+<div id="a-retrospective-pre-sabbatical-self-eval" class="section level2">
+<h2>A retrospective pre-sabbatical self-eval:</h2>
+<div id="research" class="section level3">
+<h3>Research</h3>
+<p>Yes, I did research on cognitive psychology. I could go on about my interests here. I mean ostensibly the discipline is about cognition, mind stuff, how people think their next thought, dream a dream, have an experience, how it all actually works, computation, transformation, and blah blah blah. What bothers me about cognitive psychology is that it is mostly not about people or any of that stuff I find interesting. Yet, I remain a student of cognition. There are many bits here and there that sustain my interest, and I have met many colleagues who I adore, and who challenge my way of thinking about cognition, and so on. And, I think that basic research in cognition can be a positive force, a good thing.</p>
+<p>Nevertheless, it has been several years where almost everytime I read an article in cognition I think WTF is the point of this. I just don’t care about most of it, so I’ve been biding my time for sabbatical and tenure. My sincere hope was that I could find a way to be interested again.</p>
+<p>I often mull around questions like: why I am doing this again, should I be doing this or that, is this worth doing? I just never really answer them, they just float around as questions that bother me that I don’t know how to answer. Something is wrong, but I can’t put my finger on it.</p>
+</div>
+<div id="teachingmentoring" class="section level3">
+<h3>Teaching/Mentoring</h3>
+<p>I did teaching and mentoring. I love it. I love my students. This is one of the best parts. It’s hard work, not everything works out. I made mistakes. There are so many dimensions to things in teaching, and it bothers me to no end how to approach content from multiple dimensions at the same time, especially dimensions I don’t know about, and need to learn about. But, this is the kind of bothering that I find interesting, so it works out as a sustaining cyclic force.</p>
+</div>
+<div id="service" class="section level3">
+<h3>Service</h3>
+<p>I did some service, usually in places where I had interests. There are things that bother me here. Ideally, I have tried to be a positive force in my institution, with some kind of balanced engagement that allows me also to do research and teaching. In practice, I am ashamed to have lost my cool on more than one occasion. I want to be a better citizen.</p>
+<p>But also, for real, just before my sabbatical started, I felt professionally perforated, often completely mentally distraught, and really fucking angry all the fucking time. I became unrecognizable to myself. I was used to exploring existential inner termoil (my version is usually something like, “but, what does this really tell us about cognition, argh, clutches pearls”); however, I wasn’t used to being an angry ruminating anger machine.</p>
+<p>I didn’t like the new me, and I put everything on sabbatical…the time off would help, somehow. Also, this was an extremely ambivalent feeling, because I can say just as many good and super awesome things about my colleagues and department/university. But, I something had to give, I couldn’t do another year like the one I just had.</p>
+<p>End. I guess I should submit this self-reflection to myself for approval. Next up, the sabbatical that is almost over.</p>
+</div>
+</div>
+<div id="the-sabbatical-so-far" class="section level2">
+<h2>The Sabbatical so far…</h2>
+<p>I started Sabbatical more or less end of May 2019. My service commitments mostly tapered off by July, so it wasn’t a clean break. But, I was pretty committed to trying out sabbatical. Finally, time to get stuff done. So, I spent most of the summer tweeting about secret societies in psychology that still exist today. You know, something that interests and bothers me at the same time.</p>
+<p>I was still in decompression. I spent the summer trying not to ruminate about things I was really really angry about. I did not want unproductive anger permeating my sabbatical. And, I wasn’t really that worried about it either. I figured it would go away eventually, and I was really excited about my sabbatical plan. I thought, and still think, that I had set up some collaborations that would reinvigorate me. That’s still true (they did), so thanks to my awesome collaborators, even though this year some of that stuff kinda didn’t work out.</p>
+<p>In late summer 2019, I started preparing for my first sabbatical stop in Winnipeg, for the month of October, to work with Randy Jamieson. That was such a great time. We had lots of good talks about cognition, we did a whack of experiments on memory and inference, we made an interesting computational account, this was fun. I’m still excited, the paper is mostly done, forthcoming somewhere at somepoint, fingers crossed.</p>
+<p>At some point in 2019, Matti Vuorre struck up a collaboration with me, and we ended up developing an R package called <a href="https://crumplab.github.io/vertical/">vertical</a> for using R to make and share psych research assets. This was super fun, and we got a paper in at BRM.</p>
+<p>After Winnipeg my plan was to spend time at NYU with Todd Gureckis, and also go to Brisbane to work with Jason Tangen. But, before digging in, my spouse and I took a trip. Singapore, Vietnam, Australia, in February-March 2020. In hindsight, travelling during a global pandemic wasn’t the smartest thing we ever did.</p>
+<div id="escape-to-new-york" class="section level3">
+<h3>Escape to New York</h3>
+<p>Needless to say, by the time we got to Brisbane, we had to leave abruptly because the airlines were shutting down international travel, and borders were closing. It was a confusing time. But, we made it back to NYC two days before the covid-19 lockdown. Still here.</p>
+<p>Obvsiouly I’ve got problems, but being a tenured professor on sabbatical, who is normally mostly content staying at home, during a pandemic, is not a problem. We self-quarantined for 14 days, and are adapting to the new normal here in NYC. I am so proud of my fellow New Yorkers. I cry a bit sometimes. March and April are a bit of a blur. I didn’t think about research, I just shut that part off. I’d been meaning to play more music, I did more of that.</p>
+<p>In May, George Floyd was murdered the same day I turned 40. Black lives matter. Things need to change. The vitality of the protests removed all shreds of any “normal work thinking”, which was totally impossible and gone.</p>
+<p>Questions about all sorts of things swirled around. I spent too much time being horrified by twitter. Admittedly, I have actively avoided all sorts of things. For example, there are large portions of dare I say psychology, that I actively haven’t read about. One of those things is IQ research. Just missed the boat on it, never learned much about it, had a brief run-in with it in grad school, didn’t make me inclined to think it would be useful for what I was interested in. More recently, I watched the debacle with the racist IQ paper that has now been retracted in Psych Science. This is now very recent history, and things get very blurry, in terms of what’s going on.</p>
+<p>To put it simply, I’m learning about how IQ testing is the tip of the eugenicist iceberg in psychology. I’m learning about structural racism and eugenics in the discipline of Psychology. I feel like I’m in the movie sixth sense, only that now I see eugenicism everywhere. I knew Psychology was fucked up, but it’s way more fucked up than I ever realized.</p>
+<p>I’m now well out of my wheel-house. So, I’m pretty sure I need to learn more about this for so many reasons. To contextualize my own research, to improve my teaching, and to be a positive force in the institutions I work in. This learning process is profoundly horrifying and humiliating, and I have no idea how I’m going to participate in psychology in the future.</p>
+<p>So, I am almost to the present moment. Except for one last thing, which is the best thing that happened so far this sabbatical. A way forward…I started reading the <a href="https://journals.sagepub.com/home/jbp">Journal of Black Psychology</a> from the beginning. The massive brain explosions that followed from reading just the first couple issues confirmed to me that I need to digest this truly breathtaking scholarship. Before I was even born, the <a href="https://www.abpsi.org">Association of Black Psychologists</a> has been describing and deconstructing white racist psychology. They’ve been reconstructing psychology, and they’ve been constructing their own psychology. That’s what I call academic heroes.</p>
+<p>So, I’ve got two months left of sabbatical, and a bunch of reading to do. My plan is to write and reflect while I read, maybe sometimes here, maybe a bit on twitter, maybe somewhat more formally. And, also play synthesizer, because I gotta almagamate with my “psychological verve” too <span class="citation">Boykin (1977)</span>.</p>
+<p>to be continued…</p>
+</div>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references hanging-indent">
+<div id="ref-boykinExperimentalPsychologyBlack1977">
+<p>Boykin, A. W. (1977). Experimental Psychology from a Black Perspective: Issues and Examples. <em>Journal of Black Psychology</em>, <em>3</em>(2), 29–49. <a href="https://doi.org/10/gg3htw">https://doi.org/10/gg3htw</a></p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+---
+title: "What do we know about the psychology of learning to computer program? I don't know, so I'm doing a lit review..."
+author: "Matt Crump"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+twitter: "https://twitter.com/MattCrump_"
+github: "https://github.com/CrumpLab"
+website: "https://crumplab.gihub.io"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    code_folding: show
+    number_sections: false
+    toc_depth: 4
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: web/header.html
+    md_extensions: -autolink_bare_uris
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+---
+
+How do people learn to program a computer? I've got some opinions, some experience learning myself, and some experience teaching computer programming skills to students in Psychology. But, I'm not up to date on the literature on this topic. Time for a literature review. Let's see how far I can get in a couple hours (or more, let's see).
+
+## Setting up and notes for my future self
+
+I'm hoping that the work I put in now might be useful for my self later on. So, I'm going to blog about doing this literature review while I do it. I've also got some useful tools at my disposal, namely [Zotero](https://www.zotero.org), a free reference manager, that I will use to store the papers the I find, and to create a .bib file that I can use to cite the papers. I'll probably also tweet about this a little bit (already got some nice hits after asking for refs that I should be looking it).
+
+Some time ago I remember wading through some literature on teaching computer programming...I'm sad to see that I didn't save any of that in a Zotero folder...ooops, all that work is now lost to time.
+
+## Some questions that I have right now
+
+1. What kind of assessments are used to measure knowledge of computer programming concepts and skills?
+
+2. Are there good examples of specific exercises or interventions that have a measurable and reliable influence on learning/retaining/understanding a computer programming concept or skill.
+
+3. How is this literature organized? Are researchers primarily interested in the applied problem of "optimizing" curriculum for teaching computer programming, or using the domain of computer programming as a model learning environment to examine aspects of human cognition?
+
+4. Are their tips I can extract from this literature that I should (or should not I suppose) employ in the class room when I teach programming concepts?
+
+5. I'm a cognitive psychologist with a general interest in skill learning...am I interested in wading into this research area as a part of my own research?
+
+## Groups/online resources about psychology and programming
+
+### [http://teachtogether.tech](http://teachtogether.tech)
+
+Thanks to [\@mariacdangelo](https://twitter.com/mariacdangelo) for pointing me to [http://teachtogether.tech](http://teachtogether.tech), a CC-licensed book that formed part of the Software Carptentry training program. Lot's to digest here, including a long reference section. I guess I'll start mining this reference section and see where it takes me. 
+
+### PPIG - Psychology of Programming interest group
+
+-[http://www.ppig.org](http://www.ppig.org)
+
+## Papers
+
+Momentarilly got sucked down a rabbit hole trying to figure out how I want to list things in this .Rmd document. It would be nice to have a function where I could pump in a citation key, and have it print out the full reference so that i can put my notes underneath it. I sort of have this working, but don't like the formatting...Oh, well, I should stop this and continue with the review...
+
+--- 
+
+```{r, results='asis', echo=FALSE}
+library(knitcitations)
+library(RefManageR)
+bib <- read.bibtex("refs.bib")
+
+in_text_ref <- function(x){
+  b<-capture.output(print(x,.opts = list(bib.style = "authoryear", first.inits = TRUE, style = "markdown",no.print.fields=c("URL","urldate","issn","doi"))))
+  cat("### ")
+  cat(b,collapse=" ")
+  
+}
+
+in_text_ref(bib["bennedsenFailureRatesIntroductory2019"])
+
+```
+
+@bennedsenFailureRatesIntroductory2019 follow up on their previous paper looking at failure rates in introductory CS1 classes. The previously reported 33% failure rates (in 2007), and are now reporting 28%, a small reduction. One conclusion is the failure rate is not overwhelmingly bad. I remember failing CS1 as an undergrad, so count me in. Too bad CS1 isn't a liberal arts requirement (at least I don't think it is in general). It would be nice to know what the failure rate is for students who don't intend to major in CS.
+
+--- 
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["linnCaseCaseStudies1992"])
+```
+
+@linnCaseCaseStudies1992 describe and advocate a "case study" approach. Students are given a problem (e.g., write a program to print block letters given input letters), and are shown "expert" notes on how to organize an algorithm to solve the problem. Methods and results are minimal, but a graph is shown at the end with some data indicating a small benefit to scoring higher on the problem given info about other students solutions along with expert notes. The authors note that students complained about having to read 20 pages worth of expert commentary that was part of the "helpful" learning material, yikes.
+
+I remember some the assignments I was given in an intro CS course, and most of them made no sense to me. In general I've personally found the [project euler](https://projecteuler.net) approach helpful. That website challenges anyone to provide code-based solutions to concrete math problems (e.g., what is the sum of the prime numbers from 1 to 1000), and if you enter the correct answer you get to see other people's answers to the problem in a variety of languages. The idea is that by trying to solve these problems, you end up learning about basic programming constructs like variables, loops, logic, functions etc. All this said, I'm a fan of learning by examples, and maybe I'll keep the "print block letters" problem in my back pocket...I'll also note that I've been creating lists of problems to solve as a means to learning basic programming here [https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html](https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html), maybe I should add this one to the list of advanced problems...
+
+## Interrupted by ideas
+
+Hmmm, it's hard to slam through a literature review without having thoughts about the general issues.
+
+It seems obvious that the problem of "learning to computer program" is a really big kettle of fish, and it's not clear to me what level of analysis I'm interested in, uh oh for me.
+
+Let's forget Psychology for the moment (e.g., the business of explaining internal mind constructs), and I'll think like business. I'm a business that wants to offer training programs for computer programming. I would sell the training programs to people who want to learn to code, or to other businesses who want to train up their employees. I want to offer a good, evidence-based, training program. What do I do?
+
+I identify a list of skills that other businesses want their employees to master. I connect these skills to programming problems, whereby if you can solve the problem, you can demonstrate that you have the skill(s) needed to solve the problem. This entails that I create numerous problem sets for each skill, perhaps at different skill levels, and also "training" and "test" versions of problems so that learners can demonstrate their skill learning transferred across the problems (they didn't just learn the answer to one problem, they learned something more general that allowed them to apply what they learned from the training problem sets to the test problem sets). 
+
+The problem sets need to be measured in some way I suppose. This will get tricky. How to measure succesful completion? The problems could be constructed so that the answer must conform to a particular output, then at least one assessment is whether the answer conformed or not. I suppose without much effort you could measure things like, total characters typed in the code, number of lines, and length of time to completion. The style, beauty, and ingenuity in the coding solutions would be harder to measure. Reminder to self to pay attention to how these things are measured as I read more papers. But, let's say you get "some" measures on each of the problems. 
+
+Next, you might want to norm/validate the problems. How to do this? Well, you might want your problems to measure some overall "programming ability" construct. You partner with an existing company that has a bunch of programmers. Let's say the company also has metrics on those programmers in terms of how succesful they are in the company. For each programmer you get their salary, rank in the company, self-report questions on their abilities, perhaps "other" report questions on their subjective assessment of the other programmers abilities, maybe some other info like mean hours to complete tasks within their normal work day. Then, you have all the programmers complete the battery of programming problems. Then, you correlate performance on the problems with on-the-job metrics. Maybe those two kinds of measures correlate in the right direction with the better performance on the problems positively correlating with other measures of how good the programmers are. Or maybe this wouldn't happen because you are working with a bunch of expert programmers in the first place, and everything is effectively at ceiling. 
+
+I suppose at the end of the day you might want some kind of standardized set of problems where "people" agree that being able to solve these problems (to some criterion score) means that you have picked up on some desirable skills for the domain. Then, if you have that, you can start working on optimizing training. This could be done without much theory, and a lot of artful guesswork; or it could be done with theory. For example without theory, and with access to a large body of students, one could go about "trying out" various transfer of training designs, having some students try X first, or try Y first, to determine which first thing is best, and which second thing to learn is next best etc. 
+
+I'm getting away from my task of reviewing the literature. Need to stay on target.
+
+## More papers
+
+--- 
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["winslowProgrammingPedagogyPsychological1996"])
+```
+
+@winslowProgrammingPedagogyPsychological1996 present a short, sort of review/opinion piece on some general features of novice to expert skill learning (from cognitive psych) as they relate to learning the skill of computer programming. Some nuggets:
+
+- "At all levels, people progress to the next level by solving problems. The old saw that practice makes perfect has solid psychological basis." Couldn't agree more that progress is made by solving problems. Part of the problem is figure out which problems are worth solving first
+- Some talk about mental models, which I always find to be vaguely defined. At the very least, I tend to agree that having frames to hang a concept on is helpful. Some frames that popped up as being helpful were these two acronynms:
+  - ICO pattern : Input -> Calculate -> Output
+  - IRT pattern : Initialize -> Repeat -> Terminate
+- Task vs. problem. Tasks are "goals with a known solution", and problems are "a goal with no familiar solution". With expertise goals that were previously "problems" become "tasks".
+
+--- 
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["robinsLearningTeachingProgramming2003"])
+```
+
+@robinsLearningTeachingProgramming2003 is a similar kind of general review as above. 
+
+---
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["lahtinenStudyDifficultiesNovice2005"])
+```
+
+@lahtinenStudyDifficultiesNovice2005 ask a large sample (n > 500) of students about to subjectively assess how difficult it was to learn various programming concepts.
+
+- students found example programs most helpful (e.g., compared to lecture, and other kind of curriculum)
+- the most difficult concepts were the ones that were the most complex
+
+---
+
+```{r, results='asis', echo=FALSE}
+in_text_ref(bib["fullerDevelopingComputerSciencespecific2007"])
+```
+
+@fullerDevelopingComputerSciencespecific2007 develops a matrix-like taxonomy of cognitive skills presumed to be a part of computer programming. Seems like a comprehensive method for assessing knowledge in the domain. Challenge would be to create an entire curriculum where the problem sets are validated in terms of the taxonomy. A big project.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["vihavainenExtremeApprenticeshipMethod2011"])
+
+```
+
+@vihavainenExtremeApprenticeshipMethod2011 is my favorite so far, probably because the teaching method they describe is so close to my own. The basic apprenticehip model is learning by doing, with these three stages: modelling, scaffolding, and fading. Modelling involves an expert walking through an example probelm, scaffolding is giving students a transfer problem with an expert around to give advice, and fading is having students "master" a problem without expert intervention. They ran a class with less lecturing (preaching as they call it), and more lab time with the problem sets as the focus. They reported a lower failure rate with this method, but didn't get into the weeds of the curriculum used in the course. 
+
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["daviesSnapshotCurrentPractices2011"])
+
+```
+
+@daviesSnapshotCurrentPractices2011 conducts a survey of many departments. They find numerous different languages are taught in intro classes (CS0), and JAVA is predominant in CS1 and CS2.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["taylorComputerScienceConcept2014"])
+
+```
+
+@taylorComputerScienceConcept2014 describe and evaluate "concept inventories" as they apply to computer science. Concept inventories are the list of concepts of relevant knowledge in a domain. It seems there are no settled concept inventories for computer science.
+
+## Interlude
+
+I'm finding a bunch of papers that have some similar characteristics. Need to distill these down before attempting to comment on them. Not sure I'm taking much away from this literature yet.
+
+I have been honing in on a few things that I usually keep my eyes out for. For example, what are the classics in this field? I've found a few books that I should probably dig through, but those aren't easy access for this very moment. I should probably make a tenative classics section.
+
+## Classic? papers
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["solowayStudyingNoviceProgrammer2013"])
+
+```
+
+@solowayStudyingNoviceProgrammer2013 This is a book I don't have, but Soloway keeps coming up on early papers.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["solowayCognitiveStrategiesLooping1983"])
+
+```
+
+@solowayCognitiveStrategiesLooping1983 This is the kind of paper I was expecting to see more of. A relatively clear problem is presented (solve a simple task of averaging some numbers), and the authors show that performance is worse when a "cognitively preferred" algorithm does not easily solve the problem at hand. Reminding of the Wason card task where people do better when the info on the cards is expressed in terms of socially meaningful information rather thant abstract variables. Still, compared to relatively simple cognitive behavioural tasks that I'm used, this task is pretty complicated stuff.
+
+andersonLearningProgram1983
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["andersonLearningProgram1983"])
+
+```
+
+@andersonLearningProgram1983
+
+- "In looking at novices learning how to program in LISP, they spend less than 25% of their time actually trying to absorb the relevant knowledge and more than 75% of their time learning how to use that knowledge. We have yet to see a novice understand any instruction of modest complexity such that the he could do the task without error. There are always serious holes in the understanding which are only dealt with in the act of solving problems"
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["andersonLearningProgramLISP1984"])
+
+```
+
+@andersonLearningProgramLISP1984 
+
+- n of 3, 30 hours of learning LISP, recorded verbal protocols, and terminal interactions
+- argue for four major conclusions, quoted from text:
+
+  1. The problem-solving is organized hierarchically according to a set of goals and subgoals.
+  2. The problem solving is largely guided at first by structural analogy to concrete cases.
+  3. The ACT* processes of composition and proceduralization convert this knowledge into procedures specific to programming.
+  4. Working memory impacts on behavior by affecting the probability of successfully executing the analogy and programming procedures.
+
+Two things seem to be going on here. First, we have detailed, step-by-step descriptions of what subjects did when they were writing a function. This forms the data. The model appears to be hypotheses about the goals and subgoals that were driving behavior during each step.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["pirolliLearningProgramRecursion1984"])
+
+```
+
+@pirolliLearningProgramRecursion1984
+
+- Subjects receiving different instructional methods prior to programming a recursive function took different amounts of time in solving the recursive function problems.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["andersonNoviceLISPErrors1985"])
+
+```
+
+@andersonNoviceLISPErrors1985
+
+- typos suck. people make lots of typos in code, and spend lots of time fixing them, even when they have reasonably high level conceptual understanding of the code.
+
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["pirolliRoleLearningExamples1985"])
+
+```
+
+@pirolliRoleLearningExamples1985
+
+- Not much to say about this one as of yet.
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["kesslerLearningFlowControl1986"])
+
+```
+
+@kesslerLearningFlowControl1986
+
+- Some transfer of training results regarding teaching iteration vs. recursion
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["grayChangeepisodesCodingWhen1987"])
+
+```
+
+@grayChangeepisodesCodingWhen1987
+
+- Some transfer of training results regarding teaching iteration vs. recursion
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["mckendreeFrequencyPracticeEffects1987"])
+
+```
+
+@mckendreeFrequencyPracticeEffects1987
+
+- title says it all
+
+---
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["wuKnowledgeTransferProgramming1992"])
+
+```
+
+@wuKnowledgeTransferProgramming1992
+
+- Some evidence of positive transfer between programming languages
+
+## More recent papers
+
+```{r, results="asis", echo=FALSE}
+in_text_ref(bib["hansenExperimentCognitiveComplexity2013"])
+
+```
+
+@hansenExperimentCognitiveComplexity2013
+
+- Nice set of methods here. Used Mturk, along with python code. Task was to view code and report the output of the code. Measures included accuracy and reaction time.
+
+From the paper: (1) what common errors do participants make for different program types and versions?, (2) are some program versions more difficult than others?, and (3) what role does experience play in correctness and speed of response? Our results (summarized in Table 1) indicate that the relationship between program text, experience, and response is quite com- plex, even for these simple programs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## References
+
+
+
+
+
+
+
+
+
+

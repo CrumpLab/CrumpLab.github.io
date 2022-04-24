@@ -1,0 +1,91 @@
+---
+title: "Version control, public discourse, and epistemic access"
+author: "Matt Crump"
+date: "Last edited: `r format(Sys.time(), '%d %B, %Y')`"
+twitter:
+  card_description: "Some thoughts on using version control systems as a process for public discourse"
+  card_img: "https://crumplab.github.io/blogposts/7_20_20_versioncontrol/img/git.png"
+bibliography: refs.bib
+csl: web/apa.csl
+output: 
+  html_document:
+    template: web/template.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+    theme: yeti
+    highlight: kate
+    css: web/crump_basic.css
+    includes:
+      in_header: [web/header.html,../../g_analytics.html]
+    md_extensions: -autolink_bare_uris
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+---
+
+What's so great about this post is that I get to rewrite it over and over again, and I'm not sure I can make my point unless I do that.
+
+Also, who knows, maybe I could do it in one shot and be done with what I'm trying to say. But, where's the discovery in that? (edit: I already didn't do that).
+
+___
+
+I have recently settled in on a blogging process for myself, and here I talk about that process a bit. (note: I think I need some kind of thesis statement or point at the beginning, to make it worth reading, will come back for that).
+
+The process is evident in my recent posts about eugenics and psychology. I'm using these posts as my learning process. My blog is notebook in public. Perhaps there is a performative function to this, but to speak for myself, I am hoping there is some value in sharing my notes. 
+
+I'm writing this blog in a text editor (R-studio), and I'm posting the content as a website (using R markdown) hosted on a github repository that I use for my lab website, here: <https://github.com/CrumpLab/CrumpLab.github.io>. All of the blog posts on the website are contained in the `blogposts` folder. Github's version control records every edit and change I have committed. That makes this a version controlled blog in public with a fairly complete record of all of the words I wrote and deleted and kept etc. It's a layered document with the history of revisions stacked behind it.
+
+It's not a perfect record of every entry and deletion. I have to make a choice to preserve the record at any moment. So, I could write and delete a bunch of things before making a commit, and those changes are lost. Oh well. I try to do my best. 
+
+Most of the time I spray these text files with words, and then make a commit after an hour or two. More recently, I'm trying to make commits that reflect sections of content in my writing. For example, when I feel like I did something coherent and identifiable, I make a commit and give it a label. I assume these labels could be useful later on if I ever want to take a look at "my process". But, TBH I haven't bothered to look at the revision history yet. I mean who wants to read that?
+
+This current excursion into meta-level discourse on my own blog is new to me. I should probably be doing something else. Instead, what is this that I'm doing?
+
+I came across an eye-catching sub-heading in a book by Robert Wilson, called "The eugenic mind". That sub-heading was: "The politics of epistemic apartheid". It's one of those phrases that would normally pass me by because either I'm too dense, or it's too dense, or a combination of both. Wilson develops a standpoint theory of eugenics and argues that survivors of eugenics, people on the margins of society with lived experience as targets of eugenics polices, have important knowledge and perspective to bring to the table. Hard to disagree.
+
+I'm gathering there are considerations about knowledge within social science discourse, especially concerning the question of who can know what. This is an important question when lived experience provides unique sources of knowledge, because it becomes fairly obvious that there are impossibilities of knowledge. Some things can't be known. Additionally, arguments about knowledge could revolve around who can know what given the existence of knowledge gaps. I think this is partly what Wilson describes when he refers to the politics of epistemic apartheid.
+
+I've been reflecting on these concepts, and this reflection has prompted the present mass of disorganized words. I don't have answers about who gets to claim knowledge. 
+
+I am in engaging in a process of creating and refining my own understanding, through writing. I'm doing it in public. I'm doing it with version control. I am attempting to break down epistemic apartheid for myself to the extent possible. I'm looking for epistemic access. I'm wondering if something about this process, of representing the discovery process of word usage over time, over revision, somehow symbolizes and energizes the dance around knowledge.
+
+This post is a process example. This post will change whenever I edit it. Right now it is a rough scattershot of some vague point I thought was worth aiming at. Maybe I'll delete the whole thing because of some perspective I'll adopt later on.
+
+Maybe, I'll keep changing it, like an art experiment. 
+
+Maybe it will stay here like this forever, threatening to not have a long history of changes preserved in version control. (nope: already edited it too much)
+
+Only time will tell.
+
+(note: have some kind of conclusion, maybe make a point first, and the work around that toward a conclusion)
+
+---
+
+End thought (from yesterday). Nobody wants to read the version control history of a blog. There is something about the layers of version control that symbolizes the process of epistemic discovery and change that is lost in a final "perfect" draft. This is not an argument in support of foisting sloppy word messes upon unsuspecting readers.
+
+---
+
+things to work in later
+
+- revisionist history
+- war of the ghosts (reconstruction)
+- what are my views given that all the things I shave said are preserved in my record of deletion
+- allowance of changing viewpoint
+
+I spent another looking at eugenics connections. Just like here, I am doing all of that work using this process. So, I am incrementally saving commits to github as I add and edit my own words. I don't want to go back and read through all of those changes. But, the record is there. It's possible I could do some kind of self-analysis of my own word usage over time. For example, as I learn about eugenics, I'm becoming sensitive to different kinds of issues over time, and I'm pretty sure that I am modifying how I write to reflect these emerging considerations.I assume my "semantic space" of eugenics is changing as I learn and write about it, maybe it would be fun to chart out those changes using NLP or something sometime.
+
+---
+
+
+## References
+
+
+
+
