@@ -3,11 +3,12 @@ pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
   Apps: Apps.html
+  Blog: Blog.html
   Books: Books.html
   Courses: Courses.html
   Fun: Fun.html
   Opportunities: Opportunities.html
   People: People.html
   Publications: Publications.html
-last_built: 2022-04-23T18:09Z
+last_built: 2022-04-24T21:09Z
 
