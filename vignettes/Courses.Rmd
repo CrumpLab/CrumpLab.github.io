@@ -53,7 +53,7 @@ knitr::include_graphics("images/2530_image.jpg")
 
 Brooklyn College of CUNY, Experimental Psychology MA program
 
-The [course website](https://crumplab.github.io/rstatsmethods/) contains syllabus and readings.
+[Course website](https://crumplab.github.io/rstatsmethods/) contains syllabus and readings.
 
 </div>
 <div class="col-sm-3">
