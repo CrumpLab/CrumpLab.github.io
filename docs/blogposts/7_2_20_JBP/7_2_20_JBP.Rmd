@@ -19,7 +19,7 @@ output:
     highlight: kate
     css: web/crump_basic.css
     includes:
-      in_header: [web/header.html,../../g_analytics.html]
+      in_header: [web/header.html,web/g_analytics.html]
     md_extensions: -autolink_bare_uris
     self_contained: false
 ---
