@@ -11,7 +11,7 @@ opengraph:
     creator: "@MattCrumpLab"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Blogging with pkgdown}
+  %\VignetteIndexEntry{Blogging with pkgdown?}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -118,7 +118,11 @@ Next up is to hack the template. Looks like I need to make a template off of `co
 
 It worked I think. Note to self that the package needs to be rebuilt in order for any changes to the templates to take effect.
 
+## Issues
 
+I want to add unique twitter cards to the `articles/index.html` page, and to individual posts. I thought this would be easy, because `pkgdown` makes it easy to [add twitter cards for each vignette](https://pkgdown.r-lib.org/articles/metadata.html?q=twitter#article-metadata). However, it seems that any other cards are added on a site-wide basis, and defined in `_pkgdown.yml`. Additionally, it's not clear how to set individual cards for pages like `articles/index.html`.
+
+Solution was to write a custom version of `pkgdown::build_article_index()` that allowed to the override to be applied only to `articles/index.html`, and not to any the blog posts. A nice side effect was that I was planning to add some functions to a lab R package, so now I can put those in the R package for the crumplab website.
 
 
 

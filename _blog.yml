@@ -1,7 +1,3 @@
-home:
-  title: Crump Lab Blog
-  description: Various musings, often about cognition, teaching, and using R. Sometimes synthesizers and other things.
-
 template:
   opengraph:
     image:
