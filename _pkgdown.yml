@@ -1,11 +1,21 @@
-url: ~
+url: https://crumplab.com/
 template:
   package: crumplab
   bootstrap: 5
   params:
     ganalytics: G-HPGGT4QZ8Q
+  opengraph:
+    image:
+      src: reference/figures/summary.png
+      alt: "Crumplab.com logo"
+    twitter:
+      creator: "@MattCrumpLab"
+      site: "@MattCrumpLab"
+      card: summary
 
 home:
+  title: CrumpLab
+  description: Computational Cognition Lab @ Brooklyn College of CUNY
   links:
     - text: Github
       href: https://github.com/CrumpLab
