@@ -1,0 +1,14 @@
+home:
+  title: Crump Lab Blog
+  description: Various musings, often about cognition, teaching, and using R. Sometimes synthesizers and other things.
+
+template:
+  opengraph:
+    image:
+      src: social_blog.jpg
+    twitter:
+      card: summary
+      creator: "@MattCrumpLab"
+  includes:
+    in_header: |
+      <meta name="twitter:title" content="Crump Lab Blog"> <meta name="twitter:description" content="Various musings, often about cognition, teaching, and using R. Sometimes synthesizers and other things.">

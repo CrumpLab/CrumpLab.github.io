@@ -1,5 +1,6 @@
 url: ~
 template:
+  package: crumplab
   bootstrap: 5
   params:
     ganalytics: G-HPGGT4QZ8Q
@@ -14,7 +15,7 @@ home:
       href: https://scholar.google.com/citations?user=49EVuVcAAAAJ&hl=en
     - text: Brooklyn College
       href: https://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059
-    - text: CCP
+    - text: Cognitive and Comparative Psychology Doctoral Training Area @ Graduate Center of CUNY
       href: https://ccp-cuny.github.io/index.html
   sidebar:
     structure: [links, toc, authors, custom]
@@ -64,7 +65,7 @@ navbar:
       href: articles/Opportunities.html
     blog:
       text: Blog
-      href: articles/Blog.html
+      href: articles/index.html
     fun:
       text: Fun
       href: articles/Fun.html
@@ -77,3 +78,15 @@ navbar:
     github:
       icon: fa-lg fa-github
       href: https://github.com/CrumpLab
+
+articles:
+- title: Newer Posts
+  desc: Occasionally blogging musings, often around cognition and how it sits within a scientific and social context. When I'm not working on these words, they sit here, and when I am working on them, they change.
+  navbar: ~
+  contents:
+  - starts_with("blog/post")
+- title: Older Posts
+  desc: Attempting to migrate older posts from my previous blog format to this location
+  navbar: ~
+  contents:
+  - Blog
