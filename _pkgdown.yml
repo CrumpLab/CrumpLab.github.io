@@ -99,4 +99,5 @@ articles:
   desc: Attempting to migrate older posts from my previous blog format to this location
   navbar: ~
   contents:
+  - starts_with("blog/older")
   - Blog
