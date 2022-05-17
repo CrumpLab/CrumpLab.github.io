@@ -5,7 +5,7 @@ home:
 template:
   opengraph:
     image:
-      src: social_blog.jpg
+      src: "https://www.crumplab.com/reference/figures/social_blog.jpg"
     twitter:
       card: summary
       creator: "@MattCrumpLab"
