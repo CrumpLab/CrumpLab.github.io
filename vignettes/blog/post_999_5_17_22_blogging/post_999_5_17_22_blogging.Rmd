@@ -1,6 +1,14 @@
 ---
-title: "Blogging with pkgdown"
-description: "This is an attempt to blog with pkgdown, including notes to self about how this would work."
+title: "Blogging with pkgdown?"
+description: "This is an attempt to blog with pkgdown, including notes to self about how I did this."
+author: "Matt Crump"
+date: '2022-05-17 `r paste("Last knit: ", lubridate::today())`'
+opengraph:
+  image: 
+    src: "https://example.com/pkg/batpig.png"
+  twitter:
+    card: summary_large_image
+    creator: "@MattCrumpLab"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Blogging with pkgdown}
@@ -14,6 +22,8 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+
+<img src="imgs/blogging_with_pkgdown.jpg" style= width="100%"/>
 
 I like [pkgdown](https://pkgdown.r-lib.org). It's great for what it was built to do (make websites for R packages), and it's pretty good at other use cases as well. For example, I recently re-factored my lab webpage using pkgdown and that worked out well enough.
 
