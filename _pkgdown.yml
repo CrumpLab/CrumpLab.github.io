@@ -2,6 +2,17 @@ url: https://crumplab.com/
 template:
   package: crumplab
   bootstrap: 5
+  bslib:
+    #heading_font: {google: "Montserrat Alternates"}
+    headings-font-weight: 500
+   # base_font: {google: "Baskervville"}
+  #  font-weight-base: 500
+    font-size-base: 1.15rem
+    h1-font-size:  2.5rem
+    h2-font-size:  1.8rem
+    h3-font-size:  1.5rem
+    h4-font-size:  1.25rem
+    primary: "#a369bf"
   params:
     ganalytics: G-HPGGT4QZ8Q
   opengraph:

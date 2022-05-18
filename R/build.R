@@ -23,6 +23,17 @@ crumplab_blog <- function(){
   crumplab_blog_index()
 }
 
+#' build site and then tweak
+#'
+#' @return
+#' @export
+#'
+#' @examples
+crumplab_site <- function(){
+  pkgdown::build_site()
+  crumplab_blog_index()
+}
+
 
 
 

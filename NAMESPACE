@@ -2,3 +2,4 @@
 
 export(crumplab_blog)
 export(crumplab_blog_index)
+export(crumplab_site)

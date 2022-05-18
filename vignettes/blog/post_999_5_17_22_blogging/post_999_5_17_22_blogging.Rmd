@@ -1,6 +1,6 @@
 ---
 title: "Blogging with pkgdown?"
-description: "This is an attempt to blog with pkgdown, including notes to self about how I did this."
+description: "*May 5th, 2022* - An attempt to blog with pkgdown, including notes to self about how I did this. It was succesful enough that I'm using pkgdown for this blog."
 author: "Matt Crump"
 date: '2022-05-17 `r paste("Last knit: ", lubridate::today())`'
 opengraph:
