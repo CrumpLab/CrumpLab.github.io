@@ -43,7 +43,6 @@ library(bib2df)
 library(stringi)
 library(fontawesome)
 
-
 #load bib
 bib_df <- bib2df(file="../pkgdown/assets/Crump_In_progress/Crump_In_progress.bib")
 
