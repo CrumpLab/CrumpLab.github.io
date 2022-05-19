@@ -174,7 +174,9 @@ for (i in 1:5 ){
 
 ## That's all for now
 
-I would feel like this little excursion was wrapped up if I took the next step and refactored the script into a set of functions. But, I'll probably leave that for another day. For now I have working pipeline that inputs a `.bib` file, and outputs a list of [publications]()
+I would feel like this excursion was wrapped up if I refactored the script into a set of functions. But, I'll leave that for another day. For now I have a working pipeline that inputs a `.bib` file, and outputs a list of [publications](https://www.crumplab.com/articles/Publications.html) in APA format, with a few bells and whistles.
+
+<iframe src="https://giphy.com/embed/HGX3gYWt9vLZ6" width="480" height="427" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/babe-pig-james-cromwell-HGX3gYWt9vLZ6">via GIPHY</a></p>
 
 
 

@@ -199,7 +199,7 @@
 </h2>
 <p>A next step was to add any other links to a given citation. I add extra tags to a <code>.bib</code> file in the extra field for citations in zotero. For example, this line is in the extra field for the <span class="citation">Vuorre and Crump (2021)</span> paper.</p>
 <pre><code>tex.url_website: https://crumplab.github.io/vertical/</code></pre>
-<p>As a result, when the <code>.bib</code> file is loaded into R as a data.frame, it will contain a column called <code>URL_WEBSITE</code>. I can then retrieve that info and write some custom code to smash together the markdown for a citation, along with any html I want to add it.</p>
+<p>As a result, when the <code>.bib</code> file is loaded into R as a data.frame, it will contain a column called <code>URL_WEBSITE</code>. I can then retrieve that info and write some custom code to smash together the markdown for a citation, along with any html I want to add it. The script below auto-generates a list of the first five publications in the <code>.bib</code> file (after sorting by year, so the most recent are first).</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
 <span class="co"># sort bib_df by year</span>
@@ -250,6 +250,16 @@
 <p>Crump, M. J. C., Jamieson, R. K., Johns, B. T., &amp; Jones, M. N. (2020). Controlling the retrieval of general vs specific semantic knowledge in the instance theory of semantic memory. In S. Denison, M. Mack, Y. Xu, &amp; B. C. Armstrong (Eds.), <em>Proceedings of the 42nd annual conference of the cognitive science society</em> (pp. 3261–3267). Cognitive Science Society.<span class="publinks"> <a href="../Crump//Users/mattcrump/Zotero/storage/FP9I74BQ/Crump%20et%20al.%20-%202020%20-%20Controlling%20the%20retrieval%20of%20general%20vs%20specific%20s.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://crumplab.github.io/ITS2/" class="external-link"> <i class="fas fa-globe"> website </i></a></span></p>
 <p>Crump, M. J. C. (2020). <em>Reproducible statistics for psychologists with r: Lab tutorials</em>. OSF. <a href="https://crumplab.github.io/rstatsforpsych/" class="external-link uri">https://crumplab.github.io/rstatsforpsych/</a><span class="publinks"> <a href="https://www.crumplab.com/rstatsforpsych/" class="external-link"> <i class="fas fa-globe"> website </i></a></span></p>
 <p>Johns, B. T., Jamieson, R. K., Crump, M. J. C., Jones, M. N., &amp; Mewhort, D. J. K. (2020). Production without rules: Using an instance memory model to exploit structure in natural language. <em>Journal of Memory and Language</em>, <em>115</em>, 104165. <a href="https://doi.org/ghcm2c" class="external-link uri">https://doi.org/ghcm2c</a><span class="publinks"> <a href="../Crump//Users/mattcrump/Zotero/storage/NS7ZRKJR/Johns%20et%20al.%20-%202020%20-%20Production%20without%20rules%20Using%20an%20instance%20memory.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+</div>
+<div class="section level2">
+<h2 id="thats-all-for-now">That’s all for now<a class="anchor" aria-label="anchor" href="#thats-all-for-now"></a>
+</h2>
+<p>I would feel like this excursion was wrapped up if I refactored the script into a set of functions. But, I’ll leave that for another day. For now I have a working pipeline that inputs a <code>.bib</code> file, and outputs a list of <a href="https://www.crumplab.com/articles/Publications.html" class="external-link">publications</a> in APA format, with a few bells and whistles.</p>
+<iframe src="https://giphy.com/embed/HGX3gYWt9vLZ6" width="480" height="427" frameborder="0" class="giphy-embed" allowfullscreen>
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/babe-pig-james-cromwell-HGX3gYWt9vLZ6" class="external-link">via GIPHY</a>
+</p>
 </div>
 <div class="section level2 unnumbered">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
