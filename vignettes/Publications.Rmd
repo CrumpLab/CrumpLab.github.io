@@ -1,8 +1,8 @@
 ---
-title: "Publications"
+title: "Publications2"
 output:rmarkdown::html_vignette:
 vignette: >
-  %\VignetteIndexEntry{Publications}
+  %\VignetteIndexEntry{Publications2}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -10,7 +10,17 @@ vignette: >
 ```{css, echo=FALSE}
 .page-header {
     display: none;
-  }
+}
+
+.publications {
+  text-indent: -10px; 
+  padding-left: 10px;
+}
+
+.publinks {
+  text-indent: 0px; 
+  padding-left: 0px;
+}
 ```
 
 <img src="images/publications_banner.jpg" style= width="100%"/>
@@ -20,109 +30,136 @@ vignette: >
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 ```
 
-<!--Note: publications are compiled in Rmarkdown directly from a .bib file. Slowly working on making this work. Below is a plot of the semantic similarity between the publications (using the BEAGLE Abstract vectors). Hover over the dots to see the title (still in beta).-->
-
-```{r, message=FALSE,echo=FALSE,warning=FALSE, fig.width=5,fig.height=3, eval=FALSE}
-load('semantic_publicatins.RData')
-library(plotly)
-semantic_plot
-```
-
-
-```{r, results='asis', echo=F, message=F, warning=FALSE, eval=FALSE}
-library(bib2df)
-bib_df<-bib2df(file="Crump.bib")
-
-library(stringi)
-
-bib_df$TITLE<-stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
-bib_df$JOURNAL<-stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
-
-# sort bib_df by year
-bib_df<-bib_df[order(bib_df$YEAR, decreasing=T),]
-
-dims<-dim(bib_df)
-start_year <- 0 
-for(i in 1:dims[1]){
-  a<-bib_df$FILE[i]
-  split_a<-unlist(strsplit(a,";"))
-  file_path<-paste0("https://github.com/CrumpLab/CrumpLab.github.io/raw/master/",split_a[1])
-  if(bib_df[i,]$YEAR != start_year){
-    cat(c("##",bib_df[i,]$YEAR, "\n"))
-    start_year <- bib_df[i,]$YEAR
-  }
-  
-  cat(c("###",bib_df[i,]$TITLE)) #title
-  
-  cat(c("\n"))
-  
-  cat("<div class='row'>")
-    cat("<div class='column left'>")
-      cat(c("<div id=citationstyle>"))
-      cat(c(cat(bib_df[i,]$AUTHOR[[1]],sep=", "), " (",
-            bib_df[i,]$YEAR, "). ",
-            bib_df[i,]$TITLE, ". *",
-            bib_df[i,]$JOURNAL, ", ",
-            bib_df[i,]$VOLUME, "*, ",
-            bib_df[i,]$PAGES, "."), sep="")
-      if(is.na(a)==FALSE){
-        cat(c(" ", "[pdf](",file_path,")"), sep="")
-      }
-      get_data <- bib_df[i,]$NOTE
-      if(is.na(get_data)==FALSE){
-        cat(c(" | ", get_data), sep="")
-      }
-      
-      cat(c("</div>"))
-    
-    cat("</div>")
-  cat("<div class='column right'>")
-    get_doi <- bib_df[i,]$DOI
-    if(is.na(get_doi)==FALSE){
-      cat("<span class='__dimensions_badge_embed__' data-doi='",get_doi,"' data-style='small_circle' data-legend='hover-left' style = 'text-align:right;'></span>", sep="")
-      cat("<span data-badge-popover='left' data-badge-type='donut' data-doi='",get_doi,"' data-hide-no-mentions='true' class='altmetric-embed' style = 'text-align:right;'></span>", sep="")
-    }
-  
-  cat("</div>")
-  cat("</div>")
-  
-  
-  
-  
-  
-    
-  cat(c("\n"))
-  cat(c("\n"))
-  cat(c("<div id = abstractstyle>"))
-  cat(bib_df[i,]$ABSTRACT)
-  cat(c("</div>"))
-  cat(c("\n"))
-  cat(c("\n"))
-  cat(c("\n"))
-  
-}
-
-# library(dplyr)
-# 
-# table_df <- bib_df %>%
-#             select(YEAR,
-#                    TITLE,
-#                    JOURNAL,
-#                    AUTHOR) %>%
-#   mutate(AUTHOR = sapply(AUTHOR, function(x) paste(x,collapse="; ")))
-# 
-# knitr::kable(table_df)
-
-```
-
 
 **Copyright Notice:** Some of the documents listed below are available for downloading. They are provided as a means to ensure timely dissemination of scholarly and technical work on a noncommercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author's copyright. These works may not be re-posted without the explicit permission of the copyright holder.
 
-**NOTE: I recently made some changes to this website, and some of the links to the pdfs are now broken. You should be able to find most of the papers here <https://github.com/CrumpLab/CrumpLab.github.io/tree/master/RmarkdownWebsite_old/CrumpPubs>. I plan to fix this soon**
+## In Progress
 
-## In progress
- <script src="https://bibbase.org/show?bib=https://www.crumplab.com/Crump_inprogress.bib&jsonp=1&nocache=1&theme=side&authorFirst=1"></script> 
+::: {.publications}
+
+```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
+library(stevemisc)
+library(bib2df)
+library(stringi)
+library(fontawesome)
+
+
+#load bib
+bib_df <- bib2df(file="../pkgdown/assets/Crump_In_progress/Crump_In_progress.bib")
+
+# clean
+bib_df$TITLE <- stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
+bib_df$JOURNAL <- stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
+bib_df$BOOKTITLE <- stri_replace_all_regex(bib_df$BOOKTITLE, "[\\{\\}]", "")
+
+# sort bib_df by year
+bib_df <- bib_df[order(bib_df$DATE, decreasing=T),]
+
+# print individual entries to page
+
+for (i in 1:dim(bib_df)[1] ){
+#for (i in 1:5 ){
+  t_bib_entry <- paste0(capture.output(df2bib(bib_df[i,])), collapse="")
+  t_md_citation<- paste0(stevemisc::print_refs(t_bib_entry,csl = "apa.csl", 
+                                        spit_out = FALSE,
+                                        delete_after = FALSE), collapse=" ")
+  cat(t_md_citation)
+  
+  
+  
+  cat("<span class = 'publinks'>")
+  
+  if(any(names(bib_df)=="FILE")){
+    if( !is.na(bib_df[i,"FILE"]) ){
+      pdf_url <- paste0("../Crump/",bib_df[i,"FILE"], collapse = "")
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-file-pdf"> pdf </i></a>'),
+        sep="")
+    }
+  }
+  
+  if(any(names(bib_df)=="URL_WEBSITE")){
+    if( !is.na(bib_df[i,"URL_WEBSITE"]) ){
+      pdf_url <- as.character(bib_df[i,"URL_WEBSITE"])
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-globe"> website </i></a>'),
+        sep="")
+    }
+  }
+  
+  if(any(names(bib_df)=="URL_DATA")){
+  if( !is.na(bib_df[i,"URL_DATA"]) ){
+      pdf_url <- as.character(bib_df[i,"URL_DATA"])
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-database"> data </i></a>'),
+        sep="")
+    }
+  }
+  
+  cat("</span>")
+  cat("\n\n")
+}
+
+```
+
+:::
 
 ## Published
- <script src="https://bibbase.org/show?bib=https://www.crumplab.com/Crump.bib&jsonp=1&nocache=1&theme=side&authorFirst=1"></script> 
 
+::: {.publications}
+
+```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
+
+#load bib
+bib_df <- bib2df(file="../pkgdown/assets/Crump/Crump.bib")
+
+# clean
+bib_df$TITLE <- stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
+bib_df$JOURNAL <- stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
+bib_df$BOOKTITLE <- stri_replace_all_regex(bib_df$BOOKTITLE, "[\\{\\}]", "")
+
+# sort bib_df by year
+bib_df <- bib_df[order(bib_df$DATE, decreasing=T),]
+
+# print individual entries to page
+
+for (i in 1:dim(bib_df)[1] ){
+#for (i in 1:5 ){
+  t_bib_entry <- paste0(capture.output(df2bib(bib_df[i,])), collapse="")
+  t_md_citation<- paste0(stevemisc::print_refs(t_bib_entry,csl = "apa.csl", 
+                                        spit_out = FALSE,
+                                        delete_after = FALSE), collapse=" ")
+  cat(t_md_citation)
+  
+  
+  
+  cat("<span class = 'publinks'>")
+  
+  if(any(names(bib_df)=="FILE")){
+    if( !is.na(bib_df[i,"FILE"]) ){
+      pdf_url <- paste0("../Crump/",bib_df[i,"FILE"], collapse = "")
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-file-pdf"> pdf </i></a>'),
+        sep="")
+    }
+  }
+  
+  if(any(names(bib_df)=="URL_WEBSITE")){
+    if( !is.na(bib_df[i,"URL_WEBSITE"]) ){
+      pdf_url <- as.character(bib_df[i,"URL_WEBSITE"])
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-globe"> website </i></a>'),
+        sep="")
+    }
+  }
+  
+  if(any(names(bib_df)=="URL_DATA")){
+  if( !is.na(bib_df[i,"URL_DATA"]) ){
+      pdf_url <- as.character(bib_df[i,"URL_DATA"])
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-database"> data </i></a>'),
+        sep="")
+    }
+  }
+  
+  cat("</span>")
+  cat("\n\n")
+}
+
+```
+
+:::
