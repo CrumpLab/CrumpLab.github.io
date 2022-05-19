@@ -12,7 +12,7 @@ opengraph:
     site: "@MattCrumpLab"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Grading with multiple warp zones}
+  %\VignetteIndexEntry{Teaching with multiple warp zones: Engagement and assignment choice}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
