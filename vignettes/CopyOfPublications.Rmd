@@ -1,0 +1,163 @@
+---
+title: "Publications"
+output:rmarkdown::html_vignette:
+vignette: >
+  %\VignetteIndexEntry{Publications}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{css, echo=FALSE}
+.page-header {
+    display: none;
+}
+
+.publications {
+  text-indent: -10px; 
+  padding-left: 10px;
+}
+
+.publinks {
+  text-indent: 0px; 
+  padding-left: 0px;
+}
+```
+
+<img src="images/publications_banner.jpg" style= width="100%"/>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
+```
+
+
+**Copyright Notice:** Some of the documents listed below are available for downloading. They are provided as a means to ensure timely dissemination of scholarly and technical work on a noncommercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author's copyright. These works may not be re-posted without the explicit permission of the copyright holder.
+
+## In Progress
+
+::: {.publications}
+
+```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
+library(stevemisc)
+library(bib2df)
+library(stringi)
+
+#load bib
+bib_df <- bib2df(file="../pkgdown/assets/Crump_In_progress/Crump_In_progress.bib")
+
+# clean
+bib_df$TITLE <- stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
+bib_df$JOURNAL <- stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
+bib_df$BOOKTITLE <- stri_replace_all_regex(bib_df$BOOKTITLE, "[\\{\\}]", "")
+
+# sort bib_df by year
+bib_df <- bib_df[order(bib_df$DATE, decreasing=T),]
+
+# print individual entries to page
+
+for (i in 1:dim(bib_df)[1] ){
+#for (i in 1:5 ){
+  t_bib_entry <- paste0(capture.output(df2bib(bib_df[i,])), collapse="")
+  t_md_citation<- paste0(stevemisc::print_refs(t_bib_entry,csl = "apa.csl", 
+                                        spit_out = FALSE,
+                                        delete_after = FALSE), collapse=" ")
+  cat(t_md_citation)
+  
+  
+  
+  cat("<span class = 'publinks'>")
+  
+  if(any(names(bib_df)=="FILE")){
+    if( !is.na(bib_df[i,"FILE"]) ){
+      pdf_url <- paste0("../Crump/",bib_df[i,"FILE"], collapse = "")
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-file-pdf"> pdf </i></a>'),
+        sep="")
+    }
+  }
+  
+  if(any(names(bib_df)=="URL_WEBSITE")){
+    if( !is.na(bib_df[i,"URL_WEBSITE"]) ){
+      pdf_url <- as.character(bib_df[i,"URL_WEBSITE"])
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-globe"> website </i></a>'),
+        sep="")
+    }
+  }
+  
+  if(any(names(bib_df)=="URL_DATA")){
+  if( !is.na(bib_df[i,"URL_DATA"]) ){
+      pdf_url <- as.character(bib_df[i,"URL_DATA"])
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-database"> data </i></a>'),
+        sep="")
+    }
+  }
+  
+  cat("</span>")
+  cat("\n\n")
+}
+
+```
+
+:::
+
+## Published
+
+::: {.publications}
+
+```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
+
+#load bib
+bib_df <- bib2df(file="../pkgdown/assets/Crump/Crump.bib")
+
+# clean
+bib_df$TITLE <- stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
+bib_df$JOURNAL <- stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
+bib_df$BOOKTITLE <- stri_replace_all_regex(bib_df$BOOKTITLE, "[\\{\\}]", "")
+
+# sort bib_df by year
+bib_df <- bib_df[order(bib_df$DATE, decreasing=T),]
+
+# print individual entries to page
+
+for (i in 1:dim(bib_df)[1] ){
+#for (i in 1:5 ){
+  t_bib_entry <- paste0(capture.output(df2bib(bib_df[i,])), collapse="")
+  t_md_citation<- paste0(stevemisc::print_refs(t_bib_entry,csl = "apa.csl", 
+                                        spit_out = FALSE,
+                                        delete_after = FALSE), collapse=" ")
+  cat(t_md_citation)
+  
+  
+  
+  cat("<span class = 'publinks'>")
+  
+  if(any(names(bib_df)=="FILE")){
+    if( !is.na(bib_df[i,"FILE"]) ){
+      pdf_url <- paste0("../Crump/",bib_df[i,"FILE"], collapse = "")
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-file-pdf"> pdf </i></a>'),
+        sep="")
+    }
+  }
+  
+  if(any(names(bib_df)=="URL_WEBSITE")){
+    if( !is.na(bib_df[i,"URL_WEBSITE"]) ){
+      pdf_url <- as.character(bib_df[i,"URL_WEBSITE"])
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-globe"> website </i></a>'),
+        sep="")
+    }
+  }
+  
+  if(any(names(bib_df)=="URL_DATA")){
+  if( !is.na(bib_df[i,"URL_DATA"]) ){
+      pdf_url <- as.character(bib_df[i,"URL_DATA"])
+      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-database"> data </i></a>'),
+        sep="")
+    }
+  }
+  
+  cat("</span>")
+  cat("\n\n")
+}
+
+```
+
+:::

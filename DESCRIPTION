@@ -13,3 +13,8 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: 
+    bib2df,
+    pkgdown,
+    stevemisc,
+    stringi

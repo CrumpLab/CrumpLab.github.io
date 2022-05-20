@@ -7,8 +7,13 @@
 crumplab_site()
 }
 \value{
-
+The pkgdown website
 }
 \description{
-build site and then tweak
+Equivalent of \code{pkgdown::build_site()} but tweaks the blog index page at the end by running \code{crumplab_blog_index()}
+}
+\examples{
+\dontrun{
+crumplab_site()
+}
 }

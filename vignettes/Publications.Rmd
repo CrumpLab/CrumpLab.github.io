@@ -38,64 +38,10 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 ::: {.publications}
 
 ```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
-library(stevemisc)
-library(bib2df)
-library(stringi)
-library(fontawesome)
-
-#load bib
-bib_df <- bib2df(file="../pkgdown/assets/Crump_In_progress/Crump_In_progress.bib")
-
-# clean
-bib_df$TITLE <- stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
-bib_df$JOURNAL <- stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
-bib_df$BOOKTITLE <- stri_replace_all_regex(bib_df$BOOKTITLE, "[\\{\\}]", "")
-
-# sort bib_df by year
-bib_df <- bib_df[order(bib_df$DATE, decreasing=T),]
-
-# print individual entries to page
-
-for (i in 1:dim(bib_df)[1] ){
-#for (i in 1:5 ){
-  t_bib_entry <- paste0(capture.output(df2bib(bib_df[i,])), collapse="")
-  t_md_citation<- paste0(stevemisc::print_refs(t_bib_entry,csl = "apa.csl", 
-                                        spit_out = FALSE,
-                                        delete_after = FALSE), collapse=" ")
-  cat(t_md_citation)
-  
-  
-  
-  cat("<span class = 'publinks'>")
-  
-  if(any(names(bib_df)=="FILE")){
-    if( !is.na(bib_df[i,"FILE"]) ){
-      pdf_url <- paste0("../Crump/",bib_df[i,"FILE"], collapse = "")
-      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-file-pdf"> pdf </i></a>'),
-        sep="")
-    }
-  }
-  
-  if(any(names(bib_df)=="URL_WEBSITE")){
-    if( !is.na(bib_df[i,"URL_WEBSITE"]) ){
-      pdf_url <- as.character(bib_df[i,"URL_WEBSITE"])
-      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-globe"> website </i></a>'),
-        sep="")
-    }
-  }
-  
-  if(any(names(bib_df)=="URL_DATA")){
-  if( !is.na(bib_df[i,"URL_DATA"]) ){
-      pdf_url <- as.character(bib_df[i,"URL_DATA"])
-      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-database"> data </i></a>'),
-        sep="")
-    }
-  }
-  
-  cat("</span>")
-  cat("\n\n")
-}
-
+crumplab::bib_2_pub_list("../pkgdown/assets/Crump_In_progress/Crump_In_progress.bib",
+                         "../pkgdown/assets/Crump_In_progress/Crump_In_progress.yml",
+                         "pkgdown/assets/Crump_In_progress/files",
+                         "https://www.crumplab.com/Crump_In_progress/files")
 ```
 
 :::
@@ -105,60 +51,11 @@ for (i in 1:dim(bib_df)[1] ){
 ::: {.publications}
 
 ```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
-
-#load bib
-bib_df <- bib2df(file="../pkgdown/assets/Crump/Crump.bib")
-
-# clean
-bib_df$TITLE <- stri_replace_all_regex(bib_df$TITLE, "[\\{\\}]", "")
-bib_df$JOURNAL <- stri_replace_all_regex(bib_df$JOURNAL, "[\\{\\}]", "")
-bib_df$BOOKTITLE <- stri_replace_all_regex(bib_df$BOOKTITLE, "[\\{\\}]", "")
-
-# sort bib_df by year
-bib_df <- bib_df[order(bib_df$DATE, decreasing=T),]
-
-# print individual entries to page
-
-for (i in 1:dim(bib_df)[1] ){
-#for (i in 1:5 ){
-  t_bib_entry <- paste0(capture.output(df2bib(bib_df[i,])), collapse="")
-  t_md_citation<- paste0(stevemisc::print_refs(t_bib_entry,csl = "apa.csl", 
-                                        spit_out = FALSE,
-                                        delete_after = FALSE), collapse=" ")
-  cat(t_md_citation)
-  
-  
-  
-  cat("<span class = 'publinks'>")
-  
-  if(any(names(bib_df)=="FILE")){
-    if( !is.na(bib_df[i,"FILE"]) ){
-      pdf_url <- paste0("../Crump/",bib_df[i,"FILE"], collapse = "")
-      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-file-pdf"> pdf </i></a>'),
-        sep="")
-    }
-  }
-  
-  if(any(names(bib_df)=="URL_WEBSITE")){
-    if( !is.na(bib_df[i,"URL_WEBSITE"]) ){
-      pdf_url <- as.character(bib_df[i,"URL_WEBSITE"])
-      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-globe"> website </i></a>'),
-        sep="")
-    }
-  }
-  
-  if(any(names(bib_df)=="URL_DATA")){
-  if( !is.na(bib_df[i,"URL_DATA"]) ){
-      pdf_url <- as.character(bib_df[i,"URL_DATA"])
-      cat(c("  ",'<a href="',pdf_url,'"> <i class="fas fa-database"> data </i></a>'),
-        sep="")
-    }
-  }
-  
-  cat("</span>")
-  cat("\n\n")
-}
-
+crumplab::bib_2_pub_list("../pkgdown/assets/Crump/Crump.bib",
+                         "../pkgdown/assets/Crump/Crump.yml",
+                         "pkgdown/assets/Crump/files",
+                         "https://www.crumplab.com/Crump/files")
 ```
 
 :::
+

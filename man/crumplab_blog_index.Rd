@@ -7,11 +7,18 @@
 crumplab_blog_index(pkg = ".", override = yaml::read_yaml("_blog.yml"))
 }
 \arguments{
-\item{override}{}
+\item{pkg}{The package name}
+
+\item{override}{a list of overrides, defaults to the overrides specified in \verb{_blog.yml}}
 }
 \value{
-
+builds the \code{articles/index.html} page
 }
 \description{
-create index.html for articles blog page
+This function replaces \code{pkgdown::build_articles_index} which does not allow override of site-wide settings in\verb{_pkgdown.yml}. This function allows overrides for \code{articles/index.html}, which I am currently using to list blog posts. As a result, it is possible to have unique meta tags (or other unique features) specified through overrides for this page that are different from the site-wide tags.
+}
+\examples{
+\dontrun{
+crumplab_blog_index()
+}
 }

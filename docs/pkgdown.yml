@@ -5,16 +5,17 @@ articles:
   Apps: Apps.html
   Blog: Blog.html
   Books: Books.html
+  CopyOfPublications: CopyOfPublications.html
   Courses: Courses.html
   Fun: Fun.html
   Opportunities: Opportunities.html
   People: People.html
   Publications: Publications.html
-  post_997_5_19_22_pubs: blog/drafts/post_997_5_17_22_pubs/post_997_5_19_22_pubs.html
   post_998_5_18_22_assignmentflex: blog/drafts/post_998_5_18_22_assignmentflex/post_998_5_18_22_assignmentflex.html
   post_999_5_17_22_blogging: blog/older_9999_7_28_20_OC/post_999_5_17_22_blogging.html
+  post_997_5_19_22_pubs: blog/post_997_5_19_22_pubs/post_997_5_19_22_pubs.html
   post_999_5_17_22_blogging: blog/post_999_5_17_22_blogging/post_999_5_17_22_blogging.html
-last_built: 2022-05-19T16:42Z
+last_built: 2022-05-20T17:10Z
 urls:
   reference: https://crumplab.com/reference
   article: https://crumplab.com/articles

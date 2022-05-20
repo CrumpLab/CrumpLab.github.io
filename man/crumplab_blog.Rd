@@ -7,8 +7,13 @@
 crumplab_blog()
 }
 \value{
-
+builds all vignettes and tweaks blog index
 }
 \description{
-build blog pages
+Builds all vignettes using\code{pkgdown::build_articles()} and then tweaks the list of articles on the blog page by running \code{crumplab_blog_index()}.
+}
+\examples{
+\dontrun{
+crumplab_blog()
+}
 }
