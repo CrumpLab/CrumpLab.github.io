@@ -5,21 +5,21 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="*May 18th, 2022* - Some thoughts on how I implemented loads of assignment choice in my intro to cognition course this semester. ">
-<title>Teaching with multiple warp zones: Engagement and assignment choice • crumplab</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../../../../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../../../../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../../../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../../../../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../../../../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../../../../apple-touch-icon-60x60.png">
-<script src="../../../../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../../../../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="../../../../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<meta name="description" content="*May 20th, 2022* - Some thoughts on how I implemented loads of assignment choice in my intro to cognition course this semester. ">
+<title>Teaching with multiple warp zones: Increasing engagement with assignment choice • crumplab</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../../../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../../../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../../../apple-touch-icon-60x60.png">
+<script src="../../../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../../../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
+<script src="../../../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../../../../pkgdown.js"></script><meta property="og:title" content="Teaching with multiple warp zones: Engagement and assignment choice">
-<meta property="og:description" content="*May 18th, 2022* - Some thoughts on how I implemented loads of assignment choice in my intro to cognition course this semester. ">
-<meta property="og:image" content="">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../../../pkgdown.js"></script><meta property="og:title" content="Teaching with multiple warp zones: Increasing engagement with assignment choice">
+<meta property="og:description" content="*May 20th, 2022* - Some thoughts on how I implemented loads of assignment choice in my intro to cognition course this semester. ">
+<meta property="og:image" content="https://www.crumplab.com/articles/blog/post_996_5_20_22_assignmentflex/imgs/teaching_warp.jpg">
 <meta property="og:image:alt" content="Crumplab.com logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@MattCrumpLab">
@@ -41,7 +41,7 @@
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
     
-    <a class="navbar-brand me-2" href="../../../../index.html">crumplab</a>
+    <a class="navbar-brand me-2" href="../../../index.html">crumplab</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1.0001</small>
 
@@ -53,32 +53,32 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
-  <a class="nav-link" href="../../../../articles/People.html">People</a>
+  <a class="nav-link" href="../../../articles/People.html">People</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../../../../articles/Publications.html">Pubs</a>
+  <a class="nav-link" href="../../../articles/Publications.html">Pubs</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../../../../articles/Books.html">Books</a>
+  <a class="nav-link" href="../../../articles/Books.html">Books</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../../../../articles/Courses.html">Courses</a>
+  <a class="nav-link" href="../../../articles/Courses.html">Courses</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../../../../articles/Apps.html">Apps</a>
+  <a class="nav-link" href="../../../articles/Apps.html">Apps</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../../../../articles/Opportunities.html">Join</a>
+  <a class="nav-link" href="../../../articles/Opportunities.html">Join</a>
 </li>
 <li class="active nav-item">
-  <a class="nav-link" href="../../../../articles/index.html">Blog</a>
+  <a class="nav-link" href="../../../articles/index.html">Blog</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../../../../articles/Fun.html">Fun</a>
+  <a class="nav-link" href="../../../articles/Fun.html">Fun</a>
 </li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../../../../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../../../search.json" id="search-input" placeholder="Search for" autocomplete="off">
 </form>
 
       <ul class="navbar-nav">
@@ -95,10 +95,10 @@
   </a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../../../../news/index.html">news</a>
+  <a class="nav-link" href="../../../news/index.html">news</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../../../../reference/index.html">Reference</a>
+  <a class="nav-link" href="../../../reference/index.html">Reference</a>
 </li>
       </ul>
 </div>
@@ -112,17 +112,18 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="../../../../logo.png" class="logo" alt=""><h1>Teaching with multiple warp zones: Engagement and assignment choice</h1>
+      <img src="../../../logo.png" class="logo" alt=""><h1>Teaching with multiple warp zones: Increasing engagement with assignment choice</h1>
                         <h4 data-toc-skip class="author">Matt Crump</h4>
             
-            <h4 data-toc-skip class="date">2022-05-17 Last knit: 2022-05-20</h4>
+            <h4 data-toc-skip class="date">2022-05-20 Last knit: 2022-05-20</h4>
       
       
-      <div class="d-none name"><code>post_998_5_18_22_assignmentflex.Rmd</code></div>
+      <div class="d-none name"><code>index.Rmd</code></div>
     </div>
 
     
     
+<p><img src="imgs/teaching_warp.jpg" style='width="100%"/'></p>
 <p>I lack positive emotions toward the process of grading in my courses. I have lots of positive emotions for my students. Grading stresses people out. I’ll save my thoughts about grading in general for another day.</p>
 <p>What I really want to talk about is how I flooded the gates with tons of ways to get an A in the course. It worked, I had fun, I think my students had fun and they got a lot of well-deserved As. More important, my students engaged in the material in more ways than they normally would have.</p>
 <p>I’ll say a little bit about my course and then talk about how I implemented lots of assignment choice this semester.</p>
@@ -262,7 +263,11 @@
 <div class="section level2">
 <h2 id="tldr">TLDR<a class="anchor" aria-label="anchor" href="#tldr"></a>
 </h2>
-<p>I gave my students lots of ways to pass my course. Many of them tried some of the more engaging options. I enjoyed what they produced, and I was proud of their scholarship, curiosity, and thoughtfulness. I hope they learned as much from the course as I learned from them.</p>
+<p>I gave my students lots of ways to pass my course. Many of them tried the engaging and challenging options. I enjoyed what they produced, and I was proud of their scholarship, curiosity, and thoughtfulness. I hope they learned as much from the course as I learned from them.</p>
+<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+<iframe src="https://giphy.com/embed/3oFzmqN1xHwaEXGl7q" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen>
+</iframe>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
