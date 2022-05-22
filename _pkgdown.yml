@@ -30,6 +30,8 @@ home:
   links:
     - text: Github
       href: https://github.com/CrumpLab
+    - text: Twitter
+      href: https://twitter.com/MattCrumpLab
     - text: Youtube
       href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
     - text: Google Scholar
@@ -59,6 +61,7 @@ navbar:
     - fun
     right:
     - github
+    - twitter
     - youtube
     - news
     - reference
@@ -99,6 +102,9 @@ navbar:
     github:
       icon: fa-lg fa-github
       href: https://github.com/CrumpLab
+    twitter:
+      icon: fa-lg fa-twitter
+      href: https://twitter.com/MattCrumpLab
 
 articles:
 - title: Newer Posts
