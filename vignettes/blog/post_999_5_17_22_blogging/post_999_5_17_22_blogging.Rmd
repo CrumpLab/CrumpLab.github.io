@@ -24,6 +24,28 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{css, results='asis', echo=F}
+@media (min-width: 1400px) {
+    body {
+        font-size:18px
+    }
+
+    .col-md-3 {
+        margin-left: 5rem
+    }
+    
+    .row {
+        --bs-gutter-x: -20%!important;
+    }
+    
+    .row>main {
+        max-width: 40rem;
+    }
+
+}
+
+```
+
 <img src="imgs/blogging_with_pkgdown.jpg" style= width="100%"/>
 
 I like [pkgdown](https://pkgdown.r-lib.org). It's great for what it was built to do (make websites for R packages), and it's pretty good at other use cases as well. For example, I recently re-factored my lab webpage using pkgdown and that worked out well enough.

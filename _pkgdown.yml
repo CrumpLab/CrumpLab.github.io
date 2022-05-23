@@ -2,10 +2,13 @@ url: https://crumplab.com/
 template:
   package: crumplab
   bootstrap: 5
+  includes:
+    in_header: |
+      <style type="text/css"> .navbar { font-family: "Montserrat Alternates"!important;}</style>
   bslib:
-    #heading_font: {google: "Montserrat Alternates"}
+    heading_font: {google: "Montserrat Alternates"}
     headings-font-weight: 500
-   # base_font: {google: "Baskervville"}
+    base_font: {google: "Baskervville"}
   #  font-weight-base: 500
     font-size-base: 1.15rem
     h1-font-size:  2.5rem

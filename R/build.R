@@ -45,7 +45,7 @@ crumplab_blog <- function(){
 #' crumplab_site()
 #' }
 crumplab_site <- function(){
-  pkgdown::build_site()
+  pkgdown::build_site_github_pages()
   crumplab_blog_index()
 }
 

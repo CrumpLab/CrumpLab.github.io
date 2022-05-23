@@ -24,6 +24,29 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+```{css, results='asis', echo=F}
+@media (min-width: 1400px) {
+    body {
+        font-size:18px
+    }
+
+    .col-md-3 {
+        margin-left: 5rem
+    }
+    
+    .row {
+        --bs-gutter-x: -20%!important;
+    }
+    
+    .row>main {
+        max-width: 40rem;
+    }
+
+}
+
+```
+
 <img src="imgs/teaching_warp.jpg" style= width="100%"/>
 
 I lack positive emotions toward the process of grading in my courses. I have lots of positive emotions for my students. Grading stresses people out. I'll save my thoughts about grading in general for another day.
