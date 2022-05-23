@@ -1,0 +1,128 @@
+2019,Rosie Phillips Davis, PhD, ABPP
+2018,Jessica Henderson Daniel, PhD, ABPP
+2017,Antonio E. Puente, PhD
+2016,Susan H. McDaniel, PhD 
+2015,Barry S. Anton, PhD, ABPP 
+2014,Nadine J. Kaslow, PhD, ABPP 
+2013,Donald N. Bersoff, PhD, JD
+2012,Suzanne Bennett Johnson, PhD
+2011,Melba J.T. Vasquez, PhD
+2010,Carol D. Goodheart, EdD
+2009,James H. Bray, PhD
+2008,Alan E. Kazdin, PhD
+2007,Sharon Stephens Brehm, PhD
+2006,Gerald P. Koocher, PhD
+2005,Ronald F. Levant, EdD, ABPP
+2004,Diane F. Halpern, PhD
+2003,Robert J. Sternberg, PhD
+2002,Philip G. Zimbardo, PhD
+2001,Norine G. Johnson, PhD
+2000,Patrick H. Deleon, PhD, MPH, JD
+1999,Richard M. Suinn, PhD
+1998,Martin E.P. Seligman, PhD
+1997,Norman Abeles, PhD
+1996,Dorothy W. Cantor, PsyD
+1995,Robert J. Resnick, PhD, ABPP
+1994,Ronald E. Fox, PhD
+1993,Frank Farley, PhD
+1992,Jack Wiggins, Jr., PhD
+1991,Charles Spielberger, PhD
+1990,Stanley Graham, PhD
+1989,Joseph D. Matarazzo, PhD
+1988,Raymond D. Fowler, PhD
+1987,Bonnie R. Strickland, PhD
+1986,Logan Wright, PhD
+1985,Robert Perloff, PhD
+1984,Janet T. Spence, PhD
+1983,Max Siegal, PhD
+1982,William Bevan, PhD
+1981,John J. Conger, PhD
+1980,Florence L. Denmark, PhD
+1979,Nicholas A. Cummings, PhD
+1978,M. Brewster Smith, PhD
+1977,Theodore Blau, PhD
+1976,Wilbert J. Mckeachie, PhD
+1975,Donald T. Campbell, PhD
+1974,Albert Bandura, PhD
+1973,Leona E. Tyler, PhD
+1972,Anne Anastasi, PhD
+1971,Kenneth B. Clark, PhD
+1970,George W. Albee, PhD
+1969,George A. Miller, PhD
+1968,A. H. Maslow, PhD
+1967,Gardner Lindzey, PhD
+1966,Nicholas Hobbs, PhD
+1965,Jerome Bruner, PhD
+1964,Quinn McNemar, PhD
+1963,Charles E. Osgood, PhD
+1962,Paul E. Meehl, PhD
+1961,Neal E. Miller, PhD
+1960,Donald O. Hebb, PhD
+1959,W. Kohler, PhD
+1958,H. F. Harlow, PhD
+1957,Lee J. Cronbach, PhD
+1956,Theodore M. Newcomb, PhD
+1955,E. Lowell Kelly, PhD
+1954,O. H. Mowrer, PhD
+1953,Laurence Frederic Shaffer, PhD
+1952,Joseph McVicker Hunt, PhD
+1951,Robert R. Sears, PhD
+1950,Joy Paul Guilford, PhD
+1949,Ernest R. Hilgard, PhD
+1948,Donald G. Marquis, PhD
+1947,Carl R. Rogers, PhD
+1946,Henry E. Garrett, PhD
+1945,Edwin R. Guthrie, PhD
+1944,Gardner Murphy, PhD
+1943,John Edward Anderson, PhD
+1942,Calvin Perry Stone, PhD
+1941,Herbert Woodrow, PhD
+1940,Leonard Carmichael, PhD
+1939,Gordon Willard Allport, PhD
+1938,John Frederick Dashiell, PhD
+1937,Edward Chace Tolman, PhD
+1936,Clark Leonard Hull, PhD
+1935,Albert Theodore Poffenberger, PhD
+1934,Joseph Peterson, PhD
+1933,Louis Leon Thurstone, PhD
+1932,Walter Richard Miles, PhD
+1931,Walther Samuel Hunter, PhD
+1930,Herbert Sidney Langfeld, PhD
+1929,Karl Lashley, PhD
+1928,Edwin Garrigues Boring, PhD
+1927,Harry Levi Hollingsworth, PhD
+1926,Harvey A. Carr, PhD
+1925,Madison Bentley, PhD
+1924,Granville Stanley Hall, PhD
+1923,Lewis Madison Terman, PhD
+1922,Knight Dunlap, PhD
+1921,Margaret Floy Washburn, PhD
+1920,Shepard Ivory Franz, PhD
+1919,Walter Dill Scott, PhD
+1918,John Wallace Baird, PhD
+1917,Robert Mearns Yerkes, PhD
+1916,Raymond Dodge, PhD
+1915,John Broadus Watson, PhD
+1914,Robert Sessions Woodworth, PhD
+1913,Howard Crosby Warren, PhD
+1912,Edward Lee Thorndike, PhD
+1911,Carl Emil Seashore, PhD
+1910,Walter Bowers Pillsbury, PhD
+1909,Charles Hubbard Judd, PhD
+1908,George Malcolm Stratton, PhD
+1907,Henry Rutgers Marshall, AM
+1906,James Rowland Angell, MA
+1905,Mary Whiton Calkins, AM
+1904,William James, MD
+1903,William Lowe Bryan, PhD
+1902,Edmund Clark Sanford, PhD
+1901,Josiah Royce, PhD
+1900,Joseph Jastrow, PhD
+1899,John Dewey, PhD
+1898,Hugo Munsterberg, PhD
+1897,James Mark Baldwin, PhD
+1896,George Stuart Fullerton, MA
+1895,James McKeen Cattell, PhD
+1894,William James, MD
+1893,George Trumbull Ladd, PhD
+1892,Granville Stanley Hall, PhD
