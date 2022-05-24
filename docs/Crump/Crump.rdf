@@ -1,0 +1,477 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <rdf:Description rdf:about="urn:isbn:978-0-12-385527-5">
+        <dc:title>Hierarchical control of cognitive processes: The case for skilled typewriting</dc:title>
+        <dc:type>bookSection</dc:type>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:contributor>Ross, B. H.</dc:contributor>
+        <dc:publisher>Elsevier</dc:publisher>
+        <dc:date>2011</dc:date>
+        <dc:identifier>ISBN 978-0-12-385527-5</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Curtis et al. - 2016.pdf">
+        <dc:title>False recognition of instruction-set lures</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Curtis, Evan T.</dc:creator>
+        <dc:creator>Chubala, Chrissy M.</dc:creator>
+        <dc:creator>Spear, Jackie</dc:creator>
+        <dc:creator>Jamieson, Randall K.</dc:creator>
+        <dc:creator>Hockley, William E.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2016</dc:date>
+        <dc:identifier>ISSN 0965-8211, 1464-0686</dc:identifier>
+        <dc:identifier>DOI 10.1080/09658211.2014.982657</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Bugg and Crump - 2012.pdf">
+        <dc:title>In support of a distinction between voluntary and stimulus-driven control: A review of the literature on proportion congruent effects</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Bugg, Julie M.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2012</dc:date>
+        <dc:identifier>ISSN 1664-1078</dc:identifier>
+        <dc:identifier>DOI 10.3389/fpsyg.2012.00367</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Logan and Crump - 2009.pdf">
+        <dc:title>The left hand doesn't know what the right hand Is doing: The disruptive effects of attention to the hands in skilled typewriting</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2009</dc:date>
+        <dc:identifier>DOI 10.1111/j.1467-9280.2009.02442.x</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump and Milliken - 2009.pdf">
+        <dc:title>The flexibility of context-specific control: Evidence for context-driven generalization of item-specific control settings</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Milliken, Bruce</dc:creator>
+        <dc:date>2009</dc:date>
+        <dc:identifier>ISSN 1747-0218, 1747-0226</dc:identifier>
+        <dc:identifier>DOI 10.1080/17470210902752096</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Leboe et al. - 2008.pdf">
+        <dc:title>Probe-specific proportion task repetition effects on switching costs</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Leboe, J. P.</dc:creator>
+        <dc:creator>Wong, J.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Stobbe, K.</dc:creator>
+        <dc:date>2008</dc:date>
+        <dc:identifier>ISSN 0031-5117, 1532-5962</dc:identifier>
+        <dc:identifier>DOI 10.3758/PP.70.6.935</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump et al. - 2008.pdf">
+        <dc:title>Shifting views on the symbolic cueing effect: Cueing attention through recent prior experience</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Milliken, Bruce</dc:creator>
+        <dc:creator>Ansari, Imran</dc:creator>
+        <dc:date>2008</dc:date>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Allan et al. - 2008.pdf">
+        <dc:title>The psychophysics of contingency assessment.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Allan, Lorraine G.</dc:creator>
+        <dc:creator>Hannah, Samuel D.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Siegel, Shepard</dc:creator>
+        <dc:date>2008</dc:date>
+        <dc:identifier>ISSN 1939-2222, 0096-3445</dc:identifier>
+        <dc:identifier>DOI 10.1037/0096-3445.137.2.226</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Siegel et al. - 2009.pdf">
+        <dc:title>Applying signal detection theory to contingency assessment</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Siegel, Shepard</dc:creator>
+        <dc:creator>Allan, Lorraine G.</dc:creator>
+        <dc:creator>Hannah, Samuel D.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2009</dc:date>
+        <dc:identifier>ISSN 19114745</dc:identifier>
+        <dc:identifier>DOI 10.3819/ccbr.2009.40012</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:isbn:978-1-138-79192-3">
+        <dc:title>Crunching big data with finger tips: How typists tune their performance towards the statistics of natural language</dc:title>
+        <dc:type>bookSection</dc:type>
+        <dc:creator>Behmer, Lawrence P.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:contributor>Jones, Michael N.</dc:contributor>
+        <dc:publisher>Routledge</dc:publisher>
+        <dc:date>2017</dc:date>
+        <dc:identifier>ISBN 978-1-138-79192-3</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/a0030512">
+        <dc:title>Speed–accuracy trade-off in skilled typewriting: Decomposing the contributions of hierarchical control loops</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Yamaguchi, Motonori</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:date>2013</dc:date>
+        <dc:identifier>ISSN 1939-1277, 0096-1523</dc:identifier>
+        <dc:identifier>DOI 10.1037/a0030512</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://psycnet.apa.org/journals/pmu/22/2/185/">
+        <dc:title>Review of Guitar zero: The new musician and the science of learning</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2012</dc:date>
+        <dc:identifier>DOI 10.1037/a0030741</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="n0">
+        <dc:title>Spatial knowledge during skilled action sequencing: Hierarchical versus non-hierarchical representations</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Behmer, Lawrence P.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2017</dc:date>
+        <dc:identifier>DOI 10.3758/s13414-017-1389-3</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.jstor.org/stable/10.1525/mp.2012.30.1.37">
+        <dc:title>Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:creator>Kimbrough, Jerry</dc:creator>
+        <dc:date>2012</dc:date>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://doi.apa.org/getdoi.cfm?doi=10.1037/xge0000431">
+        <dc:title>Memory-guided selective attention: Single experiences with conflict have long-lasting effects on cognitive control.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Brosowsky, Nicholaus P.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>08/2018</dc:date>
+        <dc:identifier>ISSN 1939-2222, 0096-3445</dc:identifier>
+        <dc:identifier>DOI 10/gd2w6z</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1016/j.tics.2019.07.002">
+        <dc:title>Measuring Adaptive Control in Conflict Tasks</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Braem, Senne</dc:creator>
+        <dc:creator>Bugg, Julie M.</dc:creator>
+        <dc:creator>Schmidt, James R.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Weissman, Daniel H.</dc:creator>
+        <dc:creator>Notebaert, Wim</dc:creator>
+        <dc:creator>Egner, Tobias</dc:creator>
+        <dc:date>2019-09</dc:date>
+        <dc:identifier>DOI 10/gf48x7</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/xhp0000507">
+        <dc:title>Parallel regulation of past, present, and future actions during sequencing.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Behmer, Lawrence P.</dc:creator>
+        <dc:creator>Jantzen, Kelly J.</dc:creator>
+        <dc:creator>Martinez, Sarah</dc:creator>
+        <dc:creator>Walls, Rachel</dc:creator>
+        <dc:creator>Amir-Brownstein, Elisabeth</dc:creator>
+        <dc:creator>Jaye, Andrew</dc:creator>
+        <dc:creator>Leytze, Mckaila</dc:creator>
+        <dc:creator>Lucier, Kathleen</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2018-08</dc:date>
+        <dc:identifier>DOI 10/gdznzb</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/cep0000145">
+        <dc:title>Context-dependent control of attention capture: Evidence from proportion congruent effects.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Milliken, Bruce</dc:creator>
+        <dc:creator>Leboe-McGowan, Jason</dc:creator>
+        <dc:creator>Leboe-McGowan, Launa</dc:creator>
+        <dc:creator>Gao, Xiaoqing</dc:creator>
+        <dc:date>2018</dc:date>
+        <dc:identifier>DOI 10/gdrskv</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/xhp0000335">
+        <dc:title>The dynamic range of response set activation during action sequencing.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Behmer, Lawrence P.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2017-03</dc:date>
+        <dc:identifier>DOI 10/f9w78w</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1016/j.concog.2016.07.001">
+        <dc:title>Context-specific attentional sampling: Intentional control as a pre-requisite for contextual control</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Brosowsky, Nicholaus P.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2016-08</dc:date>
+        <dc:identifier>DOI 10/f848wz</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1080/17470218.2016.1206130">
+        <dc:title>Reproducing the Location-Based Context-Specific Proportion Congruent Effect for Frequency Unbiased Items: A Reply to Hutcheon and Spieler (2016)</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Brosowsky, Nicholaus P.</dc:creator>
+        <dc:creator>Milliken, Bruce</dc:creator>
+        <dc:date>2017-09</dc:date>
+        <dc:identifier>DOI 10/gcx8qn</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/cep0000066">
+        <dc:title>Learning to selectively attend from context-specific attentional histories: A demonstration and some constraints.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2016</dc:date>
+        <dc:identifier>DOI 10/gf7h25</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1371/journal.pone.0057410">
+        <dc:title>Evaluating Amazon's Mechanical Turk as a Tool for Experimental Behavioral Research</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>McDonnell, John V.</dc:creator>
+        <dc:creator>Gureckis, Todd M.</dc:creator>
+        <dc:contributor>Gilbert, Sam</dc:contributor>
+        <dc:date>2013-03</dc:date>
+        <dc:identifier>DOI 10/f4qw94</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/a0030014">
+        <dc:title>Prevention and correction in post-error performance: An ounce of prevention, a pound of cure.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:date>2013</dc:date>
+        <dc:identifier>DOI 10/f46hg6</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.3758/s13420-011-0046-2">
+        <dc:title>An instance theory of associative learning</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Jamieson, Randall K.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Hannah, Samuel D.</dc:creator>
+        <dc:date>2012</dc:date>
+        <dc:identifier>DOI 10/dwkrm5</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/a0020696">
+        <dc:title>Hierarchical control and skilled typing: Evidence for word-level control over the execution of individual keystrokes.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:date>2010</dc:date>
+        <dc:identifier>DOI 10/ccjxg5</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.3758/bf03196681">
+        <dc:title>Contextual control over task-set retrieval</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:date>2010-11</dc:date>
+        <dc:identifier>DOI 10/c6psw7</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/a0020886">
+        <dc:title>A memory-based account of retrospective revaluation.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Jamieson, Randall K.</dc:creator>
+        <dc:creator>Hannah, Samuel D.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2010</dc:date>
+        <dc:identifier>DOI 10/fn46rb</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1126/science.1190483">
+        <dc:title>Cognitive Illusions of Authorship Reveal Hierarchical Error Detection in Skilled Typists</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2010</dc:date>
+        <dc:identifier>DOI 10/bktxxk</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.3758/pbr.17.3.394">
+        <dc:title>Warning: This keyboard will deconstruct— The role of the keyboard in skilled typewriting</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:date>2010-06</dc:date>
+        <dc:identifier>DOI 10/d9jmzm</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/a0018390">
+        <dc:title>Episodic contributions to sequential control: Learning from a typist's touch.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:date>2010</dc:date>
+        <dc:identifier>DOI 10/ccw3b5</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.3758/mc.38.4.474">
+        <dc:title>Do you know where your fingers have been? Explicit knowledge of the spatial layout of the keyboard in skilled typists</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Liu, Xianyun</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:date>2010</dc:date>
+        <dc:identifier>DOI 10/ccq7jw</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1037/a0013521">
+        <dc:title>Cue-interaction effects in contingency judgments using the streamed-trial procedure.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Hannah, Samuel D.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Allan, Lorraine G.</dc:creator>
+        <dc:creator>Siegel, Shepard</dc:creator>
+        <dc:date>2009</dc:date>
+        <dc:identifier>DOI 10/fgwn3x</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1016/j.concog.2007.01.004">
+        <dc:title>Context-specific learning and control: The roles of awareness, task relevance, and relative salience</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Vaquero, Joaquín M.M.</dc:creator>
+        <dc:creator>Milliken, Bruce</dc:creator>
+        <dc:date>2008</dc:date>
+        <dc:identifier>DOI 10/d2fm7p</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1080/17470210701257685">
+        <dc:title>Contingency judgements on the fly</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Hannah, Samuel D.</dc:creator>
+        <dc:creator>Allan, Lorraine G.</dc:creator>
+        <dc:creator>Hord, Lauren K.</dc:creator>
+        <dc:date>2007-06</dc:date>
+        <dc:identifier>DOI 10/b9jjc4</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1016/j.concog.2006.06.010">
+        <dc:title>Contingency learning without awareness: Evidence for implicit control</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Schmidt, James R.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Cheesman, Jim</dc:creator>
+        <dc:creator>Besner, Derek</dc:creator>
+        <dc:date>2007</dc:date>
+        <dc:identifier>DOI 10/d9bv53</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.3758/bf03193850">
+        <dc:title>The context-specific proportion congruent Stroop effect: Location as a contextual cue</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Gong, Zhiyu</dc:creator>
+        <dc:creator>Milliken, Bruce</dc:creator>
+        <dc:date>2006-04</dc:date>
+        <dc:identifier>DOI 10/fpxkfs</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://link.springer.com/10.3758/s13428-019-01268-4">
+        <dc:title>The Semantic Librarian: A search engine built from vector-space models of semantics</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Aujla, Harinder</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Cook, Matthew T.</dc:creator>
+        <dc:creator>Jamieson, Randall K.</dc:creator>
+        <dc:date>12/2019</dc:date>
+        <dc:identifier>ISSN 1554-3528</dc:identifier>
+        <dc:identifier>DOI 10/gf6cmv</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://dx.doi.org/10.1037/cep0000182">
+        <dc:title>Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics.</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Lai, Walter</dc:creator>
+        <dc:creator>Brosowsky, Nicholaus P.</dc:creator>
+        <dc:date>2019</dc:date>
+        <dc:identifier>ISSN 1878-7290, 1196-1961</dc:identifier>
+        <dc:identifier>DOI http://dx.doi.org/10.1037/cep0000182</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.nature.com/articles/s41562-019-0689-0">
+        <dc:title>Portfolio and prosper</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2019</dc:date>
+        <dc:identifier>ISSN 2397-3374</dc:identifier>
+        <dc:identifier>DOI 10/ghrnn6</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://osf.io/jze52/">
+        <dc:title>Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew</dc:creator>
+        <dc:creator>Navarro, Danielle</dc:creator>
+        <dc:creator>Suzuki, Jeffrey</dc:creator>
+        <dc:date>2019</dc:date>
+        <dc:identifier>DOI 10/ghrn59</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://osf.io/awxu9/">
+        <dc:title>Answering Questions with Data: Course Website</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew</dc:creator>
+        <dc:date>2019-06-05</dc:date>
+        <dc:identifier>DOI 10/ghrn62</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://osf.io/m2npj/">
+        <dc:title>Answering Questions with Data: The Lab Manual for R, Excel, SPSS and Jamovi</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Crump, Matthew</dc:creator>
+        <dc:creator>Krishnan, Anjali</dc:creator>
+        <dc:creator>Volz, Stephen</dc:creator>
+        <dc:creator>Chavarga, Alla</dc:creator>
+        <dc:date>2019</dc:date>
+        <dc:identifier>DOI 10/ghrn63</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.3758/s13428-020-01436-x">
+        <dc:title>Sharing and organizing research products as R packages</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Vuorre, Matti</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2021</dc:date>
+        <dc:identifier>ISSN 1554-3528</dc:identifier>
+        <dc:identifier>DOI https://doi.org/10.3758/s13428-020-01436-x</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="n1">
+        <dc:title>Controlling the retrieval of general vs specific semantic knowledge in the instance theory of semantic memory</dc:title>
+        <dc:type>bookSection</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Jamieson, R. K.</dc:creator>
+        <dc:creator>Johns, B. T.</dc:creator>
+        <dc:creator>Jones, M. N.</dc:creator>
+        <dc:contributor>Denison, S.</dc:contributor>
+        <dc:contributor>Mack, M.</dc:contributor>
+        <dc:contributor>Xu, Y.</dc:contributor>
+        <dc:contributor>Armstrong, B. C.</dc:contributor>
+        <dc:publisher>Cognitive Science Society</dc:publisher>
+        <dc:date>2020</dc:date>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://crumplab.github.io/rstatsforpsych/">
+        <dc:title>Reproducible statistics for psychologists with R: Lab Tutorials</dc:title>
+        <dc:type>book</dc:type>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:publisher>OSF</dc:publisher>
+        <dc:date>2020</dc:date>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sciencedirect.com/science/article/pii/S0749596X20300796">
+        <dc:title>Production without rules: Using an instance memory model to exploit structure in natural language</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Johns, Brendan T.</dc:creator>
+        <dc:creator>Jamieson, Randall K.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:creator>Jones, Michael N.</dc:creator>
+        <dc:creator>Mewhort, D. J. K.</dc:creator>
+        <dc:date>2020</dc:date>
+        <dc:identifier>ISSN 0749-596X</dc:identifier>
+        <dc:identifier>DOI 10/ghcm2c</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="n2">
+        <dc:title>Contextual recruitment of selective attention can be updated via changes in task relevance</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Brosowsky, Nicholaus P.</dc:creator>
+        <dc:creator>Crump, Matthew J. C.</dc:creator>
+        <dc:date>2021</dc:date>
+        <dc:identifier>ISSN 1878-7290</dc:identifier>
+        <dc:identifier>DOI https://doi.org/10.1037/cep0000221</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="n3">
+        <dc:title>The Effect of Carpal Tunnel Release on Typing Performance</dc:title>
+        <dc:type>journalArticle</dc:type>
+        <dc:creator>Zumsteg, Justin W.</dc:creator>
+        <dc:creator>Crump, Matthew JC</dc:creator>
+        <dc:creator>Logan, Gordon D.</dc:creator>
+        <dc:creator>Weikert, Douglas R.</dc:creator>
+        <dc:creator>Lee, Donald H.</dc:creator>
+        <dc:date>2017</dc:date>
+        <dc:identifier>DOI 10/f9mjkj</dc:identifier>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="n4">
+        <dc:title>The Combinatorial Power of Experience.</dc:title>
+        <dc:type>conferencePaper</dc:type>
+        <dc:creator>Johns, Brendan T.</dc:creator>
+        <dc:creator>Jamieson, Randall</dc:creator>
+        <dc:creator>Crump, Matthew</dc:creator>
+        <dc:creator>Jones, Michael N.</dc:creator>
+        <dc:creator>Mewhort, Douglas JK</dc:creator>
+        <dc:date>2016</dc:date>
+    </rdf:Description>
+</rdf:RDF>
