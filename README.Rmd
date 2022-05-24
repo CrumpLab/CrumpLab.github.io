@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 ::: {.container}
 ::: {.row .headericons}
 
-:::: {.col-sm-3}
+:::: {.col}
 
 ```{r}
 image_link <- function(image,url,...){
@@ -42,7 +42,7 @@ image_link("man/figures/front/people-logos_black.png","https://www.crumplab.com/
 
 ::::
 
-:::: {.col-sm-3}
+:::: {.col}
 
 ```{r}
 image_link("man/figures/front/publications-logos_black.png","https://www.crumplab.com/articles/Publications.html", class = "hovericon")
@@ -51,7 +51,7 @@ image_link("man/figures/front/publications-logos_black.png","https://www.crumpla
 
 ::::
 
-:::: {.col-sm-3}
+:::: {.col}
 
 ```{r}
 image_link("man/figures/front/books.png","https://www.crumplab.com/articles/Books.html", class = "hovericon")
@@ -59,7 +59,7 @@ image_link("man/figures/front/books.png","https://www.crumplab.com/articles/Book
 
 ::::
 
-:::: {.col-sm-3}
+:::: {.col}
 
 ```{r}
 image_link("man/figures/front/courses.png","https://www.crumplab.com/articles/Courses.html", class = "hovericon")
@@ -69,7 +69,7 @@ image_link("man/figures/front/courses.png","https://www.crumplab.com/articles/Co
 :::
 
 ::: {.row}
-:::: {.col-sm-3}
+:::: {.col}
 
 
 ```{r}
@@ -78,7 +78,7 @@ image_link("man/figures/front/apps.png","https://www.crumplab.com/articles/Apps.
 
 ::::
 
-:::: {.col-sm-3}
+:::: {.col}
 
 ```{r}
 image_link("man/figures/front/join.png","https://www.crumplab.com/articles/Opportunities.html", class = "hovericon")
@@ -86,7 +86,7 @@ image_link("man/figures/front/join.png","https://www.crumplab.com/articles/Oppor
 
 ::::
 
-:::: {.col-sm-3}
+:::: {.col}
 
 ```{r}
 image_link("man/figures/front/contact-logos_black.png","https://www.crumplab.com/index.html#contact", class = "hovericon")
@@ -94,7 +94,7 @@ image_link("man/figures/front/contact-logos_black.png","https://www.crumplab.com
 
 ::::
 
-:::: {.col-sm-3}
+:::: {.col}
 
 ```{r}
 image_link("man/figures/front/youtube.png","https://www.youtube.com/c/CrumpsComputationalCognitionLab?sub_confirmation=1", class = "hovericon")

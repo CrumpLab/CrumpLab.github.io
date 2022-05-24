@@ -13,7 +13,7 @@
 
 <div class="row headericons">
 
-<div class="col-sm-3">
+<div class="col">
 
 <a href="https://www.crumplab.com/articles/People.html">
 <img src="man/figures/front/people-logos_black.png" class="hovericon"/>
@@ -21,7 +21,7 @@
 
 </div>
 
-<div class="col-sm-3">
+<div class="col">
 
 <a href="https://www.crumplab.com/articles/Publications.html">
 <img src="man/figures/front/publications-logos_black.png" class="hovericon"/>
@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="col-sm-3">
+<div class="col">
 
 <a href="https://www.crumplab.com/articles/Books.html">
 <img src="man/figures/front/books.png" class="hovericon"/>
@@ -37,7 +37,7 @@
 
 </div>
 
-<div class="col-sm-3">
+<div class="col">
 
 <a href="https://www.crumplab.com/articles/Courses.html">
 <img src="man/figures/front/courses.png" class="hovericon"/>
@@ -49,7 +49,7 @@
 
 <div class="row">
 
-<div class="col-sm-3">
+<div class="col">
 
 <a href="https://www.crumplab.com/articles/Apps.html">
 <img src="man/figures/front/apps.png" class="hovericon"/>
@@ -57,7 +57,7 @@
 
 </div>
 
-<div class="col-sm-3">
+<div class="col">
 
 <a href="https://www.crumplab.com/articles/Opportunities.html">
 <img src="man/figures/front/join.png" class="hovericon"/>
@@ -65,7 +65,7 @@
 
 </div>
 
-<div class="col-sm-3">
+<div class="col">
 
 <a href="https://www.crumplab.com/index.html#contact">
 <img src="man/figures/front/contact-logos_black.png" class="hovericon"/>
@@ -73,7 +73,7 @@
 
 </div>
 
-<div class="col-sm-3">
+<div class="col">
 
 <a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab?sub_confirmation=1">
 <img src="man/figures/front/youtube.png" class="hovericon"/>
