@@ -5,6 +5,11 @@
 .headericons {
   width: 100%;
 }
+
+.hovericon:hover { 
+  background-color: #e9c0fc;
+  border-radius: 5px;
+}
 </style>
 
 <br>
