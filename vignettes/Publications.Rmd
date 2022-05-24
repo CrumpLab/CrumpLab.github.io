@@ -26,7 +26,6 @@ vignette: >
 ```
 
 <img src="images/publications_banner.jpg" style= width="100%"/>
-<a rel="meta" type="application/rdf+xml" href="../Crump/Crump.rdf"></a>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
