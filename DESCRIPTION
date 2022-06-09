@@ -16,5 +16,6 @@ VignetteBuilder: knitr
 Imports: 
     bib2df,
     pkgdown,
+    RefManageR,
     stevemisc,
     stringi

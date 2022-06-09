@@ -115,4 +115,25 @@ bib_2_pub_list <- function(bib,yml,pdf_dir,base_url_to_pdfs){
 
 }
 
+#' Convert bib entries to markdown for printing citations in text
+#'
+#' This is a convenience wrapper function for printing full csl-style bibliographic entries in the middle of an R Markdown document.
+#'
+#' @param cite_key character vector, a vector of citation keys from a .bib file
+#' @param bib_file string, path to .bib file
+#' @param csl_file sting, name of csl style file, default is apa.csl
+#'
+#' @return markdown The markdown to be written into the R Markdown document. Suggested use case is to call this function in an R code chunk with results="asis"
+#' @export
+#'
+bib2md <- function(cite_key,
+                   bib_file,
+                   csl_file = "apa.csl"){
+
+  import_bib <- RefManageR::ReadBib(bib_file)
+  single_citation <- RefManageR::toBiblatex(import_bib[[cite_key]])
+  stevemisc::print_refs(single_citation,csl=csl_file)
+
+}
+
 

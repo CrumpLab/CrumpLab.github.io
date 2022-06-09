@@ -1,0 +1,86 @@
+---
+title: "Function workshop"
+description: "*June 8th, 2022* - draft post to test functions"
+author: "Matt Crump"
+date: '2022-05-20 `r paste("Last knit: ", lubridate::today())`'
+bibliography: AcademicIntegrity.bib
+opengraph:
+  twitter:
+    card: summary
+    creator: "@MattCrumpLab"
+    site: "@MattCrumpLab"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Function workshop}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo=FALSE,
+  message= FALSE,
+  warning=FALSE
+)
+```
+
+```{css, results='asis', echo=F   }
+@media (min-width: 1400px) {
+    body {
+        font-size:18px
+    }
+
+    .col-md-3 {
+        margin-left: 5rem
+    }
+
+    .row {
+        --bs-gutter-x: -20%!important;
+    }
+
+    .row>main {
+        max-width: 40rem;
+    }
+
+}
+
+```
+
+Using this to develop and test functions.
+
+## print bib in text
+
+Desired: a function to cite a full bibliographic entry(ies) citation in the middle of an R markdown document.
+
+This is a wrapper function calling `stevemisc::print_refs`, which can output a csl styled full citation in markdown.
+
+
+```{r}
+bib2md <- function(cite_key,
+                        bib_file,
+                        csl_file = "apa.csl"){
+  
+  import_bib <- RefManageR::ReadBib(bib_file)
+  single_citation <- RefManageR::toBiblatex(import_bib[[cite_key]])
+  stevemisc::print_refs(single_citation,csl=csl_file)
+}
+
+```
+
+
+```{r, results="asis"}
+bib2md("bowersStudentDishonestyIts1964","AcademicIntegrity.bib")
+```
+
+---
+
+This also works with multiple citation keys.
+
+---
+
+```{r, results="asis"}
+bib2md(c("bowersStudentDishonestyIts1964",
+         "fischerLevelsCheatingConditions1970"),"AcademicIntegrity.bib")
+```
