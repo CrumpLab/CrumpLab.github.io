@@ -53,7 +53,7 @@ knitr::opts_chunk$set(
 
 ```
 
-Eugenics and related ideological systems continue to influence psychology and society. I am using this post as an annotated bibliography to gather my reading list about eugenics. The full list of references is at the bottom. I plan to update this list over time as I find more to read on the topic. 
+Eugenics and related ideological systems continue to influence psychology and society. I am using this post as an annotated bibliography to gather my book-based reading list about eugenics. The full list is at the bottom. I plan to update this list over time as I find more to read on the topic. 
 
 ```{r,results="asis"}
 crumplab::bib2annotate("yakushkoScientificPollyannaismInquisition2019","EugenicsBooks.bib")
@@ -136,6 +136,47 @@ Another cogent introduction to the eugenics movement in the USA, with extra focu
 
 ---
 
+```{r,results="asis"}
+crumplab::bib2annotate("kaminSciencePoliticsIQ1974","EugenicsBooks.bib")
+```
+
+Leo Kamin's arguments against intelligence testing.
+
+---
+
+Still need to read
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("stahnischPsychiatryLegaciesEugenics2020","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("dorrSegregationScienceEugenics2008","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("campbellRaceEmpireEugenics2007","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("rosenPreachingEugenicsReligious2004","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("klineBuildingBetterRace2001","EugenicsBooks.bib")
+```
+
+---
 
 
 ## References
