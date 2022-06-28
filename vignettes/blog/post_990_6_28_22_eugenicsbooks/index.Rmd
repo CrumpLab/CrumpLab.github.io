@@ -178,6 +178,43 @@ crumplab::bib2annotate("klineBuildingBetterRace2001","EugenicsBooks.bib")
 
 ---
 
+```{r,results="asis"}
+crumplab::bib2annotate("bruiniusBetterAllWorld2006","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("grantjrBlackMenIntergenerational2019","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("molinaFitBeCitizens2006","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("weingartenAbortionAmericanImagination2014","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("adamsWellbornScienceEugenics1990","EugenicsBooks.bib")
+```
+
+---
+
+
+
+
+
+
+
+
 
 ## References
 
