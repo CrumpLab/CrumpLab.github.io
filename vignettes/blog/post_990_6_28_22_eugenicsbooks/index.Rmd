@@ -208,6 +208,53 @@ crumplab::bib2annotate("adamsWellbornScienceEugenics1990","EugenicsBooks.bib")
 
 ---
 
+```{r,results="asis"}
+crumplab::bib2annotate("kluchinFitBeTied2009","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("gordonMoralPropertyWomen2002","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("prestonWhitenessClassEducation2007","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("obrienFramingMoronSocial2015","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("nadkarniEugenicFeminismReproductive2014","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("lombardoCenturyEugenicsAmerica2011","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("brauerArtSexEugenics2008","EugenicsBooks.bib")
+```
+
+---
+
+
+
+
+
+
 
 
 
