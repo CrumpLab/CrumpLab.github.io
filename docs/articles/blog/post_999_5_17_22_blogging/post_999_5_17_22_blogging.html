@@ -123,7 +123,8 @@
       <img src="../../../logo.png" class="logo" alt=""><h1>Blogging with pkgdown?</h1>
                         <h4 data-toc-skip class="author">Matt Crump</h4>
             
-            <h4 data-toc-skip class="date">2022-05-17 Last knit: 2022-05-23</h4>
+            <h4 data-toc-skip class="date">2022-05-17 Last knit:
+2022-06-28</h4>
       
       
       <div class="d-none name"><code>post_999_5_17_22_blogging.Rmd</code></div>
@@ -153,33 +154,58 @@
 
 </style>
 <p><img src="imgs/blogging_with_pkgdown.jpg" style='width="100%"/'></p>
-<p>I like <a href="https://pkgdown.r-lib.org" class="external-link">pkgdown</a>. It’s great for what it was built to do (make websites for R packages), and it’s pretty good at other use cases as well. For example, I recently re-factored my lab webpage using pkgdown and that worked out well enough.</p>
-<p>My previous website had a hacked together blog using demented combinations of R markdown templates. I was thinking about adopting some other blogging scheme like <a href="https://rstudio.github.io/distill/" class="external-link">distill</a>, but couldn’t get it to play nice with pkgdown. So, this is an attempt to blog in pkgdown and see how far that goes for me.</p>
+<p>I like <a href="https://pkgdown.r-lib.org" class="external-link">pkgdown</a>. It’s great
+for what it was built to do (make websites for R packages), and it’s
+pretty good at other use cases as well. For example, I recently
+re-factored my lab webpage using pkgdown and that worked out well
+enough.</p>
+<p>My previous website had a hacked together blog using demented
+combinations of R markdown templates. I was thinking about adopting some
+other blogging scheme like <a href="https://rstudio.github.io/distill/" class="external-link">distill</a>, but couldn’t get
+it to play nice with pkgdown. So, this is an attempt to blog in pkgdown
+and see how far that goes for me.</p>
 <div class="section level2">
 <h2 id="blogging-features-im-looking-for">Blogging features I’m looking for<a class="anchor" aria-label="anchor" href="#blogging-features-im-looking-for"></a>
 </h2>
-<p>Here’s of list of features I think I want for blogging. Making this list should help me figure out whether or not I can implement them in pkgdown.</p>
+<p>Here’s of list of features I think I want for blogging. Making this
+list should help me figure out whether or not I can implement them in
+pkgdown.</p>
 <ol style="list-style-type: decimal">
-<li>Have an index page that lists all of the blog posts, and that is auto-magically generated from the blog posts</li>
-<li>Have a “make_post()” type of function that makes a template for a new post all ready to go, and saved in the folder where it needs to be.</li>
+<li>Have an index page that lists all of the blog posts, and that is
+auto-magically generated from the blog posts</li>
+<li>Have a “make_post()” type of function that makes a template for a
+new post all ready to go, and saved in the folder where it needs to
+be.</li>
 <li>Have the posts be searchable in pkgdown</li>
-<li>Have the posts use the same site-wide navigation as the rest of the site.</li>
+<li>Have the posts use the same site-wide navigation as the rest of the
+site.</li>
 </ol>
 </div>
 <div class="section level2">
 <h2 id="implementing-the-blog-in-pkgdown">Implementing the blog in pkgdown<a class="anchor" aria-label="anchor" href="#implementing-the-blog-in-pkgdown"></a>
 </h2>
-<p>I think I can do most of what I want with pkgdown vignettes. One minor detail is that I’m not sure how easy it will be to customize the index page listing all of the blog posts. It would be nice to have a picture for each blog post, but that might not be an option without some meddling. Oh well. I’ll use the rest of this post to leave breadcrumbs for my future self on a blogging workflow.</p>
+<p>I think I can do most of what I want with pkgdown vignettes. One
+minor detail is that I’m not sure how easy it will be to customize the
+index page listing all of the blog posts. It would be nice to have a
+picture for each blog post, but that might not be an option without some
+meddling. Oh well. I’ll use the rest of this post to leave breadcrumbs
+for my future self on a blogging workflow.</p>
 <div class="section level3">
 <h3 id="make-a-blog-folder-in-vignettes">Make a blog folder in vignettes<a class="anchor" aria-label="anchor" href="#make-a-blog-folder-in-vignettes"></a>
 </h3>
-<p>Pkgdown automatically renders .Rmd files in the vignettes folder. I already have the main pages of the website in vignettes, so I’ll make a separate folder called <code>vignettes/blog</code> to hold all of the blog posts.</p>
+<p>Pkgdown automatically renders .Rmd files in the vignettes folder. I
+already have the main pages of the website in vignettes, so I’ll make a
+separate folder called <code>vignettes/blog</code> to hold all of the
+blog posts.</p>
 </div>
 <div class="section level3">
 <h3 id="post-workflow">Post workflow<a class="anchor" aria-label="anchor" href="#post-workflow"></a>
 </h3>
-<p>I need to make some decisions here. Should I put individual vignettes in the blog folder, or should I make subdirectories for each post. What are the naming conventions?</p>
-<p>This kind of structure might work. But, I need to check how the posts are rendered to the articles page.</p>
+<p>I need to make some decisions here. Should I put individual vignettes
+in the blog folder, or should I make subdirectories for each post. What
+are the naming conventions?</p>
+<p>This kind of structure might work. But, I need to check how the posts
+are rendered to the articles page.</p>
 <pre><code>vignettes/blog
 ├── post_4_1_22_older_post
 │   └── post_4_1_22_older_post.Rmd
@@ -190,9 +216,16 @@
 <div class="section level2">
 <h2 id="compiling-the-posts-using-build_articles">Compiling the posts using build_articles()<a class="anchor" aria-label="anchor" href="#compiling-the-posts-using-build_articles"></a>
 </h2>
-<p><code><a href="https://pkgdown.r-lib.org/reference/build_articles.html" class="external-link">pkgdown::build_articles()</a></code> will compile all of the .Rmds in the vignettes folder. The blog posts are in there, so they will be compiled to.</p>
-<p>The same function also creates an <code>index.html</code> for the knitted vignettes. My plan is to use that page to list only blog posts, and not any other pages I have in the vignettes folder. This can be accomplished through <code>_pkgdown.yml</code>.</p>
-<p>For example, the following creates some sections on the index.html, and uses <code>starts_with()</code> to loop through folders that start with <code>post</code> in the <code>blog</code> folder.</p>
+<p><code><a href="https://pkgdown.r-lib.org/reference/build_articles.html" class="external-link">pkgdown::build_articles()</a></code> will compile all of the .Rmds
+in the vignettes folder. The blog posts are in there, so they will be
+compiled to.</p>
+<p>The same function also creates an <code>index.html</code> for the
+knitted vignettes. My plan is to use that page to list only blog posts,
+and not any other pages I have in the vignettes folder. This can be
+accomplished through <code>_pkgdown.yml</code>.</p>
+<p>For example, the following creates some sections on the index.html,
+and uses <code>starts_with()</code> to loop through folders that start
+with <code>post</code> in the <code>blog</code> folder.</p>
 <pre><code>articles:
 - title: Newer Posts
   desc: Trying out blogging with pkgdown.
@@ -206,10 +239,20 @@
 <div class="section level2">
 <h2 id="ordering-posts-from-newest-to-oldest">Ordering posts from newest to oldest<a class="anchor" aria-label="anchor" href="#ordering-posts-from-newest-to-oldest"></a>
 </h2>
-<p>If I adopt the above naming convention <code>post_M_D_Y_title</code>, then posts get listed from oldest to newest on the index page. Need to flip that.</p>
-<p>It seems like I would just need to sort the order of posts somehow, but I couldn’t figure that out.</p>
-<p>I could use a naming convention with a number that gets smaller for every new post <code>post_number_M_D_Y_title</code>. That’s mildly annoying, but probably what I will do for now. Another option would be to override the _pkgdown.yml while running <code>build_articles()</code>. But this would require writing an alternative yml that lists the contents in a preferred order. That seems like too much work.</p>
-<p>Decision was to start at 999, and count down. I probably won’t get to 0, and if I do, well that’s on me.</p>
+<p>If I adopt the above naming convention <code>post_M_D_Y_title</code>,
+then posts get listed from oldest to newest on the index page. Need to
+flip that.</p>
+<p>It seems like I would just need to sort the order of posts somehow,
+but I couldn’t figure that out.</p>
+<p>I could use a naming convention with a number that gets smaller for
+every new post <code>post_number_M_D_Y_title</code>. That’s mildly
+annoying, but probably what I will do for now. Another option would be
+to override the _pkgdown.yml while running
+<code>build_articles()</code>. But this would require writing an
+alternative yml that lists the contents in a preferred order. That seems
+like too much work.</p>
+<p>Decision was to start at 999, and count down. I probably won’t get to
+0, and if I do, well that’s on me.</p>
 <pre><code>vignettes/blog
 ├── post_998_5_17_22_blogging
 │   └── post_998_5_17_22_blogging.Rmd
@@ -218,44 +261,79 @@
 <div class="section level3">
 <h3 id="helper-functions">helper functions<a class="anchor" aria-label="anchor" href="#helper-functions"></a>
 </h3>
-<p>Not sure that I need any helper functions. I was thinking about creating a <code>make_post</code> function in the spirit of <code>usethis:use_vignette()</code>. Maybe I’ll try that later. For now it wouldn’t be too bad to just copy/paste and reword stuff from a previous blog post.</p>
+<p>Not sure that I need any helper functions. I was thinking about
+creating a <code>make_post</code> function in the spirit of
+<code>usethis:use_vignette()</code>. Maybe I’ll try that later. For now
+it wouldn’t be too bad to just copy/paste and reword stuff from a
+previous blog post.</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="custom-stuff">Custom stuff<a class="anchor" aria-label="anchor" href="#custom-stuff"></a>
 </h2>
-<p>I have a bunch of older blog pieces. I should consider migrating them over. Before I do that I should at least link to them.</p>
-<p>I had fun adding banners to other pages on my lab website, and I would like to add a banner to the articles index.html to spice things up. Not sure yet how to do this…maybe an override with includes before body or something. I tried an override, but the outcome wasn’t pretty.</p>
-<p>Next up is to hack the template. Looks like I need to make a template off of <code>content-article-index.html</code>.</p>
+<p>I have a bunch of older blog pieces. I should consider migrating them
+over. Before I do that I should at least link to them.</p>
+<p>I had fun adding banners to other pages on my lab website, and I
+would like to add a banner to the articles index.html to spice things
+up. Not sure yet how to do this…maybe an override with includes before
+body or something. I tried an override, but the outcome wasn’t
+pretty.</p>
+<p>Next up is to hack the template. Looks like I need to make a template
+off of <code>content-article-index.html</code>.</p>
 <ul>
 <li>Make <code>inst/pkgdown/BS5/templates</code>
 </li>
-<li>copy in <code>content-article-index.html</code> from pkgdown templates</li>
+<li>copy in <code>content-article-index.html</code> from pkgdown
+templates</li>
 <li>create a dummy R package for this repo, it’s called crumplab</li>
-<li>list crumplab as package in template yml listing in <code>_pkgdown.yml</code>
+<li>list crumplab as package in template yml listing in
+<code>_pkgdown.yml</code>
 </li>
-<li>mod <code>content-article-index.html</code> and add my images etc.</li>
+<li>mod <code>content-article-index.html</code> and add my images
+etc.</li>
 </ul>
-<p>It worked I think. Note to self that the package needs to be rebuilt in order for any changes to the templates to take effect.</p>
+<p>It worked I think. Note to self that the package needs to be rebuilt
+in order for any changes to the templates to take effect.</p>
 </div>
 <div class="section level2">
 <h2 id="issues">Issues<a class="anchor" aria-label="anchor" href="#issues"></a>
 </h2>
-<p>I want to add unique twitter cards to the <code>articles/index.html</code> page, and to individual posts. I thought this would be easy, because <code>pkgdown</code> makes it easy to <a href="https://pkgdown.r-lib.org/articles/metadata.html?q=twitter#article-metadata" class="external-link">add twitter cards for each vignette</a>. However, it seems that any other cards are added on a site-wide basis, and defined in <code>_pkgdown.yml</code>. Additionally, it’s not clear how to set individual cards for pages like <code>articles/index.html</code>.</p>
-<p>Solution was to write a custom version of <code>pkgdown::build_article_index()</code> that allowed to the override to be applied only to <code>articles/index.html</code>, and not to any the blog posts. A nice side effect was that I was planning to add some functions to a lab R package, so now I can put those in the R package for the crumplab website.</p>
+<p>I want to add unique twitter cards to the
+<code>articles/index.html</code> page, and to individual posts. I
+thought this would be easy, because <code>pkgdown</code> makes it easy
+to <a href="https://pkgdown.r-lib.org/articles/metadata.html?q=twitter#article-metadata" class="external-link">add
+twitter cards for each vignette</a>. However, it seems that any other
+cards are added on a site-wide basis, and defined in
+<code>_pkgdown.yml</code>. Additionally, it’s not clear how to set
+individual cards for pages like <code>articles/index.html</code>.</p>
+<p>Solution was to write a custom version of
+<code>pkgdown::build_article_index()</code> that allowed to the override
+to be applied only to <code>articles/index.html</code>, and not to any
+the blog posts. A nice side effect was that I was planning to add some
+functions to a lab R package, so now I can put those in the R package
+for the crumplab website.</p>
 </div>
 <div class="section level2">
 <h2 id="extra-bits">Extra bits<a class="anchor" aria-label="anchor" href="#extra-bits"></a>
 </h2>
-<p>So far I’m pretty happy with this approach to blogging. But, I’m sure there’s a bunch of things that will come up as I try to process out even more. I’m going to use the space to make breadcrumbs for myself to solve little blogging problems that I stumble across.</p>
+<p>So far I’m pretty happy with this approach to blogging. But, I’m sure
+there’s a bunch of things that will come up as I try to process out even
+more. I’m going to use the space to make breadcrumbs for myself to solve
+little blogging problems that I stumble across.</p>
 <div class="section level3">
 <h3 id="drafting-a-post-without-publishing">Drafting a post without publishing<a class="anchor" aria-label="anchor" href="#drafting-a-post-without-publishing"></a>
 </h3>
-<p>What are some options for drafting a post and choosing when to publish it.</p>
+<p>What are some options for drafting a post and choosing when to
+publish it.</p>
 <ol style="list-style-type: decimal">
-<li>Make a new post on my local computer and don’t push it to Github.</li>
-<li>Add to <code>.Rbuildignore</code>, but this wouldn’t allow a preview?</li>
-<li>Or, add new posts to a <code>blog/drafts</code> folder. This should build the post, but it won’t be linked to on the blog page. If someone knew the URL it would still be visible on the internet, if pushed to github.</li>
+<li>Make a new post on my local computer and don’t push it to
+Github.</li>
+<li>Add to <code>.Rbuildignore</code>, but this wouldn’t allow a
+preview?</li>
+<li>Or, add new posts to a <code>blog/drafts</code> folder. This should
+build the post, but it won’t be linked to on the blog page. If someone
+knew the URL it would still be visible on the internet, if pushed to
+github.</li>
 </ol>
 </div>
 </div>
