@@ -2,6 +2,7 @@
 
 export(add_link)
 export(add_link_icon)
+export(bib2annotate)
 export(bib2md)
 export(bib_2_pub_list)
 export(crumplab_blog)

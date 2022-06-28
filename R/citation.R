@@ -136,4 +136,33 @@ bib2md <- function(cite_key,
 
 }
 
+#' Convert bib entries to annotation entries for R markdown
+#'
+#' This is a convenience wrapper function for printing full csl-style bibliographic entries in the middle of an R Markdown document.
+#'
+#' @param cite_key character vector, a vector of citation keys from a .bib file
+#' @param bib_file string, path to .bib file
+#' @param csl_file string, name of csl style file, default is apa.csl
+#' @param header_level string of hashtags, number of hashtags to set header level, default is "##"
+#'
+#' @return markdown The markdown to be written into the R Markdown document. Use with results="asis"
+#' @export
+#'
+bib2annotate <- function(cite_key,
+                         bib_file,
+                         csl_file = "apa.csl",
+                         header_level="##"){
+
+  import_bib <- RefManageR::ReadBib(bib_file)
+  get_title <- import_bib[[cite_key]]$title
+  get_title <- stringr::str_remove_all(get_title,"[{}]")
+  single_citation <- RefManageR::toBiblatex(import_bib[[cite_key]])
+
+  cat(c(header_level, " ", get_title, "\n\n"))
+  cat(c("::: {.apa}","\n"))
+  stevemisc::print_refs(single_citation,csl=csl_file)
+  cat(c(":::","\n\n"))
+  cat(c("Citation key for ","@",cite_key,": ",cite_key), sep="")
+
+}
 
