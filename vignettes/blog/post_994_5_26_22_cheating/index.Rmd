@@ -10,7 +10,7 @@ opengraph:
     site: "@MattCrumpLab"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{My students cheated... A lot}
+  %\VignetteIndexEntry{Brief notes on the cheating behavior literature}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
