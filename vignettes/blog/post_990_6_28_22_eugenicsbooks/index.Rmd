@@ -250,16 +250,65 @@ crumplab::bib2annotate("brauerArtSexEugenics2008","EugenicsBooks.bib")
 
 ---
 
+```{r,results="asis"}
+crumplab::bib2annotate("lombardoThreeGenerationsNo2010","EugenicsBooks.bib")
+```
 
+---
 
+```{r,results="asis"}
+crumplab::bib2annotate("nourseRecklessHandsSkinner2008","EugenicsBooks.bib")
+```
 
+---
 
+```{r,results="asis"}
+crumplab::bib2annotate("blackWarWeakEugenics2003","EugenicsBooks.bib")
+```
 
+---
 
+```{r,results="asis"}
+crumplab::bib2annotate("cohenImbecilesSupremeCourt2016","EugenicsBooks.bib")
+```
 
+---
 
+```{r,results="asis"}
+crumplab::bib2annotate("chaseLegacyMalthusSocial1977","EugenicsBooks.bib")
+```
 
+---
 
+```{r,results="asis"}
+crumplab::bib2annotate("fleischerDisabilityRightsMovement2011","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("pisciottaBenevolentRepressionSocial1994","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("largentBreedingContemptHistory2007","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("mossSocialInequalityAnalytical2009","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("guthrieEvenRatWas2004a","EugenicsBooks.bib")
+```
+
+---
 
 
 
