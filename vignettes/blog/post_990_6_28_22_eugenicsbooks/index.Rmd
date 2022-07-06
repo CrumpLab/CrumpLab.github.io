@@ -64,6 +64,12 @@ One of my favorite books. Critical on many aspects of psychology, a transformati
 ---
 
 ```{r,results="asis"}
+crumplab::bib2annotate("guthrieEvenRatWas2004a","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
 crumplab::bib2annotate("kuhlBettermentRaceRise2013","EugenicsBooks.bib")
 ```
 
@@ -144,7 +150,26 @@ Leo Kamin's arguments against intelligence testing.
 
 ---
 
-Still need to read
+```{r,results="asis"}
+crumplab::bib2annotate("ordoverAmericanEugenicsRace2003","EugenicsBooks.bib")
+```
+
+
+Part I: National Hygiene
+
+Historical overview and critical analysis eugenics ideology and policy in America. Chapters focus on immigration policy set by eugenics agendas, funding of scientific racism by the Pioneer fund, and racist eugenic fear mongering.
+
+Part II: Queer Anatomy: 100 years of diagnosis, Dissection, and Political Strategy
+
+" " 
+
+
+
+---
+
+
+
+## Still need to read
 
 ---
 
@@ -156,6 +181,12 @@ crumplab::bib2annotate("stahnischPsychiatryLegaciesEugenics2020","EugenicsBooks.
 
 ```{r,results="asis"}
 crumplab::bib2annotate("dorrSegregationScienceEugenics2008","EugenicsBooks.bib")
+```
+
+---
+
+```{r,results="asis"}
+crumplab::bib2annotate("cattePureAmericaEugenics2021","EugenicsBooks.bib")
 ```
 
 ---
@@ -304,11 +335,7 @@ crumplab::bib2annotate("mossSocialInequalityAnalytical2009","EugenicsBooks.bib")
 
 ---
 
-```{r,results="asis"}
-crumplab::bib2annotate("guthrieEvenRatWas2004a","EugenicsBooks.bib")
-```
 
----
 
 
 
