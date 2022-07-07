@@ -1,0 +1,127 @@
+---
+title: "Making fonts"
+description: "*July 7th, 2022* - Notes on making custom fonts and using them on the web."
+author: "Matt Crump"
+date: '2022-07-07 `r paste("Last knit: ", lubridate::today())`'
+resource_files:
+  - web/CrumpSquiggligraphy.woff2
+  - web/CrumpSquiggligraphy.woff
+opengraph:
+  twitter:
+    card: summary
+    creator: "@MattCrumpLab"
+    site: "@MattCrumpLab"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Making fonts}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo=FALSE,
+  message= FALSE,
+  warning=FALSE
+)
+```
+
+```{css, results='asis', echo=F   }
+@media (min-width: 1400px) {
+    body {
+        font-size:18px
+    }
+
+    .col-md-3 {
+        margin-left: 5rem
+    }
+
+    .row {
+        --bs-gutter-x: -20%!important;
+    }
+
+    .row>main {
+        max-width: 40rem;
+    }
+
+}
+
+.apa {
+  margin-left: 2em;
+  text-indent: -2em;
+}
+
+@font-face {
+    font-family: 'CrumpSquiggligraphy';
+    src: url('web/CrumpSquiggligraphy.woff2') format('woff2'), url('web/CrumpSquiggligraphy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.squiggligraphy {
+   font-family: 'CrumpSquiggligraphy';
+}
+
+```
+
+
+<span class = "h1 squiggligraphy">D</span>ecided to make fonts, and I'm using this post to find out if the fonts can be displayed on the web (<span class = " squiggligraphy">the answer is yes.</span>) 
+
+So far I have tried two different workflows using [ifontmaker](https://2ttf.com) and [calligraphr](https://www.calligraphr.com/en/). Both approaches work pretty well.
+
+[ifontmaker](https://2ttf.com) is an ipad app ($7.99). For the price it has some nice features, and it is pretty easy to pencil in all of the character very quickly. It has bezier curves, but the brushes are limited. It is possible to copy in .svg. I liked the kerning feature for letter pairs.
+
+[calligraphr](https://www.calligraphr.com/en/) is a website providing a template to draw characters. I open the template in procreate or adobe fresco and do the characters there. Then, the template is uploaded to calligraphr.com, which converts the font to .otf or .ttf. 
+
+I used <https://transfonter.org> to convert .ttf to .woff. This should allow the font to be displayed on the web. Let's find out.
+
+Sidenote: this post is written in R markdown and compiled as a vignette with pkgdown. I add a "web" folder in the vignette folder where I saved the .woff files for the font. These files can be saved to the docs folder if they are declared in the yaml as resource files <https://pkgdown.r-lib.org/reference/build_articles.html#external-files>. 
+
+---
+
+::: {.squilligraphy}
+
+## SQUIGGLIGRAPHY {.squiggligraphy}
+
+THIS FONT IS SQUILLIGRAPHY. IT'S AN ALL CAPS FONT, even though it has lowercase letters. MY PLAN FOR THIS FONT WAS TO USE THE CAPITAL LETTERS TO BEGIN PARAGRAPHS.
+
+:::: {.h1 .squiggligraphy}
+ABDCEFGHIJKLMNOPQRSTUVWXYZ
+::::
+
+:::
+
+---
+
+<span class = "h1 squiggligraphy">M</span>y plan for this paragraph is to write the first letter in squiggligraphy, and all of the rest of the letters in the default font for this post. The rest of this text is just filler text to make this paragraph look like a paragraph. It should have enough words for a few sentences. At least a few. Or, more than a few. Enough for a paragraph.
+
+<span class = "h1 squiggligraphy">N</span>eat. The capital letters from squiggligraphy were not vertically aligned properly, so I had to adjust them in [font forge](https://fontforge.org/en-US/), an open source font editor. I also used font forge to export as .woff and .woff2 for the web. 
+
+To add the the capital letter i'm using a span, choosing h1 class (from bootstrap 5), and a custom class that sets the font family. It's a bit clunky but it gets the letter capitalized in a custom font.
+
+```
+<span class = "h1 squiggligraphy">N</span>eat
+```
+
+
+
+
+
+
+
+
+
+
+## References
+
+
+
+
+
+
+
+
+
