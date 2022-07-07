@@ -6,6 +6,8 @@ date: '2022-07-07 `r paste("Last knit: ", lubridate::today())`'
 resource_files:
   - web/CrumpSquiggligraphy.woff2
   - web/CrumpSquiggligraphy.woff
+  - web/CrumpMoebius.woff2
+  - web/CrumpMoebius.woff
 opengraph:
   twitter:
     card: summary
@@ -61,8 +63,20 @@ knitr::opts_chunk$set(
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'CrumpMoebius';
+    src: url('web/CrumpMoebius.woff2') format('woff2'), url('web/CrumpMoebius.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .squiggligraphy {
    font-family: 'CrumpSquiggligraphy';
+}
+
+.moebius {
+   font-family: 'CrumpMoebius';
 }
 
 ```
@@ -106,10 +120,17 @@ To add the the capital letter i'm using a span, choosing h1 class (from bootstra
 <span class = "h1 squiggligraphy">N</span>eat
 ```
 
+---
 
+## Moebius {.moebius}
 
+::: {.moebius}
 
+Moebius is one of my favorite cartoonists, and I love the way the lettering is rendered. So, I made a font heavily inspired by typography in Moebius cartoons. It only does uppercase, but it doesn't matter if you type in lower or uppercase. There is limited punctuation.
 
+ABDCEFGHIJKLMNOPQRSTUVWXYZ!$,.?
+
+:::
 
 
 
