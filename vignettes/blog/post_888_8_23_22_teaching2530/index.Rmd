@@ -1,0 +1,123 @@
+---
+title: "Getting back into the groove and teaching cognition"
+description: "*August 23rd, 2022* - It's been summer time and another semester begins in a couple days. I'm blogging to get words flowing as I polish my syllabus and reflect on goals for this academic year."
+author: "Matt Crump"
+date: '2022-08-23 `r paste("Last knit: ", lubridate::today())`'
+opengraph:
+  image:
+    src: 
+  twitter:
+    card: summary_large_image
+    creator: "@MattCrumpLab"
+    site: "@MattCrumpLab"
+bibliography: references.bib
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting back into the groove and teaching cognition}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{css, results='asis', echo=F}
+@media (min-width: 1400px) {
+    body {
+        font-size:18px
+    }
+
+    .col-md-3 {
+        margin-left: 5rem
+    }
+
+    .row {
+        --bs-gutter-x: -20%!important;
+    }
+
+    .row>main {
+        max-width: 40rem;
+    }
+
+}
+
+```
+
+<img src="imgs/groove.jpg" style="width=&quot;100%&quot;/"/>
+
+I'm using this post to get my words flowing in preparation for another semester at Brooklyn College of CUNY. My research area is cognition; however, over the past decade I have mostly not taught cognition courses, especially at the undergraduate level where I taught lots of stats and research methods. Last year was the first time I got to teach an intro to cognition course two semesters in a row! Looks like I'm on a roll because I get to teach it again this semester. Additionally, I'm teaching cognition modules for separate doctoral and masters programs, so Fall 2022 is a whole lotta cognition going on.
+
+TLDR: I'm going to try ungrading my course this semester. Should be fun.
+
+## Mood
+
+I'm mostly done with course prep. The semester starts in two days. I'm eagerly avoiding the last bits and pieces of my syllabi, hence this post. I'm excited for what I expect will be an interesting and rewarding semester. At the same time I am still floating in mood. I need some mood extraction. What is my mood?
+
+Instead of explicating the mood, I will point at major mood influences. I'm hoping to summon their power and redirect the energy into a Megazord like the Power Rangers would do when they confront issues of the day. The major mood influencers are eugenics and the white-washing of psychology, academic integrity, and ungrading.
+
+## Eugenics and the white-washing of psychology
+
+I started learning more about the social, historical, and political aspects of psychology that were not incorporated into the curriculum that I was trained on. Past me didn't realize how much of psychology was deeply rooted in eugenics and related systems of oppression. IMO, many of the roots remain buried and not widely discussed in psychology curricula. Sadly, some of the roots are still around. Learning about eugenics/psychology connections has impacted both my research and teaching outlook. In short, when considering how to approach a research or teaching project I have a voice asking "what would a eugenicist do?", and then, just like Meatloaf, "I won't do that."
+
+This summer I embarked on a long eugenics and society in general reading project. [My reading list is here](https://crumplab.com/articles/blog/post_990_6_28_22_eugenicsbooks/index.html). All of that reading built up a strong anti-eugenics mood.
+
+Some highlights very much worth the read for psychologists are @yakushko2019, and @guthrie2004. Yakushko's "Scientific Pollyannaism" covers a wide range of disappointing and deeply problematic aspects of early to modern psychology. Guthrie's "Even the Rat was white" should have been the default textbook on the history of psychology since it was first published in 1976.
+
+I have already incorporated aspects of these topics into the content of my cognition course (e.g., chapters on [eugenics](https://crumplab.com/cognition/textbook/eugenics-and-psychology.html) and [IQ testing](https://crumplab.com/cognition/textbook/intelligence-testing.html)). But, I have not yet really changed the structure of the course in a way that aims to deconstruct eugenics influences in the classroom. For example, I'm not interested in churning my students through testing and ranking processes inspired by eugenicists. I'd rather participate with my students in a process of engaging in the course material.
+
+## Academic integrity
+
+At the end of May I wrote a blog post about some widespread cheating behavior that occurred in my cognition class in Fall 2021. I wrote that post as a part of a teaching assessment process and to reflect on how to do better next time. [My undergrad cognition course](https://crumplab.com/cognition/) is going into its third revision. I first taught it *synchronous* online (gave zoom lectures etc.), and then in Spring 2022 I taught in an *asynchronous* format (recorded lots of YouTube videos). A few months ago I also wrote [a post about how I structured the asynchronous course with a buffet of assignment options for students](https://crumplab.com/articles/blog/post_996_5_20_22_assignmentflex/index.html), so they had many ways to get a grade they wanted to achieve. I think the second version of the course with lots of assignment choice was much better for student engagement, and fortunately I didn't have to deal with any academic integrity issues.
+
+I'm intending to roll over the successes from the second version into my *in-person* course this fall, especially all of options for assignment choice.
+
+I'd also like to avoid major academic integrity issues. One of the outcomes of having a class where most students violated academic integrity principles was that I took [a quick dive into the literature on cheating behavior in university](https://crumplab.com/articles/blog/post_994_5_26_22_cheating/index.html). If you teach psychology and are interested in whether your students are cheating or not, I'd recommend reading @jenkins2022 who estimate that about 75% of students self-report cheating in psych classes. It's a concern. There's so many ways to cheat these days, such as paying someone else (contract cheating) to take your course for you or do your assignments [@hollis2018]. Or, getting an AI like GPT-3 to do your writing assignments.
+
+I'd like to run a course where students would rather engage in the material than violate academic integrity issues.
+
+## Ungrading
+
+An inspiring read this summer was an edited book on "Ungrading", @blum2020. Each chapter was written by different educators who discussed their own misgivings with the standard practice of grading students, and their own ways of practicing ungrading.
+
+More recently, I thought this tweet nicely captured ungrading:
+
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+Grades are inequitable. Ungrading is the set of conversations that inspect and work to dismantle a system of ranking and crude evaluation that further marginalizes already marginalized students.
+
+</p>
+
+--- Jesse Stommel (@Jessifer) <a href="https://twitter.com/Jessifer/status/1558825320488116225?ref_src=twsrc%5Etfw">August 14, 2022</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+I haven't yet tried ungrading in any of my courses, and there are lots of ways to do so. This semester will involve weaving in some ungrading practices.
+
+## Finish my syllabus
+
+If I had to summarize my mood, it is a Megazord composed of the above influences. I hope this Megazord will bring the energy I need to update my syllabus for this semester. I've been finding ways to put off writing the final bits and pieces of the syllabus. And, it is clear to me that I am perilously close to having to do that work, like right now.
+
+My closing thoughts are just me telling myself what I need to do next.
+
+My syllabus is located [here](https://crumplab.com/cognition/articles/course_docs/Fall_2022_Psyc_2530_syllabus.html).
+
+What do I need to do it?
+
+1.  Update course details
+2.  Update course schedule with Fall 2022 dates
+3.  Re-write course assessment and grading parts, make the language around this as clear and straightforward as possible.
+
+## Scratchpad
+
+I'm mostly done with this post for now. It did the thing I needed it to do, which was to get the words flowing again (summer I miss you). I spent a bunch of the summer mulling over how I would implement ungrading, but have not yet made every step explicit to myself by writing it down. I might use this scratchpad section to try out some thoughts about ungrading before putting them in the syllabus. Or, maybe this will just be the end of the post. I plan to report back on how the ungrading goes.
+
+## References
