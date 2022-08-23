@@ -5,7 +5,7 @@ author: "Matt Crump"
 date: '2022-08-23 `r paste("Last knit: ", lubridate::today())`'
 opengraph:
   image:
-    src: 
+    src: "https://www.crumplab.com/articles/blog/post_888_8_23_22_teaching2530/imgs/groove.jpg"
   twitter:
     card: summary_large_image
     creator: "@MattCrumpLab"
