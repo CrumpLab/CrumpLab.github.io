@@ -120,8 +120,14 @@ CUNY](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiativ
 
 ## Contact
 
-Matthew Crump Associate Professor [Department of
-Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)
-[Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/) 2900 Bedford
-Avenue, Brooklyn, NY 11210 Office: 4401 James Hall Phone: 718-951-5000
-x. 6068 email: <mcrump@brooklyn.cuny.edu> Lab: 4303 James Hall
+Matthew Crump
+
+-   Professor
+-   [Department of
+    Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)
+-   [Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/)
+-   2900 Bedford Avenue, Brooklyn, NY 11210
+-   Office: 4401 James Hall
+-   Phone: 718-951-5000 x. 6068
+-   email: <mcrump@brooklyn.cuny.edu>
+-   Lab: 4303 James Hall

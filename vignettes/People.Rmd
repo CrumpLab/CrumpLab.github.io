@@ -24,8 +24,8 @@ vignette: >
 |[Matthew Crump](https://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059)| PI, email: mcrump@brooklyn.cuny.edu|
 |Kevonte Mitchell| Doctoral Student|
 |[Drew Shives](https://djshives.netlify.app)| Doctoral Student|
-|Patrick Ihejirika| Undergraduate MARC|
-|Kendra Scarlett Reynoso Moreno | Undergraduate CUNY BA Program|
+|Wesley Huang| Undergraduate Researcher|
+
 
 
 ## Previous
@@ -46,6 +46,7 @@ vignette: >
 ### Undergraduate
 
 - 2022: Patrick Ihejirika, ["Try and forget this image: The role of stimulus duration in directed forgetting for natural scenes"](https://www.crumplab.com/PatrickHonorsThesis/), Undergraduate MARC Honors thesis, Barry Goldwater Scholar
+- 2022: Kendra Scarlett Reynoso Moreno, Undergraduate CUNY BA Program
 - 2021: Austin Kaplan, "Explaining contingency judgments with a computational model of instance-based memory", Undergraduate Honors Thesis
 - 2019: Mark Rayev, "Deception detection through word usage and word production time in typing", Undergraduate Macaulay Honors
 - 2018: [Walter Lai](https://www.linkedin.com/in/walter-lai-31395b181), Contributing author on ["Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics"](https://crumplab.github.io/EntropyTyping/index.html), currently completing a Masters in Data Science at Southern Methodist University
