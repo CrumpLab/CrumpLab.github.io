@@ -5,9 +5,9 @@ author: "Matt Crump"
 date: '2022-08-25 `r paste("Last knit: ", lubridate::today())`'
 opengraph:
   image:
-    src: 
+    src: "https://www.crumplab.com/articles/blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg"
   twitter:
-    card: summary
+    card: summary_large_image
     creator: "@MattCrumpLab"
     site: "@MattCrumpLab"
 bibliography: references.bib
@@ -48,15 +48,19 @@ knitr::opts_chunk$set(
 
 ```
 
+<img src="imgs/quarto.jpg" style="width=&quot;100%&quot;/"/>
+
 I often assign "blogging" as an optional way for students to engage in course material. There are lots of ways to get a blog up and running on the internet, and my preference is to suggest that students adopt and learn R Markdown and RStudio for their blogging workflow. Many of my students are unfamiliar with computer programming in R, so learning how to blog with R can be a useful gateway to computational skills.
 
-R Studio now comes packaged with [Quarto](<https://quarto.org>), which provides yet another blogging workflow. This post is intended for my students as a quick guide to setting up a quarto blog.
+R Studio now comes packaged with [Quarto](https://quarto.org), which provides yet another blogging workflow. This post is intended for my students as a quick guide to setting up a quarto blog.
 
 ## Overview
 
 Here's an outline of what is in store. You will need to download some free software to your computer and make a free account on Github.com. After the software is downloaded you will be able to open a blogging template (with all the files you need to get started), edit and make new posts, and preview the blog on your computer. Finally, we'll discuss how to share the blog on the internet. At the end, you should be able to make your own new blog posts using this workflow. Last, you do not need to know how to program in R to do this.
 
-I intend to make a video overview and put it here, but the text-based instructions should be enough to get you started as well.
+I intend to make a video overview and put it here, but the text-based instructions should be enough to get you started as well...here's the video.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YoKjBcuUP0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Get the software you need
 
