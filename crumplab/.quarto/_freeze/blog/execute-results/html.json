@@ -1,0 +1,16 @@
+{
+  "hash": "cc45fc5e1e7f304c0c3fed8594764d5b",
+  "result": {
+    "markdown": "---\ntitle: \"Blog\"\nlisting:\n  contents: blog\n  sort: \"date desc\"\n  type: default\n  categories: true\n  image-align: 'right'\n  image-placeholder: 'images/crumplab.png'\n---\n\n::: {.cell}\n<style type=\"text/css\">\n.quarto-title {\n    display: none;\n  }\n</style>\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](images/blog_banner.jpg){width=100%}\n:::\n:::\n",
+    "supporting": [
+      "Blog_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
