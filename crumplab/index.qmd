@@ -30,17 +30,15 @@ knitr::opts_chunk$set(
 knitr::include_graphics('images/front_banner.jpg')
 ```
 
-::: {.column-margin}
-
+::: column-margin
 **Links**
 
-- [Github](https://github.com/CrumpLab)
-- [Twitter](https://twitter.com/MattCrumpLab)
-- [Youtube](https://www.youtube.com/c/CrumpsComputationalCognitionLab)
-- [Scholar](https://scholar.google.com/citations?user=49EVuVcAAAAJ&hl=en)
-- [Brooklyn College](https://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059)
-- [Graduate Center](https://ccp-cuny.github.io/index.html)
-
+-   [Github](https://github.com/CrumpLab)
+-   [Twitter](https://twitter.com/MattCrumpLab)
+-   [Youtube](https://www.youtube.com/c/CrumpsComputationalCognitionLab)
+-   [Scholar](https://scholar.google.com/citations?user=49EVuVcAAAAJ&hl=en)
+-   [Brooklyn College](https://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059)
+-   [Graduate Center](https://ccp-cuny.github.io/index.html)
 :::
 
 The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition. We ask questions like how do people learn new skills such as playing an instrument or typing on a keyboard? How does memory work? How do people learn the meaning of words? How do people learn patterns and regularities in their environment? These kinds of questions are investigated using behavioral experiments and computational modeling of cognitive processes. The lab also uses a variety of computational methods and tools to conduct and communicate research.

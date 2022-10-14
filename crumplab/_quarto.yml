@@ -5,6 +5,7 @@ project:
 website:
   title: "crumplab"
   google-analytics: G-HPGGT4QZ8Q
+  site-url: "https://crumplab.com"
   twitter-card: true
   open-graph: true
   navbar:
