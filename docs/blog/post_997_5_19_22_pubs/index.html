@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.210">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Matt Crump">
+<meta name="dcterms.date" content="2022-05-17">
+<meta name="description" content="Notes on creating a customizable list of publications for an academic website using R markdown, .bib files, and other fun stuff.">
+
+<title>crumplab - Customizing a publication list with R Markdown</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="crumplab - Customizing a publication list with R Markdown">
+<meta property="og:description" content="Notes on creating a customizable list of publications for an academic website using R markdown, .bib files, and other fun stuff.">
+<meta property="og:image" content="imgs/publications_list.jpg">
+<meta property="og:site-name" content="crumplab">
+<meta name="twitter:title" content="crumplab - Customizing a publication list with R Markdown">
+<meta name="twitter:description" content="Notes on creating a customizable list of publications for an academic website using R markdown, .bib files, and other fun stuff.">
+<meta name="twitter:image" content="imgs/publications_list.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">crumplab</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../People.html">
+ <span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Publications.html">
+ <span class="menu-text">Pubs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Books.html">
+ <span class="menu-text">Books and OERs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Courses.html">
+ <span class="menu-text">Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Apps.html">
+ <span class="menu-text">Apps</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Opportunities.html">
+ <span class="menu-text">Join</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Blog.html">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Fun.html">
+ <span class="menu-text">Fun</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CrumpLab"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/MattCrumpLab"><i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"><i class="bi bi-youtube" role="img" aria-label="Youtube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bibbase" id="toc-bibbase" class="nav-link active" data-scroll-target="#bibbase">bibbase</a></li>
+  <li><a href="#bibbase-issues" id="toc-bibbase-issues" class="nav-link" data-scroll-target="#bibbase-issues">bibbase issues</a></li>
+  <li><a href="#what-i-wanted" id="toc-what-i-wanted" class="nav-link" data-scroll-target="#what-i-wanted">What I wanted</a></li>
+  <li><a href="#r-markdown-issues-and-solutions" id="toc-r-markdown-issues-and-solutions" class="nav-link" data-scroll-target="#r-markdown-issues-and-solutions">R Markdown issues and solutions</a></li>
+  <li><a href="#adding-links-to-the-citation" id="toc-adding-links-to-the-citation" class="nav-link" data-scroll-target="#adding-links-to-the-citation">Adding links to the citation</a></li>
+  <li><a href="#thats-all" id="toc-thats-all" class="nav-link" data-scroll-target="#thats-all">That’s all</a></li>
+  <li><a href="#functionalizing" id="toc-functionalizing" class="nav-link" data-scroll-target="#functionalizing">Functionalizing</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Customizing a publication list with R Markdown</h1>
+</div>
+
+<div>
+  <div class="description">
+    Notes on creating a customizable list of publications for an academic website using R markdown, .bib files, and other fun stuff.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Matt Crump </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 17, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<style type="text/css">
+@media (min-width: 1400px) {
+    body {
+        font-size:18px
+    }
+
+    .col-md-3 {
+        margin-left: 5rem
+    }
+    
+    .row {
+        --bs-gutter-x: -20%!important;
+    }
+    
+    .row>main {
+        max-width: 40rem;
+    }
+
+}
+
+</style>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="imgs/publications_list.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>I’ve been using R Markdown to generate my lab website for years. I recently switched from the <a href="https://rmarkdown.rstudio.com/lesson-13.html">generic R markdown website</a> to a website generated by <a href="https://pkgdown.r-lib.org">pkgdown</a>. I’m happy with the result. As a part of the migration I’m revisiting individual pages like my <a href="https://www.crumplab.com/articles/Publications.html">publications</a> page.</p>
+<p>Over the years I’ve tried different ways to list publications. I like any process that takes a <code>.bib</code> file containing my publications, and then auto-generates everything I want to have.</p>
+<section id="bibbase" class="level2">
+<h2 class="anchored" data-anchor-id="bibbase">bibbase</h2>
+<p>I was previously using <a href="https://bibbase.org">bibbase</a>, which takes a <code>.bib</code> file as input and embeds a list of publications into a webpage. For example, I used to generate a publication list by inserting a script into the <code>.Rmd</code> for my publications page.</p>
+<pre><code> &lt;script src="https://bibbase.org/show?bib=https://crumplab.github.io/Crump.bib&amp;jsonp=1&amp;nocache=1&amp;theme=side&amp;authorFirst=1"&gt;&lt;/script&gt;</code></pre>
+<p>It was quick, easy, and pretty good overall.</p>
+</section>
+<section id="bibbase-issues" class="level2">
+<h2 class="anchored" data-anchor-id="bibbase-issues">bibbase issues</h2>
+<p>But, there were nuisances. I couldn’t get the formatting exactly right. I don’t think bibbase supports different <code>.csl</code> formats, so it doesn’t display citations in APA format.</p>
+<p>Bibbase recognizes extra tags in the <code>.bib</code> file to define arbitrary links, and then have the links printed to each citation. For example, a citation might have a pdf, a website, and data associated with it. That was nice.</p>
+<p>However, the links double-clicked themselves. I’m not sure why this happened to me, but clicking a link to download a <code>.pdf</code> would cause the file to be downloaded twice. That was annoying.</p>
+</section>
+<section id="what-i-wanted" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-wanted">What I wanted</h2>
+<p>Here is the workflow that I wanted to achieve:</p>
+<ol type="1">
+<li>Maintain my list of publications in a zotero folder. Then, export the folder as a biblatex repository (with .pdfs).</li>
+<li>Have an <code>.Rmd</code> file that reads in the <code>.bib</code> file, and then outputs the list of publications</li>
+<li>The list ideally could be formatted by any <code>.csl</code> file, which would make it easy to output in APA format</li>
+<li>The list should automatically add any extra links and stuff that I want (provided those things can be extracted from the <code>.bib</code> file).</li>
+</ol>
+</section>
+<section id="r-markdown-issues-and-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="r-markdown-issues-and-solutions">R Markdown issues and solutions</h2>
+<p>R Markdown is generally great for citing things. For example, I could cite a paper <span class="citation" data-cites="vuorreSharingOrganizingResearch2021">(<a href="#ref-vuorreSharingOrganizingResearch2021" role="doc-biblioref">Vuorre and Crump 2021</a>)</span>, the citation would appear in the text, and a full citation would be printed in a reference section at the end of the document.</p>
+<p>However, it’s not so easy to print a full citation in the middle of an R Markdown document, in a style that you want defined by <code>.csl</code>, and with additional stuff you might want like extra links.</p>
+<p>At least, I couldn’t find a way to do that until this morning, when I came across a life-saver function from <a href="http://svmiller.com/stevemisc/">stevemisc</a> called <code>print_refs()</code>.</p>
+<p>There’s at least a handful of ways to input a <code>.bib</code> file into R, and then print out a single entry. For example, <code>RefManageR</code> can do something like this, but it doesn’t support <code>.csl</code>, so the output may not be in the style you want (and it doesn’t output to APA).</p>
+<p>Here’s a quick example of <code>print_refs()</code> in action.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bib2df)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stevemisc)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringi)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># load a bib file to data frame</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>bib_df <span class="ot">&lt;-</span> <span class="fu">bib2df</span>(<span class="at">file=</span><span class="st">"Crump.bib"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># clean entries</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>bib_df<span class="sc">$</span>TITLE <span class="ot">&lt;-</span> <span class="fu">stri_replace_all_regex</span>(bib_df<span class="sc">$</span>TITLE, <span class="st">"[</span><span class="sc">\\</span><span class="st">{</span><span class="sc">\\</span><span class="st">}]"</span>, <span class="st">""</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>bib_df<span class="sc">$</span>JOURNAL <span class="ot">&lt;-</span> <span class="fu">stri_replace_all_regex</span>(bib_df<span class="sc">$</span>JOURNAL, <span class="st">"[</span><span class="sc">\\</span><span class="st">{</span><span class="sc">\\</span><span class="st">}]"</span>, <span class="st">""</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>bib_df<span class="sc">$</span>BOOKTITLE <span class="ot">&lt;-</span> <span class="fu">stri_replace_all_regex</span>(bib_df<span class="sc">$</span>BOOKTITLE, <span class="st">"[</span><span class="sc">\\</span><span class="st">{</span><span class="sc">\\</span><span class="st">}]"</span>, <span class="st">""</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># convert a single row back to .bib entry</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>bib_entry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="fu">capture.output</span>(<span class="fu">df2bib</span>(bib_df[<span class="dv">1</span>,])), <span class="at">collapse=</span><span class="st">""</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>bib_entry</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "@Article{allanPsychophysicsContingencyAssessment2008,  Author = {Allan, Lorraine G. and Hannah, Samuel D. and Crump, Matthew J. C. and Siegel, Shepard},  Number = {2},  Pages = {226--243},  Publisher = {{American Psychological Association (APA)}},  Title = {The Psychophysics of Contingency Assessment.},  Volume = {137},  Ids = {Allan_2008},  Date = {2008},  Journaltitle = {Journal of Experimental Psychology: General},  Issn = {1939-2222, 0096-3445},  Doi = {10.1037/0096-3445.137.2.226},  Url = {https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Allan et al. - 2008.pdf},  Urldate = {2013-07-03},  Abstract = {The authors previously described a procedure that permits rapid, multiple within-participant evaluations of contingency assessment (the “streamed-trial” procedure, M. J. C. Crump, S. D. Hannah, L. G. Allan, \\&amp; L. K. Hord, 2007). In the present experiments, they used the streamed-trial procedure, combined with the method of constant stimuli and a binary classification response, to assess the psychophysics of contingency assessment. This strategy provides a methodology for evaluating whether variations in contingency assessment reflect changes in the participant’s sensitivity to the contingency or changes in the participant’s response bias (or decision criterion). The sign of the contingency (positive or negative), outcome density, and imposition of an explicit payoff structure had little influence on sensitivity to contingencies but did influence the decision criterion. The authors discuss how a psychophysical analysis can provide a better understanding of findings in the literature such as mood and age effects on contingency assessment. They also discuss the relation between a psychophysical approach and an associative account of contingency assessment.},  File = {/Users/mattcrump/Zotero/storage/AMVABHNJ/Allan et al. - 2008 - The psychophysics of contingency assessment..pdf}}"</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># print out the citation</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>stevemisc<span class="sc">::</span><span class="fu">print_refs</span>(bib_entry,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                      <span class="at">csl =</span> <span class="st">"apa.csl"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                      <span class="at">spit_out =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delete_after =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Allan, L. G., Hannah, S. D., Crump, M. J. C., &amp; Siegel, S. (2008). The</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; psychophysics of contingency assessment. *Journal of Experimental</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Psychology: General*, *137*(2), 226–243.</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;https://doi.org/10.1037/0096-3445.137.2.226&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I’m so glad this function exists. It turns the <code>.bib</code> file into markdown that can be printed directly inside an <code>.Rmd</code>. And, this can be done programmatically using knitr chunks. For example, using <code>results=asis</code> in the <code>knitr</code> chunk options allows the citation to printed to the <code>.Rmd</code> document.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>```{r, results="asis", echo=FALSE}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  print_me &lt;- paste0(stevemisc::print_refs(bib_entry,csl = "apa.csl",</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                                        spit_out = FALSE,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                                        delete_after = FALSE), collapse=" ")</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  cat(print_me)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And, this means the citation should show up nicely on the webpage, like this:</p>
+<p>Allan, L. G., Hannah, S. D., Crump, M. J. C., &amp; Siegel, S. (2008). The psychophysics of contingency assessment. <em>Journal of Experimental Psychology: General</em>, <em>137</em>(2), 226–243. <a href="https://doi.org/10.1037/0096-3445.137.2.226" class="uri">https://doi.org/10.1037/0096-3445.137.2.226</a></p>
+</section>
+<section id="adding-links-to-the-citation" class="level2">
+<h2 class="anchored" data-anchor-id="adding-links-to-the-citation">Adding links to the citation</h2>
+<p>A next step was to add any other links to a given citation. I add extra tags to a <code>.bib</code> file in the extra field for citations in zotero. For example, this line is in the extra field for the <span class="citation" data-cites="vuorreSharingOrganizingResearch2021">Vuorre and Crump (<a href="#ref-vuorreSharingOrganizingResearch2021" role="doc-biblioref">2021</a>)</span> paper.</p>
+<pre><code>tex.url_website: https://crumplab.github.io/vertical/</code></pre>
+<p>As a result, when the <code>.bib</code> file is loaded into R as a data.frame, it will contain a column called <code>URL_WEBSITE</code>. I can then retrieve that info and write some custom code to smash together the markdown for a citation, along with any html I want to add it. The script below auto-generates a list of the first five publications in the <code>.bib</code> file (after sorting by year, so the most recent are first).</p>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># sort bib_df by year</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>bib_df <span class="ot">&lt;-</span> bib_df[<span class="fu">order</span>(bib_df<span class="sc">$</span>DATE, <span class="at">decreasing=</span>T),]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print individual entries to page</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span> ){</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  t_bib_entry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="fu">capture.output</span>(<span class="fu">df2bib</span>(bib_df[i,])), <span class="at">collapse=</span><span class="st">""</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  t_md_citation<span class="ot">&lt;-</span> <span class="fu">paste0</span>(stevemisc<span class="sc">::</span><span class="fu">print_refs</span>(t_bib_entry,<span class="at">csl =</span> <span class="st">"apa.csl"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">spit_out =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">delete_after =</span> <span class="cn">FALSE</span>), <span class="at">collapse=</span><span class="st">" "</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(t_md_citation)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"&lt;span class = 'publinks'&gt;"</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">any</span>(<span class="fu">names</span>(bib_df)<span class="sc">==</span><span class="st">"FILE"</span>)){</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>( <span class="sc">!</span><span class="fu">is.na</span>(bib_df[i,<span class="st">"FILE"</span>]) ){</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>      pdf_url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"../Crump/"</span>,bib_df[i,<span class="st">"FILE"</span>], <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cat</span>(<span class="fu">c</span>(<span class="st">"  "</span>,<span class="st">'&lt;a href="'</span>,pdf_url,<span class="st">'"&gt; &lt;i class="fas fa-file-pdf"&gt; pdf &lt;/i&gt;&lt;/a&gt;'</span>),</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">sep=</span><span class="st">""</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">any</span>(<span class="fu">names</span>(bib_df)<span class="sc">==</span><span class="st">"URL_WEBSITE"</span>)){</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>( <span class="sc">!</span><span class="fu">is.na</span>(bib_df[i,<span class="st">"URL_WEBSITE"</span>]) ){</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>      pdf_url <span class="ot">&lt;-</span> <span class="fu">as.character</span>(bib_df[i,<span class="st">"URL_WEBSITE"</span>])</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cat</span>(<span class="fu">c</span>(<span class="st">"  "</span>,<span class="st">'&lt;a href="'</span>,pdf_url,<span class="st">'"&gt; &lt;i class="fas fa-globe"&gt; website &lt;/i&gt;&lt;/a&gt;'</span>),</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        <span class="at">sep=</span><span class="st">""</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">any</span>(<span class="fu">names</span>(bib_df)<span class="sc">==</span><span class="st">"URL_DATA"</span>)){</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>( <span class="sc">!</span><span class="fu">is.na</span>(bib_df[i,<span class="st">"URL_DATA"</span>]) ){</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>      pdf_url <span class="ot">&lt;-</span> <span class="fu">as.character</span>(bib_df[i,<span class="st">"URL_DATA"</span>])</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cat</span>(<span class="fu">c</span>(<span class="st">"  "</span>,<span class="st">'&lt;a href="'</span>,pdf_url,<span class="st">'"&gt; &lt;i class="fas fa-database"&gt; data &lt;/i&gt;&lt;/a&gt;'</span>),</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        <span class="at">sep=</span><span class="st">""</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"&lt;/span&gt;"</span>)</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Brosowsky, N. P., &amp; Crump, M. J. C. (2021). Contextual recruitment of selective attention can be updated via changes in task relevance. <em>Canadian Journal of Experimental Psychology</em>, <em>75</em>, 19–34. <a href="https://doi.org/10.1037/cep0000221" class="uri">https://doi.org/10.1037/cep0000221</a><span class="publinks"> <a href="../Crump//Users/mattcrump/Zotero/storage/9W2594PD/Brosowsky and Crump - 2021 - Contextual recruitment of selective attention can .pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://osf.io/ztcyb/"> <i class="fas fa-database"> data </i></a></span></p>
+<p>Vuorre, M., &amp; Crump, M. J. C. (2021). Sharing and organizing research products as r packages. <em>Behavior Research Methods</em>, <em>53</em>, 792–802. <a href="https://doi.org/10.3758/s13428-020-01436-x" class="uri">https://doi.org/10.3758/s13428-020-01436-x</a><span class="publinks"> <a href="../Crump//Users/mattcrump/Zotero/storage/9456KXZM/Vuorre and Crump - 2021 - Sharing and organizing research products as R pack.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://crumplab.github.io/vertical/"> <i class="fas fa-globe"> website </i></a></span></p>
+<p>Crump, M. J. C., Jamieson, R. K., Johns, B. T., &amp; Jones, M. N. (2020). Controlling the retrieval of general vs specific semantic knowledge in the instance theory of semantic memory. In S. Denison, M. Mack, Y. Xu, &amp; B. C. Armstrong (Eds.), <em>Proceedings of the 42nd annual conference of the cognitive science society</em> (pp.&nbsp;3261–3267). Cognitive Science Society.<span class="publinks"> <a href="../Crump//Users/mattcrump/Zotero/storage/FP9I74BQ/Crump et al. - 2020 - Controlling the retrieval of general vs specific s.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://crumplab.github.io/ITS2/"> <i class="fas fa-globe"> website </i></a></span></p>
+<p>Crump, M. J. C. (2020). <em>Reproducible statistics for psychologists with r: Lab tutorials</em>. OSF. <a href="https://crumplab.github.io/rstatsforpsych/" class="uri">https://crumplab.github.io/rstatsforpsych/</a><span class="publinks"> <a href="https://www.crumplab.com/rstatsforpsych/"> <i class="fas fa-globe"> website </i></a></span></p>
+<p>Johns, B. T., Jamieson, R. K., Crump, M. J. C., Jones, M. N., &amp; Mewhort, D. J. K. (2020). Production without rules: Using an instance memory model to exploit structure in natural language. <em>Journal of Memory and Language</em>, <em>115</em>, 104165. <a href="https://doi.org/ghcm2c" class="uri">https://doi.org/ghcm2c</a><span class="publinks"> <a href="../Crump//Users/mattcrump/Zotero/storage/NS7ZRKJR/Johns et al. - 2020 - Production without rules Using an instance memory.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>NOTE: the pdf links weren’t working…oops, will fix that below.</p>
+</section>
+<section id="thats-all" class="level2">
+<h2 class="anchored" data-anchor-id="thats-all">That’s all</h2>
+<p>I now have a working pipeline that inputs a <code>.bib</code> file, and outputs a list of <a href="https://www.crumplab.com/articles/Publications.html">publications</a> in APA format, with a few customizable bells and whistles.</p>
+<p>I would feel like this excursion was wrapped up if I refactored the script into a set of functions. But, I’ll leave that for another day.</p>
+<iframe src="https://giphy.com/embed/HGX3gYWt9vLZ6" width="480" height="427" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/babe-pig-james-cromwell-HGX3gYWt9vLZ6">via GIPHY</a>
+</p>
+</section>
+<section id="functionalizing" class="level2">
+<h2 class="anchored" data-anchor-id="functionalizing">Functionalizing</h2>
+<p>Ideally I would like to run a single function like this, and have a whole publication list generated, complete with extra links and icons add to each entry.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bib_2_pub_list</span>(<span class="st">"mybib.bib"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I don’t have that solution yet, but may update this post when I have time to make progress in that direction.</p>
+<p>In order for the above to work it be necessary to include any metadata for the links in the .bib file. This could be done using the <a href="https://retorque.re/zotero-better-bibtex/exporting/extra-fields/">extras field in zotero</a>. I’m already using this approach to export urls. I ran into a few roadblocks attempting to generalize this approach.</p>
+<p>Alternatively, two inputs might be better. For example, a <code>.yml</code> file could be used to define metadata for links.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bib_2_pub_list</span>(<span class="st">"mybib.bib"</span>,<span class="st">"mybib.yml"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Hmmm, need to brainstorm a <code>.yml</code> structure. This should work. A citation key, followed by numbered links, each containing a name, url, and font awesome icon.</p>
+<pre><code>vuorreSharingOrganizingResearch2021:
+  link1:
+    name: 'website'
+    url: 'https://www.crumplab.com/vertical'
+    icon: 'fas fa-globe'
+  link2:
+    name: 'github'
+    url: 'https://github.com/CrumpLab/vertical'
+    icon: 'fas fa-github'
+
+behmerCrunchingBigData2017:
+  link1:
+    name: 'data'
+    url: 'https://github.com/CrumpLab/BehmerCrump2017_BigData'
+    icon: 'fas fa-database'</code></pre>
+<p>I can read in the <code>.yml</code> like this, which turns everything into a list.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>yml_links <span class="ot">&lt;-</span> yaml<span class="sc">::</span><span class="fu">read_yaml</span>(<span class="st">"Crump.yml"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, need to write some functions…</p>
+<pre><code>
+::: {.cell}
+
+```{.r .cell-code}
+add_link_icon &lt;- function(url_path,url_text, icon_class){
+  html &lt;- glue::glue('&lt;a href = "{url_path}"&gt; &lt;i class="{icon_class}"&gt; {url_text} &lt;/i&gt;&lt;/a&gt;')
+  cat("  ",html, sep="")
+}</code></pre>
+<p>:::</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>bib_2_pub_list <span class="ot">&lt;-</span> <span class="cf">function</span>(bib,yml,pdf_dir,base_url_to_pdfs){</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># load bib file to df</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  bib_df <span class="ot">&lt;-</span> bib2df<span class="sc">::</span><span class="fu">bib2df</span>(bib)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># clean {{}} from entries</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># to do: improve this part</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  bib_df<span class="sc">$</span>TITLE <span class="ot">&lt;-</span> stringi<span class="sc">::</span><span class="fu">stri_replace_all_regex</span>(bib_df<span class="sc">$</span>TITLE, <span class="st">"[</span><span class="sc">\\</span><span class="st">{</span><span class="sc">\\</span><span class="st">}]"</span>, <span class="st">""</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  bib_df<span class="sc">$</span>JOURNAL <span class="ot">&lt;-</span> stringi<span class="sc">::</span><span class="fu">stri_replace_all_regex</span>(bib_df<span class="sc">$</span>JOURNAL, <span class="st">"[</span><span class="sc">\\</span><span class="st">{</span><span class="sc">\\</span><span class="st">}]"</span>, <span class="st">""</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  bib_df<span class="sc">$</span>BOOKTITLE <span class="ot">&lt;-</span> stringi<span class="sc">::</span><span class="fu">stri_replace_all_regex</span>(bib_df<span class="sc">$</span>BOOKTITLE, <span class="st">"[</span><span class="sc">\\</span><span class="st">{</span><span class="sc">\\</span><span class="st">}]"</span>, <span class="st">""</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># sort bib_df by year</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># to do: add sort options</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  bib_df <span class="ot">&lt;-</span> bib_df[<span class="fu">order</span>(bib_df<span class="sc">$</span>DATE, <span class="at">decreasing=</span>T),]</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># read yml with links for bib entries</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  yml_links <span class="ot">&lt;-</span> yaml<span class="sc">::</span><span class="fu">read_yaml</span>(yml)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print entries</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">dim</span>(bib_df)[<span class="dv">1</span>] ){</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># convert row to .bib entry</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># to do: make row to bib entry a function</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    t_bib_entry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="fu">capture.output</span>(bib2df<span class="sc">::</span><span class="fu">df2bib</span>(bib_df[i,])), <span class="at">collapse=</span><span class="st">""</span>)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># generate markdown text for citation</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    t_md_citation<span class="ot">&lt;-</span> <span class="fu">paste0</span>(stevemisc<span class="sc">::</span><span class="fu">print_refs</span>(t_bib_entry,<span class="at">csl =</span> <span class="st">"apa.csl"</span>,</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>                                                 <span class="at">spit_out =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>                                                 <span class="at">delete_after =</span> <span class="cn">FALSE</span>), <span class="at">collapse=</span><span class="st">" "</span>)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(t_md_citation)</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"&lt;span class = 'publinks'&gt;"</span>)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>    <span class="do">### add pdf links</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>( <span class="sc">!</span><span class="fu">is.na</span>(bib_df<span class="sc">$</span>FILE[i]) ) { <span class="co">#check pdf exists</span></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>      pdf_name <span class="ot">&lt;-</span> <span class="fu">basename</span>(bib_df<span class="sc">$</span>FILE[i])</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>      rel_path_to_pdf <span class="ot">&lt;-</span> <span class="fu">list.files</span>(here<span class="sc">::</span><span class="fu">here</span>(pdf_dir),</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>                                    <span class="fu">basename</span>(bib_df<span class="sc">$</span>FILE[i]),</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">recursive=</span>T)</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>      build_url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(base_url_to_pdfs,<span class="st">"/"</span>,rel_path_to_pdf,<span class="at">collapse=</span><span class="st">""</span>)</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>      crumplab<span class="sc">::</span><span class="fu">add_link_icon</span>(build_url,<span class="st">"pdf"</span>,<span class="st">"fas fa-file-pdf"</span>)</span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>    <span class="do">## add all other links</span></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>( <span class="fu">exists</span>(bib_df<span class="sc">$</span>BIBTEXKEY[i],yml_links) ) { <span class="co"># check yml bib entry exists</span></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>      link_list <span class="ot">&lt;-</span> yml_links[[bib_df<span class="sc">$</span>BIBTEXKEY[i]]]</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(l <span class="cf">in</span> link_list){</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>        crumplab<span class="sc">::</span><span class="fu">add_link_icon</span>(l<span class="sc">$</span>url,l<span class="sc">$</span>name,l<span class="sc">$</span>icon)</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"&lt;/span&gt;"</span>)</span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Does it blend?</p>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>crumplab<span class="sc">::</span><span class="fu">bib_2_pub_list</span>(<span class="st">"Crump.bib"</span>,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"Crump.yml"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"pkgdown/assets/Crump/files"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"https://www.crumplab.com/Crump/files"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Brosowsky, N. P., &amp; Crump, M. J. C. (2021). Contextual recruitment of selective attention can be updated via changes in task relevance. <em>Canadian Journal of Experimental Psychology</em>, <em>75</em>, 19–34. <a href="https://doi.org/10.1037/cep0000221" class="uri">https://doi.org/10.1037/cep0000221</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Vuorre, M., &amp; Crump, M. J. C. (2021). Sharing and organizing research products as r packages. <em>Behavior Research Methods</em>, <em>53</em>, 792–802. <a href="https://doi.org/10.3758/s13428-020-01436-x" class="uri">https://doi.org/10.3758/s13428-020-01436-x</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://www.crumplab.com/vertical"> <i class="fas fa-globe"> website </i></a> <a href="https://github.com/CrumpLab/vertical"> <i class="fa fa-github"> github </i></a></span></p>
+<p>Crump, M. J. C., Jamieson, R. K., Johns, B. T., &amp; Jones, M. N. (2020). Controlling the retrieval of general vs specific semantic knowledge in the instance theory of semantic memory. In S. Denison, M. Mack, Y. Xu, &amp; B. C. Armstrong (Eds.), <em>Proceedings of the 42nd annual conference of the cognitive science society</em> (pp.&nbsp;3261–3267). Cognitive Science Society.<span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C. (2020). <em>Reproducible statistics for psychologists with r: Lab tutorials</em>. OSF. <a href="https://crumplab.github.io/rstatsforpsych/" class="uri">https://crumplab.github.io/rstatsforpsych/</a><span class="publinks"></span></p>
+<p>Johns, B. T., Jamieson, R. K., Crump, M. J. C., Jones, M. N., &amp; Mewhort, D. J. K. (2020). Production without rules: Using an instance memory model to exploit structure in natural language. <em>Journal of Memory and Language</em>, <em>115</em>, 104165. <a href="https://doi.org/ghcm2c" class="uri">https://doi.org/ghcm2c</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Aujla, H., Crump, M. J. C., Cook, M. T., &amp; Jamieson, R. K. (2019). The semantic librarian: A search engine built from vector-space models of semantics. <em>Behavior Research Methods</em>, <em>51</em>(6), 2405–2418. <a href="https://doi.org/gf6cmv" class="uri">https://doi.org/gf6cmv</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Braem, S., Bugg, J. M., Schmidt, J. R., Crump, M. J. C., Weissman, D. H., Notebaert, W., &amp; Egner, T. (2019). Measuring adaptive control in conflict tasks. <em>Trends in Cognitive Sciences</em>, <em>23</em>(9), 769–783. <a href="https://doi.org/gf48x7" class="uri">https://doi.org/gf48x7</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. (2019). <em>Answering questions with data: Course website</em>. <a href="https://doi.org/ghrn62" class="uri">https://doi.org/ghrn62</a><span class="publinks"></span></p>
+<p>Crump, M., Navarro, D., &amp; Suzuki, J. (2019). <em>Answering questions with data (textbook): Introductory statistics for psychology students</em>. <a href="https://doi.org/ghrn59" class="uri">https://doi.org/ghrn59</a><span class="publinks"></span></p>
+<p>Crump, M., Krishnan, A., Volz, S., &amp; Chavarga, A. (2019). <em>Answering questions with data: The lab manual for r, excel, SPSS and jamovi</em>. <a href="https://doi.org/ghrn63" class="uri">https://doi.org/ghrn63</a><span class="publinks"></span></p>
+<p>Crump, M. J. C., Lai, W., &amp; Brosowsky, N. P. (2019). Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>73</em>(4), 203–215. https://doi.org/<a href="http://dx.doi.org/10.1037/cep0000182" class="uri">http://dx.doi.org/10.1037/cep0000182</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C. (2019). Portfolio and prosper. <em>Nature Human Behaviour</em>, <em>3</em>(10), 1008–1008. <a href="https://doi.org/ghrnn6" class="uri">https://doi.org/ghrnn6</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Behmer, L. P., Jantzen, K. J., Martinez, S., Walls, R., Amir-Brownstein, E., Jaye, A., Leytze, M., Lucier, K., &amp; Crump, M. J. C. (2018). Parallel regulation of past, present, and future actions during sequencing. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>44</em>(8), 1147–1152. <a href="https://doi.org/gdznzb" class="uri">https://doi.org/gdznzb</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Brosowsky, N. P., &amp; Crump, M. J. C. (2018). Memory-guided selective attention: Single experiences with conflict have long-lasting effects on cognitive control. <em>Journal of Experimental Psychology: General</em>, <em>147</em>(8), 1134–1153. <a href="https://doi.org/gd2w6z" class="uri">https://doi.org/gd2w6z</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., Milliken, B., Leboe-McGowan, J., Leboe-McGowan, L., &amp; Gao, X. (2018). Context-dependent control of attention capture: Evidence from proportion congruent effects. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>72</em>(2), 91–104. <a href="https://doi.org/gdrskv" class="uri">https://doi.org/gdrskv</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., Brosowsky, N. P., &amp; Milliken, B. (2017). Reproducing the location-based context-specific proportion congruent effect for frequency unbiased items: A reply to hutcheon and spieler (2016). <em>Quarterly Journal of Experimental Psychology</em>, <em>70</em>(9), 1792–1807. <a href="https://doi.org/gcx8qn" class="uri">https://doi.org/gcx8qn</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Behmer, L. P., &amp; Crump, M. J. C. (2017). The dynamic range of response set activation during action sequencing. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>43</em>(3), 537–554. <a href="https://doi.org/f9w78w" class="uri">https://doi.org/f9w78w</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Behmer, L. P., &amp; Crump, M. J. C. (2017). Crunching big data with finger tips: How typists tune their performance towards the statistics of natural language. In M. N. Jones (Ed.), <em>Big data in cognitive science</em> (pp.&nbsp;319–341). Routledge.<span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://github.com/CrumpLab/BehmerCrump2017_BigData"> <i class="fas fa-database"> data </i></a></span></p>
+<p>Behmer, L. P., &amp; Crump, M. J. C. (2017). Spatial knowledge during skilled action sequencing: Hierarchical versus non-hierarchical representations. <em>Attention, Perception &amp; Psychophysics</em>, <em>79</em>, 2435–2448. <a href="https://doi.org/10.3758/s13414-017-1389-3" class="uri">https://doi.org/10.3758/s13414-017-1389-3</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Zumsteg, J. W., Crump, M. J., Logan, G. D., Weikert, D. R., &amp; Lee, D. H. (2017). The effect of carpal tunnel release on typing performance. <em>The Journal of Hand Surgery</em>, <em>42</em>(1), 16–23. <a href="https://doi.org/f9mjkj" class="uri">https://doi.org/f9mjkj</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Brosowsky, N. P., &amp; Crump, M. J. C. (2016). Context-specific attentional sampling: Intentional control as a pre-requisite for contextual control. <em>Consciousness and Cognition</em>, <em>44</em>, 146–160. <a href="https://doi.org/f848wz" class="uri">https://doi.org/f848wz</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C. (2016). Learning to selectively attend from context-specific attentional histories: A demonstration and some constraints. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>70</em>(1), 59–77. <a href="https://doi.org/gf7h25" class="uri">https://doi.org/gf7h25</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Curtis, E. T., Chubala, C. M., Spear, J., Jamieson, R. K., Hockley, W. E., &amp; Crump, M. J. C. (2016). False recognition of instruction-set lures. <em>Memory</em>, <em>24</em>, 32–43. <a href="https://doi.org/10.1080/09658211.2014.982657" class="uri">https://doi.org/10.1080/09658211.2014.982657</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Johns, B. T., Jamieson, R., Crump, M., Jones, M. N., &amp; Mewhort, D. J. (2016). The combinatorial power of experience. <em>Proceedings of the 38th Annual Conference of the Cognitive Science Society.</em><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., McDonnell, J. V., &amp; Gureckis, T. M. (2013). Evaluating amazon’s mechanical turk as a tool for experimental behavioral research. <em>PLoS ONE</em>, <em>8</em>(3), e57410. <a href="https://doi.org/f4qw94" class="uri">https://doi.org/f4qw94</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., &amp; Logan, G. D. (2013). Prevention and correction in post-error performance: An ounce of prevention, a pound of cure. <em>Journal of Experimental Psychology: General</em>, <em>142</em>(3), 692–709. <a href="https://doi.org/f46hg6" class="uri">https://doi.org/f46hg6</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Yamaguchi, M., Crump, M. J. C., &amp; Logan, G. D. (2013). Speed–accuracy trade-off in skilled typewriting: Decomposing the contributions of hierarchical control loops. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>39</em>(3), 678–699. <a href="https://doi.org/10.1037/a0030512" class="uri">https://doi.org/10.1037/a0030512</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Bugg, J. M., &amp; Crump, M. J. C. (2012). In support of a distinction between voluntary and stimulus-driven control: A review of the literature on proportion congruent effects. <em>Frontiers in Psychology</em>, <em>3</em>(367), 1–16. <a href="https://doi.org/10.3389/fpsyg.2012.00367" class="uri">https://doi.org/10.3389/fpsyg.2012.00367</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., Logan, G. D., &amp; Kimbrough, J. (2012). Keeping an eye on guitar skill: Visual representations of guitar chords. <em>Music Perception: An Interdisciplinary Journal</em>, <em>30</em>(1), 37–47. <a href="https://www.jstor.org/stable/10.1525/mp.2012.30.1.37" class="uri">https://www.jstor.org/stable/10.1525/mp.2012.30.1.37</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C. (2012). <em>Review of guitar zero: The new musician and the science of learning</em>. <a href="https://doi.org/10.1037/a0030741" class="uri">https://doi.org/10.1037/a0030741</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Jamieson, R. K., Crump, M. J. C., &amp; Hannah, S. D. (2012). An instance theory of associative learning. <em>Learning &amp; Behavior</em>, <em>40</em>(1), 61–82. <a href="https://doi.org/dwkrm5" class="uri">https://doi.org/dwkrm5</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Logan, G. D., &amp; Crump, M. J. C. (2011). Hierarchical control of cognitive processes: The case for skilled typewriting. In B. H. Ross (Ed.), <em>Psychology of learning and motivation</em> (Vol. 54, pp.&nbsp;1–27). Elsevier.<span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., &amp; Logan, G. D. (2010). Contextual control over task-set retrieval. <em>Attention, Perception, &amp; Psychophysics</em>, <em>72</em>(8), 2047–2053. <a href="https://doi.org/c6psw7" class="uri">https://doi.org/c6psw7</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., &amp; Logan, G. D. (2010). Warning: This keyboard will deconstruct— the role of the keyboard in skilled typewriting. <em>Psychonomic Bulletin &amp; Review</em>, <em>17</em>(3), 394–399. <a href="https://doi.org/d9jmzm" class="uri">https://doi.org/d9jmzm</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., &amp; Logan, G. D. (2010). Hierarchical control and skilled typing: Evidence for word-level control over the execution of individual keystrokes. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, <em>36</em>(6), 1369–1380. <a href="https://doi.org/ccjxg5" class="uri">https://doi.org/ccjxg5</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., &amp; Logan, G. D. (2010). Episodic contributions to sequential control: Learning from a typist’s touch. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>36</em>(3), 662–672. <a href="https://doi.org/ccw3b5" class="uri">https://doi.org/ccw3b5</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Jamieson, R. K., Hannah, S. D., &amp; Crump, M. J. C. (2010). A memory-based account of retrospective revaluation. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>64</em>(3), 153–164. <a href="https://doi.org/fn46rb" class="uri">https://doi.org/fn46rb</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Liu, X., Crump, M. J. C., &amp; Logan, G. D. (2010). Do you know where your fingers have been? Explicit knowledge of the spatial layout of the keyboard in skilled typists. <em>Memory &amp; Cognition</em>, <em>38</em>(4), 474–484. <a href="https://doi.org/ccq7jw" class="uri">https://doi.org/ccq7jw</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Logan, G. D., &amp; Crump, M. J. C. (2010). Cognitive illusions of authorship reveal hierarchical error detection in skilled typists. <em>Science</em>, <em>330</em>(6004), 683–686. <a href="https://doi.org/bktxxk" class="uri">https://doi.org/bktxxk</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., &amp; Milliken, B. (2009). The flexibility of context-specific control: Evidence for context-driven generalization of item-specific control settings. <em>The Quarterly Journal of Experimental Psychology</em>, <em>62</em>(8), 1523–1532. <a href="https://doi.org/10.1080/17470210902752096" class="uri">https://doi.org/10.1080/17470210902752096</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Hannah, S. D., Crump, M. J. C., Allan, L. G., &amp; Siegel, S. (2009). Cue-interaction effects in contingency judgments using the streamed-trial procedure. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>63</em>(2), 103–112. <a href="https://doi.org/fgwn3x" class="uri">https://doi.org/fgwn3x</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Logan, G. D., &amp; Crump, M. J. C. (2009). The left hand doesn’t know what the right hand is doing: The disruptive effects of attention to the hands in skilled typewriting. <em>Psychological Science</em>, <em>20</em>(10), 1296–1300. <a href="https://doi.org/10.1111/j.1467-9280.2009.02442.x" class="uri">https://doi.org/10.1111/j.1467-9280.2009.02442.x</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Siegel, S., Allan, L. G., Hannah, S. D., &amp; Crump, M. J. C. (2009). Applying signal detection theory to contingency assessment. <em>Comparative Cognition &amp; Behavior Reviews</em>, <em>4</em>, 116–134. <a href="https://doi.org/10.3819/ccbr.2009.40012" class="uri">https://doi.org/10.3819/ccbr.2009.40012</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Allan, L. G., Hannah, S. D., Crump, M. J. C., &amp; Siegel, S. (2008). The psychophysics of contingency assessment. <em>Journal of Experimental Psychology: General</em>, <em>137</em>(2), 226–243. <a href="https://doi.org/10.1037/0096-3445.137.2.226" class="uri">https://doi.org/10.1037/0096-3445.137.2.226</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., Vaquero, J. M. M., &amp; Milliken, B. (2008). Context-specific learning and control: The roles of awareness, task relevance, and relative salience. <em>Consciousness and Cognition</em>, <em>17</em>(1), 22–36. <a href="https://doi.org/d2fm7p" class="uri">https://doi.org/d2fm7p</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., Milliken, B., &amp; Ansari, I. (2008). Shifting views on the symbolic cueing effect: Cueing attention through recent prior experience. <em>Psicológica</em>, <em>29</em>(1), 97–114. <a href="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump%20et%20al.%20-%202008.pdf">https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump et al.&nbsp;- 2008.pdf</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Leboe, J. P., Wong, J., Crump, M. J. C., &amp; Stobbe, K. (2008). Probe-specific proportion task repetition effects on switching costs. <em>Perception &amp; Psychophysics</em>, <em>70</em>(6), 935–945. <a href="https://doi.org/10.3758/PP.70.6.935" class="uri">https://doi.org/10.3758/PP.70.6.935</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., Hannah, S. D., Allan, L. G., &amp; Hord, L. K. (2007). Contingency judgements on the fly. <em>Quarterly Journal of Experimental Psychology</em>, <em>60</em>(6), 753–761. <a href="https://doi.org/b9jjc4" class="uri">https://doi.org/b9jjc4</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Schmidt, J. R., Crump, M. J. C., Cheesman, J., &amp; Besner, D. (2007). Contingency learning without awareness: Evidence for implicit control. <em>Consciousness and Cognition</em>, <em>16</em>(2), 421–435. <a href="https://doi.org/d9bv53" class="uri">https://doi.org/d9bv53</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<p>Crump, M. J. C., Gong, Z., &amp; Milliken, B. (2006). The context-specific proportion congruent stroop effect: Location as a contextual cue. <em>Psychonomic Bulletin &amp; Review</em>, <em>13</em>(2), 316–321. <a href="https://doi.org/fpxkfs" class="uri">https://doi.org/fpxkfs</a><span class="publinks"> <a href="https://www.crumplab.com/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
+<iframe src="https://giphy.com/embed/i29DtU2PMkzsI" width="480" height="458" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/live-presents-dsd-i29DtU2PMkzsI">via GIPHY</a>
+</p>
+<p>That works pretty well.</p>
+<p>Next step is to include this function in my <code>crumplab</code> package that is part of this webpage, and make it work for real.</p>
+</section>
+<section id="references" class="level2">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-vuorreSharingOrganizingResearch2021" class="csl-entry" role="doc-biblioentry">
+Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Research Products as <span>R</span> Packages.”</span> <em>Behavior Research Methods</em> 53: 792–802. <a href="https://doi.org/10.3758/s13428-020-01436-x">https://doi.org/10.3758/s13428-020-01436-x</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

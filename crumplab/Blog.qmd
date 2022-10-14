@@ -1,0 +1,23 @@
+---
+title: "Blog"
+listing:
+  contents: blog
+  sort: "date desc"
+  type: default
+  categories: true
+  image-align: 'right'
+  image-placeholder: 'images/crumplab.png'
+---
+
+```{css, echo=FALSE}
+.quarto-title {
+    display: none;
+  }
+```
+
+```{r}
+#| echo: FALSE
+#| out.width: 100%
+knitr::include_graphics('images/blog_banner.jpg')
+```
+

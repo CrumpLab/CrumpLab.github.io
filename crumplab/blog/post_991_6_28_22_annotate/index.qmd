@@ -1,0 +1,187 @@
+---
+title: "Writing annotated bibliographies with R Markdown"
+description: "Trying out ways to write annotated bibliographies in R Markdown."
+author: "Matt Crump"
+date: '2022-06-28'
+bibliography: AcademicIntegrity.bib
+image: 'imgs/annotate.png'
+opengraph:
+  twitter:
+    card: summary
+    creator: "@MattCrumpLab"
+    site: "@MattCrumpLab"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo=FALSE,
+  message= FALSE,
+  warning=FALSE
+)
+```
+
+```{css, results='asis', echo=F   }
+@media (min-width: 1400px) {
+    body {
+        font-size:18px
+    }
+
+    .col-md-3 {
+        margin-left: 5rem
+    }
+
+    .row {
+        --bs-gutter-x: -20%!important;
+    }
+
+    .row>main {
+        max-width: 40rem;
+    }
+
+}
+
+.apa {
+  margin-left: 2em;
+  text-indent: -2em;
+}
+
+```
+
+`r paste("Last knit: ", lubridate::today())`
+
+I often create messy annotated bibliographies for sets of readings. This will be a quick post for me to work through my writing and R Markdown process for creating annotated bibs. I have a feeling that I could make the process easier for myself. But, I need to kick some tires first.
+
+## Zotero Copy/Paste Method
+
+This is the method that I am starting with, and it could be the one I end with too.
+
+1.  Use [zotero](https://www.zotero.org) for reference management.
+
+-   Make a folder for my readings
+-   Add citation entries to zotero for each reading
+
+2.  Copy/paste references out of Zotero into R markdown.
+
+3.  Write an annotation underneath the citation and move on.
+
+I usually separate citations with a horizontal line. The look and feel is:
+
+Future proofing Assessment in Business Education: Lessons From COVID-19. (2021). Journal of Higher Education Theory and Practice, 21(4). https://doi.org/10.33423/jhetp.v21i4.4206
+
+Short blurb, and random notes about the above paper/book.
+
+------------------------------------------------------------------------
+
+Jenkins, B. D., Golding, J. M., Le Grand, A. M., Levi, M. M., & Pals, A. M. (2022). When Opportunity Knocks: College Students' Cheating Amid the COVID-19 Pandemic. Teaching of Psychology, 009862832110590. https://doi.org/10.1177/00986283211059067
+
+Short blurb, and random notes about the above paper/book.
+
+------------------------------------------------------------------------
+
+Krienert, J. L., Walsh, J. A., & Cannon, K. D. (2021). Changes in the tradecraft of cheating: Technological advances in academic dishonesty. College Teaching, 1--10. https://doi.org/10.1080/87567555.2021.1940813
+
+Short blurb, and random notes about the above paper/book.
+
+------------------------------------------------------------------------
+
+### Pros/Cons
+
+Pros: It's fast to copy/paste citations out of Zotero.
+
+Cons: The citations are not formatted by csl, they could be made more pretty looking. No reference list generated. No header added to table of contents.
+
+## Cite in text method
+
+1.  export .bib file from Zotero
+2.  cite individual papers and write annotation
+
+Looks like:
+
+@bairdjrCurrentTrendsCollege1980
+
+Some comments about the paper
+
+------------------------------------------------------------------------
+
+@bowersStudentDishonestyIts1964
+
+Some comments about the paper
+
+------------------------------------------------------------------------
+
+@drakeWhyStudentsCheat1941
+
+Some comments about the paper
+
+### Pros/Cons
+
+Also fast, and generates a reference list. However, the full citation is not printed in the main text.
+
+## What I want?
+
+1.  Fast and easy
+2.  Title listed in TOC
+3.  Full-citation listed in main text
+4.  Reference list printed at end
+
+Maybe something that looks like this.
+
+### When Opportunity Knocks: College Students' Cheating Amid the COVID-19 Pandemic
+
+::: apa
+```{r, results="asis"}
+crumplab::bib2md("jenkinsWhenOpportunityKnocks2022","AcademicIntegrity.bib")
+```
+:::
+
+@jenkinsWhenOpportunityKnocks2022 provide both a historical summary of the cheating literature, and present new data about cheating behavior during COVID-19.
+
+------------------------------------------------------------------------
+
+### Ghost-Students and the New Wave of Online Cheating for Community College Students
+
+::: apa
+```{r, results="asis"}
+crumplab::bib2md("hollisGhoststudentsNewWave2018","AcademicIntegrity.bib")
+```
+:::
+
+@hollisGhoststudentsNewWave2018 discuss contract-cheating and "ghost-students" who are hired to complete coursework.
+
+------------------------------------------------------------------------
+
+### Pros/Cons
+
+This is getting closer to something I would use. It's not too clunky. Perhaps a function to further automate the process.
+
+```{r, echo=TRUE}
+bib2annotate <- function(cite_key,
+                   bib_file,
+                   csl_file = "apa.csl",
+                   header_level="###"){
+
+  import_bib <- RefManageR::ReadBib(bib_file)
+  get_title <- import_bib[[cite_key]]$title
+  get_title <- stringr::str_remove_all(get_title,"[{}]")
+  single_citation <- RefManageR::toBiblatex(import_bib[[cite_key]])
+  
+  cat(c(header_level, " ", get_title, "\n\n"))
+  cat(c("::: {.apa}","\n"))
+  stevemisc::print_refs(single_citation,csl=csl_file)
+  cat(c(":::","\n\n"))
+  cat(c("Citation key for ","@",cite_key,": ",cite_key), sep="")
+
+}
+```
+
+```{r, results="asis", echo=TRUE}
+bib2annotate("ivesYourStudentsAre2020","AcademicIntegrity.bib")
+```
+
+------------------------------------------------------------------------
+
+This will work well enough for now (note to self to add bib2annotate to crumplab functions.)
+
+## References
