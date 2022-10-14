@@ -1,10 +1,15 @@
 ---
 title: "Publications"
+description: "In progress and peer-reviewed publications from Matthew J. C. Crump"
 include-in-header: <link rel="meta" type="application/rdf+xml" href="Crump/Crump.rdf"/>
 ---
 
 ```{css, echo=FALSE}
 .quarto-title {
+    display: none;
+}
+
+.description {
     display: none;
 }
 
@@ -25,7 +30,6 @@ include-in-header: <link rel="meta" type="application/rdf+xml" href="Crump/Crump
 knitr::include_graphics('images/publications_banner.jpg')
 ```
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 ```
@@ -38,7 +42,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 ```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
 crumplab::bib_2_pub_list("../pkgdown/assets/Crump_In_progress/Crump_In_progress.bib",
                          "../pkgdown/assets/Crump_In_progress/Crump_In_progress.yml",
-                         "pkgdown/assets/Crump_In_progress/files",
+                         "../pkgdown/assets/Crump_In_progress/files",
                          "https://www.crumplab.com/Crump_In_progress/files")
 ```
 :::
@@ -49,7 +53,7 @@ crumplab::bib_2_pub_list("../pkgdown/assets/Crump_In_progress/Crump_In_progress.
 ```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
 crumplab::bib_2_pub_list("../pkgdown/assets/Crump/Crump.bib",
                          "../pkgdown/assets/Crump/Crump.yml",
-                         "pkgdown/assets/Crump/files",
+                         "../pkgdown/assets/Crump/files",
                          "https://www.crumplab.com/Crump/files")
 ```
 :::
