@@ -9,6 +9,9 @@ opengraph:
     card: summary
     creator: "@MattCrumpLab"
     site: "@MattCrumpLab"
+categories:
+  - teaching
+  - cognition
 ---
 
 ```{r, include = FALSE}

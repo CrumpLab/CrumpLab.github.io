@@ -10,6 +10,11 @@ opengraph:
     creator: "@MattCrumpLab"
     site: "@MattCrumpLab"
 bibliography: references.bib
+categories:
+  - quarto
+  - Rstats
+  - vertical
+  - Reproducible research
 ---
 
 ```{r, include = FALSE}

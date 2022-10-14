@@ -12,6 +12,10 @@ opengraph:
     creator: "@MattCrumpLab"
     site: "@MattCrumpLab"
 bibliography: references.bib
+categories:
+  - teaching
+  - cognition
+  - OER
 ---
 
 ```{r, include = FALSE}

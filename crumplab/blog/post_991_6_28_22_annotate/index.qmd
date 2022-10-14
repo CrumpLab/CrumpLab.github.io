@@ -10,6 +10,9 @@ opengraph:
     card: summary
     creator: "@MattCrumpLab"
     site: "@MattCrumpLab"
+categories:
+  - bibliographies
+  - Rstats
 ---
 
 ```{r, include = FALSE}

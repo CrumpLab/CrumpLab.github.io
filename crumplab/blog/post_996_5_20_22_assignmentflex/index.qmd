@@ -11,6 +11,9 @@ opengraph:
     card: summary_large_image
     creator: "@MattCrumpLab"
     site: "@MattCrumpLab"
+categories:
+  - teaching
+  - cognition
 ---
 
 ```{r, include = FALSE}
