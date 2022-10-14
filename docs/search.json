@@ -1467,7 +1467,7 @@
     "href": "blog/post_886_10_14_22_quartoProjects/index.html",
     "title": "Quarto as a tool for reproducible research projects in psychology",
     "section": "",
-    "text": "Last knit: 2022-10-14\nFor a good few years I have become interested in adopting reproducible workflows for my cognitive psychology research projects. Vuorre and Crump (2021) discussed an R-based approach to creating and sharing research assets in a reproducible manner, and we called it vertical. Since then I have used that approach for most new projects in the lab. However, quarto is the KNOTB, and I’ve been itching to try quarto for managing assets in a psych research project. And, in the last few days I got the chance to start a project from scratch using quarto, actually several projects. I’m going to digest some my experiences and lay breadcrumbs for my future self about what I like and am learning so far."
+    "text": "Last knit: 2022-10-14\nFor a good few years I have become interested in adopting reproducible workflows for my cognitive psychology research projects. Vuorre and Crump (2021) discussed an R-based approach to creating and sharing research assets in a reproducible manner, and we called it vertical. Since then I have used that approach for most new projects in the lab. However, quarto is the NKOTB, and I’ve been itching to try quarto for managing assets in a psych research project. And, in the last few days I got the chance to start a project from scratch using quarto, actually several projects. I’m going to digest some my experiences and lay breadcrumbs for my future self about what I like and am learning so far."
   },
   {
     "objectID": "blog/post_886_10_14_22_quartoProjects/index.html#the-vertical-approach",
