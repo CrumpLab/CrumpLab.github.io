@@ -1,0 +1,16 @@
+{
+  "hash": "ca87f5a4d5281a47538a4f248abd7eb8",
+  "result": {
+    "markdown": "---\ntitle: \"Quarto as a tool for reproducible research projects in psychology\"\ndescription: \"Some initial reactions to using quarto as a platform for creating and communicating reproducible research projects in psychology.\"\nauthor: \"Matt Crump\"\ndate: '2022-10-14'\nimage: 'imgs/Quarto-1.png'\nopengraph:\n  twitter:\n    card: summary_large_image\n    creator: \"@MattCrumpLab\"\n    site: \"@MattCrumpLab\"\nbibliography: references.bib\n---\n\n\n\n<style type=\"text/css\">\n@media (min-width: 1400px) {\n    body {\n        font-size:18px\n    }\n\n    .col-md-3 {\n        margin-left: 5rem\n    }\n\n    .row {\n        --bs-gutter-x: -20%!important;\n    }\n\n    .row>main {\n        max-width: 40rem;\n    }\n\n}\n\n</style>\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/Quarto-1.png){width=100%}\n:::\n:::\n\n\nLast knit:  2022-10-14\n\nFor a good few years I have become interested in adopting reproducible workflows for my cognitive psychology research projects. @vuorre2021 discussed an R-based approach to creating and sharing research assets in a reproducible manner, and we called it [vertical](https://crumplab.com/vertical/). Since then I have used that approach for most new projects in the lab. However, [quarto](https://quarto.org) is the KNOTB, and I've been itching to try quarto for managing assets in a psych research project. And, in the last few days I got the chance to start a project from scratch using quarto, actually several projects. I'm going to digest some my experiences and lay breadcrumbs for my future self about what I like and am learning so far.\n\n::: callout-note\nNote: this post is mainly inspired by the fact that I just converted my lab website where this blog is hosted from a pkgdown website to a quarto website. So, I really feel like I need to make a new post to justify the time it took to make the conversion. TLDR: I'm not totally sure what the purpose of the post is yet.\n:::\n\n## The vertical approach\n\nHere's an overview of the vertical approach. We use the R-package template as a starting point for organizing files. This has the benefit of being able to quickly create websites using {pkgdown}. This is a very R-centered approach, which is great for me because I use R for everything. So, if my project includes custom R functions, I can immediately drop them into the R-package template and create an R-package for the project. This process can be useful for documenting data from the project too. Additional assets such as Experiment script code, posters, manuscripts, etc., are given their own folders.\n\n![](https://crumplab.com/vertical/reference/figures/vertical-project.png)\n\nWe go into much more depth about vertical in the paper and on the vertical webpage. One of the important notions is just to adopt an organized method for creating and sharing assets in a reproducible way. This can be done in many languages, and doesn't need to be R centric. The same goals can also be accomplished without twisting things like pkgdown into positions they weren't intended for.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
