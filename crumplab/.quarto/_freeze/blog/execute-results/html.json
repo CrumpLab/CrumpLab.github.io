@@ -1,10 +1,8 @@
 {
-  "hash": "cc45fc5e1e7f304c0c3fed8594764d5b",
+  "hash": "de30b2e390ff55fb45e4c1755e196815",
   "result": {
-    "markdown": "---\ntitle: \"Blog\"\nlisting:\n  contents: blog\n  sort: \"date desc\"\n  type: default\n  categories: true\n  image-align: 'right'\n  image-placeholder: 'images/crumplab.png'\n---\n\n::: {.cell}\n<style type=\"text/css\">\n.quarto-title {\n    display: none;\n  }\n</style>\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](images/blog_banner.jpg){width=100%}\n:::\n:::\n",
-    "supporting": [
-      "Blog_files"
-    ],
+    "markdown": "---\ntitle: \"Blog\"\ndescription: \"Various musings from Matt Crump, usually about cognition, teaching, and other stuff.\"\nimage: images/logo2.png\nlisting:\n  contents: blog\n  sort: \"date desc\"\n  type: default\n  categories: true\n  image-align: 'right'\n  image-placeholder: 'images/crumplab.png'\n---\n\n::: {.cell}\n<style type=\"text/css\">\n.quarto-title {\n    display: none;\n  }\n</style>\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](images/blog_banner.jpg){width=100%}\n:::\n:::\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

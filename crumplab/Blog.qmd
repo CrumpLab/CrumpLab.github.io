@@ -1,5 +1,7 @@
 ---
 title: "Blog"
+description: "Various musings from Matt Crump, usually about cognition, teaching, and other stuff."
+image: images/logo2.png
 listing:
   contents: blog
   sort: "date desc"
@@ -20,4 +22,3 @@ listing:
 #| out.width: 100%
 knitr::include_graphics('images/blog_banner.jpg')
 ```
-
