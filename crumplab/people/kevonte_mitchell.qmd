@@ -1,0 +1,10 @@
+---
+title: "Kevonte Kitchell"
+description: Doctoral Student
+about:
+  template: trestles
+  image: ../images/crumplab.png
+order: 4
+---
+
+Kevonte Mitchell is a doctoral student at the Graduate Center of CUNY.

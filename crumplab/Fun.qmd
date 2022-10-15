@@ -20,7 +20,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 
 ## Music
 
-::: {.columns}
+::: columns
 ::: {.column width="50%"}
 ### [RS](https://distrokid.com/hyperfollow/homophony/rs)
 
@@ -38,7 +38,7 @@ knitr::include_graphics("images/fun/RS.jpg")
 :::
 :::
 
-::: {.columns}
+::: columns
 ::: {.column width="50%"}
 ### [VO](https://distrokid.com/hyperfollow/homophony/vo)
 
@@ -58,11 +58,11 @@ knitr::include_graphics("images/fun/VO.jpg")
 
 ## Painting
 
-::: {.columns}
+::: columns
 ::: {.column width="50%"}
 ### [things](https://crumplab.github.io/things/)
 
-When I find to make visual things I take pictures of them, and post them here <https://crumplab.github.io/things/>
+When I find time to make visual things I take pictures of them, and post them here <https://crumplab.github.io/things/>
 :::
 
 ::: {.column width="50%"}

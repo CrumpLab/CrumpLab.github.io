@@ -1,0 +1,14 @@
+---
+title: "Wesley Huang"
+description: Undergraduate
+about:
+  template: trestles
+  image: ../images/crumplab.png
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/Wesleyhuang123
+order: 3
+---
+
+Wesley Huang is an undergraduate researcher, and presidential mentoring initiative scholar for Fall 2022.

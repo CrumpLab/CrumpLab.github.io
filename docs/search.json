@@ -228,7 +228,7 @@
     "href": "Fun.html#painting",
     "title": "Fun",
     "section": "Painting",
-    "text": "Painting\n\n\n\nthings\nWhen I find to make visual things I take pictures of them, and post them here https://crumplab.github.io/things/"
+    "text": "Painting\n\n\n\nthings\nWhen I find time to make visual things I take pictures of them, and post them here https://crumplab.github.io/things/"
   },
   {
     "objectID": "index.html",
@@ -354,7 +354,7 @@
     "href": "blog/post_999_5_17_22_blogging/index.html",
     "title": "Blogging with pkgdown?",
     "section": "",
-    "text": "Last knit: 2022-10-14\nNOTE: I stopped using pkgdown for bloggin and switched to quarto, which is much better suited to the task.\nI like pkgdown. It’s great for what it was built to do (make websites for R packages), and it’s pretty good at other use cases as well. For example, I recently re-factored my lab webpage using pkgdown and that worked out well enough.\nMy previous website had a hacked together blog using demented combinations of R markdown templates. I was thinking about adopting some other blogging scheme like distill, but couldn’t get it to play nice with pkgdown. So, this is an attempt to blog in pkgdown and see how far that goes for me."
+    "text": "Last knit: 2022-10-15\nNOTE: I stopped using pkgdown for bloggin and switched to quarto, which is much better suited to the task.\nI like pkgdown. It’s great for what it was built to do (make websites for R packages), and it’s pretty good at other use cases as well. For example, I recently re-factored my lab webpage using pkgdown and that worked out well enough.\nMy previous website had a hacked together blog using demented combinations of R markdown templates. I was thinking about adopting some other blogging scheme like distill, but couldn’t get it to play nice with pkgdown. So, this is an attempt to blog in pkgdown and see how far that goes for me."
   },
   {
     "objectID": "blog/post_999_5_17_22_blogging/index.html#blogging-features-im-looking-for",
@@ -410,7 +410,7 @@
     "href": "blog/post_889_7_7_22_fonts/index.html",
     "title": "Making fonts",
     "section": "",
-    "text": "Last knit: 2022-10-14\nDecided to make fonts, and I’m using this post to find out if the fonts can be displayed on the web (the answer is yes.)\nSo far I have tried two different workflows using ifontmaker and calligraphr. Both approaches work pretty well.\nifontmaker is an ipad app ($7.99). For the price it has some nice features, and it is pretty easy to pencil in all of the character very quickly. It has bezier curves, but the brushes are limited. It is possible to copy in .svg. I liked the kerning feature for letter pairs.\ncalligraphr is a website providing a template to draw characters. I open the template in procreate or adobe fresco and do the characters there. Then, the template is uploaded to calligraphr.com, which converts the font to .otf or .ttf.\nI used https://transfonter.org to convert .ttf to .woff. This should allow the font to be displayed on the web. Let’s find out.\nSidenote: this post is written in R markdown and compiled as a vignette with pkgdown. I add a “web” folder in the vignette folder where I saved the .woff files for the font. These files can be saved to the docs folder if they are declared in the yaml as resource files https://pkgdown.r-lib.org/reference/build_articles.html#external-files.\nMy plan for this paragraph is to write the first letter in squiggligraphy, and all of the rest of the letters in the default font for this post. The rest of this text is just filler text to make this paragraph look like a paragraph. It should have enough words for a few sentences. At least a few. Or, more than a few. Enough for a paragraph.\nNeat. The capital letters from squiggligraphy were not vertically aligned properly, so I had to adjust them in font forge, an open source font editor. I also used font forge to export as .woff and .woff2 for the web.\nTo add the the capital letter i’m using a span, choosing h1 class (from bootstrap 5), and a custom class that sets the font family. It’s a bit clunky but it gets the letter capitalized in a custom font."
+    "text": "Last knit: 2022-10-15\nDecided to make fonts, and I’m using this post to find out if the fonts can be displayed on the web (the answer is yes.)\nSo far I have tried two different workflows using ifontmaker and calligraphr. Both approaches work pretty well.\nifontmaker is an ipad app ($7.99). For the price it has some nice features, and it is pretty easy to pencil in all of the character very quickly. It has bezier curves, but the brushes are limited. It is possible to copy in .svg. I liked the kerning feature for letter pairs.\ncalligraphr is a website providing a template to draw characters. I open the template in procreate or adobe fresco and do the characters there. Then, the template is uploaded to calligraphr.com, which converts the font to .otf or .ttf.\nI used https://transfonter.org to convert .ttf to .woff. This should allow the font to be displayed on the web. Let’s find out.\nSidenote: this post is written in R markdown and compiled as a vignette with pkgdown. I add a “web” folder in the vignette folder where I saved the .woff files for the font. These files can be saved to the docs folder if they are declared in the yaml as resource files https://pkgdown.r-lib.org/reference/build_articles.html#external-files.\nMy plan for this paragraph is to write the first letter in squiggligraphy, and all of the rest of the letters in the default font for this post. The rest of this text is just filler text to make this paragraph look like a paragraph. It should have enough words for a few sentences. At least a few. Or, more than a few. Enough for a paragraph.\nNeat. The capital letters from squiggligraphy were not vertically aligned properly, so I had to adjust them in font forge, an open source font editor. I also used font forge to export as .woff and .woff2 for the web.\nTo add the the capital letter i’m using a span, choosing h1 class (from bootstrap 5), and a custom class that sets the font family. It’s a bit clunky but it gets the letter capitalized in a custom font."
   },
   {
     "objectID": "blog/post_889_7_7_22_fonts/index.html#squiggligraphy",
@@ -487,7 +487,7 @@
     "href": "blog/post_996_5_20_22_assignmentflex/index.html",
     "title": "Teaching with multiple warp zones: Increasing engagement with assignment choice",
     "section": "",
-    "text": "Last knit: 2022-10-14\nI lack positive emotions toward the process of grading in my courses. I have lots of positive emotions for my students. Grading stresses people out. I’ll save my thoughts about grading in general for another day.\nWhat I really want to talk about is how I flooded the gates with tons of ways to get an A in the course. It worked, I had fun, I think my students had fun and they got a lot of well-deserved As. More important, my students engaged in the material in more ways than they normally would have.\nI’ll say a little bit about my course and then talk about how I implemented lots of assignment choice this semester."
+    "text": "Last knit: 2022-10-15\nI lack positive emotions toward the process of grading in my courses. I have lots of positive emotions for my students. Grading stresses people out. I’ll save my thoughts about grading in general for another day.\nWhat I really want to talk about is how I flooded the gates with tons of ways to get an A in the course. It worked, I had fun, I think my students had fun and they got a lot of well-deserved As. More important, my students engaged in the material in more ways than they normally would have.\nI’ll say a little bit about my course and then talk about how I implemented lots of assignment choice this semester."
   },
   {
     "objectID": "blog/post_996_5_20_22_assignmentflex/index.html#a-bit-of-background",
@@ -522,7 +522,7 @@
     "href": "blog/post_887_8_25_22_quartoblog/index.html",
     "title": "Blogging with Quarto",
     "section": "",
-    "text": "Last knit: 2022-10-14\nI often assign “blogging” as an optional way for students to engage in course material. There are lots of ways to get a blog up and running on the internet, and my preference is to suggest that students adopt and learn R Markdown and RStudio for their blogging workflow. Many of my students are unfamiliar with computer programming in R, so learning how to blog with R can be a useful gateway to computational skills.\nR Studio now comes packaged with Quarto, which provides yet another blogging workflow. This post is intended for my students as a quick guide to setting up a quarto blog."
+    "text": "Last knit: 2022-10-15\nI often assign “blogging” as an optional way for students to engage in course material. There are lots of ways to get a blog up and running on the internet, and my preference is to suggest that students adopt and learn R Markdown and RStudio for their blogging workflow. Many of my students are unfamiliar with computer programming in R, so learning how to blog with R can be a useful gateway to computational skills.\nR Studio now comes packaged with Quarto, which provides yet another blogging workflow. This post is intended for my students as a quick guide to setting up a quarto blog."
   },
   {
     "objectID": "blog/post_887_8_25_22_quartoblog/index.html#overview",
@@ -578,7 +578,7 @@
     "href": "blog/post_990_6_28_22_eugenicsbooks/index.html",
     "title": "A reading list on eugenics",
     "section": "",
-    "text": "Last knit: 2022-10-14\nEugenics and related ideological systems continue to influence psychology and society. I am using this post as an annotated bibliography to gather my book-based reading list about eugenics. The full list is at the bottom. I plan to update this list over time as I find more to read on the topic."
+    "text": "Last knit: 2022-10-15\nEugenics and related ideological systems continue to influence psychology and society. I am using this post as an annotated bibliography to gather my book-based reading list about eugenics. The full list is at the bottom. I plan to update this list over time as I find more to read on the topic."
   },
   {
     "objectID": "blog/post_990_6_28_22_eugenicsbooks/index.html#scientific-pollyannaism-from-inquisition-to-positive-psychology",
@@ -872,7 +872,7 @@
     "href": "blog/post_994_5_26_22_cheating/index.html",
     "title": "Brief notes on the cheating behavior literature",
     "section": "",
-    "text": "Last knit: 2022-10-14\nIn a previous version of this post, I shared a detective/thriller themed story about academic integrity issues arising in a course I taught. The story picked up more attention than I anticipated. I shared the story as part of a course assessment writing exercise, which has now been completed, and the original post is no longer available.\nPart of my course assessment exercise was to learn more about the literature on cheating behavior. I conducted a short literature review on that topic and am posting brief notes about a few of the papers.\nFor teaching psychology, I found this paper to be most relevant and current:\nJenkins, B. D., Golding, J. M., Le Grand, A. M., Levi, M. M., & Pals, A. M. (2022). When Opportunity Knocks: College Students’ Cheating Amid the COVID-19 Pandemic. Teaching of Psychology, 009862832110590. https://doi.org/10.1177/00986283211059067\nAlso, I highly recommend checking out this book on ungrading, which is increasingly my preferred direction where possible.\nBlum, S. D. (2020). Ungrading: Why rating students undermines learning (and what to do instead). West Virginia University Press."
+    "text": "Last knit: 2022-10-15\nIn a previous version of this post, I shared a detective/thriller themed story about academic integrity issues arising in a course I taught. The story picked up more attention than I anticipated. I shared the story as part of a course assessment writing exercise, which has now been completed, and the original post is no longer available.\nPart of my course assessment exercise was to learn more about the literature on cheating behavior. I conducted a short literature review on that topic and am posting brief notes about a few of the papers.\nFor teaching psychology, I found this paper to be most relevant and current:\nJenkins, B. D., Golding, J. M., Le Grand, A. M., Levi, M. M., & Pals, A. M. (2022). When Opportunity Knocks: College Students’ Cheating Amid the COVID-19 Pandemic. Teaching of Psychology, 009862832110590. https://doi.org/10.1177/00986283211059067\nAlso, I highly recommend checking out this book on ungrading, which is increasingly my preferred direction where possible.\nBlum, S. D. (2020). Ungrading: Why rating students undermines learning (and what to do instead). West Virginia University Press."
   },
   {
     "objectID": "blog/post_994_5_26_22_cheating/index.html#sporadic-notes",
@@ -886,7 +886,7 @@
     "href": "blog/post_888_8_23_22_teaching2530/index.html",
     "title": "Getting back into the groove and teaching cognition",
     "section": "",
-    "text": "Last knit: 2022-10-14\nI’m using this post to get my words flowing in preparation for another semester at Brooklyn College of CUNY. My research area is cognition; however, over the past decade I have mostly not taught cognition courses, especially at the undergraduate level where I taught lots of stats and research methods. Last year was the first time I got to teach an intro to cognition course two semesters in a row! Looks like I’m on a roll because I get to teach it again this semester. Additionally, I’m teaching cognition modules for separate doctoral and masters programs, so Fall 2022 is a whole lotta cognition going on.\nTLDR: I’m going to try ungrading my course this semester. Should be fun."
+    "text": "Last knit: 2022-10-15\nI’m using this post to get my words flowing in preparation for another semester at Brooklyn College of CUNY. My research area is cognition; however, over the past decade I have mostly not taught cognition courses, especially at the undergraduate level where I taught lots of stats and research methods. Last year was the first time I got to teach an intro to cognition course two semesters in a row! Looks like I’m on a roll because I get to teach it again this semester. Additionally, I’m teaching cognition modules for separate doctoral and masters programs, so Fall 2022 is a whole lotta cognition going on.\nTLDR: I’m going to try ungrading my course this semester. Should be fun."
   },
   {
     "objectID": "blog/post_888_8_23_22_teaching2530/index.html#mood",
@@ -1012,7 +1012,7 @@
     "href": "blog/older_9999_psych_eugenics/index.html",
     "title": "Psychology and Eugenics connections",
     "section": "",
-    "text": "Last knit: 2022-10-14\nNote: This is a loose collection of notes I put together around summer 2020. I have more recently attempted to organize some of this information across two chapters in my introductory textbook to cognitive psychology:\nI’m working through the task of learning about influences of eugenics on psychology and society. As a part of this, I’m documenting the eugenics views held by many psychologists, as well as connections between psychologists and eugenics. I will keep updating this page as I document the connections. There are many connections, it will take some time. So far, this is an emerging disorganized collection of factoids.\nA major overarching goal of compiling and documenting connections between psychology and eugenics is to better understand how strucutural eugenics and racism in the discipline of Psychology has shaped and continues to shape the field, both in terms of the questions it asks, and who gets to ask them."
+    "text": "Last knit: 2022-10-15\nNote: This is a loose collection of notes I put together around summer 2020. I have more recently attempted to organize some of this information across two chapters in my introductory textbook to cognitive psychology:\nI’m working through the task of learning about influences of eugenics on psychology and society. As a part of this, I’m documenting the eugenics views held by many psychologists, as well as connections between psychologists and eugenics. I will keep updating this page as I document the connections. There are many connections, it will take some time. So far, this is an emerging disorganized collection of factoids.\nA major overarching goal of compiling and documenting connections between psychology and eugenics is to better understand how strucutural eugenics and racism in the discipline of Psychology has shaped and continues to shape the field, both in terms of the questions it asks, and who gets to ask them."
   },
   {
     "objectID": "blog/older_9999_psych_eugenics/index.html#sir-francis-galton",
@@ -1201,7 +1201,7 @@
     "href": "blog/post_991_6_28_22_annotate/index.html",
     "title": "Writing annotated bibliographies with R Markdown",
     "section": "",
-    "text": "Last knit: 2022-10-14\nI often create messy annotated bibliographies for sets of readings. This will be a quick post for me to work through my writing and R Markdown process for creating annotated bibs. I have a feeling that I could make the process easier for myself. But, I need to kick some tires first."
+    "text": "Last knit: 2022-10-15\nI often create messy annotated bibliographies for sets of readings. This will be a quick post for me to work through my writing and R Markdown process for creating annotated bibs. I have a feeling that I could make the process easier for myself. But, I need to kick some tires first."
   },
   {
     "objectID": "blog/post_991_6_28_22_annotate/index.html#zotero-copypaste-method",
@@ -1306,7 +1306,7 @@
     "href": "blog/older_9999_7_2_20_JBP/index.html",
     "title": "Reading the Journal of Black Psychology",
     "section": "",
-    "text": "Last knit: 2022-10-14\nThe Association of Black Psychology has been publishing the Journal of Black Psychology since 1974. I just learned about it. So, I’m reading it because that’s what you do when you find out that you missed an entire foundational field in psychology.\nI’m a cognitive psychologist who spends a large part of my research time considering how cognition in general is supported by computations of learning and memory processes. I’m also interested in psychology more broadly: how it fits together as a discipline, and how the institutions of psychology work, how psychology influences society, etc.\nMy impression of my own field is that it is highly fragmented. There’s lots of everyone doing their own thing. There is no unified field theory of anything. Wondering about the “point” of things in cognitive psychology has sucked years of my life away. I guess I enjoy it, and like many other disciplines, perhaps struggling with the point is part of the point. Points don’t come for free.\nSometimes I’ve used a hole digging metaphor for research. I go dig a new hole somewhere, and convince everyone else that no one looked in the hole before. If you do a good of this, you can dig into that hole for the rest of your life and never have to leave. I have dug some holes that I’d like to get out of.\nRelatedly, I was appalled by Psych Science publishing a now retracted racist IQ paper. I hadn’t been paying attention to the scope of racism in my own discipline. By tugging at the thread of the history of IQ research, which I also mostly didn’t learn about in my training, I discovered how much eugenics played a role in founding and propagating psychology (Yakushko 2019).\nI’m in the process of climbing out of my research hole to learn about the racist and eugenicist ideologies systemic to psychology. As a part of this work, I found out the Journal of Black Psychology has been dismantling these issues from their inception, so I’m here to learn from the experts.\nI’ve already done some reading and skimming through the journal. So, even though I know this work will inform me about structural racism and eugenics in psychology, I also know it will inform me about many other issues that I wasn’t thinking so much about. The papers I have read so far are building towers of perspective over the holes of psychology. I’m excited to read more, I need to start keeping notes:\nLet’s start with Vol 1, Issue 1, 1974"
+    "text": "Last knit: 2022-10-15\nThe Association of Black Psychology has been publishing the Journal of Black Psychology since 1974. I just learned about it. So, I’m reading it because that’s what you do when you find out that you missed an entire foundational field in psychology.\nI’m a cognitive psychologist who spends a large part of my research time considering how cognition in general is supported by computations of learning and memory processes. I’m also interested in psychology more broadly: how it fits together as a discipline, and how the institutions of psychology work, how psychology influences society, etc.\nMy impression of my own field is that it is highly fragmented. There’s lots of everyone doing their own thing. There is no unified field theory of anything. Wondering about the “point” of things in cognitive psychology has sucked years of my life away. I guess I enjoy it, and like many other disciplines, perhaps struggling with the point is part of the point. Points don’t come for free.\nSometimes I’ve used a hole digging metaphor for research. I go dig a new hole somewhere, and convince everyone else that no one looked in the hole before. If you do a good of this, you can dig into that hole for the rest of your life and never have to leave. I have dug some holes that I’d like to get out of.\nRelatedly, I was appalled by Psych Science publishing a now retracted racist IQ paper. I hadn’t been paying attention to the scope of racism in my own discipline. By tugging at the thread of the history of IQ research, which I also mostly didn’t learn about in my training, I discovered how much eugenics played a role in founding and propagating psychology (Yakushko 2019).\nI’m in the process of climbing out of my research hole to learn about the racist and eugenicist ideologies systemic to psychology. As a part of this work, I found out the Journal of Black Psychology has been dismantling these issues from their inception, so I’m here to learn from the experts.\nI’ve already done some reading and skimming through the journal. So, even though I know this work will inform me about structural racism and eugenics in psychology, I also know it will inform me about many other issues that I wasn’t thinking so much about. The papers I have read so far are building towers of perspective over the holes of psychology. I’m excited to read more, I need to start keeping notes:\nLet’s start with Vol 1, Issue 1, 1974"
   },
   {
     "objectID": "blog/older_9999_7_2_20_JBP/index.html#smitheditorial1974",
@@ -1425,7 +1425,7 @@
     "href": "People.html#lab-members",
     "title": "People",
     "section": "Lab Members",
-    "text": "Lab Members\n\n\n\nCurrent\nInfo\n\n\n\n\nMatthew Crump\nPI, email: mcrump@brooklyn.cuny.edu\n\n\nKevonte Mitchell\nDoctoral Student\n\n\nDrew Shives\nDoctoral Student\n\n\nWesley Huang\nUndergraduate Researcher"
+    "text": "Lab Members\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\nPrincipal Investigator mcrump@brooklyn.cuny.edu\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDrew Shives\n\n\nDoctoral Student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWesley Huang\n\n\nUndergraduate\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKevonte Kitchell\n\n\nDoctoral Student\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "People.html#previous",
@@ -1489,5 +1489,61 @@
     "title": "Quarto as a tool for reproducible research projects in psychology",
     "section": "Quarto for new research",
     "text": "Quarto for new research\nI am not sharing this website yet because the project is still in very early stages of development. However, it has been really fun and productive to use quarto from the very beginning of the project.\n\nAt this stage, graduate student Drew Shives and I know our research direction, but we are still doing a lot of reading, combined with stimulus creation, and experiment-idea generation. It’s a lot of creative work that can get messy very fast in terms of keeping track of notes, code, and ideas. This is where I have found using quarto as a personal research organization tool very useful.\nHere’s a quick look at the setup, and why I like it. First, I used Rstudio to create a new quarto website project. Then, I modified _quarto.yml as follows:\nproject:\n  type: website\n  output-dir: ../docs/quarto\n\nwebsite:\n  title: \"DRMsource\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - about.qmd\n      - href: ../index.html\n        text: R package\n  sidebar:\n    - title: \"Home\"\n      style: \"floating\"\n      collapse-level: 3\n      align: left\n      contents: auto\n\nformat:\n  html:\n    theme: minty\n    css: styles.css\n    toc: true\n\neditor: visual\nIn quarto 1.2 (pre-release build), there is a really nice feature for auto-generating navigation in the side bar. For example, in the above yaml, under sidebar (which controls the left-side navigation on the webpage), I set the contents option to auto. As a result, the name of any folder in the project will be converted to a section header, and the title of each .qmd inside a folder will be added to navigation list under each section. Here is the current directory structure of the project:\n\nRight now I’m creating things in three different folders: Aims, Design, and Reading. Any .qmd file inside a folder automatically get’s rendered to the website, and listed under sections. I have a .qmd for developing project motivation in the Aims folder, a bunch of .qmds for stimulus generation in the Design folder, and a couple .qmds to keep track of readings in a readings folder.\n\nThis project organization structure may or may not last very long, depending on what happens as we work through the project. Fortunately, it is a snap to change the structure. Just rename the folders, or switch files between folders, and the website automatically updates itself. That’s great.\nLess to do with quarto, and more to do with Rstudio’s new and improved visual editor, I’m super excited about how easy it is to add content in rmd or qmd files. Like it I want to add a screen shot, I take one and drag/drop it onto the text in the visual editor, and it automatically gets added to an images folder. That’s fire. And, zotero integration for easy citing while writing, is more fire.\nSo, hurrah for quarto! And, it’s about to be another Friday night, which means I need to stop writing and hit the render button."
+  },
+  {
+    "objectID": "people/drew_shives.html",
+    "href": "people/drew_shives.html",
+    "title": "Drew Shives",
+    "section": "",
+    "text": "Drew Shives is a doctoral student at the Graduate Center of CUNY."
+  },
+  {
+    "objectID": "people/matt_crump.html",
+    "href": "people/matt_crump.html",
+    "title": "Matt Crump",
+    "section": "",
+    "text": "Matt Crump is a cognitive psychologist with research interests in learning, memory, attention, skill learning, semantics, and computational modeling. He runs the computational cognition lab at Brooklyn College of CUNY."
+  },
+  {
+    "objectID": "people/matt_crump.html#education",
+    "href": "people/matt_crump.html#education",
+    "title": "Matt Crump",
+    "section": "Education",
+    "text": "Education\nPostdoc, Vanderbilt University - 2011 (Psychology)\nPh.D., McMaster University - 2007 (Psychology)\nB.Sc., University of Lethbridge - 2002 (Psychology)"
+  },
+  {
+    "objectID": "people/matt_crump.html#experience",
+    "href": "people/matt_crump.html#experience",
+    "title": "Matt Crump",
+    "section": "Experience",
+    "text": "Experience\nAssistant Professor - Brooklyn College of CUNY (2011)\nAssociate Professor - Brooklyn College of CUNY (2016)\nFull Professor - Brooklyn College of CUNY (2022)"
+  },
+  {
+    "objectID": "Opportunities.html",
+    "href": "Opportunities.html",
+    "title": "Join",
+    "section": "",
+    "text": "Dr. Crump has mentored students interested in cognition at all levels, including undergraduate, master’s, doctoral, and postdoctoral researchers. The lab is always looking for students interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data. This page describes current opportunities for prospective students at the undergraduate, master’s, doctoral levels. Interested students should also read some of the lab publications to learn more about the research questions we are asking."
+  },
+  {
+    "objectID": "Opportunities.html#undergraduate-students",
+    "href": "Opportunities.html#undergraduate-students",
+    "title": "Join",
+    "section": "Undergraduate students",
+    "text": "Undergraduate students\nIt is possible to gain research experience as an undergraduate at Brooklyn College, and the skills gained through these experiences can open doors for career opportunities, including pursuing advanced degrees. Dr. Crump is especially interested in mentoring students through the process of completing an undergraduate honor’s thesis in their senior year (see here for departmental requirements). However, students interested in pursuing an honor’s thesis should get lab experience before their final year.\nThe honor’s thesis consists of two semesters of Independent Research (e.g., Psych 5001 and 5002) and culminates in writing a thesis covering the research conducted over the year. The honor’s thesis option is a great opportunity for students interested in pursuing research in a Ph.D. program following undergraduate studies. The honor’s thesis is a major commitment in time and effort for everyone involved, and interested students need to plan ahead.\nStudents who join the lab enroll in research classes so that they receive course credit as they gain research experience in the lab. If you are interested in taking one of the courses, please complete the entry assignment, and then email Dr. Crump about availability. The classes include:\n\nPsych 2001-4 Laboratory Experience (3 credits each)\nPsych 5001-4 Independent Research (3 credits each)\n\nThe Laboratory Experience courses are intended for students who are new to research, and the Independent Research courses are for more senior students (typically completing an honors thesis). They are each one semester long, and involve conducting research in the lab and writing a research report as a final project.\nRecent undergraduate research projects completed in the lab.\n\n2022: Patrick Ihejirika, “Try and forget this image: The role of stimulus duration in directed forgetting for natural scenes”, Undergraduate MARC Honors thesis, Barry Goldwater Scholar\n2019: Mark Rayev, “Deception detection through word usage and word production time in typing”, Undergraduate Macaulay Honors\n2018: Walter Lai, Contributing author on “Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics”, currently completing a Masters in Data Science at Southern Methodist University"
+  },
+  {
+    "objectID": "Opportunities.html#masters-students",
+    "href": "Opportunities.html#masters-students",
+    "title": "Join",
+    "section": "Master’s Students",
+    "text": "Master’s Students\nThe Master’s of Arts in Experimental Psychology is a two-year research focused master’s program at Brooklyn College. The program website describes general information about the program. Students in the program conduct research with a faculty mentor over two years culminating in a thesis. Master’s students in the computational cognition lab will work with Dr. Crump over two years to complete a research project in cognition.\nStudents will learn advanced statistics, data-analysis, and computational modelling skills, and apply them to research questions in cognition. Students will also learn how to create, conduct, and analyze online behavioral experiments. The degree is typically completed in two years, by taking three courses per semester. Each semester one of the courses involves independent reading and research in the lab. In the first semester, students will acquire sub-domain expertise about a cognitive phenomena through an extensive literature review. The literature review will suggest new directions for empirical work. The second semester of independent research will involve proposals for experiments, and collection of pilot data. By, the second year students should have a well-developed research project that will form the basis for their thesis. Master’s student research projects can also be submitted for publication in peer-reviewed journals."
+  },
+  {
+    "objectID": "Opportunities.html#doctoral-students",
+    "href": "Opportunities.html#doctoral-students",
+    "title": "Join",
+    "section": "Doctoral students",
+    "text": "Doctoral students\nStudents interested in pursuing a Ph.D. should apply to the Cognitive and Comparative Psychology (CCP) training area in the Psychology Doctoral Program at the Graduate Center of CUNY. The deadline for applications is December 1st. You can apply directly here. Interested applicants should also email Matt Crump (mcrump@brooklyn.cuny.edu) to introduce themselves, their research interests, and why they want to gain research skills in the lab"
   }
 ]

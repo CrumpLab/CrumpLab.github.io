@@ -2,6 +2,10 @@
   "listingMap": {
     "Blog.qmd": [
       "blog"
+    ],
+    "People.qmd": [
+      "blog",
+      "people"
     ]
   }
 }

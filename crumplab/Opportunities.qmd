@@ -14,29 +14,20 @@ title: "Join"
 knitr::include_graphics('images/opportunities_banner.jpg')
 ```
 
+Dr. Crump has mentored students interested in cognition at all levels, including [undergraduate, master's, doctoral, and postdoctoral researchers](https://crumplab.com/People.html). The lab is always looking for students interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data. This page describes current opportunities for prospective students at the undergraduate, master's, doctoral levels. Interested students should also [read some of the lab publications](https://crumplab.github.io/publications/) to learn more about the research questions we are asking.
 
-## Ph.D. students
+## Undergraduate students
 
-Students interested in pursuing a Ph.D. should apply to the [Cognitive and Comparative Psychology (CCP) training area](https://ccp-cuny.github.io) in the Psychology Doctoral Program at the Graduate Center of CUNY. The deadline for applications December 1st, 2020. [You can apply directly here](http://www.gc.cuny.edu/Prospective-Current-Students/Prospective-Students/Admissions). Interested applicants should also email Matt Crump (mcrump\@brooklyn.cuny.edu) to introduce themselves and their research interests.
+It is possible to gain research experience as an undergraduate at Brooklyn College, and the skills gained through these experiences can open doors for career opportunities, including pursuing advanced degrees. Dr. Crump is especially interested in mentoring students through the process of completing an undergraduate honor's thesis in their senior year ([see here for departmental requirements](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/students/honors.php)). However, students interested in pursuing an honor's thesis should get lab experience before their final year.
 
-## Research experience for Brooklyn College students
+The honor's thesis consists of two semesters of Independent Research (e.g., Psych 5001 and 5002) and culminates in writing a thesis covering the research conducted over the year. The honor's thesis option is a great opportunity for students interested in pursuing research in a Ph.D. program following undergraduate studies. The honor's thesis is a major commitment in time and effort for everyone involved, and interested students need to plan ahead.
 
-We are always looking for students (undergraduate or master's) who are interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data.
-
-All students interested in joining the lab should first [complete this entry assignment](#entry), which consists of writing a short computer program. The entry assignment takes a little bit of time and effort. Research takes a lot of time and effort, and completing the assignment will show us that you are motivated to spend time on research. More important, the assignment will help you decide if you will enjoy working on research problems in the lab. If you enjoy the process of completing the assignment, then we think you will look forward to working on research problems in the lab. You should also [read some of the lab publications](https://crumplab.github.io/publications/) to see if you are interested in the research questions we are asking.
-
-### Course credit for Research and Honor's Theses
-
-Most students who join the lab enroll in research classes so that they receive course credit as they gain research experience in the lab. If you are interested in taking one of the courses, please complete the entry assignment above, and then email Dr. Crump about availability. The classes include:
+Students who join the lab enroll in research classes so that they receive course credit as they gain research experience in the lab. If you are interested in taking one of the courses, please complete the entry assignment, and then email Dr. Crump about availability. The classes include:
 
 -   Psych 2001-4 Laboratory Experience (3 credits each)
 -   Psych 5001-4 Independent Research (3 credits each)
 
-The Laboratory Experience courses are intended for students who are new to research, and the Independent Research courses are for more senior students. They are each one semester long, and involve conducting research in the lab and writing a research report as a final project.
-
-Several students have completed honor's theses in the lab ([see here for departmental requirements](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/students/honors.php)). An honor's thesis consists of two semesters of Independent Research (e.g., Psych 5001 and 5002) and culminates in writing a thesis covering the research conducted over the year. The honor's thesis option is a great opportunity for students interested in pursuing research in a Ph.D. program following undergraduate studies. The honor's thesis is a major commitment in time and effort for everyone involved, so students who complete honor's theses in the lab are usually already members of the lab and have previous research experience in the lab (e.g., have taken Psyc 2001 with Dr. Crump). So, if you are interested in research you should plan to get involved as early as possible.
-
-### Undergraduate Research
+The Laboratory Experience courses are intended for students who are new to research, and the Independent Research courses are for more senior students (typically completing an honors thesis). They are each one semester long, and involve conducting research in the lab and writing a research report as a final project.
 
 Recent undergraduate research projects completed in the lab.
 
@@ -44,16 +35,15 @@ Recent undergraduate research projects completed in the lab.
 -   2019: Mark Rayev, "Deception detection through word usage and word production time in typing", Undergraduate Macaulay Honors
 -   2018: [Walter Lai](https://www.linkedin.com/in/walter-lai-31395b181), Contributing author on ["Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics"](https://crumplab.github.io/EntropyTyping/index.html), currently completing a Masters in Data Science at Southern Methodist University
 
-### Master's Research
+## Master's Students
 
-```{r, echo=F}
-library(data.table)
-masters_df<-fread("data/masters_research.csv")
-knitr::kable(masters_df)
+The Master's of Arts in Experimental Psychology is a two-year research focused master's program at Brooklyn College. The program website describes general information about the program. Students in the program conduct research with a faculty mentor over two years culminating in a thesis. Master's students in the computational cognition lab will work with Dr. Crump over two years to complete a research project in cognition.
 
-```
+Students will learn advanced statistics, data-analysis, and computational modelling skills, and apply them to research questions in cognition. Students will also learn how to create, conduct, and analyze online behavioral experiments. The degree is typically completed in two years, by taking three courses per semester. Each semester one of the courses involves independent reading and research in the lab. In the first semester, students will acquire sub-domain expertise about a cognitive phenomena through an extensive literature review. The literature review will suggest new directions for empirical work. The second semester of independent research will involve proposals for experiments, and collection of pilot data. By, the second year students should have a well-developed research project that will form the basis for their thesis. Master's student research projects can also be submitted for publication in peer-reviewed journals.
 
-------------------------------------------------------------------------
+## Doctoral students
+
+Students interested in pursuing a Ph.D. should apply to the [Cognitive and Comparative Psychology (CCP) training area](https://ccp-cuny.github.io) in the Psychology Doctoral Program at the Graduate Center of CUNY. The deadline for applications is December 1st. [You can apply directly here](http://www.gc.cuny.edu/Prospective-Current-Students/Prospective-Students/Admissions). Interested applicants should also email Matt Crump (mcrump\@brooklyn.cuny.edu) to introduce themselves, their research interests, and why they want to gain research skills in the lab
 
 ## Entry Assignment {#entry}
 

@@ -1,0 +1,37 @@
+---
+title: "Matt Crump"
+image: imgs/Crump.png
+description: "Principal Investigator \n mcrump@brooklyn.cuny.edu"
+about:
+  template: trestles
+  image: imgs/Crump.png
+  links:
+    - icon: globe
+      text: lab website
+      href: https://crumplab.com
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/MattCrumpLab
+    - icon: github
+      text: Github
+      href: https://github.com/CrumpLab
+order: 1
+---
+
+Matt Crump is a cognitive psychologist with research interests in learning, memory, attention, skill learning, semantics, and computational modeling. He runs the computational cognition lab at Brooklyn College of CUNY.
+
+## Education
+
+Postdoc, Vanderbilt University - 2011 (Psychology)
+
+Ph.D., McMaster University - 2007 (Psychology)
+
+B.Sc., University of Lethbridge - 2002 (Psychology)
+
+## Experience
+
+Assistant Professor - Brooklyn College of CUNY (2011)
+
+Associate Professor - Brooklyn College of CUNY (2016)
+
+Full Professor - Brooklyn College of CUNY (2022)

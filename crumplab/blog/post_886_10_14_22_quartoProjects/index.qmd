@@ -55,21 +55,21 @@ knitr::include_graphics('imgs/Quarto-1.png')
 
 `r paste("Last knit: ", lubridate::today())`
 
-For a good few years I have become interested in adopting reproducible workflows for my cognitive psychology research projects. @vuorre2021 discussed an R-based approach to creating and sharing research assets in a reproducible manner, and we called it [vertical](https://crumplab.com/vertical/). Since then I have used that approach for most new projects in the lab. However, [quarto](https://quarto.org) is the NKOTB, and I've been itching to try quarto for managing assets in a psych research project. And, in the last few days I got the chance to start a project from scratch using quarto, actually several projects. I'm going to digest some my experiences and lay breadcrumbs for my future self about what I like and am learning so far.
+For a good few years I have been adopting reproducible workflows for my cognitive psychology research projects. @vuorre2021 discussed an R-based approach to creating and sharing research assets in a reproducible manner, and we called it [vertical](https://crumplab.com/vertical/). Since then I have used that approach for most new projects in the lab. However, [quarto](https://quarto.org) is the NKOTB, and I've been itching to try it for managing assets in a psych research project. And, in the last few days I got the chance to start a project from scratch using quarto, actually several projects. I'm going to digest some of my experiences and lay breadcrumbs for my future self about what I like and am learning so far.
 
 ::: callout-note
-Note: this post is mainly inspired by the fact that I just converted my lab website where this blog is hosted from a pkgdown website to a quarto website. So, I really feel like I need to make a new post to justify the time it took to make the conversion. TLDR: I'm not totally sure what the purpose of the post is yet.
+Note: this post is mainly inspired by the fact that I just converted my [lab website](https://crumplab.com) where this blog is hosted from a pkgdown website to a quarto website. So, I really feel like I need to make a new post to justify the time it took to make the conversion. TLDR: I'm not totally sure what the purpose of the post is yet.
 :::
 
 ## The vertical approach
 
-Here's an overview of the vertical approach. We use the R-package template as a starting point for organizing files. This has the benefit of being able to quickly create websites using {pkgdown}. This is a very R-centered approach, which is great for me because I use R for everything. So, if my project includes custom R functions, I can immediately drop them into the R-package template and create an R-package for the project. This process can be useful for documenting data from the project too. Additional assets such as experiment script code, posters, manuscripts, etc., are given their own folders. We go into much more depth about vertical in the paper and on the vertical webpage.
+Here's an overview of the vertical approach, which uses the R-package template as a starting point for organizing files. This has the benefit of being able to quickly create websites using {pkgdown}. It's an R-centered approach, which is great for me because I use R for everything. So, if my project includes custom R functions, I can immediately drop them into the R-package template and create an R package for the project. This process can be useful for documenting data from the project too. Additional assets such as experiment script code, posters, manuscripts, etc., are given their own folders. We go into much more depth about vertical in the paper and on the vertical webpage.
 
 ![](https://crumplab.com/vertical/reference/figures/vertical-project.png)
 
-Using vertical for my own projects I gravitated toward following pkgdown guidelines for almost everything. For example, many of the "assets" I was creating were in the form of R Markdown documents. I put those in the vignettes folder, which allows pkgdown to render them automatically. Some of the drawbacks in riding off of pkgdown are limitations imposed by pkgdown for rendering websites in more flexible ways, after all pkgdown is intended to create websites for R packages and not websites in general.
+Using vertical for my own projects I gravitated toward following pkgdown guidelines for almost everything. For example, many of the assets I was creating were R Markdown documents. I put those in the vignettes folder, which allows pkgdown to render them automatically. Pkgdown is intended to create websites for R packages and not websites in general, so customizing the website to the needs of particular project can be challenging.
 
-What's more important to me is adopting an organized and convenient method for creating and sharing assets in a reproducible way. This can be done in many languages, and doesn't need to be R centric. The same goals can also be accomplished without twisting things like pkgdown into positions they weren't intended for. Enter quarto.
+What's most important to me is adopting an organized and convenient method for creating and sharing assets in a reproducible way. This can be done in many languages, and doesn't need to be R centric. The same goals can also be accomplished without twisting things like pkgdown into positions they weren't intended for. Enter quarto.
 
 ## Trying quarto on for size
 
@@ -77,7 +77,7 @@ Quarto is new, still working out some kinks, but in my experience so far, it's a
 
 Over the summer I dabbled with the new quarto book format, and converted my [undergraduate statistics textbook](https://crumplab.com/statistics) from a bs4_book to quarto book. That process was relatively painless, and I was encouraged to try more quarto.
 
-I often mentor students in the process of learning R for various purposes, and I like to show students how they can make websites and blogs with R studio, and then use them as a venue to learn R and showcase their work. Blogs and websites were pretty easy before, and they are still very easy with quarto. I had finagled a blog system based on pkgdown rendering vignettes, and after seeing the quarto version I knew I'd make the switch at some point.
+I often mentor students in the process of learning R for various purposes, and I like to show students how they can make websites and blogs with R Studio, and then use them as a venue to learn R and showcase their work. Blogs and websites were pretty easy before, and they are still very easy with quarto. I had finagled a blog system based on pkgdown rendering vignettes, and after seeing the quarto version I knew I'd make the switch at some point.
 
 Next semester I'm teaching two courses that will both involve students creating blogs and websites. I was leaning toward using quarto, and now even more so. I have been using a pkgdown approach for building course websites (e.g., [like this one for introductory cognition](https://crumplab.com/cognition)), but after seeing some examples of quarto websites for a course (e.g., like [data-science in a box](https://datasciencebox.org)), I decided I needed to try that too (e.g., [this emerging course website)](https://crumplab.com/peopleofnyc/).
 
@@ -93,7 +93,7 @@ I am not sharing this website yet because the project is still in very early sta
 
 At this stage, graduate student Drew Shives and I know our research direction, but we are still doing a lot of reading, combined with stimulus creation, and experiment-idea generation. It's a lot of creative work that can get messy very fast in terms of keeping track of notes, code, and ideas. This is where I have found using quarto as a personal research organization tool very useful.
 
-Here's a quick look at the setup, and why I like it. First, I used Rstudio to create a new quarto website project. Then, I modified \_quarto.yml as follows:
+Here's a quick look at the setup, and why I like it. First, I used R Studio to create a new quarto website project. Then, I modified \_quarto.yml as follows:
 
 ``` yaml
 project:

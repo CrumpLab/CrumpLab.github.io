@@ -1,5 +1,13 @@
 ---
 title: "People"
+listing:
+  contents: people
+  id: people_list
+  sort: "order"
+  type: grid
+  categories: false
+  image-align: 'right'
+  image-placeholder: '../images/crumplab.png'
 ---
 
 ```{css, echo=FALSE}
@@ -14,15 +22,11 @@ title: "People"
 knitr::include_graphics('images/people_banner.jpg')
 ```
 
-
 ## Lab Members
 
-| Current                                                                                               |                                 Info |
-|:-------------------------------------|---------------------------------:|
-| [Matthew Crump](https://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059) | PI, email: mcrump\@brooklyn.cuny.edu |
-| Kevonte Mitchell                                                                                      |                     Doctoral Student |
-| [Drew Shives](https://djshives.netlify.app)                                                           |                     Doctoral Student |
-| Wesley Huang                                                                                          |             Undergraduate Researcher |
+::: {#people_list}
+
+:::
 
 ## Previous
 
