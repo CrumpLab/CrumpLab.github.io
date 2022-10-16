@@ -6,11 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Matt Crump">
-<meta name="dcterms.date" content="2022-07-07">
-<meta name="description" content="July 7th, 2022 - Notes on making custom fonts and using them on the web.">
+<meta name="description" content="Doctoral Student">
 
-<title>crumplab - Making fonts</title>
+<title>crumplab - Kevonte Kitchell</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,22 +24,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,29 +69,23 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="crumplab - Making fonts">
-<meta property="og:description" content="*July 7th, 2022* - Notes on making custom fonts and using them on the web.">
-<meta property="og:image" content="https://crumplab.com/blog/post_889_7_7_22_fonts/imgs/moebius.png">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="crumplab - Kevonte Kitchell">
+<meta property="og:description" content="Doctoral Student">
 <meta property="og:site-name" content="crumplab">
-<meta property="og:image:height" content="666">
-<meta property="og:image:width" content="1078">
-<meta name="twitter:title" content="crumplab - Making fonts">
-<meta name="twitter:description" content="*July 7th, 2022* - Notes on making custom fonts and using them on the web.">
-<meta name="twitter:image" content="https://crumplab.com/blog/post_889_7_7_22_fonts/imgs/moebius.png">
-<meta name="twitter:image-height" content="666">
-<meta name="twitter:image-width" content="1078">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="crumplab - Kevonte Kitchell">
+<meta name="twitter:description" content="Doctoral Student">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">crumplab</span>
     </a>
   </div>
@@ -104,39 +95,39 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../People.html">
+    <a class="nav-link" href="../People.html">
  <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Publications.html">
+    <a class="nav-link" href="../Publications.html">
  <span class="menu-text">Pubs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Books.html">
+    <a class="nav-link" href="../Books.html">
  <span class="menu-text">Books and OERs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Courses.html">
+    <a class="nav-link" href="../Courses.html">
  <span class="menu-text">Courses</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Apps.html">
+    <a class="nav-link" href="../Apps.html">
  <span class="menu-text">Apps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Opportunities.html">
+    <a class="nav-link" href="../Opportunities.html">
  <span class="menu-text">Join</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Blog.html">
+    <a class="nav-link" href="../Blog.html">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Fun.html">
+    <a class="nav-link" href="../Fun.html">
  <span class="menu-text">Fun</span></a>
   </li>  
 </ul>
@@ -166,138 +157,32 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#squiggligraphy" id="toc-squiggligraphy" class="nav-link active" data-scroll-target="#squiggligraphy">SQUIGGLIGRAPHY</a></li>
-  <li><a href="#moebius" id="toc-moebius" class="nav-link" data-scroll-target="#moebius">Moebius</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
+<div class="quarto-about-trestles">
+  <div class="about-entity">
+    <img src="../images/crumplab.png" class="about-image
+  rounded " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Making fonts</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">fonts</div>
-  </div>
-  </div>
-
+<h1 class="title">Kevonte Kitchell</h1>
+</div>
 <div>
   <div class="description">
-    <em>July 7th, 2022</em> - Notes on making custom fonts and using them on the web.
+    Doctoral Student
   </div>
 </div>
-
-
 <div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Matt Crump </p>
-          </div>
   </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 7, 2022</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
 </header>
+  </div>
+  <div class="about-contents"><main class="content" id="quarto-document-content">
+<p>Kevonte Mitchell is a doctoral student at the Graduate Center of CUNY.</p>
 
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
 
-    .col-md-3 {
-        margin-left: 5rem
-    }
-
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-.apa {
-  margin-left: 2em;
-  text-indent: -2em;
-}
-
-@font-face {
-    font-family: 'CrumpSquiggligraphy';
-    src: url('web/CrumpSquiggligraphy.woff2') format('woff2'), url('web/CrumpSquiggligraphy.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'CrumpMoebius';
-    src: url('web/CrumpMoebius.woff2') format('woff2'), url('web/CrumpMoebius.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-.squiggligraphy {
-   font-family: 'CrumpSquiggligraphy';
-}
-
-.moebius {
-   font-family: 'CrumpMoebius';
-}
-
-</style>
-<p>Last knit: 2022-10-16</p>
-<p><span class="h1 squiggligraphy">D</span>ecided to make fonts, and I’m using this post to find out if the fonts can be displayed on the web (<span class="squiggligraphy">the answer is yes.</span>)</p>
-<p>So far I have tried two different workflows using <a href="https://2ttf.com">ifontmaker</a> and <a href="https://www.calligraphr.com/en/">calligraphr</a>. Both approaches work pretty well.</p>
-<p><a href="https://2ttf.com">ifontmaker</a> is an ipad app ($7.99). For the price it has some nice features, and it is pretty easy to pencil in all of the character very quickly. It has bezier curves, but the brushes are limited. It is possible to copy in .svg. I liked the kerning feature for letter pairs.</p>
-<p><a href="https://www.calligraphr.com/en/">calligraphr</a> is a website providing a template to draw characters. I open the template in procreate or adobe fresco and do the characters there. Then, the template is uploaded to calligraphr.com, which converts the font to .otf or .ttf.</p>
-<p>I used <a href="https://transfonter.org" class="uri">https://transfonter.org</a> to convert .ttf to .woff. This should allow the font to be displayed on the web. Let’s find out.</p>
-<p>Sidenote: this post is written in R markdown and compiled as a vignette with pkgdown. I add a “web” folder in the vignette folder where I saved the .woff files for the font. These files can be saved to the docs folder if they are declared in the yaml as resource files <a href="https://pkgdown.r-lib.org/reference/build_articles.html#external-files" class="uri">https://pkgdown.r-lib.org/reference/build_articles.html#external-files</a>.</p>
-<hr>
-<section id="squiggligraphy" class="level2 squiggligraphy squilligraphy">
-<h2 class="squiggligraphy anchored" data-anchor-id="squiggligraphy">SQUIGGLIGRAPHY</h2>
-<p>THIS FONT IS SQUILLIGRAPHY. IT’S AN ALL CAPS FONT, even though it has lowercase letters. MY PLAN FOR THIS FONT WAS TO USE THE CAPITAL LETTERS TO BEGIN PARAGRAPHS.</p>
-<div class="h1 squiggligraphy">
-<p>ABDCEFGHIJKLMNOPQRSTUVWXYZ</p>
+</main></div>
 </div>
-</section>
-<hr>
-<p><span class="h1 squiggligraphy">M</span>y plan for this paragraph is to write the first letter in squiggligraphy, and all of the rest of the letters in the default font for this post. The rest of this text is just filler text to make this paragraph look like a paragraph. It should have enough words for a few sentences. At least a few. Or, more than a few. Enough for a paragraph.</p>
-<p><span class="h1 squiggligraphy">N</span>eat. The capital letters from squiggligraphy were not vertically aligned properly, so I had to adjust them in <a href="https://fontforge.org/en-US/">font forge</a>, an open source font editor. I also used font forge to export as .woff and .woff2 for the web.</p>
-<p>To add the the capital letter i’m using a span, choosing h1 class (from bootstrap 5), and a custom class that sets the font family. It’s a bit clunky but it gets the letter capitalized in a custom font.</p>
-<pre><code>&lt;span class = "h1 squiggligraphy"&gt;N&lt;/span&gt;eat</code></pre>
-<hr>
-<section id="moebius" class="level2 moebius">
-<h2 class="moebius anchored" data-anchor-id="moebius">Moebius</h2>
-<div class="moebius">
-<p>Moebius is one of my favorite cartoonists, and I love the way the lettering is rendered. So, I made a font heavily inspired by typography in Moebius cartoons. It only does uppercase, but it doesn’t matter if you type in lower or uppercase. There is limited punctuation.</p>
-<p>ABDCEFGHIJKLMNOPQRSTUVWXYZ!$,.?</p>
-</div>
-
-
-</section>
-
-</main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -318,13 +203,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;

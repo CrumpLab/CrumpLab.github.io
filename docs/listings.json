@@ -1,7 +1,17 @@
 [
   {
+    "listing": "/People.html",
+    "items": [
+      "/people/matt_crump.html",
+      "/people/drew_shives.html",
+      "/people/wesley_huang.html",
+      "/people/kevonte_mitchell.html"
+    ]
+  },
+  {
     "listing": "/Blog.html",
     "items": [
+      "/blog/885_10_16_22_unplanning/index.html",
       "/blog/post_886_10_14_22_quartoProjects/index.html",
       "/blog/post_887_8_25_22_quartoblog/index.html",
       "/blog/post_888_8_23_22_teaching2530/index.html",
@@ -16,15 +26,6 @@
       "/blog/older_9999_psych_eugenics/index.html",
       "/blog/older_9999_7_7_20_EugenicMind/index.html",
       "/blog/older_9999_7_2_20_JBP/index.html"
-    ]
-  },
-  {
-    "listing": "/People.html",
-    "items": [
-      "/people/matt_crump.html",
-      "/people/drew_shives.html",
-      "/people/wesley_huang.html",
-      "/people/kevonte_mitchell.html"
     ]
   }
 ]
