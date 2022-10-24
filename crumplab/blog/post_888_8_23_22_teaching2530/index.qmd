@@ -89,23 +89,6 @@ I'd like to run a course where students would rather engage in the material than
 
 An inspiring read this summer was an edited book on "Ungrading", @blum2020. Each chapter was written by different educators who discussed their own misgivings with the standard practice of grading students, and their own ways of practicing ungrading.
 
-More recently, I thought this tweet nicely captured ungrading:
-
-<blockquote class="twitter-tweet">
-
-<p lang="en" dir="ltr">
-
-Grades are inequitable. Ungrading is the set of conversations that inspect and work to dismantle a system of ranking and crude evaluation that further marginalizes already marginalized students.
-
-</p>
-
---- Jesse Stommel (@Jessifer) <a href="https://twitter.com/Jessifer/status/1558825320488116225?ref_src=twsrc%5Etfw">August 14, 2022</a>
-
-</blockquote>
-
-```{=html}
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-```
 I haven't yet tried ungrading in any of my courses, and there are lots of ways to do so. This semester will involve weaving in some ungrading practices.
 
 ## Finish my syllabus
