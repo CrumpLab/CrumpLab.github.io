@@ -68,6 +68,63 @@ I guess the simplest option is to cite the references in text the normal way.
 
 ### Additional Reading
 
-[@eichCompositeHolographicAssociative1982; @hintzmanJudgmentsFrequencyRecognition1988; @hintzmanMINERVASimulationModel1984a; @hintzmanSchemaAbstractionMultipleTrace1986; @jacobyNonanalyticCognitionMemory1984; @jacobyProcessDissociationFramework1991; @jamiesonInstanceTheorySemantic2018; @kolersProceduresMind1984; @macleodZeigarnikRestorffMemory2020; @mcclellandDistributedMemoryRepresentation1985; @murdockTheoryStorageRetrieval1982; @roedigerCreatingFalseMemories1995; @roedigeriiiTestenhancedLearningTaking2006; @shiffrinModelRecognitionMemory1997; @vossLongtermAssociativeMemory2009; @whittleseaProductionEvaluationPreservation1997]
+[@eichCompositeHolographicAssociative1982; @hintzmanJudgmentsFrequencyRecognition1988; @hintzmanMINERVASimulationModel1984a; @hintzmanSchemaAbstractionMultipleTrace1986; @jacobyNonanalyticCognitionMemory1984; @jacobyProcessDissociationFramework1991; @jamiesonInstanceTheorySemantic2018; @kolersProceduresMind1984; @macleodZeigarnikRestorffMemory2020; @mcclellandDistributedMemoryRepresentation1985; @murdockTheoryStorageRetrieval1982; @roedigerCreatingFalseMemories1995; @roedigeriiiTestenhancedLearningTaking2006; @shiffrinModelRecognitionMemory1997; @vossLongtermAssociativeMemory2009; @whittleseaProductionEvaluationPreservation1997].
+
+This option isn't great. It's nice that quarto shows the full citation on hover, but in this case it shows a really long list because they are cited together within \[\].
+
+## Additional Reading #2
+
+@eichCompositeHolographicAssociative1982
+
+@hintzmanJudgmentsFrequencyRecognition1988
+
+@hintzmanMINERVASimulationModel1984a
+
+@hintzmanSchemaAbstractionMultipleTrace1986
+
+@jacobyNonanalyticCognitionMemory1984
+
+Can't say I really love this look and feel either. Maybe a table or something would be better?
+
+## Additional Reading #3
+
+| Citation                                   | Year | Notes          |
+|--------------------------------------------|------|----------------|
+| @eichCompositeHolographicAssociative1982   | 1982 | blah blah blah |
+| @hintzmanJudgmentsFrequencyRecognition1988 | 1988 | blah blah      |
+| @shiffrinModelRecognitionMemory1997        | 1997 | blah blah      |
+
+This isn't terrible. Could I make my life easier with `knitr::kable`?
+
+## Additional Reading #4
+
+```{r}
+#| messages: FALSE
+#| warning: FALSE
+library(dplyr)
+load_bib <- bib2df::bib2df(file="memory_timeline.bib")
+
+selected_bib <- load_bib %>%
+  filter(BIBTEXKEY %in% c(
+    "atkinsonHumanMemoryProposed1968",
+    "baddeleyWorkingMemory1974",
+    "craikLevelsProcessingFramework1972")) %>%
+  select(BIBTEXKEY,
+         DATE,
+         TITLE,
+         NOTE) %>%
+  rowwise() %>%
+  mutate(BIBTEXKEY = paste("[@",BIBTEXKEY,"]",sep="",collapse=""),
+         DATE = as.numeric(DATE),
+         TITLE = stringr::str_remove_all(TITLE,"[{}]"),
+         NOTE = case_when(is.na(NOTE) == TRUE ~ "",
+                          is.na(NOTE) == FALSE ~ NOTE)
+         ) %>%
+  rename(CITATION = BIBTEXKEY)
+
+knitr::kable(selected_bib)
+```
+
+I could live with a table like this I think.
 
 ## References

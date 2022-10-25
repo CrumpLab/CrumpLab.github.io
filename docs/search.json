@@ -1572,6 +1572,27 @@
     "href": "blog/884_10_25_22_ReadingListCognition/index.html#cite-the-refs-in-text.",
     "title": "A reading list for cognition",
     "section": "Cite the refs in text.",
-    "text": "Cite the refs in text.\nI guess the simplest option is to cite the references in text the normal way.\n\nAdditional Reading\n(Eich 1982; Douglas L. Hintzman 1988, 1984; Douglas L. Hintzman 1986; Jacoby and Brooks 1984; Jacoby 1991; Jamieson et al. 2018; Kolers and Roediger 1984; MacLeod 2020; McClelland and Rumelhart 1985; Murdock 1982; Roediger and McDermott 1995; Roediger III and Karpicke 2006; Shiffrin and Steyvers 1997; Voss 2009; Whittlesea 1997)"
+    "text": "Cite the refs in text.\nI guess the simplest option is to cite the references in text the normal way.\n\nAdditional Reading\n(Eich 1982; Douglas L. Hintzman 1988, 1984; Douglas L. Hintzman 1986; Jacoby and Brooks 1984; Jacoby 1991; Jamieson et al. 2018; Kolers and Roediger 1984; MacLeod 2020; McClelland and Rumelhart 1985; Murdock 1982; Roediger and McDermott 1995; Roediger III and Karpicke 2006; Shiffrin and Steyvers 1997; Voss 2009; Whittlesea 1997).\nThis option isn’t great. It’s nice that quarto shows the full citation on hover, but in this case it shows a really long list because they are cited together within []."
+  },
+  {
+    "objectID": "blog/884_10_25_22_ReadingListCognition/index.html#additional-reading-2",
+    "href": "blog/884_10_25_22_ReadingListCognition/index.html#additional-reading-2",
+    "title": "A reading list for cognition",
+    "section": "Additional Reading #2",
+    "text": "Additional Reading #2\nEich (1982)\nDouglas L. Hintzman (1988)\nDouglas L. Hintzman (1984)\nDouglas L. Hintzman (1986)\nJacoby and Brooks (1984)\nCan’t say I really love this look and feel either. Maybe a table or something would be better?"
+  },
+  {
+    "objectID": "blog/884_10_25_22_ReadingListCognition/index.html#additional-reading-3",
+    "href": "blog/884_10_25_22_ReadingListCognition/index.html#additional-reading-3",
+    "title": "A reading list for cognition",
+    "section": "Additional Reading #3",
+    "text": "Additional Reading #3\n\n\n\nCitation\nYear\nNotes\n\n\n\n\nEich (1982)\n1982\nblah blah blah\n\n\nDouglas L. Hintzman (1988)\n1988\nblah blah\n\n\nShiffrin and Steyvers (1997)\n1997\nblah blah\n\n\n\nThis isn’t terrible. Could I make my life easier with knitr::kable?"
+  },
+  {
+    "objectID": "blog/884_10_25_22_ReadingListCognition/index.html#additional-reading-4",
+    "href": "blog/884_10_25_22_ReadingListCognition/index.html#additional-reading-4",
+    "title": "A reading list for cognition",
+    "section": "Additional Reading #4",
+    "text": "Additional Reading #4\n\nlibrary(dplyr)\nload_bib <- bib2df::bib2df(file=\"memory_timeline.bib\")\n\nselected_bib <- load_bib %>%\n  filter(BIBTEXKEY %in% c(\n    \"atkinsonHumanMemoryProposed1968\",\n    \"baddeleyWorkingMemory1974\",\n    \"craikLevelsProcessingFramework1972\")) %>%\n  select(BIBTEXKEY,\n         DATE,\n         TITLE,\n         NOTE) %>%\n  rowwise() %>%\n  mutate(BIBTEXKEY = paste(\"[@\",BIBTEXKEY,\"]\",sep=\"\",collapse=\"\"),\n         DATE = as.numeric(DATE),\n         TITLE = stringr::str_remove_all(TITLE,\"[{}]\"),\n         NOTE = case_when(is.na(NOTE) == TRUE ~ \"\",\n                          is.na(NOTE) == FALSE ~ NOTE)\n         ) %>%\n  rename(CITATION = BIBTEXKEY)\n\nknitr::kable(selected_bib)\n\n\n\n\n\n\n\n\n\n\nCITATION\nDATE\nTITLE\nNOTE\n\n\n\n\n(Atkinson and Shiffrin 1968)\n1968\nHuman Memory: A Proposed System and Its Control Processes\nThis is a classic paper because…\n\n\n(Baddeley and Hitch 1974)\n1974\nWorking Memory\n\n\n\n(Craik and Lockhart 1972)\n1972\nLevels of Processing: A Framework for Memory Research\n\n\n\n\n\n\nI could live with a table like this I think."
   }
 ]
