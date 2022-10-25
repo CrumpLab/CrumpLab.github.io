@@ -1,0 +1,73 @@
+---
+title: "A reading list for cognition"
+description: "Developing a reading list for cognitive psychology to supplement an introductory textbook."
+author: "Matt Crump"
+date: '2022-10-25'
+date-modified: last-modified
+image: 'images/cognition_reading.jpg'
+opengraph:
+  twitter:
+    card: summary_large_image
+    creator: "@MattCrumpLab"
+    site: "@MattCrumpLab"
+bibliography: memory_timeline.bib
+categories:
+  - cognition
+  - teaching
+  - reading list
+---
+
+```{r}
+#| echo: FALSE
+#| out.width: 100%
+knitr::include_graphics('images/cognition_reading.jpg')
+```
+
+One of my ongoing projects is an [open-educational resource for a survey course in cognitive psychology](https://crumplab.com/cognition). The project currently includes a textbook, course website, slides, and assignment suggestions under a creative commons license (CC-BY-SA 4.0). The textbook has nine chapters, and at some point I plan to add a few more. As it stands, when I teach this course, we transition from textbook readings toward reading primary research articles. To supplement and encourage more reading of primary research, I'm considering adding a suggested reading list section to the textbook. The purpose of this blog post is to draft some reading lists, and think about how I would curate and present them.
+
+I think I have two general problems to solve:
+
+1.  Picking articles to go on the list (and considering why these/not those).
+2.  Maintaining and publishing the list with preferred software tools, like zotero and quarto.
+
+Ideally, I think I want a zotero folder with sub-folders for different topics in cognition, each full of recommended papers to read. I already use zotero, and it can generate .bib files for each folder, which I can pipe into quarto and print out somewhere. There's wrinkles though.
+
+Let me count the ways. Let's say I have 10-25 recommended articles per chapter. I could put them all in a single .bib file, and then use \[nocite\](https://quarto.org/docs/authoring/footnotes-and-citations.html#including-uncited-items) to print them all to a reference list at the end of a chapter. This will be a long undifferentiated reference list in alphabetical order. I could probably sort it differently with CSL.
+
+I remembered that I already started an "additional reading" section in the Eugenics and Psychology chapter. I don't like how it is presently formatted on the page, but I do like that it appears as a section in the chapter. Hmmm.
+
+Revisiting that chapter I see that I tried two things. First, I wrote a code chunk to automatically generate a reading list from selected .bib entries in a .bib file. But, I guess I didn't like how that worked out, because I ended up typing out the references directly.
+
+Here's a version of the code chunk:
+
+```{r}
+#| eval: TRUE
+#| results: "asis"
+#| messages: FALSE
+#| warning: FALSE
+
+library(dplyr)
+load_bib <- bib2df::bib2df(file="memory_timeline.bib")
+
+selected_bib <- load_bib %>%
+  filter(BIBTEXKEY %in% c(
+    "atkinsonHumanMemoryProposed1968",
+    "baddeleyWorkingMemory1974",
+    "craikLevelsProcessingFramework1972"))
+
+bib2df::df2bib(selected_bib,file = "temp.bib")
+
+stevemisc::print_refs("temp.bib",csl="apa-annotated-bibliography.csl")
+```
+
+This is OK. What are some other options.
+
+## Cite the refs in text.
+
+I guess the simplest option is to cite the references in text the normal way.
+
+### Additional Reading
+
+[@eichCompositeHolographicAssociative1982; @hintzmanJudgmentsFrequencyRecognition1988; @hintzmanMINERVASimulationModel1984a; @hintzmanSchemaAbstractionMultipleTrace1986; @jacobyNonanalyticCognitionMemory1984; @jacobyProcessDissociationFramework1991; @jamiesonInstanceTheorySemantic2018; @kolersProceduresMind1984; @macleodZeigarnikRestorffMemory2020; @mcclellandDistributedMemoryRepresentation1985; @murdockTheoryStorageRetrieval1982; @roedigerCreatingFalseMemories1995; @roedigeriiiTestenhancedLearningTaking2006; @shiffrinModelRecognitionMemory1997; @vossLongtermAssociativeMemory2009; @whittleseaProductionEvaluationPreservation1997]
+
+## References

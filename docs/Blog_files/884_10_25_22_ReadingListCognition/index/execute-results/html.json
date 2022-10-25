@@ -1,0 +1,16 @@
+{
+  "hash": "3a39f121feecadaeaa0d5cd0da1c9ce9",
+  "result": {
+    "markdown": "---\ntitle: \"A reading list for cognition\"\ndescription: \"Developing a reading list for cognitive psychology to supplement an introductory textbook.\"\nauthor: \"Matt Crump\"\ndate: '2022-10-16'\ndate-modified: last-modified\nimage: 'images/cognition_reading.jpg'\nopengraph:\n  twitter:\n    card: summary_large_image\n    creator: \"@MattCrumpLab\"\n    site: \"@MattCrumpLab\"\nbibliography: memory_timeline.bib\ncategories:\n  - cognition\n  - teaching\n  - reading list\n---\n\n::: {.cell}\n::: {.cell-output-display}\n![](images/cognition_reading.jpg){width=100%}\n:::\n:::\n\n\nOne of my ongoing projects is an [open-educational resource for a survey course in cognitive psychology](https://crumplab.com/cognition). The project currently includes a textbook, course website, slides, and assignment suggestions under a creative commons license (CC-BY-SA 4.0). The textbook has nine chapters, and at some point I plan to add a few more. As it stands, when I teach this course, we transition from textbook readings toward reading primary research articles. To supplement and encourage more reading of primary research, I'm considering adding a suggested reading list section to the textbook. The purpose of this blog post is to draft some reading lists, and think about how I would curate and present them.\n\nI think I have two general problems to solve:\n\n1.  Picking articles to go on the list (and considering why these/not those).\n2.  Maintaining and publishing the list with preferred software tools, like zotero and quarto.\n\nIdeally, I think I want a zotero folder with sub-folders for different topics in cognition, each full of recommended papers to read. I already use zotero, and it can generate .bib files for each folder, which I can pipe into quarto and print out somewhere. There's wrinkles though.\n\n\\-\\--\nnocite: \\|\n\\@\\*\n\\-\\--\n\n## References\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
