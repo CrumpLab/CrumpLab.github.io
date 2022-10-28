@@ -25,7 +25,7 @@ knitr::include_graphics('images/command.jpg')
 
 I am multivalent about social media. And, I'm not going to hash out those valences right now.
 
-Instead, in addition to twitter (where I have gone through a few account deletion cycles, [@MattCrumpLab](https://twitter.com/MattCrumpLab)), I just joined Mastodon [@@MattCrumpLab@fosstodon.org](https://fosstodon.org/@MattCrumpLab). I'm not sure for how long, for either place.
+Instead, in addition to twitter (where I have gone through a few account deletion cycles, [@MattCrumpLab](https://twitter.com/MattCrumpLab)), I just joined Mastodon [@MattCrumpLab@fosstodon.org](https://fosstodon.org/@MattCrumpLab). I'm not sure for how long, for either place.
 
 I remember feeling happy and sad when deleting twitter accounts. I did not take precautions to save or archive some of the content that I deleted, and I wish I did. If I had sent all those tweets from a personal central command center, then I maybe I would still have them.
 
