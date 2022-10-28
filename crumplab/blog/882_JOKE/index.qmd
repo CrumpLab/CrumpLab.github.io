@@ -13,7 +13,7 @@ opengraph:
 categories:
   - social
   - twitter
-  - mastodon
+  - parody
 ---
 
 ```{r}
@@ -23,9 +23,9 @@ categories:
 knitr::include_graphics('images/Journal_of_knowledge.png')
 ```
 
-Some time ago I made a journal parody account on twitter called "The Journal of Knowledge" (circa 2018). It's still on twitter as of the writing of this post, but I stopped making new posts years ago.
+Some time ago I made a journal parody account on twitter called "The Journal of Knowledge" (circa 2018). The account has been inactive for years, and I'm deleting it.
 
-Last night I thought it was time to close down the account. I made a data request to twitter, but I'm not sure what data I get before I close the account. I recently got the `rtweet` package working, so I'm going to find out if I can use it to download the old posts.
+In preparation to delete the account I made a data request to twitter, but I'm not sure what data I get before I close the account. I recently got the `rtweet` package working, so I'm going to find out if I can use it to download the old posts.
 
 ```{r, eval=FALSE}
 library(rtweet)
