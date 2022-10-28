@@ -25,7 +25,7 @@ knitr::include_graphics('images/command.jpg')
 
 I am multivalent about social media. And, I'm not going to hash out those valences right now.
 
-Instead, in addition to twitter (where I have gone through a few account deletion cycles, [@MattCrumpLab](https://twitter.com/MattCrumpLab)), I just joined Mastodon [@MattCrumpLab@fosstodon.org](https://fosstodon.org/@MattCrumpLab). I'm not sure for how long, for either place.
+Instead, in addition to twitter (where I have gone through a few account deletion cycles, [\@MattCrumpLab](https://twitter.com/MattCrumpLab)), I just joined Mastodon [\@MattCrumpLab\@fosstodon.org](https://fosstodon.org/@MattCrumpLab). I'm not sure for how long, for either place.
 
 I remember feeling happy and sad when deleting twitter accounts. I did not take precautions to save or archive some of the content that I deleted, and I wish I did. If I had sent all those tweets from a personal central command center, then I maybe I would still have them.
 
@@ -33,7 +33,7 @@ Anyway, let's get on with business. My purpose here is to nerd-out and use R to 
 
 ## Can I send a tweet with R?
 
-Looks like tweeting from R can be done with [https://github.com/ropensci/rtweet](https://github.com/ropensci/rtweet).
+Looks like tweeting from R can be done with <https://github.com/ropensci/rtweet>.
 
 This worked, and it was a bit of pain to wade through the twitter developer authentication process.
 
@@ -47,12 +47,12 @@ rtweet::post_tweet(status = "Testing out rtweet::post_tweet to see if I can post
 
 Some notes to self about what I did. The {rtweet} documentation was helpful.
 
-1. Make a twitter developer account
-2. Register an app
-3. Request elevated status
-4. Give the app access to my account
-5. Save the API key and secret, and bearer token
-6. Generate token and secret for user account access.
+1.  Make a twitter developer account
+2.  Register an app
+3.  Request elevated status
+4.  Give the app access to my account
+5.  Save the API key and secret, and bearer token
+6.  Generate token and secret for user account access.
 
 All this took about an hour of messing around. I was using the wrong authentication methods for trying to post a tweet. `rtweet_bot()` triggers text input prompts to enter all of the keys and secrets, and these can be saved for use in future sessions.
 
@@ -97,9 +97,8 @@ token <- login('https://fosstodon.org/', my_email, my_password)
 post_status(token, 'This is a test post from an R console, using the mastodon client for R.')
 ```
 
-That was easy. 
+That was easy.
 
 ## What's next
 
 Time to go outside and do other stuff. Leaving these breadcrumbs here for later.
-

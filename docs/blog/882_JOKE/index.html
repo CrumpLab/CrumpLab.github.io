@@ -8,9 +8,9 @@
 
 <meta name="author" content="Matt Crump">
 <meta name="dcterms.date" content="2022-10-28">
-<meta name="description" content="Messing around with stuff in R on a friday Morning">
+<meta name="description" content="Attempt to download some previous tweets before deleting an account.">
 
-<title>crumplab - What if I made an R command center for tweeting and tooting?</title>
+<title>crumplab - Archiving the journal of knowledge</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -136,13 +136,17 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="crumplab - What if I made an R command center for tweeting and tooting?">
-<meta property="og:description" content="Messing around with stuff in R on a friday Morning">
-<meta property="og:image" content="https://crumplab.com/blog/883_command_center/images/command.jpg">
+<meta property="og:title" content="crumplab - Archiving the journal of knowledge">
+<meta property="og:description" content="Attempt to download some previous tweets before deleting an account.">
+<meta property="og:image" content="https://crumplab.com/blog/882_JOKE/images/Journal_of_knowledge.png">
 <meta property="og:site-name" content="crumplab">
-<meta name="twitter:title" content="crumplab - What if I made an R command center for tweeting and tooting?">
-<meta name="twitter:description" content="Messing around with stuff in R on a friday Morning">
-<meta name="twitter:image" content="https://crumplab.com/blog/883_command_center/images/command.jpg">
+<meta property="og:image:height" content="590">
+<meta property="og:image:width" content="1202">
+<meta name="twitter:title" content="crumplab - Archiving the journal of knowledge">
+<meta name="twitter:description" content="Attempt to download some previous tweets before deleting an account.">
+<meta name="twitter:image" content="https://crumplab.com/blog/882_JOKE/images/Journal_of_knowledge.png">
+<meta name="twitter:image-height" content="590">
+<meta name="twitter:image-width" content="1202">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -230,9 +234,14 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#can-i-send-a-tweet-with-r" id="toc-can-i-send-a-tweet-with-r" class="nav-link active" data-scroll-target="#can-i-send-a-tweet-with-r">Can I send a tweet with R?</a></li>
-  <li><a href="#can-i-toot-with-r" id="toc-can-i-toot-with-r" class="nav-link" data-scroll-target="#can-i-toot-with-r">Can I toot with R?</a></li>
-  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s next</a></li>
+  <li><a href="#joke-abstracts" id="toc-joke-abstracts" class="nav-link active" data-scroll-target="#joke-abstracts">JOKE abstracts</a>
+  <ul class="collapse">
+  <li><a href="#what-is-the-answer-to-this-question-it-depends" id="toc-what-is-the-answer-to-this-question-it-depends" class="nav-link" data-scroll-target="#what-is-the-answer-to-this-question-it-depends">What is the answer to this question? It depends</a></li>
+  <li><a href="#blah-blah-is-special-no-it-isnt" id="toc-blah-blah-is-special-no-it-isnt" class="nav-link" data-scroll-target="#blah-blah-is-special-no-it-isnt">Blah blah is special: No it isn’t</a></li>
+  <li><a href="#the-population-is-aging" id="toc-the-population-is-aging" class="nav-link" data-scroll-target="#the-population-is-aging">The population is aging</a></li>
+  <li><a href="#journal-of-feelings" id="toc-journal-of-feelings" class="nav-link" data-scroll-target="#journal-of-feelings">Journal of Feelings</a></li>
+  <li><a href="#dressing-up-research-results" id="toc-dressing-up-research-results" class="nav-link" data-scroll-target="#dressing-up-research-results">Dressing up research results</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -241,7 +250,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">What if I made an R command center for tweeting and tooting?</h1>
+<h1 class="title">Archiving the journal of knowledge</h1>
   <div class="quarto-categories">
     <div class="quarto-category">social</div>
     <div class="quarto-category">twitter</div>
@@ -251,7 +260,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    Messing around with stuff in R on a friday Morning
+    Attempt to download some previous tweets before deleting an account.
   </div>
 </div>
 
@@ -286,78 +295,99 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="images/command.jpg" class="img-fluid" style="width:100.0%"></p>
+<p><img src="images/Journal_of_knowledge.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>I am multivalent about social media. And, I’m not going to hash out those valences right now.</p>
-<p>Instead, in addition to twitter (where I have gone through a few account deletion cycles, <a href="https://twitter.com/MattCrumpLab">@MattCrumpLab</a>), I just joined Mastodon <a href="https://fosstodon.org/@MattCrumpLab">@MattCrumpLab@fosstodon.org</a>. I’m not sure for how long, for either place.</p>
-<p>I remember feeling happy and sad when deleting twitter accounts. I did not take precautions to save or archive some of the content that I deleted, and I wish I did. If I had sent all those tweets from a personal central command center, then I maybe I would still have them.</p>
-<p>Anyway, let’s get on with business. My purpose here is to nerd-out and use R to send tweets or toots, or both. This way I’m thinking about a content curation strategy, and thinking about what deploying the content on various platforms means etc.</p>
-<section id="can-i-send-a-tweet-with-r" class="level2">
-<h2 class="anchored" data-anchor-id="can-i-send-a-tweet-with-r">Can I send a tweet with R?</h2>
-<p>Looks like tweeting from R can be done with <a href="https://github.com/ropensci/rtweet" class="uri">https://github.com/ropensci/rtweet</a>.</p>
-<p>This worked, and it was a bit of pain to wade through the twitter developer authentication process.</p>
+<p>Some time ago I made a journal parody account on twitter called “The Journal of Knowledge” (circa 2018). It’s still on twitter as of the writing of this post, but I stopped making new posts years ago.</p>
+<p>Last night I thought it was time to close down the account. I made a data request to twitter, but I’m not sure what data I get before I close the account. I recently got the <code>rtweet</code> package working, so I’m going to find out if I can use it to download the old posts.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rtweet)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>auth <span class="ot">&lt;-</span> <span class="fu">rtweet_bot</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>auth <span class="ot">&lt;-</span> <span class="fu">rtweet_app</span>()</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rtweet<span class="sc">::</span><span class="fu">post_tweet</span>(<span class="at">status =</span> <span class="st">"Testing out rtweet::post_tweet to see if I can post from Rstudio."</span>, <span class="at">token=</span>auth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>JOKE_timeline <span class="ot">&lt;-</span> rtweet<span class="sc">::</span><span class="fu">get_timeline</span>(<span class="at">user=</span><span class="st">"journal_O_K"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                              <span class="at">n =</span> <span class="dv">200</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                              <span class="at">token =</span> auth)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(JOKE_timeline,<span class="st">"journal_of_knowledge.RDS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Some notes to self about what I did. The {rtweet} documentation was helpful.</p>
-<ol type="1">
-<li>Make a twitter developer account</li>
-<li>Register an app</li>
-<li>Request elevated status</li>
-<li>Give the app access to my account</li>
-<li>Save the API key and secret, and bearer token</li>
-<li>Generate token and secret for user account access.</li>
-</ol>
-<p>All this took about an hour of messing around. I was using the wrong authentication methods for trying to post a tweet. <code>rtweet_bot()</code> triggers text input prompts to enter all of the keys and secrets, and these can be saved for use in future sessions.</p>
+<p>That pulled all 173 tweets from the account into a data frame, and I saved it as an .RDS file so I can load it later. But, this did not download any of the pictures of the fake journal abstracts, and that is what I want to archive.</p>
+<p>There’s a function for screenshotting twitter posts, maybe I can use this.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rtweet<span class="sc">::</span><span class="fu">auth_as</span>(auth)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_timeline <span class="ot">&lt;-</span> <span class="fu">get_my_timeline</span>(<span class="at">token=</span>auth)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>reply_id <span class="ot">&lt;-</span> my_timeline[<span class="dv">10</span>,]<span class="sc">$</span>id_str</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> starwars <span class="sc">%&gt;%</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(mass <span class="sc">&lt;</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>height,<span class="at">y=</span>mass,<span class="at">label=</span>name))<span class="sc">+</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>()<span class="sc">+</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>()</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"starwars.png"</span>,<span class="at">plot=</span>tmp)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">post_tweet</span>(<span class="st">"proof of ggplot for @vuorre"</span>, </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>           <span class="at">media =</span> <span class="st">"starwars.png"</span>, </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>           <span class="at">media_alt_text =</span> <span class="st">"A plot of star wars characters by height and mass."</span>,</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>           <span class="at">in_reply_to_status_id =</span> reply_id,</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>           <span class="at">token =</span> auth)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">post_tweet</span>(<span class="st">"rtweet works, took a while to set up. </span><span class="sc">\n</span><span class="st"> Requiring alt_text for media is a nice nudge"</span>, <span class="at">token=</span>auth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>JOKE_timeline<span class="sc">$</span>id_str[<span class="dv">3</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mgk_img <span class="ot">&lt;-</span> <span class="fu">tweet_shot</span>(JOKE_timeline<span class="sc">$</span>id_str[<span class="dv">3</span>], <span class="at">zoom =</span> <span class="dv">3</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>magick<span class="sc">::</span><span class="fu">image_write</span>(mgk_img,<span class="st">"test.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Interesting. Mission accomplished. Still have to figure out more complicated stuff like posting threads, etc. Moving on to tooting at Mastodon.</p>
-</section>
-<section id="can-i-toot-with-r" class="level2">
-<h2 class="anchored" data-anchor-id="can-i-toot-with-r">Can I toot with R?</h2>
-<p>I will try to do this with <a href="https://github.com/ThomasChln/mastodon">mastodon</a> client for R.</p>
+<p>No, that function was deprecated.</p>
+<p>Need to roll my own.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mastodon)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>token <span class="ot">&lt;-</span> <span class="fu">login</span>(<span class="st">'https://fosstodon.org/'</span>, my_email, my_password)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">post_status</span>(token, <span class="st">'This is a test post from an R console, using the mastodon client for R.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get urls for images to download</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>media_urls <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">173</span>){</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  media_urls[i] <span class="ot">&lt;-</span> JOKE_timeline<span class="sc">$</span>entities[[i]]<span class="sc">$</span>media<span class="sc">$</span>media_url</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>media_urls <span class="ot">&lt;-</span> media_urls[<span class="fu">is.na</span>(media_urls) <span class="sc">==</span> <span class="cn">FALSE</span>]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># download all the images into folder</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>?download.file</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="fu">length</span>(media_urls)){</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  f_name <span class="ot">&lt;-</span> <span class="fu">tail</span>(<span class="fu">unlist</span>(<span class="fu">strsplit</span>(media_urls[i],<span class="st">"/"</span>)),<span class="dv">1</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  f_path <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"images/"</span>,f_name)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">download.file</span>(media_urls[i],f_path)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>That was easy.</p>
+<p>I think I got what I wanted. Now, I just need to delete some stuff, and then maybe share a few Journal of Knowledge abstracts for posterity.</p>
+<section id="joke-abstracts" class="level2">
+<h2 class="anchored" data-anchor-id="joke-abstracts">JOKE abstracts</h2>
+<p>There were 68 abstracts posted on the account, and I was able to download all of them. Here’s a few of them.</p>
+<section id="what-is-the-answer-to-this-question-it-depends" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-answer-to-this-question-it-depends">What is the answer to this question? It depends</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/DgTg1uVX4AA-V_W.jpg" class="img-fluid" width="536"></p>
+</div>
+</div>
 </section>
-<section id="whats-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-next">What’s next</h2>
-<p>Time to go outside and do other stuff. Leaving these breadcrumbs here for later.</p>
+<section id="blah-blah-is-special-no-it-isnt" class="level3">
+<h3 class="anchored" data-anchor-id="blah-blah-is-special-no-it-isnt">Blah blah is special: No it isn’t</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/DgueZsEWsAAZBWK.jpg" class="img-fluid" width="543"></p>
+</div>
+</div>
+</section>
+<section id="the-population-is-aging" class="level3">
+<h3 class="anchored" data-anchor-id="the-population-is-aging">The population is aging</h3>
+<p>To the tune of…</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/Dgx8n8_W0AEKEdU.jpg" class="img-fluid" width="551"></p>
+</div>
+</div>
+</section>
+<section id="journal-of-feelings" class="level3">
+<h3 class="anchored" data-anchor-id="journal-of-feelings">Journal of Feelings</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/Dh_axdNUEAE-iaE.jpg" class="img-fluid" width="538"></p>
+</div>
+</div>
+</section>
+<section id="dressing-up-research-results" class="level3">
+<h3 class="anchored" data-anchor-id="dressing-up-research-results">Dressing up research results</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/DhgMm9KU0AE9LJZ.jpg" class="img-fluid" width="536"></p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
