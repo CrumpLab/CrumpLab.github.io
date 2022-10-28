@@ -102,3 +102,5 @@ That was easy.
 ## What's next
 
 Time to go outside and do other stuff. Leaving these breadcrumbs here for later.
+
+Also, I could just use this cross-posting service <https://crossposter.masto.donte.com.br>
