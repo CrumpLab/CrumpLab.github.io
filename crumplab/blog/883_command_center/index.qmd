@@ -6,6 +6,8 @@ date: '2022-10-28'
 date-modified: last-modified
 image: 'images/command.jpg'
 opengraph:
+  image-width: 800
+  image-height: 400
   twitter:
     card: summary_large_image
     creator: "@MattCrumpLab"
