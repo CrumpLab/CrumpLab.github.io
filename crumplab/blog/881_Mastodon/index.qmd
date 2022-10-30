@@ -1,0 +1,93 @@
+---
+title: "Mastodon migration and getting off twitter?"
+description: "Trying out Mastodon this weekend and attempting to migrate between instances using an R package."
+author: "Matt Crump"
+date: '2022-10-30'
+date-modified: last-modified
+image: 'images/mastodon.jpg'
+opengraph:
+  twitter:
+    card: summary_large_image
+    creator: "@MattCrumpLab"
+    site: "@MattCrumpLab"
+categories:
+  - social
+  - twitter
+  - mastodon
+---
+
+```{r}
+#| echo: FALSE
+#| eval: TRUE
+#| out.width: 100%
+knitr::include_graphics('images/mastodon.jpg')
+```
+
+It's the weekend where I wake up and try new forms of social media, and mostly avoid discussing whether I should ever use social media. It's becoming increasingly clear to me that it's all just an excuse to make banners for posts in adobe express.
+
+I guess my first foray into social media was BBSes back in the pre-internet days, wow. I deleted facebook years ago, but I share my drawings, paintings, and on instagram <https://www.instagram.com/crumpmj/>. I've been on and off twitter, currently on <https://twitter.com/MattCrumpLab>.
+
+I have lots of issues with twitter, including its direction under new leadership. For example, the direction described here is very disturbing, so I can see myself noping out of twitter very soon.
+
+<https://davetroy.medium.com/no-elon-and-jack-are-not-competitors-theyre-collaborating-3e88cde5267d>
+
+## Enter Mastodon
+
+A bunch of #rstats people I follow were migrating over to Mastodon, so I went along too and started an account on Fosstodon <https://fosstodon.org/@MattCrumpLab>. Mastodon had popped up here and there for me before, but I had never tried it out. [Fosstodon](https://fosstodon.org/about/more) is a mastodon instance with lots of people interested in free and open-source software. I'm a big admirer, user, and supporter of open-source stuff, so wonderful, I joined. 
+
+The user experience is similar to twitter. It's a bit clunky for a newbie. For example, I initially had some trouble figuring out how to follow people on different instances. However, mastodon is itself a free and open-source project, run by people not algorithms (and no ads!), and they have made deliberate design decisions about user experience that seem great for making social media less toxic. For example, I couldn't agree more with the points made in this post:
+
+<https://scott.mn/2022/10/29/twitter_features_mastodon_is_better_without/>
+
+## Mastodon migration
+
+I quickly discovered that mastodon is a fediverse of federated instances of mastodon. My understanding is that people spin up mastodon servers and create their own communities with focal interests, but because everything is running on mastodon, all the mastodon instances can follow between each other. Or something like that.
+
+I found Fosstodon to be a nice starting place, and I noticed that many of my colleagues were joining mastodon.social, so I did too <https://mastodon.social/@MattCrumpLab>. I guess it is OK to be on two instances at the same time. First impressions are that mastodon.social has more users and the local timeline is popping. In terms of mastodon, I'm still not sure what any of this really means, but I for fun I'm going to try to migrate my account. 
+
+Actually, to restate, I learned that I could programmatically access mastodon using R <https://github.com/ThomasChln/mastodon>, so intend to have fun using that library to try things between my mastodon accounts.
+
+## Trying stuff
+
+
+
+```{r}
+#| eval = FALSE
+library(mastodon)
+
+#login
+
+token <- login('https://fosstodon.org/', my_email, my_password)
+
+# get my id
+
+me <- search_username(token, 'MattCrumpLab')
+
+# get my account
+
+my_account <- get_account(token, me[[1]]$id)
+
+saveRDS(my_account, file="test.RDS")
+my_account <- readRDS("test.RDS")
+print(head(my_account))
+```
+
+
+These both return the same data. Spent too much time searching for how to display long R lists of things in html, but didn't find much. The above is a short list. But, it doesn't include my posts (statuses. How do I get those?
+
+```{r, eval=FALSE}
+# didnt' work
+my_timeline <- get_timeline(token, 'home')
+
+# this worked
+get_status(token, 42)
+```
+
+Hmmm, looks like I need to know that status IDs of my posts in order to get them. But, I don't know how to get those from this R package. Oh well. Time to move on and do something else. Apparently, I can download all of my posts from my account settings, so that's nice.
+
+In the meantime, I'm going to try a Mastodon account migration and see what happens.
+
+
+
+
+
