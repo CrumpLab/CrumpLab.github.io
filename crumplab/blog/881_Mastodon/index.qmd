@@ -33,7 +33,7 @@ I have lots of issues with twitter, including its direction under new leadership
 
 ## Enter Mastodon
 
-A bunch of #rstats people I follow were migrating over to Mastodon, so I went along too and started an account on Fosstodon <https://fosstodon.org/@MattCrumpLab>. Mastodon had popped up here and there for me before, but I had never tried it out. [Fosstodon](https://fosstodon.org/about/more) is a mastodon instance with lots of people interested in free and open-source software. I'm a big admirer, user, and supporter of open-source stuff, so wonderful, I joined. 
+A bunch of #rstats people I follow were migrating over to Mastodon, so I went along too and started an account on Fosstodon [https://fosstodon.org/\@MattCrumpLab](https://fosstodon.org/@MattCrumpLab){.uri}. Mastodon had popped up here and there for me before, but I had never tried it out. [Fosstodon](https://fosstodon.org/about/more) is a mastodon instance with lots of people interested in free and open-source software. I'm a big admirer, user, and supporter of open-source stuff, so wonderful, I joined.
 
 The user experience is similar to twitter. It's a bit clunky for a newbie. For example, I initially had some trouble figuring out how to follow people on different instances. However, mastodon is itself a free and open-source project, run by people not algorithms (and no ads!), and they have made deliberate design decisions about user experience that seem great for making social media less toxic. For example, I couldn't agree more with the points made in this post:
 
@@ -43,16 +43,15 @@ The user experience is similar to twitter. It's a bit clunky for a newbie. For e
 
 I quickly discovered that mastodon is a fediverse of federated instances of mastodon. My understanding is that people spin up mastodon servers and create their own communities with focal interests, but because everything is running on mastodon, all the mastodon instances can follow between each other. Or something like that.
 
-I found Fosstodon to be a nice starting place, and I noticed that many of my colleagues were joining mastodon.social, so I did too <https://mastodon.social/@MattCrumpLab>. I guess it is OK to be on two instances at the same time. First impressions are that mastodon.social has more users and the local timeline is popping. In terms of mastodon, I'm still not sure what any of this really means, but I for fun I'm going to try to migrate my account. 
+I found Fosstodon to be a nice starting place, and I noticed that many of my colleagues were joining mastodon.social, so I did too [https://mastodon.social/\@MattCrumpLab](https://mastodon.social/@MattCrumpLab){.uri}. I guess it is OK to be on two instances at the same time. First impressions are that mastodon.social has more users and the local timeline is popping. In terms of mastodon, I'm still not sure what any of this really means, but I for fun I'm going to try to migrate my account.
 
 Actually, to restate, I learned that I could programmatically access mastodon using R <https://github.com/ThomasChln/mastodon>, so intend to have fun using that library to try things between my mastodon accounts.
 
 ## Trying stuff
 
-
-
 ```{r}
-#| eval = FALSE
+#| eval: false
+
 library(mastodon)
 
 #login
@@ -72,7 +71,6 @@ my_account <- readRDS("test.RDS")
 print(head(my_account))
 ```
 
-
 These both return the same data. Spent too much time searching for how to display long R lists of things in html, but didn't find much. The above is a short list. But, it doesn't include my posts (statuses. How do I get those?
 
 ```{r, eval=FALSE}
@@ -86,8 +84,3 @@ get_status(token, 42)
 Hmmm, looks like I need to know that status IDs of my posts in order to get them. But, I don't know how to get those from this R package. Oh well. Time to move on and do something else. Apparently, I can download all of my posts from my account settings, so that's nice.
 
 In the meantime, I'm going to try a Mastodon account migration and see what happens.
-
-
-
-
-
