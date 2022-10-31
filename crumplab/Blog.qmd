@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-description: "Various musings from Matt Crump, usually about cognition, teaching, and other stuff."
+description: "Various musings from Matt Crump, usually about cognition, teaching, and other stuff. Posts are incomplete notes spreading digital breadcrumbs on scratchpads."
 image: images/logo2.png
 listing:
   contents: blog
