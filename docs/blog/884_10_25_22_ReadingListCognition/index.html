@@ -153,6 +153,21 @@ gtag('js', new Date());
 gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
 
+<script src="../../site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="../../site_libs/datatables-binding-0.22/datatables.js"></script>
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../../site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="../../site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="../../site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<script src="../../site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="../../site_libs/react-17.0.0/react.min.js"></script>
+<script src="../../site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="../../site_libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="../../site_libs/reactable-binding-0.3.0/reactable.js"></script>
+
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="crumplab - A reading list for cognition">
@@ -261,6 +276,12 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <li><a href="#additional-reading-2" id="toc-additional-reading-2" class="nav-link" data-scroll-target="#additional-reading-2">Additional Reading #2</a></li>
   <li><a href="#additional-reading-3" id="toc-additional-reading-3" class="nav-link" data-scroll-target="#additional-reading-3">Additional Reading #3</a></li>
   <li><a href="#additional-reading-4" id="toc-additional-reading-4" class="nav-link" data-scroll-target="#additional-reading-4">Additional Reading #4</a></li>
+  <li><a href="#more-thoughts" id="toc-more-thoughts" class="nav-link" data-scroll-target="#more-thoughts">More thoughts</a></li>
+  <li><a href="#trying-to-get-interactive-tables-that-process-markdown-citations" id="toc-trying-to-get-interactive-tables-that-process-markdown-citations" class="nav-link" data-scroll-target="#trying-to-get-interactive-tables-that-process-markdown-citations">Trying to get interactive tables that process markdown citations</a>
+  <ul class="collapse">
+  <li><a href="#try-stuff" id="toc-try-stuff" class="nav-link" data-scroll-target="#try-stuff">Try stuff</a></li>
+  </ul></li>
+  <li><a href="#minimal-example" id="toc-minimal-example" class="nav-link" data-scroll-target="#minimal-example">Minimal Example</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -304,7 +325,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 25, 2022</p>
+      <p class="date-modified">October 31, 2022</p>
     </div>
   </div>
     
@@ -461,6 +482,165 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </div>
 <p>I could live with a table like this I think.</p>
 </section>
+<section id="more-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="more-thoughts">More thoughts</h2>
+<p>I’m getting stuck too much worrying about ways to present a list of suggested readings. It feels sticky because I’m thinking about how content and style come together, but I haven’t totally sorted out what content options I want.</p>
+<p>Minimally, I think I want the citation and the option to add notes about the reading. This is pretty much what I have in the above table. I can write any notes about a paper in zotero and have them included in the .bib file. This way the .bib file acts as a little database, which also offers opportunities for search and presentation. For example, the above table adds a date column read from the bib file.</p>
+</section>
+<section id="trying-to-get-interactive-tables-that-process-markdown-citations" class="level2">
+<h2 class="anchored" data-anchor-id="trying-to-get-interactive-tables-that-process-markdown-citations">Trying to get interactive tables that process markdown citations</h2>
+<p>Which, reminds me, I need to double-check if I can make the date column sortable. This should be possible with:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(selected_bib)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="htmlwidget-85f825d7ef512988fa86" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-85f825d7ef512988fa86">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>That works, but it doesn’t render the citations. I feel like I have been here before with the <a href="https://www.semanticlibrarian.com">Semantic librarian project</a>.</p>
+<p>Sigh, looks like this is an open issue: <a href="https://github.com/rstudio/DT/issues/748" class="uri">https://github.com/rstudio/DT/issues/748</a>.</p>
+<p>Ok, let’s try <a href="https://glin.github.io/reactable/" class="uri">https://glin.github.io/reactable/</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>reactable<span class="sc">::</span><span class="fu">reactable</span>(selected_bib)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="htmlwidget-8f905461dc855acf37f0" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8f905461dc855acf37f0">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"CITATION":["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],"DATE":[1968,1974,1972],"TITLE":["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],"NOTE":["This is a classic paper because...","",""]},"columns":[{"accessor":"CITATION","name":"CITATION","type":"character"},{"accessor":"DATE","name":"DATE","type":"numeric"},{"accessor":"TITLE","name":"TITLE","type":"character"},{"accessor":"NOTE","name":"NOTE","type":"character"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a9e7d622dfc5efd30bf806471a383489"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>This doesn’t render the citations either. But, is there hope? Perhaps custom-rendering: <a href="https://glin.github.io/reactable/articles/custom-rendering.html" class="uri">https://glin.github.io/reactable/articles/custom-rendering.html</a>. Tried some stuff, didn’t work.</p>
+<section id="try-stuff" class="level3">
+<h3 class="anchored" data-anchor-id="try-stuff">Try stuff</h3>
+<p>None of thie stuff I tried here worked, deleting it. I’m also reminding myself that the .pdf version of the book chapters won’t be able to have interactive tables. So, I’m pausing this tangent.</p>
+</section>
+</section>
+<section id="minimal-example" class="level2">
+<h2 class="anchored" data-anchor-id="minimal-example">Minimal Example</h2>
+<p>The goal for this example is to pick 10-20 readings from cognitive psychology that could appear in the <a href="https://crumplab.com/cognition/textbook/C1_What_is_Cognition.html">first chapter</a>, and then print the table here. I’m going to pick some papers that could be interesting for this chapter, and then print the table here to a sense of look and feel. Heads over to zotero to make another folder within a folder.</p>
+<p>OK, I slammed together 13 papers. I can export them easily as a .bib file, load them in and print them as a table sorted by date. I’m less certain about how to add additional citation data to each entry, such as a note field. Let’s see.</p>
+<p>I rarely use the notes feature in Zotero, so I just discovered that if I write notes for an entry, then I can export them as part of the bib file, and they appear as a note entry. That’s convenient. I could imagine having really long notes for the some of the paper, and that wouldn’t fit space-wise in the table very well. Could have notes as tooltips, or make the table scroll. Will come to that later. Let’s add some notes and print out the table.</p>
+<p>I added some notes, some longer, some shorter. Curious to see what the table looks like.</p>
+<div class="cell" data-messages="false">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>load_bib <span class="ot">&lt;-</span> bib2df<span class="sc">::</span><span class="fu">bib2df</span>(<span class="at">file=</span><span class="st">"C1_Cognition_reading.bib"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>selected_bib <span class="ot">&lt;-</span> load_bib <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(BIBTEXKEY,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>         DATE,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>         TITLE,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>         NOTE) <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">BIBTEXKEY =</span> <span class="fu">paste</span>(<span class="st">"[@"</span>,BIBTEXKEY,<span class="st">"]"</span>,<span class="at">sep=</span><span class="st">""</span>,<span class="at">collapse=</span><span class="st">""</span>),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">DATE =</span> <span class="fu">as.numeric</span>(DATE),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">TITLE =</span> stringr<span class="sc">::</span><span class="fu">str_remove_all</span>(TITLE,<span class="st">"[{}]"</span>),</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">NOTE =</span> <span class="fu">case_when</span>(<span class="fu">is.na</span>(NOTE) <span class="sc">==</span> <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">""</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>                          <span class="fu">is.na</span>(NOTE) <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">~</span> NOTE)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>         ) <span class="sc">%&gt;%</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">CITATION =</span> BIBTEXKEY) <span class="sc">%&gt;%</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(DATE))</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(selected_bib)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 1%">
+<col style="width: 37%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">CITATION</th>
+<th style="text-align: right;">DATE</th>
+<th style="text-align: left;">TITLE</th>
+<th style="text-align: left;">NOTE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="jamiesonInstanceTheoryDomaingeneral2022">(<a href="#ref-jamiesonInstanceTheoryDomaingeneral2022" role="doc-biblioref">Jamieson et al. 2022</a>)</span></td>
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">Instance Theory as a Domain-General Framework for Cognitive Psychology</td>
+<td style="text-align: left;">An integrative review paper discussing how instance theories of cognition have been developed and applied across domains in cognition.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="pratherWhatCanCognitive2022">(<a href="#ref-pratherWhatCanCognitive2022" role="doc-biblioref">Prather et al. 2022</a>)</span></td>
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">What Can Cognitive Science Do for People?</td>
+<td style="text-align: left;">A short read raising important questions about how cognitive science should benefit people, with brief discussion of historical and present social justice issues.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="raynerMuchReadLittle2016">(<a href="#ref-raynerMuchReadLittle2016" role="doc-biblioref">Rayner et al. 2016</a>)</span></td>
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">So Much to Read, So Little Time How Do We Read, and Can Speed Reading Help?</td>
+<td style="text-align: left;">Discusses the cognitive psychology of reading processes and abilities and evaluates claims about speed-reading. A wonderful introduction to basic and applied cognitive research.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="choCitationRatesExperimental2012">(<a href="#ref-choCitationRatesExperimental2012" role="doc-biblioref">Cho, Tse, and Neely 2012</a>)</span></td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: left;">Citation Rates for Experimental Psychology Articles Published between 1950 and 2004: Top-cited Articles in Behavioral Cognitive Psychology</td>
+<td style="text-align: left;">The appendix of this paper is worth knowing about. It lists many “classic” papers in cognitive psychology that have received numerous citations.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="reisbergCognitionExploringScience1997">(<a href="#ref-reisbergCognitionExploringScience1997" role="doc-biblioref">Reisberg 1997</a>)</span></td>
+<td style="text-align: right;">1997</td>
+<td style="text-align: left;">Cognition: Exploring the Science of the Mind.</td>
+<td style="text-align: left;">An introductory cognitive psychology textbook.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="hintzmanTwentyFiveYearsLearning1993">(<a href="#ref-hintzmanTwentyFiveYearsLearning1993" role="doc-biblioref">Douglas L. Hintzman 1993</a>)</span></td>
+<td style="text-align: right;">1993</td>
+<td style="text-align: left;">Twenty-Five Years of Learning and Memory: Was the Cognitive Revolution a Mistake?</td>
+<td style="text-align: left;">A critical evaluation of cumulative progress within the field of cognitive psychology, with a focus on learning and memory areas.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="jacobyNonanalyticCognitionMemory1984">(<a href="#ref-jacobyNonanalyticCognitionMemory1984" role="doc-biblioref">Jacoby and Brooks 1984</a>)</span></td>
+<td style="text-align: right;">1984</td>
+<td style="text-align: left;">Nonanalytic Cognition: Memory, Perception, and Concept Learning</td>
+<td style="text-align: left;">A personal favorite, describing how memory processes may be involved in many other cognitive abilities.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="andersonCognitivePsychologyIts1980">(<a href="#ref-andersonCognitivePsychologyIts1980" role="doc-biblioref">Anderson and Crawford 1980</a>)</span></td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">Cognitive Psychology and Its Implications</td>
+<td style="text-align: left;">A more advanced introduction to Cognitive Psychology textbook.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="hintzmanPsychologyLearningMemory1978">(<a href="#ref-hintzmanPsychologyLearningMemory1978" role="doc-biblioref">Douglas L. Hintzman 1978</a>)</span></td>
+<td style="text-align: right;">1978</td>
+<td style="text-align: left;">The Psychology of Learning and Memory</td>
+<td style="text-align: left;">A classic textbook on cognitive psychology that integrates research between associative learning and memory.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="newellYouCanPlay1973">(<a href="#ref-newellYouCanPlay1973" role="doc-biblioref">Newell 1973</a>)</span></td>
+<td style="text-align: right;">1973</td>
+<td style="text-align: left;">You Can’t Play 20 Questions with Nature and Win: Projective Comments on the Papers of This Symposium</td>
+<td style="text-align: left;">A critical perspective suggesting that cognitive psychology use computational modeling approaches to theory development.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="neisserCognitivePsychology1967">(<a href="#ref-neisserCognitivePsychology1967" role="doc-biblioref">Neisser 1967</a>)</span></td>
+<td style="text-align: right;">1967</td>
+<td style="text-align: left;">Cognitive Psychology</td>
+<td style="text-align: left;">A classic textbook in Cognitive Psychology.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="bartlettThinkingExperimentalSocial1958">(<a href="#ref-bartlettThinkingExperimentalSocial1958" role="doc-biblioref">F. Bartlett 1958</a>)</span></td>
+<td style="text-align: right;">1958</td>
+<td style="text-align: left;">Thinking: An Experimental and Social Study</td>
+<td style="text-align: left;">Imaginative and interesting. A classic book on how to go about doing research on big topics like “Thinking”.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="bartlettRememberingStudyExperimental1932">(<a href="#ref-bartlettRememberingStudyExperimental1932" role="doc-biblioref">F. C. Bartlett and Bartlett 1932</a>)</span></td>
+<td style="text-align: right;">1932</td>
+<td style="text-align: left;">Remembering: A Study in Experimental and Social Psychology</td>
+<td style="text-align: left;">A classic book on memory processes, and foundational to modern reconstructionist views.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Not bad, pushing ball forward achieved.</p>
+</section>
 <section id="references" class="level2">
 
 
@@ -469,11 +649,23 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-andersonCognitivePsychologyIts1980" class="csl-entry" role="doc-biblioentry">
+Anderson, John Robert, and Jane Crawford. 1980. <em>Cognitive Psychology and Its Implications</em>. <span>wh freeman San Francisco</span>.
+</div>
 <div id="ref-atkinsonHumanMemoryProposed1968" class="csl-entry" role="doc-biblioentry">
 Atkinson, Richard C., and Richard M. Shiffrin. 1968. <span>“Human Memory: <span>A</span> Proposed System and Its Control Processes.”</span> In <em>Psychology of Learning and Motivation</em>, 2:89–195. <span>Elsevier</span>.
 </div>
 <div id="ref-baddeleyWorkingMemory1974" class="csl-entry" role="doc-biblioentry">
 Baddeley, Alan D., and G. J. Hitch. 1974. <span>“Working Memory.”</span> <em>The Psychology of Learning and Motivation</em> 8: 47–89. <a href="https://doi.org/d4vgnk">https://doi.org/d4vgnk</a>.
+</div>
+<div id="ref-bartlettThinkingExperimentalSocial1958" class="csl-entry" role="doc-biblioentry">
+Bartlett, Frederic. 1958. <em>Thinking: <span>An</span> Experimental and Social Study</em>. Thinking: <span>An</span> Experimental and Social Study. <span>New York, NY, US</span>: <span>Basic Books</span>.
+</div>
+<div id="ref-bartlettRememberingStudyExperimental1932" class="csl-entry" role="doc-biblioentry">
+Bartlett, Frederic Charles, and Frederic C. Bartlett. 1932. <em>Remembering: <span>A</span> Study in Experimental and Social Psychology</em>. <span>Cambridge university press</span>.
+</div>
+<div id="ref-choCitationRatesExperimental2012" class="csl-entry" role="doc-biblioentry">
+Cho, Kit W., Chi-Shing Tse, and James H. Neely. 2012. <span>“Citation Rates for Experimental Psychology Articles Published Between 1950 and 2004: <span class="nocase">Top-cited</span> Articles in Behavioral Cognitive Psychology.”</span> <em>Memory &amp; Cognition</em> 40 (7): 1132–61. <a href="https://doi.org/ghg45q">https://doi.org/ghg45q</a>.
 </div>
 <div id="ref-craikLevelsProcessingFramework1972" class="csl-entry" role="doc-biblioentry">
 Craik, Fergus IM, and Robert S. Lockhart. 1972. <span>“Levels of Processing: <span>A</span> Framework for Memory Research.”</span> <em>Journal of Verbal Learning and Verbal Behavior</em> 11 (6): 671–84. <a href="https://doi.org/cpcxr6">https://doi.org/cpcxr6</a>.
@@ -484,11 +676,17 @@ Eich, Janet M. 1982. <span>“A Composite Holographic Associative Recall Model.�
 <div id="ref-hintzmanSchemaAbstractionMultipleTrace1986" class="csl-entry" role="doc-biblioentry">
 Hintzman, Douglas L. 1986. <span>“"<span>Schema Abstraction</span>" in a <span>Multiple-Trace Memory Model</span>.”</span> <em>Psychological Review</em> 93: 411–28. <a href="https://doi.org/bzdsr4">https://doi.org/bzdsr4</a>.
 </div>
+<div id="ref-hintzmanPsychologyLearningMemory1978" class="csl-entry" role="doc-biblioentry">
+Hintzman, Douglas L. 1978. <em>The <span>Psychology</span> of <span>Learning</span> and <span>Memory</span></em>. First Edition. <span>San Francisco</span>: <span>W H Freeman &amp; Co</span>.
+</div>
 <div id="ref-hintzmanMINERVASimulationModel1984a" class="csl-entry" role="doc-biblioentry">
-Hintzman, Douglas L. 1984. <span>“<span>MINERVA</span> 2: <span>A</span> Simulation Model of Human Memory.”</span> <em>Behavior Research Methods, Instruments, &amp; Computers</em> 16 (2): 96–101. <a href="https://doi.org/fx78p6">https://doi.org/fx78p6</a>.
+———. 1984. <span>“<span>MINERVA</span> 2: <span>A</span> Simulation Model of Human Memory.”</span> <em>Behavior Research Methods, Instruments, &amp; Computers</em> 16 (2): 96–101. <a href="https://doi.org/fx78p6">https://doi.org/fx78p6</a>.
 </div>
 <div id="ref-hintzmanJudgmentsFrequencyRecognition1988" class="csl-entry" role="doc-biblioentry">
 ———. 1988. <span>“Judgments of Frequency and Recognition Memory in a Multiple-Trace Memory Model.”</span> <em>Psychological Review</em> 95 (4): 528–51. <a href="https://doi.org/fnm39h">https://doi.org/fnm39h</a>.
+</div>
+<div id="ref-hintzmanTwentyFiveYearsLearning1993" class="csl-entry" role="doc-biblioentry">
+———. 1993. <span>“Twenty-<span>Five Years</span> of <span>Learning</span> and <span>Memory</span>: <span>Was</span> the <span>Cognitive Revolution</span> a <span>Mistake</span>?”</span> <em>Attention and Performance XIV: Synergies in Experimental Psychology, Artificial Intelligence, and Cognitive Neuroscience</em> 14: 359.
 </div>
 <div id="ref-jacobyProcessDissociationFramework1991" class="csl-entry" role="doc-biblioentry">
 Jacoby, Larry L. 1991. <span>“A Process Dissociation Framework: <span>Separating</span> Automatic from Intentional Uses of Memory.”</span> <em>Journal of Memory and Language</em> 30 (5): 513–41. <a href="https://doi.org/bc7qc7">https://doi.org/bc7qc7</a>.
@@ -498,6 +696,9 @@ Jacoby, Larry L., and Lee R. Brooks. 1984. <span>“Nonanalytic Cognition: <span
 </div>
 <div id="ref-jamiesonInstanceTheorySemantic2018" class="csl-entry" role="doc-biblioentry">
 Jamieson, Randall K., Johnathan E. Avery, Brendan T. Johns, and Michael N. Jones. 2018. <span>“An Instance Theory of Semantic Memory.”</span> <em>Computational Brain &amp; Behavior</em> 1 (2): 119–36. <a href="https://doi.org/gf6cm7">https://doi.org/gf6cm7</a>.
+</div>
+<div id="ref-jamiesonInstanceTheoryDomaingeneral2022" class="csl-entry" role="doc-biblioentry">
+Jamieson, Randall K., Brendan T. Johns, John R. Vokey, and Michael N. Jones. 2022. <span>“Instance Theory as a Domain-General Framework for Cognitive Psychology.”</span> <em>Nature Reviews Psychology</em>. <a href="https://doi.org/gpd7zt">https://doi.org/gpd7zt</a>.
 </div>
 <div id="ref-kolersProceduresMind1984" class="csl-entry" role="doc-biblioentry">
 Kolers, Paul A., and Henry L. Roediger. 1984. <span>“Procedures of Mind.”</span> <em>Journal of Verbal Learning and Verbal Behavior</em> 23 (4): 425–49. <a href="https://doi.org/b7gfkh">https://doi.org/b7gfkh</a>.
@@ -510,6 +711,21 @@ McClelland, James L., and David E. Rumelhart. 1985. <span>“Distributed Memory 
 </div>
 <div id="ref-murdockTheoryStorageRetrieval1982" class="csl-entry" role="doc-biblioentry">
 Murdock, Bennet B. 1982. <span>“A Theory for the Storage and Retrieval of Item and Associative Information.”</span> <em>Psychological Review</em> 89 (6): 609. <a href="https://doi.org/dwddzm">https://doi.org/dwddzm</a>.
+</div>
+<div id="ref-neisserCognitivePsychology1967" class="csl-entry" role="doc-biblioentry">
+Neisser, Ulric. 1967. <em>Cognitive Psychology</em>. <span>Meredith Publishing Company</span>.
+</div>
+<div id="ref-newellYouCanPlay1973" class="csl-entry" role="doc-biblioentry">
+Newell, Allen. 1973. <span>“You Can’t Play 20 Questions with Nature and Win: <span>Projective</span> Comments on the Papers of This Symposium.”</span> In <em>Visual <span>Information Processing</span></em>, 283–308. <span>Elsevier</span>. <a href="https://doi.org/10.1016/B978-0-12-170150-5.50012-3">https://doi.org/10.1016/B978-0-12-170150-5.50012-3</a>.
+</div>
+<div id="ref-pratherWhatCanCognitive2022" class="csl-entry" role="doc-biblioentry">
+Prather, Richard W., Viridiana L. Benitez, Lauren Kendall Brooks, Christopher L. Dancy, Janean Dilworth‐Bart, Natalia B. Dutra, M. Omar Faison, et al. 2022. <span>“What <span>Can Cognitive Science Do</span> for <span>People</span>?”</span> <em>Cognitive Science</em> 46 (6). <a href="https://doi.org/10.1111/cogs.13167">https://doi.org/10.1111/cogs.13167</a>.
+</div>
+<div id="ref-raynerMuchReadLittle2016" class="csl-entry" role="doc-biblioentry">
+Rayner, Keith, Elizabeth R. Schotter, Michael EJ Masson, Mary C. Potter, and Rebecca Treiman. 2016. <span>“So <span>Much</span> to <span>Read</span>, <span>So Little Time How Do We Read</span>, and <span>Can Speed Reading Help</span>?”</span> <em>Psychological Science in the Public Interest</em> 17 (1): 4–34. <a href="https://doi.org/gdm2ss">https://doi.org/gdm2ss</a>.
+</div>
+<div id="ref-reisbergCognitionExploringScience1997" class="csl-entry" role="doc-biblioentry">
+Reisberg, Daniel. 1997. <em>Cognition: <span>Exploring</span> the Science of the Mind.</em> <span>WW Norton &amp; Co</span>.
 </div>
 <div id="ref-roedigerCreatingFalseMemories1995" class="csl-entry" role="doc-biblioentry">
 Roediger, Henry L., and Kathleen B. McDermott. 1995. <span>“Creating False Memories: <span>Remembering</span> Words Not Presented in Lists.”</span> <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em> 21 (4): 803. <a href="https://doi.org/d6zhsv">https://doi.org/d6zhsv</a>.

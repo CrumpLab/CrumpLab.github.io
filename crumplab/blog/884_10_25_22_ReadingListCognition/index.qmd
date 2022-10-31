@@ -10,7 +10,7 @@ opengraph:
     card: summary_large_image
     creator: "@MattCrumpLab"
     site: "@MattCrumpLab"
-bibliography: memory_timeline.bib
+bibliography: [memory_timeline.bib,C1_Cognition_reading.bib]
 categories:
   - cognition
   - teaching
@@ -126,5 +126,75 @@ knitr::kable(selected_bib)
 ```
 
 I could live with a table like this I think.
+
+## More thoughts
+
+I'm getting stuck too much worrying about ways to present a list of suggested readings. It feels sticky because I'm thinking about how content and style come together, but I haven't totally sorted out what content options I want.
+
+Minimally, I think I want the citation and the option to add notes about the reading. This is pretty much what I have in the above table. I can write any notes about a paper in zotero and have them included in the .bib file. This way the .bib file acts as a little database, which also offers opportunities for search and presentation. For example, the above table adds a date column read from the bib file. 
+
+## Trying to get interactive tables that process markdown citations
+
+Which, reminds me, I need to double-check if I can make the date column sortable. This should be possible with:
+
+```{r}
+DT::datatable(selected_bib)
+```
+
+That works, but it doesn't render the citations. I feel like I have been here before with the [Semantic librarian project](https://www.semanticlibrarian.com).
+
+Sigh, looks like this is an open issue: <https://github.com/rstudio/DT/issues/748>.
+
+Ok, let's try <https://glin.github.io/reactable/>.
+
+```{r}
+reactable::reactable(selected_bib)
+```
+
+This doesn't render the citations either. But, is there hope? Perhaps custom-rendering: <https://glin.github.io/reactable/articles/custom-rendering.html>. Tried some stuff, didn't work.
+
+### Try stuff
+
+None of thie stuff I tried here worked, deleting it. I'm also reminding myself that the .pdf version of the book chapters won't be able to have interactive tables. So, I'm pausing this tangent.
+
+## Minimal Example
+
+The goal for this example is to pick 10-20 readings from cognitive psychology that could appear in the [first chapter](https://crumplab.com/cognition/textbook/C1_What_is_Cognition.html), and then print the table here. I'm going to pick some papers that could be interesting for this chapter, and then print the table here to a sense of look and feel. Heads over to zotero to make another folder within a folder.
+
+OK, I slammed together 13 papers. I can export them easily as a .bib file, load them in and print them as a table sorted by date. I'm less certain about how to add additional citation data to each entry, such as a note field. Let's see.
+
+I rarely use the notes feature in Zotero, so I just discovered that if I write notes for an entry, then I can export them as part of the bib file, and they appear as a note entry. That's convenient. I could imagine having really long notes for the some of the paper, and that wouldn't fit space-wise in the table very well. Could have notes as tooltips, or make the table scroll. Will come to that later. Let's add some notes and print out the table.
+
+I added some notes, some longer, some shorter. Curious to see what the table looks like.
+
+```{r}
+#| messages: FALSE
+#| warning: FALSE
+load_bib <- bib2df::bib2df(file="C1_Cognition_reading.bib")
+
+selected_bib <- load_bib %>%
+  select(BIBTEXKEY,
+         DATE,
+         TITLE,
+         NOTE) %>%
+  rowwise() %>%
+  mutate(BIBTEXKEY = paste("[@",BIBTEXKEY,"]",sep="",collapse=""),
+         DATE = as.numeric(DATE),
+         TITLE = stringr::str_remove_all(TITLE,"[{}]"),
+         NOTE = case_when(is.na(NOTE) == TRUE ~ "",
+                          is.na(NOTE) == FALSE ~ NOTE)
+         ) %>%
+  rename(CITATION = BIBTEXKEY) %>%
+  arrange(desc(DATE))
+
+knitr::kable(selected_bib)
+```
+
+Not bad, pushing ball forward achieved.
+
+
+
+
+
 
 ## References
