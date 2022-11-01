@@ -1706,5 +1706,19 @@
     "title": "Spinning up a mastodon instance with masto.host: First try and notes",
     "section": "Admin stuff",
     "text": "Admin stuff\nMy first big question was how do I assume administrator privileges and turn off the ability of anyone to make an account on this instance. That part was easy on masto.host.\n\nMake a user account on your instance\nGo to masto.host, click on the hosting domain, and then “change user role” on the server option\nEnter your account name and presto chango you are the admin.\n\n\nWhen you go back to your mastodon account, there are new admin options in the settings.\n\nThe first thing I did was go to “Site Settings” and change the registration to “Nobody can sign up”\n\nAnd, that’s basically where I am at.\nGonna take a break, and continue this post sometime later today."
+  },
+  {
+    "objectID": "blog/880_BBS/index.html#general-thoughts-so-far",
+    "href": "blog/880_BBS/index.html#general-thoughts-so-far",
+    "title": "Spinning up a mastodon instance with masto.host: First try and notes",
+    "section": "General thoughts so far",
+    "text": "General thoughts so far\nIt was very easy for me to set up a new mastodon instance. Almost too easy. For example, if I had the intention of creating an instance that other people could join, the process would be similarly easy, but I expect the realities of doing admin and moderation require a much larger time investment. I don’t have the bandwidth to think about running a larger instance right now, so I’m going to stick to learning the system in this person-sized instance.\n\nAll by myself\nSo far the experience of being “alone” on my own instance is A OK. The default feeds work a little bit differently. My “local” feed is the same as my personal timeline, because no one else is on the instance. My home feed I guess is the same as it would be if I was on a shared instance. I see posts from the people I follow, and I see the things they are boosting. I’m not sure I totally understand what I am seeing on the federated feed, but it appears to be the people I follow, but not what they are boosting. It’s not a fire-hose of posts.\nI still don’t know how to add things to lists.\nAttempting to “micro-blog” with a personal mastodon instance has been rewarding so far, especially to prompt thinking about how I engage with social media in general, and how I curate/save/share what I’m doing. Everything I post on the instance is there, I guess for me to deal with and make decisions about.\nThere is a great deal of topic worth engaging on, and I’m hoping this process can help me navigate my own engagement."
+  },
+  {
+    "objectID": "blog/880_BBS/index.html#custom-emojis",
+    "href": "blog/880_BBS/index.html#custom-emojis",
+    "title": "Spinning up a mastodon instance with masto.host: First try and notes",
+    "section": "Custom emojis",
+    "text": "Custom emojis\nWhen I joined Fosstodon I quickly learned they have a custom emoji for R, that Mastodon.social has a custom emoji for the Rocinante, and that instances can have their own custom emojis.\nClearly I must confirm."
   }
 ]
