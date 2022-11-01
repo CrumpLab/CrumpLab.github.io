@@ -1719,6 +1719,6 @@
     "href": "blog/880_BBS/index.html#custom-emojis",
     "title": "Spinning up a mastodon instance with masto.host: First try and notes",
     "section": "Custom emojis",
-    "text": "Custom emojis\nWhen I joined Fosstodon I quickly learned they have a custom emoji for R, that Mastodon.social has a custom emoji for the Rocinante, and that instances can have their own custom emojis.\nClearly I must confirm."
+    "text": "Custom emojis\nWhen I joined Fosstodon I quickly learned they have a custom emoji for R, that Mastodon.social has a custom emoji for the Rocinante, and that instances can have their own custom emojis.\nClearly I must confirm.\nCool, there are already lots of custom emojis on other instances, and it looks like the admin can approve use of custom emojis.\n\nBRB.\nI got Rstats and few others, but I really want :blobcatfacepalm:, which doesn’t appear on the list.\nThis is helpful https://emojos.in\nHmmm, I have questions. I was clicking emojis and “enabling” them, but I’m not sure whether this means I can use them. I found a version of the :rstats: emoji and copied it, and did a test post. It worked, that’s cool.\nHad to manually copy :blobcatfacepalm:, and got it working."
   }
 ]

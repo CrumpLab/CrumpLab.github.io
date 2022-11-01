@@ -2,7 +2,7 @@
 title: "Spinning up a mastodon instance with masto.host: First try and notes"
 description: "I decided to try mastodon from inside my own instance, and this is brief guide to what I did and the questions I still have."
 author: "Matt Crump"
-date: '2022-10-30'
+date: '2022-11-01'
 date-modified: last-modified
 image: 'images/bbs.jpg'
 opengraph:
@@ -112,3 +112,20 @@ There is a great deal of topic worth engaging on, and I'm hoping this process ca
 When I joined Fosstodon I quickly learned they have a custom emoji for R, that Mastodon.social has a custom emoji for the Rocinante, and that instances can have their own custom emojis.
 
 Clearly I must confirm.
+
+Cool, there are already lots of custom emojis on other instances, and it looks like the admin can approve use of custom emojis.
+
+![](images/Screen%20Shot%202022-11-01%20at%201.16.32%20PM.png)
+
+BRB.
+
+I got Rstats and few others, but I really want `:blobcatfacepalm:`, which doesn't appear on the list.
+
+This is helpful <https://emojos.in>
+
+Hmmm, I have questions. I was clicking emojis and "enabling" them, but I'm not sure whether this means I can use them. I found a version of the `:rstats:` emoji and copied it, and did a test post. It worked, that's cool.
+
+Had to manually copy `:blobcatfacepalm:`, and got it working.
+
+
+
