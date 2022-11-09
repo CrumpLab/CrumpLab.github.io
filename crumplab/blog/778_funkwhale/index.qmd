@@ -1,0 +1,46 @@
+---
+title: "Convincing myself to run a Funkwhale pod"
+description: "Funkwhale is an audio platform thing that supports activitypub. Collecting notes about it."
+author: "Matt Crump"
+date: '2022-11-09'
+date-modified: last-modified
+categories:
+  - funkwhale
+  - activitypub
+  - audio
+  - music
+execute:
+  echo: false
+---
+
+Expertise: 0 Usefulness: ? Audience: notes to self
+
+I love music: listening to it and making it. I've had increasingly less time for music, and am trying to find more time for it. So, as a part of learning mastodon I created an account for my music interests:
+
+[https://bbs.crumplab.com/\@homophony](https://bbs.crumplab.com/@homophony)
+
+It's only been a week, but I'm having lots of fun connecting with music makers on the #fediverse. This could mean more overall music, which would be great!
+
+When I first tried mastodon a week ago I had no idea about activitypub, or the broader fediverse. I didn't realize there are many different "platforms" compatible or semi-compatible with the [activitypub protocol](https://www.w3.org/TR/activitypub/). This means that user accounts on one platform like mastodon can interact with user accounts on another platform like [pixelfed](https://pixelfed.org) (open-source version of instagram for picture sharing). There a [lots of platforms in the fediverse](https://github.com/emilebosch/awesome-fediverse), including [funkwhale](https://funkwhale.audio) for audio and music sharing.
+
+## Funkwhale notes
+
+Using this space for note collection on funkwhale.
+
+Main site: <https://funkwhale.audio>
+
+Funkwhale forum: <https://forum.funkwhale.audio>
+
+Funkwhale on mastodon: [https://fosstodon.org/\@funkwhale](https://fosstodon.org/@funkwhale){.uri}
+
+Dashboard of Funkwhale pods <https://network.funkwhale.audio/dashboards/d/overview/funkwhale-network-overview?orgId=1&refresh=2h>
+
+## Spinning up
+
+Installation dev instructions <https://docs.funkwhale.audio/installation/>
+
+Other instructions, possibly helpful for a droplet setup.
+
+<https://geek-cookbook.funkypenguin.co.nz/recipes/funkwhale/>
+
+## Leaving this for another time

@@ -1,0 +1,14 @@
+{
+  "hash": "e50930430c621ec5e1a5a5ad8eaa2845",
+  "result": {
+    "markdown": "---\ntitle: \"Function workshop\"\ndescription: \"Draft post to test functions\"\nauthor: \"Matt Crump\"\ndate: '2022-05-20'\nbibliography: AcademicIntegrity.bib\nopengraph:\n  twitter:\n    card: summary\n    creator: \"@MattCrumpLab\"\n    site: \"@MattCrumpLab\"\ndraft: true\n---\n\n\n\n<style type=\"text/css\">\n@media (min-width: 1400px) {\n    body {\n        font-size:18px\n    }\n\n    .col-md-3 {\n        margin-left: 5rem\n    }\n\n    .row {\n        --bs-gutter-x: -20%!important;\n    }\n\n    .row>main {\n        max-width: 40rem;\n    }\n\n}\n\n</style>\n\n\nLast knit: 2022-10-31\n\nUsing this to develop and test functions.\n\n## print bib in text\n\nDesired: a function to cite a full bibliographic entry(ies) citation in the middle of an R markdown document.\n\nThis is a wrapper function calling `stevemisc::print_refs`, which can output a csl styled full citation in markdown.\n\n\n::: {.cell}\n\n:::\n\nBowers, W. J. (1964). *Student dishonesty and its control in college*.\nBureau of Applied Social Research, Columbia University.\n\n\n------------------------------------------------------------------------\n\nThis also works with multiple citation keys.\n\n------------------------------------------------------------------------\n\n\nBowers, W. J. (1964). *Student dishonesty and its control in college*.\nBureau of Applied Social Research, Columbia University.\n\nFischer, C. T. (1970). Levels of cheating under conditions of\ninformative appeal to honesty, public affirmation of value, and threats\nof punishment. *The Journal of Educational Research*, *64*(1), 12–16.\n<https://doi.org/10.1080/00220671.1970.10884078>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -157,5 +157,8 @@
   },
   "blog/779_MoreMastodon/index.qmd": {
     "index.html": "550c936a"
+  },
+  "blog/778_funkwhale/index.qmd": {
+    "index.html": "b827a1a0"
   }
 }

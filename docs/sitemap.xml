@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://crumplab.com/index.html</loc>
-    <lastmod>2022-11-07T14:21:48.528Z</lastmod>
+    <lastmod>2022-11-09T14:32:19.314Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/Apps.html</loc>
@@ -126,7 +126,7 @@
   </url>
   <url>
     <loc>https://crumplab.com/Blog.html</loc>
-    <lastmod>2022-11-07T14:55:07.236Z</lastmod>
+    <lastmod>2022-11-09T14:32:28.051Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/blog/880_BBS/index.html</loc>
@@ -135,5 +135,9 @@
   <url>
     <loc>https://crumplab.com/blog/779_MoreMastodon/index.html</loc>
     <lastmod>2022-11-07T14:55:05.746Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/778_funkwhale/index.html</loc>
+    <lastmod>2022-11-09T14:32:11.963Z</lastmod>
   </url>
 </urlset>
