@@ -1,0 +1,14 @@
+{
+  "hash": "7ae62b7ada84730a3c0a9e135106dbfd",
+  "result": {
+    "markdown": "---\ntitle: \"RSS feed my quarto blog\"\ndescription: \"Seeing what happens if I set up RSS feeds over here.\"\nauthor: \"Matt Crump\"\ndate: '2022-11-10'\ndate-modified: last-modified\nimage: 'images/header.jpg'\ncategories:\n  - generative art\n  - art\nexecute:\n  echo: false\n  warning: false\n  message: false\nbibliography: [packages.bib]\n---\n\n\n\n\n::: callout-tip\nExpertise: Not much \\| Usefulness: ? \\| Audience: notes to self\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](images/header.jpg){width=100%}\n:::\n:::\n\n\nI spent the morning coding up some ways to automate header images, not sure I saved anytime. Equal parts fun and frustrating.\n\nUsing this post as an excuse to try out a simple header, and to enable RSS feeds on this blog. What will happen?\n\nFollowing these [quarto RSS](https://quarto.org/docs/websites/website-blog.html#rss-feed) steps. \n\n\n\n\n\n## References\n\n\n---\nnocite: |\n  @*\n---\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

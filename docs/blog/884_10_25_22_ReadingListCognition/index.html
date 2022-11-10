@@ -254,6 +254,11 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </i> 
  <span class="menu-text"></span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../blog.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -494,8 +499,8 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(selected_bib)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="htmlwidget-dec4558898051ef07247" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-dec4558898051ef07247">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d64fdd4a0a0a90b7a39d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d64fdd4a0a0a90b7a39d">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>That works, but it doesn’t render the citations. I feel like I have been here before with the <a href="https://www.semanticlibrarian.com">Semantic librarian project</a>.</p>
@@ -505,8 +510,8 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>reactable<span class="sc">::</span><span class="fu">reactable</span>(selected_bib)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="htmlwidget-dff8ef051d447a4f9b63" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-dff8ef051d447a4f9b63">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"CITATION":["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],"DATE":[1968,1974,1972],"TITLE":["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],"NOTE":["This is a classic paper because...","",""]},"columns":[{"accessor":"CITATION","name":"CITATION","type":"character"},{"accessor":"DATE","name":"DATE","type":"numeric"},{"accessor":"TITLE","name":"TITLE","type":"character"},{"accessor":"NOTE","name":"NOTE","type":"character"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a9e7d622dfc5efd30bf806471a383489"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1aa2305d21912f8936c8" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1aa2305d21912f8936c8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"CITATION":["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],"DATE":[1968,1974,1972],"TITLE":["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],"NOTE":["This is a classic paper because...","",""]},"columns":[{"accessor":"CITATION","name":"CITATION","type":"character"},{"accessor":"DATE","name":"DATE","type":"numeric"},{"accessor":"TITLE","name":"TITLE","type":"character"},{"accessor":"NOTE","name":"NOTE","type":"character"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a9e7d622dfc5efd30bf806471a383489"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>This doesn’t render the citations either. But, is there hope? Perhaps custom-rendering: <a href="https://glin.github.io/reactable/articles/custom-rendering.html" class="uri">https://glin.github.io/reactable/articles/custom-rendering.html</a>. Tried some stuff, didn’t work.</p>

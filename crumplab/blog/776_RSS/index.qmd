@@ -1,0 +1,79 @@
+---
+title: "RSS feed my quarto blog"
+description: "Seeing what happens if I set up RSS feeds over here."
+author: "Matt Crump"
+date: '2022-11-10'
+date-modified: last-modified
+image: 'images/header.jpg'
+categories:
+  - generative art
+  - art
+execute:
+  echo: false
+  warning: false
+  message: false
+bibliography: [packages.bib]
+---
+
+```{r, include=FALSE, eval=FALSE}
+knitr::write_bib(file = 'packages.bib')
+```
+
+
+```{r}
+#| out.width: 100%
+
+library(magrittr)
+library(magick)
+header <- matrix(1,nrow=500,ncol=1000) %>%
+  as.raster() %>%
+  image_read() %>%
+  magick::image_transparent(color="white") %>%
+  magick::image_background(color="#ccffff") %>%
+  magick::image_annotate(
+    " RSS feed \n my quarto blog",
+    font = 'Impact',
+    size = 150,
+    color = "black",
+    location = "+10+85"
+  ) %>%
+  magick::image_blur(radius = 100, sigma = 5) %>%
+  magick::image_annotate(
+    " RSS feed \n my quarto blog",
+    font = 'Impact',
+    size = 150,
+    color = "darkgrey",
+    location = "+0+75",
+    strokecolor = "pink"
+  )
+
+
+magick::image_write(header,
+                    path = "images/header.jpg",
+                    format = "jpeg")
+
+knitr::include_graphics("images/header.jpg")
+
+```
+
+::: callout-note
+## Expertise: Not much \| Usefulness: ? \| Audience: notes to self
+:::
+
+
+I spent the morning coding up some ways to automate header images, not sure I saved anytime. Equal parts fun and frustrating.
+
+Using this post as an excuse to try out a simple header, and to enable RSS feeds on this blog. What will happen?
+
+Following these [quarto RSS](https://quarto.org/docs/websites/website-blog.html#rss-feed) steps. 
+
+
+
+
+
+## References
+
+---
+nocite: |
+  @*
+---

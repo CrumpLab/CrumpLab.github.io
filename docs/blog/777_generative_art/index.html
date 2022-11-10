@@ -239,6 +239,11 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </i> 
  <span class="menu-text"></span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../blog.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -261,6 +266,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <li><a href="#changing-font" id="toc-changing-font" class="nav-link" data-scroll-target="#changing-font">Changing font</a></li>
   <li><a href="#border-around-text" id="toc-border-around-text" class="nav-link" data-scroll-target="#border-around-text">Border around text?</a></li>
   <li><a href="#make-it-lighter" id="toc-make-it-lighter" class="nav-link" data-scroll-target="#make-it-lighter">Make it lighter</a></li>
+  <li><a href="#plain-color-background" id="toc-plain-color-background" class="nav-link" data-scroll-target="#plain-color-background">plain color background</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -494,6 +500,34 @@ New rating system?
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/Impact3.jpg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="images/Impact3.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+</section>
+<section id="plain-color-background" class="level2">
+<h2 class="anchored" data-anchor-id="plain-color-background">plain color background</h2>
+<p>I might be into mono-color and text for blog headers. That should be simple enough now:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>header <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span>,<span class="at">nrow=</span><span class="dv">500</span>,<span class="at">ncol=</span><span class="dv">1000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.raster</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">image_read</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  magick<span class="sc">::</span><span class="fu">image_transparent</span>(<span class="at">color=</span><span class="st">"white"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  magick<span class="sc">::</span><span class="fu">image_background</span>(<span class="at">color=</span><span class="st">"#ffffcc"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  magick<span class="sc">::</span><span class="fu">image_annotate</span>(</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">" IT TOOK ME WAY </span><span class="sc">\n</span><span class="st"> TOO LONG </span><span class="sc">\n</span><span class="st"> TO ACCOMPLISH </span><span class="sc">\n</span><span class="st"> THIS GOAL"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="st">'Impact'</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">100</span>,</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"white"</span>,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">strokecolor =</span> <span class="st">"pink"</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>magick<span class="sc">::</span><span class="fu">image_write</span>(header,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>                    <span class="at">path =</span> <span class="st">"images/header.jpg"</span>,</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                    <span class="at">format =</span> <span class="st">"jpeg"</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/header.jpg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="images/header.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 </section>

@@ -6,6 +6,7 @@ website:
   title: "crumplab"
   google-analytics: G-HPGGT4QZ8Q
   site-url: "https://crumplab.com"
+  description: "Website for the computational cognition lab at Brooklyn College of CUNY."
   twitter-card: true
   open-graph: true
   navbar:
@@ -33,6 +34,8 @@ website:
       - icon: youtube
         href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
         aria-label: Youtube
+      - icon: rss
+        href: blog.xml
 
 format:
   html:

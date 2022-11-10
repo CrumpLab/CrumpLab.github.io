@@ -210,6 +210,35 @@ magick::image_write(simplex,
 knitr::include_graphics("images/Impact3.jpg")
 ```
 
+## plain color background
+
+I might be into mono-color and text for blog headers. That should be simple enough now:
+
+```{r}
+#| out.width: 100%
+#| echo: true
+header <- matrix(1,nrow=500,ncol=1000) %>%
+  as.raster() %>%
+  image_read() %>%
+  magick::image_transparent(color="white") %>%
+  magick::image_background(color="#ffffcc") %>%
+  magick::image_annotate(
+    " IT TOOK ME WAY \n TOO LONG \n TO ACCOMPLISH \n THIS GOAL",
+    font = 'Impact',
+    size = 100,
+    color = "white",
+    strokecolor = "pink"
+  )
+
+
+magick::image_write(header,
+                    path = "images/header.jpg",
+                    format = "jpeg")
+
+knitr::include_graphics("images/header.jpg")
+
+```
+
 ## References
 
 ---

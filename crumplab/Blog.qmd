@@ -9,6 +9,7 @@ listing:
   categories: true
   image-align: 'right'
   image-placeholder: 'images/crumplab.png'
+  feed: true
 ---
 
 ```{css, echo=FALSE}

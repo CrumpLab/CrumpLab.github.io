@@ -2,146 +2,150 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://crumplab.com/Books.html</loc>
-    <lastmod>2022-11-01T01:34:32.398Z</lastmod>
+    <lastmod>2022-11-10T14:34:54.665Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/Courses.html</loc>
-    <lastmod>2022-11-01T01:34:34.330Z</lastmod>
+    <lastmod>2022-11-10T14:34:56.202Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/Fun.html</loc>
-    <lastmod>2022-11-01T01:34:35.948Z</lastmod>
+    <lastmod>2022-11-10T14:34:57.457Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/index.html</loc>
-    <lastmod>2022-11-10T10:35:47.773Z</lastmod>
+    <lastmod>2022-11-10T14:34:58.649Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/Apps.html</loc>
-    <lastmod>2022-11-01T01:34:39.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/881_Mastodon/index.html</loc>
-    <lastmod>2022-11-01T01:34:41.406Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_999_5_17_22_blogging/index.html</loc>
-    <lastmod>2022-11-01T01:34:42.858Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/883_command_center/index.html</loc>
-    <lastmod>2022-11-01T01:34:44.474Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_889_7_7_22_fonts/index.html</loc>
-    <lastmod>2022-11-01T01:34:45.955Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_997_5_19_22_pubs/index.html</loc>
-    <lastmod>2022-11-01T01:34:57.198Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_996_5_20_22_assignmentflex/index.html</loc>
-    <lastmod>2022-11-01T01:34:58.670Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_887_8_25_22_quartoblog/index.html</loc>
-    <lastmod>2022-11-01T01:35:05.850Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_990_6_28_22_eugenicsbooks/index.html</loc>
-    <lastmod>2022-11-01T01:35:20.373Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_994_5_26_22_cheating/index.html</loc>
-    <lastmod>2022-11-01T01:35:22.097Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_888_8_23_22_teaching2530/index.html</loc>
-    <lastmod>2022-11-01T01:35:23.574Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/882_JOKE/index.html</loc>
-    <lastmod>2022-11-01T01:35:25.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/885_10_16_22_unplanning/index.html</loc>
-    <lastmod>2022-11-01T01:35:26.936Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/884_10_25_22_ReadingListCognition/index.html</loc>
-    <lastmod>2022-11-01T01:35:31.532Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_886_10_14_22_quartoProjects/index.html</loc>
-    <lastmod>2022-11-01T01:35:33.094Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/older_9999_7_28_20_OC/index.html</loc>
-    <lastmod>2022-11-01T01:35:34.595Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/older_9999_psych_eugenics/index.html</loc>
-    <lastmod>2022-11-10T13:23:23.591Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_991_6_28_22_annotate/index.html</loc>
-    <lastmod>2022-11-01T01:35:43.771Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/older_9999_7_7_20_EugenicMind/index.html</loc>
-    <lastmod>2022-11-01T01:35:45.421Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/older_9999_7_2_20_JBP/index.html</loc>
-    <lastmod>2022-11-01T01:35:48.758Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/Publications.html</loc>
-    <lastmod>2022-11-01T01:35:58.364Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/People.html</loc>
-    <lastmod>2022-11-01T01:35:59.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/people/wesley_huang.html</loc>
-    <lastmod>2022-11-01T01:36:00.173Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/people/matt_crump.html</loc>
-    <lastmod>2022-11-01T01:36:00.481Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/people/drew_shives.html</loc>
-    <lastmod>2022-11-01T01:36:00.794Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/people/kevonte_mitchell.html</loc>
-    <lastmod>2022-11-01T01:36:01.075Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/Opportunities.html</loc>
-    <lastmod>2022-11-01T01:36:02.369Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/Blog.html</loc>
-    <lastmod>2022-11-10T13:29:36.743Z</lastmod>
+    <lastmod>2022-11-10T14:34:59.918Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/blog/880_BBS/index.html</loc>
-    <lastmod>2022-11-01T18:01:51.830Z</lastmod>
+    <lastmod>2022-11-10T14:35:01.159Z</lastmod>
   </url>
   <url>
-    <loc>https://crumplab.com/blog/779_MoreMastodon/index.html</loc>
-    <lastmod>2022-11-07T14:55:05.746Z</lastmod>
+    <loc>https://crumplab.com/blog/881_Mastodon/index.html</loc>
+    <lastmod>2022-11-10T14:35:02.626Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_999_5_17_22_blogging/index.html</loc>
+    <lastmod>2022-11-10T14:35:04.105Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/883_command_center/index.html</loc>
+    <lastmod>2022-11-10T14:35:05.557Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_889_7_7_22_fonts/index.html</loc>
+    <lastmod>2022-11-10T14:35:06.918Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_997_5_19_22_pubs/index.html</loc>
+    <lastmod>2022-11-10T14:35:17.852Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_996_5_20_22_assignmentflex/index.html</loc>
+    <lastmod>2022-11-10T14:35:19.292Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_887_8_25_22_quartoblog/index.html</loc>
+    <lastmod>2022-11-10T14:35:26.176Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/blog/778_funkwhale/index.html</loc>
-    <lastmod>2022-11-09T14:40:11.377Z</lastmod>
+    <lastmod>2022-11-10T14:35:26.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_990_6_28_22_eugenicsbooks/index.html</loc>
+    <lastmod>2022-11-10T14:35:39.614Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_994_5_26_22_cheating/index.html</loc>
+    <lastmod>2022-11-10T14:35:41.120Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_888_8_23_22_teaching2530/index.html</loc>
+    <lastmod>2022-11-10T14:35:42.570Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/779_MoreMastodon/index.html</loc>
+    <lastmod>2022-11-10T14:35:43.578Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/882_JOKE/index.html</loc>
+    <lastmod>2022-11-10T14:35:45.187Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/blog/777_generative_art/index.html</loc>
-    <lastmod>2022-11-10T13:29:18.807Z</lastmod>
+    <lastmod>2022-11-10T14:35:48.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/885_10_16_22_unplanning/index.html</loc>
+    <lastmod>2022-11-10T14:35:49.835Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/884_10_25_22_ReadingListCognition/index.html</loc>
+    <lastmod>2022-11-10T14:35:54.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_886_10_14_22_quartoProjects/index.html</loc>
+    <lastmod>2022-11-10T14:35:55.666Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/older_9999_7_28_20_OC/index.html</loc>
+    <lastmod>2022-11-10T14:35:57.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/older_9999_psych_eugenics/index.html</loc>
+    <lastmod>2022-11-10T14:36:02.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/post_991_6_28_22_annotate/index.html</loc>
+    <lastmod>2022-11-10T14:36:06.155Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/older_9999_7_7_20_EugenicMind/index.html</loc>
+    <lastmod>2022-11-10T14:36:07.732Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/older_9999_7_2_20_JBP/index.html</loc>
+    <lastmod>2022-11-10T14:36:10.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/blog/776_RSS/index.html</loc>
+    <lastmod>2022-11-10T14:36:13.089Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/Publications.html</loc>
+    <lastmod>2022-11-10T14:36:22.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/People.html</loc>
+    <lastmod>2022-11-10T14:36:23.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/people/wesley_huang.html</loc>
+    <lastmod>2022-11-10T14:36:23.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/people/matt_crump.html</loc>
+    <lastmod>2022-11-10T14:36:23.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/people/drew_shives.html</loc>
+    <lastmod>2022-11-10T14:36:24.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/people/kevonte_mitchell.html</loc>
+    <lastmod>2022-11-10T14:36:24.551Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/Opportunities.html</loc>
+    <lastmod>2022-11-10T14:36:25.730Z</lastmod>
+  </url>
+  <url>
+    <loc>https://crumplab.com/Blog.html</loc>
+    <lastmod>2022-11-10T14:36:27.445Z</lastmod>
   </url>
 </urlset>
