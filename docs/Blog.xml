@@ -239,6 +239,69 @@ New rating system?
 </div>
 </div>
 </section>
+<section id="custom-font" class="level2">
+<h2 class="anchored" data-anchor-id="custom-font">custom font</h2>
+<p>I made some custom fonts a while back, and have them loaded to my system fonts. Checking if they work here. Working [x].</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">header <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">matrix</span>(<span class="dv" style="color: #AD0000;">1</span>,<span class="at" style="color: #657422;">nrow=</span><span class="dv" style="color: #AD0000;">500</span>,<span class="at" style="color: #657422;">ncol=</span><span class="dv" style="color: #AD0000;">1000</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb9-2">  <span class="fu" style="color: #4758AB;">as.raster</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb9-3">  <span class="fu" style="color: #4758AB;">image_read</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb9-4">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_transparent</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"white"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb9-5">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_background</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"#e2eeee"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb9-6">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_annotate</span>(</span>
+<span id="cb9-7">    <span class="st" style="color: #20794D;">" SQUIGGLIGRAPHY </span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;"> by Matt Crump"</span>,</span>
+<span id="cb9-8">    <span class="at" style="color: #657422;">font =</span> <span class="st" style="color: #20794D;">'CrumpSquiggligraphy'</span>,</span>
+<span id="cb9-9">    <span class="at" style="color: #657422;">location =</span> <span class="st" style="color: #20794D;">"-40+100"</span>,</span>
+<span id="cb9-10">    <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">110</span>,</span>
+<span id="cb9-11">    <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"black"</span></span>
+<span id="cb9-12">  )</span>
+<span id="cb9-13"></span>
+<span id="cb9-14"></span>
+<span id="cb9-15">magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_write</span>(header,</span>
+<span id="cb9-16">                    <span class="at" style="color: #657422;">path =</span> <span class="st" style="color: #20794D;">"images/header2.jpg"</span>,</span>
+<span id="cb9-17">                    <span class="at" style="color: #657422;">format =</span> <span class="st" style="color: #20794D;">"jpeg"</span>)</span>
+<span id="cb9-18"></span>
+<span id="cb9-19">knitr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">include_graphics</span>(<span class="st" style="color: #20794D;">"images/header2.jpg"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/header2.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>Trying out the Moebius font with a higlight layer.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">header <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">matrix</span>(<span class="dv" style="color: #AD0000;">1</span>,<span class="at" style="color: #657422;">nrow=</span><span class="dv" style="color: #AD0000;">500</span>,<span class="at" style="color: #657422;">ncol=</span><span class="dv" style="color: #AD0000;">1000</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-2">  <span class="fu" style="color: #4758AB;">as.raster</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-3">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_read</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-4">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_transparent</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"white"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-5">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_background</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"#dcfcf9"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-6">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_annotate</span>(</span>
+<span id="cb10-7">    <span class="st" style="color: #20794D;">" Moebius </span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;"> by Matt Crump"</span>,</span>
+<span id="cb10-8">    <span class="at" style="color: #657422;">font =</span> <span class="st" style="color: #20794D;">'CrumpMoebius'</span>,</span>
+<span id="cb10-9">    <span class="at" style="color: #657422;">location =</span> <span class="st" style="color: #20794D;">"-15+155"</span>,</span>
+<span id="cb10-10">    <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">100</span>,</span>
+<span id="cb10-11">    <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"white"</span></span>
+<span id="cb10-12">  ) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-13">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_blur</span>(<span class="at" style="color: #657422;">radius =</span> <span class="dv" style="color: #AD0000;">20</span>, <span class="at" style="color: #657422;">sigma =</span> <span class="dv" style="color: #AD0000;">5</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-14">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_annotate</span>(</span>
+<span id="cb10-15">    <span class="st" style="color: #20794D;">" Moebius </span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;"> by Matt Crump"</span>,</span>
+<span id="cb10-16">    <span class="at" style="color: #657422;">font =</span> <span class="st" style="color: #20794D;">'CrumpMoebius'</span>,</span>
+<span id="cb10-17">    <span class="at" style="color: #657422;">location =</span> <span class="st" style="color: #20794D;">"-20+150"</span>,</span>
+<span id="cb10-18">    <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">100</span>,</span>
+<span id="cb10-19">    <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"black"</span></span>
+<span id="cb10-20">  ) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-21">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_border</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"lightgray"</span>,</span>
+<span id="cb10-22">                       <span class="at" style="color: #657422;">geometry =</span> <span class="st" style="color: #20794D;">"10x10"</span>)</span>
+<span id="cb10-23"></span>
+<span id="cb10-24"></span>
+<span id="cb10-25">magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_write</span>(header,</span>
+<span id="cb10-26">                    <span class="at" style="color: #657422;">path =</span> <span class="st" style="color: #20794D;">"images/header3.jpg"</span>,</span>
+<span id="cb10-27">                    <span class="at" style="color: #657422;">format =</span> <span class="st" style="color: #20794D;">"jpeg"</span>)</span>
+<span id="cb10-28"></span>
+<span id="cb10-29">knitr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">include_graphics</span>(<span class="st" style="color: #20794D;">"images/header3.jpg"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/header3.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+</section>
 <section id="references" class="level2">
 
 

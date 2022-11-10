@@ -239,6 +239,126 @@ knitr::include_graphics("images/header.jpg")
 
 ```
 
+## custom fonts
+
+### Squiggligraphy
+
+I made some custom fonts a while back, and have them loaded to my system fonts. Checking if they work here. Working \[x\].
+
+```{r}
+#| out.width: 100%
+#| echo: true
+header <- matrix(1,nrow=500,ncol=1000) %>%
+  as.raster() %>%
+  image_read() %>%
+  magick::image_transparent(color="white") %>%
+  magick::image_background(color="#e2eeee") %>%
+  magick::image_annotate(
+    " SQUIGGLIGRAPHY \n by Matt Crump",
+    font = 'CrumpSquiggligraphy',
+    location = "-40+100",
+    size = 110,
+    color = "black"
+  )
+
+
+magick::image_write(header,
+                    path = "images/header2.jpg",
+                    format = "jpeg")
+
+knitr::include_graphics("images/header2.jpg")
+
+```
+
+### Moebius
+
+Trying out the Moebius font with a highlight layer.
+
+```{r}
+#| out.width: 100%
+#| echo: true
+header <- matrix(1,nrow=500,ncol=1000) %>%
+  as.raster() %>%
+  magick::image_read() %>%
+  magick::image_transparent(color="white") %>%
+  magick::image_background(color="#dcfcf9") %>%
+  magick::image_annotate(
+    " Moebius \n by Matt Crump",
+    font = 'CrumpMoebius',
+    location = "-15+155",
+    size = 100,
+    color = "white"
+  ) %>%
+  magick::image_blur(radius = 20, sigma = 5) %>%
+  magick::image_annotate(
+    " Moebius \n by Matt Crump",
+    font = 'CrumpMoebius',
+    location = "-20+150",
+    size = 100,
+    color = "black"
+  ) %>%
+  magick::image_border(color="lightgray",
+                       geometry = "10x10")
+
+
+magick::image_write(header,
+                    path = "images/header3.jpg",
+                    format = "jpeg")
+
+knitr::include_graphics("images/header3.jpg")
+```
+
+## Squish it with noise
+
+This is fun. I accomplished my goal of making simple headers for blogs. I can see how spelling command over layers of pixel space is intriguing for a generative artist.
+
+For my next trick, I would like to merge this basic header above with some noise from ambient. Not too much noise, just a little bit.
+
+```{r}
+#| out.width: 100%
+#| echo: true
+noise <- noise_simplex(c(500, 1000),
+                         pertubation = 'normal',
+                         pertubation_amplitude = 40) %>%
+  normalise() %>%
+  as.raster() %>%
+  magick::image_read()
+
+header <- matrix(1,nrow=500,ncol=1000) %>%
+  as.raster() %>%
+  magick::image_read() %>%
+  magick::image_transparent(color="white") %>%
+  magick::image_background(color="#dcfcf9") %>%
+  magick::image_composite(noise,
+                          operator = "blend", 
+                          compose_args="10") %>%
+  magick::image_blur(radius = 20, sigma = 20) %>%
+  magick::image_annotate(
+    " Moebius \n by Matt Crump",
+    font = 'CrumpMoebius',
+    location = "-15+155",
+    size = 100,
+    color = "white"
+  ) %>%
+  magick::image_blur(radius = 20, sigma = 5) %>%
+  magick::image_annotate(
+    " Moebius \n by Matt Crump",
+    font = 'CrumpMoebius',
+    location = "-20+150",
+    size = 100,
+    color = "black"
+  ) %>%
+  magick::image_border(color="pink",
+                       geometry = "20x20")
+
+
+magick::image_write(header,
+                    path = "images/header4.jpg",
+                    format = "jpeg")
+
+knitr::include_graphics("images/header4.jpg")
+```
+
 ## References
 
 ---
