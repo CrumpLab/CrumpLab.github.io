@@ -35,7 +35,7 @@ website:
         href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
         aria-label: Youtube
       - icon: rss
-        href: blog.xml
+        href: Blog.xml
 
 format:
   html:
