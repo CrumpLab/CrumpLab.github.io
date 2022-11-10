@@ -1,0 +1,217 @@
+---
+title: "Generative art (note) collection"
+description: "Collecting fast notes on using #rstats and potentiall other things to generate visuals."
+author: "Matt Crump"
+date: '2022-11-10'
+date-modified: last-modified
+categories:
+  - generative art
+  - art
+execute:
+  echo: false
+  warning: false
+  message: false
+bibliography: [packages.bib]
+---
+
+```{r, include=FALSE, eval=FALSE}
+knitr::write_bib(file = 'packages.bib')
+```
+
+::: callout-tip
+## New rating system?
+
+I stumbled across [Dan Mackinlay's wonderful notebooks and blog](https://danmackinlay.name/about.html) the other day and was inspired by his post rating system. Dan emoji stamps his posts to indicate his assessment of amount of uncertainty, usefulness, roughness, and novelty for his posts. I might give that a whirl. But, as of right now I can't figure out how to get custom emojis working for this blog, so words will have to do.
+
+Expertise: Not much \| Usefulness: Decent \| Audience: notes to self
+:::
+
+::: column-margin
+<iframe src="https://bbs.crumplab.com/@MattCrump/109313738110058251/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen">
+
+</iframe>
+
+```{=html}
+<script src="https://bbs.crumplab.com/embed.js" async="async"></script>
+```
+:::
+
+## Some goals
+
+-   [x] search around and check out a few R packages for making generative art
+
+-   [ ] Try them out here
+
+-   [ ] Mess around on my own
+
+-   [ ] Add more testing to this space over time (when I have time
+
+-   [ ] Make options to generate blog header visuals, so that I can more quickly get into writing without having to bounce out and spend too much time making headers in Adobe Express (also fun).
+
+## Generative Rrrrt
+
+I follow a lot of #rstats people, so I have some hunchs on where to start.
+
+-   [jasmines](https://jasmines.djnavarro.net)
+-   [ambient](https://ambient.data-imaginist.com)
+-   [aRtsy](https://koenderks.github.io/aRtsy/)
+-   <https://blog.djnavarro.net/posts/2021-10-19_rtistry-posts/>
+-   <https://artstats.netlify.app/#1>
+
+That should be enough to get started, and I'll more later.
+
+## ambient
+
+[ambient](https://ambient.data-imaginist.com) makes visual noise [@R-ambient]! I am excited. I'm also trying to remember how to cite R packages in quarto.
+
+First example from the ambient documentation.
+
+```{r}
+#| echo: true
+library(ambient)
+simplex <- noise_simplex(c(500, 1000), 
+                         pertubation = 'normal', 
+                         pertubation_amplitude = 40)
+
+plot(as.raster(normalise(simplex)))
+```
+
+That's fun. The output adds a border to the image, I'd like to turn that on/off.
+
+```{r}
+#| echo: true
+library(imager)
+simplex <- noise_simplex(c(1000, 500),
+                         pertubation = 'normal',
+                         pertubation_amplitude = 40)
+
+save.image(as.cimg(simplex), file = "images/test.jpg")
+```
+
+Going for a full width picture.
+
+```{r}
+#| echo: true
+#| out.width: 100%
+knitr::include_graphics("images/test.jpg")
+```
+
+## Add words on top
+
+Tangent time. How to add a layer of words on top of an image. Need to be able to do this part in order to use generative art for header backgrounds.
+
+-   Ugh, tried `imager::draw_text()` but clunky, and didn't work.
+
+-   let's check out <https://swarm-lab.github.io/Rvision/>...That looks super cool, but it needs some extra libraries to run. Best come back and try it out some time for video or other fast visual processing.
+
+-   time for [magick](https://cran.r-project.org/web/packages/magick/vignettes/intro.html#Installing_magick)
+
+```{r}
+#| echo: true
+#| out.width: 100%
+library(magick)
+simplex <- noise_simplex(c(500, 1000),
+                         pertubation = 'normal',
+                         pertubation_amplitude = 40) %>%
+  normalise() %>%
+  as.raster() %>%
+  magick::image_read() %>%
+  magick::image_annotate(
+    "IT TOOK ME WAY \n TOO LONG \n TO ACCOMPLISH \n THIS GOAL",
+    font = 'Times',
+    size = 100,
+    color = "white"
+  )
+
+magick::image_write(simplex,
+                    path = "images/test_magick.jpg",
+                    format = "jpeg")
+knitr::include_graphics("images/test_magick.jpg")
+```
+
+## Changing font
+
+Is easy...go for IMPACT
+
+```{r}
+#| echo: true
+#| out.width: 100%
+simplex <- noise_simplex(c(500, 1000),
+                         pertubation = 'normal',
+                         pertubation_amplitude = 40) %>%
+  normalise() %>%
+  as.raster() %>%
+  magick::image_read() %>%
+  magick::image_annotate(
+    "IT TOOK ME WAY \n TOO LONG \n TO ACCOMPLISH \n THIS GOAL",
+    font = 'Impact',
+    size = 100,
+    color = "white"
+  )
+
+magick::image_write(simplex,
+                    path = "images/Impact.jpg",
+                    format = "jpeg")
+knitr::include_graphics("images/Impact.jpg")
+```
+
+## Border around text?
+
+Is easy...go for IMPACT
+
+```{r}
+#| out.width: 100%
+#| echo: true
+simplex <- noise_simplex(c(500, 1000),
+                         pertubation = 'normal',
+                         pertubation_amplitude = 40) %>%
+  normalise() %>%
+  as.raster() %>%
+  magick::image_read() %>%
+  magick::image_annotate(
+    " IT TOOK ME WAY \n TOO LONG \n TO ACCOMPLISH \n THIS GOAL",
+    font = 'Impact',
+    size = 100,
+    color = "white",
+    strokecolor = "pink"
+  )
+
+magick::image_write(simplex,
+                    path = "images/Impact2.jpg",
+                    format = "jpeg")
+knitr::include_graphics("images/Impact2.jpg")
+```
+
+## Make it lighter
+
+Squish the noise back a little bit
+
+```{r}
+#| out.width: 100%
+#| echo: true
+simplex <- noise_simplex(c(500, 1000),
+                         pertubation = 'normal',
+                         pertubation_amplitude = 40) %>%
+  normalise(to = c(.7,1)) %>%
+  as.raster() %>%
+  magick::image_read() %>%
+  magick::image_annotate(
+    " IT TOOK ME WAY \n TOO LONG \n TO ACCOMPLISH \n THIS GOAL",
+    font = 'Impact',
+    size = 100,
+    color = "white",
+    strokecolor = "pink"
+  )
+
+magick::image_write(simplex,
+                    path = "images/Impact3.jpg",
+                    format = "jpeg")
+knitr::include_graphics("images/Impact3.jpg")
+```
+
+## References
+
+---
+nocite: |
+  @*
+---

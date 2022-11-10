@@ -160,5 +160,8 @@
   },
   "blog/778_funkwhale/index.qmd": {
     "index.html": "b827a1a0"
+  },
+  "blog/777_generative_art/index.qmd": {
+    "index.html": "a5d49313"
   }
 }
