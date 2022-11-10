@@ -4,6 +4,7 @@ description: "Collecting fast notes on using #rstats and potentiall other things
 author: "Matt Crump"
 date: '2022-11-10'
 date-modified: last-modified
+image: 'images/Impact3.jpg'
 categories:
   - generative art
   - art
