@@ -295,9 +295,13 @@ Expertise: Not much | Usefulness: ? | Audience: notes to self
 
 </div>
 </div>
-<p>I spent the morning coding up some ways to automate header images, not sure I saved anytime. Equal parts fun and frustrating.</p>
-<p>Using this post as an excuse to try out a simple header, and to enable RSS feeds on this blog. What will happen?</p>
+<p>I spent the morning coding up some ways to automate header images, not sure I saved myself time, it was equal parts fun and frustrating.</p>
+<p>This post is an an excuse to try out a simple header, and to enable RSS feeds on this blog. What will happen?</p>
 <p>Following these <a href="https://quarto.org/docs/websites/website-blog.html#rss-feed">quarto RSS</a> steps.</p>
+<section id="done" class="level2">
+<h2 class="anchored" data-anchor-id="done">Done?</h2>
+<p>That was easy. Just need to publish this and see if I can subscribe to myself?</p>
+</section>
 <section id="references" class="level2">
 
 
@@ -309,21 +313,11 @@ Expertise: Not much | Usefulness: ? | Audience: notes to self
 <div id="ref-R-magrittr" class="csl-entry">
 Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
 </div>
-<div id="ref-R-imager" class="csl-entry">
-Barthelme, Simon. 2022. <em>Imager: Image Processing Library Based on CImg</em>. <a href="https://CRAN.R-project.org/package=imager">https://CRAN.R-project.org/package=imager</a>.
-</div>
 <div id="ref-R-magick" class="csl-entry">
 Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
 </div>
-<div id="ref-R-ambient" class="csl-entry">
-Pedersen, Thomas Lin, and Jordan Peck. 2022. <em>Ambient: A Generator of Multidimensional Noise</em>. <a href="https://CRAN.R-project.org/package=ambient">https://CRAN.R-project.org/package=ambient</a>.
-</div>
-<div id="ref-R-base" class="csl-entry">
-R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
-</div>
 </div></section></div> ]]></description>
-  <category>generative art</category>
-  <category>art</category>
+  <category>RSS</category>
   <guid>https://crumplab.com/blog/776_RSS/index.html</guid>
   <pubDate>Thu, 10 Nov 2022 05:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/776_RSS/images/header.jpg" medium="image" type="image/jpeg"/>
@@ -973,8 +967,8 @@ R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">DT<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">datatable</span>(selected_bib)</span></code></pre></div>
 <div class="cell-output-display">
 
-<div id="htmlwidget-d64fdd4a0a0a90b7a39d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d64fdd4a0a0a90b7a39d">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ecf83ad768555b43f343" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ecf83ad768555b43f343">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>That works, but it doesn’t render the citations. I feel like I have been here before with the <a href="https://www.semanticlibrarian.com">Semantic librarian project</a>.</p>
@@ -984,8 +978,8 @@ R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">reactable<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">reactable</span>(selected_bib)</span></code></pre></div>
 <div class="cell-output-display">
 
-<div id="htmlwidget-1aa2305d21912f8936c8" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-1aa2305d21912f8936c8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"CITATION":["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],"DATE":[1968,1974,1972],"TITLE":["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],"NOTE":["This is a classic paper because...","",""]},"columns":[{"accessor":"CITATION","name":"CITATION","type":"character"},{"accessor":"DATE","name":"DATE","type":"numeric"},{"accessor":"TITLE","name":"TITLE","type":"character"},{"accessor":"NOTE","name":"NOTE","type":"character"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a9e7d622dfc5efd30bf806471a383489"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-dd6cb968875ded861705" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-dd6cb968875ded861705">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"CITATION":["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],"DATE":[1968,1974,1972],"TITLE":["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],"NOTE":["This is a classic paper because...","",""]},"columns":[{"accessor":"CITATION","name":"CITATION","type":"character"},{"accessor":"DATE","name":"DATE","type":"numeric"},{"accessor":"TITLE","name":"TITLE","type":"character"},{"accessor":"NOTE","name":"NOTE","type":"character"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a9e7d622dfc5efd30bf806471a383489"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>This doesn’t render the citations either. But, is there hope? Perhaps custom-rendering: <a href="https://glin.github.io/reactable/articles/custom-rendering.html" class="uri">https://glin.github.io/reactable/articles/custom-rendering.html</a>. Tried some stuff, didn’t work.</p>

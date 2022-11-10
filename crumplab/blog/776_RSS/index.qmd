@@ -6,8 +6,7 @@ date: '2022-11-10'
 date-modified: last-modified
 image: 'images/header.jpg'
 categories:
-  - generative art
-  - art
+  - RSS
 execute:
   echo: false
   warning: false
@@ -18,7 +17,6 @@ bibliography: [packages.bib]
 ```{r, include=FALSE, eval=FALSE}
 knitr::write_bib(file = 'packages.bib')
 ```
-
 
 ```{r}
 #| out.width: 100%
@@ -60,16 +58,15 @@ knitr::include_graphics("images/header.jpg")
 ## Expertise: Not much \| Usefulness: ? \| Audience: notes to self
 :::
 
+I spent the morning coding up some ways to automate header images, not sure I saved myself time, it was equal parts fun and frustrating.
 
-I spent the morning coding up some ways to automate header images, not sure I saved anytime. Equal parts fun and frustrating.
+This post is an an excuse to try out a simple header, and to enable RSS feeds on this blog. What will happen?
 
-Using this post as an excuse to try out a simple header, and to enable RSS feeds on this blog. What will happen?
+Following these [quarto RSS](https://quarto.org/docs/websites/website-blog.html#rss-feed) steps.
 
-Following these [quarto RSS](https://quarto.org/docs/websites/website-blog.html#rss-feed) steps. 
+## Done?
 
-
-
-
+That was easy. Just need to publish this and see if I can subscribe to myself?
 
 ## References
 
