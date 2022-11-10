@@ -23,6 +23,11 @@ Note: This is a loose collection of notes I put together around summer 2020. I h
 -   [Eugenics and Psychology](https://www.crumplab.com/cognition/textbook/eugenics-and-psychology.html)
 -   [Intelligence Testing](https://www.crumplab.com/cognition/textbook/intelligence-testing.html)
 
+In summer 2022 I had a eugenics reading project, go here for a big list of books <https://crumplab.com/blog/post_990_6_28_22_eugenicsbooks/>.
+
+Also, in October 2021 as a part of their [apology to people of color](https://www.apa.org/about/policy/racism-apology), the APA compiled a useful list of the historical involvement of psychologists in eugenics and other injustices: <https://www.apa.org/about/apa/addressing-racism/historical-chronology>. 
+
+
 ------------------------------------------------------------------------
 
 ```{r, out.width="50%", fig.align="center"}
