@@ -361,7 +361,7 @@ knitr::include_graphics("images/header4.jpg")
 
 ### 16:9
 
-What does 16:9 feel like?
+What does 16:9 feel like? NOTE: this is the correct size for mastodon preview windows
 
 ```{r}
 #| out.width: 100%
@@ -410,14 +410,20 @@ knitr::include_graphics("images/header4_16x9.jpg")
 
 ### 1.71
 
+THIS PART IS WRONG, but part of my discovery process.
+
 It seems that mastodon image preview is closer to 1.71 than 1.77 (16:9). So, I will use 1600x 935 pixels for blog headers. Mastodon does not seem to support "large" image cards, and the image preview is shown in a square. This is a test of an example header I might use with a title containing 10 words or so. The words will be roughly inside an inner square, but the header image will be a 1.71 rectangle.
 
+This part is true.
+
 Frown face: magick has a very nice add border function that does not respect image size, it adds a little bit to the image size, making it annoying to resize. Annoyed face.
+
+This code adds a border, but does not expand the image. 16:9 shows equal border in the mastodon preview window. Also, hilariously long. First timer code.
 
 ```{r}
 #| out.width: 100%
 #| echo: true
-noise <- noise_simplex(c(935, 1600),
+noise <- noise_simplex(c(900, 1600),
                          pertubation = 'normal',
                          pertubation_amplitude = 40) %>%
   normalise() %>%
@@ -427,7 +433,7 @@ noise <- noise_simplex(c(935, 1600),
 logo <-  magick::image_read("images/crumplab-logos_black.png")
 logo <- magick::image_scale(logo,"350")
 
-header <- matrix(1,nrow=935,ncol=1600) %>%
+header <- matrix(1,nrow=900,ncol=1600) %>%
   as.raster() %>%
   magick::image_read() %>%
   magick::image_transparent(color="white") %>%
@@ -456,10 +462,14 @@ header <- matrix(1,nrow=935,ncol=1600) %>%
   magick::image_composite(logo,
                           operator = "atop",
                           gravity = "center",
-                          offset = "+0+300") %>%
+                          offset = "+0+300")
+
+border <- magick::image_blank(width = 1600-80,
+                              height = 900-80)
+border <- border %>%
   magick::image_border(color="pink",
-                       geometry = "20x20") %>%
-  magick::image_draw()
+                       geometry = "40x40")
+header <- magick::image_composite(header,border,"atop")
 
 magick::image_write(header,
                     path = "images/header5.jpg",

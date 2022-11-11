@@ -359,7 +359,7 @@ New rating system?
 </div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">16:9</h3>
-<p>What does 16:9 feel like?</p>
+<p>What does 16:9 feel like? NOTE: this is the correct size for mastodon preview windows</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1">noise <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">noise_simplex</span>(<span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">900</span>, <span class="dv" style="color: #AD0000;">1600</span>),</span>
 <span id="cb12-2">                         <span class="at" style="color: #657422;">pertubation =</span> <span class="st" style="color: #20794D;">'normal'</span>,</span>
@@ -408,10 +408,13 @@ New rating system?
 </section>
 <section id="section-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-1">1.71</h3>
+<p>THIS PART IS WRONG, but part of my discovery process.</p>
 <p>It seems that mastodon image preview is closer to 1.71 than 1.77 (16:9). So, I will use 1600x 935 pixels for blog headers. Mastodon does not seem to support “large” image cards, and the image preview is shown in a square. This is a test of an example header I might use with a title containing 10 words or so. The words will be roughly inside an inner square, but the header image will be a 1.71 rectangle.</p>
+<p>This part is true.</p>
 <p>Frown face: magick has a very nice add border function that does not respect image size, it adds a little bit to the image size, making it annoying to resize. Annoyed face.</p>
+<p>This code adds a border, but does not expand the image. 16:9 shows equal border in the mastodon preview window. Also, hilariously long. First timer code.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">noise <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">noise_simplex</span>(<span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">935</span>, <span class="dv" style="color: #AD0000;">1600</span>),</span>
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">noise <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">noise_simplex</span>(<span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">900</span>, <span class="dv" style="color: #AD0000;">1600</span>),</span>
 <span id="cb13-2">                         <span class="at" style="color: #657422;">pertubation =</span> <span class="st" style="color: #20794D;">'normal'</span>,</span>
 <span id="cb13-3">                         <span class="at" style="color: #657422;">pertubation_amplitude =</span> <span class="dv" style="color: #AD0000;">40</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
 <span id="cb13-4">  <span class="fu" style="color: #4758AB;">normalise</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
@@ -421,7 +424,7 @@ New rating system?
 <span id="cb13-8">logo <span class="ot" style="color: #003B4F;">&lt;-</span>  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_read</span>(<span class="st" style="color: #20794D;">"images/crumplab-logos_black.png"</span>)</span>
 <span id="cb13-9">logo <span class="ot" style="color: #003B4F;">&lt;-</span> magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_scale</span>(logo,<span class="st" style="color: #20794D;">"350"</span>)</span>
 <span id="cb13-10"></span>
-<span id="cb13-11">header <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">matrix</span>(<span class="dv" style="color: #AD0000;">1</span>,<span class="at" style="color: #657422;">nrow=</span><span class="dv" style="color: #AD0000;">935</span>,<span class="at" style="color: #657422;">ncol=</span><span class="dv" style="color: #AD0000;">1600</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb13-11">header <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">matrix</span>(<span class="dv" style="color: #AD0000;">1</span>,<span class="at" style="color: #657422;">nrow=</span><span class="dv" style="color: #AD0000;">900</span>,<span class="at" style="color: #657422;">ncol=</span><span class="dv" style="color: #AD0000;">1600</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
 <span id="cb13-12">  <span class="fu" style="color: #4758AB;">as.raster</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
 <span id="cb13-13">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_read</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
 <span id="cb13-14">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_transparent</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"white"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
@@ -450,16 +453,20 @@ New rating system?
 <span id="cb13-37">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_composite</span>(logo,</span>
 <span id="cb13-38">                          <span class="at" style="color: #657422;">operator =</span> <span class="st" style="color: #20794D;">"atop"</span>,</span>
 <span id="cb13-39">                          <span class="at" style="color: #657422;">gravity =</span> <span class="st" style="color: #20794D;">"center"</span>,</span>
-<span id="cb13-40">                          <span class="at" style="color: #657422;">offset =</span> <span class="st" style="color: #20794D;">"+0+300"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb13-41">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_border</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"pink"</span>,</span>
-<span id="cb13-42">                       <span class="at" style="color: #657422;">geometry =</span> <span class="st" style="color: #20794D;">"20x20"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb13-43">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_draw</span>()</span>
-<span id="cb13-44"></span>
-<span id="cb13-45">magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_write</span>(header,</span>
-<span id="cb13-46">                    <span class="at" style="color: #657422;">path =</span> <span class="st" style="color: #20794D;">"images/header5.jpg"</span>,</span>
-<span id="cb13-47">                    <span class="at" style="color: #657422;">format =</span> <span class="st" style="color: #20794D;">"jpeg"</span>)</span>
+<span id="cb13-40">                          <span class="at" style="color: #657422;">offset =</span> <span class="st" style="color: #20794D;">"+0+300"</span>)</span>
+<span id="cb13-41"></span>
+<span id="cb13-42">border <span class="ot" style="color: #003B4F;">&lt;-</span> magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_blank</span>(<span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">1600-80</span>,</span>
+<span id="cb13-43">                              <span class="at" style="color: #657422;">height =</span> <span class="dv" style="color: #AD0000;">900-80</span>)</span>
+<span id="cb13-44">border <span class="ot" style="color: #003B4F;">&lt;-</span> border <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb13-45">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_border</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"pink"</span>,</span>
+<span id="cb13-46">                       <span class="at" style="color: #657422;">geometry =</span> <span class="st" style="color: #20794D;">"40x40"</span>)</span>
+<span id="cb13-47">header <span class="ot" style="color: #003B4F;">&lt;-</span> magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_composite</span>(header,border,<span class="st" style="color: #20794D;">"atop"</span>)</span>
 <span id="cb13-48"></span>
-<span id="cb13-49">knitr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">include_graphics</span>(<span class="st" style="color: #20794D;">"images/header5.jpg"</span>)</span></code></pre></div>
+<span id="cb13-49">magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_write</span>(header,</span>
+<span id="cb13-50">                    <span class="at" style="color: #657422;">path =</span> <span class="st" style="color: #20794D;">"images/header5.jpg"</span>,</span>
+<span id="cb13-51">                    <span class="at" style="color: #657422;">format =</span> <span class="st" style="color: #20794D;">"jpeg"</span>)</span>
+<span id="cb13-52"></span>
+<span id="cb13-53">knitr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">include_graphics</span>(<span class="st" style="color: #20794D;">"images/header5.jpg"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://crumplab.com/blog/777_generative_art/images/header5.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
