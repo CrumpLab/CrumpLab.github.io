@@ -3,6 +3,7 @@ title: "Convincing myself to run a Funkwhale pod"
 description: "Funkwhale is an audio platform thing that supports activitypub. Collecting notes about it."
 author: "Matt Crump"
 date: '2022-11-09'
+image: 'images/header.jpg'
 date-modified: last-modified
 categories:
   - funkwhale
@@ -11,7 +12,72 @@ categories:
   - music
 execute:
   echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| out.width: 100%
+
+library(magick)
+library(ambient)
+library(dplyr)
+
+header_text <- "Convincing myself \n to run a \n Funkwhale pod"
+noise <- noise_simplex(c(900, 1600),
+                         pertubation = 'normal',
+                         pertubation_amplitude = 40) %>%
+  normalise() %>%
+  as.raster() %>%
+  magick::image_read()
+
+logo <-  magick::image_read("images/crumplab-logos_black.png")
+logo <- magick::image_scale(logo,"350")
+
+header <- matrix(1,nrow=900,ncol=1600) %>%
+  as.raster() %>%
+  magick::image_read() %>%
+  magick::image_transparent(color="white") %>%
+  magick::image_background(color="#dcfcf9") %>%
+  magick::image_composite(noise,
+                          operator = "blend", 
+                          compose_args="10") %>%
+  magick::image_blur(radius = 20, sigma = 20) %>%
+  magick::image_annotate(
+    header_text,
+    font = 'CrumpMoebius',
+    location = "+10-40",
+    size = 100,
+    color = "white",
+    gravity = "center",
+  ) %>%
+  magick::image_blur(radius = 20, sigma = 5) %>%
+  magick::image_annotate(
+    header_text,
+    font = 'CrumpMoebius',
+    location = "+0-50",
+    size = 100,
+    color = "black",
+    gravity = "center",
+  ) %>%
+  magick::image_composite(logo,
+                          operator = "atop",
+                          gravity = "center",
+                          offset = "+0+250")
+
+border <- magick::image_blank(width = 1600-80,
+                              height = 900-80)
+border <- border %>%
+  magick::image_border(color="pink",
+                       geometry = "40x40")
+header <- magick::image_composite(header,border,"atop")
+
+magick::image_write(header,
+                    path = "images/header.jpg",
+                    format = "jpeg")
+
+knitr::include_graphics("images/header.jpg")
+```
 
 Expertise: 0 Usefulness: ? Audience: notes to self
 
@@ -43,4 +109,44 @@ Other instructions, possibly helpful for a droplet setup.
 
 <https://geek-cookbook.funkypenguin.co.nz/recipes/funkwhale/>
 
-## Leaving this for another time
+Leaving this for another time...back.
+
+## Start trying
+
+How long will this take? I was hoping to do this all on digital ocean. Will try develop instructions. Starting at 6:42.
+
+Ok, that was super easy.
+
+I created a new Ubuntu droplet on digital ocean. Logged into the terminal by website. I followed these steps from the quick install.
+
+``` {.bash}
+sudo apt-get update
+sudo apt-get install curl
+sudo sh -c "$(curl -sSL https://get.funkwhale.audio/)"
+```
+
+Made an A name to create a new subdomain for my pod. Pressed enter a couple times to say YES during install. Took about 15 minutes, mostly waiting. Now I have a funkwhale pod. huh.
+
+What do I do with this?
+
+![](images/Screen%20Shot%202022-11-12%20at%207.27.54%20AM.png)
+
+## musicbrainz
+
+-   downloaded the musicbrainz app
+
+<https://musicbrainz.org/>
+
+Might have to use this for metadata? After making an account over here, I realize this is mostly for tagging .mp3 libraries of existing music so it is easy to upload with tags.
+
+I could add my own artist info here I guess. Not sure how useful it will be yet for adding metadata around individual tracks I create. It could be very useful, or not. Need to learn more about associating new music audio files I make with all the necessary metadata.
+
+## Issue collection
+
+I have destroyed the droplet.
+
+-   Made my admin account "homophony", which worked all fine and dandy. However, this meant that I couldn't use that handle to create channels and share under that artist name.
+
+-   musicbrainz is interesting and complicated. I should consider listing exist discography there. It seems to be mostly for uploading digital music collections, which is not what I'm interested in doing. Funkwhale could be altogether more than I need it for. Still...curious.
+
+Restarted the droplet...waiting through the install.

@@ -564,6 +564,93 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
 
 
 
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(magick)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to ImageMagick 6.9.12.3
+Enabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp
+Disabled features: fftw, ghostscript, x11</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;">library</span>(ambient)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ambient' was built under R version 4.1.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;">library</span>(dplyr)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.1.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">header_text <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="st" style="color: #20794D;">"Convincing myself </span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;"> to run a </span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;"> Funkwhale pod"</span></span>
+<span id="cb10-2">noise <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">noise_simplex</span>(<span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">900</span>, <span class="dv" style="color: #AD0000;">1600</span>),</span>
+<span id="cb10-3">                         <span class="at" style="color: #657422;">pertubation =</span> <span class="st" style="color: #20794D;">'normal'</span>,</span>
+<span id="cb10-4">                         <span class="at" style="color: #657422;">pertubation_amplitude =</span> <span class="dv" style="color: #AD0000;">40</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-5">  <span class="fu" style="color: #4758AB;">normalise</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-6">  <span class="fu" style="color: #4758AB;">as.raster</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-7">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_read</span>()</span>
+<span id="cb10-8"></span>
+<span id="cb10-9">logo <span class="ot" style="color: #003B4F;">&lt;-</span>  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_read</span>(<span class="st" style="color: #20794D;">"images/crumplab-logos_black.png"</span>)</span>
+<span id="cb10-10">logo <span class="ot" style="color: #003B4F;">&lt;-</span> magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_scale</span>(logo,<span class="st" style="color: #20794D;">"350"</span>)</span>
+<span id="cb10-11"></span>
+<span id="cb10-12">header <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">matrix</span>(<span class="dv" style="color: #AD0000;">1</span>,<span class="at" style="color: #657422;">nrow=</span><span class="dv" style="color: #AD0000;">900</span>,<span class="at" style="color: #657422;">ncol=</span><span class="dv" style="color: #AD0000;">1600</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-13">  <span class="fu" style="color: #4758AB;">as.raster</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-14">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_read</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-15">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_transparent</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"white"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-16">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_background</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"#dcfcf9"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-17">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_composite</span>(noise,</span>
+<span id="cb10-18">                          <span class="at" style="color: #657422;">operator =</span> <span class="st" style="color: #20794D;">"blend"</span>, </span>
+<span id="cb10-19">                          <span class="at" style="color: #657422;">compose_args=</span><span class="st" style="color: #20794D;">"10"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-20">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_blur</span>(<span class="at" style="color: #657422;">radius =</span> <span class="dv" style="color: #AD0000;">20</span>, <span class="at" style="color: #657422;">sigma =</span> <span class="dv" style="color: #AD0000;">20</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-21">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_annotate</span>(</span>
+<span id="cb10-22">    header_text,</span>
+<span id="cb10-23">    <span class="at" style="color: #657422;">font =</span> <span class="st" style="color: #20794D;">'CrumpMoebius'</span>,</span>
+<span id="cb10-24">    <span class="at" style="color: #657422;">location =</span> <span class="st" style="color: #20794D;">"+10-40"</span>,</span>
+<span id="cb10-25">    <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">100</span>,</span>
+<span id="cb10-26">    <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"white"</span>,</span>
+<span id="cb10-27">    <span class="at" style="color: #657422;">gravity =</span> <span class="st" style="color: #20794D;">"center"</span>,</span>
+<span id="cb10-28">  ) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-29">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_blur</span>(<span class="at" style="color: #657422;">radius =</span> <span class="dv" style="color: #AD0000;">20</span>, <span class="at" style="color: #657422;">sigma =</span> <span class="dv" style="color: #AD0000;">5</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-30">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_annotate</span>(</span>
+<span id="cb10-31">    header_text,</span>
+<span id="cb10-32">    <span class="at" style="color: #657422;">font =</span> <span class="st" style="color: #20794D;">'CrumpMoebius'</span>,</span>
+<span id="cb10-33">    <span class="at" style="color: #657422;">location =</span> <span class="st" style="color: #20794D;">"+0-50"</span>,</span>
+<span id="cb10-34">    <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">100</span>,</span>
+<span id="cb10-35">    <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"black"</span>,</span>
+<span id="cb10-36">    <span class="at" style="color: #657422;">gravity =</span> <span class="st" style="color: #20794D;">"center"</span>,</span>
+<span id="cb10-37">  ) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-38">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_composite</span>(logo,</span>
+<span id="cb10-39">                          <span class="at" style="color: #657422;">operator =</span> <span class="st" style="color: #20794D;">"atop"</span>,</span>
+<span id="cb10-40">                          <span class="at" style="color: #657422;">gravity =</span> <span class="st" style="color: #20794D;">"center"</span>,</span>
+<span id="cb10-41">                          <span class="at" style="color: #657422;">offset =</span> <span class="st" style="color: #20794D;">"+0+250"</span>)</span>
+<span id="cb10-42"></span>
+<span id="cb10-43">border <span class="ot" style="color: #003B4F;">&lt;-</span> magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_blank</span>(<span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">1600-80</span>,</span>
+<span id="cb10-44">                              <span class="at" style="color: #657422;">height =</span> <span class="dv" style="color: #AD0000;">900-80</span>)</span>
+<span id="cb10-45">border <span class="ot" style="color: #003B4F;">&lt;-</span> border <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb10-46">  magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_border</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"pink"</span>,</span>
+<span id="cb10-47">                       <span class="at" style="color: #657422;">geometry =</span> <span class="st" style="color: #20794D;">"40x40"</span>)</span>
+<span id="cb10-48">header <span class="ot" style="color: #003B4F;">&lt;-</span> magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_composite</span>(header,border,<span class="st" style="color: #20794D;">"atop"</span>)</span>
+<span id="cb10-49"></span>
+<span id="cb10-50">magick<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">image_write</span>(header,</span>
+<span id="cb10-51">                    <span class="at" style="color: #657422;">path =</span> <span class="st" style="color: #20794D;">"images/header.jpg"</span>,</span>
+<span id="cb10-52">                    <span class="at" style="color: #657422;">format =</span> <span class="st" style="color: #20794D;">"jpeg"</span>)</span>
+<span id="cb10-53"></span>
+<span id="cb10-54">knitr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">include_graphics</span>(<span class="st" style="color: #20794D;">"images/header.jpg"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/778_funkwhale/images/header.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
 <p>Expertise: 0 Usefulness: ? Audience: notes to self</p>
 <p>I love music: listening to it and making it. I’ve had increasingly less time for music, and am trying to find more time for it. So, as a part of learning mastodon I created an account for my music interests:</p>
 <p><a href="https://bbs.crumplab.com/@homophony">https://bbs.crumplab.com/@homophony</a></p>
@@ -582,9 +669,35 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
 <p>Installation dev instructions <a href="https://docs.funkwhale.audio/installation/" class="uri">https://docs.funkwhale.audio/installation/</a></p>
 <p>Other instructions, possibly helpful for a droplet setup.</p>
 <p><a href="https://geek-cookbook.funkypenguin.co.nz/recipes/funkwhale/" class="uri">https://geek-cookbook.funkypenguin.co.nz/recipes/funkwhale/</a></p>
+<p>Leaving this for another time…back.</p>
 </section>
-<section id="leaving-this-for-another-time" class="level2">
-<h2 class="anchored" data-anchor-id="leaving-this-for-another-time">Leaving this for another time</h2>
+<section id="start-trying" class="level2">
+<h2 class="anchored" data-anchor-id="start-trying">Start trying</h2>
+<p>How long will this take? I was hoping to do this all on digital ocean. Will try develop instructions. Starting at 6:42.</p>
+<p>Ok, that was super easy.</p>
+<p>I created a new Ubuntu droplet on digital ocean. Logged into the terminal by website. I followed these steps from the quick install.</p>
+<pre><code>sudo apt-get update
+sudo apt-get install curl
+sudo sh -c "$(curl -sSL https://get.funkwhale.audio/)"</code></pre>
+<p>Made an A name to create a new subdomain for my pod. Pressed enter a couple times to say YES during install. Took about 15 minutes, mostly waiting. Now I have a funkwhale pod. huh.</p>
+<p>What do I do with this?</p>
+<p><img src="https://crumplab.com/blog/778_funkwhale/images/Screen Shot 2022-11-12 at 7.27.54 AM.png" class="img-fluid"></p>
+</section>
+<section id="musicbrainz" class="level2">
+<h2 class="anchored" data-anchor-id="musicbrainz">musicbrainz</h2>
+<ul>
+<li>downloaded the musicbrainz app</li>
+</ul>
+<p><a href="https://musicbrainz.org/" class="uri">https://musicbrainz.org/</a></p>
+<p>Might have to use this for metadata?</p>
+</section>
+<section id="issue-collection" class="level2">
+<h2 class="anchored" data-anchor-id="issue-collection">Issue collection</h2>
+<p>I have destroyed the droplet.</p>
+<ul>
+<li><p>Made my admin account “homophony”, which worked all fine and dandy. However, this meant that I couldn’t use that handle to create channels and share under that artist name.</p></li>
+<li><p>musicbrainz is interesting and complicated. I should consider listing exist discography there. It seems to be mostly for uploading digital music collections, which is not what I’m interested in doing. Funkwhale could be altogether more than I need it for. Still…curious.</p></li>
+</ul>
 
 
 </section>
@@ -596,6 +709,7 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
   <category>music</category>
   <guid>https://crumplab.com/blog/778_funkwhale/index.html</guid>
   <pubDate>Wed, 09 Nov 2022 05:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/778_funkwhale/images/header.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Debriefing my mastodon migration</title>
