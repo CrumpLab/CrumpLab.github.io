@@ -245,6 +245,9 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <li><a href="#start-trying" id="toc-start-trying" class="nav-link" data-scroll-target="#start-trying">Start trying</a></li>
   <li><a href="#musicbrainz" id="toc-musicbrainz" class="nav-link" data-scroll-target="#musicbrainz">musicbrainz</a></li>
   <li><a href="#issue-collection" id="toc-issue-collection" class="nav-link" data-scroll-target="#issue-collection">Issue collection</a></li>
+  <li><a href="#creating-a-channel-and-frustrations" id="toc-creating-a-channel-and-frustrations" class="nav-link" data-scroll-target="#creating-a-channel-and-frustrations">Creating a channel and frustrations</a></li>
+  <li><a href="#activitypub" id="toc-activitypub" class="nav-link" data-scroll-target="#activitypub">Activitypub?</a></li>
+  <li><a href="#embed-playlist-audio-player" id="toc-embed-playlist-audio-player" class="nav-link" data-scroll-target="#embed-playlist-audio-player">Embed playlist audio player</a></li>
   </ul>
 </nav>
     </div>
@@ -288,7 +291,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 12, 2022</p>
+      <p class="date-modified">November 13, 2022</p>
     </div>
   </div>
     
@@ -350,7 +353,31 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <li><p>Made my admin account “homophony”, which worked all fine and dandy. However, this meant that I couldn’t use that handle to create channels and share under that artist name.</p></li>
 <li><p>musicbrainz is interesting and complicated. I should consider listing exist discography there. It seems to be mostly for uploading digital music collections, which is not what I’m interested in doing. Funkwhale could be altogether more than I need it for. Still…curious.</p></li>
 </ul>
-<p>Restarted the droplet…waiting through the install</p>
+<p>Restarted the droplet…waiting through the install.</p>
+<p>Got messed up with the certbot, needed to change the A name record so my subdomain pointed to the droplet.</p>
+</section>
+<section id="creating-a-channel-and-frustrations" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-channel-and-frustrations">Creating a channel and frustrations</h2>
+<p>I spent a couple hours getting the pod up and running on digital ocean, and most of that time was me making little mistakes.</p>
+<p>After I got the pod fully up and running I made sure my admin name was NOT my artist name. Then, I made an artist channel to share some tracks. There is a choice between music channels and podcast channels. I’m not planning to do any podcasting here, but the functionality for that looked good (it may integrate with podcasting services for indexing).</p>
+<p>Creating a music channel was easy, and uploading tracks was easy. And, it seemed easy to share the link to the channel so other people could listen to it. I could listen to the tracks, but for a whole day anytime I accessed the funkwhale channel as a “non-logged in” user, I got a spinning wheel. I had to allow unauthenticated users access to the api, and that seemed to have worked? I’m testing right now.</p>
+<p>Last night I almost gave up on this funkwhale thing, but I might persist just a little bit.</p>
+<p>I’m not totally sure what features I’m looking for.</p>
+<ul>
+<li><p>Ability to upload tracks and share them in a playlist</p></li>
+<li><p>Ability to get some metrics on listening</p></li>
+<li><p>Comments or notes per track? Not sure how much I want this feature.</p></li>
+</ul>
+</section>
+<section id="activitypub" class="level2">
+<h2 class="anchored" data-anchor-id="activitypub">Activitypub?</h2>
+<p>I can use mastodon to follow my account on funkwhale, and then post to my funkwhale account from mastodon; but, where does the post go? I can’t receive on funkwhale?</p>
+</section>
+<section id="embed-playlist-audio-player" class="level2">
+<h2 class="anchored" data-anchor-id="embed-playlist-audio-player">Embed playlist audio player</h2>
+<p>This part looks fun. I’m placing embed code to see if the playlist shows up here.</p>
+<iframe width="100%" height="330" scrolling="no" frameborder="no" src="https://audio.crumplab.com/front/embed.html?&amp;type=artist&amp;id=1">
+</iframe>
 
 
 </section>

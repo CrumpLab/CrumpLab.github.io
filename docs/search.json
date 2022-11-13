@@ -1901,6 +1901,27 @@
     "href": "blog/778_funkwhale/index.html#issue-collection",
     "title": "Convincing myself to run a Funkwhale pod",
     "section": "Issue collection",
-    "text": "Issue collection\nI have destroyed the droplet.\n\nMade my admin account “homophony”, which worked all fine and dandy. However, this meant that I couldn’t use that handle to create channels and share under that artist name.\nmusicbrainz is interesting and complicated. I should consider listing exist discography there. It seems to be mostly for uploading digital music collections, which is not what I’m interested in doing. Funkwhale could be altogether more than I need it for. Still…curious.\n\nRestarted the droplet…waiting through the install"
+    "text": "Issue collection\nI have destroyed the droplet.\n\nMade my admin account “homophony”, which worked all fine and dandy. However, this meant that I couldn’t use that handle to create channels and share under that artist name.\nmusicbrainz is interesting and complicated. I should consider listing exist discography there. It seems to be mostly for uploading digital music collections, which is not what I’m interested in doing. Funkwhale could be altogether more than I need it for. Still…curious.\n\nRestarted the droplet…waiting through the install.\nGot messed up with the certbot, needed to change the A name record so my subdomain pointed to the droplet."
+  },
+  {
+    "objectID": "blog/778_funkwhale/index.html#creating-a-channel-and-frustrations",
+    "href": "blog/778_funkwhale/index.html#creating-a-channel-and-frustrations",
+    "title": "Convincing myself to run a Funkwhale pod",
+    "section": "Creating a channel and frustrations",
+    "text": "Creating a channel and frustrations\nI spent a couple hours getting the pod up and running on digital ocean, and most of that time was me making little mistakes.\nAfter I got the pod fully up and running I made sure my admin name was NOT my artist name. Then, I made an artist channel to share some tracks. There is a choice between music channels and podcast channels. I’m not planning to do any podcasting here, but the functionality for that looked good (it may integrate with podcasting services for indexing).\nCreating a music channel was easy, and uploading tracks was easy. And, it seemed easy to share the link to the channel so other people could listen to it. I could listen to the tracks, but for a whole day anytime I accessed the funkwhale channel as a “non-logged in” user, I got a spinning wheel. I had to allow unauthenticated users access to the api, and that seemed to have worked? I’m testing right now.\nLast night I almost gave up on this funkwhale thing, but I might persist just a little bit.\nI’m not totally sure what features I’m looking for.\n\nAbility to upload tracks and share them in a playlist\nAbility to get some metrics on listening\nComments or notes per track? Not sure how much I want this feature."
+  },
+  {
+    "objectID": "blog/778_funkwhale/index.html#activitypub",
+    "href": "blog/778_funkwhale/index.html#activitypub",
+    "title": "Convincing myself to run a Funkwhale pod",
+    "section": "Activitypub?",
+    "text": "Activitypub?\nI can use mastodon to follow my account on funkwhale, and then post to my funkwhale account from mastodon; but, where does the post go? I can’t receive on funkwhale?"
+  },
+  {
+    "objectID": "blog/778_funkwhale/index.html#embed-playlist-audio-player",
+    "href": "blog/778_funkwhale/index.html#embed-playlist-audio-player",
+    "title": "Convincing myself to run a Funkwhale pod",
+    "section": "Embed playlist audio player",
+    "text": "Embed playlist audio player\nThis part looks fun. I’m placing embed code to see if the playlist shows up here."
   }
 ]

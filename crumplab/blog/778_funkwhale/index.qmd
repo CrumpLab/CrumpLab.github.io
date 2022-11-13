@@ -119,7 +119,7 @@ Ok, that was super easy.
 
 I created a new Ubuntu droplet on digital ocean. Logged into the terminal by website. I followed these steps from the quick install.
 
-``` {.bash}
+``` bash
 sudo apt-get update
 sudo apt-get install curl
 sudo sh -c "$(curl -sSL https://get.funkwhale.audio/)"
@@ -150,3 +150,35 @@ I have destroyed the droplet.
 -   musicbrainz is interesting and complicated. I should consider listing exist discography there. It seems to be mostly for uploading digital music collections, which is not what I'm interested in doing. Funkwhale could be altogether more than I need it for. Still...curious.
 
 Restarted the droplet...waiting through the install.
+
+Got messed up with the certbot, needed to change the A name record so my subdomain pointed to the droplet.
+
+## Creating a channel and frustrations
+
+I spent a couple hours getting the pod up and running on digital ocean, and most of that time was me making little mistakes.
+
+After I got the pod fully up and running I made sure my admin name was NOT my artist name. Then, I made an artist channel to share some tracks. There is a choice between music channels and podcast channels. I'm not planning to do any podcasting here, but the functionality for that looked good (it may integrate with podcasting services for indexing).
+
+Creating a music channel was easy, and uploading tracks was easy. And, it seemed easy to share the link to the channel so other people could listen to it. I could listen to the tracks, but for a whole day anytime I accessed the funkwhale channel as a "non-logged in" user, I got a spinning wheel. I had to allow unauthenticated users access to the api, and that seemed to have worked? I'm testing right now.
+
+Last night I almost gave up on this funkwhale thing, but I might persist just a little bit.
+
+I'm not totally sure what features I'm looking for.
+
+-   Ability to upload tracks and share them in a playlist
+
+-   Ability to get some metrics on listening
+
+-   Comments or notes per track? Not sure how much I want this feature.
+
+## Activitypub?
+
+I can use mastodon to follow my account on funkwhale, and then post to my funkwhale account from mastodon; but, where does the post go? I can't receive on funkwhale?
+
+## Embed playlist audio player
+
+This part looks fun. I'm placing embed code to see if the playlist shows up here.
+
+<iframe width="100%" height="330" scrolling="no" frameborder="no" src="https://audio.crumplab.com/front/embed.html?&amp;type=artist&amp;id=1"></iframe>
+
+
