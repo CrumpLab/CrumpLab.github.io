@@ -1922,6 +1922,20 @@
     "href": "blog/778_funkwhale/index.html#embed-playlist-audio-player",
     "title": "Convincing myself to run a Funkwhale pod",
     "section": "Embed playlist audio player",
-    "text": "Embed playlist audio player\nThis part looks fun. I’m placing embed code to see if the playlist shows up here."
+    "text": "Embed playlist audio player\nThis part looks fun. I’m placing embed code to see if the playlist shows up here.\n\n\nThe embed worked, but this won’t work later if I shut down my funkwhale server."
+  },
+  {
+    "objectID": "blog/778_funkwhale/index.html#castopod",
+    "href": "blog/778_funkwhale/index.html#castopod",
+    "title": "Convincing myself to run a Funkwhale pod",
+    "section": "Castopod",
+    "text": "Castopod\nOpen source software for podcasting…useful for a music channel?\nhttps://code.castopod.org/adaures/castopod"
+  },
+  {
+    "objectID": "blog/778_funkwhale/index.html#channel-stuff",
+    "href": "blog/778_funkwhale/index.html#channel-stuff",
+    "title": "Convincing myself to run a Funkwhale pod",
+    "section": "Channel stuff",
+    "text": "Channel stuff\nI’m currently manicuring a channel to what happens with that. This is involving using midjourney to make cover art from the track notes I used to describe each piece.\nNot sure I will keep with funkwhale, but I like that everything is going into a structured database that I could use later."
   }
 ]

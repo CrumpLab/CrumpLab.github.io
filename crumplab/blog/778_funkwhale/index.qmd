@@ -181,4 +181,17 @@ This part looks fun. I'm placing embed code to see if the playlist shows up here
 
 <iframe width="100%" height="330" scrolling="no" frameborder="no" src="https://audio.crumplab.com/front/embed.html?&amp;type=artist&amp;id=1"></iframe>
 
+The embed worked, but this won't work later if I shut down my funkwhale server.
+
+## Castopod
+
+Open source software for podcasting...useful for a music channel?
+
+<https://code.castopod.org/adaures/castopod>
+
+## Channel stuff
+
+I'm currently manicuring a channel to what happens with that. This is involving using midjourney to make cover art from the track notes I used to describe each piece.
+
+Not sure I will keep with funkwhale, but I like that everything is going into a structured database that I could use later.
 
