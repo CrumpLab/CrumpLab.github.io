@@ -683,7 +683,7 @@
     "href": "blog/778_funkwhale/index.html#funkwhale-notes",
     "title": "Convincing myself to run a Funkwhale pod",
     "section": "Funkwhale notes",
-    "text": "Funkwhale notes\nUsing this space for note collection on funkwhale.\nMain site: https://funkwhale.audio\nFunkwhale forum: https://forum.funkwhale.audio\nFunkwhale on mastodon: https://fosstodon.org/@funkwhale\nDashboard of Funkwhale pods https://network.funkwhale.audio/dashboards/d/overview/funkwhale-network-overview?orgId=1&refresh=2h"
+    "text": "Funkwhale notes\nUsing this space for note collection on funkwhale.\nMain site: https://funkwhale.audio\nFunkwhale forum: https://forum.funkwhale.audio\nFunkwhale on mastodon: https://fosstodon.org/@funkwhale\nDashboard of Funkwhale pods https://network.funkwhale.audio/dashboards/d/overview/funkwhale-network-overview?orgId=1&refresh=2h\nDev and issues: https://dev.funkwhale.audio/funkwhale"
   },
   {
     "objectID": "blog/778_funkwhale/index.html#spinning-up",
@@ -1937,5 +1937,19 @@
     "title": "Convincing myself to run a Funkwhale pod",
     "section": "Channel stuff",
     "text": "Channel stuff\nI’m currently manicuring a channel to what happens with that. This is involving using midjourney to make cover art from the track notes I used to describe each piece.\nNot sure I will keep with funkwhale, but I like that everything is going into a structured database that I could use later."
+  },
+  {
+    "objectID": "blog/778_funkwhale/index.html#gitlab",
+    "href": "blog/778_funkwhale/index.html#gitlab",
+    "title": "Convincing myself to run a Funkwhale pod",
+    "section": "Gitlab",
+    "text": "Gitlab\nhttps://dev.funkwhale.audio/funkwhale/funkwhale/-/issues/1304"
+  },
+  {
+    "objectID": "blog/778_funkwhale/index.html#learn-more",
+    "href": "blog/778_funkwhale/index.html#learn-more",
+    "title": "Convincing myself to run a Funkwhale pod",
+    "section": "Learn more",
+    "text": "Learn more\nLots of other OSS audio-streaming options, should check those out.\nhttps://github.com/awesome-selfhosted/awesome-selfhosted#media-streaming---audio-streaming"
   }
 ]

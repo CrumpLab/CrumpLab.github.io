@@ -101,6 +101,8 @@ Funkwhale on mastodon: [https://fosstodon.org/\@funkwhale](https://fosstodon.org
 
 Dashboard of Funkwhale pods <https://network.funkwhale.audio/dashboards/d/overview/funkwhale-network-overview?orgId=1&refresh=2h>
 
+Dev and issues: <https://dev.funkwhale.audio/funkwhale>
+
 ## Spinning up
 
 Installation dev instructions <https://docs.funkwhale.audio/installation/>
@@ -194,4 +196,14 @@ Open source software for podcasting...useful for a music channel?
 I'm currently manicuring a channel to what happens with that. This is involving using midjourney to make cover art from the track notes I used to describe each piece.
 
 Not sure I will keep with funkwhale, but I like that everything is going into a structured database that I could use later.
+
+## Gitlab
+
+<https://dev.funkwhale.audio/funkwhale/funkwhale/-/issues/1304>
+
+## Learn more
+
+Lots of other OSS audio-streaming options, should check those out.
+
+<https://github.com/awesome-selfhosted/awesome-selfhosted#media-streaming---audio-streaming>
 
