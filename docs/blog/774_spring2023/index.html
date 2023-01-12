@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Matt Crump">
-<meta name="dcterms.date" content="2022-11-14">
-<meta name="description" content="I’m trying the new rtoot package to interact with mastodon using the API. And, I’m practicing adding alt text to images that I will likely re-use.">
+<meta name="dcterms.date" content="2023-01-12">
+<meta name="description" content="Writing for personal motivation and organization around teaching this coming Spring semester. Odd notes about process. A narrative form to-do list. For me, sharing for fun.">
 
-<title>crumplab - Testing rtoot and managing alt text for images</title>
+<title>crumplab - Two new courses and getting into the swing with spring</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,13 +92,13 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="crumplab - Testing rtoot and managing alt text for images">
-<meta property="og:description" content="I'm trying the new rtoot package to interact with mastodon using the API. And, I'm practicing adding alt text to images that I will likely re-use.">
-<meta property="og:image" content="https://crumplab.com/blog/775_Rtoot_alt_text/images/header.jpg">
+<meta property="og:title" content="crumplab - Two new courses and getting into the swing with spring">
+<meta property="og:description" content="Writing for personal motivation and organization around teaching this coming Spring semester. Odd notes about process. A narrative form to-do list. For me, sharing for fun.">
+<meta property="og:image" content="https://crumplab.com/blog/774_spring2023/images/header.jpg">
 <meta property="og:site-name" content="crumplab">
-<meta name="twitter:title" content="crumplab - Testing rtoot and managing alt text for images">
-<meta name="twitter:description" content="I'm trying the new rtoot package to interact with mastodon using the API. And, I'm practicing adding alt text to images that I will likely re-use.">
-<meta name="twitter:image" content="https://crumplab.com/blog/775_Rtoot_alt_text/images/header.jpg">
+<meta name="twitter:title" content="crumplab - Two new courses and getting into the swing with spring">
+<meta name="twitter:description" content="Writing for personal motivation and organization around teaching this coming Spring semester. Odd notes about process. A narrative form to-do list. For me, sharing for fun.">
+<meta name="twitter:image" content="https://crumplab.com/blog/774_spring2023/images/header.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -192,33 +192,22 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#rtoot" id="toc-rtoot" class="nav-link active" data-scroll-target="#rtoot">rtoot</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Testing rtoot and managing alt text for images</h1>
+<h1 class="title">Two new courses and getting into the swing with spring</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">mastodon</div>
-    <div class="quarto-category">rtoot</div>
-    <div class="quarto-category">alt text</div>
-    <div class="quarto-category">midjourney</div>
-    <div class="quarto-category">generative art</div>
+    <div class="quarto-category">RSS</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    I’m trying the new rtoot package to interact with mastodon using the API. And, I’m practicing adding alt text to images that I will likely re-use.
+    Writing for personal motivation and organization around teaching this coming Spring semester. Odd notes about process. A narrative form to-do list. For me, sharing for fun.
   </div>
 </div>
 
@@ -235,7 +224,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 14, 2022</p>
+      <p class="date">January 12, 2023</p>
     </div>
   </div>
   
@@ -251,45 +240,29 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 </header>
 
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/header.jpg" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Expertise: Not much | Usefulness: decent | Audience: notes to self
+Expertise: growing | Usefulness: 5 stars | Audience: notes to self
 </div>
 </div>
 <div class="callout-body-container callout-body">
 
 </div>
 </div>
-<p>Using mastodon has prompted me to get in the habit of adding alt text to images in my posts. On the one hand, mastodon makes it easy to add alt text to images, and on the other hand I’ve noticed that adding alt text can be very cumbersome especially when many images are involved, and I have plans to repost them. My understanding, at least the way I’m doing it, is the alt text has to be entered every time you post an image.</p>
-<p>I tried downloading an image that I posted with alt-text, and then re-posting it to see if the alt-text was preserved, but it was not. I was hoping mastodon might take the alt-text and embed it into the EXIF image data, and/or automatically scrape EXIF image data and use it for alt-text. This functionality is currently a <a href="https://github.com/mastodon/mastodon/issues/14903">feature request over at github issues</a>.</p>
-<p>In the meantime, I have a case where I’d like to automate the alt-text process for 13+ images. Over the weekend I used midjourney to generate fake album cover art for some basement tape tracks I’m working on. I posted each track on the <a href="https://bbs.crumplab.com/@homophony">homphony timeline</a> and for each cover art image I uploaded alt text containing brief descriptions of the image, and the midjourney prompt that I used to create the image. After a morning of fun doing this I wanted to post all of the pictures with alt-text together on my art focused account. However, I would have to manually add all of the alt-text all over again to all of the images. I didn’t do that because I didn’t have time to do that. And, I wasn’t thinking ahead about digital asset management, so I didn’t adopt a process that would allow me to repost with the images with alt-text.</p>
-<p>This post should help me with two things. I’m going to try out the new R API client for mastodon called <a href="https://github.com/schochastics/rtoot">rtoot</a>, and I should be able to download posts, images, and alt text from one account, and then repost them with alt text to another account.</p>
-<section id="rtoot" class="level2">
-<h2 class="anchored" data-anchor-id="rtoot">rtoot</h2>
-<p>I followed the instructions in the rtoot vignette to get my authentication set up.</p>
-<div class="cell">
-
-</div>
-<p>Can only get 20 statuses.</p>
-<div class="cell">
-
-</div>
-</section>
-<section id="references" class="level2">
+<p>Teaching at CUNY comes with a January intercession. Every year I appreciate the time to decompress from the Fall semester and gear up the Spring. This round I found myself decompressing by playing through Zelda: Breath of the wild on Nintendo switch. I'm a few years late to the platform. It's a great game. Very distracting.</p>
+<p>Now I must undistract myself. I have two new preps coming up for Spring, and it's time make some different recipes (my favorite part of Zelda BOTW is making recipes with ingredients you pick up ❤️). I've previously blogged a bit about courses I'm teaching, and have found the process useful for materializing stories in my head about what I imagine I'm trying to accomplish in the course. I spend a good deal of time imagining course structures, but writing it all down helps to firm up the directions. So, this is one is for me.</p>
+<p>I have two new and very different courses, and I could do a post for each. But, I'll try them together. Both are undergraduate courses. The first course is called "The people of New York City", and the second course is called…Ha. This process is already working out. I can never remember formal course names. My go too strategy is to load up my lab webpage and click on the courses tab. In general, for each course I make websites and share out my course materials, and this also makes it easy to find course details quickly. But, I see that I was not as far along as I thought. I have made course websites for both course, but I have not linked to them on my lab webpage. I should go do that, and then come back here to continue the narrative form to-do list.</p>
+<p>BRB.</p>
+<p>OOf, the scary part. I upgraded R and R studio a few weeks ago. I use these and quarto to generate websites, including my lab website. So, will it compile? And, if not, how long will it take. Let's find out…Thankfully I only had to update one library. Not too bad. Let's try this again.</p>
+<p>But, one more tangent. I'm currently writing this post in <a href="http://notion.so">notion.so</a>. I think I really like notion. It's fast, fun and functional. I can basically write fast in markdown with bells and whistles. My blog is on my website, and written using quarto. If I want this to be there, then I need copy this into a .qmd document, and set up a new blog post. I was hoping to write mostly in notion and then copy over to quarto later. But, as I was about to start adding external links, I wasn't totally sure how notion markdown and quarto markdown will play together. Let's find out.</p>
+<p>The link to my lab website that now has my course list is <a href="http://crumplab.com/courses">crumplab.com/courses</a>. I'm still writing in notion, and wrote that link as plain text. It is not clickable. But! it is clickable when I copy/pasted it into the visual editor in R studio. Nice.</p>
 
 
 
-
-</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-R-magrittr" class="csl-entry" role="doc-biblioentry">
