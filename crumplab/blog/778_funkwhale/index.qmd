@@ -207,3 +207,12 @@ Lots of other OSS audio-streaming options, should check those out.
 
 <https://github.com/awesome-selfhosted/awesome-selfhosted#media-streaming---audio-streaming>
 
+## things to read
+
+<https://ins-rt.net/text/sounds-from-the-fediverse-an-introduction-to-funkwhale-a-decentralised-community-audio-platform>
+
+<https://ins-rt.net/text/revaluing-music-in-the-digital-economy-an-interview-with-austin-hou-from-currents>
+
+<https://www.theslowmusicmovement.org/about.html>
+
+

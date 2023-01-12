@@ -16,6 +16,46 @@ knitr::include_graphics('images/courses_banner.jpg')
 
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.
 
+# Spring 2023
+
+::: columns
+::: {.column width="70%"}
+## [MCHC 1002 Seminar 2: People of New York City](https://crumplab.github.io/peopleofnyc/)
+
+Brooklyn College of CUNY, Undergraduate, Macaulay Honors Seminar 2
+
+:::
+
+::: {.column width="30%"}
+<a href="https://crumplab.github.io/peopleofnyc/">
+
+```{r peopleNYC, out.width=150, echo=F}
+knitr::include_graphics("images/peopleNYC.jpg")
+```
+
+</a>
+:::
+:::
+
+::: columns
+::: {.column width="70%"}
+## [Psyc 3470/SOCY 3507 Data Analytics and Data Visualization in the Social and Behavioral Sciences](https://crumplab.github.io/psyc3470)
+
+Brooklyn College of CUNY, Undergraduate, Psychology
+
+:::
+
+::: {.column width="30%"}
+<a href="https://crumplab.github.io/psyc3470">
+
+```{r psyc3470, out.width=150, echo=F}
+knitr::include_graphics("images/ads.png")
+```
+
+</a>
+:::
+:::
+
 # Fall 2022
 
 ::: columns

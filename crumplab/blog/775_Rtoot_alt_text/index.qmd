@@ -1,0 +1,115 @@
+---
+title: "Testing rtoot and managing alt text for images"
+description: "I'm trying the new rtoot package to interact with mastodon using the API. And, I'm practicing adding alt text to images that I will likely re-use."
+author: "Matt Crump"
+date: '2022-11-14'
+date-modified: last-modified
+image: 'images/header.jpg'
+draft: true
+categories:
+  - mastodon
+  - rtoot
+  - alt text
+  - midjourney
+  - generative art
+execute:
+  echo: false
+  warning: false
+  message: false
+  eval: false
+bibliography: [packages.bib]
+---
+
+```{r, include=FALSE, eval=FALSE}
+knitr::write_bib(file = 'packages.bib')
+```
+
+```{r}
+#| out.width: 100%
+#| eval: true
+
+library(magrittr)
+library(magick)
+header <- matrix(1,nrow=500,ncol=1000) %>%
+  as.raster() %>%
+  image_read() %>%
+  magick::image_transparent(color="white") %>%
+  magick::image_background(color="#ccffff") %>%
+  magick::image_annotate(
+    " Testing rtoot and \n managing alt text \n for images",
+    font = 'Impact',
+    size = 100,
+    color = "black",
+    location = "+10+85"
+  ) %>%
+  magick::image_blur(radius = 100, sigma = 5) %>%
+  magick::image_annotate(
+    " Testing rtoot and \n managing alt text \n for images",
+    font = 'Impact',
+    size = 100,
+    color = "darkgrey",
+    location = "+0+75",
+    strokecolor = "pink"
+  )
+
+
+magick::image_write(header,
+                    path = "images/header.jpg",
+                    format = "jpeg")
+
+knitr::include_graphics("images/header.jpg")
+
+```
+
+::: callout-note
+## Expertise: Not much \| Usefulness: decent \| Audience: notes to self
+:::
+
+Using mastodon has prompted me to get in the habit of adding alt text to images in my posts. On the one hand, mastodon makes it easy to add alt text to images, and on the other hand I've noticed that adding alt text can be very cumbersome especially when many images are involved, and I have plans to repost them. My understanding, at least the way I'm doing it, is the alt text has to be entered every time you post an image.
+
+I tried downloading an image that I posted with alt-text, and then re-posting it to see if the alt-text was preserved, but it was not. I was hoping mastodon might take the alt-text and embed it into the EXIF image data, and/or automatically scrape EXIF image data and use it for alt-text. This functionality is currently a [feature request over at github issues](https://github.com/mastodon/mastodon/issues/14903).
+
+In the meantime, I have a case where I'd like to automate the alt-text process for 13+ images. Over the weekend I used midjourney to generate fake album cover art for some basement tape tracks I'm working on. I posted each track on the [homphony timeline](https://bbs.crumplab.com/@homophony) and for each cover art image I uploaded alt text containing brief descriptions of the image, and the midjourney prompt that I used to create the image. After a morning of fun doing this I wanted to post all of the pictures with alt-text together on my art focused account. However, I would have to manually add all of the alt-text all over again to all of the images. I didn't do that because I didn't have time to do that. And, I wasn't thinking ahead about digital asset management, so I didn't adopt a process that would allow me to repost with the images with alt-text.
+
+This post should help me with two things. I'm going to try out the new R API client for mastodon called [rtoot](https://github.com/schochastics/rtoot), and I should be able to download posts, images, and alt text from one account, and then repost them with alt text to another account.
+
+## rtoot
+
+I followed the instructions in the rtoot vignette to get my authentication set up.
+
+```{r}
+library(rtoot)
+
+#auth_setup(name = "MattCrump")
+#auth_setup(name = "MattCrumpFun")
+#auth_setup(name = "homophony")
+
+MattCrump_token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "MattCrump.rds"))
+MattCrumpFun_token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "MattCrumpFun.rds"))
+homophony_token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "homophony.rds"))
+
+```
+
+Can only get 20 statuses.
+
+```{r}
+timeline <- list()
+
+timeline$homophony <- get_timeline_home(local = FALSE,
+                  limit = 100,
+                  token = homophony_token)
+
+View(timeline$homophony)
+
+a<- get_account_statuses(id = "109281844651288992",
+                         token = homophony_token)
+b<- get_account(id = "109281844651288992",
+                         token = homophony_token)
+```
+
+## References
+
+---
+nocite: |
+  @*
+---
