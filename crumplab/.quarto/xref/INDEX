@@ -172,5 +172,11 @@
   },
   "blog/774_spring2023/index.qmd": {
     "index.html": "d2fe579b"
+  },
+  "blog/773_speech_noise/index.qmd": {
+    "index.html": "ca274be6"
+  },
+  "blog/772_chatGPT/index.qmd": {
+    "index.html": "f6867f03"
   }
 }

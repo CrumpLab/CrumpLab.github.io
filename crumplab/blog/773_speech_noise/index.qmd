@@ -1,0 +1,75 @@
+---
+title: "Testing out creating speech in noise stimuli"
+description: "Quick notes on creating stimuli from Frost, Repp, and Katz, 1988."
+author: "Matt Crump"
+date: '2023-1-24'
+date-modified: last-modified
+draft: true
+categories:
+  - stimuli
+execute:
+  eval: false
+  echo: false
+  warning: false
+  message: false
+bibliography: [packages.bib]
+---
+
+```{r, include=FALSE, eval=FALSE}
+knitr::write_bib(file = 'packages.bib')
+```
+
+@frost1988 conducted three experiments asking whether "speech perception can be influenced by simultaneous presentation of print?"
+
+In experiment 1 they presented individual words in an audio format that was paired with a visual form. An audio word was presented with the matching visual word, a mismatching word, or neutral stimulus (XXXXXX). The spoken word was embedded in different levels of signal matched noise (or white noise, in Experiment 3). The results from experiment one showed that matching visual words changed response bias rather than sensitivity for detecting the presence or absence of words. There was also apparently a marked subjective impression of hearing words that were presented in enveloped matched masking noise when they were simultaneously paired with matching visual words.
+
+I spun up this post to try creating example stimuli from E1 using the approach mentioned in the methods by @schroeder1968.
+
+The amplitude matched noise is created by randomly flipping the sign of each unit of the digitized waveform.
+
+```{r}
+library(tuneR)
+
+# load mp3
+test <- tuneR::readMP3("music/10_concert_study_music_13.mp3")
+
+# random vector for bit flipping
+noise_flip <- sample(x = c(1,-1),
+                     size = length(test@left),
+                     replace=TRUE)
+
+# generate matched noise field
+test_noise <- test
+test_noise@left <- test_noise@left*noise_flip
+
+tuneR::writeWave(test_noise,"test.wav")
+
+# weighted noise
+
+weighted_word <- test
+weighted_word@left <- (test@left*.8) + (test_noise@left*.2)
+
+tuneR::writeWave(weighted_word,"8signal_2noise.wav")
+
+weighted_word <- test
+weighted_word@left <- (test@left*.5) + (test_noise@left*.5)
+
+tuneR::writeWave(weighted_word,"5signal_5noise.wav")
+
+weighted_word <- test
+weighted_word@left <- (test@left*.2) + (test_noise@left*.8)
+
+tuneR::writeWave(weighted_word,"2signal_8noise.wav")
+
+weighted_word <- test
+weighted_word@left <- (test@left*.1) + (test_noise@left*.9)
+
+tuneR::writeWave(weighted_word,"1signal_9noise.wav")
+
+```
+
+
+---
+nocite: |
+  @*
+---

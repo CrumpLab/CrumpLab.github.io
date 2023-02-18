@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.210">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Matt Crump">
+<meta name="dcterms.date" content="2023-02-18">
+<meta name="description" content="I’m teaching a class on the people of NYC, and these are some notes that I made for students about ChatGPT.">
+
+<title>crumplab - Notes for my students on using ChatGPT</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="crumplab - Notes for my students on using ChatGPT">
+<meta property="og:description" content="I'm teaching a class on the people of NYC, and these are some notes that I made for students about ChatGPT.">
+<meta property="og:site-name" content="crumplab">
+<meta name="twitter:title" content="crumplab - Notes for my students on using ChatGPT">
+<meta name="twitter:description" content="I'm teaching a class on the people of NYC, and these are some notes that I made for students about ChatGPT.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">crumplab</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../People.html">
+ <span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Publications.html">
+ <span class="menu-text">Pubs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Books.html">
+ <span class="menu-text">Books and OERs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Courses.html">
+ <span class="menu-text">Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Apps.html">
+ <span class="menu-text">Apps</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Opportunities.html">
+ <span class="menu-text">Join</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Blog.html">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Fun.html">
+ <span class="menu-text">Fun</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CrumpLab"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bbs.crumplab.com/@MattCrump"><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/MattCrumpLab"><i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"><i class="bi bi-youtube" role="img" aria-label="Youtube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../Blog.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-chatgpt" id="toc-using-chatgpt" class="nav-link active" data-scroll-target="#using-chatgpt">Using ChatGPT</a></li>
+  <li><a href="#accessing-chatgpt" id="toc-accessing-chatgpt" class="nav-link" data-scroll-target="#accessing-chatgpt">Accessing ChatGPT</a></li>
+  <li><a href="#things-to-know-about-chatgpt" id="toc-things-to-know-about-chatgpt" class="nav-link" data-scroll-target="#things-to-know-about-chatgpt">Things to know about ChatGPT</a>
+  <ul class="collapse">
+  <li><a href="#garbage-in---garbage-out" id="toc-garbage-in---garbage-out" class="nav-link" data-scroll-target="#garbage-in---garbage-out">Garbage in - Garbage out</a></li>
+  <li><a href="#ethical-concerns" id="toc-ethical-concerns" class="nav-link" data-scroll-target="#ethical-concerns">Ethical concerns</a></li>
+  </ul></li>
+  <li><a href="#chatgpt-examples" id="toc-chatgpt-examples" class="nav-link" data-scroll-target="#chatgpt-examples">ChatGPT examples</a>
+  <ul class="collapse">
+  <li><a href="#copy-edit-your-writing" id="toc-copy-edit-your-writing" class="nav-link" data-scroll-target="#copy-edit-your-writing">Copy-edit your writing</a></li>
+  <li><a href="#summarize-into-points" id="toc-summarize-into-points" class="nav-link" data-scroll-target="#summarize-into-points">Summarize into points</a></li>
+  <li><a href="#write-a-paragraph" id="toc-write-a-paragraph" class="nav-link" data-scroll-target="#write-a-paragraph">Write a paragraph</a></li>
+  <li><a href="#get-writing-advice" id="toc-get-writing-advice" class="nav-link" data-scroll-target="#get-writing-advice">Get writing advice</a></li>
+  <li><a href="#turn-notes-into-paragraphs" id="toc-turn-notes-into-paragraphs" class="nav-link" data-scroll-target="#turn-notes-into-paragraphs">Turn notes into paragraphs</a></li>
+  <li><a href="#unacceptable-use-case" id="toc-unacceptable-use-case" class="nav-link" data-scroll-target="#unacceptable-use-case">Unacceptable use case</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Notes for my students on using ChatGPT</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ChatGPT</div>
+    <div class="quarto-category">LLMs</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    I’m teaching a class on the people of NYC, and these are some notes that I made for students about ChatGPT.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Matt Crump </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 18, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">February 18, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="using-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="using-chatgpt">Using ChatGPT</h2>
+<p>This page is about using ChatGPT or similar models in this classroom.</p>
+<p>TLDR:</p>
+<ol type="1">
+<li>I encourage you to explore the technology, both how it works, how you might use it as a tool, and the very real issues for society surrounding this tool</li>
+<li>Don’t rely on this tech being there for free. It is all very new and it could easily be pulled off the internet at anytime. It costs a lot of money to run these models, and I would be surprised if they stay free for long—time will tell.</li>
+<li>If you use ChatGPT in one of your assignments, please mention this in the assignment and how you used it. I’ll go over some clearly acceptable uses cases, and some clearly unacceptable ones below.</li>
+<li>Passing off work from ChatGPT as your own is a violation of academic integrity that will be taken very seriously. I care about what you have to say, not what ChatGPT has to say.</li>
+<li>ChatGPT will produce absolute hot garbage, be careful.</li>
+</ol>
+<p>The rest of this page provides information on how to access ChatGPT, some information about ChatGPT, and then some examples of using ChatGPT.</p>
+</section>
+<section id="accessing-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-chatgpt">Accessing ChatGPT</h2>
+<p>You can access chatGPT here from the <a href="http://openai.com">openai.com</a> website. It is currently free to use, but you have to sign up for an account.</p>
+<p><a href="https://chat.openai.com/">https://chat.openai.com</a></p>
+</section>
+<section id="things-to-know-about-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="things-to-know-about-chatgpt">Things to know about ChatGPT</h2>
+<p>ChatGPT is a large language model (LLM) created by a company called OpenAI. Many big tech companies are creating their own versions of this technology. For example, Meta released a model called Galactica AI to the public on November 15th, 2022; and, then shut it down after three days. Microsoft Bing is currently releasing it’s own “chatbot”. Google apparently has one called Bard?</p>
+<p>I happen to have some limited expertise in the science behind large language models. For example, one area of my research involves human semantic cognition and language production. This area of research has a long history of producing computational models attempting to how people understand the meaning of words, and how they produce grammatical sentences.</p>
+<p>People have large amounts of language experience. Think about how many words you have heard or read across your entire life. Some theories of language assume that people learn about word meaning gradually through their own personal history of experiencing examples of language. Language is highly structured and not random. This means that words can be predicted based on the context in which they occur.</p>
+<p>If you read the sentence:</p>
+<p>After buying _________ at the grocery store, she squeezed the __________ to make ________ juice.</p>
+<p>Based on the context of the sentence you might infer that the person bought oranges, or some other fruit that can be squeezed to make juice.</p>
+<p>If you were able to look back at all the sentences and phrases you have ever heard in your life, you would probably find many examples where “oranges” or other fruit words were next to juice, or in the same sentence as words like squeeze, or grocery store. Your experience with co-occurring patterns in language can help you predict words in sentences. This is the basic principle behind large language models.</p>
+<p>Large language models are not like people. They have been trained on huge corpuses of text (e.g., half a trillion words). There have been ongoing efforts to digitize as much human produced text as possible. The google books project was one of the first. They scanned as many books in the world as they could. We also have the internet where people have produced all kinds of text, both regular language, and computer code. It is possible to download most things on the internet using scraping. For example, you could download all of wikipedia or reddit. That’s a lot of text.</p>
+<p>To give a bit more history, in 1998 a model called Latent Semantic Analysis (LSA) was trained on a much smaller set of text examples called the TASA corpus (37,000 documents, about 10 million words.) That model was able to do some impressive things, such as pass the TOEFL (english language equivalency exam), and even grade essays with similar results as expert graders. However, that model was not able to produce whole sentences or paragraphs that looked like real sentences.</p>
+<p>ChatGPT is a filtered version of another model called GPT-3. This model was trained on half a trillion words. Since 1998 there have been advances in computing technology (memory, processor speed, and algorithms), that make it possible to statistically model the patterns of word-occurrence across a huge set of examples. The result is that these models can successfully produce “realistic” looking sentences, paragraphs, and more; all based on the structure of the training examples.</p>
+<p>To a rough approximation, ChatGPT writes new text based on probabilistic recombination of similar text that it has been trained on. You can give the model example text prompts, and it will generate completions that are similar to the kind of text that has completed those kind of prompts in the training database.</p>
+<p>There is a really general principle at work here that applies not only to text, but any large set of examples. If you have a large set of examples, it is possible to train a machine learning model to extract the statistical structure from the examples, and then generate new examples that are like the trained examples. This also applies to image generation tools like DALL-E, or Midjourney.</p>
+<section id="garbage-in---garbage-out" class="level3">
+<h3 class="anchored" data-anchor-id="garbage-in---garbage-out">Garbage in - Garbage out</h3>
+<p>LLMs have been trained on as much text as possible. Unfortunately, this includes digitized books and propaganda from the past and present that are racist, homophobic, transphobic, mysogynistic, xenophobic, and so on. This also includes hate speech scrawled across internet forums. This also includes conspiracy theories and things that internet trolls say.</p>
+<p>LLMS produce new text that looks like the text it was trained on. It is very common for LLMs to reproduce text that mirrors all of the biases that exist in digitized text. LLMs released to the public are often quickly shut down because they spew so much hot garbage.</p>
+<p>If you use ChatGPT you may experience toxic text. OpenAI has attempted to solve the problem with a filtering system. For example, the model is capable of generating text that is similar or dissimilar to other text. If you had many examples of toxic hate speech, you could ask the model to generate new text that is NOT like the toxic hate speech examples. The filtering is imperfect.</p>
+<p>There was a report from TIME magazine on January 18, 2023 that shed some light on how OpenAI made ChatGPT less toxic. The article is <a href="https://time.com/6247678/openai-chatgpt-kenya-workers/">OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic</a>. The strategy was to show Kenyan workers examples of text that “described situations in graphic detail like child sexual abuse, bestiality, murder, suicide, torture, self harm, and incest.” The workers were asked to label whether the text was toxic or not. OpenAI then used the labels in their filtering system in attempt to prevent the model from outputting toxic text.</p>
+</section>
+<section id="ethical-concerns" class="level3">
+<h3 class="anchored" data-anchor-id="ethical-concerns">Ethical concerns</h3>
+<p>There are numerous concerns about these emerging technologies and widely divergent opinions, ideologies, and interests at play. This is not an exhaustive list.</p>
+<p>In order for these models to work, they must have huge sets of training examples. Where did the examples come from, and did people who created the examples give permission to these private companies to use them? To what extent are the outputs of these models high-tech plagiarism of stolen intellectual property? Are original content-creators whose training examples were extracted without permission being compensated? Should big tech companies be allowed to “move fast and break things” in this space? What are the harms of this new tech, who is shouldering the burden?</p>
+<p>The questions around AI ethics abound, and tech company responses to theses issues continue to be controversial. For example, <a href="https://en.wikipedia.org/wiki/Timnit_Gebru">Timnit Gebru</a> is a computer scientist (and AI expert) who was the co-lead of Google’s Ethical Artificial Intelligence team. In 2020, she co-authored a paper called “<em>On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?”.</em> To quote from wikipedia, this paper”covered the risks of very large language models, regarding their environmental and financial costs, inscrutability leading to unknown dangerous biases, the inability of the models to understand the concepts underlying what they learn, and the potential for using them to deceive people.” Timnit was fired (or release according to Google) for refusing to withdraw the paper and scrub names of Google employees from the list. Events like this raise broad questions about how tech companies are meeting or not meeting ethical concerns about their technologies.</p>
+<p>Timnit is the founder of <a href="https://www.dair-institute.org">DAIR (Distributed AI Research Institute)</a> which is a “space for independent, community-rooted AI research, free from Big Tech’s pervasive influence”. She continues to advocate and draw attention to major ethicall concerns in this space, among others.</p>
+<p>There are strange rabbit holes about this emerging technology, investors in the technology, and some of their apparent affiliations and ideologies for society. For example, what does crypto currency, longtermism, affective altruism, big-tech billionaires, technocracy, transhumanism, getting to mars, and artificial intelligence have to do with each other? Like I said, it’s a rabbit hole, and here are a few articles if you are interested:</p>
+<p><a href="https://www.salon.com/2022/08/20/understanding-longtermism-why-this-suddenly-influential-philosophy-is-so/" class="uri">https://www.salon.com/2022/08/20/understanding-longtermism-why-this-suddenly-influential-philosophy-is-so/</a></p>
+<p><a href="https://ai.plainenglish.io/longtermism-how-our-billionaire-overlords-want-to-live-forever-d89d0ce0d6e5">“Longtermism” and AI: How Our Billionaire Overlords Want to Live Forever</a></p>
+<p><a href="https://www.vox.com/future-perfect/23298870/effective-altruism-longtermism-will-macaskill-future">Effective altruism’s most controversial idea</a></p>
+</section>
+</section>
+<section id="chatgpt-examples" class="level2">
+<h2 class="anchored" data-anchor-id="chatgpt-examples">ChatGPT examples</h2>
+<p>Sign up for an account at</p>
+<p><a href="https://chat.openai.com/">https://chat.openai.com</a></p>
+<p>This service is currently free. Sometimes the server doesn’t work. To use the service you enter text prompts and ChatGPT returns text outputs. By using the service you are helping OpenAI further train this model, for better or worse. You’re not getting paid, but you’re getting the service for free.</p>
+<p>In our class we are learning about many topics and writing about them. Here are some ways you could use ChatGPT. Remember, please identify in your work when and how you have used ChatGPT.</p>
+<p>We need some text to begin with. I’m not comfortable taking someone else’s text and playing around with it in ChatGPT. For example, I could copy/paste paragraphs from our textbook and work with that text. It would probably benefit ChatGPT to have examples from our textbook. At the same time, I think OpenAI should pay the authors a royalty for use and re-use of their fantastic material.</p>
+<p>Instead, I will sacrifice my own writing to ChatGPT. Let’s start with the topic redlining. This was a practice that reinforced segregation in NYC neighborhoods, and is relevant to our class. I’ve been learning about redlining practices from a book called the Color of Law <span class="citation" data-cites="rothsteinColorLawForgotten2017">(<a href="#ref-rothsteinColorLawForgotten2017" role="doc-biblioref">Rothstein 2017</a>)</span>.</p>
+<p>We are reading about similar topics in our class, and being asked to write about them. Let’s say the assignment was to conduct some research about redlining, and the write a paragraph about redlining in Brooklyn. Based on what I read in the book, I wrote this paragraph:</p>
+<p>Redlining in Brooklyn. By Matt Crump.</p>
+<p><img src="images/redlining_brooklyn.jpg" class="img-fluid"></p>
+<p>Redlining was a real-estate practice from the 1930s that promoted and reinforced segregation between black and white people across cities in America, including Brooklyn. The figure from 1938 shows a map of Brooklyn with areas outlined in red. These same areas were majority Black and poor immigrant neighborhoods, and they were labelled as too risky for government insured mortgages. Based on these maps, mortgage lenders refused to issue mortgages in redlined areas. As a result, Black people were denied opportunities for mortgages to purchase homes in their own neighborhoods during this time period.</p>
+<p>Let’s use the above to show examples of using ChatGPT in the classroom.</p>
+<section id="copy-edit-your-writing" class="level3">
+<h3 class="anchored" data-anchor-id="copy-edit-your-writing">Copy-edit your writing</h3>
+<p>I entered the prompt:</p>
+<hr>
+<p>Can you copy-edit this paragraph for clarity and improved sentence structure?</p>
+<p>Redlining was a real-estate practice from the 1930s that promoted and reinforced segregation between black and white people across cities in America, including Brooklyn. The figure from 1938 shows a map of Brooklyn with areas outlined in red. These same areas were majority Black and poor immigrant neighborhoods, and they were labelled as too risky for government insured mortgages. Based on these maps, mortgage lenders refused to issue mortgages in “redlined” areas. As a result, Black people were denied opportunities for mortgages to purchase homes in their own neighborhoods during this time period.</p>
+<hr>
+<p>This is what ChatGPT returned:</p>
+<p>Redlining was a real estate practice that originated in the 1930s, aimed at promoting and reinforcing segregation between black and white people across American cities, including Brooklyn. A 1938 figure displays a map of Brooklyn with specific areas outlined in red, which were predominantly inhabited by Black and poor immigrant communities. These areas were deemed too risky for government-insured mortgages and were labeled as “redlined” neighborhoods. Due to this designation, mortgage lenders refused to issue mortgages in these areas, thereby depriving black people of the opportunity to purchase homes in their own neighborhoods. As a result, during this time period, they were unable to secure mortgages and suffered from systemic discrimination.</p>
+<hr>
+<p>My assessment: You might get OK results. I like some of the rephrasing, but not others. It made my paragraph longer, and it messed up some subtle details.</p>
+</section>
+<section id="summarize-into-points" class="level3">
+<h3 class="anchored" data-anchor-id="summarize-into-points">Summarize into points</h3>
+<p>Input:</p>
+<hr>
+<p>Can you summarize this paragraph into a few main points?</p>
+<p>Redlining was a real-estate practice from the 1930s that promoted and reinforced segregation between black and white people across cities in America, including Brooklyn. The figure from 1938 shows a map of Brooklyn with areas outlined in red. These same areas were majority Black and poor immigrant neighborhoods, and they were labelled as too risky for government insured mortgages. Based on these maps, mortgage lenders refused to issue mortgages in “redlined” areas. As a result, Black people were denied opportunities for mortgages to purchase homes in their own neighborhoods during this time period.</p>
+<hr>
+<p>Output:</p>
+<p>In the 1930s, redlining was a real estate practice that encouraged and strengthened segregation between black and white people in cities like Brooklyn. Neighborhoods with Black and poor immigrant residents were identified as “risky” and labeled as “redlined” areas. This designation made it impossible for Black people to secure mortgages to purchase homes in these neighborhoods as lenders refused to offer mortgages in these areas. Consequently, black people were denied the opportunity to purchase homes in their own neighborhoods.</p>
+<hr>
+<p>I was expecting it to make point form points, but I guess I should have been more specific with the prompt.</p>
+</section>
+<section id="write-a-paragraph" class="level3">
+<h3 class="anchored" data-anchor-id="write-a-paragraph">Write a paragraph</h3>
+<p>Hmmm…what hell ChatGPT.</p>
+<p>It is of course possible to ask ChatGPT to write the paragraph itself from scratch. Let’s see what it does.</p>
+<p>I entered the prompt:</p>
+<hr>
+<p>Can you write a short paragraph explaining the practice of redlining in Brooklyn during the 1930s?</p>
+<hr>
+<p>Output</p>
+<p>During the 1930s, redlining was a real estate practice in Brooklyn, New York, that sought to promote and reinforce segregation between black and white people. Neighborhoods with Black and poor immigrant communities were designated as “risky” and labeled as “redlined” areas, making it impossible for Black people to obtain mortgages to purchase homes in these neighborhoods. As a result, they were denied the opportunity to purchase homes in their own communities. Redlining was a discriminatory practice that had a lasting impact on the housing market, contributing to the racial wealth gap that persists in America today</p>
+<hr>
+<p>Parts of the output are very similar to my original paragraph. In this case ChatGPT seems to be using my own words back at me. Sigh.</p>
+</section>
+<section id="get-writing-advice" class="level3">
+<h3 class="anchored" data-anchor-id="get-writing-advice">Get writing advice</h3>
+<p>Prompt:</p>
+<p>Can you explain the components of a simple paragraph, and tell me what each what kinds of sentences should go at the beginning, middle and end of a paragraph?</p>
+<hr>
+<p>Output:</p>
+<p>Sure! A paragraph is a collection of sentences that focus on a single topic or idea. The three main components of a paragraph are the topic sentence, supporting sentences, and concluding sentence.</p>
+<ol type="1">
+<li>Topic Sentence: The topic sentence is usually the first sentence of the paragraph and serves as the main idea or thesis statement. It introduces the topic of the paragraph and tells the reader what the paragraph is going to be about.</li>
+<li>Supporting Sentences: The supporting sentences come after the topic sentence and provide further information and details about the topic. These sentences support the main idea of the paragraph and give evidence or examples to back up the topic sentence.</li>
+<li>Concluding Sentence: The concluding sentence is the final sentence of the paragraph, and it summarizes the main point or idea. It can also provide a transition to the next paragraph.</li>
+</ol>
+<p>In terms of the order of sentences within a paragraph, there isn’t necessarily a strict rule about where each type of sentence should go. However, a good structure to follow is to start with the topic sentence, follow it up with several supporting sentences, and end with a concluding sentence that wraps up the paragraph’s main idea. This structure helps to ensure that the paragraph is well-organized and easy to follow.</p>
+<hr>
+<p>Assessment: Not too bad.</p>
+</section>
+<section id="turn-notes-into-paragraphs" class="level3">
+<h3 class="anchored" data-anchor-id="turn-notes-into-paragraphs">Turn notes into paragraphs</h3>
+<p>Let’s say you had some roughly structured notes, you could ask ChatGPT to help you turn it into a paragraph:</p>
+<hr>
+<p>Prompt:</p>
+<p>Can you help me turn these notes into a well-structured paragraph?</p>
+<ul>
+<li>Empire state building details</li>
+<li>began construction March 1930 on International worker’s day</li>
+<li>complete May 1931 (14 months)</li>
+<li>Some descriptions of the building as marvel of the age</li>
+<li>Had trouble finding tenants (empty state building)</li>
+<li>King kong helped draw in people and business</li>
+</ul>
+<hr>
+<p>Output:</p>
+<p>The Empire State Building, a marvel of the age, began construction on International Worker’s Day in March 1930. It took only 14 months to complete and opened its doors in May 1931. Despite its impressive size and architectural feats, the building had trouble finding tenants initially, and it was known as the “Empty State Building.” However, the release of the movie “King Kong” in 1933, which featured the giant ape climbing the tower, helped draw in people and business to the iconic skyscraper. Today, the Empire State Building remains one of the most recognizable landmarks in the world.</p>
+<hr>
+<p>Assessment: Also not bad. But compare this to the paragraph in the textbook, which is much richer. The textbook is a better standard of excellent writing. Nevertheless, perhaps ChatGPT could be helpful for getting the marbles out of your mouth.</p>
+</section>
+<section id="unacceptable-use-case" class="level3">
+<h3 class="anchored" data-anchor-id="unacceptable-use-case">Unacceptable use case</h3>
+<p>Do not hand in ChatGPT writing as your own writing. This a major breach of trust.</p>
+<p>For example we recently read a paper reviewing the method of autoethnography. The assignment was to write a reflection about what you learned from the paper.</p>
+<p>You could enter a prompt like this into ChatGPT:</p>
+<hr>
+<p>Prompt:</p>
+<p>Can you summarize some of the interesting features of the method of autoethnography for research in the social sciences, and also contrast them with some of the concerns that critics have raised?</p>
+<hr>
+<p>Output</p>
+<p>Autoethnography is a method of social science research that involves the researcher reflecting on their own personal experiences and using these experiences to analyze broader cultural phenomena. This method is unique in that it places the researcher’s personal experience at the center of the analysis and acknowledges the subjective nature of research. Autoethnography has been praised for its ability to produce rich, nuanced data and to give voice to marginalized communities. However, critics have raised concerns about the subjectivity of the researcher’s interpretation and the potential for bias. They also argue that autoethnography is limited in its ability to produce generalizable findings and can be viewed as self-indulgent or narcissistic. Overall, autoethnography is a valuable approach to social science research, but it requires careful consideration of its limitations and potential biases.</p>
+<hr>
+<p>Assessment: This has the appearance of coherence. I find the writing very dry and boring. There are lots little things that are off. Don’t take something like this and hand it in as your own work. We will be giving each other feedback on our writing, and no one wants to waste time giving feedback about how ChatGPT said something.</p>
+<p><strong>Use your best judgment, watch out for hot garbage.</strong></p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-R-magrittr" class="csl-entry" role="doc-biblioentry">
+Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
+</div>
+<div id="ref-R-magick" class="csl-entry" role="doc-biblioentry">
+Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
+</div>
+<div id="ref-rothsteinColorLawForgotten2017" class="csl-entry" role="doc-biblioentry">
+Rothstein, Richard. 2017. <em>The Color of Law: <span>A</span> Forgotten History of How Our Government Segregated <span>America</span></em>. <span>Liveright Publishing</span>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

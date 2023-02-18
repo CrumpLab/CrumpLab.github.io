@@ -15,7 +15,189 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.2.210</generator>
-<lastBuildDate>Thu, 12 Jan 2023 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 18 Feb 2023 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Notes for my students on using ChatGPT</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/772_chatGPT/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="using-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="using-chatgpt">Using ChatGPT</h2>
+<p>This page is about using ChatGPT or similar models in this classroom.</p>
+<p>TLDR:</p>
+<ol type="1">
+<li>I encourage you to explore the technology, both how it works, how you might use it as a tool, and the very real issues for society surrounding this tool</li>
+<li>Don’t rely on this tech being there for free. It is all very new and it could easily be pulled off the internet at anytime. It costs a lot of money to run these models, and I would be surprised if they stay free for long—time will tell.</li>
+<li>If you use ChatGPT in one of your assignments, please mention this in the assignment and how you used it. I’ll go over some clearly acceptable uses cases, and some clearly unacceptable ones below.</li>
+<li>Passing off work from ChatGPT as your own is a violation of academic integrity that will be taken very seriously. I care about what you have to say, not what ChatGPT has to say.</li>
+<li>ChatGPT will produce absolute hot garbage, be careful.</li>
+</ol>
+<p>The rest of this page provides information on how to access ChatGPT, some information about ChatGPT, and then some examples of using ChatGPT.</p>
+</section>
+<section id="accessing-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-chatgpt">Accessing ChatGPT</h2>
+<p>You can access chatGPT here from the <a href="http://openai.com">openai.com</a> website. It is currently free to use, but you have to sign up for an account.</p>
+<p><a href="https://chat.openai.com/">https://chat.openai.com</a></p>
+</section>
+<section id="things-to-know-about-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="things-to-know-about-chatgpt">Things to know about ChatGPT</h2>
+<p>ChatGPT is a large language model (LLM) created by a company called OpenAI. Many big tech companies are creating their own versions of this technology. For example, Meta released a model called Galactica AI to the public on November 15th, 2022; and, then shut it down after three days. Microsoft Bing is currently releasing it’s own “chatbot”. Google apparently has one called Bard?</p>
+<p>I happen to have some limited expertise in the science behind large language models. For example, one area of my research involves human semantic cognition and language production. This area of research has a long history of producing computational models attempting to how people understand the meaning of words, and how they produce grammatical sentences.</p>
+<p>People have large amounts of language experience. Think about how many words you have heard or read across your entire life. Some theories of language assume that people learn about word meaning gradually through their own personal history of experiencing examples of language. Language is highly structured and not random. This means that words can be predicted based on the context in which they occur.</p>
+<p>If you read the sentence:</p>
+<p>After buying _________ at the grocery store, she squeezed the __________ to make ________ juice.</p>
+<p>Based on the context of the sentence you might infer that the person bought oranges, or some other fruit that can be squeezed to make juice.</p>
+<p>If you were able to look back at all the sentences and phrases you have ever heard in your life, you would probably find many examples where “oranges” or other fruit words were next to juice, or in the same sentence as words like squeeze, or grocery store. Your experience with co-occurring patterns in language can help you predict words in sentences. This is the basic principle behind large language models.</p>
+<p>Large language models are not like people. They have been trained on huge corpuses of text (e.g., half a trillion words). There have been ongoing efforts to digitize as much human produced text as possible. The google books project was one of the first. They scanned as many books in the world as they could. We also have the internet where people have produced all kinds of text, both regular language, and computer code. It is possible to download most things on the internet using scraping. For example, you could download all of wikipedia or reddit. That’s a lot of text.</p>
+<p>To give a bit more history, in 1998 a model called Latent Semantic Analysis (LSA) was trained on a much smaller set of text examples called the TASA corpus (37,000 documents, about 10 million words.) That model was able to do some impressive things, such as pass the TOEFL (english language equivalency exam), and even grade essays with similar results as expert graders. However, that model was not able to produce whole sentences or paragraphs that looked like real sentences.</p>
+<p>ChatGPT is a filtered version of another model called GPT-3. This model was trained on half a trillion words. Since 1998 there have been advances in computing technology (memory, processor speed, and algorithms), that make it possible to statistically model the patterns of word-occurrence across a huge set of examples. The result is that these models can successfully produce “realistic” looking sentences, paragraphs, and more; all based on the structure of the training examples.</p>
+<p>In other words, ChatGPT writes new text based on probabilistic recombination to similar text that is has been trained on. You can give the model example text prompts, and it will generate completions that are similar to the kind of text that has completed those kind of prompts in the training database.</p>
+<p>There is a really general principle at work here that applies not only to text, but any large set of examples. If you have a large set of examples, it is possible to train a machine learning model to extract the statistical structure from the examples, and then generate new examples that are like the trained examples. This is how LLMs work. This is also how image generation tools like DALL-E, or Midjourney work.</p>
+<section id="garbage-in---garbage-out" class="level3">
+<h3 class="anchored" data-anchor-id="garbage-in---garbage-out">Garbage in - Garbage out</h3>
+<p>LLMs have been trained on as much text as possible. Unfortunately, this includes digitized books and propaganda from the past and present that are racist, homophobic, transphobic, mysogynistic, xenophobic, and so on. This also includes hate speech scrawled across internet forums. This also includes conspiracy theories and things that internet trolls say.</p>
+<p>LLMS produce new text that looks like the text it was trained on. It is very common for LLMs to reproduce text that mirrors all of the biases that exist in digitized text. LLMs released to the public are often quickly shut down because they spew so much hot garbage.</p>
+<p>If you use ChatGPT you may experience toxic text. OpenAI has attempted to solve the problem with a filtering system. For example, the model is capable of generating text that is similar or dissimilar to other text. If you had many examples of toxic hate speech, you could ask the model to generate new text that is NOT like the toxic hate speech examples. The filtering is imperfect.</p>
+<p>There was a report from TIME magazine on January 18, 2023 that shed some light on how OpenAI made ChatGPT less toxic. The article is <a href="https://time.com/6247678/openai-chatgpt-kenya-workers/">OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic</a>. The strategy was to show Kenyan workers examples of text that “described situations in graphic detail like child sexual abuse, bestiality, murder, suicide, torture, self harm, and incest.” The workers were asked to label whether the text was toxic or not. OpenAI then used the labels in their filtering system in attempt to prevent the model from outputting toxic text.</p>
+</section>
+<section id="ethical-concerns" class="level3">
+<h3 class="anchored" data-anchor-id="ethical-concerns">Ethical concerns</h3>
+<p>There are numerous concerns about these emerging technologies and widely divergent opinions, ideologies, and interests at play. This is not an exhaustive list.</p>
+<p>In order for these models to work, they must have huge sets of training examples. Where did the examples come from, and did people who created the examples give permission to these private companies to use them? To what extent are the outputs of these models high-tech plagiarism of stolen intellectual property? Are original content-creators whose training examples were extracted without permission being compensated? Should big tech companies be allowed to “move fast and break things” in this space? What are the harms of this new tech, who is shouldering the burden?</p>
+<p>The questions around AI ethics abound, and tech company responses to theses issues continue to be controversial. For example, <a href="https://en.wikipedia.org/wiki/Timnit_Gebru">Timnit Gebru</a> is a computer scientist (and AI expert) who was the co-lead of Google’s Ethical Artificial Intelligence team. In 2020, she co-authored a paper called “<em>On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?”.</em> To quote from wikipedia, this paper”covered the risks of very large language models, regarding their environmental and financial costs, inscrutability leading to unknown dangerous biases, the inability of the models to understand the concepts underlying what they learn, and the potential for using them to deceive people.” Timnit was fired (or release according to Google) for refusing to withdraw the paper and scrub names of Google employees from the list. Events like this raise broad questions about how tech companies are meeting or not meeting ethical concerns about their technologies.</p>
+<p>Timnit is the founder of <a href="https://www.dair-institute.org">DAIR (Distributed AI Research Institute)</a> which is a “space for independent, community-rooted AI research, free from Big Tech’s pervasive influence”. She continues to advocate and draw attention to major ethicall concerns in this space, among others.</p>
+<p>There are strange rabbit holes about this emerging technology, investors in the technology, and some of their apparent affiliations and ideologies for society. For example, what does crypto currency, longtermism, affective altruism, big-tech billionaires, technocracy, transhumanism, getting to mars, and artificial intelligence have to do with each other? Like I said, it’s a rabbit hole, and here are a few articles if you are interested:</p>
+<p><a href="https://www.salon.com/2022/08/20/understanding-longtermism-why-this-suddenly-influential-philosophy-is-so/" class="uri">https://www.salon.com/2022/08/20/understanding-longtermism-why-this-suddenly-influential-philosophy-is-so/</a></p>
+<p><a href="https://ai.plainenglish.io/longtermism-how-our-billionaire-overlords-want-to-live-forever-d89d0ce0d6e5">“Longtermism” and AI: How Our Billionaire Overlords Want to Live Forever</a></p>
+<p><a href="https://www.vox.com/future-perfect/23298870/effective-altruism-longtermism-will-macaskill-future">Effective altruism’s most controversial idea</a></p>
+</section>
+</section>
+<section id="chatgpt-examples" class="level2">
+<h2 class="anchored" data-anchor-id="chatgpt-examples">ChatGPT examples</h2>
+<p>Sign up for an account at</p>
+<p><a href="https://chat.openai.com/">https://chat.openai.com</a></p>
+<p>This service is currently free. Sometimes the server doesn’t work. To use the service you enter text prompts and ChatGPT returns text outputs. By using the service you are helping OpenAI further train this model, for better or worse. You’re not getting paid, but you’re getting the service for free.</p>
+<p>In our class we are learning about many topics and writing about them. Here are some ways you could use ChatGPT. Remember, please identify in your work when and how you have used ChatGPT.</p>
+<p>We need some text to begin with. I’m not comfortable taking someone else’s text and playing around with it in ChatGPT. For example, I could copy/paste paragraphs from our textbook and work with that text. It would probably benefit ChatGPT to have examples from our textbook. At the same time, I think OpenAI should pay the authors a royalty for use and re-use of their fantastic material.</p>
+<p>Instead, I will sacrifice my own writing to ChatGPT. Let’s start with the topic redlining. This was a practice that reinforced segregation in NYC neighborhoods, and is relevant to our class. I’ve been learning about redlining practices from a book called the Color of Law <span class="citation" data-cites="rothsteinColorLawForgotten2017">(Rothstein 2017)</span>.</p>
+<p>We are reading about similar topics in our class, and being asked to write about them. Let’s say the assignment was to conduct some research about redlining, and the write a paragraph about redlining in Brooklyn. Based on what I read in the book, I wrote this paragraph:</p>
+<p>Redlining in Brooklyn. By Matt Crump.</p>
+<p><img src="https://crumplab.com/blog/772_chatGPT/images/redlining_brooklyn.jpg" class="img-fluid"></p>
+<p>Redlining was a real-estate practice from the 1930s that promoted and reinforced segregation between black and white people across cities in America, including Brooklyn. The figure from 1938 shows a map of Brooklyn with areas outlined in red. These same areas were majority Black and poor immigrant neighborhoods, and they were labelled as too risky for government insured mortgages. Based on these maps, mortgage lenders refused to issue mortgages in redlined areas. As a result, Black people were denied opportunities for mortgages to purchase homes in their own neighborhoods during this time period.</p>
+<p>Let’s use the above to show examples of using ChatGPT in the classroom.</p>
+<section id="copy-edit-your-writing" class="level3">
+<h3 class="anchored" data-anchor-id="copy-edit-your-writing">Copy-edit your writing</h3>
+<p>I entered the prompt:</p>
+<hr>
+<p>Can you copy-edit this paragraph for clarity and improved sentence structure?</p>
+<p>Redlining was a real-estate practice from the 1930s that promoted and reinforced segregation between black and white people across cities in America, including Brooklyn. The figure from 1938 shows a map of Brooklyn with areas outlined in red. These same areas were majority Black and poor immigrant neighborhoods, and they were labelled as too risky for government insured mortgages. Based on these maps, mortgage lenders refused to issue mortgages in “redlined” areas. As a result, Black people were denied opportunities for mortgages to purchase homes in their own neighborhoods during this time period.</p>
+<hr>
+<p>This is what ChatGPT returned:</p>
+<p>Redlining was a real estate practice that originated in the 1930s, aimed at promoting and reinforcing segregation between black and white people across American cities, including Brooklyn. A 1938 figure displays a map of Brooklyn with specific areas outlined in red, which were predominantly inhabited by Black and poor immigrant communities. These areas were deemed too risky for government-insured mortgages and were labeled as “redlined” neighborhoods. Due to this designation, mortgage lenders refused to issue mortgages in these areas, thereby depriving black people of the opportunity to purchase homes in their own neighborhoods. As a result, during this time period, they were unable to secure mortgages and suffered from systemic discrimination.</p>
+<hr>
+<p>My assessment: You might get OK results. I like some of the rephrasing, but not others. It made my paragraph longer, and it messed up some subtle details.</p>
+</section>
+<section id="summarize-into-points" class="level3">
+<h3 class="anchored" data-anchor-id="summarize-into-points">Summarize into points</h3>
+<p>Input:</p>
+<hr>
+<p>Can you summarize this paragraph into a few main points?</p>
+<p>Redlining was a real-estate practice from the 1930s that promoted and reinforced segregation between black and white people across cities in America, including Brooklyn. The figure from 1938 shows a map of Brooklyn with areas outlined in red. These same areas were majority Black and poor immigrant neighborhoods, and they were labelled as too risky for government insured mortgages. Based on these maps, mortgage lenders refused to issue mortgages in “redlined” areas. As a result, Black people were denied opportunities for mortgages to purchase homes in their own neighborhoods during this time period.</p>
+<hr>
+<p>Output:</p>
+<p>In the 1930s, redlining was a real estate practice that encouraged and strengthened segregation between black and white people in cities like Brooklyn. Neighborhoods with Black and poor immigrant residents were identified as “risky” and labeled as “redlined” areas. This designation made it impossible for Black people to secure mortgages to purchase homes in these neighborhoods as lenders refused to offer mortgages in these areas. Consequently, black people were denied the opportunity to purchase homes in their own neighborhoods.</p>
+<hr>
+<p>I was expecting it to make point form points, but I guess I should have been more specific with the prompt.</p>
+</section>
+<section id="write-a-paragraph" class="level3">
+<h3 class="anchored" data-anchor-id="write-a-paragraph">Write a paragraph</h3>
+<p>Hmmm…what hell ChatGPT.</p>
+<p>It is of course possible to ask ChatGPT to write the paragraph itself from scratch. Let’s see what it does.</p>
+<p>I entered the prompt:</p>
+<hr>
+<p>Can you write a short paragraph explaining the practice of redlining in Brooklyn during the 1930s?</p>
+<hr>
+<p>Output</p>
+<p>During the 1930s, redlining was a real estate practice in Brooklyn, New York, that sought to promote and reinforce segregation between black and white people. Neighborhoods with Black and poor immigrant communities were designated as “risky” and labeled as “redlined” areas, making it impossible for Black people to obtain mortgages to purchase homes in these neighborhoods. As a result, they were denied the opportunity to purchase homes in their own communities. Redlining was a discriminatory practice that had a lasting impact on the housing market, contributing to the racial wealth gap that persists in America today</p>
+<hr>
+<p>Parts of the output are very similar to my original paragraph. In this case ChatGPT seems to be using my own words back at me. Sigh.</p>
+</section>
+<section id="get-writing-advice" class="level3">
+<h3 class="anchored" data-anchor-id="get-writing-advice">Get writing advice</h3>
+<p>Prompt:</p>
+<p>Can you explain the components of a simple paragraph, and tell me what each what kinds of sentences should go at the beginning, middle and end of a paragraph?</p>
+<hr>
+<p>Output:</p>
+<p>Sure! A paragraph is a collection of sentences that focus on a single topic or idea. The three main components of a paragraph are the topic sentence, supporting sentences, and concluding sentence.</p>
+<ol type="1">
+<li>Topic Sentence: The topic sentence is usually the first sentence of the paragraph and serves as the main idea or thesis statement. It introduces the topic of the paragraph and tells the reader what the paragraph is going to be about.</li>
+<li>Supporting Sentences: The supporting sentences come after the topic sentence and provide further information and details about the topic. These sentences support the main idea of the paragraph and give evidence or examples to back up the topic sentence.</li>
+<li>Concluding Sentence: The concluding sentence is the final sentence of the paragraph, and it summarizes the main point or idea. It can also provide a transition to the next paragraph.</li>
+</ol>
+<p>In terms of the order of sentences within a paragraph, there isn’t necessarily a strict rule about where each type of sentence should go. However, a good structure to follow is to start with the topic sentence, follow it up with several supporting sentences, and end with a concluding sentence that wraps up the paragraph’s main idea. This structure helps to ensure that the paragraph is well-organized and easy to follow.</p>
+<hr>
+<p>Assessment: Not too bad.</p>
+</section>
+<section id="turn-notes-into-paragraphs" class="level3">
+<h3 class="anchored" data-anchor-id="turn-notes-into-paragraphs">Turn notes into paragraphs</h3>
+<p>Let’s say you had some roughly structured notes, you could ask ChatGPT to help you turn it into a paragraph:</p>
+<hr>
+<p>Prompt:</p>
+<p>Can you help me turn these notes into a well-structured paragraph?</p>
+<ul>
+<li>Empire state building details</li>
+<li>began construction March 1930 on International worker’s day</li>
+<li>complete May 1931 (14 months)</li>
+<li>Some descriptions of the building as marvel of the age</li>
+<li>Had trouble finding tenants (empty state building)</li>
+<li>King kong helped draw in people and business</li>
+</ul>
+<hr>
+<p>Output:</p>
+<p>The Empire State Building, a marvel of the age, began construction on International Worker’s Day in March 1930. It took only 14 months to complete and opened its doors in May 1931. Despite its impressive size and architectural feats, the building had trouble finding tenants initially, and it was known as the “Empty State Building.” However, the release of the movie “King Kong” in 1933, which featured the giant ape climbing the tower, helped draw in people and business to the iconic skyscraper. Today, the Empire State Building remains one of the most recognizable landmarks in the world.</p>
+<hr>
+<p>Assessment: Also not bad. But compare this to the paragraph in the textbook, which is much richer. The textbook is a better standard of excellent writing. Nevertheless, perhaps ChatGPT could be helpful for getting the marbles out of your mouth.</p>
+</section>
+<section id="unacceptable-use-case" class="level3">
+<h3 class="anchored" data-anchor-id="unacceptable-use-case">Unacceptable use case</h3>
+<p>Do not hand in ChatGPT writing as your own writing. This a major breach of trust.</p>
+<p>For example we recently read a paper reviewing the method of autoethnography. The assignment was to write a reflection about what you learned from the paper.</p>
+<p>You could enter a prompt like this into ChatGPT:</p>
+<hr>
+<p>Prompt:</p>
+<p>Can you summarize some of the interesting features of the method of autoethnography for research in the social sciences, and also contrast them with some of the concerns that critics have raised?</p>
+<hr>
+<p>Output</p>
+<p>Autoethnography is a method of social science research that involves the researcher reflecting on their own personal experiences and using these experiences to analyze broader cultural phenomena. This method is unique in that it places the researcher’s personal experience at the center of the analysis and acknowledges the subjective nature of research. Autoethnography has been praised for its ability to produce rich, nuanced data and to give voice to marginalized communities. However, critics have raised concerns about the subjectivity of the researcher’s interpretation and the potential for bias. They also argue that autoethnography is limited in its ability to produce generalizable findings and can be viewed as self-indulgent or narcissistic. Overall, autoethnography is a valuable approach to social science research, but it requires careful consideration of its limitations and potential biases.</p>
+<hr>
+<p>Assessment: This has the appearance of coherence. I find the writing very dry and boring. There are lots little things that are off. Don’t take something like this and hand it in as your own work. We will be giving each other feedback on our writing, and no one wants to waste time giving feedback about how ChatGPT said something.</p>
+<p><strong>Use your best judgment, watch out for hot garbage.</strong></p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-R-magrittr" class="csl-entry">
+Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
+</div>
+<div id="ref-R-magick" class="csl-entry">
+Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
+</div>
+<div id="ref-rothsteinColorLawForgotten2017" class="csl-entry">
+Rothstein, Richard. 2017. <em>The Color of Law: <span>A</span> Forgotten History of How Our Government Segregated <span>America</span></em>. <span>Liveright Publishing</span>.
+</div>
+</div></section></div> ]]></description>
+  <category>ChatGPT</category>
+  <category>LLMs</category>
+  <guid>https://crumplab.com/blog/772_chatGPT/index.html</guid>
+  <pubDate>Sat, 18 Feb 2023 05:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/772_chatGPT/images/redlining_brooklyn.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Two new courses and getting into the swing with spring</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -44,6 +226,7 @@ Expertise: growing | Usefulness: 5 stars | Audience: notes to self
 <p>OOf, the scary part. I upgraded R and R studio a few weeks ago. I use these and quarto to generate websites, including my lab website. So, will it compile? And, if not, how long will it take. Let's find out…Thankfully I only had to update one library. Not too bad. Let's try this again.</p>
 <p>But, one more tangent. I'm currently writing this post in <a href="http://notion.so">notion.so</a>. I think I really like notion. It's fast, fun and functional. I can basically write fast in markdown with bells and whistles. My blog is on my website, and written using quarto. If I want this to be there, then I need copy this into a .qmd document, and set up a new blog post. I was hoping to write mostly in notion and then copy over to quarto later. But, as I was about to start adding external links, I wasn't totally sure how notion markdown and quarto markdown will play together. Let's find out.</p>
 <p>The link to my lab website that now has my course list is <a href="http://crumplab.com/courses">crumplab.com/courses</a>. I'm still writing in notion, and wrote that link as plain text. It is not clickable. But! it is clickable when I copy/pasted it into the visual editor in R studio. Nice.</p>
+<p>Well. I didn’t get a start on verbalizing course structure thoughts, and now I have a meeting. Will be back here tomorrow.</p>
 
 
 
@@ -3243,146 +3426,6 @@ Jenkins, Baylee D., Jonathan M. Golding, Alexis M. Le Grand, Mary M. Levi, and A
   <guid>https://crumplab.com/blog/post_996_5_20_22_assignmentflex/index.html</guid>
   <pubDate>Fri, 20 May 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/post_996_5_20_22_assignmentflex/imgs/teaching_warp.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Blogging with pkgdown?</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/post_999_5_17_22_blogging/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-    
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-    
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-</style>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_999_5_17_22_blogging/imgs/blogging_with_pkgdown.jpg" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>Last knit: 2022-11-10</p>
-<p><strong>NOTE: I stopped using pkgdown for bloggin and switched to <a href="https://quarto.org/docs/websites/website-blog.html">quarto</a>, which is much better suited to the task</strong>.</p>
-<p>I like <a href="https://pkgdown.r-lib.org">pkgdown</a>. It’s great for what it was built to do (make websites for R packages), and it’s pretty good at other use cases as well. For example, I recently re-factored my lab webpage using pkgdown and that worked out well enough.</p>
-<p>My previous website had a hacked together blog using demented combinations of R markdown templates. I was thinking about adopting some other blogging scheme like <a href="https://rstudio.github.io/distill/">distill</a>, but couldn’t get it to play nice with pkgdown. So, this is an attempt to blog in pkgdown and see how far that goes for me.</p>
-<section id="blogging-features-im-looking-for" class="level2">
-<h2 class="anchored" data-anchor-id="blogging-features-im-looking-for">Blogging features I’m looking for</h2>
-<p>Here’s of list of features I think I want for blogging. Making this list should help me figure out whether or not I can implement them in pkgdown.</p>
-<ol type="1">
-<li>Have an index page that lists all of the blog posts, and that is auto-magically generated from the blog posts</li>
-<li>Have a “make_post()” type of function that makes a template for a new post all ready to go, and saved in the folder where it needs to be.</li>
-<li>Have the posts be searchable in pkgdown</li>
-<li>Have the posts use the same site-wide navigation as the rest of the site.</li>
-</ol>
-</section>
-<section id="implementing-the-blog-in-pkgdown" class="level2">
-<h2 class="anchored" data-anchor-id="implementing-the-blog-in-pkgdown">Implementing the blog in pkgdown</h2>
-<p>I think I can do most of what I want with pkgdown vignettes. One minor detail is that I’m not sure how easy it will be to customize the index page listing all of the blog posts. It would be nice to have a picture for each blog post, but that might not be an option without some meddling. Oh well. I’ll use the rest of this post to leave breadcrumbs for my future self on a blogging workflow.</p>
-<section id="make-a-blog-folder-in-vignettes" class="level3">
-<h3 class="anchored" data-anchor-id="make-a-blog-folder-in-vignettes">Make a blog folder in vignettes</h3>
-<p>Pkgdown automatically renders .Rmd files in the vignettes folder. I already have the main pages of the website in vignettes, so I’ll make a separate folder called <code>vignettes/blog</code> to hold all of the blog posts.</p>
-</section>
-<section id="post-workflow" class="level3">
-<h3 class="anchored" data-anchor-id="post-workflow">Post workflow</h3>
-<p>I need to make some decisions here. Should I put individual vignettes in the blog folder, or should I make subdirectories for each post. What are the naming conventions?</p>
-<p>This kind of structure might work. But, I need to check how the posts are rendered to the articles page.</p>
-<pre><code>vignettes/blog
-├── post_4_1_22_older_post
-│   └── post_4_1_22_older_post.Rmd
-└── post_5_17_22_blogging
-    └── post_5_17_22_blogging.Rmd</code></pre>
-</section>
-</section>
-<section id="compiling-the-posts-using-build_articles" class="level2">
-<h2 class="anchored" data-anchor-id="compiling-the-posts-using-build_articles">Compiling the posts using build_articles()</h2>
-<p><code>pkgdown::build_articles()</code> will compile all of the .Rmds in the vignettes folder. The blog posts are in there, so they will be compiled to.</p>
-<p>The same function also creates an <code>index.html</code> for the knitted vignettes. My plan is to use that page to list only blog posts, and not any other pages I have in the vignettes folder. This can be accomplished through <code>_pkgdown.yml</code>.</p>
-<p>For example, the following creates some sections on the index.html, and uses <code>starts_with()</code> to loop through folders that start with <code>post</code> in the <code>blog</code> folder.</p>
-<pre><code>articles:
-- title: Newer Posts
-  desc: Trying out blogging with pkgdown.
-  navbar: ~
-  contents:
-  - starts_with("blog/post")
-- title: Older Posts
-  desc: Need to add links to older stuff here...
-  navbar: ~</code></pre>
-</section>
-<section id="ordering-posts-from-newest-to-oldest" class="level2">
-<h2 class="anchored" data-anchor-id="ordering-posts-from-newest-to-oldest">Ordering posts from newest to oldest</h2>
-<p>If I adopt the above naming convention <code>post_M_D_Y_title</code>, then posts get listed from oldest to newest on the index page. Need to flip that.</p>
-<p>It seems like I would just need to sort the order of posts somehow, but I couldn’t figure that out.</p>
-<p>I could use a naming convention with a number that gets smaller for every new post <code>post_number_M_D_Y_title</code>. That’s mildly annoying, but probably what I will do for now. Another option would be to override the _pkgdown.yml while running <code>build_articles()</code>. But this would require writing an alternative yml that lists the contents in a preferred order. That seems like too much work.</p>
-<p>Decision was to start at 999, and count down. I probably won’t get to 0, and if I do, well that’s on me.</p>
-<pre><code>vignettes/blog
-├── post_998_5_17_22_blogging
-│   └── post_998_5_17_22_blogging.Rmd
-└── post_999_3_1_22_older_post
-    └── post_999_3_1_22_older_post.Rmd</code></pre>
-<section id="helper-functions" class="level3">
-<h3 class="anchored" data-anchor-id="helper-functions">helper functions</h3>
-<p>Not sure that I need any helper functions. I was thinking about creating a <code>make_post</code> function in the spirit of <code>usethis:use_vignette()</code>. Maybe I’ll try that later. For now it wouldn’t be too bad to just copy/paste and reword stuff from a previous blog post.</p>
-</section>
-</section>
-<section id="custom-stuff" class="level2">
-<h2 class="anchored" data-anchor-id="custom-stuff">Custom stuff</h2>
-<p>I have a bunch of older blog pieces. I should consider migrating them over. Before I do that I should at least link to them.</p>
-<p>I had fun adding banners to other pages on my lab website, and I would like to add a banner to the articles index.html to spice things up. Not sure yet how to do this…maybe an override with includes before body or something. I tried an override, but the outcome wasn’t pretty.</p>
-<p>Next up is to hack the template. Looks like I need to make a template off of <code>content-article-index.html</code>.</p>
-<ul>
-<li>Make <code>inst/pkgdown/BS5/templates</code></li>
-<li>copy in <code>content-article-index.html</code> from pkgdown templates</li>
-<li>create a dummy R package for this repo, it’s called crumplab</li>
-<li>list crumplab as package in template yml listing in <code>_pkgdown.yml</code></li>
-<li>mod <code>content-article-index.html</code> and add my images etc.</li>
-</ul>
-<p>It worked I think. Note to self that the package needs to be rebuilt in order for any changes to the templates to take effect.</p>
-</section>
-<section id="issues" class="level2">
-<h2 class="anchored" data-anchor-id="issues">Issues</h2>
-<p>I want to add unique twitter cards to the <code>articles/index.html</code> page, and to individual posts. I thought this would be easy, because <code>pkgdown</code> makes it easy to <a href="https://pkgdown.r-lib.org/articles/metadata.html?q=twitter#article-metadata">add twitter cards for each vignette</a>. However, it seems that any other cards are added on a site-wide basis, and defined in <code>_pkgdown.yml</code>. Additionally, it’s not clear how to set individual cards for pages like <code>articles/index.html</code>.</p>
-<p>Solution was to write a custom version of <code>pkgdown::build_article_index()</code> that allowed to the override to be applied only to <code>articles/index.html</code>, and not to any the blog posts. A nice side effect was that I was planning to add some functions to a lab R package, so now I can put those in the R package for the crumplab website.</p>
-</section>
-<section id="extra-bits" class="level2">
-<h2 class="anchored" data-anchor-id="extra-bits">Extra bits</h2>
-<p>So far I’m pretty happy with this approach to blogging. But, I’m sure there’s a bunch of things that will come up as I try to process out even more. I’m going to use the space to make breadcrumbs for myself to solve little blogging problems that I stumble across.</p>
-<section id="drafting-a-post-without-publishing" class="level3">
-<h3 class="anchored" data-anchor-id="drafting-a-post-without-publishing">Drafting a post without publishing</h3>
-<p>What are some options for drafting a post and choosing when to publish it.</p>
-<ol type="1">
-<li>Make a new post on my local computer and don’t push it to Github.</li>
-<li>Add to <code>.Rbuildignore</code>, but this wouldn’t allow a preview?</li>
-<li>Or, add new posts to a <code>blog/drafts</code> folder. This should build the post, but it won’t be linked to on the blog page. If someone knew the URL it would still be visible on the internet, if pushed to github.</li>
-</ol>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>Rstats</category>
-  <category>pkgdown</category>
-  <category>blogging</category>
-  <guid>https://crumplab.com/blog/post_999_5_17_22_blogging/index.html</guid>
-  <pubDate>Tue, 17 May 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/post_999_5_17_22_blogging/imgs/blogging_with_pkgdown.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

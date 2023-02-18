@@ -36,6 +36,8 @@ But, one more tangent. I\'m currently writing this post in [notion.so](http://no
 
 The link to my lab website that now has my course list is [crumplab.com/courses](http://crumplab.com/courses). I\'m still writing in notion, and wrote that link as plain text. It is not clickable. But! it is clickable when I copy/pasted it into the visual editor in R studio. Nice.
 
+Well. I didn't get a start on verbalizing course structure thoughts, and now I have a meeting. Will be back here tomorrow.
+
 ---
 nocite: |
   @*
