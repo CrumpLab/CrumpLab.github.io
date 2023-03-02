@@ -131,7 +131,7 @@ I could live with a table like this I think.
 
 I'm getting stuck too much worrying about ways to present a list of suggested readings. It feels sticky because I'm thinking about how content and style come together, but I haven't totally sorted out what content options I want.
 
-Minimally, I think I want the citation and the option to add notes about the reading. This is pretty much what I have in the above table. I can write any notes about a paper in zotero and have them included in the .bib file. This way the .bib file acts as a little database, which also offers opportunities for search and presentation. For example, the above table adds a date column read from the bib file. 
+Minimally, I think I want the citation and the option to add notes about the reading. This is pretty much what I have in the above table. I can write any notes about a paper in zotero and have them included in the .bib file. This way the .bib file acts as a little database, which also offers opportunities for search and presentation. For example, the above table adds a date column read from the bib file.
 
 ## Trying to get interactive tables that process markdown citations
 
@@ -148,7 +148,7 @@ Sigh, looks like this is an open issue: <https://github.com/rstudio/DT/issues/74
 Ok, let's try <https://glin.github.io/reactable/>.
 
 ```{r}
-reactable::reactable(selected_bib)
+#reactable::reactable(selected_bib)
 ```
 
 This doesn't render the citations either. But, is there hope? Perhaps custom-rendering: <https://glin.github.io/reactable/articles/custom-rendering.html>. Tried some stuff, didn't work.
@@ -191,10 +191,5 @@ knitr::kable(selected_bib)
 ```
 
 Not bad, pushing ball forward achieved.
-
-
-
-
-
 
 ## References

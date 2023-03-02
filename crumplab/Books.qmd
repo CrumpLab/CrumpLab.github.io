@@ -1,5 +1,5 @@
 ---
-title: "Books and OERs"
+title: "Books"
 ---
 
 ```{css, echo=FALSE}
@@ -18,7 +18,7 @@ These books were made using R Markdown and compiled in Bookdown. They are all fr
 
 ## [Instances of Cognition](https://www.crumplab.com/cognition/textbook/index.html)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 **Description**: This is a free, open-educational textbook and set of course materials for an introductory undergraduate course in cognition. The materials are not yet complete, and I am continuing to develop them across the Fall 2021 and Spring 2022 semesters. All of the materials are CC BY-SA 4.0 creative-commons licensed and free for others to use, copy, remix, re-use.
 
@@ -44,7 +44,7 @@ knitr::include_graphics("images/2530_image.jpg")
 
 ## [Reproducible statistics for psychologists with R: Lab Tutorials](https://crumplab.github.io/rstatsforpsych/)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 **Description**: This is a series of labs/tutorials currently under development (2020-2021) for a two-semester graduate-level statistics sequence in Psychology \@ Brooklyn College of CUNY. The first set of 13 labs roughly tracks "Thinking with Data" (Vokey & Allen, 2018) and "Answering questions with data" (Crump et al., 2018); the second set of labs (to be written on a weekly basis during the Spring 2021 semester) will roughly track "Experimental Design and Analysis for Psychology" (Abdi et al., 2009).
 
@@ -68,7 +68,7 @@ knitr::include_graphics("images/RstatsCover.png")
 
 ## [Using R for Reproducible Research: Student contributed tutorials](https://crumplab.github.io/psyc7709_2019/book/docs/index.html)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 **Description**: These chapters were written by students in [PSYC 7709: Using R for Reproducible research](https://crumplab.github.io/psyc7709_2019/), Spring 2019 \@ Brooklyn College of CUNY, as a part of their final project to write a tutorial about an R package.
 
@@ -92,7 +92,7 @@ knitr::include_graphics("images/ReproStudentBook.png")
 
 ## [Answering Questions with Data: Introductory Statistics for Psychology Students](https://crumplab.github.io/statistics/)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 **Authors**: Matthew Crump; Chapters 2 and 4 adapted from Navarro, D.; Videos: Jeffrey Suzuki
 
@@ -121,7 +121,7 @@ knitr::include_graphics("images/TextbookCover.png")
 
 ## [Answering Questions with Data: The Lab Manual](https://crumplab.github.io/statisticsLab/)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 Lab activities using R, Excel, SPSS, and JAMOVI
 
@@ -154,7 +154,7 @@ knitr::include_graphics("images/LabmanualCover.png")
 
 ## [Answering Questions with Data: The Course Website](https://crumplab.github.io/psyc3400/)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 A copiable course website for introductory statistics
 
@@ -185,7 +185,7 @@ knitr::include_graphics("images/Psyc3400.png")
 
 ## [Research Methods for Psychology](https://crumplab.github.io/ResearchMethods/)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 **Description**:A free Research methods textbook for undergraduates in Psychology, creative commons license, remix, reuse, edit, contribute.
 
@@ -209,7 +209,7 @@ knitr::include_graphics("images/ResearchMethods.png")
 
 ## [Cognitive Technologies: From Theory and Data to Application](https://crumplab.github.io/cognitivetechnologies/book/)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 **Description**: [A series of chapters on cognitive technologies](https://crumplab.github.io/cognitivetechnologies/book/) written by doctoral students who took my course on Cognitive Technologies in Spring 2018. They wrote it, I compiled it using bookdown.
 
@@ -231,7 +231,7 @@ knitr::include_graphics("images/CogTech.png")
 
 ## [Open tools for writing open interactive textbooks (and more)](https://crumplab.github.io/OER_bookdown/)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 **Description**: tutorial overview of the process I use to write books using R, R-studio, R-markdown, and compile them in bookdown. I've used this process for all of these books. Some other brief tidbits on using hypothes.is, and R-Shiny apps, also Zotero and hosting on github pages (where this website is hosted)
 
@@ -257,7 +257,7 @@ knitr::include_graphics("images/OER.png")
 
 ## [Programming for Psychologists: Data Creation and Analysis](https://crumplab.github.io/programmingforpsych/)
 
-::: {.columns}
+::: columns
 ::: {.column width="70%"}
 **Description**: Some notes that got big enough to make a book. Beginner introduction to coding in R, Livecode, and some web-programming, for the purposes of making data with computers (programming experiments), and analyzing it in R.
 

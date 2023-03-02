@@ -199,7 +199,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Books.html">
- <span class="menu-text">Books and OERs</span></a>
+ <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Courses.html">
@@ -349,7 +349,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 }
 
 </style>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>I often create messy annotated bibliographies for sets of readings. This will be a quick post for me to work through my writing and R Markdown process for creating annotated bibs. I have a feeling that I could make the process easier for myself. But, I need to kick some tires first.</p>
 <section id="zotero-copypaste-method" class="level2">
 <h2 class="anchored" data-anchor-id="zotero-copypaste-method">Zotero Copy/Paste Method</h2>
@@ -442,7 +442,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">c</span>(header_level, <span class="st">" "</span>, get_title, <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>))</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">c</span>(<span class="st">"::: {.apa}"</span>,<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>))</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  stevemisc<span class="sc">::</span><span class="fu">print_refs</span>(single_citation,<span class="at">csl=</span>csl_file)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  stevemisc<span class="sc">::</span><span class="fu">print_refs</span>(<span class="fu">paste</span>(single_citation,<span class="at">collapse=</span><span class="st">""</span>),<span class="at">csl=</span>csl_file)</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">c</span>(<span class="st">":::"</span>,<span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>))</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">c</span>(<span class="st">"Citation key for "</span>,<span class="st">"@"</span>,cite_key,<span class="st">": "</span>,cite_key), <span class="at">sep=</span><span class="st">""</span>)</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>

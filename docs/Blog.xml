@@ -13,6 +13,8 @@
 <url>https://crumplab.com/images/logo2.png</url>
 <title>crumplab</title>
 <link>https://crumplab.com/Blog.html</link>
+<height>139</height>
+<width>144</width>
 </image>
 <generator>quarto-1.2.210</generator>
 <lastBuildDate>Sat, 18 Feb 2023 05:00:00 GMT</lastBuildDate>
@@ -54,8 +56,8 @@
 <p>Large language models are not like people. They have been trained on huge corpuses of text (e.g., half a trillion words). There have been ongoing efforts to digitize as much human produced text as possible. The google books project was one of the first. They scanned as many books in the world as they could. We also have the internet where people have produced all kinds of text, both regular language, and computer code. It is possible to download most things on the internet using scraping. For example, you could download all of wikipedia or reddit. That’s a lot of text.</p>
 <p>To give a bit more history, in 1998 a model called Latent Semantic Analysis (LSA) was trained on a much smaller set of text examples called the TASA corpus (37,000 documents, about 10 million words.) That model was able to do some impressive things, such as pass the TOEFL (english language equivalency exam), and even grade essays with similar results as expert graders. However, that model was not able to produce whole sentences or paragraphs that looked like real sentences.</p>
 <p>ChatGPT is a filtered version of another model called GPT-3. This model was trained on half a trillion words. Since 1998 there have been advances in computing technology (memory, processor speed, and algorithms), that make it possible to statistically model the patterns of word-occurrence across a huge set of examples. The result is that these models can successfully produce “realistic” looking sentences, paragraphs, and more; all based on the structure of the training examples.</p>
-<p>In other words, ChatGPT writes new text based on probabilistic recombination to similar text that is has been trained on. You can give the model example text prompts, and it will generate completions that are similar to the kind of text that has completed those kind of prompts in the training database.</p>
-<p>There is a really general principle at work here that applies not only to text, but any large set of examples. If you have a large set of examples, it is possible to train a machine learning model to extract the statistical structure from the examples, and then generate new examples that are like the trained examples. This is how LLMs work. This is also how image generation tools like DALL-E, or Midjourney work.</p>
+<p>To a rough approximation, ChatGPT writes new text based on probabilistic recombination of similar text that it has been trained on. You can give the model example text prompts, and it will generate completions that are similar to the kind of text that has completed those kind of prompts in the training database.</p>
+<p>There is a really general principle at work here that applies not only to text, but any large set of examples. If you have a large set of examples, it is possible to train a machine learning model to extract the statistical structure from the examples, and then generate new examples that are like the trained examples. This also applies to image generation tools like DALL-E, or Midjourney.</p>
 <section id="garbage-in---garbage-out" class="level3">
 <h3 class="anchored" data-anchor-id="garbage-in---garbage-out">Garbage in - Garbage out</h3>
 <p>LLMs have been trained on as much text as possible. Unfortunately, this includes digitized books and propaganda from the past and present that are racist, homophobic, transphobic, mysogynistic, xenophobic, and so on. This also includes hate speech scrawled across internet forums. This also includes conspiracy theories and things that internet trolls say.</p>
@@ -1512,20 +1514,15 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">DT<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">datatable</span>(selected_bib)</span></code></pre></div>
 <div class="cell-output-display">
 
-<div id="htmlwidget-6620ba9a7a34d37ac5bd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6620ba9a7a34d37ac5bd">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b2e901ace69ec070a01b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b2e901ace69ec070a01b">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>That works, but it doesn’t render the citations. I feel like I have been here before with the <a href="https://www.semanticlibrarian.com">Semantic librarian project</a>.</p>
 <p>Sigh, looks like this is an open issue: <a href="https://github.com/rstudio/DT/issues/748" class="uri">https://github.com/rstudio/DT/issues/748</a>.</p>
 <p>Ok, let’s try <a href="https://glin.github.io/reactable/" class="uri">https://glin.github.io/reactable/</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">reactable<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">reactable</span>(selected_bib)</span></code></pre></div>
-<div class="cell-output-display">
-
-<div id="htmlwidget-50b7fbecfa37321c994e" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-50b7fbecfa37321c994e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"CITATION":["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],"DATE":[1968,1974,1972],"TITLE":["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],"NOTE":["This is a classic paper because...","",""]},"columns":[{"accessor":"CITATION","name":"CITATION","type":"character"},{"accessor":"DATE","name":"DATE","type":"numeric"},{"accessor":"TITLE","name":"TITLE","type":"character"},{"accessor":"NOTE","name":"NOTE","type":"character"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a9e7d622dfc5efd30bf806471a383489"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-</div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;">#reactable::reactable(selected_bib)</span></span></code></pre></div>
 </div>
 <p>This doesn’t render the citations either. But, is there hope? Perhaps custom-rendering: <a href="https://glin.github.io/reactable/articles/custom-rendering.html" class="uri">https://glin.github.io/reactable/articles/custom-rendering.html</a>. Tried some stuff, didn’t work.</p>
 <section id="try-stuff" class="level3">
@@ -1802,7 +1799,7 @@ Whittlesea, Bruce W. A. 1997. <span>“Production, Evaluation, and Preservation 
 <p><img src="https://crumplab.com/blog/885_10_16_22_unplanning/images/unplanning.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>I’ll probably spend more time on making the banner image for this post than writing it because there’s a looming Brooklyn brunch situation, and I only have a simple suggestion for my future self: unplan your course.</p>
 <p>I’ve planned lots of courses, and I’m about to plan two more for next semester. One of them is a Macaulay Honor’s seminar for undergraduates in the first year of that program. The seminar is called, “The people of New York City”. It’s a really interesting course that has been taught in many different ways across CUNY. It’s also way outside my realm of expertise, which is typical for everyone who is asked to lead this seminar. Needless to say, I have started planning my approach to the seminar. But, I really don’t want the planning to get in the way, so I’m starting to do unplanning as well.</p>
 <p>What does unplanning entail? I’m not so sure yet, so I’m slopping down thoughts about what I might mean. Relatedly, this Fall 2022 semester I am trying “ungrading” <span class="citation" data-cites="blum2020">(Blum 2020)</span> in my <a href="https://crumplab.com/cognition">intro to cognition course</a>. This approach can mean lots of different things for a classroom, and <a href="https://crumplab.com/blog/post_888_8_23_22_teaching2530/">I’ve been blogging a bit about that over here</a>. One of the things it means to me is that the class becomes a community space inhabited by participating individual learners. From this vantage point, I’ve been working through what it means to deliver my planned course as a member of the community who is very quickly coming up to speed with community wants and needs.</p>
@@ -1883,7 +1880,7 @@ Blum, Susan Debra. 2020. <em>Ungrading: Why Rating Students Undermines Learning 
 <p><img src="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/imgs/Quarto-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>For a good few years I have been adopting reproducible workflows for my cognitive psychology research projects. <span class="citation" data-cites="vuorre2021">Vuorre and Crump (2021)</span> discussed an R-based approach to creating and sharing research assets in a reproducible manner, and we called it <a href="https://crumplab.com/vertical/">vertical</a>. Since then I have used that approach for most new projects in the lab. However, <a href="https://quarto.org">quarto</a> is the NKOTB, and I’ve been itching to try it for managing assets in a psych research project. And, in the last few days I got the chance to start a project from scratch using quarto, actually several projects. I’m going to digest some of my experiences and lay breadcrumbs for my future self about what I like and am learning so far.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -2006,7 +2003,7 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 <p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>I often assign “blogging” as an optional way for students to engage in course material. There are lots of ways to get a blog up and running on the internet, and my preference is to suggest that students adopt and learn R Markdown and RStudio for their blogging workflow. Many of my students are unfamiliar with computer programming in R, so learning how to blog with R can be a useful gateway to computational skills.</p>
 <p>R Studio now comes packaged with <a href="https://quarto.org">Quarto</a>, which provides yet another blogging workflow. This post is intended for my students as a quick guide to setting up a quarto blog.</p>
 <section id="overview" class="level2">
@@ -2211,7 +2208,7 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 <p><img src="https://crumplab.com/blog/post_888_8_23_22_teaching2530/imgs/groove.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>I’m using this post to get my words flowing in preparation for another semester at Brooklyn College of CUNY. My research area is cognition; however, over the past decade I have mostly not taught cognition courses, especially at the undergraduate level where I taught lots of stats and research methods. Last year was the first time I got to teach an intro to cognition course two semesters in a row! Looks like I’m on a roll because I get to teach it again this semester. Additionally, I’m teaching cognition modules for separate doctoral and masters programs, so Fall 2022 is a whole lotta cognition going on.</p>
 <p>TLDR: I’m going to try ungrading my course this semester. Should be fun.</p>
 <section id="mood" class="level2">
@@ -2370,7 +2367,7 @@ Yakushko, Oksana. 2019. <em>Scientific Pollyannaism: From Inquisition to Positiv
 }
 
 </style>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p><span class="h1 squiggligraphy">D</span>ecided to make fonts, and I’m using this post to find out if the fonts can be displayed on the web (<span class="squiggligraphy">the answer is yes.</span>)</p>
 <p>So far I have tried two different workflows using <a href="https://2ttf.com">ifontmaker</a> and <a href="https://www.calligraphr.com/en/">calligraphr</a>. Both approaches work pretty well.</p>
 <p><a href="https://2ttf.com">ifontmaker</a> is an ipad app ($7.99). For the price it has some nice features, and it is pretty easy to pencil in all of the character very quickly. It has bezier curves, but the brushes are limited. It is possible to copy in .svg. I liked the kerning feature for letter pairs.</p>
@@ -2441,7 +2438,7 @@ Yakushko, Oksana. 2019. <em>Scientific Pollyannaism: From Inquisition to Positiv
 }
 
 </style>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>Eugenics and related ideological systems continue to influence psychology and society. I am using this post as an annotated bibliography to gather my book-based reading list about eugenics. The full list is at the bottom. I plan to update this list over time as I find more to read on the topic.</p>
 <section id="scientific-pollyannaism-from-inquisition-to-positive-psychology" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-pollyannaism-from-inquisition-to-positive-psychology">Scientific Pollyannaism: From Inquisition to Positive Psychology</h2>
@@ -2950,7 +2947,7 @@ Yakushko, Oksana. 2019. <em>Scientific <span>Pollyannaism</span>: <span>From Inq
 }
 
 </style>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>I often create messy annotated bibliographies for sets of readings. This will be a quick post for me to work through my writing and R Markdown process for creating annotated bibs. I have a feeling that I could make the process easier for myself. But, I need to kick some tires first.</p>
 <section id="zotero-copypaste-method" class="level2">
 <h2 class="anchored" data-anchor-id="zotero-copypaste-method">Zotero Copy/Paste Method</h2>
@@ -3043,7 +3040,7 @@ Yakushko, Oksana. 2019. <em>Scientific <span>Pollyannaism</span>: <span>From Inq
 <span id="cb1-10">  </span>
 <span id="cb1-11">  <span class="fu" style="color: #4758AB;">cat</span>(<span class="fu" style="color: #4758AB;">c</span>(header_level, <span class="st" style="color: #20794D;">" "</span>, get_title, <span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n\n</span><span class="st" style="color: #20794D;">"</span>))</span>
 <span id="cb1-12">  <span class="fu" style="color: #4758AB;">cat</span>(<span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"::: {.apa}"</span>,<span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;">"</span>))</span>
-<span id="cb1-13">  stevemisc<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">print_refs</span>(single_citation,<span class="at" style="color: #657422;">csl=</span>csl_file)</span>
+<span id="cb1-13">  stevemisc<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">print_refs</span>(<span class="fu" style="color: #4758AB;">paste</span>(single_citation,<span class="at" style="color: #657422;">collapse=</span><span class="st" style="color: #20794D;">""</span>),<span class="at" style="color: #657422;">csl=</span>csl_file)</span>
 <span id="cb1-14">  <span class="fu" style="color: #4758AB;">cat</span>(<span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">":::"</span>,<span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n\n</span><span class="st" style="color: #20794D;">"</span>))</span>
 <span id="cb1-15">  <span class="fu" style="color: #4758AB;">cat</span>(<span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Citation key for "</span>,<span class="st" style="color: #20794D;">"@"</span>,cite_key,<span class="st" style="color: #20794D;">": "</span>,cite_key), <span class="at" style="color: #657422;">sep=</span><span class="st" style="color: #20794D;">""</span>)</span>
 <span id="cb1-16"></span>
@@ -3134,7 +3131,7 @@ Jenkins, Baylee D., Jonathan M. Golding, Alexis M. Le Grand, Mary M. Levi, and A
 </div>
 </div>
 </div>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>In a previous version of this post, I shared a detective/thriller themed story about academic integrity issues arising in a course I taught. The story picked up more attention than I anticipated. I shared the story as part of a course assessment writing exercise, which has now been completed, and the original post is no longer available.</p>
 <p>Part of my course assessment exercise was to learn more about the literature on cheating behavior. I conducted a short literature review on that topic and am posting brief notes about a few of the papers.</p>
 <p>For teaching psychology, I found this paper to be most relevant and current:</p>
@@ -3276,7 +3273,7 @@ Jenkins, Baylee D., Jonathan M. Golding, Alexis M. Le Grand, Mary M. Levi, and A
 <p><img src="https://crumplab.com/blog/post_996_5_20_22_assignmentflex/imgs/teaching_warp.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2022-11-10</p>
+<p>Last knit: 2023-03-02</p>
 <p>I lack positive emotions toward the process of grading in my courses. I have lots of positive emotions for my students. Grading stresses people out. I’ll save my thoughts about grading in general for another day.</p>
 <p>What I really want to talk about is how I flooded the gates with tons of ways to get an A in the course. It worked, I had fun, I think my students had fun and they got a lot of well-deserved As. More important, my students engaged in the material in more ways than they normally would have.</p>
 <p>I’ll say a little bit about my course and then talk about how I implemented lots of assignment choice this semester.</p>

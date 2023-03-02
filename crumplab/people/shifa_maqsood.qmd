@@ -1,0 +1,10 @@
+---
+title: "Shifa Maqsood"
+description: Undergraduate
+about:
+  template: trestles
+  image: ../images/crumplab.png
+order: 4
+---
+
+Shifa Maqsood is an undergraduate researcher, and Tow presidential mentoring scholar for Spring 2023.

@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   echo=FALSE,
+  eval=FALSE,
   message= FALSE,
   warning=FALSE
 )
@@ -80,3 +81,4 @@ This also works with multiple citation keys.
 bib2md(c("bowersStudentDishonestyIts1964",
          "fischerLevelsCheatingConditions1970"),"AcademicIntegrity.bib")
 ```
+

@@ -132,7 +132,7 @@ bib2md <- function(cite_key,
 
   import_bib <- RefManageR::ReadBib(bib_file)
   single_citation <- RefManageR::toBiblatex(import_bib[[cite_key]])
-  stevemisc::print_refs(single_citation,csl=csl_file)
+  stevemisc::print_refs(paste(single_citation,collapse=""),csl=csl_file)
 
 }
 
@@ -160,7 +160,7 @@ bib2annotate <- function(cite_key,
 
   cat(c(header_level, " ", get_title, "\n\n"))
   cat(c("::: {.apa}","\n"))
-  stevemisc::print_refs(single_citation,csl=csl_file)
+  stevemisc::print_refs(paste(single_citation,collapse=""),csl=csl_file)
   cat(c(":::","\n\n"))
   cat(c("Citation key for ","@",cite_key,": ",cite_key), sep="")
 

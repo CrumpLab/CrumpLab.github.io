@@ -25,7 +25,6 @@ knitr::include_graphics('images/people_banner.jpg')
 ## Lab Members
 
 ::: {#people_list}
-
 :::
 
 ## Previous
