@@ -1,7 +1,6 @@
 ---
 title: "Publications"
 description: "In progress and peer-reviewed publications from Matthew J. C. Crump"
-include-in-header: <link rel="meta" type="application/rdf+xml" href="Crump/Crump.rdf"/>
 ---
 
 ```{css, echo=FALSE}

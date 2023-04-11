@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.210">
+<meta name="generator" content="quarto-1.3.258">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,14 +20,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -41,8 +42,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -117,76 +117,78 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     <span class="navbar-title">crumplab</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../People.html">
+    <a class="nav-link" href="../../People.html" rel="" target="">
  <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Publications.html">
+    <a class="nav-link" href="../../Publications.html" rel="" target="">
  <span class="menu-text">Pubs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Books.html">
+    <a class="nav-link" href="../../Books.html" rel="" target="">
  <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Courses.html">
+    <a class="nav-link" href="../../Courses.html" rel="" target="">
  <span class="menu-text">Courses</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Apps.html">
+    <a class="nav-link" href="../../Apps.html" rel="" target="">
  <span class="menu-text">Apps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Opportunities.html">
+    <a class="nav-link" href="../../Opportunities.html" rel="" target="">
  <span class="menu-text">Join</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Blog.html">
+    <a class="nav-link" href="../../Blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Fun.html">
+    <a class="nav-link" href="../../Fun.html" rel="" target="">
  <span class="menu-text">Fun</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/CrumpLab"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/CrumpLab" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://bbs.crumplab.com/@MattCrump"><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://fosstodon.org/(MattCrumpLab?)" rel="" target=""><i class="bi bi-mastodon" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/MattCrumpLab"><i class="bi bi-twitter" role="img" aria-label="Twitter">
+    <a class="nav-link" href="https://twitter.com/MattCrumpLab" rel="" target=""><i class="bi bi-twitter" role="img" aria-label="Twitter">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"><i class="bi bi-youtube" role="img" aria-label="Youtube">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab" rel="" target=""><i class="bi bi-youtube" role="img" aria-label="Youtube">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../Blog.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../Blog.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -290,7 +292,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 </header>
 
-<p>Last knit: 2023-03-10</p>
+<p>Last knit: 2023-04-11</p>
 <p><a href="http://www.abpsi.org">The Association of Black Psychology</a> has been publishing the <a href="https://journals.sagepub.com/home/jbp">Journal of Black Psychology</a> since 1974. I just learned about it. So, I’m reading it because that’s what you do when you find out that you missed an entire foundational field in psychology.</p>
 <p>I’m a cognitive psychologist who spends a large part of my research time considering how cognition in general is supported by computations of learning and memory processes. I’m also interested in psychology more broadly: how it fits together as a discipline, and how the institutions of psychology work, how psychology influences society, etc.</p>
 <p>My impression of my own field is that it is highly fragmented. There’s lots of everyone doing their own thing. There is no unified field theory of anything. Wondering about the “point” of things in cognitive psychology has sucked years of my life away. I guess I enjoy it, and like many other disciplines, perhaps struggling with the point is part of the point. Points don’t come for free.</p>
@@ -309,7 +311,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <p>I’ll consider this briefly from the lens of eugenics. Did you know that the founder of Psychological Review, James McKeen Catell, was a eugenicist? That’s something. It’s part of a deeply disturbing structural foundation of psychology. Some of this foundation is not particularly salient. For example, it’s not easy to find the word eugenic or eugenics in Psychological Review (try to find it using Psycinfo).</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="img/eugenic.png" class="img-fluid" width="904"></p>
+<p><img src="img/eugenic.png" class="quarto-discovered-preview-image img-fluid" width="904"></p>
 </div>
 </div>
 <p>That’s curious.</p>
@@ -847,32 +849,32 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-andrewsInvestigationAttitudesSexual1976" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-andrewsInvestigationAttitudesSexual1976" class="csl-entry" role="listitem">
 Andrews, James. 1976. <span>“An <span>Investigation</span> into the <span>Attitudes</span> and <span>Sexual Behavioral Patterns</span> of <span>Black Mentally Retarded Adults</span>.”</span> <em>Journal of Black Psychology</em> 3 (1): 20–33. <a href="https://doi.org/gg3htg">https://doi.org/gg3htg</a>.
 </div>
-<div id="ref-boykinExperimentalPsychologyBlack1977" class="csl-entry" role="doc-biblioentry">
+<div id="ref-boykinExperimentalPsychologyBlack1977" class="csl-entry" role="listitem">
 Boykin, A. Wade. 1977. <span>“Experimental <span>Psychology</span> from a <span>Black Perspective</span>: <span>Issues</span> and <span>Examples</span>.”</span> <em>Journal of Black Psychology</em> 3 (2): 29–49. <a href="https://doi.org/gg3htw">https://doi.org/gg3htw</a>.
 </div>
-<div id="ref-boykinTaskVariabilityPerformance1982" class="csl-entry" role="doc-biblioentry">
+<div id="ref-boykinTaskVariabilityPerformance1982" class="csl-entry" role="listitem">
 ———. 1982. <span>“Task <span>Variability</span> and the <span>Performance</span> of <span>Black</span> and <span>White Schoolchildren</span>: <span>Vervistic Explorations</span>.”</span> <em>Journal of Black Studies</em> 12 (4): 469–85. <a href="https://doi.org/bmmp47">https://doi.org/bmmp47</a>.
 </div>
-<div id="ref-hilliardReviewLeonKamin1976" class="csl-entry" role="doc-biblioentry">
+<div id="ref-hilliardReviewLeonKamin1976" class="csl-entry" role="listitem">
 Hilliard, Asa G. 1976. <span>“A Review of Leon Kamin’s the Science and Politics of IQ.”</span> <em>Journal of Black Psychology</em> 2 (2): 64–74. <a href="https://doi.org/gg3hr5">https://doi.org/gg3hr5</a>.
 </div>
-<div id="ref-laddPresidentAddressNew1894" class="csl-entry" role="doc-biblioentry">
+<div id="ref-laddPresidentAddressNew1894" class="csl-entry" role="listitem">
 Ladd, George Trumbull. 1894. <span>“President’s Address Before the <span>New York Meeting</span> of the <span>American Psychological Association</span>.”</span> <em>Psychological Review</em> 1 (1): 1–21. <a href="https://doi.org/drzt6z">https://doi.org/drzt6z</a>.
 </div>
-<div id="ref-smithEditorial1974" class="csl-entry" role="doc-biblioentry">
+<div id="ref-smithEditorial1974" class="csl-entry" role="listitem">
 Smith, William David. 1974. <span>“Editorial.”</span> <em>Journal of Black Psychology</em> 1 (1): 5–6. <a href="https://doi.org/gg3vcr">https://doi.org/gg3vcr</a>.
 </div>
-<div id="ref-williamsHistoryAssociationBlack1974" class="csl-entry" role="doc-biblioentry">
+<div id="ref-williamsHistoryAssociationBlack1974" class="csl-entry" role="listitem">
 Williams, Robert. 1974. <span>“A <span>History</span> of the <span>Association</span> of <span>Black Psychologists</span>: <span>Early Formation</span> and <span>Development</span>.”</span> <em>Journal of Black Psychology</em> 1 (1): 9–24. <a href="https://doi.org/gg3hq4">https://doi.org/gg3hq4</a>.
 </div>
-<div id="ref-williamsBITCH100CultureSpecificTest1972" class="csl-entry" role="doc-biblioentry">
+<div id="ref-williamsBITCH100CultureSpecificTest1972" class="csl-entry" role="listitem">
 Williams, Robert L. 1972. <span>“The <span>BITCH</span>-100: <span>A Culture</span>-<span>Specific Test</span>.”</span>
 </div>
-<div id="ref-yakushkoEugenicsItsEvolution2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-yakushkoEugenicsItsEvolution2019" class="csl-entry" role="listitem">
 Yakushko, Oksana. 2019. <span>“Eugenics and Its Evolution in the History of Western Psychology: <span>A</span> Critical Archival Review.”</span> <em>Psychotherapy and Politics International</em> 17 (2). <a href="https://doi.org/gg3hsf">https://doi.org/gg3hsf</a>.
 </div>
 </div></section></div></main> <!-- /main -->
@@ -903,9 +905,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -970,6 +986,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

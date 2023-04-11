@@ -30,7 +30,7 @@ website:
         href: https://github.com/CrumpLab
         aria-label: GitHub
       - icon: mastodon
-        href: https://bbs.crumplab.com/@MattCrump
+        href: https://fosstodon.org/@MattCrumpLab
       - icon: twitter
         href: https://twitter.com/MattCrumpLab
         aria-label: Twitter

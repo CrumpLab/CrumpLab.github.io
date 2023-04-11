@@ -35,7 +35,7 @@ knitr::include_graphics('images/front_banner.jpg')
 
 -   [Github](https://github.com/CrumpLab)
 -   [Twitter](https://twitter.com/MattCrumpLab)
--   <a rel="me" href="https://bbs.crumplab.com/@MattCrump">Mastodon</a>
+-   <a rel="me" href="https://fosstodon.org/@MattCrumpLab">Mastodon</a>
 -   [Youtube](https://www.youtube.com/c/CrumpsComputationalCognitionLab)
 -   [Scholar](https://scholar.google.com/citations?user=49EVuVcAAAAJ&hl=en)
 -   [Brooklyn College](https://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059)
