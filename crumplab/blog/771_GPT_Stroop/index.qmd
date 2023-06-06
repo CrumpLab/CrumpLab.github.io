@@ -1,0 +1,209 @@
+---
+title: "Simulating Stroop effects with ChatGPT"
+author: "Matt Crump"
+date: 6/6/23
+description: "This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short is answer it can generate data in the style of a Stroop experiment."
+bibliography: references.bib
+---
+
+I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the [openai](openai.com) API. I only have these couple of hours, so this post will be brief. I'm mainly using the time to see if I can get the api to work. Let's go.
+
+First, the Stroop task is a speeded reaction time task [for a review see, @macleodHalfCenturyResearch1991]. Participants are usually presented with one stimulus at a time, and asked to respond quickly and accurately to identify some aspect of the stimulus while ignoring another aspect of the stimulus.
+
+For example, the stimulus could be the word BLUE written in red ink, and the task could be to identify the ink-color, "red". This is also an example of an incongruent item where the target color "red" mismatches the distractor word "blue".
+
+A congruent item occurs when the target and distractor match, such as the word BLUE written in blue ink. In a typical Stroop procedure, participants are shown a single Stroop item on a given trial and are asked to identify the ink-color as quickly and accurately as possible (by pressing a button, or saying the name out loud). There are usually many trials across the whole experiment. Here's a few examples:
+
+```{r}
+#| echo: false
+knitr::include_graphics("Stroop.png")
+```
+
+
+
+The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.
+
+## Who cares if ChatGPT can simulate the Stroop effect?
+
+I'm not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I'm not exactly sure about most of the important details...especially compared to the level of detail I'm used to from computational models in cognitive psychology. For this reason, I'm not interested in modeling Stroop performance with ChatGPT for any explanatory purpose, or to make any claims about ChatGPT can or can't do.
+
+Based on previous messing around with GPT models, I'm pretty confident I can create a series of prompts that will produce data in the style of a Stroop experiment.
+
+Why do I care about this? Some of my research involves questions about attentional control abilities [@bugg2012support; @braem2019measuring], and for many years I've been conducting experiment about these abilities using online methods. For example, experimental tasks are programmed for web-browsers using tools like JsPsych [@de2015jspsych], and participants may be recruited from platforms like Amazon's Mechanical Turk [@crump2013evaluating]. For the most part I've found these online methods to be useful research tools.
+
+My biggest concern as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. So, I'm not interesting in analyzing data that doesn't come from real people. For the most part I haven't run into major bot issues (that I am aware of), but many of my tasks have a few properties that could make it difficult for a bot to perform well. For example, many tasks involve speeded responses to identify words and letters. It would be possible to program a bot to accomplish the tasks I put out on the web, but for most of my tasks the return-on-investment for the bot-programmer wouldn't be worth their time.
+
+In the last few months I've run a few tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of a bunch of topics discussed in Todd Gureckis' [mturk blog post from a couple years ago](https://todd.gureckislab.org/2021/06/09/the-poisoned-well). In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a persons interactions with a website and then replay them back. In a psych study, this could involved completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. In a couple recent studies it was very clear that some mturk workers were doing this.
+
+Similarly, I often have a few post-task questions that ask participants about their experiences during the task. Recently, I have found many responses in the style of ChatGPT, which leads me to suspect that some mturk workers are using many different kinds of tools, including ChatGPT to help them complete tasks. Notably, I have found fewer issues like this when using much more restrictive qualifications (e.g., master worker, more than 95% HIT completion, more than 200 HITS completed, etc.)
+
+In the most recent cases where I suspected the data was compromised it was also really easy to tell. For example, accuracy was at chance or, reaction times were way too fast. The strategy of using a browser plugin to record and then replay previous responses doesn't produce above chance performance when the task randomizes the stimuli when ever the web-page is reloaded.
+
+In any case, my question this afternoon was to do a bit of detective work to determine how easy it would be to spoof some Stroop data using ChatGPT. I'm not going to write a browser plugin to automate a GPT-bot capable of spoofing data in the context of browser-based task (say written using JsPsych, or Lab.js, or similar). But, I'm going to test a few prompts and see what kind of fake accuracy and reaction time data will be produced.
+
+## How I'm doing this
+
+I'm running out of time, so the short version is:
+
+1.  Get an openai.com account
+2.  Install the openai R library <https://github.com/irudnyts/openai>
+3.  Get an api key, and do the appropriate stuff
+4.  Follow along with the minimally commented code below
+
+### Load the libraries
+
+```{r}
+#| message: false
+#| warning: false
+library(openai)
+library(tidyverse)
+```
+
+### Test One Simulated Subject
+
+I'll use the gpt-3.5-turbo model. I'm creating a list of 24 Stroop trials, with 12 congruent and 12 incongruent items. The list is then randomized.
+
+I'm using the chat completion api, with the system prompt:
+
+------------------------------------------------------------------------
+
+You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file
+
+------------------------------------------------------------------------
+
+Then, to request fake data for a Stroop experiment I write something like:
+
+------------------------------------------------------------------------
+
+Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible.
+
+\-\-\-\--
+
+1 The word yellow printed in the color green
+
+2 The word red printed in the color yellow
+
+3 The word blue printed in the color blue
+
+4 The word green printed in the color yellow
+
+5 The word blue printed in the color blue
+
+6 The word blue printed in the color green
+
+7 The word green printed in the color green
+
+and so on for 24 trials (note the code specifies all 24 trials in the prompt)
+
+\-\-\-\--
+
+Put simulated identification responses and reaction times into a JSON with keys 'trial', 'word', 'color', 'response', 'reaction_time':
+
+------------------------------------------------------------------------
+
+Here's the code:
+
+```{r, eval = FALSE}
+# use the colors red, green, blue, and yellow
+
+# four possible congruent items
+congruent_items <- c("The word red printed in the color red",
+                     "The word blue printed in the color blue",
+                     "The word yellow printed in the color yellow",
+                     "The word green printed in the color green")
+
+# four possible incongruent items
+incongruent_items <- c("The word red printed in the color blue",
+                       "The word red printed in the color green",
+                       "The word red printed in the color yellow",
+                       "The word blue printed in the color red",
+                       "The word blue printed in the color green",
+                       "The word blue printed in the color yellow",
+                       "The word yellow printed in the color red",
+                       "The word yellow printed in the color blue",
+                       "The word yellow printed in the color green",
+                       "The word green printed in the color red",
+                       "The word green printed in the color blue",
+                       "The word green printed in the color yellow")
+
+# generate 50% congruent and 50% incongruent trials
+# 12 each (congruent and incongruent)
+trials <- sample(c(rep(congruent_items,3),incongruent_items))
+
+# submit a query to open ai using the following prompt
+# note: responses in JSON format are requested
+gpt_response <- create_chat_completion(
+   model = "gpt-3.5-turbo",
+   messages = list(
+       list(
+           "role" = "system",
+           "content" = "You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"),
+       list("role" = "user",
+           "content" = paste("Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible.","-----", paste(1:24, trials, collapse="\n") , "-----","Put simulated identification responses and reaction times into a JSON with keys 'trial', 'word', 'color', 'response', 'reaction_time':", sep="\n")
+       )
+   )
+)
+
+
+# model responses are in JSON format
+sim_data <- jsonlite::fromJSON(gpt_response$choices$message.content)
+save.image("batch1.RData")
+```
+
+## Results
+
+It is convenient that telling ChatGPT to return data in a JSON format actually works. Converting to a tibble, we can print out the trial-by-trial response from the model.
+
+### The "raw" data
+
+Here is the JSON returned by ChatGPT. It has filled out the response column for each trial, and it has provided a reaction time value for each trial.
+
+To be more accurate, it has returned this whole JSON file and written all of the columns. I still need to check whether the trial-to-trial data in this output file is the same as the order in the prompt.
+
+These numbers look plausible-ish...although they all end in 0, which isn't very plausible.
+
+```{r}
+load(file = "batch1.RData")
+knitr::kable(sim_data)
+```
+
+### Mean Reaction times
+
+And, now the moment I've been waiting for...Is there a Stroop effect? To answer this question I computed the mean reaction time for congruent and incongruent items. The answer is that YES, ChatGPT produces reaction time data in the style of Stroop experiment that does result in faster mean reaction times for congruent than incongruent items.
+
+```{r}
+
+# report rt data
+rt_data <- sim_data %>%
+  mutate(congruency = case_when(word == color ~ "congruent",
+                                word != color ~ "incongruent")) %>%
+  group_by(congruency) %>%
+  summarize(mean_rt = mean(reaction_time))
+
+knitr::kable(rt_data)
+```
+
+### Accuracy Data
+
+This time, ChatGPT didn't make any mistakes.
+
+```{r}
+# report accuracy data
+accuracy_data <- sim_data %>%
+  mutate(congruency = case_when(word == color ~ "congruent",
+                                word != color ~ "incongruent")) %>%
+  mutate(accuracy = case_when(response == color ~ TRUE,
+                              response != color ~ FALSE)) %>%
+  group_by(congruency) %>%
+  summarize(accuracy = sum(accuracy)/12)
+
+knitr::kable(accuracy_data)
+```
+
+## Next Steps
+
+I've run out of time to work more on this right now, but I will add more to this post another day.
+
+A next step will be to simulate data for many different ChatGPT participants. I'm curious if the spoofed RT distributions will have human-like qualities (e.g., ex-guassian). I'm also interested in whether slight variations to the instructions (e.g., complete this task with about 75% accuracy, or complete this task as if you were tired) systematically influence the results.
+
+So far my main conclusion is that it wouldn't be that hard to hack my studies using this kind of approach. Sigh.

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.258">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Matt Crump">
+<meta name="dcterms.date" content="2023-06-06">
+<meta name="description" content="This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short is answer it can generate data in the style of a Stroop experiment.">
+
+<title>crumplab - Simulating Stroop effects with ChatGPT</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="crumplab - Simulating Stroop effects with ChatGPT">
+<meta property="og:description" content="This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short is answer it can generate data in the style of a Stroop experiment.">
+<meta property="og:image" content="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png">
+<meta property="og:site-name" content="crumplab">
+<meta property="og:image:height" content="506">
+<meta property="og:image:width" content="840">
+<meta name="twitter:title" content="crumplab - Simulating Stroop effects with ChatGPT">
+<meta name="twitter:description" content="This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short is answer it can generate data in the style of a Stroop experiment.">
+<meta name="twitter:image" content="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png">
+<meta name="twitter:image-height" content="506">
+<meta name="twitter:image-width" content="840">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">crumplab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../People.html" rel="" target="">
+ <span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Publications.html" rel="" target="">
+ <span class="menu-text">Pubs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Books.html" rel="" target="">
+ <span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Courses.html" rel="" target="">
+ <span class="menu-text">Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Apps.html" rel="" target="">
+ <span class="menu-text">Apps</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Opportunities.html" rel="" target="">
+ <span class="menu-text">Join</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Fun.html" rel="" target="">
+ <span class="menu-text">Fun</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CrumpLab" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/(MattCrumpLab?)" rel="" target=""><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/MattCrumpLab" rel="" target=""><i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab" rel="" target=""><i class="bi bi-youtube" role="img" aria-label="Youtube">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../Blog.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#who-cares-if-chatgpt-can-simulate-the-stroop-effect" id="toc-who-cares-if-chatgpt-can-simulate-the-stroop-effect" class="nav-link active" data-scroll-target="#who-cares-if-chatgpt-can-simulate-the-stroop-effect">Who cares if ChatGPT can simulate the Stroop effect?</a></li>
+  <li><a href="#how-im-doing-this" id="toc-how-im-doing-this" class="nav-link" data-scroll-target="#how-im-doing-this">How I’m doing this</a>
+  <ul class="collapse">
+  <li><a href="#load-the-libraries" id="toc-load-the-libraries" class="nav-link" data-scroll-target="#load-the-libraries">Load the libraries</a></li>
+  <li><a href="#test-one-simulated-subject" id="toc-test-one-simulated-subject" class="nav-link" data-scroll-target="#test-one-simulated-subject">Test One Simulated Subject</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#the-raw-data" id="toc-the-raw-data" class="nav-link" data-scroll-target="#the-raw-data">The “raw” data</a></li>
+  <li><a href="#mean-reaction-times" id="toc-mean-reaction-times" class="nav-link" data-scroll-target="#mean-reaction-times">Mean Reaction times</a></li>
+  <li><a href="#accuracy-data" id="toc-accuracy-data" class="nav-link" data-scroll-target="#accuracy-data">Accuracy Data</a></li>
+  </ul></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Simulating Stroop effects with ChatGPT</h1>
+</div>
+
+<div>
+  <div class="description">
+    This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short is answer it can generate data in the style of a Stroop experiment.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Matt Crump </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 6, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the <a href="openai.com">openai</a> API. I only have these couple of hours, so this post will be brief. I’m mainly using the time to see if I can get the api to work. Let’s go.</p>
+<p>First, the Stroop task is a speeded reaction time task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, <a href="#ref-macleodHalfCenturyResearch1991" role="doc-biblioref">MacLeod 1991</a>)</span>. Participants are usually presented with one stimulus at a time, and asked to respond quickly and accurately to identify some aspect of the stimulus while ignoring another aspect of the stimulus.</p>
+<p>For example, the stimulus could be the word BLUE written in red ink, and the task could be to identify the ink-color, “red”. This is also an example of an incongruent item where the target color “red” mismatches the distractor word “blue”.</p>
+<p>A congruent item occurs when the target and distractor match, such as the word BLUE written in blue ink. In a typical Stroop procedure, participants are shown a single Stroop item on a given trial and are asked to identify the ink-color as quickly and accurately as possible (by pressing a button, or saying the name out loud). There are usually many trials across the whole experiment. Here’s a few examples:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Stroop.png" class="quarto-discovered-preview-image img-fluid" width="420"></p>
+</div>
+</div>
+<p>The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
+<section id="who-cares-if-chatgpt-can-simulate-the-stroop-effect" class="level2">
+<h2 class="anchored" data-anchor-id="who-cares-if-chatgpt-can-simulate-the-stroop-effect">Who cares if ChatGPT can simulate the Stroop effect?</h2>
+<p>I’m not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I’m not exactly sure about most of the important details…especially compared to the level of detail I’m used to from computational models in cognitive psychology. For this reason, I’m not interested in modeling Stroop performance with ChatGPT for any explanatory purpose, or to make any claims about ChatGPT can or can’t do.</p>
+<p>Based on previous messing around with GPT models, I’m pretty confident I can create a series of prompts that will produce data in the style of a Stroop experiment.</p>
+<p>Why do I care about this? Some of my research involves questions about attentional control abilities <span class="citation" data-cites="bugg2012support braem2019measuring">(<a href="#ref-bugg2012support" role="doc-biblioref">Bugg and Crump 2012</a>; <a href="#ref-braem2019measuring" role="doc-biblioref">Braem et al. 2019</a>)</span>, and for many years I’ve been conducting experiment about these abilities using online methods. For example, experimental tasks are programmed for web-browsers using tools like JsPsych <span class="citation" data-cites="de2015jspsych">(<a href="#ref-de2015jspsych" role="doc-biblioref">De Leeuw 2015</a>)</span>, and participants may be recruited from platforms like Amazon’s Mechanical Turk <span class="citation" data-cites="crump2013evaluating">(<a href="#ref-crump2013evaluating" role="doc-biblioref">Crump, McDonnell, and Gureckis 2013</a>)</span>. For the most part I’ve found these online methods to be useful research tools.</p>
+<p>My biggest concern as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. So, I’m not interesting in analyzing data that doesn’t come from real people. For the most part I haven’t run into major bot issues (that I am aware of), but many of my tasks have a few properties that could make it difficult for a bot to perform well. For example, many tasks involve speeded responses to identify words and letters. It would be possible to program a bot to accomplish the tasks I put out on the web, but for most of my tasks the return-on-investment for the bot-programmer wouldn’t be worth their time.</p>
+<p>In the last few months I’ve run a few tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of a bunch of topics discussed in Todd Gureckis’ <a href="https://todd.gureckislab.org/2021/06/09/the-poisoned-well">mturk blog post from a couple years ago</a>. In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a persons interactions with a website and then replay them back. In a psych study, this could involved completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. In a couple recent studies it was very clear that some mturk workers were doing this.</p>
+<p>Similarly, I often have a few post-task questions that ask participants about their experiences during the task. Recently, I have found many responses in the style of ChatGPT, which leads me to suspect that some mturk workers are using many different kinds of tools, including ChatGPT to help them complete tasks. Notably, I have found fewer issues like this when using much more restrictive qualifications (e.g., master worker, more than 95% HIT completion, more than 200 HITS completed, etc.)</p>
+<p>In the most recent cases where I suspected the data was compromised it was also really easy to tell. For example, accuracy was at chance or, reaction times were way too fast. The strategy of using a browser plugin to record and then replay previous responses doesn’t produce above chance performance when the task randomizes the stimuli when ever the web-page is reloaded.</p>
+<p>In any case, my question this afternoon was to do a bit of detective work to determine how easy it would be to spoof some Stroop data using ChatGPT. I’m not going to write a browser plugin to automate a GPT-bot capable of spoofing data in the context of browser-based task (say written using JsPsych, or Lab.js, or similar). But, I’m going to test a few prompts and see what kind of fake accuracy and reaction time data will be produced.</p>
+</section>
+<section id="how-im-doing-this" class="level2">
+<h2 class="anchored" data-anchor-id="how-im-doing-this">How I’m doing this</h2>
+<p>I’m running out of time, so the short version is:</p>
+<ol type="1">
+<li>Get an openai.com account</li>
+<li>Install the openai R library <a href="https://github.com/irudnyts/openai" class="uri">https://github.com/irudnyts/openai</a></li>
+<li>Get an api key, and do the appropriate stuff</li>
+<li>Follow along with the minimally commented code below</li>
+</ol>
+<section id="load-the-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="load-the-libraries">Load the libraries</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openai)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="test-one-simulated-subject" class="level3">
+<h3 class="anchored" data-anchor-id="test-one-simulated-subject">Test One Simulated Subject</h3>
+<p>I’ll use the gpt-3.5-turbo model. I’m creating a list of 24 Stroop trials, with 12 congruent and 12 incongruent items. The list is then randomized.</p>
+<p>I’m using the chat completion api, with the system prompt:</p>
+<hr>
+<p>You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file</p>
+<hr>
+<p>Then, to request fake data for a Stroop experiment I write something like:</p>
+<hr>
+<p>Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible.</p>
+<p>-----</p>
+<p>1 The word yellow printed in the color green</p>
+<p>2 The word red printed in the color yellow</p>
+<p>3 The word blue printed in the color blue</p>
+<p>4 The word green printed in the color yellow</p>
+<p>5 The word blue printed in the color blue</p>
+<p>6 The word blue printed in the color green</p>
+<p>7 The word green printed in the color green</p>
+<p>and so on for 24 trials (note the code specifies all 24 trials in the prompt)</p>
+<p>-----</p>
+<p>Put simulated identification responses and reaction times into a JSON with keys ‘trial’, ‘word’, ‘color’, ‘response’, ‘reaction_time’:</p>
+<hr>
+<p>Here’s the code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the colors red, green, blue, and yellow</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># four possible congruent items</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>congruent_items <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The word red printed in the color red"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"The word blue printed in the color blue"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"The word yellow printed in the color yellow"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"The word green printed in the color green"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># four possible incongruent items</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>incongruent_items <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The word red printed in the color blue"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word red printed in the color green"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word red printed in the color yellow"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word blue printed in the color red"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word blue printed in the color green"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word blue printed in the color yellow"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word yellow printed in the color red"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word yellow printed in the color blue"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word yellow printed in the color green"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word green printed in the color red"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word green printed in the color blue"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word green printed in the color yellow"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># generate 50% congruent and 50% incongruent trials</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 12 each (congruent and incongruent)</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>trials <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="fu">rep</span>(congruent_items,<span class="dv">3</span>),incongruent_items))</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># submit a query to open ai using the following prompt</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># note: responses in JSON format are requested</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>gpt_response <span class="ot">&lt;-</span> <span class="fu">create_chat_completion</span>(</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>   <span class="at">model =</span> <span class="st">"gpt-3.5-turbo"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>   <span class="at">messages =</span> <span class="fu">list</span>(</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>       <span class="fu">list</span>(</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>           <span class="st">"role"</span> <span class="ot">=</span> <span class="st">"system"</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>           <span class="st">"content"</span> <span class="ot">=</span> <span class="st">"You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"</span>),</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>       <span class="fu">list</span>(<span class="st">"role"</span> <span class="ot">=</span> <span class="st">"user"</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>           <span class="st">"content"</span> <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible."</span>,<span class="st">"-----"</span>, <span class="fu">paste</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, trials, <span class="at">collapse=</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) , <span class="st">"-----"</span>,<span class="st">"Put simulated identification responses and reaction times into a JSON with keys 'trial', 'word', 'color', 'response', 'reaction_time':"</span>, <span class="at">sep=</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>       )</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>   )</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="co"># model responses are in JSON format</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>sim_data <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(gpt_response<span class="sc">$</span>choices<span class="sc">$</span>message.content)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="st">"batch1.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>It is convenient that telling ChatGPT to return data in a JSON format actually works. Converting to a tibble, we can print out the trial-by-trial response from the model.</p>
+<section id="the-raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-raw-data">The “raw” data</h3>
+<p>Here is the JSON returned by ChatGPT. It has filled out the response column for each trial, and it has provided a reaction time value for each trial.</p>
+<p>To be more accurate, it has returned this whole JSON file and written all of the columns. I still need to check whether the trial-to-trial data in this output file is the same as the order in the prompt.</p>
+<p>These numbers look plausible-ish…although they all end in 0, which isn’t very plausible.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="st">"batch1.RData"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(sim_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">trial</th>
+<th style="text-align: left;">word</th>
+<th style="text-align: left;">color</th>
+<th style="text-align: left;">response</th>
+<th style="text-align: right;">reaction_time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">650</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">480</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">390</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">560</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">400</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">720</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">420</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">380</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">400</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">540</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">390</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">610</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">540</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">420</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">670</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">430</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">550</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">370</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">420</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">540</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">390</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">370</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">660</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">570</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="mean-reaction-times" class="level3">
+<h3 class="anchored" data-anchor-id="mean-reaction-times">Mean Reaction times</h3>
+<p>And, now the moment I’ve been waiting for…Is there a Stroop effect? To answer this question I computed the mean reaction time for congruent and incongruent items. The answer is that YES, ChatGPT produces reaction time data in the style of Stroop experiment that does result in faster mean reaction times for congruent than incongruent items.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># report rt data</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>rt_data <span class="ot">&lt;-</span> sim_data <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">congruency =</span> <span class="fu">case_when</span>(word <span class="sc">==</span> color <span class="sc">~</span> <span class="st">"congruent"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                                word <span class="sc">!=</span> color <span class="sc">~</span> <span class="st">"incongruent"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(congruency) <span class="sc">%&gt;%</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_rt =</span> <span class="fu">mean</span>(reaction_time))</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(rt_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">congruency</th>
+<th style="text-align: right;">mean_rt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">congruent</td>
+<td style="text-align: right;">398.3333</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">incongruent</td>
+<td style="text-align: right;">590.8333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="accuracy-data" class="level3">
+<h3 class="anchored" data-anchor-id="accuracy-data">Accuracy Data</h3>
+<p>This time, ChatGPT didn’t make any mistakes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># report accuracy data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>accuracy_data <span class="ot">&lt;-</span> sim_data <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">congruency =</span> <span class="fu">case_when</span>(word <span class="sc">==</span> color <span class="sc">~</span> <span class="st">"congruent"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                                word <span class="sc">!=</span> color <span class="sc">~</span> <span class="st">"incongruent"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">accuracy =</span> <span class="fu">case_when</span>(response <span class="sc">==</span> color <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                              response <span class="sc">!=</span> color <span class="sc">~</span> <span class="cn">FALSE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(congruency) <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">accuracy =</span> <span class="fu">sum</span>(accuracy)<span class="sc">/</span><span class="dv">12</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(accuracy_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">congruency</th>
+<th style="text-align: right;">accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">congruent</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">incongruent</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>I’ve run out of time to work more on this right now, but I will add more to this post another day.</p>
+<p>A next step will be to simulate data for many different ChatGPT participants. I’m curious if the spoofed RT distributions will have human-like qualities (e.g., ex-guassian). I’m also interested in whether slight variations to the instructions (e.g., complete this task with about 75% accuracy, or complete this task as if you were tired) systematically influence the results.</p>
+<p>So far my main conclusion is that it wouldn’t be that hard to hack my studies using this kind of approach. Sigh.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-braem2019measuring" class="csl-entry" role="listitem">
+Braem, Senne, Julie M Bugg, James R Schmidt, Matthew JC Crump, Daniel H Weissman, Wim Notebaert, and Tobias Egner. 2019. <span>“Measuring Adaptive Control in Conflict Tasks.”</span> <em>Trends in Cognitive Sciences</em> 23 (9): 769–83.
+</div>
+<div id="ref-bugg2012support" class="csl-entry" role="listitem">
+Bugg, Julie M, and Matthew JC Crump. 2012. <span>“In Support of a Distinction Between Voluntary and Stimulus-Driven Control: A Review of the Literature on Proportion Congruent Effects.”</span> <em>Frontiers in Psychology</em> 3: 367.
+</div>
+<div id="ref-crump2013evaluating" class="csl-entry" role="listitem">
+Crump, Matthew JC, John V McDonnell, and Todd M Gureckis. 2013. <span>“Evaluating Amazon’s Mechanical Turk as a Tool for Experimental Behavioral Research.”</span> <em>PloS One</em> 8 (3): e57410.
+</div>
+<div id="ref-de2015jspsych" class="csl-entry" role="listitem">
+De Leeuw, Joshua R. 2015. <span>“jsPsych: A JavaScript Library for Creating Behavioral Experiments in a Web Browser.”</span> <em>Behavior Research Methods</em> 47: 1–12.
+</div>
+<div id="ref-macleodHalfCenturyResearch1991" class="csl-entry" role="listitem">
+MacLeod, Colin M. 1991. <span>“Half a Century of Research on the <span>Stroop</span> Effect: An Integrative Review.”</span> <em>Psychological Bulletin</em> 109 (2): 163. <a href="https://doi.org/10.1037/0033-2909.109.2.163">https://doi.org/10.1037/0033-2909.109.2.163</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

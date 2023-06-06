@@ -13,11 +13,692 @@
 <url>https://crumplab.com/images/logo2.png</url>
 <title>crumplab</title>
 <link>https://crumplab.com/Blog.html</link>
-<height>139</height>
-<width>144</width>
 </image>
 <generator>quarto-1.3.258</generator>
-<lastBuildDate>Sat, 18 Feb 2023 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 06 Jun 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Simulating Stroop effects with ChatGPT</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/771_GPT_Stroop/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the <a href="openai.com">openai</a> API. I only have these couple of hours, so this post will be brief. I’m mainly using the time to see if I can get the api to work. Let’s go.</p>
+<p>First, the Stroop task is a speeded reaction time task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, MacLeod 1991)</span>. Participants are usually presented with one stimulus at a time, and asked to respond quickly and accurately to identify some aspect of the stimulus while ignoring another aspect of the stimulus.</p>
+<p>For example, the stimulus could be the word BLUE written in red ink, and the task could be to identify the ink-color, “red”. This is also an example of an incongruent item where the target color “red” mismatches the distractor word “blue”.</p>
+<p>A congruent item occurs when the target and distractor match, such as the word BLUE written in blue ink. In a typical Stroop procedure, participants are shown a single Stroop item on a given trial and are asked to identify the ink-color as quickly and accurately as possible (by pressing a button, or saying the name out loud). There are usually many trials across the whole experiment. Here’s a few examples:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png" class="quarto-discovered-preview-image img-fluid" width="420"></p>
+</div>
+</div>
+<p>The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
+<section id="who-cares-if-chatgpt-can-simulate-the-stroop-effect" class="level2">
+<h2 class="anchored" data-anchor-id="who-cares-if-chatgpt-can-simulate-the-stroop-effect">Who cares if ChatGPT can simulate the Stroop effect?</h2>
+<p>I’m not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I’m not exactly sure about most of the important details…especially compared to the level of detail I’m used to from computational models in cognitive psychology. For this reason, I’m not interested in modeling Stroop performance with ChatGPT for any explanatory purpose, or to make any claims about ChatGPT can or can’t do.</p>
+<p>Based on previous messing around with GPT models, I’m pretty confident I can create a series of prompts that will produce data in the style of a Stroop experiment.</p>
+<p>Why do I care about this? Some of my research involves questions about attentional control abilities <span class="citation" data-cites="bugg2012support braem2019measuring">(Bugg and Crump 2012; Braem et al. 2019)</span>, and for many years I’ve been conducting experiment about these abilities using online methods. For example, experimental tasks are programmed for web-browsers using tools like JsPsych <span class="citation" data-cites="de2015jspsych">(De Leeuw 2015)</span>, and participants may be recruited from platforms like Amazon’s Mechanical Turk <span class="citation" data-cites="crump2013evaluating">(Crump, McDonnell, and Gureckis 2013)</span>. For the most part I’ve found these online methods to be useful research tools.</p>
+<p>My biggest concern as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. So, I’m not interesting in analyzing data that doesn’t come from real people. For the most part I haven’t run into major bot issues (that I am aware of), but many of my tasks have a few properties that could make it difficult for a bot to perform well. For example, many tasks involve speeded responses to identify words and letters. It would be possible to program a bot to accomplish the tasks I put out on the web, but for most of my tasks the return-on-investment for the bot-programmer wouldn’t be worth their time.</p>
+<p>In the last few months I’ve run a few tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of a bunch of topics discussed in Todd Gureckis’ <a href="https://todd.gureckislab.org/2021/06/09/the-poisoned-well">mturk blog post from a couple years ago</a>. In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a persons interactions with a website and then replay them back. In a psych study, this could involved completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. In a couple recent studies it was very clear that some mturk workers were doing this.</p>
+<p>Similarly, I often have a few post-task questions that ask participants about their experiences during the task. Recently, I have found many responses in the style of ChatGPT, which leads me to suspect that some mturk workers are using many different kinds of tools, including ChatGPT to help them complete tasks. Notably, I have found fewer issues like this when using much more restrictive qualifications (e.g., master worker, more than 95% HIT completion, more than 200 HITS completed, etc.)</p>
+<p>In the most recent cases where I suspected the data was compromised it was also really easy to tell. For example, accuracy was at chance or, reaction times were way too fast. The strategy of using a browser plugin to record and then replay previous responses doesn’t produce above chance performance when the task randomizes the stimuli when ever the web-page is reloaded.</p>
+<p>In any case, my question this afternoon was to do a bit of detective work to determine how easy it would be to spoof some Stroop data using ChatGPT. I’m not going to write a browser plugin to automate a GPT-bot capable of spoofing data in the context of browser-based task (say written using JsPsych, or Lab.js, or similar). But, I’m going to test a few prompts and see what kind of fake accuracy and reaction time data will be produced.</p>
+</section>
+<section id="how-im-doing-this" class="level2">
+<h2 class="anchored" data-anchor-id="how-im-doing-this">How I’m doing this</h2>
+<p>I’m running out of time, so the short version is:</p>
+<ol type="1">
+<li>Get an openai.com account</li>
+<li>Install the openai R library <a href="https://github.com/irudnyts/openai" class="uri">https://github.com/irudnyts/openai</a></li>
+<li>Get an api key, and do the appropriate stuff</li>
+<li>Follow along with the minimally commented code below</li>
+</ol>
+<section id="load-the-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="load-the-libraries">Load the libraries</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(openai)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
+</div>
+</section>
+<section id="test-one-simulated-subject" class="level3">
+<h3 class="anchored" data-anchor-id="test-one-simulated-subject">Test One Simulated Subject</h3>
+<p>I’ll use the gpt-3.5-turbo model. I’m creating a list of 24 Stroop trials, with 12 congruent and 12 incongruent items. The list is then randomized.</p>
+<p>I’m using the chat completion api, with the system prompt:</p>
+<hr>
+<p>You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file</p>
+<hr>
+<p>Then, to request fake data for a Stroop experiment I write something like:</p>
+<hr>
+<p>Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible.</p>
+<p>-----</p>
+<p>1 The word yellow printed in the color green</p>
+<p>2 The word red printed in the color yellow</p>
+<p>3 The word blue printed in the color blue</p>
+<p>4 The word green printed in the color yellow</p>
+<p>5 The word blue printed in the color blue</p>
+<p>6 The word blue printed in the color green</p>
+<p>7 The word green printed in the color green</p>
+<p>and so on for 24 trials (note the code specifies all 24 trials in the prompt)</p>
+<p>-----</p>
+<p>Put simulated identification responses and reaction times into a JSON with keys ‘trial’, ‘word’, ‘color’, ‘response’, ‘reaction_time’:</p>
+<hr>
+<p>Here’s the code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># use the colors red, green, blue, and yellow</span></span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># four possible congruent items</span></span>
+<span id="cb2-4">congruent_items <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color red"</span>,</span>
+<span id="cb2-5">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color blue"</span>,</span>
+<span id="cb2-6">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color yellow"</span>,</span>
+<span id="cb2-7">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color green"</span>)</span>
+<span id="cb2-8"></span>
+<span id="cb2-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># four possible incongruent items</span></span>
+<span id="cb2-10">incongruent_items <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color blue"</span>,</span>
+<span id="cb2-11">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color green"</span>,</span>
+<span id="cb2-12">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color yellow"</span>,</span>
+<span id="cb2-13">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color red"</span>,</span>
+<span id="cb2-14">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color green"</span>,</span>
+<span id="cb2-15">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color yellow"</span>,</span>
+<span id="cb2-16">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color red"</span>,</span>
+<span id="cb2-17">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color blue"</span>,</span>
+<span id="cb2-18">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color green"</span>,</span>
+<span id="cb2-19">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color red"</span>,</span>
+<span id="cb2-20">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color blue"</span>,</span>
+<span id="cb2-21">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color yellow"</span>)</span>
+<span id="cb2-22"></span>
+<span id="cb2-23"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># generate 50% congruent and 50% incongruent trials</span></span>
+<span id="cb2-24"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 12 each (congruent and incongruent)</span></span>
+<span id="cb2-25">trials <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rep</span>(congruent_items,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>),incongruent_items))</span>
+<span id="cb2-26"></span>
+<span id="cb2-27"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># submit a query to open ai using the following prompt</span></span>
+<span id="cb2-28"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># note: responses in JSON format are requested</span></span>
+<span id="cb2-29">gpt_response <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_chat_completion</span>(</span>
+<span id="cb2-30">   <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gpt-3.5-turbo"</span>,</span>
+<span id="cb2-31">   <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">messages =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb2-32">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb2-33">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"system"</span>,</span>
+<span id="cb2-34">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"</span>),</span>
+<span id="cb2-35">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"user"</span>,</span>
+<span id="cb2-36">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible."</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-----"</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24</span>, trials, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">collapse=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>) , <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-----"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Put simulated identification responses and reaction times into a JSON with keys 'trial', 'word', 'color', 'response', 'reaction_time':"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sep=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb2-37">       )</span>
+<span id="cb2-38">   )</span>
+<span id="cb2-39">)</span>
+<span id="cb2-40"></span>
+<span id="cb2-41"></span>
+<span id="cb2-42"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># model responses are in JSON format</span></span>
+<span id="cb2-43">sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> jsonlite<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fromJSON</span>(gpt_response<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>message.content)</span>
+<span id="cb2-44"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">save.image</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"batch1.RData"</span>)</span></code></pre></div>
+</div>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>It is convenient that telling ChatGPT to return data in a JSON format actually works. Converting to a tibble, we can print out the trial-by-trial response from the model.</p>
+<section id="the-raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-raw-data">The “raw” data</h3>
+<p>Here is the JSON returned by ChatGPT. It has filled out the response column for each trial, and it has provided a reaction time value for each trial.</p>
+<p>To be more accurate, it has returned this whole JSON file and written all of the columns. I still need to check whether the trial-to-trial data in this output file is the same as the order in the prompt.</p>
+<p>These numbers look plausible-ish…although they all end in 0, which isn’t very plausible.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">load</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">file =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"batch1.RData"</span>)</span>
+<span id="cb3-2">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(sim_data)</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">trial</th>
+<th style="text-align: left;">word</th>
+<th style="text-align: left;">color</th>
+<th style="text-align: left;">response</th>
+<th style="text-align: right;">reaction_time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">650</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">480</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">390</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">560</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">400</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">720</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">420</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">380</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">400</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">540</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">390</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">610</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">540</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">420</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">670</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">430</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">550</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: right;">370</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">420</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: right;">540</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">390</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">370</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">green</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: right;">660</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">blue</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: left;">yellow</td>
+<td style="text-align: right;">570</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="mean-reaction-times" class="level3">
+<h3 class="anchored" data-anchor-id="mean-reaction-times">Mean Reaction times</h3>
+<p>And, now the moment I’ve been waiting for…Is there a Stroop effect? To answer this question I computed the mean reaction time for congruent and incongruent items. The answer is that YES, ChatGPT produces reaction time data in the style of Stroop experiment that does result in faster mean reaction times for congruent than incongruent items.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># report rt data</span></span>
+<span id="cb4-2">rt_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> sim_data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">congruency =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"congruent"</span>,</span>
+<span id="cb4-4">                                word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"incongruent"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(congruency) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean_rt =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(reaction_time))</span>
+<span id="cb4-7"></span>
+<span id="cb4-8">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(rt_data)</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">congruency</th>
+<th style="text-align: right;">mean_rt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">congruent</td>
+<td style="text-align: right;">398.3333</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">incongruent</td>
+<td style="text-align: right;">590.8333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="accuracy-data" class="level3">
+<h3 class="anchored" data-anchor-id="accuracy-data">Accuracy Data</h3>
+<p>This time, ChatGPT didn’t make any mistakes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># report accuracy data</span></span>
+<span id="cb5-2">accuracy_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> sim_data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb5-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">congruency =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"congruent"</span>,</span>
+<span id="cb5-4">                                word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"incongruent"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb5-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">accuracy =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb5-6">                              response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb5-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(congruency) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb5-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">accuracy =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sum</span>(accuracy)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb5-9"></span>
+<span id="cb5-10">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(accuracy_data)</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">congruency</th>
+<th style="text-align: right;">accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">congruent</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">incongruent</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>I’ve run out of time to work more on this right now, but I will add more to this post another day.</p>
+<p>A next step will be to simulate data for many different ChatGPT participants. I’m curious if the spoofed RT distributions will have human-like qualities (e.g., ex-guassian). I’m also interested in whether slight variations to the instructions (e.g., complete this task with about 75% accuracy, or complete this task as if you were tired) systematically influence the results.</p>
+<p>So far my main conclusion is that it wouldn’t be that hard to hack my studies using this kind of approach. Sigh.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-braem2019measuring" class="csl-entry">
+Braem, Senne, Julie M Bugg, James R Schmidt, Matthew JC Crump, Daniel H Weissman, Wim Notebaert, and Tobias Egner. 2019. <span>“Measuring Adaptive Control in Conflict Tasks.”</span> <em>Trends in Cognitive Sciences</em> 23 (9): 769–83.
+</div>
+<div id="ref-bugg2012support" class="csl-entry">
+Bugg, Julie M, and Matthew JC Crump. 2012. <span>“In Support of a Distinction Between Voluntary and Stimulus-Driven Control: A Review of the Literature on Proportion Congruent Effects.”</span> <em>Frontiers in Psychology</em> 3: 367.
+</div>
+<div id="ref-crump2013evaluating" class="csl-entry">
+Crump, Matthew JC, John V McDonnell, and Todd M Gureckis. 2013. <span>“Evaluating Amazon’s Mechanical Turk as a Tool for Experimental Behavioral Research.”</span> <em>PloS One</em> 8 (3): e57410.
+</div>
+<div id="ref-de2015jspsych" class="csl-entry">
+De Leeuw, Joshua R. 2015. <span>“jsPsych: A JavaScript Library for Creating Behavioral Experiments in a Web Browser.”</span> <em>Behavior Research Methods</em> 47: 1–12.
+</div>
+<div id="ref-macleodHalfCenturyResearch1991" class="csl-entry">
+MacLeod, Colin M. 1991. <span>“Half a Century of Research on the <span>Stroop</span> Effect: An Integrative Review.”</span> <em>Psychological Bulletin</em> 109 (2): 163. <a href="https://doi.org/10.1037/0033-2909.109.2.163">https://doi.org/10.1037/0033-2909.109.2.163</a>.
+</div>
+</div></section></div> ]]></description>
+  <guid>https://crumplab.com/blog/771_GPT_Stroop/index.html</guid>
+  <pubDate>Tue, 06 Jun 2023 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Notes for my students on using ChatGPT</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -5505,191 +6186,6 @@ Jenkins, Baylee D., Jonathan M. Golding, Alexis M. Le Grand, Mary M. Levi, and A
   <guid>https://crumplab.com/blog/post_994_5_26_22_cheating/index.html</guid>
   <pubDate>Thu, 26 May 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/post_994_5_26_22_cheating/imgs/cheating.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Teaching with multiple warp zones: Increasing engagement with assignment choice</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/post_996_5_20_22_assignmentflex/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-    
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-    
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-</style>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_996_5_20_22_assignmentflex/imgs/teaching_warp.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>Last knit: 2023-04-11</p>
-<p>I lack positive emotions toward the process of grading in my courses. I have lots of positive emotions for my students. Grading stresses people out. I’ll save my thoughts about grading in general for another day.</p>
-<p>What I really want to talk about is how I flooded the gates with tons of ways to get an A in the course. It worked, I had fun, I think my students had fun and they got a lot of well-deserved As. More important, my students engaged in the material in more ways than they normally would have.</p>
-<p>I’ll say a little bit about my course and then talk about how I implemented lots of assignment choice this semester.</p>
-<section id="a-bit-of-background" class="level2">
-<h2 class="anchored" data-anchor-id="a-bit-of-background">A bit of background</h2>
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;">
-<iframe src="https://giphy.com/embed/sxYCL0WIERu91BpsrY" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-</div>
-<p><br></p>
-<p>This spring 2022, I taught an introductory survey course on cognitive psychology. I’ve been at Brooklyn College for over a decade and haven’t taught my core area very often. Since summer 2021, I’ve been making up for lost time and decided to develop a <a href="https://www.crumplab.com/cognition/">suite of open educational resources for introductory cognition</a>. I ran the course for the first time last semester. The modality was synchronous online, so students joined me every week for class lectures. I intended to have a textbook chapter for each week of the course, but I didn’t get that far in writing the textbook (note to self, that I need to <a href="https://www.crumplab.com/cognition/textbook">finish the book</a>).</p>
-<p>In any case, the format for fall 2021 was fairly standard. I had weekly multiple choice quizzes that I posted on blackboard. I had two midterms and final exam. I gave students a few ways to get extra credit. And, I offered some optional writing assignments for students that wanted to dig into the material a little bit more.</p>
-<p>The class went off the rails in the middle of the semester. That’s a story for another day, but let’s say an extraordinary amount of unapproved student collaboration occurred. I also learned that I would be teaching the same course in spring 2022 in an <em>asynchronous online</em> format. I knew I wanted to create more interesting assignments for the asynchronous version of the course. So, I made up a bunch of assignments and tested some of them on fall cohort as a second chance to make up for points they may have lost.</p>
-</section>
-<section id="planning-for-the-asynchronous-online-modality" class="level2">
-<h2 class="anchored" data-anchor-id="planning-for-the-asynchronous-online-modality">Planning for the asynchronous online modality</h2>
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;">
-<iframe src="https://giphy.com/embed/usz0fqhUiVxSs6IUKB" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-</div>
-<p><br></p>
-<p>At Brooklyn College we don’t teach during the January intercession, so I had a bunch of time to plan out how I would convert the course from synchronous online to asynchronous online. Ultimately, this involved creating a ton of content, which took a huge amount of effort. I put all of that content into “learning modules” for each week of the course. All of the <a href="https://www.crumplab.com/cognition/articles/modules/L0_Getting_Started.html">learning modules are on the course website</a>, and freely available as an open educational resource.</p>
-<p>I structured each learning module into three sections: Read, Watch/Listen, and Engage. The reading section usually linked to a textbook chapter, or any additional readings I wanted to assign. The watch/listen section contained mini-lectures that I recorded and posted YouTube (this part took so much time every week). The engage section contained quizzes and assignments that students could complete each week.</p>
-<p>Now comes the fun part, here’s how I flooded the gates with assignment choice to increase engagement with the course material.</p>
-</section>
-<section id="multiple-warp-zones-to-an-a" class="level2">
-<h2 class="anchored" data-anchor-id="multiple-warp-zones-to-an-a">Multiple Warp Zones to an A</h2>
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;">
-<iframe src="https://giphy.com/embed/4N1O1YUkx4x8YuW3Tx" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-</div>
-<p><br></p>
-<p>Given the asynchronous format, I wanted to give students every opportunity to do well in the course. I also wanted to dream up as many ways as I could think of to offer students meaningful ways to engage with the course material. Here’s what I did.</p>
-<p>There were 12 learning modules and three exams. The grading rubric is below:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Assignment</th>
-<th style="text-align: right;">Points</th>
-<th style="text-align: right;">Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">12 Weekly Modules</td>
-<td style="text-align: right;">5+</td>
-<td style="text-align: right;">up to 60</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Extra Credit</td>
-<td style="text-align: right;">see above rules</td>
-<td style="text-align: right;">up to 10*</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">SUPER BONUS</td>
-<td style="text-align: right;">see above rules</td>
-<td style="text-align: right;">up to 40*</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Midterm 1</td>
-<td style="text-align: right;">13.33</td>
-<td style="text-align: right;">13.33</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Midterm 2</td>
-<td style="text-align: right;">13.33</td>
-<td style="text-align: right;">13.33</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Final Exam</td>
-<td style="text-align: right;">13.33</td>
-<td style="text-align: right;">13.33</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">100</td>
-</tr>
-</tbody>
-</table>
-<p>There were three equally weighted exams, making up 40/100 points. The remaining 60/100 points came from any other assignment in the course.</p>
-<section id="warp-zone-1-ace-the-quizzes-and-exams" class="level3">
-<h3 class="anchored" data-anchor-id="warp-zone-1-ace-the-quizzes-and-exams">warp zone 1: Ace the quizzes and exams</h3>
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;">
-<iframe src="https://giphy.com/embed/AqnnU75RBcIy4" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-</div>
-<p><br></p>
-<p>Each learning module had a quiz worth 5 points and there were 12 learning modules. So, a student could get 100% on all the quizzes for <img src="https://latex.codecogs.com/png.latex?12*5%20=%2060"> points. If they also aced the exams, then they could get 100/100 for a perfect A+ score.</p>
-<p>I view this as the standard fare option for getting through an intro survey course (i.e., pass the quizzes and exams). I think many students are familiar with this structure and some may even prefer it over a course with other kinds of assignments and assessment.</p>
-<p>Students always want to know how they will be tested, so I told them that the quizzes they take each week will prepare them for the tests. The exam questions would be like the quiz questions, and some of the quiz questions might even reappear on the exams. I also let them do each quiz twice and allowed them to take the highest grade. It took a really long time to write pools of questions for every quiz and exam. A really long soul-sucking time. And, now I have a respectable test bank for the course (I wrote it using R/exams, which lets me export to Blackboard and pdf, it’s nifty).</p>
-<p>But, I don’t think taking a bunch of quizzes and exams about cognition is particularly engaging. Also, I’m the one who wrote all of the questions, and even though I tried really hard to write good questions, I’m not 100% confident that my tests are good tests of what I’m trying to teach. So, it’s not clear how much test grades reflect student performance versus my performance as an instructor. Plus, my whole philosophy on testing is migrating, so I was looking to add more flare.</p>
-<p>I usually require writing in all of my courses, no matter how many students I have. This could be viewed as a form of masochism. For example, I don’t have a TA for my class of 125+ students, and many instructors in my position might not assign writing assignments because they would be overwhelmed by grading.</p>
-<p>Assigning multiple weekly writing assignments for a class that size could be viewed as a form of self-torture, and an over-bearing workload for students.</p>
-<p>But, I did it anyway</p>
-</section>
-<section id="warp-zone-2-everything-is-optional" class="level3">
-<h3 class="anchored" data-anchor-id="warp-zone-2-everything-is-optional">warp zone 2: Everything is optional</h3>
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;">
-<iframe src="https://giphy.com/embed/mPxtCNTbEsTuZecKLN" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-</div>
-<p><br></p>
-<p>As a reminder, students could get up to 60 points from quizzes. The rest of the points came from exams. The second warp zone was to create an alternate way of making up the 60 points. This would give students some choice in how they engaged in course material.</p>
-<p>Students already had the choice of taking one quiz per week, and they could get all 60 points that way. To increase choice, I added one or two alternative writing assignments to each learning module. This part was way more fun for me in terms of generating what I considered interesting ways to engage in course material.</p>
-<p>For examples, I made short writing assignments on <a href="https://www.crumplab.com/cognition/articles/modules/L1_What_is_cognition.html#write-a-qalmri-for-new-research">how to read a primary research article</a>, <a href="https://www.crumplab.com/cognition/articles/modules/L2_Mental_imagery.html#introspect-on-your-own-mental-imagery">mental imagery</a>, <a href="https://www.crumplab.com/cognition/articles/modules/L3_Eugenics_IQ.html#l3-writing-2-apas-apology">the APA’s apology to people of color</a>, and many more.</p>
-<p>Each writing assignment was 5 points, just like a quiz. So, each week students could take a quiz, complete a writing assignment, or both.</p>
-<p>I managed the grading by making the assignments short (typically, 100-300 words). I did the grading mostly pass/fail, and students either got full points or not (if they submitted stuff that was way off base). It wasn’t possible to give in-depth feedback on each assignment because of the number of students, but it was possible to give group level feedback.</p>
-<p>Not all of my students routinely did the writing assignments, but when they did them, they were really engaged as measured by how awesome their submissions were.</p>
-<p>In addition to writing assignments for each learning module, I added on more and more optional assignments. For example, one assignment was to detect and report issues in the <a href="https://www.crumplab.com/cognition/textbook/index.html">textbook</a> I’ve been writing. Perhaps, this was ploy to get students to read the textbook… I also added points for participating in discussion boards, and added more general writing assignments that students could complete by the end of the semester (rather than by the due dates set at the end of each week).</p>
-</section>
-<section id="warp-zone-3-extra-credit" class="level3">
-<h3 class="anchored" data-anchor-id="warp-zone-3-extra-credit">Warp zone 3: Extra credit</h3>
-<div style="width:100%;height:0;padding-bottom:76%;position:relative;">
-<iframe src="https://giphy.com/embed/l0HlFP5Jm0r16eS2s" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-</div>
-<p>
-<a href="https://giphy.com/gifs/southparkgifs-l0HlFP5Jm0r16eS2s">via GIPHY</a>
-</p>
-<p>At this point, students can get to 60 points by completing any combination of quizzes or assignments. That’s great. But, they still have to take these three exams for 40 points. And, students always want to know if there are extra credit options.</p>
-<p>Lucky for them, I love extra credit. I made two tiers of extra credit. If students got to 60 points by completing quizzes and assignments, then any points over 60 was converted to extra credit. The conversion rule was 5 regular points to 1 extra credit. And, I allowed up to 10 extra credits. So, students could complete 10 additional 5 point assignments and get 10 points added onto their final score for the course. That’s a good dose of extra credit, and can make up for a bad showing on a midterm or final.</p>
-<p>I love extra credit so much, that in the middle of the semester I made an addendum to the syllabus to describe a super bonus level of extra credit. If students actually did so many optional assignments that they got to the max of 10 extra credits, then I basically made the extra credit rain.</p>
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;">
-<iframe src="https://giphy.com/embed/DNNKs5wMRF1Pq" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-</div>
-<p><br></p>
-<p>At the super bonus level mark I changed the conversion ratio from 5 to 1, to 2.5 to 1, which doubled the amount of extra from 10 points to 20 points; and, I raised the max extra credit to 40 points, which covers the points students needed to receive from exams.</p>
-<p>This is just a fancy way of saying that students could get an A without passing the exams. They would have to pass lots of optional assignments, but IMO, the assignments I created were much more interesting and deserving of an A than the exams.</p>
-</section>
-</section>
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">TLDR</h2>
-<p>I gave my students lots of ways to pass my course. Many of them tried the engaging and challenging options. I enjoyed what they produced, and I was proud of their scholarship, curiosity, and thoughtfulness. I hope they learned as much from the course as I learned from them.</p>
-<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-<iframe src="https://giphy.com/embed/3oFzmqN1xHwaEXGl7q" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-</div>
-
-
-</section>
-
- ]]></description>
-  <category>teaching</category>
-  <category>cognition</category>
-  <guid>https://crumplab.com/blog/post_996_5_20_22_assignmentflex/index.html</guid>
-  <pubDate>Fri, 20 May 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/post_996_5_20_22_assignmentflex/imgs/teaching_warp.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
