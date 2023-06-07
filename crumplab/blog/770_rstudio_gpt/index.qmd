@@ -5,6 +5,8 @@ date: 6-7-23
 description: "I'm spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio."
 ---
 
+FYI: I'm live-blogging this today, and will be actively updating this post for the afternoon.
+
 ## Preamble
 
 I do most of my writing inside [RStudio](https://posit.co/products/open-source/RStudio/) using [Quarto](https://quarto.org) documents. This means most of my documents are plain text using a combo of markdown and R code chunks that I export to multiple formats like this blog.
@@ -129,6 +131,79 @@ The steps for writing addins are:
 5. The addins should now be available for use.
 
 My goal is to start by writing an addin that can take highlighted text in the RStudio editor, send it to openai, and return an output that would do something useful like improving the writing for clarity, flow, and length.
+
+## gptaddin
+
+I went ahead and created an R package called `gptaddin`. It has one working function (as of right now).
+
+Repo: <https://github.com/CrumpLab/gptaddin>
+
+pkgdown website: <https://crumplab.com/gptaddin/>
+
+I'm sharing this in case the development process is useful for other people to make something similar for themselves. 
+
+### line_editor()
+
+The first function I wrote is a basic line editor. I wanted to be able to highlight selected text in RStudio, then quickly send it to an LLM with a request to edit the text for clarity, flow, and length.
+
+Here's the function:
+
+```{r}
+#| eval: false
+line_editor <- function(){
+
+  # get selected text
+  selected_text <- rstudioapi::selectionGet()
+
+  # run the api call to openai
+  gpt <- openai::create_chat_completion(
+    model = "gpt-3.5-turbo",
+    messages = list(
+      list(
+        "role" = "system",
+        "content" = "You are an editorial writing assistant. Your task is to edit the content you receive for improved clarity, flow, and reduced word count."
+      ),
+      list(
+        "role" = "user",
+        "content" = selected_text$value
+      )
+    )
+  )
+
+  # print the results to the console
+  print(gpt$choices$message.content)
+}
+```
+
+This function is located in `R/addins.R`, and it is registered as an addin in `inst/rstudio/addins.dcf`. The registration text looks like:
+
+```{default}
+
+Name: line_editor
+Description: openai edits text for clarity, flow, and brevity
+Binding: line_editor
+Interactive: false
+
+```
+
+With the package installed, I can now see `line_editor()` in the dropdown menu for Addins in Rstudio. When I select text and run the addin, I get edits suggested by gpt-3.5-turbo printed to the console. For example, I will take the text in this paragraph and run the addin.
+
+---
+
+"Upon installing the package, `line_editor()` now appears in the Addins dropdown menu in Rstudio. Selecting text and running the addin produces suggested edits from gpt-3.5-turbo, which are then printed to the console. For instance, I can utilize this addin to edit the text within this paragraph."
+
+---
+
+This seems to work. I guess I should add a message in the console so that it looks like something is happening...Added.
+
+### make_longform()
+
+
+
+
+
+
+
 
 
 

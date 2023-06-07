@@ -8,9 +8,9 @@
 
 <meta name="author" content="Matt Crump">
 <meta name="dcterms.date" content="2023-06-07">
-<meta name="description" content="I’m spending the morning writing addins for Rstudio that interface with the OpenAi API. This should make it possible to integrate GPT as a writing aid inside Rstudio.">
+<meta name="description" content="I’m spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio.">
 
-<title>crumplab - Using GPT for writing in Rstudio</title>
+<title>crumplab - Using GPT for writing in R Studio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,11 +107,11 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="crumplab - Using GPT for writing in Rstudio">
-<meta property="og:description" content="I’m spending the morning writing addins for Rstudio that interface with the OpenAi API. This should make it possible to integrate GPT as a writing aid inside Rstudio.">
+<meta property="og:title" content="crumplab - Using GPT for writing in R Studio">
+<meta property="og:description" content="I’m spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio.">
 <meta property="og:site-name" content="crumplab">
-<meta name="twitter:title" content="crumplab - Using GPT for writing in Rstudio">
-<meta name="twitter:description" content="I’m spending the morning writing addins for Rstudio that interface with the OpenAi API. This should make it possible to integrate GPT as a writing aid inside Rstudio.">
+<meta name="twitter:title" content="crumplab - Using GPT for writing in R Studio">
+<meta name="twitter:description" content="I’m spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -220,6 +220,11 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <li><a href="#test-the-api" id="toc-test-the-api" class="nav-link" data-scroll-target="#test-the-api">Test the API</a></li>
   </ul></li>
   <li><a href="#writing-addins-for-r-studio" id="toc-writing-addins-for-r-studio" class="nav-link" data-scroll-target="#writing-addins-for-r-studio">Writing addins for R Studio</a></li>
+  <li><a href="#gptaddin" id="toc-gptaddin" class="nav-link" data-scroll-target="#gptaddin">gptaddin</a>
+  <ul class="collapse">
+  <li><a href="#line_editor" id="toc-line_editor" class="nav-link" data-scroll-target="#line_editor">line_editor()</a></li>
+  <li><a href="#make_longform" id="toc-make_longform" class="nav-link" data-scroll-target="#make_longform">make_longform()</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -228,12 +233,12 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Using GPT for writing in Rstudio</h1>
+<h1 class="title">Using GPT for writing in R Studio</h1>
 </div>
 
 <div>
   <div class="description">
-    I’m spending the morning writing addins for Rstudio that interface with the OpenAi API. This should make it possible to integrate GPT as a writing aid inside Rstudio.
+    I’m spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio.
   </div>
 </div>
 
@@ -260,13 +265,14 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 </header>
 
+<p>FYI: I’m live-blogging this today, and will be actively updating this post for the afternoon.</p>
 <section id="preamble" class="level2">
 <h2 class="anchored" data-anchor-id="preamble">Preamble</h2>
-<p>I do most of my writing inside <a href="https://posit.co/products/open-source/rstudio/">Rstudio</a> using <a href="https://quarto.org">Quarto</a> documents. This means most of my documents are plain text using a combo of markdown and R code chunks that I export to multiple formats like this blog.</p>
-<p>I’ve been curious about using LLMs as an everyday writing assistant for a while. I’ve occasionally used the OpenAi playground and ChatGPT to give editorial suggestions about my writing, but I found the experience of bouncing in and out of my main writing environment too clunky.</p>
-<p>This semester <a href="https://notion.so">notions.so</a> became another writing environment that I used heavily (also markdown-ish), and I tried their in-app AI writing assist for a hot second. But, they wanted $10 a month, and I didn’t want to pay them.</p>
+<p>I do most of my writing inside <a href="https://posit.co/products/open-source/RStudio/">RStudio</a> using <a href="https://quarto.org">Quarto</a> documents. This means most of my documents are plain text using a combo of markdown and R code chunks that I export to multiple formats like this blog.</p>
+<p>I’ve been curious about using LLMs as an everyday writing assistant for a while. I’ve occasionally used the OpenAI playground and ChatGPT to give editorial suggestions about my writing, but I found the experience of bouncing in and out of my main writing environment too clunky.</p>
+<p>This semester <a href="https://notion.so">notion.so</a> became another writing environment that I used heavily (also markdown-ish), and I tried their in-app AI writing assist for a hot second. But, they wanted $10 a month, and I didn’t want to pay them.</p>
 <p>However, the in-app AI assist experience with notion was not clunky. Just highlight some text, right click, and then select variously useful AI editor prompts to do thinks like: line edit for clarity, expand bullet points to paragraph, convert paragraph to bullet points, generative writing, etc.</p>
-<p>After a bit of messing around yesterday, it became clear that it wouldn’t be too hard to write addins for Rstudio to interface with the OpenAI API, and achieve some kind of in-app writing assistant situation while I’m writing in Quarto.</p>
+<p>After a bit of messing around yesterday, it became clear that it wouldn’t be too hard to write addins for RStudio to interface with the OpenAI API, and achieve some kind of in-app writing assistant situation while I’m writing in Quarto.</p>
 <p>This post is me doing that along with laying down some breadcrumbs so my future self can remember what I did here.</p>
 </section>
 <section id="what-youll-need" class="level2">
@@ -291,7 +297,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <li>Create a secret key in openai, copy it and put it somewhere safe. Don’t share it.</li>
 <li>The <code>openai</code> R library looks for an environment variable called <code>OPENAI_API_KEY</code>, which can be set a <a href="https://irudnyts.github.io/openai/">number of ways</a>.</li>
 </ol>
-<p>My goal here is to create addins for Rstudio that I can use while I’m writing. I don’t want to input an API key everytime I use the addin, and I don’t want to share the API key in a public repository. There are different strategies for managing environment variables, and this is a <a href="https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf">helpful guide by posit</a>.</p>
+<p>My goal here is to create addins for RStudio that I can use while I’m writing. I don’t want to input an API key everytime I use the addin, and I don’t want to share the API key in a public repository. There are different strategies for managing environment variables, and this is a <a href="https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf">helpful guide by posit</a>.</p>
 <p>My strategy was to add a key-value pair directly to the <code>.Renviron</code> file at the user level.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># open the .Renviron file</span></span>
@@ -350,10 +356,71 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </section>
 <section id="writing-addins-for-r-studio" class="level2">
 <h2 class="anchored" data-anchor-id="writing-addins-for-r-studio">Writing addins for R Studio</h2>
-<p>The next step is to write some custom addins for RStudio. The process for writing custom addins is documented <a href="https://rstudio.github.io/rstudioaddins/">here</a>.RStudio addins are available from a dropdown menu, and they can be triggered by hot-key macros.</p>
-<p>My goal here is to start by writing an adding that can take highlighted text in the Rstudio editor, send it to openai, and return an output that would do something useful like improving the writing for clarity, flow, and length.</p>
+<p>The next step is to write custom addins for RStudio, which is documented <a href="https://RStudio.github.io/RStudioaddins/">here</a>. RStudio addins are available from a dropdown menu, and they can be triggered by hot-key macros.</p>
+<p>The steps for writing addins are:</p>
+<ol type="1">
+<li>Make a new <a href="https://r-pkgs.org">R package project</a></li>
+<li>Write functions as you normally would do in the R folder</li>
+<li><a href="https://rstudio.github.io/rstudioaddins/#registering-addins">Register the functions as addins</a> using a .dcf file placed in <code>inst/rstudio/addins.dcf</code></li>
+<li>Install the R package</li>
+<li>The addins should now be available for use.</li>
+</ol>
+<p>My goal is to start by writing an addin that can take highlighted text in the RStudio editor, send it to openai, and return an output that would do something useful like improving the writing for clarity, flow, and length.</p>
+</section>
+<section id="gptaddin" class="level2">
+<h2 class="anchored" data-anchor-id="gptaddin">gptaddin</h2>
+<p>I went ahead and created an R package called <code>gptaddin</code>. It has one working function (as of right now).</p>
+<p>Repo: <a href="https://github.com/CrumpLab/gptaddin" class="uri">https://github.com/CrumpLab/gptaddin</a></p>
+<p>pkgdown website: <a href="https://crumplab.com/gptaddin/" class="uri">https://crumplab.com/gptaddin/</a></p>
+<p>I’m sharing this in case the development process is useful for other people to make something similar for themselves.</p>
+<section id="line_editor" class="level3">
+<h3 class="anchored" data-anchor-id="line_editor">line_editor()</h3>
+<p>The first function I wrote is a basic line editor. I wanted to be able to highlight selected text in RStudio, then quickly send it to an LLM with a request to edit the text for clarity, flow, and length.</p>
+<p>Here’s the function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>line_editor <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># get selected text</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  selected_text <span class="ot">&lt;-</span> rstudioapi<span class="sc">::</span><span class="fu">selectionGet</span>()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># run the api call to openai</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  gpt <span class="ot">&lt;-</span> openai<span class="sc">::</span><span class="fu">create_chat_completion</span>(</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"gpt-3.5-turbo"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">messages =</span> <span class="fu">list</span>(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"role"</span> <span class="ot">=</span> <span class="st">"system"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"content"</span> <span class="ot">=</span> <span class="st">"You are an editorial writing assistant. Your task is to edit the content you receive for improved clarity, flow, and reduced word count."</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"role"</span> <span class="ot">=</span> <span class="st">"user"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"content"</span> <span class="ot">=</span> selected_text<span class="sc">$</span>value</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print the results to the console</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(gpt<span class="sc">$</span>choices<span class="sc">$</span>message.content)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This function is located in <code>R/addins.R</code>, and it is registered as an addin in <code>inst/rstudio/addins.dcf</code>. The registration text looks like:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Name: line_editor</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Description: openai edits text for clarity, flow, and brevity</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>Binding: line_editor</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>Interactive: false</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With the package installed, I can now see <code>line_editor()</code> in the dropdown menu for Addins in Rstudio. When I select text and run the addin, I get edits suggested by gpt-3.5-turbo printed to the console. For example, I will take the text in this paragraph and run the addin.</p>
+<hr>
+<p>“Upon installing the package, <code>line_editor()</code> now appears in the Addins dropdown menu in Rstudio. Selecting text and running the addin produces suggested edits from gpt-3.5-turbo, which are then printed to the console. For instance, I can utilize this addin to edit the text within this paragraph.”</p>
+<hr>
+<p>This seems to work. I guess I should add a message in the console so that it looks like something is happening…Added.</p>
+</section>
+<section id="make_longform" class="level3">
+<h3 class="anchored" data-anchor-id="make_longform">make_longform()</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
