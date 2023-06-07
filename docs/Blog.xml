@@ -15,7 +15,143 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.3.258</generator>
-<lastBuildDate>Tue, 06 Jun 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 07 Jun 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Using GPT for writing in Rstudio</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/770_rstudio_gpt/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="preamble" class="level2">
+<h2 class="anchored" data-anchor-id="preamble">Preamble</h2>
+<p>I do most of my writing inside <a href="https://posit.co/products/open-source/rstudio/">Rstudio</a> using <a href="https://quarto.org">Quarto</a> documents. This means most of my documents are plain text using a combo of markdown and R code chunks that I export to multiple formats like this blog.</p>
+<p>I’ve been curious about using LLMs as an everyday writing assistant for a while. I’ve occasionally used the OpenAi playground and ChatGPT to give editorial suggestions about my writing, but I found the experience of bouncing in and out of my main writing environment too clunky.</p>
+<p>This semester <a href="https://notion.so">notions.so</a> became another writing environment that I used heavily (also markdown-ish), and I tried their in-app AI writing assist for a hot second. But, they wanted $10 a month, and I didn’t want to pay them.</p>
+<p>However, the in-app AI assist experience with notion was not clunky. Just highlight some text, right click, and then select variously useful AI editor prompts to do thinks like: line edit for clarity, expand bullet points to paragraph, convert paragraph to bullet points, generative writing, etc.</p>
+<p>After a bit of messing around yesterday, it became clear that it wouldn’t be too hard to write addins for Rstudio to interface with the OpenAI API, and achieve some kind of in-app writing assistant situation while I’m writing in Quarto.</p>
+<p>This post is me doing that along with laying down some breadcrumbs so my future self can remember what I did here.</p>
+</section>
+<section id="what-youll-need" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-need">What you’ll need</h2>
+<ol type="1">
+<li><p>An OpenAI account that allows you to create a secret key to access the API service.</p></li>
+<li><p>R Studio with Quarto (comes with the latest version)</p></li>
+<li><p>I’m using the <a href="https://github.com/irudnyts/openai">openai</a> R library by Iegor Rudnytskyi, which wraps the API for R and makes sending inputs and receiving outputs very easy.</p></li>
+</ol>
+</section>
+<section id="pricing" class="level2">
+<h2 class="anchored" data-anchor-id="pricing">Pricing</h2>
+<p>I haven’t crunched the numbers too much yet. You can check out the pricing model here <a href="https://openai.com/pricing">https://openai.com/pricing</a>.</p>
+<p>My napkin calculator says this should be cheaper than $10/month on notion. Currently, the gpt-3.5-turbo model is $0.002 for 1,000 tokens (about 750 words). It would take 5,000 interactions that use up 1,000 tokens each to get to $10 a month. That’s about 750 words times 5000, or 3,750,000 words… or, way more words than I type monthly. Plus, it’s all pay as you go, and it is possible to set spending limits if you don’t want to go over some amount. Bottom line, cheaper than notion and more customizable.</p>
+<p>There are other costs to consider, such as whether or not you want to send your words to OpenAI.</p>
+</section>
+<section id="basic-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="basic-workflow">Basic workflow</h2>
+<section id="setting-up-the-api-keys" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-the-api-keys">Setting up the API keys</h3>
+<ol type="1">
+<li>Create a secret key in openai, copy it and put it somewhere safe. Don’t share it.</li>
+<li>The <code>openai</code> R library looks for an environment variable called <code>OPENAI_API_KEY</code>, which can be set a <a href="https://irudnyts.github.io/openai/">number of ways</a>.</li>
+</ol>
+<p>My goal here is to create addins for Rstudio that I can use while I’m writing. I don’t want to input an API key everytime I use the addin, and I don’t want to share the API key in a public repository. There are different strategies for managing environment variables, and this is a <a href="https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf">helpful guide by posit</a>.</p>
+<p>My strategy was to add a key-value pair directly to the <code>.Renviron</code> file at the user level.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># open the .Renviron file</span></span>
+<span id="cb1-2">usethis<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">edit_r_environ</span>()</span></code></pre></div>
+</div>
+<p>Then edit the file to add the new key-value pair, and restart R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># add new environment variable to above and save</span></span>
+<span id="cb2-2">OPENAI_API_KEY<span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span>XXXXXXXXXXXXX</span></code></pre></div>
+</div>
+<p>After you restart R, you can check if R recognizes the new environment variable:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Sys.getenv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OPENAI_API_KEY"</span>)</span></code></pre></div>
+</div>
+</section>
+<section id="test-the-api" class="level3">
+<h3 class="anchored" data-anchor-id="test-the-api">Test the API</h3>
+<p>If everything is working it should be possible to send prompts to OpenAI and return outputs.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(openai)</span>
+<span id="cb4-2"></span>
+<span id="cb4-3">gpt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_completion</span>(</span>
+<span id="cb4-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ada"</span>,</span>
+<span id="cb4-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">prompt =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Explain what is larger a pumpkin or a dinosaur?"</span></span>
+<span id="cb4-6">)</span></code></pre></div>
+</div>
+<p>The result is an R list object with the output and other info like the number of tokens used.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1">$id</span>
+<span id="cb5-2">[1] "cmpl-7OnnSJ0QgpVF4a86qKYmSWgSvAiym"</span>
+<span id="cb5-3"></span>
+<span id="cb5-4">$object</span>
+<span id="cb5-5">[1] "text_completion"</span>
+<span id="cb5-6"></span>
+<span id="cb5-7">$created</span>
+<span id="cb5-8">[1] 1686145646</span>
+<span id="cb5-9"></span>
+<span id="cb5-10">$model</span>
+<span id="cb5-11">[1] "ada"</span>
+<span id="cb5-12"></span>
+<span id="cb5-13">$choices</span>
+<span id="cb5-14">                                                    text index logprobs finish_reason</span>
+<span id="cb5-15">1 \n\nAnswer: I don't know of an easy way to express it.     0       NA        length</span>
+<span id="cb5-16"></span>
+<span id="cb5-17">$usage</span>
+<span id="cb5-18">$usage$prompt_tokens</span>
+<span id="cb5-19">[1] 11</span>
+<span id="cb5-20"></span>
+<span id="cb5-21">$usage$completion_tokens</span>
+<span id="cb5-22">[1] 16</span>
+<span id="cb5-23"></span>
+<span id="cb5-24">$usage$total_tokens</span>
+<span id="cb5-25">[1] 27</span></code></pre></div>
+</div>
+</section>
+</section>
+<section id="writing-addins-for-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="writing-addins-for-r-studio">Writing addins for R Studio</h2>
+<p>The next step is to write some custom addins for RStudio. The process for writing custom addins is documented <a href="https://rstudio.github.io/rstudioaddins/">here</a>.RStudio addins are available from a dropdown menu, and they can be triggered by hot-key macros.</p>
+<p>My goal here is to start by writing an adding that can take highlighted text in the Rstudio editor, send it to openai, and return an output that would do something useful like improving the writing for clarity, flow, and length.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://crumplab.com/blog/770_rstudio_gpt/index.html</guid>
+  <pubDate>Wed, 07 Jun 2023 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Simulating Stroop effects with ChatGPT</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -24,21 +160,19 @@
 
 
 
-<p>I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the <a href="openai.com">openai</a> API. I only have these couple of hours, so this post will be brief. I’m mainly using the time to see if I can get the api to work. Let’s go.</p>
-<p>First, the Stroop task is a speeded reaction time task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, MacLeod 1991)</span>. Participants are usually presented with one stimulus at a time, and asked to respond quickly and accurately to identify some aspect of the stimulus while ignoring another aspect of the stimulus.</p>
-<p>For example, the stimulus could be the word BLUE written in red ink, and the task could be to identify the ink-color, “red”. This is also an example of an incongruent item where the target color “red” mismatches the distractor word “blue”.</p>
-<p>A congruent item occurs when the target and distractor match, such as the word BLUE written in blue ink. In a typical Stroop procedure, participants are shown a single Stroop item on a given trial and are asked to identify the ink-color as quickly and accurately as possible (by pressing a button, or saying the name out loud). There are usually many trials across the whole experiment. Here’s a few examples:</p>
+<p>I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the <a href="openai.com">openai</a> API. This post will be brief, and I’m mainly using the time to see if I can get the api to work. Let’s go.</p>
+<p>In a Stroop task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, MacLeod 1991)</span> participants are asked to respond quickly and accurately to identify stimuli with multiple dimensions. In the examples below, each stimulus is a word printed in a particular color. The target dimension is the ink-color that the word is printed in, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png" class="quarto-discovered-preview-image img-fluid" width="420"></p>
 </div>
 </div>
-<p>The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
+<p>Importantly, there are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
 <section id="who-cares-if-chatgpt-can-simulate-the-stroop-effect" class="level2">
 <h2 class="anchored" data-anchor-id="who-cares-if-chatgpt-can-simulate-the-stroop-effect">Who cares if ChatGPT can simulate the Stroop effect?</h2>
-<p>I’m not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I’m not exactly sure about most of the important details…especially compared to the level of detail I’m used to from computational models in cognitive psychology. For this reason, I’m not interested in modeling Stroop performance with ChatGPT for any explanatory purpose, or to make any claims about ChatGPT can or can’t do.</p>
-<p>Based on previous messing around with GPT models, I’m pretty confident I can create a series of prompts that will produce data in the style of a Stroop experiment.</p>
-<p>Why do I care about this? Some of my research involves questions about attentional control abilities <span class="citation" data-cites="bugg2012support braem2019measuring">(Bugg and Crump 2012; Braem et al. 2019)</span>, and for many years I’ve been conducting experiment about these abilities using online methods. For example, experimental tasks are programmed for web-browsers using tools like JsPsych <span class="citation" data-cites="de2015jspsych">(De Leeuw 2015)</span>, and participants may be recruited from platforms like Amazon’s Mechanical Turk <span class="citation" data-cites="crump2013evaluating">(Crump, McDonnell, and Gureckis 2013)</span>. For the most part I’ve found these online methods to be useful research tools.</p>
+<p>I’m not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I don’t know most of the important details…especially compared to the level of detail I’m used to from computational models in cognitive psychology. For this reason, I’m not interested in modeling Stroop performance with ChatGPT for any explanatory purpose.</p>
+<p>Based on messing around with GPT models previously, I’m pretty confident that some series of prompts will produce data in the style of a Stroop experiment.</p>
+<p>Why do I care about this? Some of my research involves questions about attentional control abilities <span class="citation" data-cites="bugg2012support braem2019measuring">(Bugg and Crump 2012; Braem et al. 2019)</span>, and some of my work uses online methods to collect data. For example, experimental tasks are programmed for web-browsers using tools like JsPsych <span class="citation" data-cites="de2015jspsych">(De Leeuw 2015)</span>, and participants may be recruited from platforms like Amazon’s Mechanical Turk <span class="citation" data-cites="crump2013evaluating">(Crump, McDonnell, and Gureckis 2013)</span>. Online methods are useful research tools, but they are not without problems.</p>
 <p>My biggest concern as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. So, I’m not interesting in analyzing data that doesn’t come from real people. For the most part I haven’t run into major bot issues (that I am aware of), but many of my tasks have a few properties that could make it difficult for a bot to perform well. For example, many tasks involve speeded responses to identify words and letters. It would be possible to program a bot to accomplish the tasks I put out on the web, but for most of my tasks the return-on-investment for the bot-programmer wouldn’t be worth their time.</p>
 <p>In the last few months I’ve run a few tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of a bunch of topics discussed in Todd Gureckis’ <a href="https://todd.gureckislab.org/2021/06/09/the-poisoned-well">mturk blog post from a couple years ago</a>. In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a persons interactions with a website and then replay them back. In a psych study, this could involved completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. In a couple recent studies it was very clear that some mturk workers were doing this.</p>
 <p>Similarly, I often have a few post-task questions that ask participants about their experiences during the task. Recently, I have found many responses in the style of ChatGPT, which leads me to suspect that some mturk workers are using many different kinds of tools, including ChatGPT to help them complete tasks. Notably, I have found fewer issues like this when using much more restrictive qualifications (e.g., master worker, more than 95% HIT completion, more than 200 HITS completed, etc.)</p>
@@ -6038,154 +6172,6 @@ Jenkins, Baylee D., Jonathan M. Golding, Alexis M. Le Grand, Mary M. Levi, and A
   <guid>https://crumplab.com/blog/post_991_6_28_22_annotate/index.html</guid>
   <pubDate>Tue, 28 Jun 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/post_991_6_28_22_annotate/imgs/annotate.png" medium="image" type="image/png" height="86" width="144"/>
-</item>
-<item>
-  <title>Brief notes on the cheating behavior literature</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/post_994_5_26_22_cheating/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<div class="cell" data-layout-align="center">
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-</style>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://crumplab.com/blog/post_994_5_26_22_cheating/imgs/cheating.jpg" class="quarto-discovered-preview-image img-fluid figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Last knit: 2023-04-11</p>
-<p>In a previous version of this post, I shared a detective/thriller themed story about academic integrity issues arising in a course I taught. The story picked up more attention than I anticipated. I shared the story as part of a course assessment writing exercise, which has now been completed, and the original post is no longer available.</p>
-<p>Part of my course assessment exercise was to learn more about the literature on cheating behavior. I conducted a short literature review on that topic and am posting brief notes about a few of the papers.</p>
-<p>For teaching psychology, I found this paper to be most relevant and current:</p>
-<p>Jenkins, B. D., Golding, J. M., Le Grand, A. M., Levi, M. M., &amp; Pals, A. M. (2022). When Opportunity Knocks: College Students’ Cheating Amid the COVID-19 Pandemic. Teaching of Psychology, 009862832110590. https://doi.org/10.1177/00986283211059067</p>
-<p>Also, I highly recommend checking out this book on ungrading, which is increasingly my preferred direction where possible.</p>
-<p>Blum, S. D. (2020). Ungrading: Why rating students undermines learning (and what to do instead). West Virginia University Press.</p>
-<section id="sporadic-notes" class="level2">
-<h2 class="anchored" data-anchor-id="sporadic-notes">Sporadic notes</h2>
-<p>Drake, C. A. (1941). Why students cheat. The Journal of Higher Education, 12(8), 418–420. https://doi.org/10.2307/1976003</p>
-<p>From 1941…</p>
-<p>Speculates on why students cheat as well as how the behavior seems elicited by the competitive structure of higher ed.</p>
-<p>Gave a class of 126 students an opportunity to cheat. Reports that about 30% of students cheated. Students with lower grades cheated more than students with higher grades.</p>
-<hr>
-<p>Wrightsman Jr, L. S. (1959). Cheating—A research area in need of resuscitation. Peabody Journal of Education, 37(3), 145–149. <a href="https://doi.org/10.1080/01619565909536899" class="uri">https://doi.org/10.1080/01619565909536899</a></p>
-<p>Laments that there isn’t much empirical work on cheating, and that most prior work repeatedly demonstrates the same finding: giving students the opportunity to cheat by allowing them to grade their own tests (and change their answers) elicits cheating behavior (the duplicating technique).</p>
-<p>Estimates between 10-90% cheating rates from research giving students opportunity to cheat when grading their own exams.</p>
-<p>Calls for more research on cheating that occurs in actual testing situations.</p>
-<hr>
-<p>Hetherington, E. M., &amp; Feldman, S. E. (1964). College cheating as a function of subject and situational variables. Journal of Educational Psychology, 55(4), 212. https://doi.org/10.1037/h0045337</p>
-<p>pick-your-poison-psychology</p>
-<p>sigh, but there are some head-bending t-tests</p>
-<hr>
-<p>Zastrow, C. H. (1970). Cheating among college graduate students. The Journal of Educational Research, 64(4), 157–160. https://doi.org/10.1080/00220671.1970.10884124</p>
-<p>ABSTRACT Forty-five graduate students received three quizzes in one of their courses, and also filled out the Minnesota Multiphasic Personality Inventory (MMPI) and a questionnaire on cheating. The main findings were: (a) the inci dence of cheating among these graduate subjects was found to be at least as extensive as reported in prior studies among undergraduate students?at least eighteen of the forty-five (40%) graduate subjects cheated on the quizzes; (b) pressure to obtain good grades was the main reason subjects felt they cheated in the past; (c) there was a lack of consensus whether certain behaviors constitute cheating; (d) no significant personality differences were found between cheaters and non-cheaters; (e) the MMPI results provided evidence in support of the doctrine of specificity of moral behavior.</p>
-<hr>
-<p>Baird Jr, J. S. (1980). Current trends in college cheating. Psychology in the Schools, 17(4), 515–522. https://doi.org/10.1002/1520-6807(198010)17:4&lt;515::AID-PITS2310170417&gt;3.0.CO;2-3</p>
-<p>Abstract</p>
-<p>The purpose of this study was to investigate the frequency, methods, and correlates of college cheating. A questionnnaire measuring 7 subject variables and 33 specific behaviors was administered to 200 students. The finding that about 75% of those surveyed had cheated in college was interpreted as supporting an hypothesized trend toward increasing dishonesty. Data on approval and guilt, reasons for cheating, reactions to cheating, and specific techniques were included. It was found that sex, year in shcool, grade point average, academic major, fraternity-sorority membership, and extracurricular participation were significantly related to cheating. The conclusions supported the importance of traditional explanatory variables and suggested an interpretation based on attribution theory.</p>
-<hr>
-<p>Nuss, E. M. (1984). Academic integrity: Comparing faculty and student attitudes. Improving College and University Teaching, 32(3), 140–144. https://doi.org/10.1080/00193089.1984.10533862</p>
-<p>Thoughtful and worth the read</p>
-<hr>
-<p>McCabe, D. L., &amp; Trevino, L. K. (1993). Academic dishonesty: Honor codes and other contextual influences. The Journal of Higher Education, 64(5), 522–538.</p>
-<p>Measured student self-reported cheating rates by survey. Large N. Between colleges with and without honor codes.</p>
-<hr>
-<p>McCabe, D. L., Treviño, L. K., &amp; Butterfield, K. D. (2001). Cheating in academic institutions: A decade of research. Ethics &amp;Behavior, 11(3), 219–232. https://doi.org/10.1207/S15327019EB1103_2</p>
-<p>Abstract</p>
-<p>This article reviews 1 decade of research on cheating in academic institutions. This research demonstrates that cheating is prevalent and that some forms of cheating have increased dramatically in the last 30 years. This research also suggests that although both individual and contextual factors influence cheating, contextual factors, such as students’ perceptions of peers’ behavior, are the most powerful influence. In addition, an institution’s academic integrity programs and policies, such as honor codes, can have a significant influence on students’ behavior. Finally, we offer suggestions for managing cheating from students’ and faculty members’ perspectives.</p>
-<p>Table 1 shows Self-Admitted Cheating—Summary Statistics which range from 44 to 82%.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://crumplab.com/blog/post_994_5_26_22_cheating/imgs/StudentTable3.png" class="img-fluid figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://crumplab.com/blog/post_994_5_26_22_cheating/imgs/FacultyTable4.png" class="img-fluid figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-<p>Bowers, W. J. (1964). Student dishonesty and its control in college. Bureau of Applied Social Research, Columbia University.</p>
-<p>A first? large-scale survey on cheating in US colleges.</p>
-<hr>
-<p>Hollis, L. P. (2018). Ghost-students and the new wave of online cheating for community college students. New Directions for Community Colleges, 2018(183), 25–34. https://doi.org/10.1002/cc.20314</p>
-<p>“I got very excited and signed up for several classes at the community college. My employer was paying for the online class but I should have remembered that I would be the one who’d have to take the classes in the end. I didn’t think about it . . . caused me a panic attack. . . . I took some of the classes and did some of the projects but I knew from the beginning that there was no way I could take the online classes and complete them myself. After having that epiphany, I realized that I’d be on the hook for part of the course fee if I didn’t take my online classes and complete them (yes, my employer would only pay if I passed the class) . . . Anyway, I did a bit of research and found No Need To Study. Hiring them was the best decision ever! No Need To Study works lightning fast; it is like they know the classes inside out, taking my classes in record time. I got my classes done! My employer paid and I have the certifications now.”</p>
-<p><a href="https://www.noneedtostudy.com/take-my-online-class/" class="uri">https://www.noneedtostudy.com/take-my-online-class/</a> <a href="https://acemyassignment.com/" class="uri">https://acemyassignment.com/</a> <a href="https://www.paymetodoyourhomework.com/" class="uri">https://www.paymetodoyourhomework.com/</a></p>
-<p>Hiring ghost students to take online classes appears to be big business. Offers some tips on deterrence.</p>
-<hr>
-<p>Stiles, B. L., Wong, N. C. W., &amp; LaBeff, E. E. (2018). College cheating thirty years later: The role of academic entitlement. Deviant Behavior, 39(7), 823–834. https://doi.org/10.1080/01639625.2017.1335520</p>
-<hr>
-<p>Krienert, J. L., Walsh, J. A., &amp; Cannon, K. D. (2021). Changes in the tradecraft of cheating: Technological advances in academic dishonesty. College Teaching, 1–10. https://doi.org/10.1080/87567555.2021.1940813</p>
-<hr>
-<p>Burgason, K. A., Sefiha, O., &amp; Briggs, L. (2019). Cheating is in the eye of the beholder: An evolving understanding of academic misconduct. Innovative Higher Education, 44(3), 203–218. https://doi.org/10.1007/s10755-019-9457-3</p>
-<hr>
-<p>Ives, B. (2020). Your Students Are Cheating More than You Think They Are. Why?. Educational Research: Theory and Practice, 31(1), 46–53.</p>
-<p>Evaluates neutralization theory approach to academic misconduct.</p>
-<p>Neutralization theory posits a five-factor system to explain how students justify academic misconduct:</p>
-<ol type="1">
-<li>Denial of Responsibility</li>
-<li>Denial of Injury</li>
-<li>Denial of Victim</li>
-<li>Condemnation of the Condemner</li>
-<li>Appeal to higher loyalties</li>
-</ol>
-<p>This theory was developed in the context of juvenile delinquency and often applied to academic misconduct.</p>
-<p>Table 1 is reasons for Academic misconduct from a sample of university students from 6 institutions in Romania.</p>
-<p>Factor analysis suggests student reasons have a single dimension, not five dimensions.</p>
-<p>Suggests Achievement Goal Theory as a better model (Urdan, 1997).</p>
-<hr>
-<p>Daumiller, M., &amp; Janke, S. (2019). The impact of performance goals on cheating depends on how performance is evaluated. AERA Open, 5(4), 2332858419894276. https://doi.org/10.1177/2332858419894276</p>
-<hr>
-<p>Jenkins, B. D., Golding, J. M., Le Grand, A. M., Levi, M. M., &amp; Pals, A. M. (2022). When Opportunity Knocks: College Students’ Cheating Amid the COVID-19 Pandemic. Teaching of Psychology, 009862832110590. https://doi.org/10.1177/00986283211059067</p>
-<p><strong>GOOD SUMMARY PAPER</strong></p>
-<p>Nice overall summary of background, and reports on open ended self-report questions from students about their cheating behavior.</p>
-<p>74.8% reported cheating</p>
-<p>1/205 reported being caught.</p>
-<p>No impact of demographics</p>
-<hr>
-
-
-</section>
-
- ]]></description>
-  <category>teaching</category>
-  <category>cognition</category>
-  <guid>https://crumplab.com/blog/post_994_5_26_22_cheating/index.html</guid>
-  <pubDate>Thu, 26 May 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/post_994_5_26_22_cheating/imgs/cheating.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

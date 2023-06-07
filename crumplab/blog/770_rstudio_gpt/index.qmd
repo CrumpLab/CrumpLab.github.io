@@ -1,0 +1,143 @@
+---
+title: "Using GPT for writing in R Studio"
+author: "Matt Crump"
+date: 6-7-23
+description: "I'm spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio."
+---
+
+## Preamble
+
+I do most of my writing inside [RStudio](https://posit.co/products/open-source/RStudio/) using [Quarto](https://quarto.org) documents. This means most of my documents are plain text using a combo of markdown and R code chunks that I export to multiple formats like this blog.
+
+I've been curious about using LLMs as an everyday writing assistant for a while. I've occasionally used the OpenAI playground and ChatGPT to give editorial suggestions about my writing, but I found the experience of bouncing in and out of my main writing environment too clunky. 
+
+This semester [notion.so](https://notion.so) became another writing environment that I used heavily (also markdown-ish), and I tried their in-app AI writing assist for a hot second. But, they wanted $10 a month, and I didn't want to pay them.
+
+However, the in-app AI assist experience with notion was not clunky. Just highlight some text, right click, and then select variously useful AI editor prompts to do thinks like: line edit for clarity, expand bullet points to paragraph, convert paragraph to bullet points, generative writing, etc.
+
+After a bit of messing around yesterday, it became clear that it wouldn't be too hard to write addins for RStudio to interface with the OpenAI API, and achieve some kind of in-app writing assistant situation while I'm writing in Quarto. 
+
+This post is me doing that along with laying down some breadcrumbs so my future self can remember what I did here. 
+
+## What you'll need
+
+1. An OpenAI account that allows you to create a secret key to access the API service.
+
+2. R Studio with Quarto (comes with the latest version)
+
+3. I'm using the [openai](https://github.com/irudnyts/openai) R library by Iegor Rudnytskyi, which wraps the API for R and makes sending inputs and receiving outputs very easy.
+
+## Pricing
+
+I haven't crunched the numbers too much yet. You can check out the pricing model here [https://openai.com/pricing](https://openai.com/pricing).
+
+My napkin calculator says this should be cheaper than \$10/month on notion. Currently, the gpt-3.5-turbo model is \$0.002 for 1,000 tokens (about 750 words). It would take 5,000 interactions that use up 1,000 tokens each to get to $10 a month. That's about 750 words times 5000, or 3,750,000 words... or, way more words than I type monthly. Plus, it's all pay as you go, and it is possible to set spending limits if you don't want to go over some amount. Bottom line, cheaper than notion and more customizable. 
+
+There are other costs to consider, such as whether or not you want to send your words to OpenAI. 
+
+## Basic workflow
+
+### Setting up the API keys
+
+1. Create a secret key in openai, copy it and put it somewhere safe. Don't share it. 
+2. The `openai` R library looks for an environment variable called `OPENAI_API_KEY`, which can be set a [number of ways](https://irudnyts.github.io/openai/).
+
+My goal here is to create addins for RStudio that I can use while I'm writing. I don't want to input an API key everytime I use the addin, and I don't want to share the API key in a public repository. There are different strategies for managing environment variables, and this is a [helpful guide by posit](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf). 
+
+My strategy was to add a key-value pair directly to the `.Renviron` file at the user level. 
+
+```{r}
+#| eval: false
+
+# open the .Renviron file
+usethis::edit_r_environ()
+```
+
+Then edit the file to add the new key-value pair, and restart R.
+
+```{r}
+#| eval: false
+
+# add new environment variable to above and save
+OPENAI_API_KEY=XXXXXXXXXXXXX
+```
+
+After you restart R, you can check if R recognizes the new environment variable:
+
+```{r}
+#| eval: false
+Sys.getenv("OPENAI_API_KEY")
+```
+
+
+### Test the API
+
+If everything is working it should be possible to send prompts to OpenAI and return outputs.
+
+```{r}
+#| eval: false
+
+library(openai)
+
+gpt <- create_completion(
+    model = "ada",
+    prompt = "Explain what is larger a pumpkin or a dinosaur?"
+)
+```
+
+The result is an R list object with the output and other info like the number of tokens used.
+
+```{default}
+$id
+[1] "cmpl-7OnnSJ0QgpVF4a86qKYmSWgSvAiym"
+
+$object
+[1] "text_completion"
+
+$created
+[1] 1686145646
+
+$model
+[1] "ada"
+
+$choices
+                                                    text index logprobs finish_reason
+1 \n\nAnswer: I don't know of an easy way to express it.     0       NA        length
+
+$usage
+$usage$prompt_tokens
+[1] 11
+
+$usage$completion_tokens
+[1] 16
+
+$usage$total_tokens
+[1] 27
+```
+
+
+## Writing addins for R Studio
+
+The next step is to write custom addins for RStudio, which is documented [here](https://RStudio.github.io/RStudioaddins/). RStudio addins are available from a dropdown menu, and they can be triggered by hot-key macros. 
+
+The steps for writing addins are:
+
+1. Make a new [R package project](https://r-pkgs.org)
+2. Write functions as you normally would do in the R folder
+3. [Register the functions as addins](https://rstudio.github.io/rstudioaddins/#registering-addins) using a .dcf file placed in `inst/rstudio/addins.dcf`
+4. Install the R package
+5. The addins should now be available for use.
+
+My goal is to start by writing an addin that can take highlighted text in the RStudio editor, send it to openai, and return an output that would do something useful like improving the writing for clarity, flow, and length.
+
+
+
+
+
+
+
+
+
+
+
+

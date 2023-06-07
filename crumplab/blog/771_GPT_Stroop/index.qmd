@@ -2,34 +2,28 @@
 title: "Simulating Stroop effects with ChatGPT"
 author: "Matt Crump"
 date: 6/6/23
-description: "This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short answer is that it can generate data in the style of a Stroop experiment."
+description: "This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short answer is that it can generate data in the style of a Stroop experiment without too much effort on my part."
 bibliography: references.bib
 ---
 
-I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the [openai](openai.com) API. I only have these couple of hours, so this post will be brief. I'm mainly using the time to see if I can get the api to work. Let's go.
+I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the [openai](openai.com) API. This post will be brief, and I'm mainly using the time to see if I can get the api to work. Let's go.
 
-First, the Stroop task is a speeded reaction time task [for a review see, @macleodHalfCenturyResearch1991]. Participants are usually presented with one stimulus at a time, and asked to respond quickly and accurately to identify some aspect of the stimulus while ignoring another aspect of the stimulus.
-
-For example, the stimulus could be the word BLUE written in red ink, and the task could be to identify the ink-color, "red". This is also an example of an incongruent item where the target color "red" mismatches the distractor word "blue".
-
-A congruent item occurs when the target and distractor match, such as the word BLUE written in blue ink. In a typical Stroop procedure, participants are shown a single Stroop item on a given trial and are asked to identify the ink-color as quickly and accurately as possible (by pressing a button, or saying the name out loud). There are usually many trials across the whole experiment. Here's a few examples:
+In a Stroop task [for a review see, @macleodHalfCenturyResearch1991] participants are asked to respond quickly and accurately to identify stimuli with multiple dimensions. In the examples below, each stimulus is a word printed in a particular color. The target dimension is the ink-color that the word is printed in, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.
 
 ```{r}
 #| echo: false
 knitr::include_graphics("Stroop.png")
 ```
 
-
-
-The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.
+Importantly, there are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.
 
 ## Who cares if ChatGPT can simulate the Stroop effect?
 
-I'm not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I'm not exactly sure about most of the important details...especially compared to the level of detail I'm used to from computational models in cognitive psychology. For this reason, I'm not interested in modeling Stroop performance with ChatGPT for any explanatory purpose, or to make any claims about ChatGPT can or can't do.
+I'm not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I don't know most of the important details...especially compared to the level of detail I'm used to from computational models in cognitive psychology. For this reason, I'm not interested in modeling Stroop performance with ChatGPT for any explanatory purpose.
 
-Based on previous messing around with GPT models, I'm pretty confident I can create a series of prompts that will produce data in the style of a Stroop experiment.
+Based on messing around with GPT models previously, I'm pretty confident that some series of prompts will produce data in the style of a Stroop experiment.
 
-Why do I care about this? Some of my research involves questions about attentional control abilities [@bugg2012support; @braem2019measuring], and for many years I've been conducting experiment about these abilities using online methods. For example, experimental tasks are programmed for web-browsers using tools like JsPsych [@de2015jspsych], and participants may be recruited from platforms like Amazon's Mechanical Turk [@crump2013evaluating]. For the most part I've found these online methods to be useful research tools.
+Why do I care about this? Some of my research involves questions about attentional control abilities [@bugg2012support; @braem2019measuring], and some of my work uses online methods to collect data. For example, experimental tasks are programmed for web-browsers using tools like JsPsych [@de2015jspsych], and participants may be recruited from platforms like Amazon's Mechanical Turk [@crump2013evaluating]. Online methods are useful research tools, but they are not without problems.
 
 My biggest concern as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. So, I'm not interesting in analyzing data that doesn't come from real people. For the most part I haven't run into major bot issues (that I am aware of), but many of my tasks have a few properties that could make it difficult for a bot to perform well. For example, many tasks involve speeded responses to identify words and letters. It would be possible to program a bot to accomplish the tasks I put out on the web, but for most of my tasks the return-on-investment for the bot-programmer wouldn't be worth their time.
 
