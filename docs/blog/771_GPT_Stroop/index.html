@@ -249,6 +249,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <li><a href="#accuracy-data" id="toc-accuracy-data" class="nav-link" data-scroll-target="#accuracy-data">Accuracy Data</a></li>
   </ul></li>
   <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#multiple-simulated-subjects" id="toc-multiple-simulated-subjects" class="nav-link" data-scroll-target="#multiple-simulated-subjects">Multiple simulated subjects</a></li>
   </ul>
 </nav>
     </div>
@@ -290,21 +291,22 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </header>
 
 <p>I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the <a href="openai.com">openai</a> API. This post will be brief, and I’m mainly using the time to see if I can get the api to work. Let’s go.</p>
-<p>In a Stroop task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, <a href="#ref-macleodHalfCenturyResearch1991" role="doc-biblioref">MacLeod 1991</a>)</span> participants are asked to respond quickly and accurately to identify stimuli with multiple dimensions. In the examples below, each stimulus is a word printed in a particular color. The target dimension is the ink-color that the word is printed in, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.</p>
+<p>In a Stroop task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, <a href="#ref-macleodHalfCenturyResearch1991" role="doc-biblioref">MacLeod 1991</a>)</span> participants are asked to respond quickly and accurately to identify stimuli with target and distractor dimensions. In the examples below, each stimulus is a word printed in a color. The target dimension is the ink-color, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="Stroop.png" class="quarto-discovered-preview-image img-fluid" width="420"></p>
 </div>
 </div>
-<p>Importantly, there are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
+<p>There are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
 <section id="who-cares-if-chatgpt-can-simulate-the-stroop-effect" class="level2">
 <h2 class="anchored" data-anchor-id="who-cares-if-chatgpt-can-simulate-the-stroop-effect">Who cares if ChatGPT can simulate the Stroop effect?</h2>
 <p>I’m not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I don’t know most of the important details…especially compared to the level of detail I’m used to from computational models in cognitive psychology. For this reason, I’m not interested in modeling Stroop performance with ChatGPT for any explanatory purpose.</p>
 <p>Based on messing around with GPT models previously, I’m pretty confident that some series of prompts will produce data in the style of a Stroop experiment.</p>
 <p>Why do I care about this? Some of my research involves questions about attentional control abilities <span class="citation" data-cites="bugg2012support braem2019measuring">(<a href="#ref-bugg2012support" role="doc-biblioref">Bugg and Crump 2012</a>; <a href="#ref-braem2019measuring" role="doc-biblioref">Braem et al. 2019</a>)</span>, and some of my work uses online methods to collect data. For example, experimental tasks are programmed for web-browsers using tools like JsPsych <span class="citation" data-cites="de2015jspsych">(<a href="#ref-de2015jspsych" role="doc-biblioref">De Leeuw 2015</a>)</span>, and participants may be recruited from platforms like Amazon’s Mechanical Turk <span class="citation" data-cites="crump2013evaluating">(<a href="#ref-crump2013evaluating" role="doc-biblioref">Crump, McDonnell, and Gureckis 2013</a>)</span>. Online methods are useful research tools, but they are not without problems.</p>
-<p>My biggest concern as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. So, I’m not interesting in analyzing data that doesn’t come from real people. For the most part I haven’t run into major bot issues (that I am aware of), but many of my tasks have a few properties that could make it difficult for a bot to perform well. For example, many tasks involve speeded responses to identify words and letters. It would be possible to program a bot to accomplish the tasks I put out on the web, but for most of my tasks the return-on-investment for the bot-programmer wouldn’t be worth their time.</p>
-<p>In the last few months I’ve run a few tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of a bunch of topics discussed in Todd Gureckis’ <a href="https://todd.gureckislab.org/2021/06/09/the-poisoned-well">mturk blog post from a couple years ago</a>. In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a persons interactions with a website and then replay them back. In a psych study, this could involved completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. In a couple recent studies it was very clear that some mturk workers were doing this.</p>
-<p>Similarly, I often have a few post-task questions that ask participants about their experiences during the task. Recently, I have found many responses in the style of ChatGPT, which leads me to suspect that some mturk workers are using many different kinds of tools, including ChatGPT to help them complete tasks. Notably, I have found fewer issues like this when using much more restrictive qualifications (e.g., master worker, more than 95% HIT completion, more than 200 HITS completed, etc.)</p>
+<p>One of my concerns as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. I’m usually not interested in analyzing data spoofed by a bot.</p>
+<p>I haven’t encountered major issues with bots in the tasks I run. These tasks require quick responses to recognize words and letters. Although it is possible to develop a bot to perform these actions, it wouldn’t be profitable for the bot programmer.</p>
+<p>In the last few months I’ve run a tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of several topics discussed in Todd Gureckis’ <a href="https://todd.gureckislab.org/2021/06/09/the-poisoned-well">mturk blog post from a couple years ago</a>. In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a person’s interactions with a website and then replay them back. In an online psych study, this could involve completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. It seemed to me that some mturk workers were doing this (or similar).</p>
+<p>During task debriefing sessions, I use various questions to inquire about participants’ experiences. However, I have recently observed that the responses from some mturk workers resemble those generated by ChatGPT. Notably, I found fewer issues like this when using more restrictive qualifications, such as master worker, over 95% HIT completion rate, and over 200 HITS completed.</p>
 <p>In the most recent cases where I suspected the data was compromised it was also really easy to tell. For example, accuracy was at chance or, reaction times were way too fast. The strategy of using a browser plugin to record and then replay previous responses doesn’t produce above chance performance when the task randomizes the stimuli when ever the web-page is reloaded.</p>
 <p>In any case, my question this afternoon was to do a bit of detective work to determine how easy it would be to spoof some Stroop data using ChatGPT. I’m not going to write a browser plugin to automate a GPT-bot capable of spoofing data in the context of browser-based task (say written using JsPsych, or Lab.js, or similar). But, I’m going to test a few prompts and see what kind of fake accuracy and reaction time data will be produced.</p>
 </section>
@@ -667,6 +669,86 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <p>I’ve run out of time to work more on this right now, but I will add more to this post another day.</p>
 <p>A next step will be to simulate data for many different ChatGPT participants. I’m curious if the spoofed RT distributions will have human-like qualities (e.g., ex-guassian). I’m also interested in whether slight variations to the instructions (e.g., complete this task with about 75% accuracy, or complete this task as if you were tired) systematically influence the results.</p>
 <p>So far my main conclusion is that it wouldn’t be that hard to hack my studies using this kind of approach. Sigh.</p>
+</section>
+<section id="multiple-simulated-subjects" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-simulated-subjects">Multiple simulated subjects</h2>
+<p>I tried to run the following, which loops the above 10 times. I ran into an error on the third iteration because the JSON was not formatted correctly. Added some validation for the JSON. The JSON was not consistent, so I changed the prompt up a bit.</p>
+<p>So far I haven’t been able to run this loop. I got through 7 iterations, and then received a message that the server was overloaded. Also, only 2 of those 7 iterations produced valid JSON. I’m going to put this on the back burner for now.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the colors red, green, blue, and yellow</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># four possible congruent items</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>congruent_items <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The word red printed in the color red"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"The word blue printed in the color blue"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"The word yellow printed in the color yellow"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"The word green printed in the color green"</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># four possible incongruent items</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>incongruent_items <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The word red printed in the color blue"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word red printed in the color green"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word red printed in the color yellow"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word blue printed in the color red"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word blue printed in the color green"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word blue printed in the color yellow"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word yellow printed in the color red"</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word yellow printed in the color blue"</span>,</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word yellow printed in the color green"</span>,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word green printed in the color red"</span>,</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word green printed in the color blue"</span>,</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"The word green printed in the color yellow"</span>)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># generate 50% congruent and 50% incongruent trials</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 12 each (congruent and incongruent)</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>trials <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="fu">rep</span>(congruent_items,<span class="dv">3</span>),incongruent_items))</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co">#set up variables to store data</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>all_sim_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>()</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>gpt_response_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co"># request multiple subjects</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="co"># submit a query to open ai using the following prompt</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="co"># note: responses in JSON format are requested</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>  gpt_response <span class="ot">&lt;-</span> <span class="fu">create_chat_completion</span>(</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>   <span class="at">model =</span> <span class="st">"gpt-3.5-turbo"</span>,</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>   <span class="at">messages =</span> <span class="fu">list</span>(</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>       <span class="fu">list</span>(</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>           <span class="st">"role"</span> <span class="ot">=</span> <span class="st">"system"</span>,</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>           <span class="st">"content"</span> <span class="ot">=</span> <span class="st">"You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"</span>),</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>       <span class="fu">list</span>(<span class="st">"role"</span> <span class="ot">=</span> <span class="st">"user"</span>,</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>           <span class="st">"content"</span> <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible."</span>,<span class="st">"-----"</span>, <span class="fu">paste</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, trials, <span class="at">collapse=</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) , <span class="st">"-----"</span>,<span class="st">"Put simulated identification responses and reaction times into a JSON array of objects following this format: [{'trial': 'trial number', 'word': 'the name of the word, string','color': 'the color of the word, string','response': 'the simulated identification response, string','reaction_time': 'the simulated reaction time, milliseconds an integer'}]"</span>, <span class="at">sep=</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>           </span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>       )</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>   )</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>  <span class="co"># save the output from openai</span></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>  gpt_response_list[[i]] <span class="ot">&lt;-</span> gpt_response</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>  <span class="co"># validate the JSON  </span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>  test_JSON <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">validate</span>(gpt_response<span class="sc">$</span>choices<span class="sc">$</span>message.content)</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>  <span class="co"># validation checks pass, write the simulated data to all_sim_data </span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(test_JSON <span class="sc">==</span> <span class="cn">TRUE</span>){</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>    sim_data <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(gpt_response<span class="sc">$</span>choices<span class="sc">$</span>message.content)</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">sum</span>(<span class="fu">names</span>(sim_data) <span class="sc">==</span> <span class="fu">c</span>(<span class="st">"trial"</span>,<span class="st">"word"</span>,<span class="st">"color"</span>,<span class="st">"response"</span>,<span class="st">"reaction_time"</span>)) <span class="sc">==</span> <span class="dv">5</span>) {</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>      sim_data <span class="ot">&lt;-</span> sim_data <span class="sc">%&gt;%</span></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">sim_subject =</span> i)</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>      all_sim_data <span class="ot">&lt;-</span> <span class="fu">rbind</span>(all_sim_data,sim_data)</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="co"># model responses are in JSON format</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="co">#save.image("batch2.RData")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 

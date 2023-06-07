@@ -5,8 +5,6 @@ date: "6-7-23"
 description: "I'm spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio."
 ---
 
-FYI: I'm live-blogging this today, and will be actively updating this post for the afternoon.
-
 ## Preamble
 
 I do most of my writing inside [RStudio](https://posit.co/products/open-source/RStudio/) using [Quarto](https://quarto.org) documents. This means most of my documents are plain text using a combo of markdown and R code chunks that I export to multiple formats like this blog.

@@ -24,7 +24,6 @@
 
 
 
-<p>FYI: I’m live-blogging this today, and will be actively updating this post for the afternoon.</p>
 <section id="preamble" class="level2">
 <h2 class="anchored" data-anchor-id="preamble">Preamble</h2>
 <p>I do most of my writing inside <a href="https://posit.co/products/open-source/RStudio/">RStudio</a> using <a href="https://quarto.org">Quarto</a> documents. This means most of my documents are plain text using a combo of markdown and R code chunks that I export to multiple formats like this blog.</p>
@@ -466,21 +465,22 @@ font-style: inherit;">$</span>message.content)</span>
 
 
 <p>I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the <a href="openai.com">openai</a> API. This post will be brief, and I’m mainly using the time to see if I can get the api to work. Let’s go.</p>
-<p>In a Stroop task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, MacLeod 1991)</span> participants are asked to respond quickly and accurately to identify stimuli with multiple dimensions. In the examples below, each stimulus is a word printed in a particular color. The target dimension is the ink-color that the word is printed in, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.</p>
+<p>In a Stroop task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, MacLeod 1991)</span> participants are asked to respond quickly and accurately to identify stimuli with target and distractor dimensions. In the examples below, each stimulus is a word printed in a color. The target dimension is the ink-color, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png" class="quarto-discovered-preview-image img-fluid" width="420"></p>
 </div>
 </div>
-<p>Importantly, there are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
+<p>There are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
 <section id="who-cares-if-chatgpt-can-simulate-the-stroop-effect" class="level2">
 <h2 class="anchored" data-anchor-id="who-cares-if-chatgpt-can-simulate-the-stroop-effect">Who cares if ChatGPT can simulate the Stroop effect?</h2>
 <p>I’m not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I don’t know most of the important details…especially compared to the level of detail I’m used to from computational models in cognitive psychology. For this reason, I’m not interested in modeling Stroop performance with ChatGPT for any explanatory purpose.</p>
 <p>Based on messing around with GPT models previously, I’m pretty confident that some series of prompts will produce data in the style of a Stroop experiment.</p>
 <p>Why do I care about this? Some of my research involves questions about attentional control abilities <span class="citation" data-cites="bugg2012support braem2019measuring">(Bugg and Crump 2012; Braem et al. 2019)</span>, and some of my work uses online methods to collect data. For example, experimental tasks are programmed for web-browsers using tools like JsPsych <span class="citation" data-cites="de2015jspsych">(De Leeuw 2015)</span>, and participants may be recruited from platforms like Amazon’s Mechanical Turk <span class="citation" data-cites="crump2013evaluating">(Crump, McDonnell, and Gureckis 2013)</span>. Online methods are useful research tools, but they are not without problems.</p>
-<p>My biggest concern as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. So, I’m not interesting in analyzing data that doesn’t come from real people. For the most part I haven’t run into major bot issues (that I am aware of), but many of my tasks have a few properties that could make it difficult for a bot to perform well. For example, many tasks involve speeded responses to identify words and letters. It would be possible to program a bot to accomplish the tasks I put out on the web, but for most of my tasks the return-on-investment for the bot-programmer wouldn’t be worth their time.</p>
-<p>In the last few months I’ve run a few tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of a bunch of topics discussed in Todd Gureckis’ <a href="https://todd.gureckislab.org/2021/06/09/the-poisoned-well">mturk blog post from a couple years ago</a>. In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a persons interactions with a website and then replay them back. In a psych study, this could involved completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. In a couple recent studies it was very clear that some mturk workers were doing this.</p>
-<p>Similarly, I often have a few post-task questions that ask participants about their experiences during the task. Recently, I have found many responses in the style of ChatGPT, which leads me to suspect that some mturk workers are using many different kinds of tools, including ChatGPT to help them complete tasks. Notably, I have found fewer issues like this when using much more restrictive qualifications (e.g., master worker, more than 95% HIT completion, more than 200 HITS completed, etc.)</p>
+<p>One of my concerns as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. I’m usually not interested in analyzing data spoofed by a bot.</p>
+<p>I haven’t encountered major issues with bots in the tasks I run. These tasks require quick responses to recognize words and letters. Although it is possible to develop a bot to perform these actions, it wouldn’t be profitable for the bot programmer.</p>
+<p>In the last few months I’ve run a tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of several topics discussed in Todd Gureckis’ <a href="https://todd.gureckislab.org/2021/06/09/the-poisoned-well">mturk blog post from a couple years ago</a>. In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a person’s interactions with a website and then replay them back. In an online psych study, this could involve completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. It seemed to me that some mturk workers were doing this (or similar).</p>
+<p>During task debriefing sessions, I use various questions to inquire about participants’ experiences. However, I have recently observed that the responses from some mturk workers resemble those generated by ChatGPT. Notably, I found fewer issues like this when using more restrictive qualifications, such as master worker, over 95% HIT completion rate, and over 200 HITS completed.</p>
 <p>In the most recent cases where I suspected the data was compromised it was also really easy to tell. For example, accuracy was at chance or, reaction times were way too fast. The strategy of using a browser plugin to record and then replay previous responses doesn’t produce above chance performance when the task randomizes the stimuli when ever the web-page is reloaded.</p>
 <p>In any case, my question this afternoon was to do a bit of detective work to determine how easy it would be to spoof some Stroop data using ChatGPT. I’m not going to write a browser plugin to automate a GPT-bot capable of spoofing data in the context of browser-based task (say written using JsPsych, or Lab.js, or similar). But, I’m going to test a few prompts and see what kind of fake accuracy and reaction time data will be produced.</p>
 </section>
@@ -1113,6 +1113,320 @@ font-style: inherit;">kable</span>(accuracy_data)</span></code></pre></div>
 <p>I’ve run out of time to work more on this right now, but I will add more to this post another day.</p>
 <p>A next step will be to simulate data for many different ChatGPT participants. I’m curious if the spoofed RT distributions will have human-like qualities (e.g., ex-guassian). I’m also interested in whether slight variations to the instructions (e.g., complete this task with about 75% accuracy, or complete this task as if you were tired) systematically influence the results.</p>
 <p>So far my main conclusion is that it wouldn’t be that hard to hack my studies using this kind of approach. Sigh.</p>
+</section>
+<section id="multiple-simulated-subjects" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-simulated-subjects">Multiple simulated subjects</h2>
+<p>I tried to run the following, which loops the above 10 times. I ran into an error on the third iteration because the JSON was not formatted correctly. Added some validation for the JSON. The JSON was not consistent, so I changed the prompt up a bit.</p>
+<p>So far I haven’t been able to run this loop. I got through 7 iterations, and then received a message that the server was overloaded. Also, only 2 of those 7 iterations produced valid JSON. I’m going to put this on the back burner for now.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># use the colors red, green, blue, and yellow</span></span>
+<span id="cb6-2"></span>
+<span id="cb6-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># four possible congruent items</span></span>
+<span id="cb6-4">congruent_items <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color red"</span>,</span>
+<span id="cb6-5">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color blue"</span>,</span>
+<span id="cb6-6">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color yellow"</span>,</span>
+<span id="cb6-7">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color green"</span>)</span>
+<span id="cb6-8"></span>
+<span id="cb6-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># four possible incongruent items</span></span>
+<span id="cb6-10">incongruent_items <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color blue"</span>,</span>
+<span id="cb6-11">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color green"</span>,</span>
+<span id="cb6-12">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color yellow"</span>,</span>
+<span id="cb6-13">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color red"</span>,</span>
+<span id="cb6-14">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color green"</span>,</span>
+<span id="cb6-15">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color yellow"</span>,</span>
+<span id="cb6-16">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color red"</span>,</span>
+<span id="cb6-17">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color blue"</span>,</span>
+<span id="cb6-18">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color green"</span>,</span>
+<span id="cb6-19">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color red"</span>,</span>
+<span id="cb6-20">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color blue"</span>,</span>
+<span id="cb6-21">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color yellow"</span>)</span>
+<span id="cb6-22"></span>
+<span id="cb6-23"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># generate 50% congruent and 50% incongruent trials</span></span>
+<span id="cb6-24"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 12 each (congruent and incongruent)</span></span>
+<span id="cb6-25">trials <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rep</span>(congruent_items,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>),incongruent_items))</span>
+<span id="cb6-26"></span>
+<span id="cb6-27"></span>
+<span id="cb6-28"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#set up variables to store data</span></span>
+<span id="cb6-29">all_sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tibble</span>()</span>
+<span id="cb6-30">gpt_response_list <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>()</span>
+<span id="cb6-31"></span>
+<span id="cb6-32"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># request multiple subjects</span></span>
+<span id="cb6-33"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># submit a query to open ai using the following prompt</span></span>
+<span id="cb6-34"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># note: responses in JSON format are requested</span></span>
+<span id="cb6-35"></span>
+<span id="cb6-36"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span>(i <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>){</span>
+<span id="cb6-37">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(i)</span>
+<span id="cb6-38">  </span>
+<span id="cb6-39">  gpt_response <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_chat_completion</span>(</span>
+<span id="cb6-40">   <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gpt-3.5-turbo"</span>,</span>
+<span id="cb6-41">   <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">messages =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb6-42">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb6-43">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"system"</span>,</span>
+<span id="cb6-44">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"</span>),</span>
+<span id="cb6-45">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"user"</span>,</span>
+<span id="cb6-46">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible."</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-----"</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24</span>, trials, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">collapse=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>) , <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-----"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Put simulated identification responses and reaction times into a JSON array of objects following this format: [{'trial': 'trial number', 'word': 'the name of the word, string','color': 'the color of the word, string','response': 'the simulated identification response, string','reaction_time': 'the simulated reaction time, milliseconds an integer'}]"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sep=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb6-47">           </span>
+<span id="cb6-48">       )</span>
+<span id="cb6-49">   )</span>
+<span id="cb6-50">)</span>
+<span id="cb6-51">  </span>
+<span id="cb6-52">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># save the output from openai</span></span>
+<span id="cb6-53">  gpt_response_list[[i]] <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> gpt_response</span>
+<span id="cb6-54">  </span>
+<span id="cb6-55">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># validate the JSON  </span></span>
+<span id="cb6-56">  test_JSON <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> jsonlite<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">validate</span>(gpt_response<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>message.content)</span>
+<span id="cb6-57">  </span>
+<span id="cb6-58">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># validation checks pass, write the simulated data to all_sim_data </span></span>
+<span id="cb6-59">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span>(test_JSON <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>){</span>
+<span id="cb6-60">    sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> jsonlite<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fromJSON</span>(gpt_response<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>message.content)</span>
+<span id="cb6-61">    </span>
+<span id="cb6-62">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sum</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">names</span>(sim_data) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"trial"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"color"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"response"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"reaction_time"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>) {</span>
+<span id="cb6-63">      sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> sim_data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb6-64">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sim_subject =</span> i)</span>
+<span id="cb6-65">  </span>
+<span id="cb6-66">      all_sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rbind</span>(all_sim_data,sim_data)</span>
+<span id="cb6-67">    }</span>
+<span id="cb6-68">    </span>
+<span id="cb6-69">  }</span>
+<span id="cb6-70">}</span>
+<span id="cb6-71"></span>
+<span id="cb6-72"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># model responses are in JSON format</span></span>
+<span id="cb6-73"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#save.image("batch2.RData")</span></span></code></pre></div>
+</div>
 
 
 

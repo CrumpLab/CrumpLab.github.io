@@ -8,14 +8,14 @@ bibliography: references.bib
 
 I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the [openai](openai.com) API. This post will be brief, and I'm mainly using the time to see if I can get the api to work. Let's go.
 
-In a Stroop task [for a review see, @macleodHalfCenturyResearch1991] participants are asked to respond quickly and accurately to identify stimuli with multiple dimensions. In the examples below, each stimulus is a word printed in a particular color. The target dimension is the ink-color that the word is printed in, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.
+In a Stroop task [for a review see, @macleodHalfCenturyResearch1991] participants are asked to respond quickly and accurately to identify stimuli with target and distractor dimensions. In the examples below, each stimulus is a word printed in a color. The target dimension is the ink-color, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.
 
 ```{r}
 #| echo: false
 knitr::include_graphics("Stroop.png")
 ```
 
-Importantly, there are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.
+There are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.
 
 ## Who cares if ChatGPT can simulate the Stroop effect?
 
@@ -25,11 +25,13 @@ Based on messing around with GPT models previously, I'm pretty confident that so
 
 Why do I care about this? Some of my research involves questions about attentional control abilities [@bugg2012support; @braem2019measuring], and some of my work uses online methods to collect data. For example, experimental tasks are programmed for web-browsers using tools like JsPsych [@de2015jspsych], and participants may be recruited from platforms like Amazon's Mechanical Turk [@crump2013evaluating]. Online methods are useful research tools, but they are not without problems.
 
-My biggest concern as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. So, I'm not interesting in analyzing data that doesn't come from real people. For the most part I haven't run into major bot issues (that I am aware of), but many of my tasks have a few properties that could make it difficult for a bot to perform well. For example, many tasks involve speeded responses to identify words and letters. It would be possible to program a bot to accomplish the tasks I put out on the web, but for most of my tasks the return-on-investment for the bot-programmer wouldn't be worth their time.
+One of my concerns as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. I'm usually not interested in analyzing data spoofed by a bot. 
 
-In the last few months I've run a few tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of a bunch of topics discussed in Todd Gureckis' [mturk blog post from a couple years ago](https://todd.gureckislab.org/2021/06/09/the-poisoned-well). In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a persons interactions with a website and then replay them back. In a psych study, this could involved completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. In a couple recent studies it was very clear that some mturk workers were doing this.
+I haven't encountered major issues with bots in the tasks I run. These tasks require quick responses to recognize words and letters. Although it is possible to develop a bot to perform these actions, it wouldn't be profitable for the bot programmer.
 
-Similarly, I often have a few post-task questions that ask participants about their experiences during the task. Recently, I have found many responses in the style of ChatGPT, which leads me to suspect that some mturk workers are using many different kinds of tools, including ChatGPT to help them complete tasks. Notably, I have found fewer issues like this when using much more restrictive qualifications (e.g., master worker, more than 95% HIT completion, more than 200 HITS completed, etc.)
+In the last few months I've run a tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of several topics discussed in Todd Gureckis' [mturk blog post from a couple years ago](https://todd.gureckislab.org/2021/06/09/the-poisoned-well). In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a person's interactions with a website and then replay them back. In an online psych study, this could involve completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. It seemed to me that some mturk workers were doing this (or similar).
+
+During task debriefing sessions, I use various questions to inquire about participants' experiences. However, I have recently observed that the responses from some mturk workers resemble those generated by ChatGPT. Notably, I found fewer issues like this when using more restrictive qualifications, such as master worker, over 95% HIT completion rate, and over 200 HITS completed.
 
 In the most recent cases where I suspected the data was compromised it was also really easy to tell. For example, accuracy was at chance or, reaction times were way too fast. The strategy of using a browser plugin to record and then replay previous responses doesn't produce above chance performance when the task randomizes the stimuli when ever the web-page is reloaded.
 
@@ -201,3 +203,89 @@ I've run out of time to work more on this right now, but I will add more to this
 A next step will be to simulate data for many different ChatGPT participants. I'm curious if the spoofed RT distributions will have human-like qualities (e.g., ex-guassian). I'm also interested in whether slight variations to the instructions (e.g., complete this task with about 75% accuracy, or complete this task as if you were tired) systematically influence the results.
 
 So far my main conclusion is that it wouldn't be that hard to hack my studies using this kind of approach. Sigh.
+
+## Multiple simulated subjects
+
+I tried to run the following, which loops the above 10 times. I ran into an error on the third iteration because the JSON was not formatted correctly. Added some validation for the JSON. The JSON was not consistent, so I changed the prompt up a bit.
+
+So far I haven't been able to run this loop. I got through 7 iterations, and then received a message that the server was overloaded. Also, only 2 of those 7 iterations produced valid JSON. I'm going to put this on the back burner for now.
+
+```{r, eval = FALSE}
+# use the colors red, green, blue, and yellow
+
+# four possible congruent items
+congruent_items <- c("The word red printed in the color red",
+                     "The word blue printed in the color blue",
+                     "The word yellow printed in the color yellow",
+                     "The word green printed in the color green")
+
+# four possible incongruent items
+incongruent_items <- c("The word red printed in the color blue",
+                       "The word red printed in the color green",
+                       "The word red printed in the color yellow",
+                       "The word blue printed in the color red",
+                       "The word blue printed in the color green",
+                       "The word blue printed in the color yellow",
+                       "The word yellow printed in the color red",
+                       "The word yellow printed in the color blue",
+                       "The word yellow printed in the color green",
+                       "The word green printed in the color red",
+                       "The word green printed in the color blue",
+                       "The word green printed in the color yellow")
+
+# generate 50% congruent and 50% incongruent trials
+# 12 each (congruent and incongruent)
+trials <- sample(c(rep(congruent_items,3),incongruent_items))
+
+
+#set up variables to store data
+all_sim_data <- tibble()
+gpt_response_list <- list()
+
+# request multiple subjects
+# submit a query to open ai using the following prompt
+# note: responses in JSON format are requested
+
+for(i in 1:10){
+  print(i)
+  
+  gpt_response <- create_chat_completion(
+   model = "gpt-3.5-turbo",
+   messages = list(
+       list(
+           "role" = "system",
+           "content" = "You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"),
+       list("role" = "user",
+           "content" = paste("Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible.","-----", paste(1:24, trials, collapse="\n") , "-----","Put simulated identification responses and reaction times into a JSON array of objects following this format: [{'trial': 'trial number', 'word': 'the name of the word, string','color': 'the color of the word, string','response': 'the simulated identification response, string','reaction_time': 'the simulated reaction time, milliseconds an integer'}]", sep="\n")
+           
+       )
+   )
+)
+  
+  # save the output from openai
+  gpt_response_list[[i]] <- gpt_response
+  
+  # validate the JSON  
+  test_JSON <- jsonlite::validate(gpt_response$choices$message.content)
+  
+  # validation checks pass, write the simulated data to all_sim_data 
+  if(test_JSON == TRUE){
+    sim_data <- jsonlite::fromJSON(gpt_response$choices$message.content)
+    
+    if(sum(names(sim_data) == c("trial","word","color","response","reaction_time")) == 5) {
+      sim_data <- sim_data %>%
+        mutate(sim_subject = i)
+  
+      all_sim_data <- rbind(all_sim_data,sim_data)
+    }
+    
+  }
+}
+
+# model responses are in JSON format
+#save.image("batch2.RData")
+```
+
+
+
+
