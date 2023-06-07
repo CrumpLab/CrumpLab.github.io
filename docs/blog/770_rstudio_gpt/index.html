@@ -225,6 +225,8 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <li><a href="#line_editor" id="toc-line_editor" class="nav-link" data-scroll-target="#line_editor">line_editor()</a></li>
   <li><a href="#points_to_prose" id="toc-points_to_prose" class="nav-link" data-scroll-target="#points_to_prose">points_to_prose()</a></li>
   <li><a href="#summarize_main_points" id="toc-summarize_main_points" class="nav-link" data-scroll-target="#summarize_main_points">summarize_main_points()</a></li>
+  <li><a href="#completion_ada" id="toc-completion_ada" class="nav-link" data-scroll-target="#completion_ada">completion_ada()</a></li>
+  <li><a href="#completion_davinci" id="toc-completion_davinci" class="nav-link" data-scroll-target="#completion_davinci">completion_davinci()</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -480,6 +482,37 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <li><p>Lab uses various computational methods and tools to conduct and communicate research.</p></li>
 </ul>
 <hr>
+</section>
+<section id="completion_ada" class="level3">
+<h3 class="anchored" data-anchor-id="completion_ada">completion_ada()</h3>
+<p>This addin uses the <code>openai::create_completion()</code> function. The model choice is <code>text-ada-001</code>, and the max number of tokens is 256. Highlighted text in the RStudio editor is taken as the prompt, the output is sent to the console.</p>
+<p>I highlighted the following text and used it as a prompt.</p>
+<hr>
+<p>Prompt:</p>
+<p>Generate a description of a five legged cat in 100 words</p>
+<hr>
+<p>This five legged cat is a Reflex cat. He or she isotonically ungrateful and always wants things from others that are unavailable to them. However, the individual is oftenmanent and resourceful when necessary.</p>
+<hr>
+<p>Hmmmm, not great. This was using the text-ada-001 model.</p>
+<hr>
+<p>Prompt:</p>
+<p>Describe a three legged cat in 50 words</p>
+<hr>
+<p>or less</p>
+<p>One legged cat is a cat that perceptions are two-legged and one half legged cat is a cat that perceptions are three legs long.</p>
+<hr>
+<p>My conclusion is that this model isn’t great for general text completion (or my prompts sucked).</p>
+</section>
+<section id="completion_davinci" class="level3">
+<h3 class="anchored" data-anchor-id="completion_davinci">completion_davinci()</h3>
+<p>Same as above but using a slightly more expensive and apparently better text model, <code>text-davinci-003</code>.</p>
+<hr>
+<p>Tell an engaging story in 100 words or less.</p>
+<p>I had a five legged cat that</p>
+<hr>
+<p>I named Logan. I found him outside my childhood home and decided to take care of him. He was always loved and well taken care of but due to his extra leg, he wouldn’t be able to do what other cats could. Despite this, Logan would still try his hardest when chasing down a laser pointer, climbing the curtains, or running around the house. He may have been a bit clumsy but nonetheless, he brought joy to everyone. My parents used to joke that he rubbed that extra leg for luck and he proved them right time and again. He was truly a special cat.</p>
+<hr>
+<p>Decent.</p>
 
 
 </section>
