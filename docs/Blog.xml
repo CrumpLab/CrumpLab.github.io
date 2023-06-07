@@ -45,6 +45,7 @@
 <h2 class="anchored" data-anchor-id="pricing">Pricing</h2>
 <p>I haven’t crunched the numbers too much yet. You can check out the pricing model here <a href="https://openai.com/pricing" class="uri">https://openai.com/pricing</a>.</p>
 <p>My napkin calculator says this should be cheaper than $10/month on notion. Currently, the gpt-3.5-turbo model is $0.002 for 1,000 tokens (about 750 words). It would take 5,000 interactions that use up 1,000 tokens each to get to $10 a month. That’s about 750 words times 5000, or 3,750,000 words… or, way more words than I type monthly. Plus, it’s all pay as you go, and it is possible to set spending limits if you don’t want to go over some amount. Bottom line, cheaper than notion and more customizable.</p>
+<p>NOTE: The day is done and combined with this post and another one where I sent a whole bunch of requests and used many a token, the cost for all of this heavy personal activity was $0.05.</p>
 <p>There are other costs to consider, such as whether or not you want to send your words to OpenAI.</p>
 </section>
 <section id="basic-workflow" class="level2">

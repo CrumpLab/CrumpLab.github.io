@@ -33,6 +33,8 @@ I haven't crunched the numbers too much yet. You can check out the pricing model
 
 My napkin calculator says this should be cheaper than \$10/month on notion. Currently, the gpt-3.5-turbo model is \$0.002 for 1,000 tokens (about 750 words). It would take 5,000 interactions that use up 1,000 tokens each to get to \$10 a month. That's about 750 words times 5000, or 3,750,000 words... or, way more words than I type monthly. Plus, it's all pay as you go, and it is possible to set spending limits if you don't want to go over some amount. Bottom line, cheaper than notion and more customizable.
 
+NOTE: The day is done and combined with this post and another one where I sent a whole bunch of requests and used many a token, the cost for all of this heavy personal activity was \$0.05.
+
 There are other costs to consider, such as whether or not you want to send your words to OpenAI.
 
 ## Basic workflow
@@ -236,19 +238,19 @@ Let's test this out. Here are some point form notes:
 
 The longform prose that was generated is below... It's, well, it said a bunch of stuff I wouldn't say. Not sure how much I would use this, could also depend on the prompt I'm using. In any case, the basic tool is there as an addin.
 
------
+------------------------------------------------------------------------
 
 The Computational Cognition Lab at Brooklyn College is dedicated to conducting research on learning, memory, and attention, among other cognitive processes. To achieve its goals, the lab uses a combination of behavioral experiments, computational modeling, and brain imaging techniques. In terms of research interests, the lab focuses on the following questions:
 
-1. How does learning occur in real-world settings, and how can we optimize it? The lab uses virtual environments to simulate complex learning scenarios, such as learning how to navigate a new city or operate complex machinery. 
+1.  How does learning occur in real-world settings, and how can we optimize it? The lab uses virtual environments to simulate complex learning scenarios, such as learning how to navigate a new city or operate complex machinery.
 
-2. How do we consolidate memories over time, and how can we improve this process? The lab investigates how information is stored in long-term memory and how we can enhance memory retention through various interventions, such as sleep and mindfulness practices. 
+2.  How do we consolidate memories over time, and how can we improve this process? The lab investigates how information is stored in long-term memory and how we can enhance memory retention through various interventions, such as sleep and mindfulness practices.
 
-3. How do we selectively attend to certain stimuli while filtering out others, and how can we improve this process? The lab examines how attentional processing occurs in the brain, including its neural mechanisms and its impact on real-world decision-making.
+3.  How do we selectively attend to certain stimuli while filtering out others, and how can we improve this process? The lab examines how attentional processing occurs in the brain, including its neural mechanisms and its impact on real-world decision-making.
 
 Overall, the Computational Cognition Lab at Brooklyn College seeks to contribute to our understanding of how cognitive processes work and how they can be optimized to improve everyday life. By using cutting-edge techniques and exploring real-world questions, the lab hopes to make meaningful contributions to the field of cognitive psychology and beyond.
 
------
+------------------------------------------------------------------------
 
 ### summarize_main_points()
 
@@ -260,54 +262,53 @@ The prompt for this is:
 
 Let's try it out on the following paragraph (taken from my lab website):
 
-
 The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition. We ask questions like how do people learn new skills such as playing an instrument or typing on a keyboard? How does memory work? How do people learn the meaning of words? How do people learn patterns and regularities in their environment? These kinds of questions are investigated using behavioral experiments and computational modeling of cognitive processes. The lab also uses a variety of computational methods and tools to conduct and communicate research.
 
------
+------------------------------------------------------------------------
 
-- Computational Cognition Lab at Brooklyn College of CUNY studies learning, memory, attention, performance, and semantic cognition.
+-   Computational Cognition Lab at Brooklyn College of CUNY studies learning, memory, attention, performance, and semantic cognition.
 
-- Lab investigates how people learn new skills, how memory works, how people learn the meaning of words, and how people learn patterns and regularities in their environment.
+-   Lab investigates how people learn new skills, how memory works, how people learn the meaning of words, and how people learn patterns and regularities in their environment.
 
-- Research conducted using behavioral experiments and computational modeling of cognitive processes.
+-   Research conducted using behavioral experiments and computational modeling of cognitive processes.
 
-- Lab uses various computational methods and tools to conduct and communicate research.
+-   Lab uses various computational methods and tools to conduct and communicate research.
 
------
+------------------------------------------------------------------------
 
 ### completion_ada()
 
-This addin uses the `openai::create_completion()` function. The model choice is `text-ada-001`, and the max number of tokens is 256. Highlighted text in the RStudio editor is taken as the prompt, the output is sent to the console. 
+This addin uses the `openai::create_completion()` function. The model choice is `text-ada-001`, and the max number of tokens is 256. Highlighted text in the RStudio editor is taken as the prompt, the output is sent to the console.
 
 I highlighted the following text and used it as a prompt.
 
------
+------------------------------------------------------------------------
 
 Prompt:
 
 Generate a description of a five legged cat in 100 words
 
----
+------------------------------------------------------------------------
 
 This five legged cat is a Reflex cat. He or she isotonically ungrateful and always wants things from others that are unavailable to them. However, the individual is oftenmanent and resourceful when necessary.
 
------
+------------------------------------------------------------------------
 
 Hmmmm, not great. This was using the text-ada-001 model.
 
------
+------------------------------------------------------------------------
 
 Prompt:
 
 Describe a three legged cat in 50 words
 
------
+------------------------------------------------------------------------
 
 or less
 
 One legged cat is a cat that perceptions are two-legged and one half legged cat is a cat that perceptions are three legs long.
 
------
+------------------------------------------------------------------------
 
 My conclusion is that this model isn't great for general text completion (or my prompts sucked).
 
@@ -315,17 +316,17 @@ My conclusion is that this model isn't great for general text completion (or my 
 
 Same as above but using a slightly more expensive and apparently better text model, `text-davinci-003`.
 
------
+------------------------------------------------------------------------
 
 Tell an engaging story in 100 words or less.
 
 I had a five legged cat that
 
------
+------------------------------------------------------------------------
 
 I named Logan. I found him outside my childhood home and decided to take care of him. He was always loved and well taken care of but due to his extra leg, he wouldn't be able to do what other cats could. Despite this, Logan would still try his hardest when chasing down a laser pointer, climbing the curtains, or running around the house. He may have been a bit clumsy but nonetheless, he brought joy to everyone. My parents used to joke that he rubbed that extra leg for luck and he proved them right time and again. He was truly a special cat.
 
------
+------------------------------------------------------------------------
 
 Decent.
 
@@ -333,23 +334,23 @@ Decent.
 
 This is like the above, except it uses the gpt-3.5-turbo model. This model works a little bit different in that it handles both a "system" prompt defining the role of the chatbot, and a user prompt. This function defines the system as "you are helpful assistant". Highlighted text in RStudio is then sent to the chatbot, and the output is returned in the console.
 
----------
+------------------------------------------------------------------------
 
 Can you help with some travel plans?
 
-------
+------------------------------------------------------------------------
 
 Absolutely! Where are you planning to travel to and when? Do you need help with transportation, accommodations, activities, or all of the above?
 
----
+------------------------------------------------------------------------
 
 all of the above
 
----
+------------------------------------------------------------------------
 
 I'm sorry, I don't understand what you mean by "all of the above". Could you please provide more context or a specific question so I can assist you better?
 
----
+------------------------------------------------------------------------
 
 This implementation does not include the message history, so the model didn't know how to interpret the second prompt "all of the above". It would be possible to add the message context, but I'm not going to do that right now.
 
@@ -357,7 +358,4 @@ This implementation does not include the message history, so the model didn't kn
 
 ...Describe some benefits of using Rstudio addins to access the openAI API and use it as a writing assistant...
 
-I won't bother printing the output from gpt. 
-
-
-
+I won't bother printing the output from gpt.
