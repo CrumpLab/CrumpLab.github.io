@@ -382,6 +382,22 @@ font-style: inherit;">$</span>message.content)</span>
 </ol>
 <p>Overall, the Computational Cognition Lab at Brooklyn College seeks to contribute to our understanding of how cognitive processes work and how they can be optimized to improve everyday life. By using cutting-edge techniques and exploring real-world questions, the lab hopes to make meaningful contributions to the field of cognitive psychology and beyond.</p>
 <hr>
+</section>
+<section id="summarize_main_points" class="level3">
+<h3 class="anchored" data-anchor-id="summarize_main_points">summarize_main_points()</h3>
+<p>This addin should take a paragraph input and return a series of point form notes. I’m going to stop printing out each function that I add to the package (which can be found here <a href="https://github.com/CrumpLab/gptaddin/blob/master/R/addins.R" class="uri">https://github.com/CrumpLab/gptaddin/blob/master/R/addins.R</a>). But, I will copy out the prompts I’m using:</p>
+<p>The prompt for this is:</p>
+<p>“You are a writing assistant. Your task is to summarize input text into clear pointform notes.”</p>
+<p>Let’s try it out on the following paragraph (taken from my lab website):</p>
+<p>The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition. We ask questions like how do people learn new skills such as playing an instrument or typing on a keyboard? How does memory work? How do people learn the meaning of words? How do people learn patterns and regularities in their environment? These kinds of questions are investigated using behavioral experiments and computational modeling of cognitive processes. The lab also uses a variety of computational methods and tools to conduct and communicate research.</p>
+<hr>
+<ul>
+<li><p>Computational Cognition Lab at Brooklyn College of CUNY studies learning, memory, attention, performance, and semantic cognition.</p></li>
+<li><p>Lab investigates how people learn new skills, how memory works, how people learn the meaning of words, and how people learn patterns and regularities in their environment.</p></li>
+<li><p>Research conducted using behavioral experiments and computational modeling of cognitive processes.</p></li>
+<li><p>Lab uses various computational methods and tools to conduct and communicate research.</p></li>
+</ul>
+<hr>
 
 
 </section>
