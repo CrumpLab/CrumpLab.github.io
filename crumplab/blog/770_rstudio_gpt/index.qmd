@@ -44,7 +44,7 @@ There are other costs to consider, such as whether or not you want to send your 
 1.  Create a secret key in openai, copy it and put it somewhere safe. Don't share it.
 2.  The `openai` R library looks for an environment variable called `OPENAI_API_KEY`, which can be set a [number of ways](https://irudnyts.github.io/openai/).
 
-My goal here is to create addins for RStudio that I can use while I'm writing. I don't want to input an API key everytime I use the addin, and I don't want to share the API key in a public repository. There are different strategies for managing environment variables, and this is a [helpful guide by posit](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf).
+My goal is to create addins for RStudio to use while I'm writing. I don't want to input an API key everytime I use the addin, or disclose it in a public repository. There are different strategies for managing environment variables, and this is a [helpful guide by posit](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf).
 
 My strategy was to add a key-value pair directly to the `.Renviron` file at the user level.
 
@@ -118,7 +118,7 @@ $usage$total_tokens
 
 ## Writing addins for R Studio
 
-The next step is to write custom addins for RStudio, which is documented [here](https://RStudio.github.io/RStudioaddins/). RStudio addins are available from a dropdown menu, and they can be triggered by hot-key macros.
+The next step is to write custom addins for RStudio, which is documented [here](https://RStudio.github.io/RStudioaddins/). RStudio addins are available from a dropdown menu and/or triggered by hot-key macros.
 
 The steps for writing addins are:
 
@@ -142,7 +142,7 @@ I'm sharing this in case the development process is useful for other people to m
 
 ### line_editor()
 
-The first function I wrote is a basic line editor. I wanted to be able to highlight selected text in RStudio, then quickly send it to an LLM with a request to edit the text for clarity, flow, and length.
+The first function I wrote is a basic line editor. I wanted to be able to highlight text within RStudio and send it to an LLM for clarity, flow, and length suggestions.
 
 Here's the function:
 
@@ -331,8 +331,35 @@ I named Logan. I found him outside my childhood home and decided to take care of
 
 Decent.
 
+### completion_chat()
 
+This is like the above, except it uses the gpt-3.5-turbo model. This model works a little bit different in that it handles both a "system" prompt defining the role of the chatbot, and a user prompt. This function defines the system as "you are helpful assistant". Highlighted text in RStudio is then sent to the chatbot, and the output is returned in the console.
 
+---------
+
+Can you help with some travel plans?
+
+------
+
+Absolutely! Where are you planning to travel to and when? Do you need help with transportation, accommodations, activities, or all of the above?
+
+---
+
+all of the above
+
+---
+
+I'm sorry, I don't understand what you mean by "all of the above". Could you please provide more context or a specific question so I can assist you better?
+
+---
+
+This implementation does not include the message history, so the model didn't know how to interpret the second prompt "all of the above". It would be possible to add the message context, but I'm not going to do that right now.
+
+## Closing thoughts
+
+...Describe some benefits of using Rstudio addins to access the openAI API and use it as a writing assistant...
+
+I won't bother printing the output from gpt. 
 
 
 

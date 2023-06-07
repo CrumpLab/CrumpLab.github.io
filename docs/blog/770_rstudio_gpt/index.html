@@ -227,7 +227,9 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <li><a href="#summarize_main_points" id="toc-summarize_main_points" class="nav-link" data-scroll-target="#summarize_main_points">summarize_main_points()</a></li>
   <li><a href="#completion_ada" id="toc-completion_ada" class="nav-link" data-scroll-target="#completion_ada">completion_ada()</a></li>
   <li><a href="#completion_davinci" id="toc-completion_davinci" class="nav-link" data-scroll-target="#completion_davinci">completion_davinci()</a></li>
+  <li><a href="#completion_chat" id="toc-completion_chat" class="nav-link" data-scroll-target="#completion_chat">completion_chat()</a></li>
   </ul></li>
+  <li><a href="#closing-thoughts" id="toc-closing-thoughts" class="nav-link" data-scroll-target="#closing-thoughts">Closing thoughts</a></li>
   </ul>
 </nav>
     </div>
@@ -300,7 +302,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <li>Create a secret key in openai, copy it and put it somewhere safe. Don’t share it.</li>
 <li>The <code>openai</code> R library looks for an environment variable called <code>OPENAI_API_KEY</code>, which can be set a <a href="https://irudnyts.github.io/openai/">number of ways</a>.</li>
 </ol>
-<p>My goal here is to create addins for RStudio that I can use while I’m writing. I don’t want to input an API key everytime I use the addin, and I don’t want to share the API key in a public repository. There are different strategies for managing environment variables, and this is a <a href="https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf">helpful guide by posit</a>.</p>
+<p>My goal is to create addins for RStudio to use while I’m writing. I don’t want to input an API key everytime I use the addin, or disclose it in a public repository. There are different strategies for managing environment variables, and this is a <a href="https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf">helpful guide by posit</a>.</p>
 <p>My strategy was to add a key-value pair directly to the <code>.Renviron</code> file at the user level.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># open the .Renviron file</span></span>
@@ -359,7 +361,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </section>
 <section id="writing-addins-for-r-studio" class="level2">
 <h2 class="anchored" data-anchor-id="writing-addins-for-r-studio">Writing addins for R Studio</h2>
-<p>The next step is to write custom addins for RStudio, which is documented <a href="https://RStudio.github.io/RStudioaddins/">here</a>. RStudio addins are available from a dropdown menu, and they can be triggered by hot-key macros.</p>
+<p>The next step is to write custom addins for RStudio, which is documented <a href="https://RStudio.github.io/RStudioaddins/">here</a>. RStudio addins are available from a dropdown menu and/or triggered by hot-key macros.</p>
 <p>The steps for writing addins are:</p>
 <ol type="1">
 <li>Make a new <a href="https://r-pkgs.org">R package project</a></li>
@@ -378,7 +380,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <p>I’m sharing this in case the development process is useful for other people to make something similar for themselves.</p>
 <section id="line_editor" class="level3">
 <h3 class="anchored" data-anchor-id="line_editor">line_editor()</h3>
-<p>The first function I wrote is a basic line editor. I wanted to be able to highlight selected text in RStudio, then quickly send it to an LLM with a request to edit the text for clarity, flow, and length.</p>
+<p>The first function I wrote is a basic line editor. I wanted to be able to highlight text within RStudio and send it to an LLM for clarity, flow, and length suggestions.</p>
 <p>Here’s the function:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>line_editor <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
@@ -513,9 +515,28 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <p>I named Logan. I found him outside my childhood home and decided to take care of him. He was always loved and well taken care of but due to his extra leg, he wouldn’t be able to do what other cats could. Despite this, Logan would still try his hardest when chasing down a laser pointer, climbing the curtains, or running around the house. He may have been a bit clumsy but nonetheless, he brought joy to everyone. My parents used to joke that he rubbed that extra leg for luck and he proved them right time and again. He was truly a special cat.</p>
 <hr>
 <p>Decent.</p>
-
-
 </section>
+<section id="completion_chat" class="level3">
+<h3 class="anchored" data-anchor-id="completion_chat">completion_chat()</h3>
+<p>This is like the above, except it uses the gpt-3.5-turbo model. This model works a little bit different in that it handles both a “system” prompt defining the role of the chatbot, and a user prompt. This function defines the system as “you are helpful assistant”. Highlighted text in RStudio is then sent to the chatbot, and the output is returned in the console.</p>
+<hr>
+<p>Can you help with some travel plans?</p>
+<hr>
+<p>Absolutely! Where are you planning to travel to and when? Do you need help with transportation, accommodations, activities, or all of the above?</p>
+<hr>
+<p>all of the above</p>
+<hr>
+<p>I’m sorry, I don’t understand what you mean by “all of the above”. Could you please provide more context or a specific question so I can assist you better?</p>
+<hr>
+<p>This implementation does not include the message history, so the model didn’t know how to interpret the second prompt “all of the above”. It would be possible to add the message context, but I’m not going to do that right now.</p>
+</section>
+</section>
+<section id="closing-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="closing-thoughts">Closing thoughts</h2>
+<p>…Describe some benefits of using Rstudio addins to access the openAI API and use it as a writing assistant…</p>
+<p>I won’t bother printing the output from gpt.</p>
+
+
 </section>
 
 </main> <!-- /main -->
