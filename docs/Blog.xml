@@ -44,7 +44,7 @@
 </section>
 <section id="pricing" class="level2">
 <h2 class="anchored" data-anchor-id="pricing">Pricing</h2>
-<p>I haven’t crunched the numbers too much yet. You can check out the pricing model here <a href="https://openai.com/pricing">https://openai.com/pricing</a>.</p>
+<p>I haven’t crunched the numbers too much yet. You can check out the pricing model here <a href="https://openai.com/pricing" class="uri">https://openai.com/pricing</a>.</p>
 <p>My napkin calculator says this should be cheaper than $10/month on notion. Currently, the gpt-3.5-turbo model is $0.002 for 1,000 tokens (about 750 words). It would take 5,000 interactions that use up 1,000 tokens each to get to $10 a month. That’s about 750 words times 5000, or 3,750,000 words… or, way more words than I type monthly. Plus, it’s all pay as you go, and it is possible to set spending limits if you don’t want to go over some amount. Bottom line, cheaper than notion and more customizable.</p>
 <p>There are other costs to consider, such as whether or not you want to send your words to OpenAI.</p>
 </section>
@@ -267,8 +267,121 @@ font-style: inherit;">$</span>message.content)</span>
 <hr>
 <p>This seems to work. I guess I should add a message in the console so that it looks like something is happening…Added.</p>
 </section>
-<section id="make_longform" class="level3">
-<h3 class="anchored" data-anchor-id="make_longform">make_longform()</h3>
+<section id="points_to_prose" class="level3">
+<h3 class="anchored" data-anchor-id="points_to_prose">points_to_prose()</h3>
+<p>The purpose of this writing aid is to take a series of point form statements and transform them into prose.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">points_to_prose <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(){</span>
+<span id="cb8-2"></span>
+<span id="cb8-3"></span>
+<span id="cb8-4">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># get selected text</span></span>
+<span id="cb8-5">  selected_text <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> rstudioapi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">selectionGet</span>()</span>
+<span id="cb8-6"></span>
+<span id="cb8-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">message</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Submitting query..."</span>)</span>
+<span id="cb8-8"></span>
+<span id="cb8-9">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># run the api call to openai</span></span>
+<span id="cb8-10">  gpt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> openai<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_chat_completion</span>(</span>
+<span id="cb8-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gpt-3.5-turbo"</span>,</span>
+<span id="cb8-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">messages =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb8-13">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb8-14">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"system"</span>,</span>
+<span id="cb8-15">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"You are a writing assistant. Your task is to take point form notes and convert them into longform prose. Please write in a straightforward and clear manner. The user prompt will contain point form notes."</span></span>
+<span id="cb8-16">      ),</span>
+<span id="cb8-17">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb8-18">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"user"</span>,</span>
+<span id="cb8-19">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> selected_text<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>value</span>
+<span id="cb8-20">      )</span>
+<span id="cb8-21">    )</span>
+<span id="cb8-22">  )</span>
+<span id="cb8-23"></span>
+<span id="cb8-24">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># print the results to the console</span></span>
+<span id="cb8-25">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(gpt<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>message.content)</span>
+<span id="cb8-26">}</span></code></pre></div>
+</div>
+<p>Let’s test this out. Here are some point form notes:</p>
+<ul>
+<li><p>Introduce the Computational cognition lab at Brooklyn College</p></li>
+<li><p>Describe lab research interests, which include learning, memory, and attention</p></li>
+<li><p>Elaborate with a few example questions about cognition that relate to real world issues.</p></li>
+</ul>
+<p>The longform prose that was generated is below… It’s, well, it said a bunch of stuff I wouldn’t say. Not sure how much I would use this, could also depend on the prompt I’m using. In any case, the basic tool is there as an addin.</p>
+<hr>
+<p>The Computational Cognition Lab at Brooklyn College is dedicated to conducting research on learning, memory, and attention, among other cognitive processes. To achieve its goals, the lab uses a combination of behavioral experiments, computational modeling, and brain imaging techniques. In terms of research interests, the lab focuses on the following questions:</p>
+<ol type="1">
+<li><p>How does learning occur in real-world settings, and how can we optimize it? The lab uses virtual environments to simulate complex learning scenarios, such as learning how to navigate a new city or operate complex machinery.</p></li>
+<li><p>How do we consolidate memories over time, and how can we improve this process? The lab investigates how information is stored in long-term memory and how we can enhance memory retention through various interventions, such as sleep and mindfulness practices.</p></li>
+<li><p>How do we selectively attend to certain stimuli while filtering out others, and how can we improve this process? The lab examines how attentional processing occurs in the brain, including its neural mechanisms and its impact on real-world decision-making.</p></li>
+</ol>
+<p>Overall, the Computational Cognition Lab at Brooklyn College seeks to contribute to our understanding of how cognitive processes work and how they can be optimized to improve everyday life. By using cutting-edge techniques and exploring real-world questions, the lab hopes to make meaningful contributions to the field of cognitive psychology and beyond.</p>
+<hr>
 
 
 </section>
