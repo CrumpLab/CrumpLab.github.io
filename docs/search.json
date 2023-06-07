@@ -1936,7 +1936,7 @@
     "href": "blog/770_rstudio_gpt/index.html#closing-thoughts",
     "title": "Using GPT for writing in R Studio",
     "section": "Closing thoughts",
-    "text": "Closing thoughts\n…Describe some benefits of using Rstudio addins to access the openAI API and use it as a writing assistant…\nI won’t bother printing the output from gpt."
+    "text": "Closing thoughts\n…Describe some benefits of using Rstudio addins to access the openAI API and use it as a writing assistant…\nI won’t bother printing the output from gpt.\nMy actual closing thoughts are that this approach is on par or better than what notion.so was offering, especially in terms of the ability to customize everything (and price). The prompts I’m using in the examples could be improved, and I wouldn’t be surprised if the quality of the outputs were more useable. It would be easy enough to make lots of other addins to try out different calls and responses. I’m probably interested enough to continue fiddling and see what happens."
   },
   {
     "objectID": "blog/771_GPT_Stroop/index.html#multiple-simulated-subjects",

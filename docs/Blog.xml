@@ -449,6 +449,7 @@ font-style: inherit;">$</span>message.content)</span>
 <h2 class="anchored" data-anchor-id="closing-thoughts">Closing thoughts</h2>
 <p>…Describe some benefits of using Rstudio addins to access the openAI API and use it as a writing assistant…</p>
 <p>I won’t bother printing the output from gpt.</p>
+<p>My actual closing thoughts are that this approach is on par or better than what notion.so was offering, especially in terms of the ability to customize everything (and price). The prompts I’m using in the examples could be improved, and I wouldn’t be surprised if the quality of the outputs were more useable. It would be easy enough to make lots of other addins to try out different calls and responses. I’m probably interested enough to continue fiddling and see what happens.</p>
 
 
 </section>
