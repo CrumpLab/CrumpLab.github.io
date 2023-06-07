@@ -13,6 +13,8 @@
 <url>https://crumplab.com/images/logo2.png</url>
 <title>crumplab</title>
 <link>https://crumplab.com/Blog.html</link>
+<height>139</height>
+<width>144</width>
 </image>
 <generator>quarto-1.3.258</generator>
 <lastBuildDate>Wed, 07 Jun 2023 04:00:00 GMT</lastBuildDate>
@@ -4465,8 +4467,8 @@ background-color: null;
 font-style: inherit;">datatable</span>(selected_bib)</span></code></pre></div>
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8dffa00820364c8b86d8" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-8dffa00820364c8b86d8">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8eb912033db48f76a279" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8eb912033db48f76a279">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>That works, but it doesn’t render the citations. I feel like I have been here before with the <a href="https://www.semanticlibrarian.com">Semantic librarian project</a>.</p>
@@ -4842,7 +4844,7 @@ Whittlesea, Bruce W. A. 1997. <span>“Production, Evaluation, and Preservation 
 <p><img src="https://crumplab.com/blog/885_10_16_22_unplanning/images/unplanning.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2023-04-11</p>
+<p>Last knit: 2023-06-07</p>
 <p>I’ll probably spend more time on making the banner image for this post than writing it because there’s a looming Brooklyn brunch situation, and I only have a simple suggestion for my future self: unplan your course.</p>
 <p>I’ve planned lots of courses, and I’m about to plan two more for next semester. One of them is a Macaulay Honor’s seminar for undergraduates in the first year of that program. The seminar is called, “The people of New York City”. It’s a really interesting course that has been taught in many different ways across CUNY. It’s also way outside my realm of expertise, which is typical for everyone who is asked to lead this seminar. Needless to say, I have started planning my approach to the seminar. But, I really don’t want the planning to get in the way, so I’m starting to do unplanning as well.</p>
 <p>What does unplanning entail? I’m not so sure yet, so I’m slopping down thoughts about what I might mean. Relatedly, this Fall 2022 semester I am trying “ungrading” <span class="citation" data-cites="blum2020">(Blum 2020)</span> in my <a href="https://crumplab.com/cognition">intro to cognition course</a>. This approach can mean lots of different things for a classroom, and <a href="https://crumplab.com/blog/post_888_8_23_22_teaching2530/">I’ve been blogging a bit about that over here</a>. One of the things it means to me is that the class becomes a community space inhabited by participating individual learners. From this vantage point, I’ve been working through what it means to deliver my planned course as a member of the community who is very quickly coming up to speed with community wants and needs.</p>
@@ -4923,7 +4925,7 @@ Blum, Susan Debra. 2020. <em>Ungrading: Why Rating Students Undermines Learning 
 <p><img src="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/imgs/Quarto-1.png" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2023-04-11</p>
+<p>Last knit: 2023-06-07</p>
 <p>For a good few years I have been adopting reproducible workflows for my cognitive psychology research projects. <span class="citation" data-cites="vuorre2021">Vuorre and Crump (2021)</span> discussed an R-based approach to creating and sharing research assets in a reproducible manner, and we called it <a href="https://crumplab.com/vertical/">vertical</a>. Since then I have used that approach for most new projects in the lab. However, <a href="https://quarto.org">quarto</a> is the NKOTB, and I’ve been itching to try it for managing assets in a psych research project. And, in the last few days I got the chance to start a project from scratch using quarto, actually several projects. I’m going to digest some of my experiences and lay breadcrumbs for my future self about what I like and am learning so far.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -5236,7 +5238,7 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 <p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2023-04-11</p>
+<p>Last knit: 2023-06-07</p>
 <p>I often assign “blogging” as an optional way for students to engage in course material. There are lots of ways to get a blog up and running on the internet, and my preference is to suggest that students adopt and learn R Markdown and RStudio for their blogging workflow. Many of my students are unfamiliar with computer programming in R, so learning how to blog with R can be a useful gateway to computational skills.</p>
 <p>R Studio now comes packaged with <a href="https://quarto.org">Quarto</a>, which provides yet another blogging workflow. This post is intended for my students as a quick guide to setting up a quarto blog.</p>
 <section id="overview" class="level2">
@@ -5441,7 +5443,7 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 <p><img src="https://crumplab.com/blog/post_888_8_23_22_teaching2530/imgs/groove.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2023-04-11</p>
+<p>Last knit: 2023-06-07</p>
 <p>I’m using this post to get my words flowing in preparation for another semester at Brooklyn College of CUNY. My research area is cognition; however, over the past decade I have mostly not taught cognition courses, especially at the undergraduate level where I taught lots of stats and research methods. Last year was the first time I got to teach an intro to cognition course two semesters in a row! Looks like I’m on a roll because I get to teach it again this semester. Additionally, I’m teaching cognition modules for separate doctoral and masters programs, so Fall 2022 is a whole lotta cognition going on.</p>
 <p>TLDR: I’m going to try ungrading my course this semester. Should be fun.</p>
 <section id="mood" class="level2">
@@ -5600,7 +5602,7 @@ Yakushko, Oksana. 2019. <em>Scientific Pollyannaism: From Inquisition to Positiv
 }
 
 </style>
-<p>Last knit: 2023-04-11</p>
+<p>Last knit: 2023-06-07</p>
 <p><span class="h1 squiggligraphy">D</span>ecided to make fonts, and I’m using this post to find out if the fonts can be displayed on the web (<span class="squiggligraphy">the answer is yes.</span>)</p>
 <p>So far I have tried two different workflows using <a href="https://2ttf.com">ifontmaker</a> and <a href="https://www.calligraphr.com/en/">calligraphr</a>. Both approaches work pretty well.</p>
 <p><a href="https://2ttf.com">ifontmaker</a> is an ipad app ($7.99). For the price it has some nice features, and it is pretty easy to pencil in all of the character very quickly. It has bezier curves, but the brushes are limited. It is possible to copy in .svg. I liked the kerning feature for letter pairs.</p>
@@ -5671,7 +5673,7 @@ Yakushko, Oksana. 2019. <em>Scientific Pollyannaism: From Inquisition to Positiv
 }
 
 </style>
-<p>Last knit: 2023-04-11</p>
+<p>Last knit: 2023-06-07</p>
 <p>Eugenics and related ideological systems continue to influence psychology and society. I am using this post as an annotated bibliography to gather my book-based reading list about eugenics. The full list is at the bottom. I plan to update this list over time as I find more to read on the topic.</p>
 <section id="scientific-pollyannaism-from-inquisition-to-positive-psychology" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-pollyannaism-from-inquisition-to-positive-psychology">Scientific Pollyannaism: From Inquisition to Positive Psychology</h2>
@@ -6180,7 +6182,7 @@ Yakushko, Oksana. 2019. <em>Scientific <span>Pollyannaism</span>: <span>From Inq
 }
 
 </style>
-<p>Last knit: 2023-04-11</p>
+<p>Last knit: 2023-06-07</p>
 <p>I often create messy annotated bibliographies for sets of readings. This will be a quick post for me to work through my writing and R Markdown process for creating annotated bibs. I have a feeling that I could make the process easier for myself. But, I need to kick some tires first.</p>
 <section id="zotero-copypaste-method" class="level2">
 <h2 class="anchored" data-anchor-id="zotero-copypaste-method">Zotero Copy/Paste Method</h2>

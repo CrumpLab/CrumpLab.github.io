@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/Fun.html",
+    "items": []
+  },
+  {
     "listing": "/People.html",
     "items": [
       "/people/matt_crump.html",
@@ -41,9 +45,5 @@
       "/blog/older_9999_7_7_20_EugenicMind/index.html",
       "/blog/older_9999_7_2_20_JBP/index.html"
     ]
-  },
-  {
-    "listing": "/Fun.html",
-    "items": []
   }
 ]
