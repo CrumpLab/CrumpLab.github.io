@@ -1,0 +1,234 @@
+---
+title: "Writing an R tutorial with GPT in RStudio"
+author: "Matt Crump"
+date: "6-8-2023"
+description: "I'm testing out the process of writing in RStudio using addins that send prompts and receive generative text from OpenAI."
+---
+
+## Preamble
+
+I've been messing around with the [openai](https://github.com/irudnyts/openai) library for R, which wraps the OpenAI API, and makes it easy to send and receive text between R and an LLM model. [In a previous post](https://crumplab.com/blog/770_rstudio_gpt/), I made a quick and dirty R package, [gptaddin](https://github.com/CrumpLab/gptaddin) that loads addins into RStudio and makes it possible to highlight text in an editor window and get LLM responses to the console, or back into the editor. 
+
+Now I'm curious what the writing experience is like if I have easy access to some writing assist tools. My aim in this post is to do some writing using the addins. It would be more accurate to say that I'm going to try some quick content generation.
+
+This semester I was teaching [data-visualization with R](https://crumplab.github.io/psyc3470) to undergraduates, and at one point I had ChatGPT generate some R code for me. It did a really good job, especially for the simple prompts I was using. I didn't have time to explore using LLMs as a teaching tool for learning R, and I'll use this post for this purpose. 
+
+I'll focus on `for` loops, and make heavy use of prompts to LLMs to generate content about `for` loops. 
+
+TLDR: it worked OK.
+
+## Learning for loops in R
+
+Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners
+
+How should a beginner learn about for loops in R?
+
+----
+
+Beginners can start by reading up on basic syntax for for loops in R. They should then work their way through a few tutorials and practice coding in an interactive development environment like RStudio. Once they have a basic understanding of for loops, they should consider taking a more comprehensive course to gain a stronger understanding of for loops and more advanced concepts in R programming.
+
+----
+
+Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners
+
+Explain basic syntax for for loops in R with a couple examples. Put the examples in R code chunks.
+
+----
+
+Sure, I'd be happy to help!
+
+In R, for loops are used for iterative control flow. Essentially, a `for` loop allows you to execute a block of code multiple times, based on a predefined sequence or range of values.
+
+The basic syntax for a `for` loop in R is as follows:
+
+```{r}
+#| eval: false
+for (variable in sequence) {
+  # code block to be executed
+}
+```
+
+In the above syntax, `variable` refers to a temporary variable that will be used to store each value in the specified `sequence` during each iteration of the loop. `sequence` can be any object that generates a sequence of values, such as a `vector`, `list`, or `array`.
+
+Here is an example of a `for` loop that iterates over a sequence of numbers and prints each one:
+
+```{r}
+for (i in 1:5) {
+  print(i)
+}
+```
+
+In this example, `i` is the temporary variable that is used to store each value in the sequence `1:5`. In each iteration of the loop, the current value of `i` is printed to the console.
+
+Another example is a `for` loop that iterates over a vector of names and prints a greeting for each:
+
+```{r}
+names <- c("Alice", "Bob", "Charlie")
+
+for (name in names) {
+  print(paste0("Hello, ", name, "!"))
+}
+```
+
+In this example, `name` is the temporary variable that is used to store each value in the `names` vector. In each iteration of the loop, a string is printed to the console that includes the current `name` variable.
+
+----
+
+### Quizzing on for loops
+
+Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners
+
+Create a few quiz question to test basic knowledge of for loops in R. Use example code and put any R code into R code chunks.
+
+----
+
+Sure, here are a few basic quiz questions to test your knowledge of for loops in R:
+
+1. What is the basic syntax of a for loop in R?
+
+```{r}
+# Answer: 
+# for (variable in sequence) {
+#     statement
+# }
+```
+
+2. How do you create a sequence of numbers in R?
+
+```{r}
+# Answer:
+# You can use the `:` operator or the `seq()` function.
+# Example:
+# This creates a sequence of numbers from 1 through 10.
+for (i in 1:10) {
+  print(i)
+}
+```
+
+3. Can you give an example of a for loop that uses the `seq()` function to iterate over a sequence of odd numbers from 1 to 9?
+
+```{r}
+# Answer:
+# This loop iterates over a sequence of odd numbers from 1 to 9, 
+# incrementing by 2 at each iteration.
+for (i in seq(from=1, to=9, by=2)) {
+  print(i)
+}
+```
+
+4. How can you use a for loop to iterate over a vector of strings and print each string?
+
+```{r}
+# Answer:
+# You can use the `length()` function to determine the length of the vector,
+# and then use the index variable to access each element in the vector.
+# Example:
+# This loop iterates over a vector of strings and prints each string.
+my_strings <- c("apple", "banana", "cherry")
+for (i in 1:length(my_strings)) {
+  print(my_strings[i])
+}
+``` 
+
+-----
+
+Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners
+
+Create examples of simple for loops in R that have syntax errors. The examples should be helpful for a beginner to improve their understanding of R syntax and for loop functionality. Use example code and put any R code into R code chunks.
+
+---
+
+Sure, here are some examples of for loops in R with syntax errors:
+
+### Example 1: Missing parenthesis in for loop declaration
+
+```
+for i in 1:10 {
+  print(i)
+}
+``` 
+
+The correct code should be:
+
+```
+for (i in 1:10) {
+  print(i)
+}
+```
+
+### Example 2: Missing curly braces to enclose loop body
+
+```
+for (i in 1:10)
+  print(i)
+}
+```
+
+The correct code should be:
+
+```
+for (i in 1:10) {
+  print(i)
+}
+```
+
+### Example 3: Using a closed parenthesis instead of a curly brace for loop body
+
+```
+for (i in 1:10) (
+  print(i)
+)
+```
+
+The correct code should be:
+
+```
+for (i in 1:10) {
+  print(i)
+}
+```
+
+### Example 4: Missing quotes to enclose a character vector within loop body
+
+```
+fruits <- c("apple", "banana", "orange")
+for (fruit in fruits) {
+  print(fruit)
+  if (fruit == orange) {
+    print("This is an orange!")
+  }
+}
+```
+
+The correct code should be:
+
+```
+fruits <- c("apple", "banana", "orange")
+for (fruit in fruits) {
+  print(fruit)
+  if (fruit == "orange") {
+    print("This is an orange!")
+  }
+}
+```
+
+### Example 5: Missing index variable in for loop declaration
+
+```
+letters <- c("a", "b", "c", "d")
+for () {
+  print(letters)
+}
+```
+
+The correct code should be:
+
+```
+letters <- c("a", "b", "c", "d")
+for (i in 1:length(letters)) {
+  print(letters[i])
+}
+```
+
+I hope these examples of for loops with syntax errors are helpful for beginners to understand R syntax and loop functionality better.
+

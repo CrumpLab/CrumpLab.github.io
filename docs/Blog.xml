@@ -15,7 +15,348 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.3.258</generator>
-<lastBuildDate>Wed, 07 Jun 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 08 Jun 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Writing an R tutorial with GPT in RStudio</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/669_gpt_learnR/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="preamble" class="level2">
+<h2 class="anchored" data-anchor-id="preamble">Preamble</h2>
+<p>I’ve been messing around with the <a href="https://github.com/irudnyts/openai">openai</a> library for R, which wraps the OpenAI API, and makes it easy to send and receive text between R and an LLM model. <a href="https://crumplab.com/blog/770_rstudio_gpt/">In a previous post</a>, I made a quick and dirty R package, <a href="https://github.com/CrumpLab/gptaddin">gptaddin</a> that loads addins into RStudio and makes it possible to highlight text in an editor window and get LLM responses to the console, or back into the editor.</p>
+<p>Now I’m curious what the writing experience is like if I have easy access to some writing assist tools. My aim in this post is to do some writing using the addins. It would be more accurate to say that I’m going to try some quick content generation.</p>
+<p>This semester I was teaching <a href="https://crumplab.github.io/psyc3470">data-visualization with R</a> to undergraduates, and at one point I had ChatGPT generate some R code for me. It did a really good job, especially for the simple prompts I was using. I didn’t have time to explore using LLMs as a teaching tool for learning R, and I’ll use this post for this purpose.</p>
+<p>I’ll focus on <code>for</code> loops, and make heavy use of prompts to LLMs to generate content about <code>for</code> loops.</p>
+<p>TLDR: it worked OK.</p>
+</section>
+<section id="learning-for-loops-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="learning-for-loops-in-r">Learning for loops in R</h2>
+<p>Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners</p>
+<p>How should a beginner learn about for loops in R?</p>
+<hr>
+<p>Beginners can start by reading up on basic syntax for for loops in R. They should then work their way through a few tutorials and practice coding in an interactive development environment like RStudio. Once they have a basic understanding of for loops, they should consider taking a more comprehensive course to gain a stronger understanding of for loops and more advanced concepts in R programming.</p>
+<hr>
+<p>Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners</p>
+<p>Explain basic syntax for for loops in R with a couple examples. Put the examples in R code chunks.</p>
+<hr>
+<p>Sure, I’d be happy to help!</p>
+<p>In R, for loops are used for iterative control flow. Essentially, a <code>for</code> loop allows you to execute a block of code multiple times, based on a predefined sequence or range of values.</p>
+<p>The basic syntax for a <code>for</code> loop in R is as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (variable <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> sequence) {</span>
+<span id="cb1-2">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># code block to be executed</span></span>
+<span id="cb1-3">}</span></code></pre></div>
+</div>
+<p>In the above syntax, <code>variable</code> refers to a temporary variable that will be used to store each value in the specified <code>sequence</code> during each iteration of the loop. <code>sequence</code> can be any object that generates a sequence of values, such as a <code>vector</code>, <code>list</code>, or <code>array</code>.</p>
+<p>Here is an example of a <code>for</code> loop that iterates over a sequence of numbers and prints each one:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>) {</span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(i)</span>
+<span id="cb2-3">}</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5</code></pre>
+</div>
+</div>
+<p>In this example, <code>i</code> is the temporary variable that is used to store each value in the sequence <code>1:5</code>. In each iteration of the loop, the current value of <code>i</code> is printed to the console.</p>
+<p>Another example is a <code>for</code> loop that iterates over a vector of names and prints a greeting for each:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">names <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Alice"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Bob"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Charlie"</span>)</span>
+<span id="cb4-2"></span>
+<span id="cb4-3"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (name <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> names) {</span>
+<span id="cb4-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello, "</span>, name, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"!"</span>))</span>
+<span id="cb4-5">}</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello, Alice!"
+[1] "Hello, Bob!"
+[1] "Hello, Charlie!"</code></pre>
+</div>
+</div>
+<p>In this example, <code>name</code> is the temporary variable that is used to store each value in the <code>names</code> vector. In each iteration of the loop, a string is printed to the console that includes the current <code>name</code> variable.</p>
+<hr>
+<section id="quizzing-on-for-loops" class="level3">
+<h3 class="anchored" data-anchor-id="quizzing-on-for-loops">Quizzing on for loops</h3>
+<p>Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners</p>
+<p>Create a few quiz question to test basic knowledge of for loops in R. Use example code and put any R code into R code chunks.</p>
+<hr>
+<p>Sure, here are a few basic quiz questions to test your knowledge of for loops in R:</p>
+<ol type="1">
+<li>What is the basic syntax of a for loop in R?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Answer: </span></span>
+<span id="cb6-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># for (variable in sequence) {</span></span>
+<span id="cb6-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#     statement</span></span>
+<span id="cb6-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># }</span></span></code></pre></div>
+</div>
+<ol start="2" type="1">
+<li>How do you create a sequence of numbers in R?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Answer:</span></span>
+<span id="cb7-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># You can use the `:` operator or the `seq()` function.</span></span>
+<span id="cb7-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Example:</span></span>
+<span id="cb7-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># This creates a sequence of numbers from 1 through 10.</span></span>
+<span id="cb7-5"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>) {</span>
+<span id="cb7-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(i)</span>
+<span id="cb7-7">}</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Can you give an example of a for loop that uses the <code>seq()</code> function to iterate over a sequence of odd numbers from 1 to 9?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Answer:</span></span>
+<span id="cb9-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># This loop iterates over a sequence of odd numbers from 1 to 9, </span></span>
+<span id="cb9-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># incrementing by 2 at each iteration.</span></span>
+<span id="cb9-4"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seq</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">from=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">to=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">by=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)) {</span>
+<span id="cb9-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(i)</span>
+<span id="cb9-6">}</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1
+[1] 3
+[1] 5
+[1] 7
+[1] 9</code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li>How can you use a for loop to iterate over a vector of strings and print each string?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Answer:</span></span>
+<span id="cb11-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># You can use the `length()` function to determine the length of the vector,</span></span>
+<span id="cb11-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># and then use the index variable to access each element in the vector.</span></span>
+<span id="cb11-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Example:</span></span>
+<span id="cb11-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># This loop iterates over a vector of strings and prints each string.</span></span>
+<span id="cb11-6">my_strings <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"apple"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"banana"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cherry"</span>)</span>
+<span id="cb11-7"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(my_strings)) {</span>
+<span id="cb11-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(my_strings[i])</span>
+<span id="cb11-9">}</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "apple"
+[1] "banana"
+[1] "cherry"</code></pre>
+</div>
+</div>
+<hr>
+<p>Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners</p>
+<p>Create examples of simple for loops in R that have syntax errors. The examples should be helpful for a beginner to improve their understanding of R syntax and for loop functionality. Use example code and put any R code into R code chunks.</p>
+<hr>
+<p>Sure, here are some examples of for loops in R with syntax errors:</p>
+</section>
+<section id="example-1-missing-parenthesis-in-for-loop-declaration" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-missing-parenthesis-in-for-loop-declaration">Example 1: Missing parenthesis in for loop declaration</h3>
+<pre><code>for i in 1:10 {
+  print(i)
+}</code></pre>
+<p>The correct code should be:</p>
+<pre><code>for (i in 1:10) {
+  print(i)
+}</code></pre>
+</section>
+<section id="example-2-missing-curly-braces-to-enclose-loop-body" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-missing-curly-braces-to-enclose-loop-body">Example 2: Missing curly braces to enclose loop body</h3>
+<pre><code>for (i in 1:10)
+  print(i)
+}</code></pre>
+<p>The correct code should be:</p>
+<pre><code>for (i in 1:10) {
+  print(i)
+}</code></pre>
+</section>
+<section id="example-3-using-a-closed-parenthesis-instead-of-a-curly-brace-for-loop-body" class="level3">
+<h3 class="anchored" data-anchor-id="example-3-using-a-closed-parenthesis-instead-of-a-curly-brace-for-loop-body">Example 3: Using a closed parenthesis instead of a curly brace for loop body</h3>
+<pre><code>for (i in 1:10) (
+  print(i)
+)</code></pre>
+<p>The correct code should be:</p>
+<pre><code>for (i in 1:10) {
+  print(i)
+}</code></pre>
+</section>
+<section id="example-4-missing-quotes-to-enclose-a-character-vector-within-loop-body" class="level3">
+<h3 class="anchored" data-anchor-id="example-4-missing-quotes-to-enclose-a-character-vector-within-loop-body">Example 4: Missing quotes to enclose a character vector within loop body</h3>
+<pre><code>fruits &lt;- c("apple", "banana", "orange")
+for (fruit in fruits) {
+  print(fruit)
+  if (fruit == orange) {
+    print("This is an orange!")
+  }
+}</code></pre>
+<p>The correct code should be:</p>
+<pre><code>fruits &lt;- c("apple", "banana", "orange")
+for (fruit in fruits) {
+  print(fruit)
+  if (fruit == "orange") {
+    print("This is an orange!")
+  }
+}</code></pre>
+</section>
+<section id="example-5-missing-index-variable-in-for-loop-declaration" class="level3">
+<h3 class="anchored" data-anchor-id="example-5-missing-index-variable-in-for-loop-declaration">Example 5: Missing index variable in for loop declaration</h3>
+<pre><code>letters &lt;- c("a", "b", "c", "d")
+for () {
+  print(letters)
+}</code></pre>
+<p>The correct code should be:</p>
+<pre><code>letters &lt;- c("a", "b", "c", "d")
+for (i in 1:length(letters)) {
+  print(letters[i])
+}</code></pre>
+<p>I hope these examples of for loops with syntax errors are helpful for beginners to understand R syntax and loop functionality better.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://crumplab.com/blog/669_gpt_learnR/index.html</guid>
+  <pubDate>Thu, 08 Jun 2023 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Using GPT for writing in R Studio</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -6511,288 +6852,6 @@ Yakushko, Oksana. 2019. <em>Scientific <span>Pollyannaism</span>: <span>From Inq
   <guid>https://crumplab.com/blog/post_990_6_28_22_eugenicsbooks/index.html</guid>
   <pubDate>Tue, 28 Jun 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/post_990_6_28_22_eugenicsbooks/imgs/eugenics.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Writing annotated bibliographies with R Markdown</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/post_991_6_28_22_annotate/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-.apa {
-  margin-left: 2em;
-  text-indent: -2em;
-}
-
-</style>
-<p>Last knit: 2023-06-07</p>
-<p>I often create messy annotated bibliographies for sets of readings. This will be a quick post for me to work through my writing and R Markdown process for creating annotated bibs. I have a feeling that I could make the process easier for myself. But, I need to kick some tires first.</p>
-<section id="zotero-copypaste-method" class="level2">
-<h2 class="anchored" data-anchor-id="zotero-copypaste-method">Zotero Copy/Paste Method</h2>
-<p>This is the method that I am starting with, and it could be the one I end with too.</p>
-<ol type="1">
-<li>Use <a href="https://www.zotero.org">zotero</a> for reference management.</li>
-</ol>
-<ul>
-<li>Make a folder for my readings</li>
-<li>Add citation entries to zotero for each reading</li>
-</ul>
-<ol start="2" type="1">
-<li><p>Copy/paste references out of Zotero into R markdown.</p></li>
-<li><p>Write an annotation underneath the citation and move on.</p></li>
-</ol>
-<p>I usually separate citations with a horizontal line. The look and feel is:</p>
-<p>Future proofing Assessment in Business Education: Lessons From COVID-19. (2021). Journal of Higher Education Theory and Practice, 21(4). https://doi.org/10.33423/jhetp.v21i4.4206</p>
-<p>Short blurb, and random notes about the above paper/book.</p>
-<hr>
-<p>Jenkins, B. D., Golding, J. M., Le Grand, A. M., Levi, M. M., &amp; Pals, A. M. (2022). When Opportunity Knocks: College Students’ Cheating Amid the COVID-19 Pandemic. Teaching of Psychology, 009862832110590. https://doi.org/10.1177/00986283211059067</p>
-<p>Short blurb, and random notes about the above paper/book.</p>
-<hr>
-<p>Krienert, J. L., Walsh, J. A., &amp; Cannon, K. D. (2021). Changes in the tradecraft of cheating: Technological advances in academic dishonesty. College Teaching, 1–10. https://doi.org/10.1080/87567555.2021.1940813</p>
-<p>Short blurb, and random notes about the above paper/book.</p>
-<hr>
-<section id="proscons" class="level3">
-<h3 class="anchored" data-anchor-id="proscons">Pros/Cons</h3>
-<p>Pros: It’s fast to copy/paste citations out of Zotero.</p>
-<p>Cons: The citations are not formatted by csl, they could be made more pretty looking. No reference list generated. No header added to table of contents.</p>
-</section>
-</section>
-<section id="cite-in-text-method" class="level2">
-<h2 class="anchored" data-anchor-id="cite-in-text-method">Cite in text method</h2>
-<ol type="1">
-<li>export .bib file from Zotero</li>
-<li>cite individual papers and write annotation</li>
-</ol>
-<p>Looks like:</p>
-<p><span class="citation" data-cites="bairdjrCurrentTrendsCollege1980">Baird Jr (1980)</span></p>
-<p>Some comments about the paper</p>
-<hr>
-<p><span class="citation" data-cites="bowersStudentDishonestyIts1964">Bowers (1964)</span></p>
-<p>Some comments about the paper</p>
-<hr>
-<p><span class="citation" data-cites="drakeWhyStudentsCheat1941">Drake (1941)</span></p>
-<p>Some comments about the paper</p>
-<section id="proscons-1" class="level3">
-<h3 class="anchored" data-anchor-id="proscons-1">Pros/Cons</h3>
-<p>Also fast, and generates a reference list. However, the full citation is not printed in the main text.</p>
-</section>
-</section>
-<section id="what-i-want" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-want">What I want?</h2>
-<ol type="1">
-<li>Fast and easy</li>
-<li>Title listed in TOC</li>
-<li>Full-citation listed in main text</li>
-<li>Reference list printed at end</li>
-</ol>
-<p>Maybe something that looks like this.</p>
-<section id="when-opportunity-knocks-college-students-cheating-amid-the-covid-19-pandemic" class="level3">
-<h3 class="anchored" data-anchor-id="when-opportunity-knocks-college-students-cheating-amid-the-covid-19-pandemic">When Opportunity Knocks: College Students’ Cheating Amid the COVID-19 Pandemic</h3>
-<div class="apa">
-<p>Jenkins, B. D., Golding, J. M., Le Grand, A. M., Levi, M. M., &amp; Pals, A. M. (2022). When Opportunity Knocks: College Students’ Cheating Amid the COVID-19 Pandemic. <em>Teaching of Psychology</em>, 009862832110590. <a href="https://doi.org/10.1177/00986283211059067" class="uri">https://doi.org/10.1177/00986283211059067</a></p>
-</div>
-<p><span class="citation" data-cites="jenkinsWhenOpportunityKnocks2022">Jenkins et al. (2022)</span> provide both a historical summary of the cheating literature, and present new data about cheating behavior during COVID-19.</p>
-<hr>
-</section>
-<section id="ghost-students-and-the-new-wave-of-online-cheating-for-community-college-students" class="level3">
-<h3 class="anchored" data-anchor-id="ghost-students-and-the-new-wave-of-online-cheating-for-community-college-students">Ghost-Students and the New Wave of Online Cheating for Community College Students</h3>
-<div class="apa">
-<p>Hollis, L. P. (2018). Ghost-students and the new wave of online cheating for community college students. <em>New Directions for Community Colleges</em>, <em>2018</em>(183), 25–34. <a href="https://doi.org/10.1002/cc.20314" class="uri">https://doi.org/10.1002/cc.20314</a></p>
-</div>
-<p><span class="citation" data-cites="hollisGhoststudentsNewWave2018">Hollis (2018)</span> discuss contract-cheating and “ghost-students” who are hired to complete coursework.</p>
-<hr>
-</section>
-<section id="proscons-2" class="level3">
-<h3 class="anchored" data-anchor-id="proscons-2">Pros/Cons</h3>
-<p>This is getting closer to something I would use. It’s not too clunky. Perhaps a function to further automate the process.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">bib2annotate <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span>(cite_key,</span>
-<span id="cb1-2">                   bib_file,</span>
-<span id="cb1-3">                   <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">csl_file =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"apa.csl"</span>,</span>
-<span id="cb1-4">                   <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">header_level=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"###"</span>){</span>
-<span id="cb1-5"></span>
-<span id="cb1-6">  import_bib <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> RefManageR<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ReadBib</span>(bib_file)</span>
-<span id="cb1-7">  get_title <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> import_bib[[cite_key]]<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>title</span>
-<span id="cb1-8">  get_title <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> stringr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">str_remove_all</span>(get_title,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"[{}]"</span>)</span>
-<span id="cb1-9">  single_citation <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> RefManageR<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">toBiblatex</span>(import_bib[[cite_key]])</span>
-<span id="cb1-10">  </span>
-<span id="cb1-11">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cat</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(header_level, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">" "</span>, get_title, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>))</span>
-<span id="cb1-12">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cat</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"::: {.apa}"</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>))</span>
-<span id="cb1-13">  stevemisc<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print_refs</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">paste</span>(single_citation,<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">collapse=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span>),<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">csl=</span>csl_file)</span>
-<span id="cb1-14">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cat</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">":::"</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>))</span>
-<span id="cb1-15">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cat</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Citation key for "</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"@"</span>,cite_key,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">": "</span>,cite_key), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">sep=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span>)</span>
-<span id="cb1-16"></span>
-<span id="cb1-17">}</span></code></pre></div>
-</div>
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">bib2annotate</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"ivesYourStudentsAre2020"</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"AcademicIntegrity.bib"</span>)</span></code></pre></div>
-</section>
-<section id="your-students-are-cheating-more-than-you-think-they-are.-why." class="level3">
-<h3 class="anchored" data-anchor-id="your-students-are-cheating-more-than-you-think-they-are.-why.">Your Students Are Cheating More than You Think They Are. Why?.</h3>
-<div class="apa">
-<p>Ives, B. (2020). Your Students Are Cheating More than You Think They Are. Why?. <em>Educational Research: Theory and Practice</em>, <em>31</em>(1), 46–53.</p>
-</div>
-<p>Citation key for <span class="citation" data-cites="ivesYourStudentsAre2020">Ives (2020)</span>: ivesYourStudentsAre2020</p>
-<hr>
-<p>This will work well enough for now (note to self to add bib2annotate to crumplab functions.)</p>
-</section>
-</section>
-<section id="references" class="level2">
-
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-bairdjrCurrentTrendsCollege1980" class="csl-entry">
-Baird Jr, John S. 1980. <span>“Current Trends in College Cheating.”</span> <em>Psychology in the Schools</em> 17 (4): 515–22. <a href="https://doi.org/10.1002/1520-6807(198010)17:4<515::AID-PITS2310170417>3.0.CO;2-3">https://doi.org/10.1002/1520-6807(198010)17:4&lt;515::AID-PITS2310170417&gt;3.0.CO;2-3</a>.
-</div>
-<div id="ref-bowersStudentDishonestyIts1964" class="csl-entry">
-Bowers, William J. 1964. <em>Student Dishonesty and Its Control in College</em>. <span>Bureau of Applied Social Research, Columbia University</span>.
-</div>
-<div id="ref-drakeWhyStudentsCheat1941" class="csl-entry">
-Drake, Charles A. 1941. <span>“Why Students Cheat.”</span> <em>The Journal of Higher Education</em> 12 (8): 418–20. <a href="https://doi.org/10.2307/1976003">https://doi.org/10.2307/1976003</a>.
-</div>
-<div id="ref-hollisGhoststudentsNewWave2018" class="csl-entry">
-Hollis, Leah P. 2018. <span>“Ghost-Students and the New Wave of Online Cheating for Community College Students.”</span> <em>New Directions for Community Colleges</em> 2018 (183): 25–34. <a href="https://doi.org/10.1002/cc.20314">https://doi.org/10.1002/cc.20314</a>.
-</div>
-<div id="ref-ivesYourStudentsAre2020" class="csl-entry">
-Ives, Bob. 2020. <span>“Your <span>Students Are Cheating More</span> Than <span>You Think They Are</span>. <span>Why</span>?.”</span> <em>Educational Research: Theory and Practice</em> 31 (1): 46–53.
-</div>
-<div id="ref-jenkinsWhenOpportunityKnocks2022" class="csl-entry">
-Jenkins, Baylee D., Jonathan M. Golding, Alexis M. Le Grand, Mary M. Levi, and Andrea M. Pals. 2022. <span>“When <span>Opportunity Knocks</span>: <span>College Students</span>’ <span>Cheating Amid</span> the <span>COVID-19 Pandemic</span>.”</span> <em>Teaching of Psychology</em>, February, 009862832110590. <a href="https://doi.org/10.1177/00986283211059067">https://doi.org/10.1177/00986283211059067</a>.
-</div>
-</div></section></div> ]]></description>
-  <category>bibliographies</category>
-  <category>Rstats</category>
-  <guid>https://crumplab.com/blog/post_991_6_28_22_annotate/index.html</guid>
-  <pubDate>Tue, 28 Jun 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/post_991_6_28_22_annotate/imgs/annotate.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 </channel>
 </rss>

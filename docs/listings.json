@@ -16,6 +16,7 @@
   {
     "listing": "/Blog.html",
     "items": [
+      "/blog/669_gpt_learnR/index.html",
       "/blog/770_rstudio_gpt/index.html",
       "/blog/771_GPT_Stroop/index.html",
       "/blog/772_chatGPT/index.html",
