@@ -15,7 +15,236 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.3.258</generator>
-<lastBuildDate>Tue, 20 Jun 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 22 Jun 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Scratchpad: Grammar checking Quarto documents with the OpenAI API</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/666_gpt_grammar/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>Yesterday I copy-edited and lightly revised the first chapter in my <a href="https://crumplab.com/cognition/textbook/">intro to cognition textbook</a>. Throughout the process I occasionally used the <a href="https://crumplab.com/gptaddin/">RStudio addins</a> I’ve been toying around with to get <a href="https://crumplab.com/blog/667_GPT_editing/">copy-editing suggestions</a> from LLMs (via the OpenAI API). I’ve found the copy-editing suggestions sometimes OK, and even usable on occasion. What I’ve found most useful so far is the ability to quickly generate an alternate version of what I wrote. Usually the alternative isn’t what I’m aiming for, but looking at something that I don’t want seems to be somewhat helpful in moving me toward what I do want.</p>
+<p>In any case, even after I spent a day closely reading and editing that chapter, I still found little issues throughout (and of course improving writing is a never-ending journey anyways). For example, I know that I am prone to accidentally omit words in sentences. I’m not sure if my bluetooth keyboard is messed up, or what is going on, but it happens frequently enough that I know I need to look out for it. At the same time, the omissions are still rare enough that they are hard to detect. Another kind of error that my spell-checker doesn’t identify are correctly spelled words that are incorrectly spelled in context (e.g., missing an s, or plural where it shouldn’t be).</p>
+<p>I’m doing my writing in RStudio most of the time, and it only has a spell-checker that I’m not thrilled about. Unfortunately, there is no baked in grammar checker. I could copy text from my quarto documents into other word-processors and use their grammar checking, and sometimes I do that. Maybe I should do it more. It would be nice to have a copy-editor system inside RStudio so I don’t have to bounce in and out.</p>
+<p>Using the addins I’ve made already it’s easy to select a sentence or paragraph and have ChatGPT return an edited version, but I’d like something more systematic that I would run at the end of a writing process. Something that would go through each sentence and do checks. Maybe something similar in form factor to the Word grammar checker. TBH, I’m not sure exactly what I’m looking for, and I could be looking for different things.</p>
+<p>One thing I would like is a function to find sentences with missing words and fill them in. Ideally, this would be supervised by me, so the function would need to show me the sentences and its proposals.</p>
+<p>In any case, I should get on with it.</p>
+<section id="mission" class="level2">
+<h2 class="anchored" data-anchor-id="mission">Mission</h2>
+<p>To get some programmatic grammar checking done in RStudio.</p>
+</section>
+<section id="search-the-web" class="level2">
+<h2 class="anchored" data-anchor-id="search-the-web">Search the web</h2>
+<p>I haven’t done this too much yet…But, I found something that might work without having to use OpenAI.</p>
+<section id="gramr" class="level3">
+<h3 class="anchored" data-anchor-id="gramr">gramr</h3>
+<p>This looks promising:</p>
+<p><a href="https://github.com/jasdumas/gramr" class="uri">https://github.com/jasdumas/gramr</a></p>
+<p>It’s alright, and I might return to this. Bonus points for including a shiny app! A wrapper to the write-good linter system.</p>
+</section>
+</section>
+<section id="make-chatgpt-do-it" class="level2">
+<h2 class="anchored" data-anchor-id="make-chatgpt-do-it">Make ChatGPT do it?</h2>
+<p>This is where things get scratchpaddy, as I’m about to spam my own blog with a ChatGPT convo.</p>
+<p>Me: List R packages with addins for grammar checking in RStudio.</p>
+<div class="blockquote">
+<p>Sure, here are a few R packages with addins for grammar checking in RStudio:</p>
+<ol type="1">
+<li><p><code>lintr</code> - This package provides a set of syntax and style checking addins for R scripts.</p></li>
+<li><p><code>styler</code> - It provides code formatting with R Studio Addins.</p></li>
+<li><p><code>textmineR</code> -It provides a function that corrects grammar in Rmarkdown documents.</p></li>
+<li><p><code>goodpractice</code> - It provides code advice and style checking with an R-studio Addin.</p></li>
+</ol>
+<p>Hope this helps!</p>
+</div>
+<p>Which function in textmineR provides grammar checking for Rmarkdown documents?</p>
+<div class="blockquote">
+<p>The <code>textmineR</code> package provides a function called <code>grammar_check()</code>, which can be used for grammar checking in Rmarkdown documents.</p>
+<p>To use this function, you need to specify the path to the Rmarkdown document using the <code>file</code> argument. For example:</p>
+<pre><code>library(textmineR)
+
+# Set the path to the Rmd file
+file &lt;- "/path/to/file.Rmd"
+
+# Run the grammar check
+grammar_check(file)</code></pre>
+<p>Running this function will provide a report on any grammar errors found in the Rmarkdown document.</p>
+</div>
+<p>This function does not exist in that package</p>
+<div class="blockquote">
+<p>I apologize for the confusion earlier. You are right that the <code>grammar_check()</code> function does not exist in the <code>textmineR</code> package.</p>
+<p>In fact, as far as I know, there isn’t any R package that provides a built-in function for checking grammar in Rmarkdown documents. However, there are some other tools that you can use for this purpose.</p>
+<p>One such tool is <code>after_the_deadline</code>, which is an open source software that provides a grammar checking service. You can use its API to directly call the grammar checking service from R and obtain the results. Here’s an example code that shows how to use <code>after_the_deadline</code> package for grammar checking in Rmarkdown:</p>
+<pre><code>library(httr)
+
+# Set the text of your Rmarkdown to a variable
+text &lt;- "This is an example sentence with some grammar errors. They included: sentence fragment, passive voice, and clichés."
+
+# Use httr package to call the after-the-deadline API
+# and get the grammar check results
+resp &lt;- POST(url = "http://service.afterthedeadline.com/checkDocument",
+             body = list(data = text, key=""), 
+             encode = "form", accept("text/xml"))
+
+# Extract the grammar check results
+xml &lt;- content(resp, as = "text")
+grammar_errors &lt;- xpathSApply(doc = xml, path = "//message[@type='grammar']", xmlValue)
+
+# Print the errors
+print(grammar_errors)</code></pre>
+<p>This should print out any grammar errors found in the text of your Rmarkdown file. Note that <code>key</code> argument should be set to your After the Deadline access token, which you can obtain by registering at https://automattic.com/keys/after-the-deadline/.</p>
+<p>Again, my apologies for the mistake earlier, and I hope this helps!</p>
+</div>
+<p>That service appears to be real, but also defunct.</p>
+<section id="writing-the-function-that-i-want-with-gpt" class="level3">
+<h3 class="anchored" data-anchor-id="writing-the-function-that-i-want-with-gpt">Writing the function that I want with GPT?</h3>
+<p>Write an R function that uses the OpenAI API to systematically grammar check each sentence of an R Markdown document.</p>
+<div class="blockquote">
+<p>Sure! Here’s an R function that uses the OpenAI API to systematically grammar check each sentence of an R Markdown document:</p>
+<pre><code>grammar_check &lt;- function(file_path, api_key) {
+  # Read in the R Markdown file
+  rmd_file &lt;- readLines(file_path)
+  
+  # Parse the Rmd file into individual sentences
+  require(tokenizers)
+  sentences &lt;- unlist(tokenize_sentences(rmd_file))
+  
+  # Loop through each sentence and check for grammar errors
+  require(httr)
+  for (i in seq_along(sentences)) {
+    sentence &lt;- gsub("[[:punct:]]", "", sentences[i])
+    response &lt;- httr::POST(
+      "https://api.openai.com/v1/engines/grammar-correct/grammar-correct",
+      add_headers(`Content-Type` = "application/json", `Authorization` = paste("Bearer",api_key)),
+      body = list(data = sentence)
+    )
+    result &lt;- httr::content(response, "parsed")
+    if (result$data$corrections_count &gt; 0) {
+      # Print sentence with corrections
+      corrected_sentence &lt;- paste(result$data$corrections$corrected_sentence, collapse = "")
+      cat(sprintf("[%d] [Line %d] %s --&gt; %s\n",
+                  i,
+                  as.vector(grep(sentences[i], rmd_file, ignore.case = TRUE)),
+                  sentences[i],
+                  corrected_sentence))
+    }
+  }
+}</code></pre>
+<p>The function takes two arguments: <code>file_path</code> is the path to the R Markdown file to be checked and <code>api_key</code> is your OpenAI API key.</p>
+<p>The function first reads in the R Markdown file using <code>readLines()</code> and then uses <code>tokenize_sentences()</code> function from the <code>tokenizers</code> package to parse the file into individual sentences.</p>
+<p>The function then loops through each sentence and calls the OpenAI API to check for grammar errors. If any errors are found, the function prints the original sentence and the corrected sentence using <code>cat()</code> function.</p>
+<p>Note that this function requires the user to obtain an API key from OpenAI by signing up at https://beta.openai.com/signup/.</p>
+<p>I hope this helps!</p>
+</div>
+<p>This function is somewhat sensible, it looks like it made up an API endpoint that doesn’t exist.</p>
+<p>TLDR, I also tried to get it to write a Shiny App, but there was so much cludge that I’m going to try something else.</p>
+</section>
+</section>
+<section id="write-it-myself" class="level2">
+<h2 class="anchored" data-anchor-id="write-it-myself">Write it myself</h2>
+<p>I ended up copying the shiny app from gramr and rewriting it to produce a really basic shiny interface.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/666_gpt_grammar/Screenshot 2023-06-22 at 2.29.25 PM.png" class="quarto-discovered-preview-image img-fluid" width="1201"></p>
+</div>
+</div>
+<p>It’s bare bones right now, but it is working a little bit. Here is what it is doing:</p>
+<ol type="1">
+<li>Parse a text document into individual sentences.</li>
+<li>The shiny app has a button to click through each sentence.</li>
+<li>The submit button sends the sentence to openAI for a check</li>
+<li>I ask the model (davinci in this case) to return the sentence in html with changed words highlighted in red. It does an OK job of that, but doesn’t always get it right. Actually, it’s pretty bad. It will highlight lots of random stuff that wasn’t changed.</li>
+</ol>
+<p>I tried using this to re-edit chapter one from the textbook. This amounts to me reading each sentence one by one in a different window, which is actually pretty useful for finding mistakes. I’m not sure how useful ChatGPT is being here. But, sometimes I press the submit button to see what happens. This is pretty much a FMBM (For me, By me) grammar checker at this point. Oh well. Hopefully this combination of tools will help me spot those pesky typos and missing words.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://crumplab.com/blog/666_gpt_grammar/index.html</guid>
+  <pubDate>Thu, 22 Jun 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/666_gpt_grammar/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Prompts for editing text with GPT</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/667_GPT_editing/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>In the past few posts, I’ve been playing around with the OpenAI API in RStudio. This will probably be a short post testing prompts for editing text.</p>
+<section id="simple-pre-fab-prompt-approaches" class="level2">
+<h2 class="anchored" data-anchor-id="simple-pre-fab-prompt-approaches">Simple pre-fab prompt approaches</h2>
+<p>I wrote <a href="https://crumplab.com/blog/770_rstudio_gpt/">some addins</a> for RStudio that send text back and forth to OpenAI from the RStudio editor.</p>
+<p>One of the addins is called <code>gpt_edit</code>. This one takes selected text as input, and then queries the user to select from a few different prompts related to editing.</p>
+<p>Two of the prompt choices are:</p>
+<ol type="1">
+<li><p>You are an editorial writing assistant. Edit the text for spelling and grammar. Don’t change the meaning or the words.</p></li>
+<li><p>You are an editorial writing assistant. Your task is to edit the content you receive for improved clarity, flow, and reduced word count. You should respect the original style of the input text and use an active voice.</p></li>
+</ol>
+<p>And, one of the prompt choices is to write your own prompt.</p>
+<p>I’ve found these prompts generally useful. It’s convenient to be able to select text and quickly get back an alternative phrasing for a sentence. However, I’m not always impressed with the outputs (currently using gpt-3.5-turbo).</p>
+</section>
+<section id="custom-one-off-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="custom-one-off-prompts">Custom one-off prompts</h2>
+<p>Another tack I’ve taken is writing one-off prompts for particular sections of text. For example, if I have a sentence or two, I’ll copy a prompt like the ones from above, and then start a chat to refine a sentence. It might go something like this:</p>
+<hr>
+<p>You are an editorial writing assistant. Your task is to edit the content you receive for improved clarity, flow, and reduced word count. You should respect the original style of the input text and use an active voice.</p>
+<blockquote class="blockquote">
+<p>Understood! Please provide me with the content you would like me to edit.</p>
+</blockquote>
+<p>Another tack I’ve taken is writing one-off prompts for particular sections of text. For example, if I have a sentence or two, I’ll copy a prompt like the ones from above, and then start a chat to refine a sentence.</p>
+<blockquote class="blockquote">
+<p>One approach I’ve taken is to create specific prompts for each section of text I am working on. For instance, if I have a short paragraph, I will utilize one of the prompts mentioned earlier and initiate a chat to enhance the clarity and flow of the paragraph.</p>
+</blockquote>
+<p>Reduce the word count and enhance clarity</p>
+<div class="blockquote">
+<p>To reduce the word count and enhance clarity, we can make the sentence more concise and eliminate any unnecessary phrasing. Here is a possible edit:</p>
+<p>“I create specific prompts for each section of text, such as a short paragraph, to refine it. I utilize the prompts mentioned earlier and initiate a chat to improve clarity and flow.”</p>
+</div>
+<p>Rephrase and describe this process without using the word I.</p>
+<blockquote class="blockquote">
+<p>A process for refining text involves creating specific prompts for each section of the content to be edited. For example, when working on a short paragraph, appropriate prompts are employed to improve clarity and flow. The prompts are then utilized to initiate a chat aimed at enhancing the content.</p>
+</blockquote>
+<p>Shorten</p>
+<blockquote class="blockquote">
+<p>To refine text, specific prompts are created for each section. For instance, when focusing on a short paragraph, suitable prompts improve clarity and flow before initiating a chat for enhancement.</p>
+</blockquote>
+</section>
+<section id="writing-analysis-and-rephrasing-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="writing-analysis-and-rephrasing-prompts">Writing analysis and rephrasing prompts</h2>
+<p>As an aside, in my experience writing is a thinking process. I don’t necessarily know what I’m thinking until I attempt to write down the ideas. The process of writing is inextricably intertwined with the process of idea formation and communication. Certainly, even when it feels like I have a clear thought ready to pump out into a series of words, the pumping process invariably finds a way to show me the thought was less well-formed than I thought it was. Editing plays an important role in this process. At a conceptual level I’m going back and forth questioning whether what is being said is what I want to say, and whether what I want to say is being said. Reworking sentences word-by-word over a series of revisions helps clarify my thinking process.</p>
+<p>Now that I’ve spent some time writing with language assistance from an LLM, one background concern is how these tools may impact my thinking process. Am I concerned? Not particularly at this point. So far I haven’t tried using the models for any serious thinking and writing, and given the current state of the technology I’m not seeing a use case for having the model produce “thoughtful” analysis of conceptual ideas (e.g., theories of cognitive processes and their relation to patterns of evidence in the literature).</p>
+<p>I also haven’t been overwhelmingly impressed with editorial suggestions for improving my own writing, but I have found usable results occasionally. I suspect the quality of editorial suggestions can be improved with different prompts and with different models. Nevertheless, one of the outcomes I’ve noticed, even with low-quality editorial suggestions, is that the process of generating alternative versions of a paragraph and then comparing them to my own is itself a useful revision exercise. Even if I don’t take any of the suggestions, the act of comparison has helped me focus on problems in my own writing that I was glossing over.</p>
+<p>This morning I was testing out a longer prompt involving a to-be-edited sentence, a critical analysis of the sentence structure, and a suggested rephrasing. It is possible to provide a series of examples to “tune” the model. Here’s an example prompt:</p>
+<hr>
+<p>You are an AI writing assistant. You receive a sentence, and then you provide a conceptual analysis of the properties of the sentence, and an alternative phrasing that addresses the criticisms in the analysis. Follow the examples between the ***.</p>
+<hr>
+<p>Sentence: Although there is considerable evidence suggesting that self-referencing can improve memorability, the cognitive processes responsible are not as well understood.</p>
+<p>Analysis: This sentence expresses two important ideas using an irrelevant contrast that makes the sentences nonsensical. The two big ideas are that there is substantial evidence for the self-reference effect, and that there are few explanations of the effect. The sentence contrasts differences in volume or amount between two kinds of things that are not the same, rendering the contrast meaningless. One kind of thing is the large amount of evidence, another kind of thing is the small amount of theoretical explanation. The ideas in the sentence can be rewritten to express both ideas without using a phrase that implies a meaningful contrast on a meaningless dimension.</p>
+<p>Rephrase: There is considerable evidence showing that self-referencing can improve memorability. Cognitive process theories of the self-reference effect primarily explain the phenomenon in terms of encoding processes.</p>
+<hr>
+<p>Sentence: Evidence for the self-reference effect on memorability is plentiful, but the cognitive processes that contribute to it remain uncertain.</p>
+<p>Analysis: This sentence expresses two related ideas, but fails to connect them sufficiently. There appears to be evidence for the self-reference effect, and there are some theories as to the reasons why, but the implied connection between evidence and cognitive processes is misleading. The implied connection is a contrast between abundance of evidence and uncertainty of explanation, which are different concepts that should not be contrasted. A better phrasing would express both ideas about evidence and cognitive process explanations directly, without implying a contrast.</p>
+<p>Rephrase: Evidence for the self-reference effect on memories is abundant and cognitive processes theories point to encoding processes for explanation.</p>
+<hr>
+<p>Sentence: So, although research into cognition has been ongoing across centuries and much knowledge has been generated, there are many perspectives and unresolved issues that prevent widely agreed upon answers to questions about what cognition is and how it works.</p>
+<p>Analysis: This sentence is made up of run-on, Compound, and incomplete sentences adjoined together. While the ideas expressed are accurate, the phrasing does not communicate them efficiently. Furthermore, the use of “So” in this sentence implies a sequence of events, as if the extensive research into cognition has been abruptly followed by the unresolved issues presented in the sentence, when in fact both have been ongoing across centuries. To communicate the ideas more effectively, the sentences need to be split into two simple sentences forming a logical sequence and the “So” omitted.</p>
+<p>Rephrase: Research into cognition has been ongoing for centuries and has generated much knowledge. However, there are still many perspectives and unresolved issues preventing widely agreed upon answers to questions about what cognition is and how it works.</p>
+<hr>
+<p>I generated the first example and the davinci model generated the last two (with some further editing by me). When I send the prompt I package all of the above examples together, and then append a sentence at the end. The model responds with an analysis and a rephrased sentence.</p>
+<p>I’m not sure yet if this kind of prompting will result in tangibly improved sentences. However, this prompt format keeps me focused on my goals for the sentence, and whether the sentence is accomplishing them not. And that seems good.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://crumplab.com/blog/667_GPT_editing/index.html</guid>
+  <pubDate>Wed, 21 Jun 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/667_GPT_editing/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Choose-your-own adventure with ChatGPT</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -7280,236 +7509,6 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
   <guid>https://crumplab.com/blog/post_887_8_25_22_quartoblog/index.html</guid>
   <pubDate>Thu, 25 Aug 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Getting back into the groove and teaching cognition</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/post_888_8_23_22_teaching2530/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-</style>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_888_8_23_22_teaching2530/imgs/groove.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>Last knit: 2023-06-07</p>
-<p>I’m using this post to get my words flowing in preparation for another semester at Brooklyn College of CUNY. My research area is cognition; however, over the past decade I have mostly not taught cognition courses, especially at the undergraduate level where I taught lots of stats and research methods. Last year was the first time I got to teach an intro to cognition course two semesters in a row! Looks like I’m on a roll because I get to teach it again this semester. Additionally, I’m teaching cognition modules for separate doctoral and masters programs, so Fall 2022 is a whole lotta cognition going on.</p>
-<p>TLDR: I’m going to try ungrading my course this semester. Should be fun.</p>
-<section id="mood" class="level2">
-<h2 class="anchored" data-anchor-id="mood">Mood</h2>
-<p>I’m mostly done with course prep. The semester starts in two days. I’m eagerly avoiding the last bits and pieces of my syllabi, hence this post. I’m excited for what I expect will be an interesting and rewarding semester. At the same time I am still floating in mood. I need some mood extraction. What is my mood?</p>
-<p>Instead of explicating the mood, I will point at major mood influences. I’m hoping to summon their power and redirect the energy into a Megazord like the Power Rangers would do when they confront issues of the day. The major mood influencers are eugenics and the white-washing of psychology, academic integrity, and ungrading.</p>
-</section>
-<section id="eugenics-and-the-white-washing-of-psychology" class="level2">
-<h2 class="anchored" data-anchor-id="eugenics-and-the-white-washing-of-psychology">Eugenics and the white-washing of psychology</h2>
-<p>I started learning more about the social, historical, and political aspects of psychology that were not incorporated into the curriculum that I was trained on. Past me didn’t realize how much of psychology was deeply rooted in eugenics and related systems of oppression. IMO, many of the roots remain buried and not widely discussed in psychology curricula. Sadly, some of the roots are still around. Learning about eugenics/psychology connections has impacted both my research and teaching outlook. In short, when considering how to approach a research or teaching project I have a voice asking “what would a eugenicist do?”, and then, just like Meatloaf, “I won’t do that.”</p>
-<p>This summer I embarked on a long eugenics and society in general reading project. <a href="https://crumplab.com/articles/blog/post_990_6_28_22_eugenicsbooks/index.html">My reading list is here</a>. All of that reading built up a strong anti-eugenics mood.</p>
-<p>Some highlights very much worth the read for psychologists are <span class="citation" data-cites="yakushko2019">Yakushko (2019)</span>, and <span class="citation" data-cites="guthrie2004">Guthrie (2004)</span>. Yakushko’s “Scientific Pollyannaism” covers a wide range of disappointing and deeply problematic aspects of early to modern psychology. Guthrie’s “Even the Rat was white” should have been the default textbook on the history of psychology since it was first published in 1976.</p>
-<p>I have already incorporated aspects of these topics into the content of my cognition course (e.g., chapters on <a href="https://crumplab.com/cognition/textbook/eugenics-and-psychology.html">eugenics</a> and <a href="https://crumplab.com/cognition/textbook/intelligence-testing.html">IQ testing</a>). But, I have not yet really changed the structure of the course in a way that aims to deconstruct eugenics influences in the classroom. For example, I’m not interested in churning my students through testing and ranking processes inspired by eugenicists. I’d rather participate with my students in a process of engaging in the course material.</p>
-</section>
-<section id="academic-integrity" class="level2">
-<h2 class="anchored" data-anchor-id="academic-integrity">Academic integrity</h2>
-<p>At the end of May I wrote a blog post about some widespread cheating behavior that occurred in my cognition class in Fall 2021. I wrote that post as a part of a teaching assessment process and to reflect on how to do better next time. <a href="https://crumplab.com/cognition/">My undergrad cognition course</a> is going into its third revision. I first taught it <em>synchronous</em> online (gave zoom lectures etc.), and then in Spring 2022 I taught in an <em>asynchronous</em> format (recorded lots of YouTube videos). A few months ago I also wrote <a href="https://crumplab.com/articles/blog/post_996_5_20_22_assignmentflex/index.html">a post about how I structured the asynchronous course with a buffet of assignment options for students</a>, so they had many ways to get a grade they wanted to achieve. I think the second version of the course with lots of assignment choice was much better for student engagement, and fortunately I didn’t have to deal with any academic integrity issues.</p>
-<p>I’m intending to roll over the successes from the second version into my <em>in-person</em> course this fall, especially all of options for assignment choice.</p>
-<p>I’d also like to avoid major academic integrity issues. One of the outcomes of having a class where most students violated academic integrity principles was that I took <a href="https://crumplab.com/articles/blog/post_994_5_26_22_cheating/index.html">a quick dive into the literature on cheating behavior in university</a>. If you teach psychology and are interested in whether your students are cheating or not, I’d recommend reading <span class="citation" data-cites="jenkins2022">Jenkins et al. (2022)</span> who estimate that about 75% of students self-report cheating in psych classes. It’s a concern. There’s so many ways to cheat these days, such as paying someone else (contract cheating) to take your course for you or do your assignments <span class="citation" data-cites="hollis2018">(Hollis 2018)</span>. Or, getting an AI like GPT-3 to do your writing assignments.</p>
-<p>I’d like to run a course where students would rather engage in the material than violate academic integrity issues.</p>
-</section>
-<section id="ungrading" class="level2">
-<h2 class="anchored" data-anchor-id="ungrading">Ungrading</h2>
-<p>An inspiring read this summer was an edited book on “Ungrading”, <span class="citation" data-cites="blum2020">Blum (2020)</span>. Each chapter was written by different educators who discussed their own misgivings with the standard practice of grading students, and their own ways of practicing ungrading.</p>
-<p>I haven’t yet tried ungrading in any of my courses, and there are lots of ways to do so. This semester will involve weaving in some ungrading practices.</p>
-</section>
-<section id="finish-my-syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="finish-my-syllabus">Finish my syllabus</h2>
-<p>If I had to summarize my mood, it is a Megazord composed of the above influences. I hope this Megazord will bring the energy I need to update my syllabus for this semester. I’ve been finding ways to put off writing the final bits and pieces of the syllabus. And, it is clear to me that I am perilously close to having to do that work, like right now.</p>
-<p>My closing thoughts are just me telling myself what I need to do next.</p>
-<p>My syllabus is located <a href="https://crumplab.com/cognition/articles/course_docs/Fall_2022_Psyc_2530_syllabus.html">here</a>.</p>
-<p>What do I need to do it?</p>
-<ol type="1">
-<li>Update course details</li>
-<li>Update course schedule with Fall 2022 dates</li>
-<li>Re-write course assessment and grading parts, make the language around this as clear and straightforward as possible.</li>
-</ol>
-</section>
-<section id="first-class" class="level2">
-<h2 class="anchored" data-anchor-id="first-class">First Class</h2>
-<p>I think the first class went OK. At the beginning of class we brainstormed how typical undergraduate courses are structured. We suggested that many courses are 14 weeks long and involve lectures, reading textbooks, midterms and exams, maybe a written paper or two. Students thought that the final exam could be worth anywhere between 5% to 50% of their grade. I asked, “If you could delete one thing from a standard course, what would it be?” The overwhelming answer was to get rid of written papers, and the second most popular was to get rid of exams. To introduce how ungrading would work in this course, I told students I would delete one thing and then I used my dry-erase marker to cross out all of the exams in the course. Then we spent the rest of the first class going over expectations about the course and fielding questions about how ungrading would work.</p>
-<p>This is my first time ungrading, and I’ll modify things as necessary across the course. I decided to keep close to the course structure I adopted last time. The previous structure involved weekly learning modules, lots of optional assignments to choose from to gain points toward a grade (5 points each), and midterms and a final exam. I’m scrapping the midterms and final exams, and replacing them with self-assessments for goal-setting, goal refinement, and goal evaluation. But, I am keeping all of the optional assignments and adding more. I’m also keeping the points system, but students will be responsible for self-assessing their work and recommending their own points for each assignment. All of the learning modules and assignments are posted on the LMS (Blackboard), and that system can be useful for students to keep track of what they have done or need to do next in the course.</p>
-</section>
-<section id="portfolios-and-assessment" class="level2">
-<h2 class="anchored" data-anchor-id="portfolios-and-assessment">Portfolios and Assessment</h2>
-<p>I wrote a short comment a couple years ago encouraging doctoral students to create portfolios of all of the work they do, especially work beyond publications <span class="citation" data-cites="crump2019">Crump (2019)</span>. I’m using the portfolio notion in this course as well. At the end of the course students will have created a record of course engagement, in the form of a portfolio. The contents of the portfolio are various: including an attendance record, participation in class online and offline, and all of the written and creative work completed over the semester. The course offers many weekly (and alternative timeframe) assignments that students can complete to engage with learning and add to their portfolio.</p>
-<p>I have planned for three assessments throughout the course. These replace exams that I would normally administer during those class periods. The purpose of the assessments is to support students in creating and meeting learning goals. I’m having the first assessment on the third class of the semester, the second assessment is in the middle of the semester, and the last assessment will occur during the final examination period. The first assessment will be about setting goals for the course. The second assessment will be a mid-semester “self-directed performance review” to check-in with their goals and make course corrections if necessary. The final assessment will be a retrospective and explanation about the portfolio they created across the course. I’m also planning to share the assessment forms with the class weeks in advance so that we can collaboratively edit the questions to make them more useful.</p>
-<p>With all of this said, I need to draft a first assessment. Will report back.</p>
-</section>
-<section id="first-assessment" class="level2">
-<h2 class="anchored" data-anchor-id="first-assessment">First Assessment</h2>
-<p>We’re three weeks in. We did the first assessment on the third class of the semester. It was focused on setting goals for the course and beyond.</p>
-<p>I started the assessment by showing my own faculty annual review form that I have completed each year, which includes listing out my goals from last year, and my progress toward those goals this year. We discussed how completing the assessments in this course could be helpful practice for performance review situations in job situations.</p>
-<p>I asked the following seven questions.</p>
-<ol type="1">
-<li>Identify 3 to 5 goals you have for after your degree</li>
-<li>Identify 3 to 5 goals you have while you complete your degree</li>
-<li>Identify 3 to 5 goals you have for this semester</li>
-<li>Identify 3 to 5 goals you have for this course.</li>
-<li>What skills do you want to improve on in this course?</li>
-<li>What are your stretch goals? These, are things you would try to accomplish if you find the time and energy to do these goals in this course, this semester.</li>
-<li>What grade do you want at the end of this course?</li>
-</ol>
-<p>For each question students spent a few minutes writing down goals, and then we broke into various forms of class discussion about their goals. This allowed a chance for students to share their goals and possibly be inspired toward goals they weren’t thinking about.</p>
-<p>We’ll check back in mid-semester with the second assessment.</p>
-</section>
-<section id="references" class="level2">
-
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-blum2020" class="csl-entry">
-Blum, Susan Debra. 2020. <em>Ungrading: Why Rating Students Undermines Learning (and What to Do Instead)</em>. West Virginia University Press.
-</div>
-<div id="ref-crump2019" class="csl-entry">
-Crump, Matthew J. C. 2019. <span>“Portfolio and Prosper.”</span> <em>Nature Human Behaviour</em> 3 (10): 1008–8. <a href="https://doi.org/ghrnn6">https://doi.org/ghrnn6</a>.
-</div>
-<div id="ref-guthrie2004" class="csl-entry">
-Guthrie, Robert V. 2004. <em>Even the Rat Was White: A Historical View of Psychology</em>. Allyn; Bacon.
-</div>
-<div id="ref-hollis2018" class="csl-entry">
-Hollis, Leah P. 2018. <span>“Ghost-Students and the New Wave of Online Cheating for Community College Students.”</span> <em>New Directions for Community Colleges</em> 2018 (183): 2534. <a href="https://doi.org/10.1002/cc.20314">https://doi.org/10.1002/cc.20314</a>.
-</div>
-<div id="ref-jenkins2022" class="csl-entry">
-Jenkins, Baylee D., Jonathan M. Golding, Alexis M. Le Grand, Mary M. Levi, and Andrea M. Pals. 2022. <span>“When Opportunity Knocks: College Students<span>’</span> Cheating Amid the COVID-19 Pandemic.”</span> <em>Teaching of Psychology</em>, February, 009862832110590. <a href="https://doi.org/10.1177/00986283211059067">https://doi.org/10.1177/00986283211059067</a>.
-</div>
-<div id="ref-yakushko2019" class="csl-entry">
-Yakushko, Oksana. 2019. <em>Scientific Pollyannaism: From Inquisition to Positive Psychology</em>. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-15982-5">https://doi.org/10.1007/978-3-030-15982-5</a>.
-</div>
-</div></section></div> ]]></description>
-  <category>teaching</category>
-  <category>cognition</category>
-  <category>OER</category>
-  <guid>https://crumplab.com/blog/post_888_8_23_22_teaching2530/index.html</guid>
-  <pubDate>Tue, 23 Aug 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/post_888_8_23_22_teaching2530/imgs/groove.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Making fonts</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/post_889_7_7_22_fonts/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-.apa {
-  margin-left: 2em;
-  text-indent: -2em;
-}
-
-@font-face {
-    font-family: 'CrumpSquiggligraphy';
-    src: url('web/CrumpSquiggligraphy.woff2') format('woff2'), url('web/CrumpSquiggligraphy.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'CrumpMoebius';
-    src: url('web/CrumpMoebius.woff2') format('woff2'), url('web/CrumpMoebius.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-.squiggligraphy {
-   font-family: 'CrumpSquiggligraphy';
-}
-
-.moebius {
-   font-family: 'CrumpMoebius';
-}
-
-</style>
-<p>Last knit: 2023-06-07</p>
-<p><span class="h1 squiggligraphy">D</span>ecided to make fonts, and I’m using this post to find out if the fonts can be displayed on the web (<span class="squiggligraphy">the answer is yes.</span>)</p>
-<p>So far I have tried two different workflows using <a href="https://2ttf.com">ifontmaker</a> and <a href="https://www.calligraphr.com/en/">calligraphr</a>. Both approaches work pretty well.</p>
-<p><a href="https://2ttf.com">ifontmaker</a> is an ipad app ($7.99). For the price it has some nice features, and it is pretty easy to pencil in all of the character very quickly. It has bezier curves, but the brushes are limited. It is possible to copy in .svg. I liked the kerning feature for letter pairs.</p>
-<p><a href="https://www.calligraphr.com/en/">calligraphr</a> is a website providing a template to draw characters. I open the template in procreate or adobe fresco and do the characters there. Then, the template is uploaded to calligraphr.com, which converts the font to .otf or .ttf.</p>
-<p>I used <a href="https://transfonter.org" class="uri">https://transfonter.org</a> to convert .ttf to .woff. This should allow the font to be displayed on the web. Let’s find out.</p>
-<p>Sidenote: this post is written in R markdown and compiled as a vignette with pkgdown. I add a “web” folder in the vignette folder where I saved the .woff files for the font. These files can be saved to the docs folder if they are declared in the yaml as resource files <a href="https://pkgdown.r-lib.org/reference/build_articles.html#external-files" class="uri">https://pkgdown.r-lib.org/reference/build_articles.html#external-files</a>.</p>
-<hr>
-<section id="squiggligraphy" class="level2 squiggligraphy squilligraphy">
-<h2 class="squiggligraphy anchored" data-anchor-id="squiggligraphy">SQUIGGLIGRAPHY</h2>
-<p>THIS FONT IS SQUILLIGRAPHY. IT’S AN ALL CAPS FONT, even though it has lowercase letters. MY PLAN FOR THIS FONT WAS TO USE THE CAPITAL LETTERS TO BEGIN PARAGRAPHS.</p>
-<div class="h1 squiggligraphy">
-<p>ABDCEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
-</section>
-<hr>
-<p><span class="h1 squiggligraphy">M</span>y plan for this paragraph is to write the first letter in squiggligraphy, and all of the rest of the letters in the default font for this post. The rest of this text is just filler text to make this paragraph look like a paragraph. It should have enough words for a few sentences. At least a few. Or, more than a few. Enough for a paragraph.</p>
-<p><span class="h1 squiggligraphy">N</span>eat. The capital letters from squiggligraphy were not vertically aligned properly, so I had to adjust them in <a href="https://fontforge.org/en-US/">font forge</a>, an open source font editor. I also used font forge to export as .woff and .woff2 for the web.</p>
-<p>To add the the capital letter i’m using a span, choosing h1 class (from bootstrap 5), and a custom class that sets the font family. It’s a bit clunky but it gets the letter capitalized in a custom font.</p>
-<pre><code>&lt;span class = "h1 squiggligraphy"&gt;N&lt;/span&gt;eat</code></pre>
-<hr>
-<section id="moebius" class="level2 moebius">
-<h2 class="moebius anchored" data-anchor-id="moebius">Moebius</h2>
-<div class="moebius">
-<p>Moebius is one of my favorite cartoonists, and I love the way the lettering is rendered. So, I made a font heavily inspired by typography in Moebius cartoons. It only does uppercase, but it doesn’t matter if you type in lower or uppercase. There is limited punctuation.</p>
-<p>ABDCEFGHIJKLMNOPQRSTUVWXYZ!$,.?</p>
-</div>
-
-
-</section>
-
- ]]></description>
-  <category>fonts</category>
-  <guid>https://crumplab.com/blog/post_889_7_7_22_fonts/index.html</guid>
-  <pubDate>Thu, 07 Jul 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/post_889_7_7_22_fonts/imgs/moebius.png" medium="image" type="image/png" height="89" width="144"/>
 </item>
 </channel>
 </rss>

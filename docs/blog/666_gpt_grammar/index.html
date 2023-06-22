@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Matt Crump">
-<meta name="dcterms.date" content="2023-06-21">
-<meta name="description" content="Testing out some strategies for writing assistant functions from GPT">
+<meta name="dcterms.date" content="2023-06-22">
+<meta name="description" content="This is a scratchpad post. I would like better grammar checking for documents that I write in Rstudio, and I know that I could cobble something together using the OpenAI API. I’m using this post to do the cobbling, which may not result in a working solution. Fingers crossed.">
 
-<title>crumplab - Prompts for editing text with GPT</title>
+<title>crumplab - Scratchpad: Grammar checking Quarto documents with the OpenAI API</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,13 +73,13 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="crumplab - Prompts for editing text with GPT">
-<meta property="og:description" content="Testing out some strategies for writing assistant functions from GPT">
-<meta property="og:image" content="https://crumplab.com/blog/667_GPT_editing/cover.jpg">
+<meta property="og:title" content="crumplab - Scratchpad: Grammar checking Quarto documents with the OpenAI API">
+<meta property="og:description" content="This is a scratchpad post. I would like better grammar checking for documents that I write in Rstudio, and I know that I could cobble something together using the OpenAI API. I’m using this post to do the cobbling, which may not result in a working solution. Fingers crossed.">
+<meta property="og:image" content="https://crumplab.com/blog/666_gpt_grammar/cover.jpg">
 <meta property="og:site-name" content="crumplab">
-<meta name="twitter:title" content="crumplab - Prompts for editing text with GPT">
-<meta name="twitter:description" content="Testing out some strategies for writing assistant functions from GPT">
-<meta name="twitter:image" content="https://crumplab.com/blog/667_GPT_editing/cover.jpg">
+<meta name="twitter:title" content="crumplab - Scratchpad: Grammar checking Quarto documents with the OpenAI API">
+<meta name="twitter:description" content="This is a scratchpad post. I would like better grammar checking for documents that I write in Rstudio, and I know that I could cobble something together using the OpenAI API. I’m using this post to do the cobbling, which may not result in a working solution. Fingers crossed.">
+<meta name="twitter:image" content="https://crumplab.com/blog/666_gpt_grammar/cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -179,9 +179,16 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#simple-pre-fab-prompt-approaches" id="toc-simple-pre-fab-prompt-approaches" class="nav-link active" data-scroll-target="#simple-pre-fab-prompt-approaches">Simple pre-fab prompt approaches</a></li>
-  <li><a href="#custom-one-off-prompts" id="toc-custom-one-off-prompts" class="nav-link" data-scroll-target="#custom-one-off-prompts">Custom one-off prompts</a></li>
-  <li><a href="#writing-analysis-and-rephrasing-prompts" id="toc-writing-analysis-and-rephrasing-prompts" class="nav-link" data-scroll-target="#writing-analysis-and-rephrasing-prompts">Writing analysis and rephrasing prompts</a></li>
+  <li><a href="#mission" id="toc-mission" class="nav-link active" data-scroll-target="#mission">Mission</a></li>
+  <li><a href="#search-the-web" id="toc-search-the-web" class="nav-link" data-scroll-target="#search-the-web">Search the web</a>
+  <ul class="collapse">
+  <li><a href="#gramr" id="toc-gramr" class="nav-link" data-scroll-target="#gramr">gramr</a></li>
+  </ul></li>
+  <li><a href="#make-chatgpt-do-it" id="toc-make-chatgpt-do-it" class="nav-link" data-scroll-target="#make-chatgpt-do-it">Make ChatGPT do it?</a>
+  <ul class="collapse">
+  <li><a href="#writing-the-function-that-i-want-with-gpt" id="toc-writing-the-function-that-i-want-with-gpt" class="nav-link" data-scroll-target="#writing-the-function-that-i-want-with-gpt">Writing the function that I want with GPT?</a></li>
+  </ul></li>
+  <li><a href="#write-it-myself" id="toc-write-it-myself" class="nav-link" data-scroll-target="#write-it-myself">Write it myself</a></li>
   </ul>
 </nav>
     </div>
@@ -190,12 +197,12 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prompts for editing text with GPT</h1>
+<h1 class="title">Scratchpad: Grammar checking Quarto documents with the OpenAI API</h1>
 </div>
 
 <div>
   <div class="description">
-    Testing out some strategies for writing assistant functions from GPT
+    This is a scratchpad post. I would like better grammar checking for documents that I write in Rstudio, and I know that I could cobble something together using the OpenAI API. I’m using this post to do the cobbling, which may not result in a working solution. Fingers crossed.
   </div>
 </div>
 
@@ -212,7 +219,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 21, 2023</p>
+      <p class="date">June 22, 2023</p>
     </div>
   </div>
   
@@ -222,68 +229,139 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 </header>
 
-<p>In the past few posts, I’ve been playing around with the OpenAI API in RStudio. This will probably be a short post testing prompts for editing text.</p>
-<section id="simple-pre-fab-prompt-approaches" class="level2">
-<h2 class="anchored" data-anchor-id="simple-pre-fab-prompt-approaches">Simple pre-fab prompt approaches</h2>
-<p>I wrote <a href="https://crumplab.com/blog/770_rstudio_gpt/">some addins</a> for RStudio that send text back and forth to OpenAI from the RStudio editor.</p>
-<p>One of the addins is called <code>gpt_edit</code>. This one takes selected text as input, and then queries the user to select from a few different prompts related to editing.</p>
-<p>Two of the prompt choices are:</p>
-<ol type="1">
-<li><p>You are an editorial writing assistant. Edit the text for spelling and grammar. Don’t change the meaning or the words.</p></li>
-<li><p>You are an editorial writing assistant. Your task is to edit the content you receive for improved clarity, flow, and reduced word count. You should respect the original style of the input text and use an active voice.</p></li>
-</ol>
-<p>And, one of the prompt choices is to write your own prompt.</p>
-<p>I’ve found these prompts generally useful. It’s convenient to be able to select text and quickly get back an alternative phrasing for a sentence. However, I’m not always impressed with the outputs (currently using gpt-3.5-turbo).</p>
+<p>Yesterday I copy-edited and lightly revised the first chapter in my <a href="https://crumplab.com/cognition/textbook/">intro to cognition textbook</a>. Throughout the process I occasionally used the <a href="https://crumplab.com/gptaddin/">RStudio addins</a> I’ve been toying around with to get <a href="https://crumplab.com/blog/667_GPT_editing/">copy-editing suggestions</a> from LLMs (via the OpenAI API). I’ve found the copy-editing suggestions sometimes OK, and even usable on occasion. What I’ve found most useful so far is the ability to quickly generate an alternate version of what I wrote. Usually the alternative isn’t what I’m aiming for, but looking at something that I don’t want seems to be somewhat helpful in moving me toward what I do want.</p>
+<p>In any case, even after I spent a day closely reading and editing that chapter, I still found little issues throughout (and of course improving writing is a never-ending journey anyways). For example, I know that I am prone to accidentally omit words in sentences. I’m not sure if my bluetooth keyboard is messed up, or what is going on, but it happens frequently enough that I know I need to look out for it. At the same time, the omissions are still rare enough that they are hard to detect. Another kind of error that my spell-checker doesn’t identify are correctly spelled words that are incorrectly spelled in context (e.g., missing an s, or plural where it shouldn’t be).</p>
+<p>I’m doing my writing in RStudio most of the time, and it only has a spell-checker that I’m not thrilled about. Unfortunately, there is no baked in grammar checker. I could copy text from my quarto documents into other word-processors and use their grammar checking, and sometimes I do that. Maybe I should do it more. It would be nice to have a copy-editor system inside RStudio so I don’t have to bounce in and out.</p>
+<p>Using the addins I’ve made already it’s easy to select a sentence or paragraph and have ChatGPT return an edited version, but I’d like something more systematic that I would run at the end of a writing process. Something that would go through each sentence and do checks. Maybe something similar in form factor to the Word grammar checker. TBH, I’m not sure exactly what I’m looking for, and I could be looking for different things.</p>
+<p>One thing I would like is a function to find sentences with missing words and fill them in. Ideally, this would be supervised by me, so the function would need to show me the sentences and its proposals.</p>
+<p>In any case, I should get on with it.</p>
+<section id="mission" class="level2">
+<h2 class="anchored" data-anchor-id="mission">Mission</h2>
+<p>To get some programmatic grammar checking done in RStudio.</p>
 </section>
-<section id="custom-one-off-prompts" class="level2">
-<h2 class="anchored" data-anchor-id="custom-one-off-prompts">Custom one-off prompts</h2>
-<p>Another tack I’ve taken is writing one-off prompts for particular sections of text. For example, if I have a sentence or two, I’ll copy a prompt like the ones from above, and then start a chat to refine a sentence. It might go something like this:</p>
-<hr>
-<p>You are an editorial writing assistant. Your task is to edit the content you receive for improved clarity, flow, and reduced word count. You should respect the original style of the input text and use an active voice.</p>
-<blockquote class="blockquote">
-<p>Understood! Please provide me with the content you would like me to edit.</p>
-</blockquote>
-<p>Another tack I’ve taken is writing one-off prompts for particular sections of text. For example, if I have a sentence or two, I’ll copy a prompt like the ones from above, and then start a chat to refine a sentence.</p>
-<blockquote class="blockquote">
-<p>One approach I’ve taken is to create specific prompts for each section of text I am working on. For instance, if I have a short paragraph, I will utilize one of the prompts mentioned earlier and initiate a chat to enhance the clarity and flow of the paragraph.</p>
-</blockquote>
-<p>Reduce the word count and enhance clarity</p>
+<section id="search-the-web" class="level2">
+<h2 class="anchored" data-anchor-id="search-the-web">Search the web</h2>
+<p>I haven’t done this too much yet…But, I found something that might work without having to use OpenAI.</p>
+<section id="gramr" class="level3">
+<h3 class="anchored" data-anchor-id="gramr">gramr</h3>
+<p>This looks promising:</p>
+<p><a href="https://github.com/jasdumas/gramr" class="uri">https://github.com/jasdumas/gramr</a></p>
+<p>It’s alright, and I might return to this. Bonus points for including a shiny app! A wrapper to the write-good linter system.</p>
+</section>
+</section>
+<section id="make-chatgpt-do-it" class="level2">
+<h2 class="anchored" data-anchor-id="make-chatgpt-do-it">Make ChatGPT do it?</h2>
+<p>This is where things get scratchpaddy, as I’m about to spam my own blog with a ChatGPT convo.</p>
+<p>Me: List R packages with addins for grammar checking in RStudio.</p>
 <div class="blockquote">
-<p>To reduce the word count and enhance clarity, we can make the sentence more concise and eliminate any unnecessary phrasing. Here is a possible edit:</p>
-<p>“I create specific prompts for each section of text, such as a short paragraph, to refine it. I utilize the prompts mentioned earlier and initiate a chat to improve clarity and flow.”</p>
+<p>Sure, here are a few R packages with addins for grammar checking in RStudio:</p>
+<ol type="1">
+<li><p><code>lintr</code> - This package provides a set of syntax and style checking addins for R scripts.</p></li>
+<li><p><code>styler</code> - It provides code formatting with R Studio Addins.</p></li>
+<li><p><code>textmineR</code> -It provides a function that corrects grammar in Rmarkdown documents.</p></li>
+<li><p><code>goodpractice</code> - It provides code advice and style checking with an R-studio Addin.</p></li>
+</ol>
+<p>Hope this helps!</p>
 </div>
-<p>Rephrase and describe this process without using the word I.</p>
-<blockquote class="blockquote">
-<p>A process for refining text involves creating specific prompts for each section of the content to be edited. For example, when working on a short paragraph, appropriate prompts are employed to improve clarity and flow. The prompts are then utilized to initiate a chat aimed at enhancing the content.</p>
-</blockquote>
-<p>Shorten</p>
-<blockquote class="blockquote">
-<p>To refine text, specific prompts are created for each section. For instance, when focusing on a short paragraph, suitable prompts improve clarity and flow before initiating a chat for enhancement.</p>
-</blockquote>
+<p>Which function in textmineR provides grammar checking for Rmarkdown documents?</p>
+<div class="blockquote">
+<p>The <code>textmineR</code> package provides a function called <code>grammar_check()</code>, which can be used for grammar checking in Rmarkdown documents.</p>
+<p>To use this function, you need to specify the path to the Rmarkdown document using the <code>file</code> argument. For example:</p>
+<pre><code>library(textmineR)
+
+# Set the path to the Rmd file
+file &lt;- "/path/to/file.Rmd"
+
+# Run the grammar check
+grammar_check(file)</code></pre>
+<p>Running this function will provide a report on any grammar errors found in the Rmarkdown document.</p>
+</div>
+<p>This function does not exist in that package</p>
+<div class="blockquote">
+<p>I apologize for the confusion earlier. You are right that the <code>grammar_check()</code> function does not exist in the <code>textmineR</code> package.</p>
+<p>In fact, as far as I know, there isn’t any R package that provides a built-in function for checking grammar in Rmarkdown documents. However, there are some other tools that you can use for this purpose.</p>
+<p>One such tool is <code>after_the_deadline</code>, which is an open source software that provides a grammar checking service. You can use its API to directly call the grammar checking service from R and obtain the results. Here’s an example code that shows how to use <code>after_the_deadline</code> package for grammar checking in Rmarkdown:</p>
+<pre><code>library(httr)
+
+# Set the text of your Rmarkdown to a variable
+text &lt;- "This is an example sentence with some grammar errors. They included: sentence fragment, passive voice, and clichés."
+
+# Use httr package to call the after-the-deadline API
+# and get the grammar check results
+resp &lt;- POST(url = "http://service.afterthedeadline.com/checkDocument",
+             body = list(data = text, key=""), 
+             encode = "form", accept("text/xml"))
+
+# Extract the grammar check results
+xml &lt;- content(resp, as = "text")
+grammar_errors &lt;- xpathSApply(doc = xml, path = "//message[@type='grammar']", xmlValue)
+
+# Print the errors
+print(grammar_errors)</code></pre>
+<p>This should print out any grammar errors found in the text of your Rmarkdown file. Note that <code>key</code> argument should be set to your After the Deadline access token, which you can obtain by registering at https://automattic.com/keys/after-the-deadline/.</p>
+<p>Again, my apologies for the mistake earlier, and I hope this helps!</p>
+</div>
+<p>That service appears to be real, but also defunct.</p>
+<section id="writing-the-function-that-i-want-with-gpt" class="level3">
+<h3 class="anchored" data-anchor-id="writing-the-function-that-i-want-with-gpt">Writing the function that I want with GPT?</h3>
+<p>Write an R function that uses the OpenAI API to systematically grammar check each sentence of an R Markdown document.</p>
+<div class="blockquote">
+<p>Sure! Here’s an R function that uses the OpenAI API to systematically grammar check each sentence of an R Markdown document:</p>
+<pre><code>grammar_check &lt;- function(file_path, api_key) {
+  # Read in the R Markdown file
+  rmd_file &lt;- readLines(file_path)
+  
+  # Parse the Rmd file into individual sentences
+  require(tokenizers)
+  sentences &lt;- unlist(tokenize_sentences(rmd_file))
+  
+  # Loop through each sentence and check for grammar errors
+  require(httr)
+  for (i in seq_along(sentences)) {
+    sentence &lt;- gsub("[[:punct:]]", "", sentences[i])
+    response &lt;- httr::POST(
+      "https://api.openai.com/v1/engines/grammar-correct/grammar-correct",
+      add_headers(`Content-Type` = "application/json", `Authorization` = paste("Bearer",api_key)),
+      body = list(data = sentence)
+    )
+    result &lt;- httr::content(response, "parsed")
+    if (result$data$corrections_count &gt; 0) {
+      # Print sentence with corrections
+      corrected_sentence &lt;- paste(result$data$corrections$corrected_sentence, collapse = "")
+      cat(sprintf("[%d] [Line %d] %s --&gt; %s\n",
+                  i,
+                  as.vector(grep(sentences[i], rmd_file, ignore.case = TRUE)),
+                  sentences[i],
+                  corrected_sentence))
+    }
+  }
+}</code></pre>
+<p>The function takes two arguments: <code>file_path</code> is the path to the R Markdown file to be checked and <code>api_key</code> is your OpenAI API key.</p>
+<p>The function first reads in the R Markdown file using <code>readLines()</code> and then uses <code>tokenize_sentences()</code> function from the <code>tokenizers</code> package to parse the file into individual sentences.</p>
+<p>The function then loops through each sentence and calls the OpenAI API to check for grammar errors. If any errors are found, the function prints the original sentence and the corrected sentence using <code>cat()</code> function.</p>
+<p>Note that this function requires the user to obtain an API key from OpenAI by signing up at https://beta.openai.com/signup/.</p>
+<p>I hope this helps!</p>
+</div>
+<p>This function is somewhat sensible, it looks like it made up an API endpoint that doesn’t exist.</p>
+<p>TLDR, I also tried to get it to write a Shiny App, but there was so much cludge that I’m going to try something else.</p>
 </section>
-<section id="writing-analysis-and-rephrasing-prompts" class="level2">
-<h2 class="anchored" data-anchor-id="writing-analysis-and-rephrasing-prompts">Writing analysis and rephrasing prompts</h2>
-<p>As an aside, in my experience writing is a thinking process. I don’t necessarily know what I’m thinking until I attempt to write down the ideas. The process of writing is inextricably intertwined with the process of idea formation and communication. Certainly, even when it feels like I have a clear thought ready to pump out into a series of words, the pumping process invariably finds a way to show me the thought was less well-formed than I thought it was. Editing plays an important role in this process. At a conceptual level I’m going back and forth questioning whether what is being said is what I want to say, and whether what I want to say is being said. Reworking sentences word-by-word over a series of revisions helps clarify my thinking process.</p>
-<p>Now that I’ve spent some time writing with language assistance from an LLM, one background concern is how these tools may impact my thinking process. Am I concerned? Not particularly at this point. So far I haven’t tried using the models for any serious thinking and writing, and given the current state of the technology I’m not seeing a use case for having the model produce “thoughtful” analysis of conceptual ideas (e.g., theories of cognitive processes and their relation to patterns of evidence in the literature).</p>
-<p>I also haven’t been overwhelmingly impressed with editorial suggestions for improving my own writing, but I have found usable results occasionally. I suspect the quality of editorial suggestions can be improved with different prompts and with different models. Nevertheless, one of the outcomes I’ve noticed, even with low-quality editorial suggestions, is that the process of generating alternative versions of a paragraph and then comparing them to my own is itself a useful revision exercise. Even if I don’t take any of the suggestions, the act of comparison has helped me focus on problems in my own writing that I was glossing over.</p>
-<p>This morning I was testing out a longer prompt involving a to-be-edited sentence, a critical analysis of the sentence structure, and a suggested rephrasing. It is possible to provide a series of examples to “tune” the model. Here’s an example prompt:</p>
-<hr>
-<p>You are an AI writing assistant. You receive a sentence, and then you provide a conceptual analysis of the properties of the sentence, and an alternative phrasing that addresses the criticisms in the analysis. Follow the examples between the ***.</p>
-<hr>
-<p>Sentence: Although there is considerable evidence suggesting that self-referencing can improve memorability, the cognitive processes responsible are not as well understood.</p>
-<p>Analysis: This sentence expresses two important ideas using an irrelevant contrast that makes the sentences nonsensical. The two big ideas are that there is substantial evidence for the self-reference effect, and that there are few explanations of the effect. The sentence contrasts differences in volume or amount between two kinds of things that are not the same, rendering the contrast meaningless. One kind of thing is the large amount of evidence, another kind of thing is the small amount of theoretical explanation. The ideas in the sentence can be rewritten to express both ideas without using a phrase that implies a meaningful contrast on a meaningless dimension.</p>
-<p>Rephrase: There is considerable evidence showing that self-referencing can improve memorability. Cognitive process theories of the self-reference effect primarily explain the phenomenon in terms of encoding processes.</p>
-<hr>
-<p>Sentence: Evidence for the self-reference effect on memorability is plentiful, but the cognitive processes that contribute to it remain uncertain.</p>
-<p>Analysis: This sentence expresses two related ideas, but fails to connect them sufficiently. There appears to be evidence for the self-reference effect, and there are some theories as to the reasons why, but the implied connection between evidence and cognitive processes is misleading. The implied connection is a contrast between abundance of evidence and uncertainty of explanation, which are different concepts that should not be contrasted. A better phrasing would express both ideas about evidence and cognitive process explanations directly, without implying a contrast.</p>
-<p>Rephrase: Evidence for the self-reference effect on memories is abundant and cognitive processes theories point to encoding processes for explanation.</p>
-<hr>
-<p>Sentence: So, although research into cognition has been ongoing across centuries and much knowledge has been generated, there are many perspectives and unresolved issues that prevent widely agreed upon answers to questions about what cognition is and how it works.</p>
-<p>Analysis: This sentence is made up of run-on, Compound, and incomplete sentences adjoined together. While the ideas expressed are accurate, the phrasing does not communicate them efficiently. Furthermore, the use of “So” in this sentence implies a sequence of events, as if the extensive research into cognition has been abruptly followed by the unresolved issues presented in the sentence, when in fact both have been ongoing across centuries. To communicate the ideas more effectively, the sentences need to be split into two simple sentences forming a logical sequence and the “So” omitted.</p>
-<p>Rephrase: Research into cognition has been ongoing for centuries and has generated much knowledge. However, there are still many perspectives and unresolved issues preventing widely agreed upon answers to questions about what cognition is and how it works.</p>
-<hr>
-<p>I generated the first example and the davinci model generated the last two (with some further editing by me). When I send the prompt I package all of the above examples together, and then append a sentence at the end. The model responds with an analysis and a rephrased sentence.</p>
-<p>I’m not sure yet if this kind of prompting will result in tangibly improved sentences. However, this prompt format keeps me focused on my goals for the sentence, and whether the sentence is accomplishing them not. And that seems good.</p>
+</section>
+<section id="write-it-myself" class="level2">
+<h2 class="anchored" data-anchor-id="write-it-myself">Write it myself</h2>
+<p>I ended up copying the shiny app from gramr and rewriting it to produce a really basic shiny interface.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Screenshot 2023-06-22 at 2.29.25 PM.png" class="quarto-discovered-preview-image img-fluid" width="1201"></p>
+</div>
+</div>
+<p>It’s bare bones right now, but it is working a little bit. Here is what it is doing:</p>
+<ol type="1">
+<li>Parse a text document into individual sentences.</li>
+<li>The shiny app has a button to click through each sentence.</li>
+<li>The submit button sends the sentence to openAI for a check</li>
+<li>I ask the model (davinci in this case) to return the sentence in html with changed words highlighted in red. It does an OK job of that, but doesn’t always get it right. Actually, it’s pretty bad. It will highlight lots of random stuff that wasn’t changed.</li>
+</ol>
+<p>I tried using this to re-edit chapter one from the textbook. This amounts to me reading each sentence one by one in a different window, which is actually pretty useful for finding mistakes. I’m not sure how useful ChatGPT is being here. But, sometimes I press the submit button to see what happens. This is pretty much a FMBM (For me, By me) grammar checker at this point. Oh well. Hopefully this combination of tools will help me spot those pesky typos and missing words.</p>
 
 
 </section>
