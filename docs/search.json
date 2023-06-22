@@ -2105,5 +2105,12 @@
     "title": "Scratchpad: Grammar checking Quarto documents with the OpenAI API",
     "section": "Write it myself",
     "text": "Write it myself\nI ended up copying the shiny app from gramr and rewriting it to produce a really basic shiny interface.\n\n\n\n\n\nIt’s bare bones right now, but it is working a little bit. Here is what it is doing:\n\nParse a text document into individual sentences.\nThe shiny app has a button to click through each sentence.\nThe submit button sends the sentence to openAI for a check\nI ask the model (davinci in this case) to return the sentence in html with changed words highlighted in red. It does an OK job of that, but doesn’t always get it right. Actually, it’s pretty bad. It will highlight lots of random stuff that wasn’t changed.\n\nI tried using this to re-edit chapter one from the textbook. This amounts to me reading each sentence one by one in a different window, which is actually pretty useful for finding mistakes. I’m not sure how useful ChatGPT is being here. But, sometimes I press the submit button to see what happens. This is pretty much a FMBM (For me, By me) grammar checker at this point. Oh well. Hopefully this combination of tools will help me spot those pesky typos and missing words."
+  },
+  {
+    "objectID": "blog/666_gpt_grammar/index.html#updates",
+    "href": "blog/666_gpt_grammar/index.html#updates",
+    "title": "Scratchpad: Grammar checking Quarto documents with the OpenAI API",
+    "section": "Updates",
+    "text": "Updates\nAfter more fiddling around, I’m getting closer to something that is producing usable results.\n\n\n\n\n\nThe LLM was utterly unreliable at letting me know if it made any changes to the text. It’s a much better idea to compare the input text with the edited text with reliable functions, such as those from the diffobj library. I still need to massage the diffobj outputs for the shiny app, but it is working well enough for me to quickly look at the changes that the LLM is doing, and then decide whether or not to implement them."
   }
 ]

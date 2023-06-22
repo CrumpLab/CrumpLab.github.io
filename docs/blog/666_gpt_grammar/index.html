@@ -189,6 +189,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <li><a href="#writing-the-function-that-i-want-with-gpt" id="toc-writing-the-function-that-i-want-with-gpt" class="nav-link" data-scroll-target="#writing-the-function-that-i-want-with-gpt">Writing the function that I want with GPT?</a></li>
   </ul></li>
   <li><a href="#write-it-myself" id="toc-write-it-myself" class="nav-link" data-scroll-target="#write-it-myself">Write it myself</a></li>
+  <li><a href="#updates" id="toc-updates" class="nav-link" data-scroll-target="#updates">Updates</a></li>
   </ul>
 </nav>
     </div>
@@ -362,6 +363,16 @@ print(grammar_errors)</code></pre>
 <li>I ask the model (davinci in this case) to return the sentence in html with changed words highlighted in red. It does an OK job of that, but doesn’t always get it right. Actually, it’s pretty bad. It will highlight lots of random stuff that wasn’t changed.</li>
 </ol>
 <p>I tried using this to re-edit chapter one from the textbook. This amounts to me reading each sentence one by one in a different window, which is actually pretty useful for finding mistakes. I’m not sure how useful ChatGPT is being here. But, sometimes I press the submit button to see what happens. This is pretty much a FMBM (For me, By me) grammar checker at this point. Oh well. Hopefully this combination of tools will help me spot those pesky typos and missing words.</p>
+</section>
+<section id="updates" class="level2">
+<h2 class="anchored" data-anchor-id="updates">Updates</h2>
+<p>After more fiddling around, I’m getting closer to something that is producing usable results.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="diff.png" class="img-fluid" width="1782"></p>
+</div>
+</div>
+<p>The LLM was utterly unreliable at letting me know if it made any changes to the text. It’s a much better idea to compare the input text with the edited text with reliable functions, such as those from the <code>diffobj</code> library. I still need to massage the diffobj outputs for the shiny app, but it is working well enough for me to quickly look at the changes that the LLM is doing, and then decide whether or not to implement them.</p>
 
 
 </section>
