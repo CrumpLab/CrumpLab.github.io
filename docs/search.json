@@ -2112,5 +2112,12 @@
     "title": "Scratchpad: Grammar checking Quarto documents with the OpenAI API",
     "section": "Updates",
     "text": "Updates\nAfter more fiddling around, I’m getting closer to something that is producing usable results.\n\n\n\n\n\nThe LLM was utterly unreliable at letting me know if it made any changes to the text. It’s a much better idea to compare the input text with the edited text with reliable functions, such as those from the diffobj library. I still need to massage the diffobj outputs for the shiny app, but it is working well enough for me to quickly look at the changes that the LLM is doing, and then decide whether or not to implement them."
+  },
+  {
+    "objectID": "Apps.html#gptaddin",
+    "href": "Apps.html#gptaddin",
+    "title": "Apps",
+    "section": "gptaddin",
+    "text": "gptaddin\nAddins and shiny app for sending text to LLMs at OpenAI. The addins are focused on writing assistance tools. The shiny app has a grammar checker. This is an experimental package for personal use that may be helpful as a reference for others to build their own similar tools."
   }
 ]
