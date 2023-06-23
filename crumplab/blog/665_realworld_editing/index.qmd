@@ -21,7 +21,7 @@ I authored the textbook in RStudio as a plain text quarto document. RStudio has 
 
 I have several writing problems that are hard for me to detect, especially when the writing is fresh. I find the subjective experience of not-seeing-my-mistakes to be similar to the phenomena of repetition blindness. For example, what does the sentence in this picture say?
 
-```{r, eval="FALSE"}
+```{r, echo=FALSE}
 knitr::include_graphics("bird.gif")
 ```
 
@@ -37,7 +37,7 @@ Yesterday I went all the way through the first chapter of my textbook and used L
 
 Here's a screenshot of the Shiny app in action editing a paragraph from this post.
 
-```{r, eval="FALSE"}
+```{r, echo=FALSE}
 knitr::include_graphics("basic_sg.png")
 ```
 The prompt in this case is very simple:
@@ -48,7 +48,7 @@ The model returns a new version of the text, and I use the `diffobj` library to 
 
 Here's the same text run through a different model. This time it is slightly more heavy-handed, but the suggestions are fine to me. The suggestions will also change slightly each time, even if the input text is the same. This isn't necessarily a problem, as there are lots of ways to fix my bad writing. 
 
-```{r, eval="FALSE"}
+```{r, echo=FALSE}
 knitr::include_graphics("basic_sg_davinci.png")
 ```
 
@@ -65,7 +65,7 @@ I added a couple prompts that offer rephrasing, rather than basic spelling and g
 
 Here's a screenshot of the same paragraph run through an "improved clarity" prompt. 
 
-```{r, eval="FALSE"}
+```{r, echo=FALSE}
 knitr::include_graphics("clarity.png")
 ```
 
