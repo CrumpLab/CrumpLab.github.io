@@ -2146,7 +2146,7 @@
     "href": "blog/665_realworld_editing/index.html#chapter-2",
     "title": "Observations on using LLMs for checking grammar, etc.",
     "section": "Chapter 2",
-    "text": "Chapter 2\nI’m about to spend the afternoon editing another chapter, and I may update this post with lessons learned as I do that."
+    "text": "Chapter 2\nI’m about to spend the afternoon editing another chapter, and I may update this post with lessons learned as I do that.\nI started listenting to the new Aphex Twin album while editing. I’m not sure I’ll say much more, but I may copy in screen shots to note some behavior.\nI used the basic spell check prompt, and got back a whole whack of suggestions. This feels like the kind of thing I see with an “improved clarity” prompt, even though I was asking for minimal changes.\n\n\n\n\n\nAnother point of caution is inline citations. Sometimes the LLM will respect citation keys inside square brackets, sometimes it will completely remove them, and sometimes it will fill in a reference. Another reason to stay vigilant.\nI’m getting a noticeably high frequency of suggestions to write sentences with a colon in them.\nThe screenshot shows an example of chatty behavior. The suggested edits contain the phrase: “Here’s the edited text:”. It’s hard to fully suppress the chatbot flair from popping through. This happens occasionally using the gpt-3.5-turbo model. I haven’t seen this with davinci, which isn’t set up to be a chat bot.\n\n\n\n\n\nI finished editing the second chapter. I found the LLM-assisted-stochastic-and-sometimes-totally-wacky spell-checker to be useful. I’ll use it again for chapter 3. 9/10 stars."
   },
   {
     "objectID": "blog/665_realworld_editing/index.html#is-it-working",
