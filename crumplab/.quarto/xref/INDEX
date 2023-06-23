@@ -199,5 +199,8 @@
   },
   "blog/666_gpt_grammar/index.qmd": {
     "index.html": "e7d88c2c"
+  },
+  "blog/665_realworld_editing/index.qmd": {
+    "index.html": "ab9cfbc4"
   }
 }

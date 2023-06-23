@@ -15,7 +15,113 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.3.258</generator>
-<lastBuildDate>Thu, 22 Jun 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 23 Jun 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Observations on using LLMs for checking grammar, etc.</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/665_realworld_editing/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/cover.jpg" class="quarto-discovered-preview-image img-fluid" width="540"></p>
+</div>
+</div>
+<section id="preamble" class="level2">
+<h2 class="anchored" data-anchor-id="preamble">Preamble</h2>
+<p>Across several recent posts I’ve been putting LLMs to the test as writing assistants. I’m doing this by coding <a href="https://crumplab.com/gptaddin/">add-ins and a shiny app for R Studio</a>, where I do most of my writing. I’m still in the “trying-stuff-out” mode, and this post is another outlet for experimentation. So far I’ve been equally underwhelmed and impressed by LLMs as writing assistants.</p>
+<p>One real-world task that I’d like to accomplish this summer is to copy edit and generally revise/update my <a href="https://crumplab.com/cognition/textbook/">intro to cognitive psychology textbook</a>. I know there are lots of typos, missing words, and bad phrasing that can be improved in there, and someone needs to make it better. All of the problems are also my fault because I wrote it.</p>
+<p>I authored the textbook in RStudio as a plain text quarto document. RStudio has an OK spell-checker, but I find it not great (mainly because I haven’t taken the time to cultivate my own dictionary). RStudio does not have a grammar checker. I’ve tried some grammar checking solutions, but did not find them suitable for my problems.</p>
+<p>I have several writing problems that are hard for me to detect, especially when the writing is fresh. I find the subjective experience of not-seeing-my-mistakes to be similar to the phenomena of repetition blindness. For example, what does the sentence in this picture say?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bird.gif"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/bird.gif" class="img-fluid"></p>
+</div>
+</div>
+<p>If you read this and didn’t notice the grammatical mistake, then you just experienced repetition blindness. For example, the above sentence says, “the” twice: it should say “A bird in the hand”, but it says, “A bird in the the hand”. When I write and look at what I write, I get blindness for days. I won’t notice words that are missing, repeated words, or typos, etc. The writer’s blindness can continue even after I painstakingly re-read and revise my writing. Aaaagghh. I feel the pain.</p>
+<p>So, I’ve been testing the waters with LLMs as writing assistants. I want something that is fast and easy to use. Perhaps, similar to the spelling and grammar checker in Word. And, I want the suggested edits to fix the basic problems (at a minimum), and if it can do more than that (e.g., suggest better phrasing), great.</p>
+</section>
+<section id="my-experience-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="my-experience-so-far">My experience so far</h2>
+<p>Yesterday I went all the way through the first chapter of my textbook and used LLMs as a part of my editing process. After noticing a few major issues and fixing them, I’m now getting decent results with a shiny UI to mediate the process for me.</p>
+<section id="basic-spelling-and-grammar" class="level3">
+<h3 class="anchored" data-anchor-id="basic-spelling-and-grammar">Basic spelling and grammar</h3>
+<p>Here’s a screenshot of the Shiny app in action editing a paragraph from this post.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"basic_sg.png"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/basic_sg.png" class="img-fluid" width="1332"></p>
+</div>
+</div>
+<p>The prompt in this case is very simple:</p>
+<p>“You are an editorial writing assistant. Edit the text for spelling and grammar. Don’t change the meaning of the words.”</p>
+<p>The model returns a new version of the text, and I use the <code>diffobj</code> library to compare the original text with the suggested text. This provides a quick visual tool to help me see what has been changed. If I like the changes, then I can copy it into my document. The gpt-3.5-turbo and davinci models give pretty good results, but the other ones frequently go off the rails.</p>
+<p>Here’s the same text run through a different model. This time it is slightly more heavy-handed, but the suggestions are fine to me. The suggestions will also change slightly each time, even if the input text is the same. This isn’t necessarily a problem, as there are lots of ways to fix my bad writing.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"basic_sg_davinci.png"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/basic_sg_davinci.png" class="img-fluid" width="1345"></p>
+</div>
+</div>
+<p>I want to stress the importance of accurate visual highlighting. Before I used a reliable function to compare differences with visual highlighting, I tried using prompts to get the LLM to assess the original text and modified text and report whether or not it made any changes, or to have it highlight the changes using HTML. This is something it may be able to do well (e.g., GPT-4), but the models I have access to were totally unreliable. I’d get edits back that said no changes were made, but there would be several small changes throughout that were hard to spot. The solution was to properly diff the original and modified text.</p>
+</section>
+</section>
+<section id="rephrasing" class="level2">
+<h2 class="anchored" data-anchor-id="rephrasing">Rephrasing</h2>
+<p>I added a couple prompts that offer rephrasing, rather than basic spelling and grammar. The prompts are:</p>
+<ul>
+<li><p>Reduced word count: “You are an editorial writing assistant. Edit the text to reduce word count without changing the meaning.”</p></li>
+<li><p>Improved clarity: “You are an editorial writing assistant. Edit the text to improve clarity and flow.”</p></li>
+</ul>
+<p>Here’s a screenshot of the same paragraph run through an “improved clarity” prompt.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"clarity.png"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/clarity.png" class="img-fluid" width="1339"></p>
+</div>
+</div>
+<p>Now there are many more words changed, and not all for the better. I would not wholesale copy paste this into my document, but I might crib a few of the suggested changes.</p>
+<p>Especially with text that contains a lot of domain-specific detail, like the content in my cognitive psych textbook, it is necessary to be hyper-vigilant and look closely at all of the changes to see if they preserve original writing intentions.</p>
+</section>
+<section id="chapter-2" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2">Chapter 2</h2>
+<p>I’m about to spend the afternoon editing another chapter, and I may update this post with lessons learned as I do that.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://crumplab.com/blog/665_realworld_editing/index.html</guid>
+  <pubDate>Fri, 23 Jun 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/665_realworld_editing/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Scratchpad: Grammar checking Quarto documents with the OpenAI API</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -7314,211 +7420,6 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
   <guid>https://crumplab.com/blog/post_886_10_14_22_quartoProjects/index.html</guid>
   <pubDate>Fri, 14 Oct 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/imgs/Quarto-1.png" medium="image" type="image/png" height="75" width="144"/>
-</item>
-<item>
-  <title>Blogging with Quarto</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/post_887_8_25_22_quartoblog/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-</style>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>Last knit: 2023-06-07</p>
-<p>I often assign “blogging” as an optional way for students to engage in course material. There are lots of ways to get a blog up and running on the internet, and my preference is to suggest that students adopt and learn R Markdown and RStudio for their blogging workflow. Many of my students are unfamiliar with computer programming in R, so learning how to blog with R can be a useful gateway to computational skills.</p>
-<p>R Studio now comes packaged with <a href="https://quarto.org">Quarto</a>, which provides yet another blogging workflow. This post is intended for my students as a quick guide to setting up a quarto blog.</p>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Here’s an outline of what is in store. You will need to download some free software to your computer and make a free account on Github.com. After the software is downloaded you will be able to open a blogging template (with all the files you need to get started), edit and make new posts, and preview the blog on your computer. Finally, we’ll discuss how to share the blog on the internet. At the end, you should be able to make your own new blog posts using this workflow. Last, you do not need to know how to program in R to do this.</p>
-<p>I intend to make a video overview and put it here, but the text-based instructions should be enough to get you started as well…here’s the video.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YoKjBcuUP0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="get-the-software-you-need" class="level2">
-<h2 class="anchored" data-anchor-id="get-the-software-you-need">Get the software you need</h2>
-<ol type="1">
-<li>Sign up for a free account at <a href="https://github.com" class="uri">https://github.com</a>. This a website for sharing open-source software, but it can also be used to serve your blog as a website for free.</li>
-<li><a href="https://desktop.github.com">Download Github Desktop</a> and install it on your machine. This should install the version control software git on your system, and you can use Github Desktop to easily push your blog from your local computer so that it can be viewed on Github.com.</li>
-<li><a href="https://cran.rstudio.com">Download R</a> and install it on your machine. R is a programming language capable of many things, and it needs to be on your machine before you can run R Studio.</li>
-<li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download R Studio Desktop</a> and install it on your machine. R Studio is called an “IDE” or integrated development environment, that you can use to write your blog with quarto.</li>
-</ol>
-</section>
-<section id="make-a-quarto-blog-project" class="level2">
-<h2 class="anchored" data-anchor-id="make-a-quarto-blog-project">Make a quarto blog project</h2>
-<p>If you already have R Studio on your machine, then make sure you have the latest version, which includes <strong>quarto</strong>.</p>
-<ol type="1">
-<li>Open up R studio.</li>
-<li>Choose File -&gt; New Project</li>
-<li>You should see a pop-up menu</li>
-<li>Choose “New Directory”</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/project.png" class="img-fluid" width="667"></p>
-</div>
-</div>
-<ol start="5" type="1">
-<li>Choose “Quarto Blog” for project type</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/blog.png" class="img-fluid" width="669"></p>
-</div>
-</div>
-<ol start="6" type="1">
-<li>The blog files will be stored in a new folder, give your new folder a simple name (no spaces). This will also be the name for your github repository later on. Make sure “Create a git repository” is clicked. Then press create project.</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/create.png" class="img-fluid" width="666"></p>
-</div>
-</div>
-</section>
-<section id="compile-your-blog" class="level2">
-<h2 class="anchored" data-anchor-id="compile-your-blog">Compile your blog</h2>
-<p>If everything went smoothly, then you should be looking at a new R Studio project with the source code for you blog. I named my project “cognitionBlog”, and this is what I am looking at after pressing “Create Project”.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/rstudio_project.png" class="img-fluid" width="1437"></p>
-</div>
-</div>
-<p>This is an R Studio project with a template for making a blog. As you learn more about quarto, you will be able to modify and customize the blog to your own liking. Quarto is a very powerful document creation system that can be used to make websites, blogs, slide decks, books, and more; and, you can find more info about it here: <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-<p>For the purpose of this tutorial, I’ll try to keep things as simple as possible so you can start blogging.</p>
-<p>You should be able to see a <strong>preview</strong> of what the blog will look like right away.</p>
-<ol type="1">
-<li>Go to the “build” tab in the top right hand corner, and press “Render website”.</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/build.png" class="img-fluid" width="1432"></p>
-</div>
-</div>
-<ol start="2" type="1">
-<li>You may see a preview of the website in the R Studio browser window, and you can click this little button to preview the blog in your default browser.</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/rstudio_browser.png" class="img-fluid" width="1439"></p>
-</div>
-</div>
-</section>
-<section id="writing-your-own-posts" class="level2">
-<h2 class="anchored" data-anchor-id="writing-your-own-posts">Writing your own posts</h2>
-<p>I recommend learning to blog with quarto by opening and modifying the template files.</p>
-<p>You can see all of the files in your project by clicking on the files tab:</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/rstudio_files.png" class="img-fluid" width="1433"></p>
-</div>
-</div>
-<p>The default quarto blog is a bare-bones website with a list of blog posts and an about page. You can change the title of the blog in “index.qmd”, and add more info to the about page by writing new text in “about.qmd”. But, let’s focus on making a new post.</p>
-<p>First, navigate into the “posts” folder. The template contains two existing posts. Each post is in its own folder.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/rstudio_posts.png" class="img-fluid" width="629"></p>
-</div>
-</div>
-<p>To make a new post, you can “copy” an existing folder for a post and give it a new name.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/rstudio_copy.png" class="img-fluid" width="519"></p>
-</div>
-</div>
-<p>I named my new post “my-new-post”, and now I can see it listed as a folder beside the original two from the template.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/newpost.png" class="img-fluid" width="625"></p>
-</div>
-</div>
-<p>Let’s click into the folder and edit the “index.qmd” file. Here are the files inside the folder:</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/newpostfiles.png" class="img-fluid" width="625"></p>
-</div>
-</div>
-<p>Clicking on “index.qmd” should open the file in the R studio text editor (on the left):</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/indexqmd.png" class="img-fluid" width="1437"></p>
-</div>
-</div>
-<p>I edited this file and gave it a new title, new author, etc. Then I deleted the text at the bottom and wrote my own first blog post.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/mypost.png" class="img-fluid" width="1436"></p>
-</div>
-</div>
-<p>Now, if I render the website again (from the build tab), my new post is automatically added to the list of posts (they are listed in order by date).</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/renderNewpost.png" class="img-fluid" width="1436"></p>
-</div>
-</div>
-<p>You could now be off to the races. To further customize, delete the template posts you don’t want and replace them with your own. At this point your blog is only on your local computer. If you want to share it on the internet, then follow the next steps to share your blog using Github.com.</p>
-</section>
-<section id="share-your-quarto-blog-on-github.com" class="level2">
-<h2 class="anchored" data-anchor-id="share-your-quarto-blog-on-github.com">Share your quarto blog on Github.com</h2>
-<p>The written instructions below may not be enough for a new user to get the blog published to Github. You can view more in-depth instructions from quarto here <a href="https://quarto.org/docs/publishing/github-pages.html" class="uri">https://quarto.org/docs/publishing/github-pages.html</a>. Or, I recommend watching the video (which I plan to put up shortly.) The steps might appear complicated, but it’s not too bad once you get everything set up.</p>
-<ol type="1">
-<li>Open up Github Desktop</li>
-<li>Go to preferences and sign in to your Github.com account</li>
-<li>“Add” your blog project folder to Github Desktop</li>
-<li>Publish to github.com and uncheck private repository (if you want other people to see it.)</li>
-<li>You should now be able to see your new repository in your github.com profile, which means you should be able to see a copy of your blog files in the repository.</li>
-</ol>
-<p>I’ve been leaving out some of the technical details. Briefly, in this blogging workflow you write your blog in a “.qmd” document, which stands for “quarto” markdown. This is a plain text file. When you “render the website”, the quarto engine creates the necessary html and other web-files needed to display your blog. By default all of these web-files are stored in the “_site” folder.</p>
-<p>In the last step, we are going to change where the files are saved from “_site” to a new folder named “docs”. This is because Github.com can conveniently serve files located in “docs” folders as websites.</p>
-<p>To change the output directory from <code>_site</code> to <code>docs</code> open up <code>_quarto.yml</code>, and add the line <code>output-dir: docs</code> just like this:</p>
-<pre><code>project:
-  type: website
-  output-dir: docs</code></pre>
-<p>When you render the website again, you should see a new <code>docs</code> folder with your blog files.</p>
-<p>Push your changes to github so that your repository, and activate the github pages option under your repository settings. Then you should be able to view your blog live from the URL given by github pages.</p>
-</section>
-<section id="write-more-and-push-to-publish" class="level2">
-<h2 class="anchored" data-anchor-id="write-more-and-push-to-publish">Write more and push to publish</h2>
-<p>Once you have everything set up you should be able to:</p>
-<ol type="1">
-<li>Make new posts by copying an existing one.</li>
-<li>Publish them by rendering the website on your computer, and pushing your changes to Github.com</li>
-</ol>
-<p>And, that’s it. Happy blogging.</p>
-
-
-</section>
-
- ]]></description>
-  <category>quarto</category>
-  <category>Rstats</category>
-  <category>blogging</category>
-  <guid>https://crumplab.com/blog/post_887_8_25_22_quartoblog/index.html</guid>
-  <pubDate>Thu, 25 Aug 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
