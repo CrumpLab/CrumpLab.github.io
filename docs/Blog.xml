@@ -36,13 +36,6 @@
 <p>I authored the textbook in RStudio as a plain text quarto document. RStudio has an OK spell-checker, but I find it not great (mainly because I haven’t taken the time to cultivate my own dictionary). RStudio does not have a grammar checker. I’ve tried some grammar checking solutions, but did not find them suitable for my problems.</p>
 <p>I have several writing problems that are hard for me to detect, especially when the writing is fresh. I find the subjective experience of not-seeing-my-mistakes to be similar to the phenomena of repetition blindness. For example, what does the sentence in this picture say?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">knitr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"bird.gif"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://crumplab.com/blog/665_realworld_editing/bird.gif" class="img-fluid"></p>
 </div>
@@ -57,13 +50,6 @@ font-style: inherit;">"bird.gif"</span>)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="basic-spelling-and-grammar">Basic spelling and grammar</h3>
 <p>Here’s a screenshot of the Shiny app in action editing a paragraph from this post.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">knitr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"basic_sg.png"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://crumplab.com/blog/665_realworld_editing/basic_sg.png" class="img-fluid" width="1332"></p>
 </div>
@@ -73,13 +59,6 @@ font-style: inherit;">"basic_sg.png"</span>)</span></code></pre></div>
 <p>The model returns a new version of the text, and I use the <code>diffobj</code> library to compare the original text with the suggested text. This provides a quick visual tool to help me see what has been changed. If I like the changes, then I can copy it into my document. The gpt-3.5-turbo and davinci models give pretty good results, but the other ones frequently go off the rails.</p>
 <p>Here’s the same text run through a different model. This time it is slightly more heavy-handed, but the suggestions are fine to me. The suggestions will also change slightly each time, even if the input text is the same. This isn’t necessarily a problem, as there are lots of ways to fix my bad writing.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">knitr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"basic_sg_davinci.png"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://crumplab.com/blog/665_realworld_editing/basic_sg_davinci.png" class="img-fluid" width="1345"></p>
 </div>
@@ -96,19 +75,18 @@ font-style: inherit;">"basic_sg_davinci.png"</span>)</span></code></pre></div>
 </ul>
 <p>Here’s a screenshot of the same paragraph run through an “improved clarity” prompt.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">knitr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"clarity.png"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://crumplab.com/blog/665_realworld_editing/clarity.png" class="img-fluid" width="1339"></p>
 </div>
 </div>
 <p>Now there are many more words changed, and not all for the better. I would not wholesale copy paste this into my document, but I might crib a few of the suggested changes.</p>
 <p>Especially with text that contains a lot of domain-specific detail, like the content in my cognitive psych textbook, it is necessary to be hyper-vigilant and look closely at all of the changes to see if they preserve original writing intentions.</p>
+</section>
+<section id="is-it-working" class="level2">
+<h2 class="anchored" data-anchor-id="is-it-working">Is it working?</h2>
+<p>I’m leaning into the “stochastic spell-checker” label for what is happening here. The text I send to the LLM is tokenized into a high-dimensional semantic space, it is somehow filtered through the prompt, and then reconstructed back into a textual response. The middle part is a black box, but it produces a response that probabilistically approximates the style of the original (plus something like a proportion of the semantic style of the prompt…ish?).</p>
+<p>In any case, just because the prompt is to fix spelling and grammar, does not guarantee that it will! I haven’t tried to determine how many mistakes it misses, so I don’t know how well the process is working. However, the visual highlighting of differences makes it easy for me to see if any proposed change is worth making. And, at least for basic spell-checking and grammar it is finding problems that I am correcting. So, the hit rate seems good, and the miss rate is missing.</p>
+<p>I haven’t tried this yet, but I’ve been wondering what happens to text without any instructions or prompts. For example, I’m interested in sending a paragraph, having the system put it through the tokenization process, and then requesting it to reconstruct the original text verbatim. I may try this with a prompt that says “take the input, process it, and then return it without modifications”. However, there is one issue; this sends text with the prompt, and I’m not sure whether having the prompt would introduce any artifacts into the quality of the reconstruction. At the same time, if I send text without instructions, the system seems programmed to do things like sentence completion, and not just take the input, tokenize it, then spit it back out based on its token representation. I’m raising this because I’m curious whether spell-checking behavior comes for free by virtue of the reconstruction process. Idle thoughts, I need to get back to work…</p>
 </section>
 <section id="chapter-2" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-2">Chapter 2</h2>

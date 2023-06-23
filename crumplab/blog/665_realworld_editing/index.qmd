@@ -73,6 +73,14 @@ Now there are many more words changed, and not all for the better. I would not w
 
 Especially with text that contains a lot of domain-specific detail, like the content in my cognitive psych textbook, it is necessary to be hyper-vigilant and look closely at all of the changes to see if they preserve original writing intentions.
 
+## Is it working?
+
+I'm leaning into the "stochastic spell-checker" label for what is happening here. The text I send to the LLM is tokenized into a high-dimensional semantic space, it is somehow filtered through the prompt, and then reconstructed back into a textual response. The middle part is a black box, but it produces a response that probabilistically approximates the style of the original (plus something like a proportion of the semantic style of the prompt...ish?).
+
+In any case, just because the prompt is to fix spelling and grammar, does not guarantee that it will! I haven't tried to determine how many mistakes it misses, so I don't know how well the process is working. However, the visual highlighting of differences makes it easy for me to see if any proposed change is worth making. And, at least for basic spell-checking and grammar it is finding problems that I am correcting. So, the hit rate seems good, and the miss rate is missing.
+
+I haven't tried this yet, but I've been wondering what happens to text without any instructions or prompts. For example, I'm interested in sending a paragraph, having the system put it through the tokenization process, and then requesting it to reconstruct the original text verbatim. I may try this with a prompt that says "take the input, process it, and then return it without modifications". However, there is one issue; this sends text with the prompt, and I'm not sure whether having the prompt would introduce any artifacts into the quality of the reconstruction. At the same time, if I send text without instructions, the system seems programmed to do things like sentence completion, and not just take the input, tokenize it, then spit it back out based on its token representation. I'm raising this because I'm curious whether spell-checking behavior comes for free by virtue of the reconstruction process. Idle thoughts, I need to get back to work...  
+
 ## Chapter 2
 
 I'm about to spend the afternoon editing another chapter, and I may update this post with lessons learned as I do that. 
