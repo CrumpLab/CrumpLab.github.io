@@ -7,14 +7,27 @@ about:
   image: imgs/Crump.png
   links:
     - icon: globe
-      text: lab website
+      text: Lab website
       href: https://crumplab.com
     - icon: mastodon
-      text: social 
+      text: Social 
       href: https://fosstodon.org/@MattCrumpLab
     - icon: github
       text: Github
       href: https://github.com/CrumpLab
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=49EVuVcAAAAJ&hl=en
+    - icon: youtube
+      href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
+      text: Youtube
+    - icon: globe
+      text: Brooklyn College
+      href: https://www.brooklyn.edu/faculty-staff/matthew-crump/
+    - icon: globe
+      text: The Graduate Center, CUNY
+      href: https://www.gc.cuny.edu/psychology/training-areas/cognitive-and-comparative-psychology
+    
 order: 1
 ---
 
