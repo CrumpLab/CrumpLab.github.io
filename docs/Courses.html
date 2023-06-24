@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -58,6 +60,63 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-current-courses .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-url','listing-image','listing-keywords',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-url","listing-image","listing-keywords"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-current-courses'] = new List('listing-current-courses', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-past-courses .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-url','listing-image','listing-keywords',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-url","listing-image","listing-keywords"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-past-courses'] = new List('listing-past-courses', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
 
 <script type="text/javascript">
@@ -68,6 +127,8 @@ gtag('js', new Date());
 gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="crumplab - Courses">
@@ -168,7 +229,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -176,20 +237,13 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#spring-2023" id="toc-spring-2023" class="nav-link active" data-scroll-target="#spring-2023">Spring 2023</a></li>
-  <li><a href="#fall-2022" id="toc-fall-2022" class="nav-link" data-scroll-target="#fall-2022">Fall 2022</a></li>
-  <li><a href="#past-courses" id="toc-past-courses" class="nav-link" data-scroll-target="#past-courses">Past courses</a>
-  <ul class="collapse">
-  <li><a href="#psyc-3530-introduction-to-cognitive-psychology" id="toc-psyc-3530-introduction-to-cognitive-psychology" class="nav-link" data-scroll-target="#psyc-3530-introduction-to-cognitive-psychology">Psyc 3530 : Introduction to Cognitive Psychology</a></li>
-  <li><a href="#psyc-80103-special-topics-seminar-learning-attention" id="toc-psyc-80103-special-topics-seminar-learning-attention" class="nav-link" data-scroll-target="#psyc-80103-special-topics-seminar-learning-attention">Psyc 80103 : Special Topics Seminar: Learning &amp; Attention</a></li>
-  <li><a href="#psyc-80103-special-topics-memory-foundations-current-issues" id="toc-psyc-80103-special-topics-memory-foundations-current-issues" class="nav-link" data-scroll-target="#psyc-80103-special-topics-memory-foundations-current-issues">Psyc 80103 : Special Topics: Memory: Foundations &amp; Current Issues</a></li>
-  <li><a href="#psyc-80103-career-development" id="toc-psyc-80103-career-development" class="nav-link" data-scroll-target="#psyc-80103-career-development">Psyc 80103 : Career Development</a></li>
-  </ul></li>
+  <li><a href="#current-courses" id="toc-current-courses" class="nav-link active" data-scroll-target="#current-courses">Current Courses</a></li>
+  <li><a href="#past-courses" id="toc-past-courses" class="nav-link" data-scroll-target="#past-courses">Past Courses</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -221,347 +275,501 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </div>
 </div>
 <p>List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.</p>
-<section id="spring-2023" class="level1">
-<h1>Spring 2023</h1>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="mchc-1002-seminar-2-people-of-new-york-city" class="level3">
-<h3 class="anchored" data-anchor-id="mchc-1002-seminar-2-people-of-new-york-city"><a href="https://crumplab.github.io/peopleofnyc/">MCHC 1002 Seminar 2: People of New York City</a></h3>
-<p>Brooklyn College of CUNY, Undergraduate, Macaulay Honors Seminar 2</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/peopleofnyc/"></a></p><a href="https://crumplab.github.io/peopleofnyc/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/peopleNYC.jpg" class="img-fluid" width="150"></p>
+<section id="current-courses" class="level2">
+<h2 class="anchored" data-anchor-id="current-courses">Current Courses</h2>
+<div id="listing-current-courses" class="quarto-listing quarto-listing-container-custom">
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.com/cognition">
+<h4 class="anchored">
+Psyc 2530: Introduction to Cognitive Psychology (Asynchronous Online)
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Fall 2023</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Undergraduate</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>OER</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/peopleofnyc/"></a></p>
+<p>
+For my students: although most of the course materials are available on the course website, this course is under development until the official start of the Fall 2023 semester.
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.com/cognition"> <img src="images/2530_image.jpg" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-3470socy-3507-data-analytics-and-data-visualization-in-the-social-and-behavioral-sciences" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-3470socy-3507-data-analytics-and-data-visualization-in-the-social-and-behavioral-sciences"><a href="https://crumplab.github.io/psyc3470">Psyc 3470/SOCY 3507 Data Analytics and Data Visualization in the Social and Behavioral Sciences</a></h3>
-<p>Brooklyn College of CUNY, Undergraduate, Psychology</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc3470"></a></p><a href="https://crumplab.github.io/psyc3470">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/ads.png" class="img-fluid" width="150"></p>
-</div>
-</div>
-</a><p><a href="https://crumplab.github.io/psyc3470"></a></p>
-</div>
-</div>
-</section>
-<section id="fall-2022" class="level1">
-<h1>Fall 2022</h1>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-2530-introduction-to-cognitive-psychology" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-2530-introduction-to-cognitive-psychology"><a href="https://crumplab.github.io/cognition/">Psyc 2530 Introduction to Cognitive Psychology</a></h3>
-<p>Brooklyn College of CUNY, Undergraduate, Psychology</p>
-<p>The <a href="https://crumplab.github.io/cognition/">course website</a> contains syllabus, textbook, slide decks and more.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">License: CC BY-SA 4.0</figcaption><p></p>
-</figure>
-</div>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/cognition/"></a></p><a href="https://crumplab.github.io/cognition/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/2530_image.jpg" class="img-fluid" width="150"></p>
-</div>
-</div>
-</a><p><a href="https://crumplab.github.io/cognition/"></a></p>
+<div class="listing-no-matching d-none">
+No matching items
 </div>
 </div>
 </section>
-<section id="past-courses" class="level1">
-<h1>Past courses</h1>
-<p>Some of these courses have open materials, older courses may not.</p>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-2530-introduction-to-cognitive-psychology-asynchronous-online" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-2530-introduction-to-cognitive-psychology-asynchronous-online"><a href="https://crumplab.github.io/cognition/">Psyc 2530 Introduction to Cognitive Psychology (Asynchronous online)</a></h3>
-<p>Spring 2022, Brooklyn College of CUNY, Undergraduate, Psychology, Asynchronous online</p>
-<p>The <a href="https://crumplab.github.io/cognition/">course website</a> contains syllabus, textbook, slide decks and more.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">License: CC BY-SA 4.0</figcaption><p></p>
-</figure>
+<section id="past-courses" class="level2">
+<h2 class="anchored" data-anchor-id="past-courses">Past Courses</h2>
+<div id="listing-past-courses" class="quarto-listing quarto-listing-container-custom">
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/peopleofnyc/">
+<h4 class="anchored">
+MCHC 1002: People of New York City
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Spring 2023</p>
 </div>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/cognition/"></a></p><a href="https://crumplab.github.io/cognition/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/2530_image.jpg" class="img-fluid" width="150"></p>
+<div class="listing-category" style="cursor:auto">
+<p>Undergraduate</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Macaulay Honors College</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/cognition/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/peopleofnyc/"> <img src="images/peopleNYC.jpg" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-7709g---using-r-for-reproducible-research" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-7709g---using-r-for-reproducible-research"><a href="https://crumplab.github.io/rstatsmethods/">Psyc 7709G - Using R for Reproducible research</a></h3>
-<p>Spring 2022, Brooklyn College of CUNY, Experimental Psychology MA program</p>
-<p><a href="https://crumplab.github.io/rstatsmethods/">Course website</a> contains syllabus and readings.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/rstatsmethods/"></a></p><a href="https://crumplab.github.io/rstatsmethods/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/RStudio.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/psyc3470">
+<h4 class="anchored">
+Psyc 3470/SOCY 3507: Data Analytics and Data Visualization in the Social and Behavioral Sciences
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Spring 2023</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Undergaduate</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>OER</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/rstatsmethods/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/psyc3470"> <img src="images/ads.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-2530-introduction-to-cognitive-psychology-fall-2021" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-2530-introduction-to-cognitive-psychology-fall-2021">Psyc 2530 Introduction to Cognitive Psychology, Fall 2021</h3>
-<p>Brooklyn College of CUNY, Undergraduate, Psychology</p>
-<p>All materials for Fall 2021 are stored as a branch in the github repository for this course <a href="https://github.com/CrumpLab/cognition" class="uri">https://github.com/CrumpLab/cognition</a>.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/cognition/"></a></p><a href="https://crumplab.github.io/cognition/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/2530_image.jpg" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.com/cognition">
+<h4 class="anchored">
+Psyc 2530: Introduction to Cognitive Psychology (In Person)
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Fall 2022</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Undergraduate</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>OER</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/cognition/"></a></p>
+<p>
+Course website displays current materials, archived materials from this semester may be available on Github.
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.com/cognition"> <img src="images/2530_image.jpg" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-776566g---statistical-methods-applications-i" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-776566g---statistical-methods-applications-i">Psyc 7765/66G - Statistical Methods Applications I</h3>
-<p>2020-2021, Brooklyn College of CUNY, Master’s, Experimental Psychology</p>
-<p>The <a href="https://crumplab.github.io/rstatsmethods/">course website</a> contains syllabus and readings.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/rstatsmethods/"></a></p><a href="https://crumplab.github.io/rstatsmethods/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/psyc7765.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.com/cognition">
+<h4 class="anchored">
+Psyc 2530: Introduction to Cognitive Psychology (Asynchronous online)
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Spring 2022</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Undergraduate</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>OER</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/rstatsmethods/"></a></p>
+<p>
+Course website displays current materials, archived materials from this semester may be available on Github.
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.com/cognition"> <img src="images/2530_image.jpg" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-73800---cognitive-psychology" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-73800---cognitive-psychology">Psyc 73800 - Cognitive Psychology</h3>
-<p>2020, 2021, Graduate Center of CUNY, Doctoral, Cognitive and Comparative Psychology Training (CCP) area</p>
-<p>Bi-weekly modules taught by different faculty. The <a href="https://crumplab.github.io/psyc73800/">course website</a> contains syllabus and readings.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc73800/"></a></p><a href="https://crumplab.github.io/psyc73800/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/cognitive_science.png" class="img-fluid" width="200"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/rstatsmethods/">
+<h4 class="anchored">
+Psyc 7709G: Using R for Reproducible research
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Spring 2022</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Brooklyn College</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Experimental Psych MA</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Graduate</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/psyc73800/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/rstatsmethods/"> <img src="images/RStudio.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-7709g---statistical-methods-practicum-ii" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-7709g---statistical-methods-practicum-ii">Psyc 7709G - Statistical Methods Practicum II</h3>
-<p>Brooklyn College of CUNY</p>
-<p>The <a href="https://crumplab.github.io/psyc7709Lab/">course website</a> contains syllabus and readings.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc7709Lab/"></a></p><a href="https://crumplab.github.io/psyc7709Lab/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/logo2statsII.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.com/cognition">
+<h4 class="anchored">
+Psyc 2530: Introduction to Cognitive Psychology (Synchronous online)
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Fall 2021</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Undergraduate</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>OER</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/psyc7709Lab/"></a></p>
+<p>
+Course website displays current materials, archived materials from this semester may be available on Github.
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.com/cognition"> <img src="images/2530_image.jpg" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-73800---cognitive-psychology-1" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-73800---cognitive-psychology-1">Psyc 73800 - Cognitive Psychology</h3>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/rstatsmethods/">
+<h4 class="anchored">
+Psyc 7765/66G: Statistical Methods Applications I &amp; II
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>2020-2021</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Brooklyn College</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Experimental Psych MA</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Graduate</p>
+</div>
+</div>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/rstatsmethods/"> <img src="images/psyc7765.png" class="thumbnail-image"> </a></p>
+</div>
+</div>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/psyc73800/">
+<h4 class="anchored">
+Psyc 73800: Cognitive Psychology
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
 <p>Graduate Center of CUNY</p>
-<p>Bi-weekly modules taught by different faculty. The <a href="https://crumplab.github.io/psyc73800/">course website</a> contains syllabus and readings.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc73800/"></a></p><a href="https://crumplab.github.io/psyc73800/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/cognitive_science.png" class="img-fluid" width="200"></p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>CCP Training Area</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Doctoral</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/psyc73800/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/psyc73800/"> <img src="images/cognitive_science.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-7709g---statistical-methods-practicum-i" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-7709g---statistical-methods-practicum-i">Psyc 7709G - Statistical Methods Practicum I</h3>
-<p>Brooklyn College of CUNY</p>
-<p>The <a href="https://crumplab.github.io/psyc7709Lab/">course website</a> contains syllabus and readings.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc7709Lab/"></a></p><a href="https://crumplab.github.io/psyc7709Lab/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/Psyc7709G.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/psyc7709Lab/">
+<h4 class="anchored">
+Psyc 7709G - Statistical Methods Practicum II
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Brooklyn College</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Experimental Psych MA</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Graduate</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/psyc7709Lab/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/psyc7709Lab/"> <img src="images/logo2statsII.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-7709-using-r-for-reproducible-research" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-7709-using-r-for-reproducible-research">Psyc 7709: Using R for reproducible research</h3>
-<p>This is a special topics course for the Experimental Psychology Master’s program. The course website is <a href="https://crumplab.github.io/psyc7709_2019/" class="uri">https://crumplab.github.io/psyc7709_2019/</a></p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc7709_2019/"></a></p><a href="https://crumplab.github.io/psyc7709_2019/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/Rstudio.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/psyc7709Lab/">
+<h4 class="anchored">
+Psyc 7709G - Statistical Methods Practicum I
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Brooklyn College</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Experimental Psych MA</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Graduate</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/psyc7709_2019/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/psyc7709Lab/"> <img src="images/Psyc7709G.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-3400-statistical-methods-in-psychological-research" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-3400-statistical-methods-in-psychological-research">Psyc 3400: Statistical Methods in Psychological Research</h3>
-<p>All materials are totally free and open, including the <a href="https://crumplab.github.io/psyc3400/">course Website</a>, <a href="https://crumplab.github.io/statistics/">textbook</a>, and <a href="https://crumplab.github.io/statisticsLab/">lab manual</a>.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc3400/"></a></p><a href="https://crumplab.github.io/psyc3400/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/TextbookCover.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/psyc7709_2019/">
+<h4 class="anchored">
+Psyc 7709G: Using R for Reproducible research
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Spring 2019</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Brooklyn College</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Experimental Psych MA</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Graduate</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/psyc3400/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/psyc7709_2019/"> <img src="images/RStudio.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-73800---cognitive-psychology-2" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-73800---cognitive-psychology-2">Psyc 73800 - Cognitive Psychology</h3>
-<p>Fall 2018 (2017) @ Graduate Center of CUNY</p>
-<p>Bi-weekly modules taught by different faculty. The <a href="https://crumplab.github.io/psyc73800/">course website</a> contains syllabus and readings.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc73800/"></a></p><a href="https://crumplab.github.io/psyc73800/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/cognitive_science.png" class="img-fluid" width="200"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/psyc3400/">
+<h4 class="anchored">
+Psyc 3400: Statistical Methods in Psychological Research
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Undergraduate</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>OER</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/psyc73800/"></a></p>
+<p>
+All materials are totally free and open, including the <a href="https://crumplab.github.io/psyc3400/">course Website</a>, <a href="https://crumplab.github.io/statistics/">textbook</a>, and <a href="https://crumplab.github.io/statisticsLab/">lab manual</a>.
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/psyc3400/"> <img src="images/TextbookCover.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-80103-cognitive-technologies-from-theory-and-data-to-application" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-80103-cognitive-technologies-from-theory-and-data-to-application">Psyc 80103: Cognitive Technologies: From theory and data to application</h3>
-<p>Spring 2018 @ Graduate Center of CUNY</p>
-<p>A doctoral seminar course (special topics) covering emerging and old cognitive technologies. Check out the <a href="https://crumplab.github.io/cognitivetechnologies">course website</a>, or <a href="https://crumplab.github.io/cognitivetechnologies/book/">read the book</a> we wrote on the topic (students in the course wrote the chapters).</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/cognitivetechnologies/book/"></a></p><a href="https://crumplab.github.io/cognitivetechnologies/book/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/CogTech.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/cognitivetechnologies/book/">
+<h4 class="anchored">
+Psyc 80103: Cognitive Technologies: From theory and data to application
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Graduate Center of CUNY</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>CCP Training Area</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Doctoral</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/cognitivetechnologies/book/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/cognitivetechnologies/book/"> <img src="images/CogTech.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-3450-experimental-psychology" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-3450-experimental-psychology">Psyc 3450: Experimental Psychology</h3>
-<p>Fall 2017 (2016, 2015, 2013, 2012, 2011) @ Brooklyn College</p>
-<p>An undergraduate course on research methods, using a free OER textbook! Written by myself and many others. Check out the <a href="https://crumplab.github.io/ResearchMethods/">textbook here</a>. Check out the <a href="https://crumplab.github.io/psyc3450/">course website here</a>.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/ResearchMethods/"></a></p><a href="https://crumplab.github.io/ResearchMethods/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/ResearchMethods.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/ResearchMethods/">
+<h4 class="anchored">
+Psyc 3450: Experimental Psychology
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Undergraduate</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>OER</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/ResearchMethods/"></a></p>
+<p>
+An undergraduate course on research methods, using a free OER textbook! Written by myself and many others. Check out the <a href="https://crumplab.github.io/ResearchMethods/">textbook here</a>. Check out the <a href="https://crumplab.github.io/psyc3450/">course website here</a>.
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/ResearchMethods/"> <img src="images/ResearchMethods.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="psyc-80103-computer-programming-for-psychologists" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-80103-computer-programming-for-psychologists">Psyc 80103: Computer Programming for Psychologists</h3>
-<p>@ Brooklyn College</p>
-<p>I put my lecture notes into a <a href="https://crumplab.github.io/programmingforpsych/">book</a> (covers R, Livecode and a bit of web programming.)</p>
-</section>
-</div><div class="column" style="width:30%;">
-<p><a href="https://crumplab.github.io/programmingforpsych/"></a></p><a href="https://crumplab.github.io/programmingforpsych/">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="images/Programming.png" class="img-fluid" width="150"></p>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/programmingforpsych/">
+<h4 class="anchored">
+Psyc 80103: Computer Programming for Psychologists
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Graduate Center of CUNY</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>Doctoral</p>
 </div>
 </div>
-</a><p><a href="https://crumplab.github.io/programmingforpsych/"></a></p>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/programmingforpsych/"> <img src="images/Programming.png" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<hr>
-<section id="psyc-3530-introduction-to-cognitive-psychology" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-3530-introduction-to-cognitive-psychology">Psyc 3530 : Introduction to Cognitive Psychology</h3>
-<p>@ Brooklyn College</p>
-<hr>
-</section>
-<section id="psyc-80103-special-topics-seminar-learning-attention" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-80103-special-topics-seminar-learning-attention">Psyc 80103 : Special Topics Seminar: Learning &amp; Attention</h3>
-<p>Special topics doctoral course @ GC Co-taught with Andrew Delamater</p>
-<hr>
-</section>
-<section id="psyc-80103-special-topics-memory-foundations-current-issues" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-80103-special-topics-memory-foundations-current-issues">Psyc 80103 : Special Topics: Memory: Foundations &amp; Current Issues</h3>
-<p>Special topics doctoral course @ GC Co-taught with Elizabeth Chua</p>
-<hr>
-</section>
-<section id="psyc-80103-career-development" class="level3">
-<h3 class="anchored" data-anchor-id="psyc-80103-career-development">Psyc 80103 : Career Development</h3>
-<p>Doctoral course @ GC Co-taught with Elizabeth Chua</p>
+<div class="quarto-post image-right">
+<div class="body">
+<h4 class="anchored">
+Psyc 3530: Introduction to Cognitive Psychology
+</h4>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Undergraduate</p>
+</div>
+</div>
+<p>
+</p>
+</div>
+<div class="thumbnail">
+<p><img src="courses/placeholder.png" class="thumbnail-image"></p>
+</div>
+</div>
+<div class="quarto-post image-right">
+<div class="body">
+<h4 class="anchored">
+Psyc 80103: Special Topics Seminar: Learning &amp; Attention
+</h4>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Doctoral</p>
+</div>
+</div>
+<p>
+Special topics doctoral course co-taught with Andrew Delamater
+</p>
+</div>
+<div class="thumbnail">
+<p><img src="courses/placeholder.png" class="thumbnail-image"></p>
+</div>
+</div>
+<div class="quarto-post image-right">
+<div class="body">
+<h4 class="anchored">
+Psyc 80103: Special Topics: Memory: Foundations &amp; Current Issues
+</h4>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Doctoral</p>
+</div>
+</div>
+<p>
+Special topics doctoral course co-taught with Elizabeth Chua
+</p>
+</div>
+<div class="thumbnail">
+<p><img src="courses/placeholder.png" class="thumbnail-image"></p>
+</div>
+</div>
+<div class="quarto-post image-right">
+<div class="body">
+<h4 class="anchored">
+Psyc 80103: Career Development
+</h4>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>Doctoral</p>
+</div>
+</div>
+<p>
+Special topics doctoral course co-taught with Elizabeth Chua
+</p>
+</div>
+<div class="thumbnail">
+<p><img src="courses/placeholder.png" class="thumbnail-image"></p>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
-</section>
+
 </section>
 
 </main> <!-- /main -->

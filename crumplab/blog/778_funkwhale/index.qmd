@@ -181,7 +181,9 @@ I can use mastodon to follow my account on funkwhale, and then post to my funkwh
 
 This part looks fun. I'm placing embed code to see if the playlist shows up here.
 
-<iframe width="100%" height="330" scrolling="no" frameborder="no" src="https://audio.crumplab.com/front/embed.html?&amp;type=artist&amp;id=1"></iframe>
+<iframe width="100%" height="330" scrolling="no" frameborder="no" src="https://audio.crumplab.com/front/embed.html?&amp;type=artist&amp;id=1">
+
+</iframe>
 
 The embed worked, but this won't work later if I shut down my funkwhale server.
 
@@ -214,5 +216,3 @@ Lots of other OSS audio-streaming options, should check those out.
 <https://ins-rt.net/text/revaluing-music-in-the-digital-economy-an-interview-with-austin-hou-from-currents>
 
 <https://www.theslowmusicmovement.org/about.html>
-
-

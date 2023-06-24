@@ -1,6 +1,5 @@
 ---
 title: "Blog"
-description: "Various musings from Matt Crump, usually about cognition, teaching, and other stuff. Posts are incomplete notes spreading digital breadcrumbs on scratchpads."
 image: images/logo2.png
 listing:
   contents: blog
@@ -10,6 +9,9 @@ listing:
   image-align: 'right'
   image-placeholder: 'images/crumplab.png'
   feed: true
+format: 
+  html: 
+    page-layout: full
 ---
 
 ```{css, echo=FALSE}
@@ -23,3 +25,5 @@ listing:
 #| out.width: 100%
 knitr::include_graphics('images/blog_banner.jpg')
 ```
+
+Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.

@@ -1,0 +1,18 @@
+- title: "Music Stuff"
+  description: "I make music and sometimes post it online. Check it out at: [https://homophony.quest](https://homophony.quest)"
+  url: "https://homophony.quest/"
+  image: "images/fun/homophony.png"
+  keywords:
+    - synthesizers
+    - electro
+    - jazz
+    - other stuff
+
+- title: "Visual Stuff"
+  description: "When I find time to make visual things I post them here: [https://crumplab.github.io/things](https://crumplab.github.io/things)"
+  url: "https://crumplab.github.io/things"
+  image: "images/fun/things.jpg"
+  keywords:
+    - painting
+    - digital art
+    - cartoon like things

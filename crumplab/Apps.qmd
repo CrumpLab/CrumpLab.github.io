@@ -1,5 +1,8 @@
 ---
 title: "Apps"
+format:
+  html:
+    page-layout: full
 ---
 
 ```{css, echo=FALSE}
@@ -27,7 +30,6 @@ Shiny Apps, R packages, and various things
 ## [gptaddin](https://crumplab.github.io/gptaddin/)
 
 Addins and shiny app for sending text to LLMs at OpenAI. The addins are focused on writing assistance tools. The shiny app has a grammar checker. This is an experimental package for personal use that may be helpful as a reference for others to build their own similar tools.
-
 :::
 
 ::: {.column width="30%"}
@@ -37,7 +39,7 @@ knitr::include_graphics("images/gptaddin.png")
 :::
 :::
 
-----------------------------------
+------------------------------------------------------------------------
 
 ::: columns
 ::: {.column width="70%"}

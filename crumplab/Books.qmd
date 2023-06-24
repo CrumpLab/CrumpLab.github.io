@@ -1,5 +1,8 @@
 ---
 title: "Books"
+format:
+  html:
+    page-layout: full
 ---
 
 ```{css, echo=FALSE}
@@ -14,7 +17,7 @@ title: "Books"
 knitr::include_graphics('images/books_banner.jpg')
 ```
 
-These books were made using R Markdown and compiled in Bookdown. They are all free, open-source, and licensed on creative commons.
+These books were made using Quarto, or R Markdown and Bookdown. They are all free, open-source, and licensed on creative commons.
 
 ## [Instances of Cognition](https://www.crumplab.com/cognition/textbook/index.html)
 

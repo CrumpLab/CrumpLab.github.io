@@ -1,6 +1,9 @@
 ---
 title: "Publications"
 description: "In progress and peer-reviewed publications from Matthew J. C. Crump"
+format:
+  html:
+    page-layout: full
 ---
 
 ```{css, echo=FALSE}

@@ -3,6 +3,9 @@ title: crumplab
 description: "Home page for the Computational Cognition Lab at Brooklyn College, run by Matt Crump"
 image: images/logo2.png
 card-style: summary
+format:
+  html:
+    page-layout: full
 ---
 
 ```{r, include = FALSE}
@@ -60,3 +63,4 @@ Matthew Crump
 -   Phone: 718-951-5000 x. 6068
 -   email: [mcrump\@brooklyn.cuny.edu](mailto:mcrump@brooklyn.cuny.edu){.email}
 -   Lab: 4303 James Hall
+

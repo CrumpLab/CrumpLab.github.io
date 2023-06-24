@@ -63,20 +63,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-music_list .list');
+    const listingTargetEl = window.document.querySelector('#listing-fun-list .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-description','listing-url','listing-image','listing-keywords',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-description","listing-url","listing-image","listing-keywords"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-music_list'] = new List('listing-music_list', options);
+    window['quarto-listings']['listing-fun-list'] = new List('listing-fun-list', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -237,37 +237,71 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <p><img src="images/fun_banner.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<div class="card-group">
-  <div class="card">
-    <a href="https://homophony.quest/"><img src="images/fun/homophony.png" class="card-img-top" alt="..."></a>
-    <div class="card-body">
-      <h5 class="card-title anchored">Music Stuff</h5>
-      <p class="card-text">Synthesizer and other sounds </p>
-      <a href="https://homophony.quest/"> https://homophony.quest/ </a>
-    </div>
-  </div>
-  
-  <div class="card">
-    <a href="https://crumplab.github.io/things"><img src="images/fun/things.jpg" class="card-img-top" alt="..."></a>
-    <div class="card-body">
-      <h5 class="card-title anchored">Visual Stuff</h5>
-      <p class="card-text">When I find time to make visual things I take pictures of them, and post them here </p>
-      <a href="https://crumplab.github.io/things"> https://crumplab.github.io/things </a>
-    </div>
-  </div>
+<div id="listing-fun-list" class="quarto-listing quarto-listing-container-custom">
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://homophony.quest/">
+<h4 class="anchored">
+Music Stuff
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>synthesizers</p>
 </div>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-music_list">
-<div class="list grid quarto-listing-cols-3">
-
+<div class="listing-category" style="cursor:auto">
+<p>electro</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>jazz</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>other stuff</p>
+</div>
+</div>
+<p>
+I make music and sometimes post it online. Check it out at: <a href="https://homophony.quest">https://homophony.quest</a>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://homophony.quest/"> <img src="images/fun/homophony.png" class="thumbnail-image"> </a></p>
+</div>
+</div>
+<div class="quarto-post image-right">
+<div class="body">
+<a href="https://crumplab.github.io/things">
+<h4 class="anchored">
+Visual Stuff
+</h4>
+</a>
+<div class="listing-categories">
+<div class="listing-category" style="cursor:auto">
+<p>painting</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>digital art</p>
+</div>
+<div class="listing-category" style="cursor:auto">
+<p>cartoon like things</p>
+</div>
+</div>
+<p>
+When I find time to make visual things I post them here: <a href="https://crumplab.github.io/things">https://crumplab.github.io/things</a>
+</p>
+</div>
+<div class="thumbnail">
+<p><a href="https://crumplab.github.io/things"> <img src="images/fun/things.jpg" class="thumbnail-image"> </a></p>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

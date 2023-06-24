@@ -1,10 +1,12 @@
 ---
 title: "Fun"
 listing:
-  contents: music
-  id: music_list
+  contents: 
+    - fun.yaml
+  id: fun-list
   sort: "order"
-  type: grid
+  type: default
+  template: fun/fun.ejs
   categories: false
   image-align: 'right'
   image-height: '100%'
@@ -29,27 +31,8 @@ knitr::include_graphics('images/fun_banner.jpg')
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 ```
 
+::: {#fun-list}
 
+:::
 
-```{=html}
-<div class="card-group">
-  <div class="card">
-    <a href = "https://homophony.quest/"><img src="images/fun/homophony.png" class="card-img-top" alt="..."></a>
-    <div class="card-body">
-      <h5 class="card-title">Music Stuff</h5>
-      <p class="card-text">Synthesizer and other sounds </p>
-      <a href = "https://homophony.quest/"> https://homophony.quest/ </a>
-    </div>
-  </div>
-  
-  <div class="card">
-    <a href = "https://crumplab.github.io/things"><img src="images/fun/things.jpg" class="card-img-top" alt="..."></a>
-    <div class="card-body">
-      <h5 class="card-title">Visual Stuff</h5>
-      <p class="card-text">When I find time to make visual things I take pictures of them, and post them here </p>
-      <a href = "https://crumplab.github.io/things"> https://crumplab.github.io/things </a>
-    </div>
-  </div>
-</div>
-```
 
