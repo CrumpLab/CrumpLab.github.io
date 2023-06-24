@@ -1,5 +1,6 @@
 ---
 title: "Apps"
+description: "R packages, Shiny apps, and other open-software projects. The lab shares these resources on Github."
 format:
   html:
     page-layout: full
@@ -7,6 +8,10 @@ format:
 
 ```{css, echo=FALSE}
 .quarto-title {
+    display: none;
+  }
+
+.description {
     display: none;
   }
 ```

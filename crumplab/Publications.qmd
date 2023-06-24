@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-description: "In progress and peer-reviewed publications from Matthew J. C. Crump"
+description: "Peer-reviewed publications. They should all have downloadable pdfs, and if they don't email me."
 format:
   html:
     page-layout: full

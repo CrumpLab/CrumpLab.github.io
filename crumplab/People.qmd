@@ -1,5 +1,6 @@
 ---
 title: "People"
+description: "The lab is run by Dr. Matthew Crump and student research assistants from undergraduates to doctoral students."
 listing:
   contents: people
   id: people_list
@@ -17,6 +18,10 @@ format:
 
 ```{css, echo=FALSE}
 .quarto-title {
+    display: none;
+  }
+  
+.description {
     display: none;
   }
 ```

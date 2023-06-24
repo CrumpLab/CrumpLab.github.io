@@ -1,5 +1,6 @@
 ---
 title: "Courses"
+description: "A list of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. Many of them include freely shared course materials."
 listing:
   - id: current-courses
     contents: 
@@ -26,6 +27,10 @@ format:
 
 ```{css, echo=FALSE}
 .quarto-title {
+    display: none;
+  }
+
+.description {
     display: none;
   }
 ```

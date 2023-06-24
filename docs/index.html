@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -59,6 +61,35 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-front-list .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-front-list'] = new List('listing-front-list', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
 
 <script type="text/javascript">
@@ -69,6 +100,8 @@ gtag('js', new Date());
 gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="crumplab">
@@ -176,17 +209,9 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#contact" id="toc-contact" class="nav-link active" data-scroll-target="#contact">Contact</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -226,23 +251,168 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <p><img src="images/front_banner.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><strong>Links</strong></p>
-<ul>
-<li><a href="https://github.com/CrumpLab">Github</a></li>
-<li><a href="https://twitter.com/MattCrumpLab">Twitter</a></li>
-<li><a rel="me" href="https://fosstodon.org/@MattCrumpLab">Mastodon</a></li>
-<li><a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab">Youtube</a></li>
-<li><a href="https://scholar.google.com/citations?user=49EVuVcAAAAJ&amp;hl=en">Scholar</a></li>
-<li><a href="https://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059">Brooklyn College</a></li>
-<li><a href="https://ccp-cuny.github.io/index.html">Graduate Center</a></li>
-</ul>
-</div></div><p>The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition.</p>
+<p>The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition.</p>
 <p>We ask questions like how do people learn new skills such as playing an instrument or typing on a keyboard? How does memory work? How do people learn the meaning of words? How do people learn patterns and regularities in their environment?</p>
 <p>These kinds of questions are investigated using behavioral experiments and computational modeling of cognitive processes. The lab also uses computational methods to conduct and communicate research.</p>
 <p><a href="https://crumplab.github.io/People.html">Current and previous lab members</a> include undergraduate, master’s , doctoral, and postdoctoral researcher associates. If you are interested in human cognition and using computational techniques for theorizing, running experiments, analyzing data, and developing new technologies <a href="https://crumplab.github.io/Opportunities.html">then you may be interested in joining the team</a>.</p>
 <p>The lab is located in the <a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php">Department of Psychology</a> at <a href="http://www.brooklyn.cuny.edu/">Brooklyn College of CUNY</a>, and affiliated with the <a href="https://ccp-cuny.github.io">Cognitive and Comparative Psychology Training area</a> of the <a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology">Psychology Doctoral program at the Graduate Center of CUNY</a>.</p>
+<section id="pages" class="level2">
+<h2 class="anchored" data-anchor-id="pages">Pages</h2>
+<div id="listing-front-list" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1687643313213" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./Blog.html"> <img src="./images/blog_banner.jpg" class="thumbnail-image" style="height: 100%;"> </a></p>
+</div>
+<div class="body">
+<a href="./Blog.html">
+<h3 class="no-anchor listing-title">
+Blog
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./Blog.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1687642734710" data-listing-reading-time-sort="3">
+<div class="thumbnail">
+<p><a href="./People.html"> <img src="images/people_banner.jpg" style="height: 100%;" /> </a></p>
+</div>
+<div class="body">
+<a href="./People.html">
+<h3 class="no-anchor listing-title">
+People
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>The lab is run by Dr.&nbsp;Matthew Crump and student research assistants from undergraduates to doctoral students.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./People.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1687642732164" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="./Publications.html"> <img src="images/publications_banner.jpg" style="height: 100%;" /> </a></p>
+</div>
+<div class="body">
+<a href="./Publications.html">
+<h3 class="no-anchor listing-title">
+Publications
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>Peer-reviewed publications. They should all have downloadable pdfs, and if they don’t email me.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./Publications.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1687642417899" data-listing-reading-time-sort="6">
+<div class="thumbnail">
+<p><a href="./Books.html"> <img src="images/books_banner.jpg" style="height: 100%;" /> </a></p>
+</div>
+<div class="body">
+<a href="./Books.html">
+<h3 class="no-anchor listing-title">
+Books
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>Open-educational textbooks and resources developed written by Matt Crump. These resources are free to use and share.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./Books.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1687642416317" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./Courses.html"> <img src="images/courses_banner.jpg" style="height: 100%;" /> </a></p>
+</div>
+<div class="body">
+<a href="./Courses.html">
+<h3 class="no-anchor listing-title">
+Courses
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>A list of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. Many of them include freely shared course materials.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./Courses.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1687642515133" data-listing-reading-time-sort="6">
+<div class="thumbnail">
+<p><a href="./Opportunities.html"> <img src="images/opportunities_banner.jpg" style="height: 100%;" /> </a></p>
+</div>
+<div class="body">
+<a href="./Opportunities.html">
+<h3 class="no-anchor listing-title">
+Join
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>Interested in joining the lab? Check this page out.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./Opportunities.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1687642471463" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./Fun.html"> <img src="images/fun_banner.jpg" style="height: 100%;" /> </a></p>
+</div>
+<div class="body">
+<a href="./Fun.html">
+<h3 class="no-anchor listing-title">
+Fun
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>Some links to extra-curricular fun stuff like music and visual creations.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./Fun.html"> </a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
 <section id="contact" class="level2">
 <h2 class="anchored" data-anchor-id="contact">Contact</h2>
 <p><a href="https://crumplab.com/people/matt_crump.html">Matthew Crump</a></p>
@@ -256,6 +426,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <li>email: <a href="mailto:mcrump@brooklyn.cuny.edu" class="email">mcrump@brooklyn.cuny.edu</a></li>
 <li>Lab: 4303 James Hall</li>
 </ul>
+
 
 
 </section>

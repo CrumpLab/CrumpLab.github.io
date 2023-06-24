@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.">
 
 <title>crumplab - Blog</title>
 <style>
@@ -63,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-blog-list .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -77,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-blog-list'] = new List('listing-blog-list', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -105,16 +106,12 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="styles.css">
 <link rel="alternate" type="application/rss+xml" title="crumplab" href="Blog.xml"><meta property="og:title" content="crumplab - Blog">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://crumplab.com/images/logo2.png">
+<meta property="og:description" content="Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.">
+<meta property="og:image" content="https://crumplab.com/blog/665_realworld_editing/cover.jpg">
 <meta property="og:site-name" content="crumplab">
-<meta property="og:image:height" content="964">
-<meta property="og:image:width" content="1000">
 <meta name="twitter:title" content="crumplab - Blog">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://crumplab.com/images/logo2.png">
-<meta name="twitter:image-height" content="964">
-<meta name="twitter:image-width" content="1000">
+<meta name="twitter:description" content="Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.">
+<meta name="twitter:image" content="https://crumplab.com/blog/665_realworld_editing/cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -220,6 +217,11 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <h1 class="title">Blog</h1>
 </div>
 
+<div>
+  <div class="description">
+    Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -237,6 +239,10 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 .quarto-title {
     display: none;
   }
+  
+.description {
+    display: none;
+  }
 </style>
 </div>
 <div class="cell">
@@ -245,11 +251,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </div>
 </div>
 <p>Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div id="listing-blog-list" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-date-sort="1687492800000" data-listing-file-modified-sort="1687550724216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
 <div class="thumbnail">
@@ -1450,10 +1452,15 @@ Matt Crump
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+<nav id="blog-list-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
-</div></main> <!-- /main -->
+</div>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

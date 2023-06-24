@@ -1,8 +1,10 @@
 ---
 title: "Blog"
-image: images/logo2.png
+description: "Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads."
+image: "images/blog_banner.jpg"
 listing:
   contents: blog
+  id: blog-list
   sort: "date desc"
   type: default
   categories: true
@@ -18,6 +20,10 @@ format:
 .quarto-title {
     display: none;
   }
+  
+.description {
+    display: none;
+  }
 ```
 
 ```{r}
@@ -27,3 +33,6 @@ knitr::include_graphics('images/blog_banner.jpg')
 ```
 
 Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.
+
+::: {#blog-list}
+:::

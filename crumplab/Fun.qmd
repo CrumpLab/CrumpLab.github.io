@@ -1,5 +1,6 @@
 ---
 title: "Fun"
+description: "Some links to extra-curricular fun stuff like music and visual creations."
 listing:
   contents: 
     - fun.yaml
@@ -17,6 +18,10 @@ format:
 
 ```{css, echo=FALSE}
 .quarto-title {
+    display: none;
+  }
+  
+.description {
     display: none;
   }
 ```

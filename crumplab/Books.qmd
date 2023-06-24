@@ -1,5 +1,6 @@
 ---
 title: "Books"
+description: "Open-educational textbooks and resources developed written by Matt Crump. These resources are free to use and share."
 format:
   html:
     page-layout: full
@@ -7,6 +8,10 @@ format:
 
 ```{css, echo=FALSE}
 .quarto-title {
+    display: none;
+  }
+  
+.description {
     display: none;
   }
 ```

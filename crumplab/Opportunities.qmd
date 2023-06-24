@@ -1,5 +1,6 @@
 ---
 title: "Join"
+description: "Interested in joining the lab? Check this page out."
 format:
   html:
     page-layout: full
@@ -7,6 +8,10 @@ format:
 
 ```{css, echo=FALSE}
 .quarto-title {
+    display: none;
+  }
+  
+.description {
     display: none;
   }
 ```
