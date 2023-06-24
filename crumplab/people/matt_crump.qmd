@@ -9,9 +9,9 @@ about:
     - icon: globe
       text: lab website
       href: https://crumplab.com
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/MattCrumpLab
+    - icon: mastodon
+      text: social 
+      href: https://fosstodon.org/@MattCrumpLab
     - icon: github
       text: Github
       href: https://github.com/CrumpLab
