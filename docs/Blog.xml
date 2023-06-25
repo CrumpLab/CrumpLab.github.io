@@ -9,6 +9,11 @@
 <link>https://crumplab.com/Blog.html</link>
 <atom:link href="https://crumplab.com/Blog.xml" rel="self" type="application/rss+xml"/>
 <description>Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.</description>
+<image>
+<url>https://crumplab.com/images/blog_banner.jpg</url>
+<title>crumplab</title>
+<link>https://crumplab.com/Blog.html</link>
+</image>
 <generator>quarto-1.3.258</generator>
 <lastBuildDate>Fri, 23 Jun 2023 04:00:00 GMT</lastBuildDate>
 <item>

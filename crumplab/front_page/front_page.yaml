@@ -1,9 +1,4 @@
-- title: "Blog"
-  description: "Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads."
-  url: "https://crumplab.com/blog"
-  image: "images/front/blog.jpg"
-
-- title: "Publications"
-  description: "Most of them should have links for download, if they don't email me."
-  url: "https://crumplab.com/Publications.html"
-  image: "images/front/publications-logos_black.png"
+- title: "Youtube Channel"
+  description: "This channel contains screencasts and tutorial videos, as well as lectures for whole courses. The focus is usually on cognition or learning programming skills (R mostly) for psychologists."
+  path: "https://www.youtube.com/c/CrumpsComputationalCognitionLab"
+  image: "images/front/crumplab_banner_youtube.jpg"

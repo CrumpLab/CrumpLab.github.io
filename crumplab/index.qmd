@@ -12,6 +12,7 @@ listing:
     - Courses.qmd
     - Opportunities.qmd
     - Fun.qmd
+    - front_page/front_page.yaml
   id: front-list
   sort: "order"
   type: default
@@ -62,9 +63,7 @@ The lab is located in the [Department of Psychology](http://www.brooklyn.cuny.ed
 ## Pages
 
 ::: {#front-list}
-
 :::
-
 
 ## Contact
 

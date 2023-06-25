@@ -1,6 +1,7 @@
 ---
 author: "Matt Crump"
 title: "Observations on using LLMs for checking grammar, etc."
+pagetitle: "Observations on using LLMs for checking grammar, etc."
 description: "In recent posts I've been making add-ins and a shiny app for writing assistance tools in R Studio, where I do most of my writing. I'm finally starting to get some usable results. Discussing some observations about the process in this post."
 image: "cover.jpg"
 date: "6-23-2023"
@@ -10,14 +11,13 @@ date: "6-23-2023"
 knitr::include_graphics("cover.jpg")
 ```
 
-
 ## Preamble
 
-Across several recent posts I've been putting LLMs to the test as writing assistants. I'm doing this by coding [add-ins and a shiny app for R Studio](https://crumplab.com/gptaddin/), where I do most of my writing. I'm still in the "trying-stuff-out" mode, and this post is another outlet for experimentation. So far I've been equally underwhelmed and impressed by LLMs as writing assistants. 
+Across several recent posts I've been putting LLMs to the test as writing assistants. I'm doing this by coding [add-ins and a shiny app for R Studio](https://crumplab.com/gptaddin/), where I do most of my writing. I'm still in the "trying-stuff-out" mode, and this post is another outlet for experimentation. So far I've been equally underwhelmed and impressed by LLMs as writing assistants.
 
-One real-world task that I'd like to accomplish this summer is to copy edit and generally revise/update my [intro to cognitive psychology textbook](https://crumplab.com/cognition/textbook/). I know there are lots of typos, missing words, and bad phrasing that can be improved in there, and someone needs to make it better. All of the problems are also my fault because I wrote it. 
+One real-world task that I'd like to accomplish this summer is to copy edit and generally revise/update my [intro to cognitive psychology textbook](https://crumplab.com/cognition/textbook/). I know there are lots of typos, missing words, and bad phrasing that can be improved in there, and someone needs to make it better. All of the problems are also my fault because I wrote it.
 
-I authored the textbook in RStudio as a plain text quarto document. RStudio has an OK spell-checker, but I find it not great (mainly because I haven't taken the time to cultivate my own dictionary). RStudio does not have a grammar checker. I've tried some grammar checking solutions, but did not find them suitable for my problems. 
+I authored the textbook in RStudio as a plain text quarto document. RStudio has an OK spell-checker, but I find it not great (mainly because I haven't taken the time to cultivate my own dictionary). RStudio does not have a grammar checker. I've tried some grammar checking solutions, but did not find them suitable for my problems.
 
 I have several writing problems that are hard for me to detect, especially when the writing is fresh. I find the subjective experience of not-seeing-my-mistakes to be similar to the phenomena of repetition blindness. For example, what does the sentence in this picture say?
 
@@ -40,13 +40,14 @@ Here's a screenshot of the Shiny app in action editing a paragraph from this pos
 ```{r, echo=FALSE}
 knitr::include_graphics("basic_sg.png")
 ```
+
 The prompt in this case is very simple:
 
 "You are an editorial writing assistant. Edit the text for spelling and grammar. Don't change the meaning of the words."
 
 The model returns a new version of the text, and I use the `diffobj` library to compare the original text with the suggested text. This provides a quick visual tool to help me see what has been changed. If I like the changes, then I can copy it into my document. The gpt-3.5-turbo and davinci models give pretty good results, but the other ones frequently go off the rails.
 
-Here's the same text run through a different model. This time it is slightly more heavy-handed, but the suggestions are fine to me. The suggestions will also change slightly each time, even if the input text is the same. This isn't necessarily a problem, as there are lots of ways to fix my bad writing. 
+Here's the same text run through a different model. This time it is slightly more heavy-handed, but the suggestions are fine to me. The suggestions will also change slightly each time, even if the input text is the same. This isn't necessarily a problem, as there are lots of ways to fix my bad writing.
 
 ```{r, echo=FALSE}
 knitr::include_graphics("basic_sg_davinci.png")
@@ -58,12 +59,11 @@ I want to stress the importance of accurate visual highlighting. Before I used a
 
 I added a couple prompts that offer rephrasing, rather than basic spelling and grammar. The prompts are:
 
+-   Reduced word count: "You are an editorial writing assistant. Edit the text to reduce word count without changing the meaning."
 
-- Reduced word count: "You are an editorial writing assistant. Edit the text to reduce word count without changing the meaning."
+-   Improved clarity: "You are an editorial writing assistant. Edit the text to improve clarity and flow."
 
-- Improved clarity: "You are an editorial writing assistant. Edit the text to improve clarity and flow."
-
-Here's a screenshot of the same paragraph run through an "improved clarity" prompt. 
+Here's a screenshot of the same paragraph run through an "improved clarity" prompt.
 
 ```{r, echo=FALSE}
 knitr::include_graphics("clarity.png")
@@ -79,11 +79,11 @@ I'm leaning into the "stochastic spell-checker" label for what is happening here
 
 In any case, just because the prompt is to fix spelling and grammar, does not guarantee that it will! I haven't tried to determine how many mistakes it misses, so I don't know how well the process is working. However, the visual highlighting of differences makes it easy for me to see if any proposed change is worth making. And, at least for basic spell-checking and grammar it is finding problems that I am correcting. So, the hit rate seems good, and the miss rate is missing.
 
-I haven't tried this yet, but I've been wondering what happens to text without any instructions or prompts. For example, I'm interested in sending a paragraph, having the system put it through the tokenization process, and then requesting it to reconstruct the original text verbatim. I may try this with a prompt that says "take the input, process it, and then return it without modifications". However, there is one issue; this sends text with the prompt, and I'm not sure whether having the prompt would introduce any artifacts into the quality of the reconstruction. At the same time, if I send text without instructions, the system seems programmed to do things like sentence completion, and not just take the input, tokenize it, then spit it back out based on its token representation. I'm raising this because I'm curious whether spell-checking behavior comes for free by virtue of the reconstruction process. Idle thoughts, I need to get back to work...  
+I haven't tried this yet, but I've been wondering what happens to text without any instructions or prompts. For example, I'm interested in sending a paragraph, having the system put it through the tokenization process, and then requesting it to reconstruct the original text verbatim. I may try this with a prompt that says "take the input, process it, and then return it without modifications". However, there is one issue; this sends text with the prompt, and I'm not sure whether having the prompt would introduce any artifacts into the quality of the reconstruction. At the same time, if I send text without instructions, the system seems programmed to do things like sentence completion, and not just take the input, tokenize it, then spit it back out based on its token representation. I'm raising this because I'm curious whether spell-checking behavior comes for free by virtue of the reconstruction process. Idle thoughts, I need to get back to work...
 
 ## Chapter 2
 
-I'm about to spend the afternoon editing another chapter, and I may update this post with lessons learned as I do that. 
+I'm about to spend the afternoon editing another chapter, and I may update this post with lessons learned as I do that.
 
 I started listenting to the new Aphex Twin album while editing. I'm not sure I'll say much more, but I may copy in screen shots to note some behavior.
 
@@ -103,15 +103,4 @@ The screenshot shows an example of chatty behavior. The suggested edits contain 
 knitr::include_graphics("chatty.png")
 ```
 
-I finished editing the second chapter. I found the LLM-assisted-stochastic-and-sometimes-totally-wacky spell-checker to be useful. I'll use it again for chapter 3. 9/10 stars. 
-
-
-
-
-
-
-
-
-
-
-
+I finished editing the second chapter. I found the LLM-assisted-stochastic-and-sometimes-totally-wacky spell-checker to be useful. I'll use it again for chapter 3. 9/10 stars.
