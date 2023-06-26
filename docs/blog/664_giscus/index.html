@@ -214,6 +214,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#testing" id="toc-testing" class="nav-link active" data-scroll-target="#testing">Testing…</a></li>
+  <li><a href="#recap-of-steps" id="toc-recap-of-steps" class="nav-link" data-scroll-target="#recap-of-steps">Recap of steps</a></li>
   </ul>
 </nav>
     </div>
@@ -263,7 +264,6 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <p>I’m also new to <a href="https://docs.github.com/en/discussions/quickstart">github discussions</a>, which seems pretty useful. Apparently, I need to enable this for a repo, and it becomes possible to use giscus on a quarto web page like this one. I’ll be following the quarto documentation on using giscus here: <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting" class="uri">https://quarto.org/docs/output-formats/html-basics.html#commenting</a>.</p>
 <p>Achievement unlocked!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"discussions.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="discussions.png" class="img-fluid" width="1275"></p>
 </div>
@@ -278,8 +278,35 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <p>There are configuration options, but it might work without them. I should try to render this page and see what happens. Seems to work…very nice.</p>
 <section id="testing" class="level2">
 <h2 class="anchored" data-anchor-id="testing">Testing…</h2>
-<p>I’m going to push this post online, then see if I can add a comment. Then I’m going to add the discus comment option to a different post and add a comment there. I’m hoping this will be a very smooth way to have comments on some posts and not others.</p>
+<p>I’m going to push this post online, then see if I can add a comment. Then I’m going to add the giscus comment option to a different post and add a comment there. I’m hoping this will be a very smooth way to have comments on some posts and not others.</p>
 <p>If all goes well I’ll come back here and recap the steps, which turned out to be easier than I thought they would be 🤞.</p>
+<p>Well, I’m impressed. It was a snap to add comments to another post. The comments show up as different threads in the discussion section of the repo I made just for the comments:</p>
+<p><img src="images/Screenshot 2023-06-26 at 9.58.50 AM.png" class="img-fluid"></p>
+<p>I think I’m getting email alerts from the giscus bot and I’ll need to quash that. Otherwise, seems like a decent option that I may use once in a while.</p>
+</section>
+<section id="recap-of-steps" class="level2">
+<h2 class="anchored" data-anchor-id="recap-of-steps">Recap of steps</h2>
+<p>These are the steps I took to add giscus comments to the bottom of my blog posts. I’m publishing this blog using quarto.</p>
+<ol type="1">
+<li>Create a new public repository
+<ul>
+<li>The giscus app will need permissions to write to the repo. I figured it would be safer to have a repo dedicated to comments, rather than enable discussions and write permissions to the main repo for my whole lab website</li>
+</ul></li>
+<li>Enable discussions for the repo.</li>
+<li>Install the giscus app for the repo
+<ul>
+<li><a href="https://github.com/apps/giscus" class="uri">https://github.com/apps/giscus</a></li>
+</ul></li>
+<li>Add the following yaml to individual posts where you want to enable giscus comments:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">comments</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">giscus</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">repo</span><span class="kw">:</span><span class="at"> gituser/gitrepo</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>See more options from the <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting">quarto documentation</a></li>
+</ol>
+<p>That’s it.</p>
+<hr>
 
 
 </section>

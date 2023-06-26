@@ -56,6 +56,53 @@ font-style: inherit;">"discussions.png"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="testing">Testing…</h2>
 <p>I’m going to push this post online, then see if I can add a comment. Then I’m going to add the discus comment option to a different post and add a comment there. I’m hoping this will be a very smooth way to have comments on some posts and not others.</p>
 <p>If all goes well I’ll come back here and recap the steps, which turned out to be easier than I thought they would be 🤞.</p>
+<p>Well, I’m impressed. It was a snap to add comments to another post. The comments show up as different threads in the discussion section of the repo I made just for the comments:</p>
+<p><img src="https://crumplab.com/blog/664_giscus/images/Screenshot 2023-06-26 at 9.58.50 AM.png" class="img-fluid"></p>
+<p>I think I’m getting email alerts from the giscus bot and I’ll need to quash that. Otherwise, seems like a decent option that I may use once in a while.</p>
+</section>
+<section id="recap-of-steps" class="level2">
+<h2 class="anchored" data-anchor-id="recap-of-steps">Recap of steps</h2>
+<p>These are the steps I took to add giscus comments to the bottom of my blog posts. I’m publishing this blog using quarto.</p>
+<ol type="1">
+<li>Create a new public repository
+<ul>
+<li>The giscus app will need permissions to write to the repo. I figured it would be safer to have a repo dedicated to comments, rather than enable discussions and write permissions to the main repo for my whole lab website</li>
+</ul></li>
+<li>Enable discussions for the repo.</li>
+<li>Install the giscuss app for the repo
+<ul>
+<li><a href="https://github.com/apps/giscus" class="uri">https://github.com/apps/giscus</a></li>
+</ul></li>
+<li>Add the following yaml to individual posts where you want to enable giscus comments:</li>
+</ol>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">comments</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">giscus</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span></span>
+<span id="cb2-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">repo</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
+<ol start="5" type="1">
+<li>See more options from the <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting">quarto documentation</a></li>
+</ol>
+<p>That’s is</p>
+<hr>
 
 
 </section>

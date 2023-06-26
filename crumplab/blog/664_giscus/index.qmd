@@ -8,7 +8,7 @@ date: "6-26-2023"
 comments:
   giscus: 
     repo: CrumpLab/crumplab_comments
-evaluate:
+execute:
   echo: false
 ---
 
@@ -44,6 +44,35 @@ There are configuration options, but it might work without them. I should try to
 
 ## Testing...
 
-I'm going to push this post online, then see if I can add a comment. Then I'm going to add the discus comment option to a different post and add a comment there. I'm hoping this will be a very smooth way to have comments on some posts and not others.
+I'm going to push this post online, then see if I can add a comment. Then I'm going to add the giscus comment option to a different post and add a comment there. I'm hoping this will be a very smooth way to have comments on some posts and not others.
 
 If all goes well I'll come back here and recap the steps, which turned out to be easier than I thought they would be 🤞.
+
+Well, I'm impressed. It was a snap to add comments to another post. The comments show up as different threads in the discussion section of the repo I made just for the comments:
+
+![](images/Screenshot%202023-06-26%20at%209.58.50%20AM.png)
+
+I think I'm getting email alerts from the giscus bot and I'll need to quash that. Otherwise, seems like a decent option that I may use once in a while.
+
+## Recap of steps
+
+These are the steps I took to add giscus comments to the bottom of my blog posts. I'm publishing this blog using quarto.
+
+1.  Create a new public repository
+    -   The giscus app will need permissions to write to the repo. I figured it would be safer to have a repo dedicated to comments, rather than enable discussions and write permissions to the main repo for my whole lab website
+2.  Enable discussions for the repo.
+3.  Install the giscus app for the repo
+    -   <https://github.com/apps/giscus>
+4.  Add the following yaml to individual posts where you want to enable giscus comments:
+
+``` yaml
+comments:
+  giscus: 
+    repo: gituser/gitrepo
+```
+
+5. See more options from the [quarto documentation](https://quarto.org/docs/output-formats/html-basics.html#commenting)
+
+That's it.
+
+---------
