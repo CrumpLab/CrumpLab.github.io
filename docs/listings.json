@@ -1,7 +1,15 @@
 [
   {
-    "listing": "/Fun.html",
-    "items": []
+    "listing": "/index.html",
+    "items": [
+      "/Blog.html",
+      "/People.html",
+      "/Publications.html",
+      "/Books.html",
+      "/Courses.html",
+      "/Opportunities.html",
+      "/Fun.html"
+    ]
   },
   {
     "listing": "/People.html",
@@ -56,15 +64,7 @@
     "items": []
   },
   {
-    "listing": "/index.html",
-    "items": [
-      "/Blog.html",
-      "/People.html",
-      "/Publications.html",
-      "/Books.html",
-      "/Courses.html",
-      "/Opportunities.html",
-      "/Fun.html"
-    ]
+    "listing": "/Fun.html",
+    "items": []
   }
 ]

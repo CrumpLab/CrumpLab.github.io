@@ -1,9 +1,0 @@
-crumpInstancesCognitionQuestions2021:
-  link1:
-    name: 'website'
-    url: 'https://www.crumplab.com/cognition/textbook/index.html'
-    icon: 'fas fa-globe'
-  link2:
-    name: 'github'
-    url: 'https://github.com/CrumpLab/cognition'
-    icon: 'fa fa-github'

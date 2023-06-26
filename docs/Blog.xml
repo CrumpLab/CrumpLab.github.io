@@ -33,13 +33,6 @@
 <p>I’m also new to <a href="https://docs.github.com/en/discussions/quickstart">github discussions</a>, which seems pretty useful. Apparently, I need to enable this for a repo, and it becomes possible to use giscus on a quarto web page like this one. I’ll be following the quarto documentation on using giscus here: <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting" class="uri">https://quarto.org/docs/output-formats/html-basics.html#commenting</a>.</p>
 <p>Achievement unlocked!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">knitr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"discussions.png"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://crumplab.com/blog/664_giscus/discussions.png" class="img-fluid" width="1275"></p>
 </div>
@@ -54,7 +47,7 @@ font-style: inherit;">"discussions.png"</span>)</span></code></pre></div>
 <p>There are configuration options, but it might work without them. I should try to render this page and see what happens. Seems to work…very nice.</p>
 <section id="testing" class="level2">
 <h2 class="anchored" data-anchor-id="testing">Testing…</h2>
-<p>I’m going to push this post online, then see if I can add a comment. Then I’m going to add the discus comment option to a different post and add a comment there. I’m hoping this will be a very smooth way to have comments on some posts and not others.</p>
+<p>I’m going to push this post online, then see if I can add a comment. Then I’m going to add the giscus comment option to a different post and add a comment there. I’m hoping this will be a very smooth way to have comments on some posts and not others.</p>
 <p>If all goes well I’ll come back here and recap the steps, which turned out to be easier than I thought they would be 🤞.</p>
 <p>Well, I’m impressed. It was a snap to add comments to another post. The comments show up as different threads in the discussion section of the repo I made just for the comments:</p>
 <p><img src="https://crumplab.com/blog/664_giscus/images/Screenshot 2023-06-26 at 9.58.50 AM.png" class="img-fluid"></p>
@@ -69,18 +62,18 @@ font-style: inherit;">"discussions.png"</span>)</span></code></pre></div>
 <li>The giscus app will need permissions to write to the repo. I figured it would be safer to have a repo dedicated to comments, rather than enable discussions and write permissions to the main repo for my whole lab website</li>
 </ul></li>
 <li>Enable discussions for the repo.</li>
-<li>Install the giscuss app for the repo
+<li>Install the giscus app for the repo
 <ul>
 <li><a href="https://github.com/apps/giscus" class="uri">https://github.com/apps/giscus</a></li>
 </ul></li>
 <li>Add the following yaml to individual posts where you want to enable giscus comments:</li>
 </ol>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">comments</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">:</span></span>
-<span id="cb2-2"><span class="at" style="color: #657422;
+<span id="cb1-2"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -89,7 +82,7 @@ background-color: null;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span></span>
-<span id="cb2-3"><span class="at" style="color: #657422;
+<span id="cb1-3"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -101,7 +94,7 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 <ol start="5" type="1">
 <li>See more options from the <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting">quarto documentation</a></li>
 </ol>
-<p>That’s is</p>
+<p>That’s it.</p>
 <hr>
 
 
@@ -6774,8 +6767,8 @@ background-color: null;
 font-style: inherit;">datatable</span>(selected_bib)</span></code></pre></div>
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8eb912033db48f76a279" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-8eb912033db48f76a279">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3b9671433b0858918a14" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-3b9671433b0858918a14">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["[@atkinsonHumanMemoryProposed1968]","[@baddeleyWorkingMemory1974]","[@craikLevelsProcessingFramework1972]"],[1968,1974,1972],["Human Memory: A Proposed System and Its Control Processes","Working Memory","Levels of Processing: A Framework for Memory Research"],["This is a classic paper because...","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>CITATION<\/th>\n      <th>DATE<\/th>\n      <th>TITLE<\/th>\n      <th>NOTE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>That works, but it doesn’t render the citations. I feel like I have been here before with the <a href="https://www.semanticlibrarian.com">Semantic librarian project</a>.</p>
@@ -7151,7 +7144,7 @@ Whittlesea, Bruce W. A. 1997. <span>“Production, Evaluation, and Preservation 
 <p><img src="https://crumplab.com/blog/885_10_16_22_unplanning/images/unplanning.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-<p>Last knit: 2023-06-07</p>
+<p>Last knit: 2023-06-26</p>
 <p>I’ll probably spend more time on making the banner image for this post than writing it because there’s a looming Brooklyn brunch situation, and I only have a simple suggestion for my future self: unplan your course.</p>
 <p>I’ve planned lots of courses, and I’m about to plan two more for next semester. One of them is a Macaulay Honor’s seminar for undergraduates in the first year of that program. The seminar is called, “The people of New York City”. It’s a really interesting course that has been taught in many different ways across CUNY. It’s also way outside my realm of expertise, which is typical for everyone who is asked to lead this seminar. Needless to say, I have started planning my approach to the seminar. But, I really don’t want the planning to get in the way, so I’m starting to do unplanning as well.</p>
 <p>What does unplanning entail? I’m not so sure yet, so I’m slopping down thoughts about what I might mean. Relatedly, this Fall 2022 semester I am trying “ungrading” <span class="citation" data-cites="blum2020">(Blum 2020)</span> in my <a href="https://crumplab.com/cognition">intro to cognition course</a>. This approach can mean lots of different things for a classroom, and <a href="https://crumplab.com/blog/post_888_8_23_22_teaching2530/">I’ve been blogging a bit about that over here</a>. One of the things it means to me is that the class becomes a community space inhabited by participating individual learners. From this vantage point, I’ve been working through what it means to deliver my planned course as a member of the community who is very quickly coming up to speed with community wants and needs.</p>

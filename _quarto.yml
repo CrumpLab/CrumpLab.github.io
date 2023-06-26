@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs/
+  resources:
+    - "webr-serviceworker.js"
+    - "webr-worker.js"
+
+website:
+  title: "crumplab"
+  google-analytics: G-HPGGT4QZ8Q
+  site-url: "https://crumplab.com"
+  description: "Website for the computational cognition lab at Brooklyn College of CUNY."
+  twitter-card: true
+  open-graph: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - People.qmd
+      - href: Publications.qmd
+        text: Pubs
+      - Books.qmd
+      - Courses.qmd
+      - Apps.qmd
+      - Opportunities.qmd
+      - Blog.qmd
+      - Fun.qmd
+    right:
+      - icon: github
+        href: https://github.com/CrumpLab
+        aria-label: GitHub
+      - icon: mastodon
+        href: https://fosstodon.org/@MattCrumpLab
+      - icon: twitter
+        href: https://twitter.com/MattCrumpLab
+        aria-label: Twitter
+      - icon: youtube
+        href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
+        aria-label: Youtube
+      - icon: rss
+        href: Blog.xml
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
+
+editor: visual
+

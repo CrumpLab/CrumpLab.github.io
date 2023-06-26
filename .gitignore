@@ -4,6 +4,7 @@
 .Ruserdata
 .httr-oauth
 .DS_Store
-inst/doc
-/crumplab/.quarto
+.quarto
 /.quarto
+
+/.quarto/

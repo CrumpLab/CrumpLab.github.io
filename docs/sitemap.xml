@@ -1,195 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://crumplab.com/Books.html</loc>
-    <lastmod>2023-06-24T21:52:51.185Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/Courses.html</loc>
-    <lastmod>2023-06-24T22:56:36.508Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/Fun.html</loc>
-    <lastmod>2023-06-24T22:47:22.726Z</lastmod>
+    <loc>https://crumplab.com/Publications.html</loc>
+    <lastmod>2023-06-26T15:07:54.040Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/index.html</loc>
-    <lastmod>2023-06-26T14:04:40.169Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/Apps.html</loc>
-    <lastmod>2023-06-25T18:40:08.413Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/880_BBS/index.html</loc>
-    <lastmod>2023-06-07T17:47:14.200Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/881_Mastodon/index.html</loc>
-    <lastmod>2023-06-07T17:47:16.285Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_999_5_17_22_blogging/index.html</loc>
-    <lastmod>2023-06-07T17:47:18.383Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/883_command_center/index.html</loc>
-    <lastmod>2023-06-07T17:47:20.373Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_889_7_7_22_fonts/index.html</loc>
-    <lastmod>2023-06-07T17:47:22.234Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/772_chatGPT/index.html</loc>
-    <lastmod>2023-06-07T17:47:24.458Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_997_5_19_22_pubs/index.html</loc>
-    <lastmod>2023-06-07T17:47:40.485Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_996_5_20_22_assignmentflex/index.html</loc>
-    <lastmod>2023-06-07T17:47:44.303Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_887_8_25_22_quartoblog/index.html</loc>
-    <lastmod>2023-06-07T17:47:50.786Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/778_funkwhale/index.html</loc>
-    <lastmod>2023-06-24T22:54:02.318Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_990_6_28_22_eugenicsbooks/index.html</loc>
-    <lastmod>2023-06-07T17:48:23.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_994_5_26_22_cheating/index.html</loc>
-    <lastmod>2023-06-07T17:48:25.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_888_8_23_22_teaching2530/index.html</loc>
-    <lastmod>2023-06-07T17:48:28.159Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/779_MoreMastodon/index.html</loc>
-    <lastmod>2023-06-07T17:48:29.718Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/774_spring2023/index.html</loc>
-    <lastmod>2023-06-07T17:48:31.196Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/882_JOKE/index.html</loc>
-    <lastmod>2023-06-07T17:48:33.433Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/777_generative_art/index.html</loc>
-    <lastmod>2023-06-07T17:48:44.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/885_10_16_22_unplanning/index.html</loc>
-    <lastmod>2023-06-07T17:48:49.559Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/770_rstudio_gpt/index.html</loc>
-    <lastmod>2023-06-23T16:42:36.392Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/884_10_25_22_ReadingListCognition/index.html</loc>
-    <lastmod>2023-06-07T17:48:57.627Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_886_10_14_22_quartoProjects/index.html</loc>
-    <lastmod>2023-06-07T17:48:59.669Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/older_9999_7_28_20_OC/index.html</loc>
-    <lastmod>2023-06-07T17:49:02.016Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/771_GPT_Stroop/index.html</loc>
-    <lastmod>2023-06-07T20:28:20.379Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/older_9999_psych_eugenics/index.html</loc>
-    <lastmod>2023-06-07T17:49:18.098Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/post_991_6_28_22_annotate/index.html</loc>
-    <lastmod>2023-06-07T17:49:24.524Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/older_9999_7_7_20_EugenicMind/index.html</loc>
-    <lastmod>2023-06-07T17:49:26.850Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/older_9999_7_2_20_JBP/index.html</loc>
-    <lastmod>2023-06-07T17:49:32.673Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/776_RSS/index.html</loc>
-    <lastmod>2023-06-07T17:49:35.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/Publications.html</loc>
-    <lastmod>2023-06-24T21:52:45.333Z</lastmod>
+    <lastmod>2023-06-26T15:07:42.103Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/People.html</loc>
-    <lastmod>2023-06-24T21:52:26.351Z</lastmod>
+    <lastmod>2023-06-26T15:07:49.431Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/people/wesley_huang.html</loc>
-    <lastmod>2023-06-24T12:56:30.819Z</lastmod>
+    <lastmod>2023-06-26T15:04:56.447Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/people/shifa_maqsood.html</loc>
-    <lastmod>2023-06-24T12:56:43.176Z</lastmod>
+    <lastmod>2023-06-26T15:04:56.839Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/people/matt_crump.html</loc>
-    <lastmod>2023-06-24T18:12:40.225Z</lastmod>
+    <lastmod>2023-06-26T15:04:57.261Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/people/drew_shives.html</loc>
-    <lastmod>2023-06-24T12:57:56.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/people/kevonte_mitchell.html</loc>
-    <lastmod>2023-06-07T17:49:51.307Z</lastmod>
+    <lastmod>2023-06-26T15:04:57.680Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/Opportunities.html</loc>
-    <lastmod>2023-06-24T22:47:24.535Z</lastmod>
+    <lastmod>2023-06-26T15:08:15.242Z</lastmod>
   </url>
   <url>
     <loc>https://crumplab.com/Blog.html</loc>
-    <lastmod>2023-06-26T14:07:13.298Z</lastmod>
+    <lastmod>2023-06-26T15:08:26.670Z</lastmod>
   </url>
   <url>
-    <loc>https://crumplab.com/blog/669_gpt_learnR/index.html</loc>
-    <lastmod>2023-06-08T14:32:21.451Z</lastmod>
+    <loc>https://crumplab.com/Books.html</loc>
+    <lastmod>2023-06-26T15:07:59.061Z</lastmod>
   </url>
   <url>
-    <loc>https://crumplab.com/blog/668_gpt_adventure/index.html</loc>
-    <lastmod>2023-06-20T20:09:33.634Z</lastmod>
+    <loc>https://crumplab.com/Courses.html</loc>
+    <lastmod>2023-06-26T15:08:04.953Z</lastmod>
   </url>
   <url>
-    <loc>https://crumplab.com/blog/667_GPT_editing/index.html</loc>
-    <lastmod>2023-06-22T18:59:42.384Z</lastmod>
+    <loc>https://crumplab.com/Apps.html</loc>
+    <lastmod>2023-06-26T15:08:11.081Z</lastmod>
   </url>
   <url>
-    <loc>https://crumplab.com/blog/666_gpt_grammar/index.html</loc>
-    <lastmod>2023-06-24T22:52:33.456Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/665_realworld_editing/index.html</loc>
-    <lastmod>2023-06-26T13:50:50.031Z</lastmod>
-  </url>
-  <url>
-    <loc>https://crumplab.com/blog/664_giscus/index.html</loc>
-    <lastmod>2023-06-26T14:12:21.828Z</lastmod>
+    <loc>https://crumplab.com/Fun.html</loc>
+    <lastmod>2023-06-26T15:08:32.222Z</lastmod>
   </url>
 </urlset>
