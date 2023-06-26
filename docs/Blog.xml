@@ -3056,6 +3056,7 @@ font-style: inherit;">kable</span>(accuracy_data)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="multiple-simulated-subjects">Multiple simulated subjects</h2>
 <p>I tried to run the following, which loops the above 10 times. I ran into an error on the third iteration because the JSON was not formatted correctly. Added some validation for the JSON. The JSON was not consistent, so I changed the prompt up a bit.</p>
 <p>So far I haven’t been able to run this loop. I got through 7 iterations, and then received a message that the server was overloaded. Also, only 2 of those 7 iterations produced valid JSON. I’m going to put this on the back burner for now.</p>
+<p>Update: I’ve gotten more reliable JSON now with a prompt using double quotes rather than single quotes.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -3254,7 +3255,7 @@ font-style: inherit;">"</span>) , <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"-----"</span>,<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Put simulated identification responses and reaction times into a JSON array of objects following this format: [{'trial': 'trial number', 'word': 'the name of the word, string','color': 'the color of the word, string','response': 'the simulated identification response, string','reaction_time': 'the simulated reaction time, milliseconds an integer'}]"</span>, <span class="at" style="color: #657422;
+font-style: inherit;">'This is a simulated Stroop task. You will be shown a Stroop item in the form of a sentence. The sentence will describe a word presented in a particular ink-color. Your task is to identify the ink-color of the word as quickly and accurately as possible. Put the simulated identification response and reaction time into a JSON array using this format: [{"trial": "trial number, integer", "word": "the name of the word, string","color": "the color of the word, string","response": "the simulated identification response, string","reaction_time": "the simulated reaction time, milliseconds an integer"}].'</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">sep=</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -3289,18 +3290,21 @@ background-color: null;
 font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>message.content)</span>
-<span id="cb6-57">  </span>
-<span id="cb6-58">  <span class="co" style="color: #5E5E5E;
+<span id="cb6-57">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(test_JSON)</span>
+<span id="cb6-58">  </span>
+<span id="cb6-59">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># validation checks pass, write the simulated data to all_sim_data </span></span>
-<span id="cb6-59">  <span class="cf" style="color: #003B4F;
+<span id="cb6-60">  <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span>(test_JSON <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>){</span>
-<span id="cb6-60">    sim_data <span class="ot" style="color: #003B4F;
+<span id="cb6-61">    sim_data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> jsonlite<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3311,8 +3315,8 @@ background-color: null;
 font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>message.content)</span>
-<span id="cb6-61">    </span>
-<span id="cb6-62">    <span class="cf" style="color: #003B4F;
+<span id="cb6-62">    </span>
+<span id="cb6-63">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3337,33 +3341,1093 @@ background-color: null;
 font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>) {</span>
-<span id="cb6-63">      sim_data <span class="ot" style="color: #003B4F;
+<span id="cb6-64">      sim_data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> sim_data <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb6-64">        <span class="fu" style="color: #4758AB;
+<span id="cb6-65">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">sim_subject =</span> i)</span>
-<span id="cb6-65">  </span>
-<span id="cb6-66">      all_sim_data <span class="ot" style="color: #003B4F;
+<span id="cb6-66">  </span>
+<span id="cb6-67">      all_sim_data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rbind</span>(all_sim_data,sim_data)</span>
-<span id="cb6-67">    }</span>
-<span id="cb6-68">    </span>
-<span id="cb6-69">  }</span>
-<span id="cb6-70">}</span>
-<span id="cb6-71"></span>
-<span id="cb6-72"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># model responses are in JSON format</span></span>
+<span id="cb6-68">    }</span>
+<span id="cb6-69">    </span>
+<span id="cb6-70">  }</span>
+<span id="cb6-71">}</span>
+<span id="cb6-72"></span>
 <span id="cb6-73"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">#save.image("batch2.RData")</span></span></code></pre></div>
+font-style: inherit;"># model responses are in JSON format</span></span>
+<span id="cb6-74"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">save.image</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"batch2.RData"</span>)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">load</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">file =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"batch2.RData"</span>)</span></code></pre></div>
+</div>
+<section id="analysis" class="level3">
+<h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
+<p>9 out 10 simulations returned a valid JSON file.</p>
+<section id="ex-guassian-rts" class="level4">
+<h4 class="anchored" data-anchor-id="ex-guassian-rts">Ex-guassian RTs?</h4>
+<p>One reason to run multiple simulated subjects is to see whether the model gives different responses each time. This is a histogram of the simulated RTs across all simulated subjects. Reaction time distributions usually look a combination of a gaussian and an exponential distribution. This has some of that flavor.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hist</span>(all_sim_data<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>reaction_time)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/771_GPT_Stroop/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="do-differenet-simulated-subjects-show-different-stroop-effects" class="level3">
+<h3 class="anchored" data-anchor-id="do-differenet-simulated-subjects-show-different-stroop-effects">Do differenet simulated subjects show different Stroop effects?</h3>
+<p>The answer appears to be yes. All of these simulated subjects have different sized Stroop effects.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># report rt data</span></span>
+<span id="cb9-2">rt_data_subject <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb9-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">congruency =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"congruent"</span>,</span>
+<span id="cb9-4">                                word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"incongruent"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb9-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">accuracy =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb9-6">                              response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb9-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(accuracy <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb9-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(congruency,sim_subject) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb9-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean_rt =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(reaction_time)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb9-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ungroup</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb9-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pivot_wider</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">names_from =</span> congruency,</span>
+<span id="cb9-12">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values_from =</span> mean_rt) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb9-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Stroop_effect =</span> incongruent<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>congruent)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'congruency'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(rt_data_subject)</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">sim_subject</th>
+<th style="text-align: right;">congruent</th>
+<th style="text-align: right;">incongruent</th>
+<th style="text-align: right;">Stroop_effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">500.0000</td>
+<td style="text-align: right;">612.5000</td>
+<td style="text-align: right;">112.50000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">317.5000</td>
+<td style="text-align: right;">401.6667</td>
+<td style="text-align: right;">84.16667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">728.3333</td>
+<td style="text-align: right;">811.6667</td>
+<td style="text-align: right;">83.33333</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">587.0000</td>
+<td style="text-align: right;">849.3333</td>
+<td style="text-align: right;">262.33333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">401.9167</td>
+<td style="text-align: right;">471.1667</td>
+<td style="text-align: right;">69.25000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">575.0000</td>
+<td style="text-align: right;">829.1667</td>
+<td style="text-align: right;">254.16667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">717.6667</td>
+<td style="text-align: right;">869.7500</td>
+<td style="text-align: right;">152.08333</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">332.7500</td>
+<td style="text-align: right;">412.3333</td>
+<td style="text-align: right;">79.58333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">475.0000</td>
+<td style="text-align: right;">545.8333</td>
+<td style="text-align: right;">70.83333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="accuracy-data-1" class="level3">
+<h3 class="anchored" data-anchor-id="accuracy-data-1">Accuracy Data</h3>
+<p>100% accuracy on all trials.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># report accuracy data</span></span>
+<span id="cb12-2">accuracy_data_subject <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb12-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">congruency =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"congruent"</span>,</span>
+<span id="cb12-4">                                word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"incongruent"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb12-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">accuracy =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb12-6">                              response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb12-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(congruency,sim_subject) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb12-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">proportion_correct =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sum</span>(accuracy)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb12-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ungroup</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb12-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pivot_wider</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">names_from =</span> congruency,</span>
+<span id="cb12-11">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values_from =</span> proportion_correct) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb12-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Stroop_effect =</span> incongruent<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>congruent)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'congruency'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(accuracy_data_subject)</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">sim_subject</th>
+<th style="text-align: right;">congruent</th>
+<th style="text-align: right;">incongruent</th>
+<th style="text-align: right;">Stroop_effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="congruency-sequence-effects" class="level2">
+<h2 class="anchored" data-anchor-id="congruency-sequence-effects">Congruency sequence effects</h2>
+<p>A common finding in the Stroop literature is that Stroop effects are larger following congruent trials than incongruent trials. I didn’t mention anything about this in the prompt. I’m curious if the LLM will put the pattern into the simulated RTs. One reason it might do that is if real raw Stroop data was part of the training set.</p>
+<p>Doesn’t look like it, but should simulate many more subjects and then take a closer look.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># add last trial congruency as a factor</span></span>
+<span id="cb15-2">all_sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">congruency =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"congruent"</span>,</span>
+<span id="cb15-4">                                word <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"incongruent"</span>))</span>
+<span id="cb15-5"></span>
+<span id="cb15-6">all_sim_data<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>last_trial_congruent <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span>,all_sim_data<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>congruency[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dim</span>(all_sim_data)[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)])</span>
+<span id="cb15-7"></span>
+<span id="cb15-8">all_sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">last_trial_congruent =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(trial <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span>,</span>
+<span id="cb15-10">                                          trial <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> last_trial_congruent)) </span>
+<span id="cb15-11"></span>
+<span id="cb15-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># report rt data</span></span>
+<span id="cb15-13">rt_data_subject_seq <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">accuracy =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb15-15">                              response <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-16">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(accuracy <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb15-17">         <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(last_trial_congruent) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-18">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">last_trial_congruent =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"n1"</span>,last_trial_congruent)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-19">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(congruency,last_trial_congruent,sim_subject) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-20">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean_rt =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(reaction_time)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-21">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ungroup</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-22">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pivot_wider</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">names_from =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(congruency,last_trial_congruent),</span>
+<span id="cb15-23">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values_from =</span> mean_rt) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb15-24">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Previous_congruent =</span> incongruent_n1congruent<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>congruent_n1congruent,</span>
+<span id="cb15-25">         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Previous_incongruent =</span> incongruent_n1incongruent<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>congruent_n1incongruent</span>
+<span id="cb15-26">         )</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'congruency', 'last_trial_congruent'. You
+can override using the `.groups` argument.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(rt_data_subject_seq)</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">sim_subject</th>
+<th style="text-align: right;">congruent_n1congruent</th>
+<th style="text-align: right;">congruent_n1incongruent</th>
+<th style="text-align: right;">incongruent_n1congruent</th>
+<th style="text-align: right;">incongruent_n1incongruent</th>
+<th style="text-align: right;">Previous_congruent</th>
+<th style="text-align: right;">Previous_incongruent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">498.3333</td>
+<td style="text-align: right;">462.0</td>
+<td style="text-align: right;">620.0000</td>
+<td style="text-align: right;">605.0000</td>
+<td style="text-align: right;">121.66667</td>
+<td style="text-align: right;">143.00000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">318.3333</td>
+<td style="text-align: right;">296.0</td>
+<td style="text-align: right;">406.6667</td>
+<td style="text-align: right;">396.6667</td>
+<td style="text-align: right;">88.33333</td>
+<td style="text-align: right;">100.66667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">705.0000</td>
+<td style="text-align: right;">752.0</td>
+<td style="text-align: right;">820.0000</td>
+<td style="text-align: right;">803.3333</td>
+<td style="text-align: right;">115.00000</td>
+<td style="text-align: right;">51.33333</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">602.3333</td>
+<td style="text-align: right;">536.0</td>
+<td style="text-align: right;">822.3333</td>
+<td style="text-align: right;">876.3333</td>
+<td style="text-align: right;">220.00000</td>
+<td style="text-align: right;">340.33333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">400.5000</td>
+<td style="text-align: right;">378.0</td>
+<td style="text-align: right;">480.1667</td>
+<td style="text-align: right;">462.1667</td>
+<td style="text-align: right;">79.66667</td>
+<td style="text-align: right;">84.16667</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">508.3333</td>
+<td style="text-align: right;">630.0</td>
+<td style="text-align: right;">850.0000</td>
+<td style="text-align: right;">808.3333</td>
+<td style="text-align: right;">341.66667</td>
+<td style="text-align: right;">178.33333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">693.0000</td>
+<td style="text-align: right;">726.8</td>
+<td style="text-align: right;">877.6667</td>
+<td style="text-align: right;">861.8333</td>
+<td style="text-align: right;">184.66667</td>
+<td style="text-align: right;">135.03333</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">328.1667</td>
+<td style="text-align: right;">318.2</td>
+<td style="text-align: right;">417.0000</td>
+<td style="text-align: right;">407.6667</td>
+<td style="text-align: right;">88.83333</td>
+<td style="text-align: right;">89.46667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">480.0000</td>
+<td style="text-align: right;">464.0</td>
+<td style="text-align: right;">571.6667</td>
+<td style="text-align: right;">520.0000</td>
+<td style="text-align: right;">91.66667</td>
+<td style="text-align: right;">56.00000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="round-2" class="level2">
+<h2 class="anchored" data-anchor-id="round-2">Round 2</h2>
+<p>The above code did not return reliable JSON. One issue was that I was asking for the LLM to complete a large amount of trials at once, and return a JSON structure for all of those trials.</p>
+<p>Another option would be to request outputs on a “trial-by-trial” basis. This would allow me to check whether valid JSON was returned, and then keep or redo the trial.</p>
+<p>Also, I think my prompt may have been causing invalid JSON because of using single quotes.</p>
+<p>Steps:</p>
+<ol type="1">
+<li>Submit a prompt with instructions, similar to what I had above</li>
+<li>Attach each new trial another message, get the response, check it, go to next</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># use the colors red, green, blue, and yellow</span></span>
+<span id="cb18-2"></span>
+<span id="cb18-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># four possible congruent items</span></span>
+<span id="cb18-4">congruent_items <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color red"</span>,</span>
+<span id="cb18-5">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color blue"</span>,</span>
+<span id="cb18-6">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color yellow"</span>,</span>
+<span id="cb18-7">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color green"</span>)</span>
+<span id="cb18-8"></span>
+<span id="cb18-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># four possible incongruent items</span></span>
+<span id="cb18-10">incongruent_items <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color blue"</span>,</span>
+<span id="cb18-11">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color green"</span>,</span>
+<span id="cb18-12">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word red printed in the color yellow"</span>,</span>
+<span id="cb18-13">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color red"</span>,</span>
+<span id="cb18-14">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color green"</span>,</span>
+<span id="cb18-15">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word blue printed in the color yellow"</span>,</span>
+<span id="cb18-16">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color red"</span>,</span>
+<span id="cb18-17">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color blue"</span>,</span>
+<span id="cb18-18">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word yellow printed in the color green"</span>,</span>
+<span id="cb18-19">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color red"</span>,</span>
+<span id="cb18-20">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color blue"</span>,</span>
+<span id="cb18-21">                       <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The word green printed in the color yellow"</span>)</span>
+<span id="cb18-22"></span>
+<span id="cb18-23"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># generate 50% congruent and 50% incongruent trials</span></span>
+<span id="cb18-24"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 12 each (congruent and incongruent)</span></span>
+<span id="cb18-25">trials <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rep</span>(congruent_items,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>),incongruent_items))</span>
+<span id="cb18-26"></span>
+<span id="cb18-27"></span>
+<span id="cb18-28"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#set up variables to store data</span></span>
+<span id="cb18-29">sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tibble</span>()</span>
+<span id="cb18-30">all_sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tibble</span>()</span>
+<span id="cb18-31">gpt_response_list <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>()</span>
+<span id="cb18-32"></span>
+<span id="cb18-33"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># starting message</span></span>
+<span id="cb18-34"></span>
+<span id="cb18-35">sim_task <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb18-36">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"system"</span>,</span>
+<span id="cb18-37">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"</span>),</span>
+<span id="cb18-38">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"assistant"</span>,</span>
+<span id="cb18-39">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OK, what are the instructions for this task?"</span>),</span>
+<span id="cb18-40">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"user"</span>,</span>
+<span id="cb18-41">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'This is a simulated Stroop task. You will be shown a Stroop item in the form of a sentence. The sentence will describe a word presented in a particular ink-color. Your task is to identify the ink-color of the word as quickly and accurately as possible. Put the simulated identification response and reaction time into a JSON array using this format: [{"trial": "trial number, integer", "word": "the name of the word, string","color": "the color of the word, string","response": "the simulated identification response, string","reaction_time": "the simulated reaction time, milliseconds an integer"}].'</span>),</span>
+<span id="cb18-42">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"assistant"</span>,</span>
+<span id="cb18-43">           <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"OK, show the next trial."</span>)</span>
+<span id="cb18-44">       )</span>
+<span id="cb18-45"></span>
+<span id="cb18-46">task_names <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"trial"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"color"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"response"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"reaction_time"</span>)</span>
+<span id="cb18-47"></span>
+<span id="cb18-48"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span>(i <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>){</span>
+<span id="cb18-49">  </span>
+<span id="cb18-50">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(i)</span>
+<span id="cb18-51">  </span>
+<span id="cb18-52">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># add trial to list of messages</span></span>
+<span id="cb18-53">  sim_task[[<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(sim_task)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]] <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb18-54">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"user"</span>,</span>
+<span id="cb18-55">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> trials[i]</span>
+<span id="cb18-56">  )</span>
+<span id="cb18-57">  </span>
+<span id="cb18-58">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># get response</span></span>
+<span id="cb18-59">  gpt_response <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_chat_completion</span>(</span>
+<span id="cb18-60">   <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gpt-3.5-turbo"</span>,</span>
+<span id="cb18-61">   <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">messages =</span> sim_task</span>
+<span id="cb18-62">   )</span>
+<span id="cb18-63">  </span>
+<span id="cb18-64">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#validate json and proceed</span></span>
+<span id="cb18-65">  </span>
+<span id="cb18-66">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span>(jsonlite<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">validate</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.character</span>(gpt_response<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>message.content)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>){</span>
+<span id="cb18-67">    </span>
+<span id="cb18-68">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># convert JSON to tibble</span></span>
+<span id="cb18-69">    trial_tibble <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> jsonlite<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fromJSON</span>(gpt_response<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>message.content)</span>
+<span id="cb18-70">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(trial_tibble)</span>
+<span id="cb18-71">    </span>
+<span id="cb18-72">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># check if tibble has correct names</span></span>
+<span id="cb18-73">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">all</span>(task_names <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">names</span>(trial_tibble))){</span>
+<span id="cb18-74">      </span>
+<span id="cb18-75">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#add new row to sim</span></span>
+<span id="cb18-76">      sim_data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rbind</span>(sim_data,trial_tibble)</span>
+<span id="cb18-77">      </span>
+<span id="cb18-78">      <span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## response to to message list</span></span>
+<span id="cb18-79">      sim_task[[<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(sim_task)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]] <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb18-80">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> gpt_response<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>message.role,</span>
+<span id="cb18-81">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> gpt_response<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>message.content</span>
+<span id="cb18-82">      )</span>
+<span id="cb18-83">    }</span>
+<span id="cb18-84">  }</span>
+<span id="cb18-85">  </span>
+<span id="cb18-86">}</span></code></pre></div>
 </div>
 
 

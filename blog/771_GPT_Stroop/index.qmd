@@ -25,7 +25,7 @@ Based on messing around with GPT models previously, I'm pretty confident that so
 
 Why do I care about this? Some of my research involves questions about attentional control abilities [@bugg2012support; @braem2019measuring], and some of my work uses online methods to collect data. For example, experimental tasks are programmed for web-browsers using tools like JsPsych [@de2015jspsych], and participants may be recruited from platforms like Amazon's Mechanical Turk [@crump2013evaluating]. Online methods are useful research tools, but they are not without problems.
 
-One of my concerns as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. I'm usually not interested in analyzing data spoofed by a bot. 
+One of my concerns as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. I'm usually not interested in analyzing data spoofed by a bot.
 
 I haven't encountered major issues with bots in the tasks I run. These tasks require quick responses to recognize words and letters. Although it is possible to develop a bot to perform these actions, it wouldn't be profitable for the bot programmer.
 
@@ -174,7 +174,7 @@ rt_data <- sim_data %>%
   mutate(congruency = case_when(word == color ~ "congruent",
                                 word != color ~ "incongruent")) %>%
   group_by(congruency) %>%
-  summarize(mean_rt = mean(reaction_time))
+  summarize(mean_rt = mean(reaction_time), .groups = "drop")
 
 knitr::kable(rt_data)
 ```
@@ -191,7 +191,7 @@ accuracy_data <- sim_data %>%
   mutate(accuracy = case_when(response == color ~ TRUE,
                               response != color ~ FALSE)) %>%
   group_by(congruency) %>%
-  summarize(accuracy = sum(accuracy)/12)
+  summarize(accuracy = sum(accuracy)/12, .groups = "drop")
 
 knitr::kable(accuracy_data)
 ```
@@ -209,6 +209,8 @@ So far my main conclusion is that it wouldn't be that hard to hack my studies us
 I tried to run the following, which loops the above 10 times. I ran into an error on the third iteration because the JSON was not formatted correctly. Added some validation for the JSON. The JSON was not consistent, so I changed the prompt up a bit.
 
 So far I haven't been able to run this loop. I got through 7 iterations, and then received a message that the server was overloaded. Also, only 2 of those 7 iterations produced valid JSON. I'm going to put this on the back burner for now.
+
+Update: I've gotten more reliable JSON now with a prompt using double quotes rather than single quotes.
 
 ```{r, eval = FALSE}
 # use the colors red, green, blue, and yellow
@@ -256,7 +258,7 @@ for(i in 1:10){
            "role" = "system",
            "content" = "You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"),
        list("role" = "user",
-           "content" = paste("Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible.","-----", paste(1:24, trials, collapse="\n") , "-----","Put simulated identification responses and reaction times into a JSON array of objects following this format: [{'trial': 'trial number', 'word': 'the name of the word, string','color': 'the color of the word, string','response': 'the simulated identification response, string','reaction_time': 'the simulated reaction time, milliseconds an integer'}]", sep="\n")
+           "content" = paste("Consider the following trials of a Stroop task where you are supposed to identify the ink-color of the word as quickly and accurately as possible.","-----", paste(1:24, trials, collapse="\n") , "-----",'This is a simulated Stroop task. You will be shown a Stroop item in the form of a sentence. The sentence will describe a word presented in a particular ink-color. Your task is to identify the ink-color of the word as quickly and accurately as possible. Put the simulated identification response and reaction time into a JSON array using this format: [{"trial": "trial number, integer", "word": "the name of the word, string","color": "the color of the word, string","response": "the simulated identification response, string","reaction_time": "the simulated reaction time, milliseconds an integer"}].', sep="\n")
            
        )
    )
@@ -267,6 +269,7 @@ for(i in 1:10){
   
   # validate the JSON  
   test_JSON <- jsonlite::validate(gpt_response$choices$message.content)
+  print(test_JSON)
   
   # validation checks pass, write the simulated data to all_sim_data 
   if(test_JSON == TRUE){
@@ -283,9 +286,208 @@ for(i in 1:10){
 }
 
 # model responses are in JSON format
-#save.image("batch2.RData")
+save.image("batch2.RData")
 ```
 
 
+
+```{r}
+load(file = "batch2.RData")
+```
+
+### Analysis
+
+9 out 10 simulations returned a valid JSON file.
+
+#### Ex-guassian RTs?
+
+One reason to run multiple simulated subjects is to see whether the model gives different responses each time. This is a histogram of the simulated RTs across all simulated subjects. Reaction time distributions usually look a combination of a gaussian and an exponential distribution. This has some of that flavor.
+
+```{r}
+hist(all_sim_data$reaction_time)
+```
+### Do differenet simulated subjects show different Stroop effects?
+
+The answer appears to be yes. All of these simulated subjects have different sized Stroop effects. 
+
+```{r}
+
+# report rt data
+rt_data_subject <- all_sim_data %>%
+  mutate(congruency = case_when(word == color ~ "congruent",
+                                word != color ~ "incongruent")) %>%
+  mutate(accuracy = case_when(response == color ~ TRUE,
+                              response != color ~ FALSE)) %>%
+  filter(accuracy == TRUE) %>%
+  group_by(congruency,sim_subject) %>%
+  summarize(mean_rt = mean(reaction_time), .groups = "drop") %>%
+  ungroup() %>%
+  pivot_wider(names_from = congruency,
+              values_from = mean_rt) %>%
+  mutate(Stroop_effect = incongruent-congruent)
+
+knitr::kable(rt_data_subject)
+```
+
+### Accuracy Data
+
+100% accuracy on all trials.
+
+```{r}
+# report accuracy data
+accuracy_data_subject <- all_sim_data %>%
+  mutate(congruency = case_when(word == color ~ "congruent",
+                                word != color ~ "incongruent")) %>%
+  mutate(accuracy = case_when(response == color ~ TRUE,
+                              response != color ~ FALSE)) %>%
+  group_by(congruency,sim_subject) %>%
+  summarize(proportion_correct = sum(accuracy)/12, .groups = "drop") %>%
+  ungroup() %>%
+  pivot_wider(names_from = congruency,
+              values_from = proportion_correct) %>%
+  mutate(Stroop_effect = incongruent-congruent)
+
+knitr::kable(accuracy_data_subject)
+```
+
+## Congruency sequence effects
+
+A common finding in the Stroop literature is that Stroop effects are larger following congruent trials than incongruent trials. I didn't mention anything about this in the prompt. I'm curious if the LLM will put the pattern into the simulated RTs. One reason it might do that is if real raw Stroop data was part of the training set. 
+
+Doesn't look like it, but should simulate many more subjects and then take a closer look.
+
+```{r}
+# add last trial congruency as a factor
+all_sim_data <- all_sim_data %>%
+  mutate(congruency = case_when(word == color ~ "congruent",
+                                word != color ~ "incongruent"))
+
+all_sim_data$last_trial_congruent <- c(NA,all_sim_data$congruency[1:(dim(all_sim_data)[1]-1)])
+
+all_sim_data <- all_sim_data %>%
+  mutate(last_trial_congruent = case_when(trial == 1 ~ NA,
+                                          trial != 1 ~ last_trial_congruent)) 
+
+# report rt data
+rt_data_subject_seq <- all_sim_data %>%
+  mutate(accuracy = case_when(response == color ~ TRUE,
+                              response != color ~ FALSE)) %>%
+  filter(accuracy == TRUE,
+         is.na(last_trial_congruent) == FALSE) %>%
+  mutate(last_trial_congruent = paste0("n1",last_trial_congruent)) %>%
+  group_by(congruency,last_trial_congruent,sim_subject) %>%
+  summarize(mean_rt = mean(reaction_time), .groups = "drop") %>%
+  ungroup() %>%
+  pivot_wider(names_from = c(congruency,last_trial_congruent),
+              values_from = mean_rt) %>%
+  mutate(Previous_congruent = incongruent_n1congruent-congruent_n1congruent,
+         Previous_incongruent = incongruent_n1incongruent-congruent_n1incongruent
+         )
+
+knitr::kable(rt_data_subject_seq)
+```
+
+
+## A trial-by-trial approach
+
+Another option is to request outputs on a "trial-by-trial" basis. 
+
+Steps:
+
+1.  Submit a prompt with instructions, similar to what I had above
+2.  Attach each new trial another message, get the response, check it, go to next
+
+Work on this is not complete, leaving this here for later.
+
+```{r, eval=FALSE}
+# use the colors red, green, blue, and yellow
+
+# four possible congruent items
+congruent_items <- c("The word red printed in the color red",
+                     "The word blue printed in the color blue",
+                     "The word yellow printed in the color yellow",
+                     "The word green printed in the color green")
+
+# four possible incongruent items
+incongruent_items <- c("The word red printed in the color blue",
+                       "The word red printed in the color green",
+                       "The word red printed in the color yellow",
+                       "The word blue printed in the color red",
+                       "The word blue printed in the color green",
+                       "The word blue printed in the color yellow",
+                       "The word yellow printed in the color red",
+                       "The word yellow printed in the color blue",
+                       "The word yellow printed in the color green",
+                       "The word green printed in the color red",
+                       "The word green printed in the color blue",
+                       "The word green printed in the color yellow")
+
+# generate 50% congruent and 50% incongruent trials
+# 12 each (congruent and incongruent)
+trials <- sample(c(rep(congruent_items,3),incongruent_items))
+
+
+#set up variables to store data
+sim_data <- tibble()
+all_sim_data <- tibble()
+gpt_response_list <- list()
+
+# starting message
+
+sim_task <- list(
+       list("role" = "system",
+           "content" = "You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"),
+       list("role" = "assistant",
+           "content" = "OK, what are the instructions for this task?"),
+       list("role" = "user",
+           "content" = 'This is a simulated Stroop task. You will be shown a Stroop item in the form of a sentence. The sentence will describe a word presented in a particular ink-color. Your task is to identify the ink-color of the word as quickly and accurately as possible. Put the simulated identification response and reaction time into a JSON array using this format: [{"trial": "trial number, integer", "word": "the name of the word, string","color": "the color of the word, string","response": "the simulated identification response, string","reaction_time": "the simulated reaction time, milliseconds an integer"}].'),
+       list("role" = "assistant",
+           "content" = "OK, show the next trial.")
+       )
+
+task_names <- c("trial","word","color","response","reaction_time")
+
+for(i in 1:10){
+  
+  print(i)
+  
+  # add trial to list of messages
+  sim_task[[length(sim_task)+1]] <- list(
+    "role" = "user",
+    "content" = trials[i]
+  )
+  
+  # get response
+  gpt_response <- create_chat_completion(
+   model = "gpt-3.5-turbo",
+   messages = sim_task
+   )
+  
+  #validate json and proceed
+  
+  if(jsonlite::validate(as.character(gpt_response$choices$message.content)) == TRUE){
+    
+    # convert JSON to tibble
+    trial_tibble <- jsonlite::fromJSON(gpt_response$choices$message.content)
+    print(trial_tibble)
+    
+    # check if tibble has correct names
+    if(all(task_names == names(trial_tibble))){
+      
+      #add new row to sim
+      sim_data <- rbind(sim_data,trial_tibble)
+      
+      ## response to to message list
+      sim_task[[length(sim_task)+1]] <- list(
+        "role" = gpt_response$choices$message.role,
+        "content" = gpt_response$choices$message.content
+      )
+    }
+  }
+  
+}
+
+
+```
 
 
