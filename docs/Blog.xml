@@ -15,7 +15,51 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.3.258</generator>
-<lastBuildDate>Fri, 23 Jun 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 26 Jun 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Adding a giscus comment section?</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/664_giscus/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/664_giscus/cover.jpg" class="quarto-discovered-preview-image img-fluid" width="540"></p>
+</div>
+</div>
+<p>On the one hand, I am using this post to try out giscus comments. On the other hand, I’m not sure I want to enable comments at all. Despite my hands, I’m trying it anyway.</p>
+<p>I’m also new to <a href="https://docs.github.com/en/discussions/quickstart">github discussions</a>, which seems pretty useful. Apparently, I need to enable this for a repo, and it becomes possible to use giscus on a quarto web page like this one. I’ll be following the quarto documentation on using giscus here: <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting" class="uri">https://quarto.org/docs/output-formats/html-basics.html#commenting</a>.</p>
+<p>Achievement unlocked!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">knitr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"discussions.png"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/664_giscus/discussions.png" class="img-fluid" width="1275"></p>
+</div>
+</div>
+<p>Then I need to add some bits to the yaml of this post…then install giscus…hmmm, this part… I can feel time slowing down.</p>
+<p><a href="https://github.com/giscus/giscus" class="uri">https://github.com/giscus/giscus</a></p>
+<p>After more googling and scanning blog posts about doing this, it appears the repo with discussions enabled for the comments could be any public repo. I like this approach better.</p>
+<p>[x] - made a new repo crumplab_comments</p>
+<p>[x] - installed giscus app</p>
+<p>This was my first time installing a github app. Took half a sec to figure out where the instructions were… the link’s in the readme under giscus app:</p>
+<p><a href="https://github.com/apps/giscus" class="uri">https://github.com/apps/giscus</a></p>
+<p>There are configuration options, but it might work without them. I should try to render this page and see what happens.</p>
+
+
+
+ ]]></description>
+  <guid>https://crumplab.com/blog/664_giscus/index.html</guid>
+  <pubDate>Mon, 26 Jun 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/664_giscus/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Observations on using LLMs for checking grammar, etc.</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -7101,319 +7145,6 @@ Blum, Susan Debra. 2020. <em>Ungrading: Why Rating Students Undermines Learning 
   <guid>https://crumplab.com/blog/885_10_16_22_unplanning/index.html</guid>
   <pubDate>Sun, 16 Oct 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/885_10_16_22_unplanning/images/unplanning.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Quarto as a tool for reproducible research projects in psychology</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/post_886_10_14_22_quartoProjects/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-</style>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/imgs/Quarto-1.png" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>Last knit: 2023-06-07</p>
-<p>For a good few years I have been adopting reproducible workflows for my cognitive psychology research projects. <span class="citation" data-cites="vuorre2021">Vuorre and Crump (2021)</span> discussed an R-based approach to creating and sharing research assets in a reproducible manner, and we called it <a href="https://crumplab.com/vertical/">vertical</a>. Since then I have used that approach for most new projects in the lab. However, <a href="https://quarto.org">quarto</a> is the NKOTB, and I’ve been itching to try it for managing assets in a psych research project. And, in the last few days I got the chance to start a project from scratch using quarto, actually several projects. I’m going to digest some of my experiences and lay breadcrumbs for my future self about what I like and am learning so far.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Note: this post is mainly inspired by the fact that I just converted my <a href="https://crumplab.com">lab website</a> where this blog is hosted from a pkgdown website to a quarto website. So, I really feel like I need to make a new post to justify the time it took to make the conversion. TLDR: I’m not totally sure what the purpose of the post is yet.</p>
-</div>
-</div>
-<section id="the-vertical-approach" class="level2">
-<h2 class="anchored" data-anchor-id="the-vertical-approach">The vertical approach</h2>
-<p>Here’s an overview of the vertical approach, which uses the R-package template as a starting point for organizing files. This has the benefit of being able to quickly create websites using {pkgdown}. It’s an R-centered approach, which is great for me because I use R for everything. So, if my project includes custom R functions, I can immediately drop them into the R-package template and create an R package for the project. This process can be useful for documenting data from the project too. Additional assets such as experiment script code, posters, manuscripts, etc., are given their own folders. We go into much more depth about vertical in the paper and on the vertical webpage.</p>
-<p><img src="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/https:/crumplab.com/vertical/reference/figures/vertical-project.png" class="img-fluid"></p>
-<p>Using vertical for my own projects I gravitated toward following pkgdown guidelines for almost everything. For example, many of the assets I was creating were R Markdown documents. I put those in the vignettes folder, which allows pkgdown to render them automatically. Pkgdown is intended to create websites for R packages and not websites in general, so customizing the website to the needs of particular project can be challenging.</p>
-<p>What’s most important to me is adopting an organized and convenient method for creating and sharing assets in a reproducible way. This can be done in many languages, and doesn’t need to be R centric. The same goals can also be accomplished without twisting things like pkgdown into positions they weren’t intended for. Enter quarto.</p>
-</section>
-<section id="trying-quarto-on-for-size" class="level2">
-<h2 class="anchored" data-anchor-id="trying-quarto-on-for-size">Trying quarto on for size</h2>
-<p>Quarto is new, still working out some kinks, but in my experience so far, it’s a mean reproducible document creation machine. And, I heart quarto.</p>
-<p>Over the summer I dabbled with the new quarto book format, and converted my <a href="https://crumplab.com/statistics">undergraduate statistics textbook</a> from a bs4_book to quarto book. That process was relatively painless, and I was encouraged to try more quarto.</p>
-<p>I often mentor students in the process of learning R for various purposes, and I like to show students how they can make websites and blogs with R Studio, and then use them as a venue to learn R and showcase their work. Blogs and websites were pretty easy before, and they are still very easy with quarto. I had finagled a blog system based on pkgdown rendering vignettes, and after seeing the quarto version I knew I’d make the switch at some point.</p>
-<p>Next semester I’m teaching two courses that will both involve students creating blogs and websites. I was leaning toward using quarto, and now even more so. I have been using a pkgdown approach for building course websites (e.g., <a href="https://crumplab.com/cognition">like this one for introductory cognition</a>), but after seeing some examples of quarto websites for a course (e.g., like <a href="https://datasciencebox.org">data-science in a box</a>), I decided I needed to try that too (e.g., <a href="https://crumplab.com/peopleofnyc/">this emerging course website)</a>.</p>
-<p><img src="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/images/Screen Shot 2022-10-14 at 2.40.43 PM.png" class="img-fluid"></p>
-<p>This week, just before I decided to redo my lab website in quarto, I also tried using quarto for a research project instead of vertical, and that’s what really sold me.</p>
-</section>
-<section id="quarto-for-new-research" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-for-new-research">Quarto for new research</h2>
-<p>I am not sharing this website yet because the project is still in very early stages of development. However, it has been really fun and productive to use quarto from the very beginning of the project.</p>
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="images/quarto_demo_1.mp4"></video></div>
-<p>At this stage, graduate student Drew Shives and I know our research direction, but we are still doing a lot of reading, combined with stimulus creation, and experiment-idea generation. It’s a lot of creative work that can get messy very fast in terms of keeping track of notes, code, and ideas. This is where I have found using quarto as a personal research organization tool very useful.</p>
-<p>Here’s a quick look at the setup, and why I like it. First, I used R Studio to create a new quarto website project. Then, I modified _quarto.yml as follows:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">project</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">type</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> website</span></span>
-<span id="cb1-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">output-dir</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ../docs/quarto</span></span>
-<span id="cb1-4"></span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">website</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-6"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"DRMsource"</span></span>
-<span id="cb1-7"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">navbar</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-8"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">left</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-9"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> index.qmd</span></span>
-<span id="cb1-10"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Home</span></span>
-<span id="cb1-11"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> about.qmd</span></span>
-<span id="cb1-12"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ../index.html</span></span>
-<span id="cb1-13"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> R package</span></span>
-<span id="cb1-14"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sidebar</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-15"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Home"</span></span>
-<span id="cb1-16"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">style</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"floating"</span></span>
-<span id="cb1-17"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">collapse-level</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span></span>
-<span id="cb1-18"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">align</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> left</span></span>
-<span id="cb1-19"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">contents</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> auto</span></span>
-<span id="cb1-20"></span>
-<span id="cb1-21"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-22"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-23"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> minty</span></span>
-<span id="cb1-24"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">css</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> styles.css</span></span>
-<span id="cb1-25"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">toc</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">true</span></span>
-<span id="cb1-26"></span>
-<span id="cb1-27"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">editor</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> visual</span></span></code></pre></div>
-<p>In <a href="https://quarto.org/docs/download/prerelease.html">quarto 1.2</a> (pre-release build), there is a really nice feature for auto-generating navigation in the side bar. For example, in the above yaml, under sidebar (which controls the left-side navigation on the webpage), I set the contents option to auto. As a result, the name of any folder in the project will be converted to a section header, and the title of each .qmd inside a folder will be added to navigation list under each section. Here is the current directory structure of the project:</p>
-<p><img src="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/images/Screen Shot 2022-10-14 at 3.10.24 PM.png" class="img-fluid"></p>
-<p>Right now I’m creating things in three different folders: Aims, Design, and Reading. Any <code>.qmd</code> file inside a folder automatically get’s rendered to the website, and listed under sections. I have a <code>.qmd</code> for developing project motivation in the Aims folder, a bunch of <code>.qmds</code> for stimulus generation in the Design folder, and a couple <code>.qmd</code>s to keep track of readings in a readings folder.</p>
-<p><img src="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/images/Screen Shot 2022-10-14 at 4.09.42 PM.png" class="img-fluid"></p>
-<p>This project organization structure may or may not last very long, depending on what happens as we work through the project. Fortunately, it is a snap to change the structure. Just rename the folders, or switch files between folders, and the website automatically updates itself. That’s great.</p>
-<p>Less to do with quarto, and more to do with Rstudio’s new and improved visual editor, I’m super excited about how easy it is to add content in <code>rmd</code> or <code>qmd</code> files. Like it I want to add a screen shot, I take one and drag/drop it onto the text in the visual editor, and it automatically gets added to an <code>images</code> folder. That’s fire. And, zotero integration for easy citing while writing, is more fire.</p>
-<p>So, hurrah for quarto! And, it’s about to be another Friday night, which means I need to stop writing and hit the render button.</p>
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-vuorre2021" class="csl-entry">
-Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Research Products as R Packages.”</span> <em>Behavior Research Methods</em> 53: 792–802. https://doi.org/<a href="https://doi.org/10.3758/s13428-020-01436-x">https://doi.org/10.3758/s13428-020-01436-x</a>.
-</div>
-</div></section></div> ]]></description>
-  <category>quarto</category>
-  <category>Rstats</category>
-  <category>vertical</category>
-  <category>Reproducible research</category>
-  <guid>https://crumplab.com/blog/post_886_10_14_22_quartoProjects/index.html</guid>
-  <pubDate>Fri, 14 Oct 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/post_886_10_14_22_quartoProjects/imgs/Quarto-1.png" medium="image" type="image/png" height="75" width="144"/>
 </item>
 </channel>
 </rss>

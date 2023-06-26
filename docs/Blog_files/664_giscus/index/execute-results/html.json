@@ -1,0 +1,14 @@
+{
+  "hash": "63d0c48e2f13f347f64298b879b841eb",
+  "result": {
+    "markdown": "---\nauthor: \"Matt Crump\"\ntitle: \"Adding a giscus comment section?\"\npagetitle: \"Adding a giscus comment section?\"\ndescription: \"Testing out adding a giscus comment section to a blog post.\"\nimage: \"cover.jpg\"\ndate: \"6-26-2023\"\ncomments:\n  giscus: \n    repo: CrumpLab/crumplab_comments\nevaluate:\n  echo: false\n---\n\n::: {.cell}\n::: {.cell-output-display}\n![](cover.jpg){width=540}\n:::\n:::\n\n\nOn the one hand, I am using this post to try out giscus comments. On the other hand, I'm not sure I want to enable comments at all. Despite my hands, I'm trying it anyway.\n\nI'm also new to [github discussions](https://docs.github.com/en/discussions/quickstart), which seems pretty useful. Apparently, I need to enable this for a repo, and it becomes possible to use giscus on a quarto web page like this one. I'll be following the quarto documentation on using giscus here: <https://quarto.org/docs/output-formats/html-basics.html#commenting>.\n\nAchievement unlocked!\n\n\n::: {.cell}\n\n```{.r .cell-code}\nknitr::include_graphics(\"discussions.png\")\n```\n\n::: {.cell-output-display}\n![](discussions.png){width=1275}\n:::\n:::\n\n\nThen I need to add some bits to the yaml of this post...then install giscus...hmmm, this part... I can feel time slowing down.\n\n<https://github.com/giscus/giscus>\n\nAfter more googling and scanning blog posts about doing this, it appears the repo with discussions enabled for the comments could be any public repo. I like this approach better.\n\n[x] - made a new repo crumplab_comments\n\n[x] - installed giscus app\n\nThis was my first time installing a github app. Took half a sec to figure out where the instructions were... the link's in the readme under giscus app:\n\n<https://github.com/apps/giscus>\n\nThere are configuration options, but it might work without them. I should try to render this page and see what happens.\n\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
