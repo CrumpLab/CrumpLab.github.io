@@ -42,7 +42,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=FALSE)
 
 ::: publications
 ```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
-crumplab::bib_2_pub_list("publications/Crump_In_progress/Crump_In_progress.bib",
+crumplabr::bib_2_pub_list("publications/Crump_In_progress/Crump_In_progress.bib",
                          "publications/Crump_In_progress/Crump_In_progress.yml",
                          "publications/Crump_In_progress/files",
                          "https://www.crumplab.com/Crump_In_progress/files")
@@ -53,7 +53,7 @@ crumplab::bib_2_pub_list("publications/Crump_In_progress/Crump_In_progress.bib",
 
 ::: publications
 ```{r, results='asis', echo=F, message=F, warning=FALSE, eval=TRUE}
-crumplab::bib_2_pub_list("publications/Crump/Crump.bib",
+crumplabr::bib_2_pub_list("publications/Crump/Crump.bib",
                          "publications/Crump/Crump.yml",
                          "publications/Crump/files",
                          "https://www.crumplab.com/Crump/files")

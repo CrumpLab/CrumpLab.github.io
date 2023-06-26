@@ -338,7 +338,7 @@ bib_2_pub_list <- function(bib,yml,pdf_dir,base_url_to_pdfs){
 Does it blend?
 
 ```{r, results='asis', message=F, warning=FALSE, eval=TRUE}
-crumplab::bib_2_pub_list("Crump.bib",
+crumplabr::bib_2_pub_list("Crump.bib",
                          "Crump.yml",
                          "pkgdown/assets/Crump/files",
                          "https://www.crumplab.com/Crump/files")
