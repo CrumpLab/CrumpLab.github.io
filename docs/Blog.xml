@@ -51,9 +51,14 @@ font-style: inherit;">"discussions.png"</span>)</span></code></pre></div>
 <p>[x] - installed giscus app</p>
 <p>This was my first time installing a github app. Took half a sec to figure out where the instructions were… the link’s in the readme under giscus app:</p>
 <p><a href="https://github.com/apps/giscus" class="uri">https://github.com/apps/giscus</a></p>
-<p>There are configuration options, but it might work without them. I should try to render this page and see what happens.</p>
+<p>There are configuration options, but it might work without them. I should try to render this page and see what happens. Seems to work…very nice.</p>
+<section id="testing" class="level2">
+<h2 class="anchored" data-anchor-id="testing">Testing…</h2>
+<p>I’m going to push this post online, then see if I can add a comment. Then I’m going to add the discus comment option to a different post and add a comment there. I’m hoping this will be a very smooth way to have comments on some posts and not others.</p>
+<p>If all goes well I’ll come back here and recap the steps, which turned out to be easier than I thought they would be 🤞.</p>
 
 
+</section>
 
  ]]></description>
   <guid>https://crumplab.com/blog/664_giscus/index.html</guid>
