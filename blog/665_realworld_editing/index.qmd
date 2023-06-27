@@ -5,6 +5,13 @@ pagetitle: "Observations on using LLMs for checking grammar, etc."
 description: "In recent posts I've been making add-ins and a shiny app for writing assistance tools in R Studio, where I do most of my writing. I'm finally starting to get some usable results. Discussing some observations about the process in this post."
 image: "cover.jpg"
 date: "6-23-2023"
+categories: 
+  - LLMs
+  - OpenAI
+  - Shiny
+  - Rstats
+  - RStudio
+  - Assisted writing
 comments:
   giscus: 
     repo: CrumpLab/crumplab_comments

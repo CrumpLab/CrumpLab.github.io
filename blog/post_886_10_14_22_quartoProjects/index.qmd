@@ -89,8 +89,6 @@ This week, just before I decided to redo my lab website in quarto, I also tried 
 
 I am not sharing this website yet because the project is still in very early stages of development. However, it has been really fun and productive to use quarto from the very beginning of the project.
 
-{{< video images/quarto_demo_1.mp4 >}}
-
 At this stage, graduate student Drew Shives and I know our research direction, but we are still doing a lot of reading, combined with stimulus creation, and experiment-idea generation. It's a lot of creative work that can get messy very fast in terms of keeping track of notes, code, and ideas. This is where I have found using quarto as a personal research organization tool very useful.
 
 Here's a quick look at the setup, and why I like it. First, I used R Studio to create a new quarto website project. Then, I modified \_quarto.yml as follows:

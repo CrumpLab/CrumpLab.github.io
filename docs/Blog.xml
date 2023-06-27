@@ -15,7 +15,154 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.3.258</generator>
-<lastBuildDate>Mon, 26 Jun 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 27 Jun 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Pondering my defaults for Quarto websites and reproducible research projects</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/663_quarto_projects/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/663_quarto_projects/cover.jpg" class="quarto-discovered-preview-image img-fluid" width="540"></p>
+</div>
+</div>
+<p>This post is mainly a long ramble where I attempt to start working this morning.</p>
+<p>I’ve been using Quarto almost exclusively for a while now, and it’s great. I ❤️ Quarto.</p>
+<p>This morning I’m about to start another project, and TBH I’m procrastinating a little bit. I don’t have writer’s block. I know that as soon as I get the project started I’ll rattling off for the rest of the day, week, or however long. I have mild getting-started-with-a-new-project-block.</p>
+<p>One of the things that drew me into Rstats, R Markdown, and now Quarto in the first place was the ability to collect nearly all of the research assets that I typically assemble in one place and to make most of them computationally reproducible, at least to a reasonable standard for my field. For example, a typical project might have some data or simulated data from a model, scripts to analyse the data, maybe some custom functions for the project, a research paper, maybe a slide deck or poster. All of these things can be housed in a Quarto project, and Quarto can handle most of the different outputs as well. It’s also pretty easy to put all of these things into a Quarto website and share everything on GitHub.</p>
+<p>Before Quarto, my colleague Matti Vuorre and I wrote a paper for psychologists to consider using R Markdown and other R-centric tools to create and share reproducible research projects <span class="citation" data-cites="vuorre2021">(Vuorre and Crump 2021)</span>. We called that approach <a href="https://crumplab.com/vertical/">Vertical</a>. Now, I’m mostly using Quarto to accomplish the same goals.</p>
+<p>Some quick examples of Quarto projects:</p>
+<ul>
+<li>This blog</li>
+<li>my lab webpage: <a href="https://crumplab.com" class="uri">https://crumplab.com</a></li>
+<li>Course websites: <a href="https://crumplab.com/cognition" class="uri">https://crumplab.com/cognition</a></li>
+<li>OER textbooks: <a href="https://crumplab.com/cognition/textbook" class="uri">https://crumplab.com/cognition/textbook</a></li>
+</ul>
+<p>Overall, these are quick to set up using templates provided by RStudio. So, what’s my issue?</p>
+<p>Like I said I’m procrastinating. What I should do is open RStudio, create a new Quarto website project, and then get on with life. The website won’t look quite right, and I’ll have to modify the <code>_Quarto.yml</code> file. I won’t be able to remember what I need to modify so I’ll look at previous examples and scrape something together. It will take probably all of 15 minutes for me to do this.</p>
+<p>It would be nice if my previous self had set up templates that make it even easier and faster for me to get started. Part of the reason for this post was to consider whether I should make those templates right now.</p>
+<p>Pros:</p>
+<ul>
+<li>I would have a template, which hypothetically makes it faster for me to start up a new project</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>There already is a decent starting template; not all projects are the same, and I’ll probably end up modifying any template I make, so why not just start with the RStudio one.</li>
+</ul>
+<p>Maybe I need to go through the process like I normally do, and keep notes on things that I might put in a template. Or, at least think about it.</p>
+<section id="making-of-a-quarto-project" class="level2">
+<h2 class="anchored" data-anchor-id="making-of-a-quarto-project">Making of a Quarto project</h2>
+<p>The flavor of this project is computational modeling. Ideally, I would share the scripts and analysis, and some kind of global write-up, perhaps some slides.</p>
+<ul class="task-list">
+<li><input type="checkbox" checked="">make a new RStudio Quarto website project.</li>
+</ul>
+<p>This is the vanilla Quarto website project.</p>
+<p><img src="https://crumplab.com/blog/663_quarto_projects/images/Screenshot 2023-06-27 at 10.28.58 AM.png" class="img-fluid"></p>
+<p>This is the default yml that controls the website build:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">project:</span>
+<span id="cb1-2">  type: website</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">website:</span>
+<span id="cb1-5">  title: "GPTAttentionPerformance"</span>
+<span id="cb1-6">  navbar:</span>
+<span id="cb1-7">    left:</span>
+<span id="cb1-8">      - href: index.qmd</span>
+<span id="cb1-9">        text: Home</span>
+<span id="cb1-10">      - about.qmd</span>
+<span id="cb1-11"></span>
+<span id="cb1-12">format:</span>
+<span id="cb1-13">  html:</span>
+<span id="cb1-14">    theme: cosmo</span>
+<span id="cb1-15">    css: styles.css</span>
+<span id="cb1-16">    toc: true</span></code></pre></div>
+<p>Things I usually change later:</p>
+<ul class="task-list">
+<li><p><input type="checkbox" checked="">specify a port number for website preview so that it doesn’t randomly change every time</p></li>
+<li><p><input type="checkbox" checked="">make a folder for putting things that don’t get compiled</p></li>
+<li><p><input type="checkbox" checked="">change output directory to docs for github pages</p></li>
+<li><p><input type="checkbox" checked="">change style to minty</p></li>
+<li><p><input type="checkbox" checked="">scrap the about page because I tend to put that info on the front page.</p></li>
+<li><p><input type="checkbox" checked="">add description, repo-url and site url</p></li>
+</ul>
+<p>One issue is how to translate the documents in the project to pages on the website. This can be rearranged at any time using the <code>_quarto.yml</code> file, which defines website navigation and connects individual .qmd files to the navbar at the top or on the side. For example, the two pages in the default project are given links “home” and “about” at the top of the website.</p>
+<p>In some previous projects I use a flexible starting position in terms of website structure. Quarto will automatically build sidebar links for .qmd documents. I think I’ll add that here as a starting point.</p>
+<p>Something like this. Need to consider ways to template this for later. For now, I can copy and paste from here.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1">project:</span>
+<span id="cb2-2">  type: website</span>
+<span id="cb2-3">  output-dir: docs</span>
+<span id="cb2-4">  preview:</span>
+<span id="cb2-5">    port: 4200</span>
+<span id="cb2-6">    browser: true</span>
+<span id="cb2-7">    navigate: true</span>
+<span id="cb2-8"></span>
+<span id="cb2-9">website:</span>
+<span id="cb2-10">  title: "GPTAttentionPerformance"</span>
+<span id="cb2-11">  description: "A computational modeling project examining whether or not a GPT model can simulate human performance in classic attention and performance tasks."</span>
+<span id="cb2-12">  repo-url: https://github.com/CrumpLab/GPTAttentionPerformance</span>
+<span id="cb2-13">  repo-actions: [source, edit, issue]</span>
+<span id="cb2-14">  site-url: "https://crumplab.com/GPTAttentionPerformance"</span>
+<span id="cb2-15">  search: true</span>
+<span id="cb2-16">  navbar:</span>
+<span id="cb2-17">    left:</span>
+<span id="cb2-18">      - href: index.qmd</span>
+<span id="cb2-19">        text: Home</span>
+<span id="cb2-20">  sidebar:</span>
+<span id="cb2-21">    - title: "Home"</span>
+<span id="cb2-22">      style: "floating"</span>
+<span id="cb2-23">      collapse-level: 3</span>
+<span id="cb2-24">      align: left</span>
+<span id="cb2-25">      contents: auto</span>
+<span id="cb2-26"></span>
+<span id="cb2-27">format:</span>
+<span id="cb2-28">  html:</span>
+<span id="cb2-29">    theme: cosmo</span>
+<span id="cb2-30">    css: styles.css</span>
+<span id="cb2-31">    toc: true</span></code></pre></div>
+<p>The landing page, defined in <code>index.qmd</code>, might start out like this:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1">---</span>
+<span id="cb3-2">title: "Simulating Attention and Performance tasks with an LLM"</span>
+<span id="cb3-3">author:</span>
+<span id="cb3-4">  - name: Matthew J. C. Crump</span>
+<span id="cb3-5">    orcid: 0000-0002-5612-0090</span>
+<span id="cb3-6">    email: mcrump@brooklyn.cuny.edu</span>
+<span id="cb3-7">    affiliations:</span>
+<span id="cb3-8">      - name: Brooklyn College of CUNY</span>
+<span id="cb3-9">description: "A computational modeling project examining whether or not a GPT model can simulate human performance in classic attention and performance tasks."</span>
+<span id="cb3-10">date: 6-27-2023</span>
+<span id="cb3-11">title-block-style: default</span>
+<span id="cb3-12">---</span>
+<span id="cb3-13"></span>
+<span id="cb3-14">## Project Information</span>
+<span id="cb3-15"></span>
+<span id="cb3-16">Brief notes on the project</span>
+<span id="cb3-17"></span>
+<span id="cb3-18">## Repository Information</span>
+<span id="cb3-19"></span>
+<span id="cb3-20">Brief notes about the repo</span></code></pre></div>
+<p>The next step is to make new folders and add .qmds to them. I made a <code>modeling</code> folder, and added a .qmd that will act as a scratchpad/to-do list for me. Now any page in the modeling folder will automatically show up in the left-side navigation.</p>
+<p><img src="https://crumplab.com/blog/663_quarto_projects/images/Screenshot 2023-06-27 at 11.29.30 AM.png" class="img-fluid"></p>
+<p>This is good enough for now. I’m going to pass on making templates.</p>
+<p>Time to get going on this actual project!</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-vuorre2021" class="csl-entry">
+Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Research Products as R Packages.”</span> <em>Behavior Research Methods</em> 53: 792–802. https://doi.org/<a href="https://doi.org/10.3758/s13428-020-01436-x">https://doi.org/10.3758/s13428-020-01436-x</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>Quarto</category>
+  <category>reproducible research</category>
+  <category>rstats</category>
+  <guid>https://crumplab.com/blog/663_quarto_projects/index.html</guid>
+  <pubDate>Tue, 27 Jun 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/663_quarto_projects/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Adding a giscus comment section?</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -101,6 +248,8 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 </section>
 
  ]]></description>
+  <category>Blogging</category>
+  <category>giscus</category>
   <guid>https://crumplab.com/blog/664_giscus/index.html</guid>
   <pubDate>Mon, 26 Jun 2023 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/664_giscus/cover.jpg" medium="image" type="image/jpeg"/>
@@ -201,6 +350,12 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 </section>
 
  ]]></description>
+  <category>LLMs</category>
+  <category>OpenAI</category>
+  <category>Shiny</category>
+  <category>Rstats</category>
+  <category>RStudio</category>
+  <category>Assisted writing</category>
   <guid>https://crumplab.com/blog/665_realworld_editing/index.html</guid>
   <pubDate>Fri, 23 Jun 2023 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/665_realworld_editing/cover.jpg" medium="image" type="image/jpeg"/>
@@ -440,6 +595,10 @@ print(grammar_errors)</code></pre>
 </section>
 
  ]]></description>
+  <category>LLMs</category>
+  <category>Rstats</category>
+  <category>RStudio</category>
+  <category>Assisted writing</category>
   <guid>https://crumplab.com/blog/667_GPT_editing/index.html</guid>
   <pubDate>Wed, 21 Jun 2023 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/667_GPT_editing/cover.jpg" medium="image" type="image/jpeg"/>
@@ -1479,6 +1638,10 @@ font-style: inherit;">"DallE_image.jpg"</span>)</span></code></pre></div>
 </section>
 
  ]]></description>
+  <category>LLMs</category>
+  <category>Rstats</category>
+  <category>RStudio</category>
+  <category>Assisted writing</category>
   <guid>https://crumplab.com/blog/668_gpt_adventure/index.html</guid>
   <pubDate>Tue, 20 Jun 2023 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/668_gpt_adventure/DallE_image.jpg" medium="image" type="image/jpeg"/>
@@ -1949,6 +2112,11 @@ font-style: inherit;">print</span>(i)</span>
 </section>
 
  ]]></description>
+  <category>LLMs</category>
+  <category>OpenAI</category>
+  <category>Rstats</category>
+  <category>RStudio</category>
+  <category>Assisted writing</category>
   <guid>https://crumplab.com/blog/669_gpt_learnR/index.html</guid>
   <pubDate>Thu, 08 Jun 2023 04:00:00 GMT</pubDate>
 </item>
@@ -2391,6 +2559,10 @@ font-style: inherit;">$</span>message.content)</span>
 </section>
 
  ]]></description>
+  <category>LLMs</category>
+  <category>OpenAI</category>
+  <category>Rstats</category>
+  <category>RStudio</category>
   <guid>https://crumplab.com/blog/770_rstudio_gpt/index.html</guid>
   <pubDate>Wed, 07 Jun 2023 04:00:00 GMT</pubDate>
 </item>
@@ -2916,7 +3088,11 @@ font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">mean_rt =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">mean</span>(reaction_time))</span>
+font-style: inherit;">mean</span>(reaction_time), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.groups =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"drop"</span>)</span>
 <span id="cb4-7"></span>
 <span id="cb4-8">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3016,7 +3192,11 @@ font-style: inherit;">sum</span>(accuracy)<span class="sc" style="color: #5E5E5E
 background-color: null;
 font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">12</span>)</span>
+font-style: inherit;">12</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.groups =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"drop"</span>)</span>
 <span id="cb5-9"></span>
 <span id="cb5-10">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3474,7 +3654,11 @@ font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">mean_rt =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">mean</span>(reaction_time)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">mean</span>(reaction_time), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.groups =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"drop"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
 <span id="cb9-10">  <span class="fu" style="color: #4758AB;
@@ -3498,12 +3682,9 @@ font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">Stroop_effect =</span> incongruent<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">-</span>congruent)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'congruency'. You can override using the
-`.groups` argument.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">knitr<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">-</span>congruent)</span>
+<span id="cb9-14"></span>
+<span id="cb9-15">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3582,15 +3763,15 @@ font-style: inherit;">kable</span>(rt_data_subject)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="accuracy-data-1">Accuracy Data</h3>
 <p>100% accuracy on all trials.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># report accuracy data</span></span>
-<span id="cb12-2">accuracy_data_subject <span class="ot" style="color: #003B4F;
+<span id="cb10-2">accuracy_data_subject <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb12-3">  <span class="fu" style="color: #4758AB;
+<span id="cb10-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3603,7 +3784,7 @@ background-color: null;
 font-style: inherit;">~</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"congruent"</span>,</span>
-<span id="cb12-4">                                word <span class="sc" style="color: #5E5E5E;
+<span id="cb10-4">                                word <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3612,7 +3793,7 @@ background-color: null;
 font-style: inherit;">"incongruent"</span>)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb12-5">  <span class="fu" style="color: #4758AB;
+<span id="cb10-5">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3625,7 +3806,7 @@ background-color: null;
 font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>,</span>
-<span id="cb12-6">                              response <span class="sc" style="color: #5E5E5E;
+<span id="cb10-6">                              response <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3634,12 +3815,12 @@ background-color: null;
 font-style: inherit;">FALSE</span>)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb12-7">  <span class="fu" style="color: #4758AB;
+<span id="cb10-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">group_by</span>(congruency,sim_subject) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb12-8">  <span class="fu" style="color: #4758AB;
+<span id="cb10-8">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3649,36 +3830,37 @@ font-style: inherit;">sum</span>(accuracy)<span class="sc" style="color: #5E5E5E
 background-color: null;
 font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">12</span>) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">12</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.groups =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"drop"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb12-9">  <span class="fu" style="color: #4758AB;
+<span id="cb10-9">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ungroup</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb12-10">  <span class="fu" style="color: #4758AB;
+<span id="cb10-10">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pivot_wider</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">names_from =</span> congruency,</span>
-<span id="cb12-11">              <span class="at" style="color: #657422;
+<span id="cb10-11">              <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">values_from =</span> proportion_correct) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb12-12">  <span class="fu" style="color: #4758AB;
+<span id="cb10-12">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">Stroop_effect =</span> incongruent<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">-</span>congruent)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'congruency'. You can override using the
-`.groups` argument.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1">knitr<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">-</span>congruent)</span>
+<span id="cb10-13"></span>
+<span id="cb10-14">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3759,15 +3941,15 @@ font-style: inherit;">kable</span>(accuracy_data_subject)</span></code></pre></d
 <p>A common finding in the Stroop literature is that Stroop effects are larger following congruent trials than incongruent trials. I didn’t mention anything about this in the prompt. I’m curious if the LLM will put the pattern into the simulated RTs. One reason it might do that is if real raw Stroop data was part of the training set.</p>
 <p>Doesn’t look like it, but should simulate many more subjects and then take a closer look.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># add last trial congruency as a factor</span></span>
-<span id="cb15-2">all_sim_data <span class="ot" style="color: #003B4F;
+<span id="cb11-2">all_sim_data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-3">  <span class="fu" style="color: #4758AB;
+<span id="cb11-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3780,15 +3962,15 @@ background-color: null;
 font-style: inherit;">~</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"congruent"</span>,</span>
-<span id="cb15-4">                                word <span class="sc" style="color: #5E5E5E;
+<span id="cb11-4">                                word <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"incongruent"</span>))</span>
-<span id="cb15-5"></span>
-<span id="cb15-6">all_sim_data<span class="sc" style="color: #5E5E5E;
+<span id="cb11-5"></span>
+<span id="cb11-6">all_sim_data<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>last_trial_congruent <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -3811,13 +3993,13 @@ background-color: null;
 font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>)])</span>
-<span id="cb15-7"></span>
-<span id="cb15-8">all_sim_data <span class="ot" style="color: #003B4F;
+<span id="cb11-7"></span>
+<span id="cb11-8">all_sim_data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-9">  <span class="fu" style="color: #4758AB;
+<span id="cb11-9">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3832,23 +4014,23 @@ background-color: null;
 font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>,</span>
-<span id="cb15-10">                                          trial <span class="sc" style="color: #5E5E5E;
+<span id="cb11-10">                                          trial <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> last_trial_congruent)) </span>
-<span id="cb15-11"></span>
-<span id="cb15-12"><span class="co" style="color: #5E5E5E;
+<span id="cb11-11"></span>
+<span id="cb11-12"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># report rt data</span></span>
-<span id="cb15-13">rt_data_subject_seq <span class="ot" style="color: #003B4F;
+<span id="cb11-13">rt_data_subject_seq <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> all_sim_data <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-14">  <span class="fu" style="color: #4758AB;
+<span id="cb11-14">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3861,7 +4043,7 @@ background-color: null;
 font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>,</span>
-<span id="cb15-15">                              response <span class="sc" style="color: #5E5E5E;
+<span id="cb11-15">                              response <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!=</span> color <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3870,14 +4052,14 @@ background-color: null;
 font-style: inherit;">FALSE</span>)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-16">  <span class="fu" style="color: #4758AB;
+<span id="cb11-16">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">filter</span>(accuracy <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>,</span>
-<span id="cb15-17">         <span class="fu" style="color: #4758AB;
+<span id="cb11-17">         <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">is.na</span>(last_trial_congruent) <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3886,7 +4068,7 @@ background-color: null;
 font-style: inherit;">FALSE</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-18">  <span class="fu" style="color: #4758AB;
+<span id="cb11-18">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3897,55 +4079,56 @@ background-color: null;
 font-style: inherit;">"n1"</span>,last_trial_congruent)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-19">  <span class="fu" style="color: #4758AB;
+<span id="cb11-19">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">group_by</span>(congruency,last_trial_congruent,sim_subject) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-20">  <span class="fu" style="color: #4758AB;
+<span id="cb11-20">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">summarize</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">mean_rt =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">mean</span>(reaction_time)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">mean</span>(reaction_time), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.groups =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"drop"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-21">  <span class="fu" style="color: #4758AB;
+<span id="cb11-21">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ungroup</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-22">  <span class="fu" style="color: #4758AB;
+<span id="cb11-22">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pivot_wider</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">names_from =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(congruency,last_trial_congruent),</span>
-<span id="cb15-23">              <span class="at" style="color: #657422;
+<span id="cb11-23">              <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">values_from =</span> mean_rt) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb15-24">  <span class="fu" style="color: #4758AB;
+<span id="cb11-24">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">Previous_congruent =</span> incongruent_n1congruent<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span>congruent_n1congruent,</span>
-<span id="cb15-25">         <span class="at" style="color: #657422;
+<span id="cb11-25">         <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">Previous_incongruent =</span> incongruent_n1incongruent<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span>congruent_n1incongruent</span>
-<span id="cb15-26">         )</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'congruency', 'last_trial_congruent'. You
-can override using the `.groups` argument.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1">knitr<span class="sc" style="color: #5E5E5E;
+<span id="cb11-26">         )</span>
+<span id="cb11-27"></span>
+<span id="cb11-28">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4059,92 +4242,91 @@ font-style: inherit;">kable</span>(rt_data_subject_seq)</span></code></pre></div
 </div>
 </div>
 </section>
-<section id="round-2" class="level2">
-<h2 class="anchored" data-anchor-id="round-2">Round 2</h2>
-<p>The above code did not return reliable JSON. One issue was that I was asking for the LLM to complete a large amount of trials at once, and return a JSON structure for all of those trials.</p>
-<p>Another option would be to request outputs on a “trial-by-trial” basis. This would allow me to check whether valid JSON was returned, and then keep or redo the trial.</p>
-<p>Also, I think my prompt may have been causing invalid JSON because of using single quotes.</p>
+<section id="a-trial-by-trial-approach" class="level2">
+<h2 class="anchored" data-anchor-id="a-trial-by-trial-approach">A trial-by-trial approach</h2>
+<p>Another option is to request outputs on a “trial-by-trial” basis.</p>
 <p>Steps:</p>
 <ol type="1">
 <li>Submit a prompt with instructions, similar to what I had above</li>
 <li>Attach each new trial another message, get the response, check it, go to next</li>
 </ol>
+<p>Work on this is not complete, leaving this here for later.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># use the colors red, green, blue, and yellow</span></span>
-<span id="cb18-2"></span>
-<span id="cb18-3"><span class="co" style="color: #5E5E5E;
+<span id="cb12-2"></span>
+<span id="cb12-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># four possible congruent items</span></span>
-<span id="cb18-4">congruent_items <span class="ot" style="color: #003B4F;
+<span id="cb12-4">congruent_items <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word red printed in the color red"</span>,</span>
-<span id="cb18-5">                     <span class="st" style="color: #20794D;
+<span id="cb12-5">                     <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word blue printed in the color blue"</span>,</span>
-<span id="cb18-6">                     <span class="st" style="color: #20794D;
+<span id="cb12-6">                     <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word yellow printed in the color yellow"</span>,</span>
-<span id="cb18-7">                     <span class="st" style="color: #20794D;
+<span id="cb12-7">                     <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word green printed in the color green"</span>)</span>
-<span id="cb18-8"></span>
-<span id="cb18-9"><span class="co" style="color: #5E5E5E;
+<span id="cb12-8"></span>
+<span id="cb12-9"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># four possible incongruent items</span></span>
-<span id="cb18-10">incongruent_items <span class="ot" style="color: #003B4F;
+<span id="cb12-10">incongruent_items <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word red printed in the color blue"</span>,</span>
-<span id="cb18-11">                       <span class="st" style="color: #20794D;
+<span id="cb12-11">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word red printed in the color green"</span>,</span>
-<span id="cb18-12">                       <span class="st" style="color: #20794D;
+<span id="cb12-12">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word red printed in the color yellow"</span>,</span>
-<span id="cb18-13">                       <span class="st" style="color: #20794D;
+<span id="cb12-13">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word blue printed in the color red"</span>,</span>
-<span id="cb18-14">                       <span class="st" style="color: #20794D;
+<span id="cb12-14">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word blue printed in the color green"</span>,</span>
-<span id="cb18-15">                       <span class="st" style="color: #20794D;
+<span id="cb12-15">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word blue printed in the color yellow"</span>,</span>
-<span id="cb18-16">                       <span class="st" style="color: #20794D;
+<span id="cb12-16">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word yellow printed in the color red"</span>,</span>
-<span id="cb18-17">                       <span class="st" style="color: #20794D;
+<span id="cb12-17">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word yellow printed in the color blue"</span>,</span>
-<span id="cb18-18">                       <span class="st" style="color: #20794D;
+<span id="cb12-18">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word yellow printed in the color green"</span>,</span>
-<span id="cb18-19">                       <span class="st" style="color: #20794D;
+<span id="cb12-19">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word green printed in the color red"</span>,</span>
-<span id="cb18-20">                       <span class="st" style="color: #20794D;
+<span id="cb12-20">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word green printed in the color blue"</span>,</span>
-<span id="cb18-21">                       <span class="st" style="color: #20794D;
+<span id="cb12-21">                       <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The word green printed in the color yellow"</span>)</span>
-<span id="cb18-22"></span>
-<span id="cb18-23"><span class="co" style="color: #5E5E5E;
+<span id="cb12-22"></span>
+<span id="cb12-23"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># generate 50% congruent and 50% incongruent trials</span></span>
-<span id="cb18-24"><span class="co" style="color: #5E5E5E;
+<span id="cb12-24"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># 12 each (congruent and incongruent)</span></span>
-<span id="cb18-25">trials <span class="ot" style="color: #003B4F;
+<span id="cb12-25">trials <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4155,37 +4337,37 @@ background-color: null;
 font-style: inherit;">rep</span>(congruent_items,<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>),incongruent_items))</span>
-<span id="cb18-26"></span>
-<span id="cb18-27"></span>
-<span id="cb18-28"><span class="co" style="color: #5E5E5E;
+<span id="cb12-26"></span>
+<span id="cb12-27"></span>
+<span id="cb12-28"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#set up variables to store data</span></span>
-<span id="cb18-29">sim_data <span class="ot" style="color: #003B4F;
+<span id="cb12-29">sim_data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tibble</span>()</span>
-<span id="cb18-30">all_sim_data <span class="ot" style="color: #003B4F;
+<span id="cb12-30">all_sim_data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tibble</span>()</span>
-<span id="cb18-31">gpt_response_list <span class="ot" style="color: #003B4F;
+<span id="cb12-31">gpt_response_list <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>()</span>
-<span id="cb18-32"></span>
-<span id="cb18-33"><span class="co" style="color: #5E5E5E;
+<span id="cb12-32"></span>
+<span id="cb12-33"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># starting message</span></span>
-<span id="cb18-34"></span>
-<span id="cb18-35">sim_task <span class="ot" style="color: #003B4F;
+<span id="cb12-34"></span>
+<span id="cb12-35">sim_task <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(</span>
-<span id="cb18-36">       <span class="fu" style="color: #4758AB;
+<span id="cb12-36">       <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -4194,14 +4376,14 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"system"</span>,</span>
-<span id="cb18-37">           <span class="st" style="color: #20794D;
+<span id="cb12-37">           <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"You are a simulated participant in a human cognition experiment. Your task is to respond as quickly and accurately as possible, and record your simulated responses in a JSON file"</span>),</span>
-<span id="cb18-38">       <span class="fu" style="color: #4758AB;
+<span id="cb12-38">       <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -4210,14 +4392,14 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"assistant"</span>,</span>
-<span id="cb18-39">           <span class="st" style="color: #20794D;
+<span id="cb12-39">           <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"OK, what are the instructions for this task?"</span>),</span>
-<span id="cb18-40">       <span class="fu" style="color: #4758AB;
+<span id="cb12-40">       <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -4226,14 +4408,14 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"user"</span>,</span>
-<span id="cb18-41">           <span class="st" style="color: #20794D;
+<span id="cb12-41">           <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'This is a simulated Stroop task. You will be shown a Stroop item in the form of a sentence. The sentence will describe a word presented in a particular ink-color. Your task is to identify the ink-color of the word as quickly and accurately as possible. Put the simulated identification response and reaction time into a JSON array using this format: [{"trial": "trial number, integer", "word": "the name of the word, string","color": "the color of the word, string","response": "the simulated identification response, string","reaction_time": "the simulated reaction time, milliseconds an integer"}].'</span>),</span>
-<span id="cb18-42">       <span class="fu" style="color: #4758AB;
+<span id="cb12-42">       <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -4242,16 +4424,16 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"assistant"</span>,</span>
-<span id="cb18-43">           <span class="st" style="color: #20794D;
+<span id="cb12-43">           <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"OK, show the next trial."</span>)</span>
-<span id="cb18-44">       )</span>
-<span id="cb18-45"></span>
-<span id="cb18-46">task_names <span class="ot" style="color: #003B4F;
+<span id="cb12-44">       )</span>
+<span id="cb12-45"></span>
+<span id="cb12-46">task_names <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4266,8 +4448,8 @@ background-color: null;
 font-style: inherit;">"response"</span>,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"reaction_time"</span>)</span>
-<span id="cb18-47"></span>
-<span id="cb18-48"><span class="cf" style="color: #003B4F;
+<span id="cb12-47"></span>
+<span id="cb12-48"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">for</span>(i <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -4278,15 +4460,15 @@ background-color: null;
 font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span>){</span>
-<span id="cb18-49">  </span>
-<span id="cb18-50">  <span class="fu" style="color: #4758AB;
+<span id="cb12-49">  </span>
+<span id="cb12-50">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(i)</span>
-<span id="cb18-51">  </span>
-<span id="cb18-52">  <span class="co" style="color: #5E5E5E;
+<span id="cb12-51">  </span>
+<span id="cb12-52">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># add trial to list of messages</span></span>
-<span id="cb18-53">  sim_task[[<span class="fu" style="color: #4758AB;
+<span id="cb12-53">  sim_task[[<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(sim_task)<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4297,43 +4479,43 @@ background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(</span>
-<span id="cb18-54">    <span class="st" style="color: #20794D;
+<span id="cb12-54">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"user"</span>,</span>
-<span id="cb18-55">    <span class="st" style="color: #20794D;
+<span id="cb12-55">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> trials[i]</span>
-<span id="cb18-56">  )</span>
-<span id="cb18-57">  </span>
-<span id="cb18-58">  <span class="co" style="color: #5E5E5E;
+<span id="cb12-56">  )</span>
+<span id="cb12-57">  </span>
+<span id="cb12-58">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># get response</span></span>
-<span id="cb18-59">  gpt_response <span class="ot" style="color: #003B4F;
+<span id="cb12-59">  gpt_response <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">create_chat_completion</span>(</span>
-<span id="cb18-60">   <span class="at" style="color: #657422;
+<span id="cb12-60">   <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"gpt-3.5-turbo"</span>,</span>
-<span id="cb18-61">   <span class="at" style="color: #657422;
+<span id="cb12-61">   <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">messages =</span> sim_task</span>
-<span id="cb18-62">   )</span>
-<span id="cb18-63">  </span>
-<span id="cb18-64">  <span class="co" style="color: #5E5E5E;
+<span id="cb12-62">   )</span>
+<span id="cb12-63">  </span>
+<span id="cb12-64">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#validate json and proceed</span></span>
-<span id="cb18-65">  </span>
-<span id="cb18-66">  <span class="cf" style="color: #003B4F;
+<span id="cb12-65">  </span>
+<span id="cb12-66">  <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span>(jsonlite<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4350,11 +4532,11 @@ background-color: null;
 font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>){</span>
-<span id="cb18-67">    </span>
-<span id="cb18-68">    <span class="co" style="color: #5E5E5E;
+<span id="cb12-67">    </span>
+<span id="cb12-68">    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># convert JSON to tibble</span></span>
-<span id="cb18-69">    trial_tibble <span class="ot" style="color: #003B4F;
+<span id="cb12-69">    trial_tibble <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> jsonlite<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4365,14 +4547,14 @@ background-color: null;
 font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>message.content)</span>
-<span id="cb18-70">    <span class="fu" style="color: #4758AB;
+<span id="cb12-70">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(trial_tibble)</span>
-<span id="cb18-71">    </span>
-<span id="cb18-72">    <span class="co" style="color: #5E5E5E;
+<span id="cb12-71">    </span>
+<span id="cb12-72">    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># check if tibble has correct names</span></span>
-<span id="cb18-73">    <span class="cf" style="color: #003B4F;
+<span id="cb12-73">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4381,20 +4563,20 @@ background-color: null;
 font-style: inherit;">==</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">names</span>(trial_tibble))){</span>
-<span id="cb18-74">      </span>
-<span id="cb18-75">      <span class="co" style="color: #5E5E5E;
+<span id="cb12-74">      </span>
+<span id="cb12-75">      <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#add new row to sim</span></span>
-<span id="cb18-76">      sim_data <span class="ot" style="color: #003B4F;
+<span id="cb12-76">      sim_data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rbind</span>(sim_data,trial_tibble)</span>
-<span id="cb18-77">      </span>
-<span id="cb18-78">      <span class="do" style="color: #5E5E5E;
+<span id="cb12-77">      </span>
+<span id="cb12-78">      <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## response to to message list</span></span>
-<span id="cb18-79">      sim_task[[<span class="fu" style="color: #4758AB;
+<span id="cb12-79">      sim_task[[<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(sim_task)<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4405,7 +4587,7 @@ background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(</span>
-<span id="cb18-80">        <span class="st" style="color: #20794D;
+<span id="cb12-80">        <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"role"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -4414,7 +4596,7 @@ background-color: null;
 font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>message.role,</span>
-<span id="cb18-81">        <span class="st" style="color: #20794D;
+<span id="cb12-81">        <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"content"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -4423,11 +4605,11 @@ background-color: null;
 font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>message.content</span>
-<span id="cb18-82">      )</span>
-<span id="cb18-83">    }</span>
-<span id="cb18-84">  }</span>
-<span id="cb18-85">  </span>
-<span id="cb18-86">}</span></code></pre></div>
+<span id="cb12-82">      )</span>
+<span id="cb12-83">    }</span>
+<span id="cb12-84">  }</span>
+<span id="cb12-85">  </span>
+<span id="cb12-86">}</span></code></pre></div>
 </div>
 
 
@@ -4451,6 +4633,9 @@ De Leeuw, Joshua R. 2015. <span>“jsPsych: A JavaScript Library for Creating Be
 MacLeod, Colin M. 1991. <span>“Half a Century of Research on the <span>Stroop</span> Effect: An Integrative Review.”</span> <em>Psychological Bulletin</em> 109 (2): 163. <a href="https://doi.org/10.1037/0033-2909.109.2.163">https://doi.org/10.1037/0033-2909.109.2.163</a>.
 </div>
 </div></section></div> ]]></description>
+  <category>LLMs</category>
+  <category>Stroop</category>
+  <category>ChatGPT</category>
   <guid>https://crumplab.com/blog/771_GPT_Stroop/index.html</guid>
   <pubDate>Tue, 06 Jun 2023 04:00:00 GMT</pubDate>
 </item>
@@ -4656,13 +4841,13 @@ Expertise: growing | Usefulness: 5 stars | Audience: notes to self
 
 </div>
 </div>
-<p>Teaching at CUNY comes with a January intercession. Every year I appreciate the time to decompress from the Fall semester and gear up the Spring. This round I found myself decompressing by playing through Zelda: Breath of the wild on Nintendo switch. I'm a few years late to the platform. It's a great game. Very distracting.</p>
-<p>Now I must undistract myself. I have two new preps coming up for Spring, and it's time make some different recipes (my favorite part of Zelda BOTW is making recipes with ingredients you pick up ❤️). I've previously blogged a bit about courses I'm teaching, and have found the process useful for materializing stories in my head about what I imagine I'm trying to accomplish in the course. I spend a good deal of time imagining course structures, but writing it all down helps to firm up the directions. So, this is one is for me.</p>
-<p>I have two new and very different courses, and I could do a post for each. But, I'll try them together. Both are undergraduate courses. The first course is called "The people of New York City", and the second course is called…Ha. This process is already working out. I can never remember formal course names. My go too strategy is to load up my lab webpage and click on the courses tab. In general, for each course I make websites and share out my course materials, and this also makes it easy to find course details quickly. But, I see that I was not as far along as I thought. I have made course websites for both course, but I have not linked to them on my lab webpage. I should go do that, and then come back here to continue the narrative form to-do list.</p>
+<p>Teaching at CUNY comes with a January intercession. Every year I appreciate the time to decompress from the Fall semester and gear up the Spring. This round I found myself decompressing by playing through Zelda: Breath of the wild on Nintendo switch. I’m a few years late to the platform. It’s a great game. Very distracting.</p>
+<p>Now I must undistract myself. I have two new preps coming up for Spring, and it’s time make some different recipes (my favorite part of Zelda BOTW is making recipes with ingredients you pick up ❤️). I’ve previously blogged a bit about courses I’m teaching, and have found the process useful for materializing stories in my head about what I imagine I’m trying to accomplish in the course. I spend a good deal of time imagining course structures, but writing it all down helps to firm up the directions. So, this is one is for me.</p>
+<p>I have two new and very different courses, and I could do a post for each. But, I’ll try them together. Both are undergraduate courses. The first course is called “The people of New York City”, and the second course is called…Ha. This process is already working out. I can never remember formal course names. My go too strategy is to load up my lab webpage and click on the courses tab. In general, for each course I make websites and share out my course materials, and this also makes it easy to find course details quickly. But, I see that I was not as far along as I thought. I have made course websites for both course, but I have not linked to them on my lab webpage. I should go do that, and then come back here to continue the narrative form to-do list.</p>
 <p>BRB.</p>
-<p>OOf, the scary part. I upgraded R and R studio a few weeks ago. I use these and quarto to generate websites, including my lab website. So, will it compile? And, if not, how long will it take. Let's find out…Thankfully I only had to update one library. Not too bad. Let's try this again.</p>
-<p>But, one more tangent. I'm currently writing this post in <a href="http://notion.so">notion.so</a>. I think I really like notion. It's fast, fun and functional. I can basically write fast in markdown with bells and whistles. My blog is on my website, and written using quarto. If I want this to be there, then I need copy this into a .qmd document, and set up a new blog post. I was hoping to write mostly in notion and then copy over to quarto later. But, as I was about to start adding external links, I wasn't totally sure how notion markdown and quarto markdown will play together. Let's find out.</p>
-<p>The link to my lab website that now has my course list is <a href="http://crumplab.com/courses">crumplab.com/courses</a>. I'm still writing in notion, and wrote that link as plain text. It is not clickable. But! it is clickable when I copy/pasted it into the visual editor in R studio. Nice.</p>
+<p>OOf, the scary part. I upgraded R and R studio a few weeks ago. I use these and quarto to generate websites, including my lab website. So, will it compile? And, if not, how long will it take. Let’s find out…Thankfully I only had to update one library. Not too bad. Let’s try this again.</p>
+<p>But, one more tangent. I’m currently writing this post in <a href="http://notion.so">notion.so</a>. I think I really like notion. It’s fast, fun and functional. I can basically write fast in markdown with bells and whistles. My blog is on my website, and written using quarto. If I want this to be there, then I need copy this into a .qmd document, and set up a new blog post. I was hoping to write mostly in notion and then copy over to quarto later. But, as I was about to start adding external links, I wasn’t totally sure how notion markdown and quarto markdown will play together. Let’s find out.</p>
+<p>The link to my lab website that now has my course list is <a href="http://crumplab.com/courses">crumplab.com/courses</a>. I’m still writing in notion, and wrote that link as plain text. It is not clickable. But! it is clickable when I copy/pasted it into the visual editor in R studio. Nice.</p>
 <p>Well. I didn’t get a start on verbalizing course structure thoughts, and now I have a meeting. Will be back here tomorrow.</p>
 
 
@@ -8173,87 +8358,6 @@ Whittlesea, Bruce W. A. 1997. <span>“Production, Evaluation, and Preservation 
   <guid>https://crumplab.com/blog/884_10_25_22_ReadingListCognition/index.html</guid>
   <pubDate>Tue, 25 Oct 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/884_10_25_22_ReadingListCognition/images/cognition_reading.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Unplanning my next course prep</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/885_10_16_22_unplanning/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<style type="text/css">
-@media (min-width: 1400px) {
-    body {
-        font-size:18px
-    }
-
-    .col-md-3 {
-        margin-left: 5rem
-    }
-
-    .row {
-        --bs-gutter-x: -20%!important;
-    }
-
-    .row>main {
-        max-width: 40rem;
-    }
-
-}
-
-</style>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/885_10_16_22_unplanning/images/unplanning.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>Last knit: 2023-06-26</p>
-<p>I’ll probably spend more time on making the banner image for this post than writing it because there’s a looming Brooklyn brunch situation, and I only have a simple suggestion for my future self: unplan your course.</p>
-<p>I’ve planned lots of courses, and I’m about to plan two more for next semester. One of them is a Macaulay Honor’s seminar for undergraduates in the first year of that program. The seminar is called, “The people of New York City”. It’s a really interesting course that has been taught in many different ways across CUNY. It’s also way outside my realm of expertise, which is typical for everyone who is asked to lead this seminar. Needless to say, I have started planning my approach to the seminar. But, I really don’t want the planning to get in the way, so I’m starting to do unplanning as well.</p>
-<p>What does unplanning entail? I’m not so sure yet, so I’m slopping down thoughts about what I might mean. Relatedly, this Fall 2022 semester I am trying “ungrading” <span class="citation" data-cites="blum2020">(Blum 2020)</span> in my <a href="https://crumplab.com/cognition">intro to cognition course</a>. This approach can mean lots of different things for a classroom, and <a href="https://crumplab.com/blog/post_888_8_23_22_teaching2530/">I’ve been blogging a bit about that over here</a>. One of the things it means to me is that the class becomes a community space inhabited by participating individual learners. From this vantage point, I’ve been working through what it means to deliver my planned course as a member of the community who is very quickly coming up to speed with community wants and needs.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Brunch
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Blogging interrupted by a hamburger</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/885_10_16_22_unplanning/images/records.png" class="img-fluid" width="1216"></p>
-</div>
-</div>
-<p>And, I picked up some new records on the walk home, so I get to finish this with some musical inspiration.</p>
-</div>
-</div>
-<p>In the cognition course I’ve got the planning side of things down. That is, for any class I have lots of pre-planned content and activities that could be done. What I’m becoming more interested in is whether any of the things I planned should be done, especially considering the other possibilities for learning that can be identified together with the rest of the class. Those other possibilities don’t exist before the class, they come into existence with the class. Too much advance planning can easily sideline a class from self-determining their learning process. So, I’m rolling around the term unplanning to make sure I remember not to over plan, and/or to plan for how a community of learners will set, accomplish, and assess their own learning process.</p>
-<p>To provide a more specific example, I’ll go back to the honor’s seminar course I’m prepping. There will be about 20 first year students in the class. The course topic is stated as “the people of New York City”, and there are lots of ways to learn about the people of NYC across time and place. The topic is easily way too big for a course. One approach I will take as a course leader is to consider how different research methods might be applied to learning about complex topics such as the people of NYC. This fits with another general course goal of exposing students to research methods and digital means of conducting and communicating research. For example, the Macaulay program encourages students to create blogs and websites, and many previous classes have turned their research products into websites as an end-of-semester project.</p>
-<p>Part of my course planning right now involves <a href="https://crumplab.com/peopleofnyc/">creating the course website</a>. I’m using <a href="https://quarto.org">quarto</a> to do this (which is the same process I use for this blog and website), and I’m planning to teach my students how to make their own quarto blogs and websites. These will be used throughout the course as a venue to create and share research about the people of NYC.</p>
-<p>Where does unplanning fit into this? Right now I’m planning to design most elements of a course as I normally would do. I’ll write the whole syllabus and detail out what I expect will happen for each class time, along with readings and assignments. But, I’ll be looking for places where I think it would be more beneficial for the class to fill in the blanks than it would be for me to fill them in.</p>
-<p>For example, in this class we will likely be completing a mini-project every two weeks or so. Each mini-project will explore using a research method to ask and answer questions about the people of NYC. This structure invites all sorts of questions about motivation for the research: what kinds of questions are worth asking, what kinds of answers are worth knowing about, what kinds of stories are we looking to learn about, what kinds of stories will we tell? I have opinions about all of these things, and I could find readings or draft material to inform my students about these opinions. At the same time, I can unplan this part. For example, I would be much more interested in having the class grapple with issues of motivation, and have them explicate and contexualize their motivations as a part of communicating their projects.</p>
-<p>In this example, I’d like the class to produce material about their motivations for their research and put it on their website. Or, the whole group can collaborate on statements and content for the course website that reflect the process of self-direction for our learning community.</p>
-<p>Unplanning could be me defining sample question-mark spaces that need filling. Overplanning is me filling the space. Unplanning could be “empty” pages on the course website pointing at issues that need to be addressed by the class before the end of the semester. Answering the question marks, or making new ones and answering them, can be part of the mechanism catalyzing the community to engage with itself and motivate how it steps through a learning process.</p>
-<p>Somehow I accidentally slipped into blogging on a Sunday, and it’s time to go turn over a record.</p>
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-blum2020" class="csl-entry">
-Blum, Susan Debra. 2020. <em>Ungrading: Why Rating Students Undermines Learning (and What to Do Instead)</em>. West Virginia University Press.
-</div>
-</div></section></div> ]]></description>
-  <category>ungrading</category>
-  <category>unplanning</category>
-  <category>teaching</category>
-  <guid>https://crumplab.com/blog/885_10_16_22_unplanning/index.html</guid>
-  <pubDate>Sun, 16 Oct 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/885_10_16_22_unplanning/images/unplanning.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

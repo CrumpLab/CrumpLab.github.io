@@ -3,6 +3,10 @@ title: "Simulating Stroop effects with ChatGPT"
 author: "Matt Crump"
 date: 6/6/23
 description: "This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short answer is that it can generate data in the style of a Stroop experiment without too much effort on my part."
+categories: 
+  - LLMs
+  - Stroop
+  - ChatGPT
 bibliography: references.bib
 ---
 

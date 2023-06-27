@@ -3,6 +3,11 @@ title: "Using GPT for writing in R Studio"
 author: "Matt Crump"
 date: "6-7-23"
 description: "I'm spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio."
+categories: 
+  - LLMs
+  - OpenAI
+  - Rstats
+  - RStudio
 ---
 
 ## Preamble

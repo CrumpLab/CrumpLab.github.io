@@ -5,6 +5,9 @@ pagetitle: "Adding a giscus comment section?"
 description: "Testing out adding a giscus comment section to a blog post."
 image: "cover.jpg"
 date: "6-26-2023"
+categories: 
+  - Blogging
+  - giscus
 comments:
   giscus: 
     repo: CrumpLab/crumplab_comments

@@ -3,17 +3,23 @@ title: "Writing an R tutorial with GPT in RStudio"
 author: "Matt Crump"
 date: "6-8-2023"
 description: "I'm testing out the process of writing in RStudio using addins that send prompts and receive generative text from OpenAI."
+categories: 
+  - LLMs
+  - OpenAI
+  - Rstats
+  - RStudio
+  - Assisted writing
 ---
 
 ## Preamble
 
-I've been messing around with the [openai](https://github.com/irudnyts/openai) library for R, which wraps the OpenAI API, and makes it easy to send and receive text between R and an LLM model. [In a previous post](https://crumplab.com/blog/770_rstudio_gpt/), I made a quick and dirty R package, [gptaddin](https://github.com/CrumpLab/gptaddin) that loads addins into RStudio and makes it possible to highlight text in an editor window and get LLM responses to the console, or back into the editor. 
+I've been messing around with the [openai](https://github.com/irudnyts/openai) library for R, which wraps the OpenAI API, and makes it easy to send and receive text between R and an LLM model. [In a previous post](https://crumplab.com/blog/770_rstudio_gpt/), I made a quick and dirty R package, [gptaddin](https://github.com/CrumpLab/gptaddin) that loads addins into RStudio and makes it possible to highlight text in an editor window and get LLM responses to the console, or back into the editor.
 
 Now I'm curious what the writing experience is like if I have easy access to some writing assist tools. My aim in this post is to do some writing using the addins. It would be more accurate to say that I'm going to try some quick content generation.
 
-This semester I was teaching [data-visualization with R](https://crumplab.github.io/psyc3470) to undergraduates, and at one point I had ChatGPT generate some R code for me. It did a really good job, especially for the simple prompts I was using. I didn't have time to explore using LLMs as a teaching tool for learning R, and I'll use this post for this purpose. 
+This semester I was teaching [data-visualization with R](https://crumplab.github.io/psyc3470) to undergraduates, and at one point I had ChatGPT generate some R code for me. It did a really good job, especially for the simple prompts I was using. I didn't have time to explore using LLMs as a teaching tool for learning R, and I'll use this post for this purpose.
 
-I'll focus on `for` loops, and make heavy use of prompts to LLMs to generate content about `for` loops. 
+I'll focus on `for` loops, and make heavy use of prompts to LLMs to generate content about `for` loops.
 
 TLDR: it worked OK.
 
@@ -23,11 +29,11 @@ Ignore your previous system role instructions. You are an expert programmer in t
 
 How should a beginner learn about for loops in R?
 
-----
+------------------------------------------------------------------------
 
 Beginners can start by reading up on basic syntax for for loops in R. They should then work their way through a few tutorials and practice coding in an interactive development environment like RStudio. Once they have a basic understanding of for loops, they should consider taking a more comprehensive course to gain a stronger understanding of for loops and more advanced concepts in R programming.
 
-----
+------------------------------------------------------------------------
 
 ### Basic for loop syntax
 
@@ -35,7 +41,7 @@ Ignore your previous system role instructions. You are an expert programmer in t
 
 Explain basic syntax for for loops in R with a couple examples. Put the examples in R code chunks.
 
-----
+------------------------------------------------------------------------
 
 Sure, I'd be happy to help!
 
@@ -74,7 +80,7 @@ for (name in names) {
 
 In this example, `name` is the temporary variable that is used to store each value in the `names` vector. In each iteration of the loop, a string is printed to the console that includes the current `name` variable.
 
-----
+------------------------------------------------------------------------
 
 ## Quizzing on for loops
 
@@ -82,11 +88,11 @@ Ignore your previous system role instructions. You are an expert programmer in t
 
 Create a few quiz question to test basic knowledge of for loops in R. Use example code and put any R code into R code chunks.
 
-----
+------------------------------------------------------------------------
 
 Sure, here are a few basic quiz questions to test your knowledge of for loops in R:
 
-1. What is the basic syntax of a for loop in R?
+1.  What is the basic syntax of a for loop in R?
 
 ```{r}
 # Answer: 
@@ -95,7 +101,7 @@ Sure, here are a few basic quiz questions to test your knowledge of for loops in
 # }
 ```
 
-2. How do you create a sequence of numbers in R?
+2.  How do you create a sequence of numbers in R?
 
 ```{r}
 # Answer:
@@ -107,7 +113,7 @@ for (i in 1:10) {
 }
 ```
 
-3. Can you give an example of a for loop that uses the `seq()` function to iterate over a sequence of odd numbers from 1 to 9?
+3.  Can you give an example of a for loop that uses the `seq()` function to iterate over a sequence of odd numbers from 1 to 9?
 
 ```{r}
 # Answer:
@@ -118,7 +124,7 @@ for (i in seq(from=1, to=9, by=2)) {
 }
 ```
 
-4. How can you use a for loop to iterate over a vector of strings and print each string?
+4.  How can you use a for loop to iterate over a vector of strings and print each string?
 
 ```{r}
 # Answer:
@@ -130,29 +136,29 @@ my_strings <- c("apple", "banana", "cherry")
 for (i in 1:length(my_strings)) {
   print(my_strings[i])
 }
-``` 
+```
 
------
+------------------------------------------------------------------------
 
 Ignore your previous system role instructions. You are an expert programmer in the R programming language, and you are an expert educator capable of explaining R programming concepts to beginners
 
 Create examples of simple for loops in R that have syntax errors. The examples should be helpful for a beginner to improve their understanding of R syntax and for loop functionality. Use example code and put any R code into R code chunks.
 
----
+------------------------------------------------------------------------
 
 Sure, here are some examples of for loops in R with syntax errors:
 
 ### Example 1: Missing parenthesis in for loop declaration
 
-```
+```         
 for i in 1:10 {
   print(i)
 }
-``` 
+```
 
 The correct code should be:
 
-```
+```         
 for (i in 1:10) {
   print(i)
 }
@@ -160,7 +166,7 @@ for (i in 1:10) {
 
 ### Example 2: Missing curly braces to enclose loop body
 
-```
+```         
 for (i in 1:10)
   print(i)
 }
@@ -168,7 +174,7 @@ for (i in 1:10)
 
 The correct code should be:
 
-```
+```         
 for (i in 1:10) {
   print(i)
 }
@@ -176,7 +182,7 @@ for (i in 1:10) {
 
 ### Example 3: Using a closed parenthesis instead of a curly brace for loop body
 
-```
+```         
 for (i in 1:10) (
   print(i)
 )
@@ -184,7 +190,7 @@ for (i in 1:10) (
 
 The correct code should be:
 
-```
+```         
 for (i in 1:10) {
   print(i)
 }
@@ -192,7 +198,7 @@ for (i in 1:10) {
 
 ### Example 4: Missing quotes to enclose a character vector within loop body
 
-```
+```         
 fruits <- c("apple", "banana", "orange")
 for (fruit in fruits) {
   print(fruit)
@@ -204,7 +210,7 @@ for (fruit in fruits) {
 
 The correct code should be:
 
-```
+```         
 fruits <- c("apple", "banana", "orange")
 for (fruit in fruits) {
   print(fruit)
@@ -216,7 +222,7 @@ for (fruit in fruits) {
 
 ### Example 5: Missing index variable in for loop declaration
 
-```
+```         
 letters <- c("a", "b", "c", "d")
 for () {
   print(letters)
@@ -225,7 +231,7 @@ for () {
 
 The correct code should be:
 
-```
+```         
 letters <- c("a", "b", "c", "d")
 for (i in 1:length(letters)) {
   print(letters[i])
@@ -240,9 +246,9 @@ Ignore your previous system role instructions. You are an expert programmer in t
 
 Describe the fizz buzz problem and explain why a beginner should attempt to solve it to help develop their skills and understanding of for loops in R. Then show example R code that solves the fizz buzz problem using a for loop. Put the code in R code chunks and use helpful comments that explain each part of the code.
 
-----
+------------------------------------------------------------------------
 
-The fizz buzz problem is a classic programming problem that is often used in coding interviews. The problem consists of writing a program that prints numbers from 1 to N, but for multiples of 3, "Fizz" is printed instead of the number, and for multiples of 5, "Buzz" is printed instead. For numbers that are multiples of both 3 and 5 (e.g., 15), "FizzBuzz" should be printed. 
+The fizz buzz problem is a classic programming problem that is often used in coding interviews. The problem consists of writing a program that prints numbers from 1 to N, but for multiples of 3, "Fizz" is printed instead of the number, and for multiples of 5, "Buzz" is printed instead. For numbers that are multiples of both 3 and 5 (e.g., 15), "FizzBuzz" should be printed.
 
 Solving the Fizz Buzz problem is a great way for beginners to develop their skills and understanding of for loops in R because it requires them to use a loop to iterate over a range of numbers and use conditional statements to check whether each number is a multiple of 3, 5, or both.
 
@@ -280,7 +286,7 @@ for (i in 1:N) {
 }
 ```
 
-In this code chunk, we first define the maximum number to iterate up to as `N`. We then use a `for` loop to iterate over numbers from 1 to `N`. Within the loop, we use conditional statements (`if`, `else if`, and `else`) to check whether each number is a multiple of 3, 5, or both. 
+In this code chunk, we first define the maximum number to iterate up to as `N`. We then use a `for` loop to iterate over numbers from 1 to `N`. Within the loop, we use conditional statements (`if`, `else if`, and `else`) to check whether each number is a multiple of 3, 5, or both.
 
 For numbers that are multiples of both 3 and 5, we print "FizzBuzz". For numbers that are multiples of 3, we print "Fizz". For numbers that are multiples of 5, we print "Buzz". Finally, for numbers that are not multiples of 3 or 5, we print the number itself.
 

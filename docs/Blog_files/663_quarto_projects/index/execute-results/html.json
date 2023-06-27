@@ -1,0 +1,16 @@
+{
+  "hash": "b1737a650b397f9cae674bf1ecbfc6bd",
+  "result": {
+    "markdown": "---\ntitle: \"Pondering my defaults for quarto websites and reproducible research projects\"\nauthor: \"Matt Crump\"\ndate: 6/27/23\ndescription: \"Quarto websites are a great way to package and distribute assets from a reproducible research project. I'm just about to start another project, and I'm thinking about issues with how I get started.\"\nimage: \"cover.jpg\"\ncategories: \n  - quarto\n  - reproducible research\n  - rstats\nexecute: \n  echo: false\n---\n\n::: {.cell}\n::: {.cell-output-display}\n![](cover.jpg){width=540}\n:::\n:::\n\n\n## Preamble\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

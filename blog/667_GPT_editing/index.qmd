@@ -4,6 +4,11 @@ title: "Prompts for editing text with GPT"
 description: "Testing out some strategies for writing assistant functions from GPT"
 image: "cover.jpg"
 date: "6-21-2023"
+categories: 
+  - LLMs
+  - Rstats
+  - RStudio
+  - Assisted writing
 ---
 
 ```{r, eval = FALSE, echo=FALSE}
