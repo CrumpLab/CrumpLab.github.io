@@ -4,6 +4,9 @@ author: "Matt Crump"
 date: 6/27/23
 description: "Quarto websites are a great way to package and distribute assets from a reproducible research project. I'm just about to start another project, and I'm thinking about issues with how I get started."
 image: "cover.jpg"
+comments:
+  giscus: 
+    repo: CrumpLab/crumplab_comments
 categories: 
   - Quarto
   - reproducible research

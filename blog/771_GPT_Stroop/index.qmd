@@ -7,8 +7,13 @@ categories:
   - LLMs
   - Stroop
   - ChatGPT
+comments:
+  giscus: 
+    repo: CrumpLab/crumplab_comments
 bibliography: references.bib
 ---
+
+Update: I'm continuing to work on this project in more depth over here <https://crumplab.com/GPTAttentionPerformance/>
 
 I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the [openai](openai.com) API. This post will be brief, and I'm mainly using the time to see if I can get the api to work. Let's go.
 
@@ -293,8 +298,6 @@ for(i in 1:10){
 save.image("batch2.RData")
 ```
 
-
-
 ```{r}
 load(file = "batch2.RData")
 ```
@@ -310,9 +313,10 @@ One reason to run multiple simulated subjects is to see whether the model gives 
 ```{r}
 hist(all_sim_data$reaction_time)
 ```
+
 ### Do differenet simulated subjects show different Stroop effects?
 
-The answer appears to be yes. All of these simulated subjects have different sized Stroop effects. 
+The answer appears to be yes. All of these simulated subjects have different sized Stroop effects.
 
 ```{r}
 
@@ -356,7 +360,7 @@ knitr::kable(accuracy_data_subject)
 
 ## Congruency sequence effects
 
-A common finding in the Stroop literature is that Stroop effects are larger following congruent trials than incongruent trials. I didn't mention anything about this in the prompt. I'm curious if the LLM will put the pattern into the simulated RTs. One reason it might do that is if real raw Stroop data was part of the training set. 
+A common finding in the Stroop literature is that Stroop effects are larger following congruent trials than incongruent trials. I didn't mention anything about this in the prompt. I'm curious if the LLM will put the pattern into the simulated RTs. One reason it might do that is if real raw Stroop data was part of the training set.
 
 Doesn't look like it, but should simulate many more subjects and then take a closer look.
 
@@ -391,10 +395,9 @@ rt_data_subject_seq <- all_sim_data %>%
 knitr::kable(rt_data_subject_seq)
 ```
 
-
 ## A trial-by-trial approach
 
-Another option is to request outputs on a "trial-by-trial" basis. 
+Another option is to request outputs on a "trial-by-trial" basis.
 
 Steps:
 
@@ -493,5 +496,3 @@ for(i in 1:10){
 
 
 ```
-
-
