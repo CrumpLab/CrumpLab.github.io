@@ -121,6 +121,9 @@ website:
     left:
       - href: index.qmd
         text: Home
+    - icon: github
+        href: https://github.com/CrumpLab/GPTAttentionPerformance
+        aria-label: GitHub
   sidebar:
     - title: "Home"
       style: "floating"
@@ -130,7 +133,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: minty
     css: styles.css
     toc: true
 ```
@@ -164,6 +167,6 @@ The next step is to make new folders and add .qmds to them. I made a `modeling` 
 
 ![](images/Screenshot%202023-06-27%20at%2011.29.30%20AM.png)
 
-This is good enough for now. I'm going to pass on making templates.
+This is good enough for now. I'm going to pass on making templates. I think I'm still in the stage of figuring out what I want by making projects from scratch. Hopefully I will really like one of these project structures, and then I can make a template out of it later.
 
 Time to get going on this actual project!

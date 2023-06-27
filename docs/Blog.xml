@@ -109,18 +109,21 @@
 <span id="cb2-17">    left:</span>
 <span id="cb2-18">      - href: index.qmd</span>
 <span id="cb2-19">        text: Home</span>
-<span id="cb2-20">  sidebar:</span>
-<span id="cb2-21">    - title: "Home"</span>
-<span id="cb2-22">      style: "floating"</span>
-<span id="cb2-23">      collapse-level: 3</span>
-<span id="cb2-24">      align: left</span>
-<span id="cb2-25">      contents: auto</span>
-<span id="cb2-26"></span>
-<span id="cb2-27">format:</span>
-<span id="cb2-28">  html:</span>
-<span id="cb2-29">    theme: cosmo</span>
-<span id="cb2-30">    css: styles.css</span>
-<span id="cb2-31">    toc: true</span></code></pre></div>
+<span id="cb2-20">    - icon: github</span>
+<span id="cb2-21">        href: https://github.com/CrumpLab/GPTAttentionPerformance</span>
+<span id="cb2-22">        aria-label: GitHub</span>
+<span id="cb2-23">  sidebar:</span>
+<span id="cb2-24">    - title: "Home"</span>
+<span id="cb2-25">      style: "floating"</span>
+<span id="cb2-26">      collapse-level: 3</span>
+<span id="cb2-27">      align: left</span>
+<span id="cb2-28">      contents: auto</span>
+<span id="cb2-29"></span>
+<span id="cb2-30">format:</span>
+<span id="cb2-31">  html:</span>
+<span id="cb2-32">    theme: minty</span>
+<span id="cb2-33">    css: styles.css</span>
+<span id="cb2-34">    toc: true</span></code></pre></div>
 <p>The landing page, defined in <code>index.qmd</code>, might start out like this:</p>
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1">---</span>
 <span id="cb3-2">title: "Simulating Attention and Performance tasks with an LLM"</span>
@@ -144,7 +147,7 @@
 <span id="cb3-20">Brief notes about the repo</span></code></pre></div>
 <p>The next step is to make new folders and add .qmds to them. I made a <code>modeling</code> folder, and added a .qmd that will act as a scratchpad/to-do list for me. Now any page in the modeling folder will automatically show up in the left-side navigation.</p>
 <p><img src="https://crumplab.com/blog/663_quarto_projects/images/Screenshot 2023-06-27 at 11.29.30 AM.png" class="img-fluid"></p>
-<p>This is good enough for now. I’m going to pass on making templates.</p>
+<p>This is good enough for now. I’m going to pass on making templates. I think I’m still in the stage of figuring out what I want by making projects from scratch. Hopefully I will really like one of these project structures, and then I can make a template out of it later.</p>
 <p>Time to get going on this actual project!</p>
 
 
