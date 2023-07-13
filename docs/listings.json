@@ -23,6 +23,7 @@
   {
     "listing": "/Blog.html",
     "items": [
+      "/blog/662_quarto_portfolio/index.html",
       "/blog/663_quarto_projects/index.html",
       "/blog/664_giscus/index.html",
       "/blog/665_realworld_editing/index.html",
