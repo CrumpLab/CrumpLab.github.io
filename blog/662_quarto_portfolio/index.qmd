@@ -80,7 +80,7 @@ format:
 ---
 ```
 
-It's possible to customize several aspects of the grid, including the number of columns, and the total number to display before pagination. The `contents: ` parameter points to the name of a folder (`things`). All .qmd files in the folder are automatically rendered and the image associated with the document is shown in the listing grid. Clicking on picture links to the individual page for each picture. 
+It's possible to customize several aspects of the grid, including the number of columns, and the number of images to display before pagination. The `contents: ` parameter points to the name of a folder `things` containing `.qmd` for each image. All `.qmd` files in the folder are automatically rendered and the image associated with the document is shown in the listing grid. Clicking on a picture in the front page grid links to the individual page for each picture. 
 
 ## A quarto page for each picture
 
@@ -94,7 +94,7 @@ The `things` folder contains multiple sub-folders, each with .qmd files for indi
     │   ├── Meeting_Of_The_Mountains.qmd
 ```
 
-An example `.qmd` file for an individual piece is below. I'm using the categories feature to code which series the piece is in, and these keywords are used on the website to filter all of the pictures really quickly.
+An example `.qmd` file for an individual piece is below. I'm using the categories feature to code which series the piece is in, and these keywords are displayed on the website to filter all of the pictures really quickly.
 
 ``` yaml
 ---
