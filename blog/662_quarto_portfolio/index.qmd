@@ -2,7 +2,7 @@
 title: "A simple visual art portfolio website using Quarto"
 author: "Matt Crump"
 date: 7/13/23
-description: "Notes on using Quarto to create a basic portfolio website for pictures using list pages."
+description: "Notes on using Quarto to create a basic portfolio website for pictures using listing pages."
 image: "images/portfolio.jpg"
 comments:
   giscus: 
@@ -37,6 +37,8 @@ I started with a few things I wanted to achieve:
 
 ## Quarto website structure
 
+The folder structure is below. Like all Quarto websites, the general organization of the site is controlled by parameters set in `_quarto.yml`.
+
 ``` default
 ├── README.md
 ├── Things.Rproj
@@ -57,7 +59,7 @@ I started with a few things I wanted to achieve:
     ├── ...
 ```
 
-The landing page shows a grid of pictures. This behavior is controlled by `index.qmd`, which uses the listing option in the top-level YAML.
+The landing page shows a grid of pictures. This behavior is controlled by `index.qmd`, which uses the [listing option](https://quarto.org/docs/websites/website-listings.html) in the top-level YAML.
 
 ``` yaml
 ---

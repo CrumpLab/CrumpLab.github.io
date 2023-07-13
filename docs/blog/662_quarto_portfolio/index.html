@@ -8,7 +8,7 @@
 
 <meta name="author" content="Matt Crump">
 <meta name="dcterms.date" content="2023-07-13">
-<meta name="description" content="Notes on using Quarto to create a basic portfolio website for pictures using list pages.">
+<meta name="description" content="Notes on using Quarto to create a basic portfolio website for pictures using listing pages.">
 
 <title>crumplab - A simple visual art portfolio website using Quarto</title>
 <style>
@@ -108,11 +108,11 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="crumplab - A simple visual art portfolio website using Quarto">
-<meta property="og:description" content="Notes on using Quarto to create a basic portfolio website for pictures using list pages.">
+<meta property="og:description" content="Notes on using Quarto to create a basic portfolio website for pictures using listing pages.">
 <meta property="og:image" content="https://crumplab.com/blog/662_quarto_portfolio/images/portfolio.jpg">
 <meta property="og:site-name" content="crumplab">
 <meta name="twitter:title" content="crumplab - A simple visual art portfolio website using Quarto">
-<meta name="twitter:description" content="Notes on using Quarto to create a basic portfolio website for pictures using list pages.">
+<meta name="twitter:description" content="Notes on using Quarto to create a basic portfolio website for pictures using listing pages.">
 <meta name="twitter:image" content="https://crumplab.com/blog/662_quarto_portfolio/images/portfolio.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -236,7 +236,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    Notes on using Quarto to create a basic portfolio website for pictures using list pages.
+    Notes on using Quarto to create a basic portfolio website for pictures using listing pages.
   </div>
 </div>
 
@@ -279,6 +279,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </section>
 <section id="quarto-website-structure" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-structure">Quarto website structure</h2>
+<p>The folder structure is below. Like all Quarto websites, the general organization of the site is controlled by parameters set in <code>_quarto.yml</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>├── README.md</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>├── Things.Rproj</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>├── _quarto.yml</span>
@@ -296,7 +297,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    ├── Colorlands</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    ├── Desertland</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    ├── ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The landing page shows a grid of pictures. This behavior is controlled by <code>index.qmd</code>, which uses the listing option in the top-level YAML.</p>
+<p>The landing page shows a grid of pictures. This behavior is controlled by <code>index.qmd</code>, which uses the <a href="https://quarto.org/docs/websites/website-listings.html">listing option</a> in the top-level YAML.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"things by Matt Crump"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">listing</span><span class="kw">:</span></span>
