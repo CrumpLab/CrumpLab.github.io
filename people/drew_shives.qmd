@@ -8,11 +8,11 @@ about:
   links:
     - icon: globe
       text: website
-      href: https://djshives.netlify.app
+      href: https://djshives.github.io/
     - icon: github
       text: Github
       href: https://github.com/djshives
 order: 2
 ---
 
-[Drew Shives](https://djshives.netlify.app) is a doctoral student at the Graduate Center of CUNY.
+[Drew Shives](https://djshives.github.io/) is a doctoral student at the Graduate Center of CUNY.

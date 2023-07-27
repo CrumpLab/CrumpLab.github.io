@@ -42,6 +42,14 @@ knitr::opts_chunk$set(
 .description {
     display: none;
   }
+  
+div.quarto-post .metadata {
+    display: none;
+  }
+  
+div.quarto-post .thumbnail {
+    flex-basis: 50%;
+}
 ```
 
 ```{r}
