@@ -46,13 +46,9 @@ List of current and previous courses taught at Brooklyn College of CUNY and the 
 ## Current Courses
 
 ::: {#current-courses}
-
 :::
 
 ## Past Courses
 
 ::: {#past-courses}
-
 :::
-
-
