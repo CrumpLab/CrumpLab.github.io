@@ -14,7 +14,7 @@
 <title>crumplab</title>
 <link>https://crumplab.com/Blog.html</link>
 </image>
-<generator>quarto-1.3.258</generator>
+<generator>quarto-1.3.353</generator>
 <lastBuildDate>Thu, 13 Jul 2023 04:00:00 GMT</lastBuildDate>
 <item>
   <title>A simple visual art portfolio website using Quarto</title>
@@ -24,7 +24,7 @@
 
 
 
-<p><img src="https://crumplab.com/blog/662_quarto_portfolio/images/portfolio.jpg" class="quarto-discovered-preview-image img-fluid"></p>
+<p><img src="https://crumplab.com/blog/662_quarto_portfolio/images/portfolio.jpg" class="img-fluid"></p>
 <p>I recently updated <a href="https://crumplab.com/things">my visual art website.</a> It’s now a very simple portfolio/gallery built using Quarto. This post is a quick run-down of what I did, with notes to my future self. The source code is on github: <a href="https://github.com/CrumpLab/things" class="uri">https://github.com/CrumpLab/things</a>.</p>
 <section id="what-i-wanted" class="level2">
 <h2 class="anchored" data-anchor-id="what-i-wanted">What I wanted</h2>
@@ -40,6 +40,7 @@
 </section>
 <section id="quarto-website-structure" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-structure">Quarto website structure</h2>
+<p>The folder structure is below. Like all Quarto websites, the general organization of the site is controlled by parameters set in <code>_quarto.yml</code>.</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">├── README.md</span>
 <span id="cb1-2">├── Things.Rproj</span>
 <span id="cb1-3">├── _quarto.yml</span>
@@ -57,7 +58,7 @@
 <span id="cb1-15">    ├── Colorlands</span>
 <span id="cb1-16">    ├── Desertland</span>
 <span id="cb1-17">    ├── ...</span></code></pre></div>
-<p>The landing page shows a grid of pictures. This behavior is controlled by <code>index.qmd</code>, which uses the listing option in the top-level YAML.</p>
+<p>The landing page shows a grid of pictures. This behavior is controlled by <code>index.qmd</code>, which uses the <a href="https://quarto.org/docs/websites/website-listings.html">listing option</a> in the top-level YAML.</p>
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span>
@@ -222,7 +223,7 @@ font-style: inherit;"> full</span></span>
 <span id="cb2-18"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span></code></pre></div>
-<p>It’s possible to customize several aspects of the grid, including the number of columns, and the total number to display before pagination. The <code>contents:</code> parameter points to the name of a folder (<code>things</code>). All .qmd files in the folder are automatically rendered and the image associated with the document is shown in the listing grid. Clicking on picture links to the individual page for each picture.</p>
+<p>It’s possible to customize several aspects of the grid, including the number of columns, and the number of images to display before pagination. The <code>contents:</code> parameter points to the name of a folder <code>things</code> containing <code>.qmd</code> for each image. All <code>.qmd</code> files in the folder are automatically rendered and the image associated with the document is shown in the listing grid. Clicking on a picture in the front page grid links to the individual page for each picture.</p>
 </section>
 <section id="a-quarto-page-for-each-picture" class="level2">
 <h2 class="anchored" data-anchor-id="a-quarto-page-for-each-picture">A quarto page for each picture</h2>
@@ -232,7 +233,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 <span id="cb3-3">    │   ├── Colorland_3.qmd</span>
 <span id="cb3-4">    │   ├── Golden_Pyramid_With_Tunnel_Celebration.qmd</span>
 <span id="cb3-5">    │   ├── Meeting_Of_The_Mountains.qmd</span></code></pre></div>
-<p>An example <code>.qmd</code> file for an individual piece is below. I’m using the categories feature to code which series the piece is in, and these keywords are used on the website to filter all of the pictures really quickly.</p>
+<p>An example <code>.qmd</code> file for an individual piece is below. I’m using the categories feature to code which series the piece is in, and these keywords are displayed on the website to filter all of the pictures really quickly.</p>
 <div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span>
@@ -343,7 +344,7 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/663_quarto_projects/cover.jpg" class="quarto-discovered-preview-image img-fluid" width="540"></p>
+<p><img src="https://crumplab.com/blog/663_quarto_projects/cover.jpg" class="img-fluid" width="540"></p>
 </div>
 </div>
 <p>This post is mainly a long ramble where I attempt to start working this morning.</p>
@@ -493,7 +494,7 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/664_giscus/cover.jpg" class="quarto-discovered-preview-image img-fluid" width="540"></p>
+<p><img src="https://crumplab.com/blog/664_giscus/cover.jpg" class="img-fluid" width="540"></p>
 </div>
 </div>
 <p>On the one hand, I am using this post to try out giscus comments. On the other hand, I’m not sure I want to enable comments at all. Despite my hands, I’m trying it anyway.</p>
@@ -584,7 +585,7 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/665_realworld_editing/cover.jpg" class="quarto-discovered-preview-image img-fluid" width="540"></p>
+<p><img src="https://crumplab.com/blog/665_realworld_editing/cover.jpg" class="img-fluid" width="540"></p>
 </div>
 </div>
 <section id="preamble" class="level2">
@@ -810,7 +811,7 @@ print(grammar_errors)</code></pre>
 <p>I ended up copying the shiny app from gramr and rewriting it to produce a really basic shiny interface.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/666_gpt_grammar/Screenshot 2023-06-22 at 2.29.25 PM.png" class="quarto-discovered-preview-image img-fluid" width="1201"></p>
+<p><img src="https://crumplab.com/blog/666_gpt_grammar/Screenshot 2023-06-22 at 2.29.25 PM.png" class="img-fluid" width="1201"></p>
 </div>
 </div>
 <p>It’s bare bones right now, but it is working a little bit. Here is what it is doing:</p>
@@ -1949,7 +1950,7 @@ font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20
 background-color: null;
 font-style: inherit;">"DallE_image.jpg"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/668_gpt_adventure/DallE_image.jpg" class="quarto-discovered-preview-image img-fluid" width="512"></p>
+<p><img src="https://crumplab.com/blog/668_gpt_adventure/DallE_image.jpg" class="img-fluid" width="512"></p>
 </div>
 </div>
 
@@ -2899,7 +2900,7 @@ font-style: inherit;">$</span>message.content)</span>
 <p>In a Stroop task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, MacLeod 1991)</span> participants are asked to respond quickly and accurately to identify stimuli with target and distractor dimensions. In the examples below, each stimulus is a word printed in a color. The target dimension is the ink-color, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png" class="quarto-discovered-preview-image img-fluid" width="420"></p>
+<p><img src="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png" class="img-fluid" width="420"></p>
 </div>
 </div>
 <p>There are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
@@ -3180,7 +3181,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">kable</span>(sim_data)</span></code></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">trial</th>
@@ -3421,7 +3422,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">kable</span>(rt_data)</span></code></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;">congruency</th>
@@ -3525,7 +3526,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">kable</span>(accuracy_data)</span></code></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;">congruency</th>
@@ -4011,7 +4012,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">kable</span>(rt_data_subject)</span></code></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">sim_subject</th>
@@ -4187,7 +4188,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">kable</span>(accuracy_data_subject)</span></code></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">sim_subject</th>
@@ -4455,7 +4456,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">kable</span>(rt_data_subject_seq)</span></code></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <colgroup>
 <col style="width: 8%">
 <col style="width: 14%">
@@ -5029,7 +5030,7 @@ MacLeod, Colin M. 1991. <span>“Half a Century of Research on the <span>Stroop<
 <p>Instead, I will sacrifice my own writing to ChatGPT. Let’s start with the topic redlining. This was a practice that reinforced segregation in NYC neighborhoods, and is relevant to our class. I’ve been learning about redlining practices from a book called the Color of Law <span class="citation" data-cites="rothsteinColorLawForgotten2017">(Rothstein 2017)</span>.</p>
 <p>We are reading about similar topics in our class, and being asked to write about them. Let’s say the assignment was to conduct some research about redlining, and the write a paragraph about redlining in Brooklyn. Based on what I read in the book, I wrote this paragraph:</p>
 <p>Redlining in Brooklyn. By Matt Crump.</p>
-<p><img src="https://crumplab.com/blog/772_chatGPT/images/redlining_brooklyn.jpg" class="quarto-discovered-preview-image img-fluid"></p>
+<p><img src="https://crumplab.com/blog/772_chatGPT/images/redlining_brooklyn.jpg" class="img-fluid"></p>
 <p>Redlining was a real-estate practice from the 1930s that promoted and reinforced segregation between black and white people across cities in America, including Brooklyn. The figure from 1938 shows a map of Brooklyn with areas outlined in red. These same areas were majority Black and poor immigrant neighborhoods, and they were labelled as too risky for government insured mortgages. Based on these maps, mortgage lenders refused to issue mortgages in redlined areas. As a result, Black people were denied opportunities for mortgages to purchase homes in their own neighborhoods during this time period.</p>
 <p>Let’s use the above to show examples of using ChatGPT in the classroom.</p>
 <section id="copy-edit-your-writing" class="level3">
@@ -5274,7 +5275,7 @@ font-style: inherit;">as.raster</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">normalise</span>(simplex)))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/index_files/figure-html/unnamed-chunk-2-1.png" class="quarto-discovered-preview-image img-fluid" width="672"></p>
+<p><img src="https://crumplab.com/blog/777_generative_art/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>That’s fun. The output adds a border to the image, I’d like to turn that on/off.</p>
@@ -5340,7 +5341,10 @@ font-style: inherit;">"images/test.jpg"</span>)</span></code></pre></div>
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(magick)</span>
-<span id="cb4-2">simplex <span class="ot" style="color: #003B4F;
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(magrittr)</span>
+<span id="cb4-3">simplex <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5351,41 +5355,41 @@ background-color: null;
 font-style: inherit;">500</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1000</span>),</span>
-<span id="cb4-3">                         <span class="at" style="color: #657422;
+<span id="cb4-4">                         <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">pertubation =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'normal'</span>,</span>
-<span id="cb4-4">                         <span class="at" style="color: #657422;
+<span id="cb4-5">                         <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">pertubation_amplitude =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">40</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb4-5">  <span class="fu" style="color: #4758AB;
+<span id="cb4-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">normalise</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb4-6">  <span class="fu" style="color: #4758AB;
+<span id="cb4-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">as.raster</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb4-7">  magick<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">image_read</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
 <span id="cb4-8">  magick<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
+font-style: inherit;">image_read</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-9">  magick<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
 font-style: inherit;">image_annotate</span>(</span>
-<span id="cb4-9">    <span class="st" style="color: #20794D;
+<span id="cb4-10">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"IT TOOK ME WAY </span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -5400,39 +5404,39 @@ background-color: null;
 font-style: inherit;">\n</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;"> THIS GOAL"</span>,</span>
-<span id="cb4-10">    <span class="at" style="color: #657422;
+<span id="cb4-11">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">font =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'Times'</span>,</span>
-<span id="cb4-11">    <span class="at" style="color: #657422;
+<span id="cb4-12">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">100</span>,</span>
-<span id="cb4-12">    <span class="at" style="color: #657422;
+<span id="cb4-13">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"white"</span></span>
-<span id="cb4-13">  )</span>
-<span id="cb4-14"></span>
-<span id="cb4-15">magick<span class="sc" style="color: #5E5E5E;
+<span id="cb4-14">  )</span>
+<span id="cb4-15"></span>
+<span id="cb4-16">magick<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">image_write</span>(simplex,</span>
-<span id="cb4-16">                    <span class="at" style="color: #657422;
+<span id="cb4-17">                    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">path =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"images/test_magick.jpg"</span>,</span>
-<span id="cb4-17">                    <span class="at" style="color: #657422;
+<span id="cb4-18">                    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">format =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"jpeg"</span>)</span>
-<span id="cb4-18">knitr<span class="sc" style="color: #5E5E5E;
+<span id="cb4-19">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -7110,7 +7114,7 @@ R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/776_RSS/images/header.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
+<p><img src="https://crumplab.com/blog/776_RSS/images/header.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -7163,7 +7167,7 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/778_funkwhale/images/header.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
+<p><img src="https://crumplab.com/blog/778_funkwhale/images/header.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <p>Expertise: 0 Usefulness: ? Audience: notes to self</p>
@@ -7322,7 +7326,7 @@ font-style: inherit;">"</span></span></code></pre></div>
 <div class="cell page-columns page-full">
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/779_MoreMastodon/images/MV5BMTUzNTYxMTUzMV5BMl5BanBnXkFtZTYwMzgxMTg4._V1_.jpg" class="quarto-discovered-preview-image img-fluid" width="164"></p>
+<p><img src="https://crumplab.com/blog/779_MoreMastodon/images/MV5BMTUzNTYxMTUzMV5BMl5BanBnXkFtZTYwMzgxMTg4._V1_.jpg" class="img-fluid" width="164"></p>
 </div></div></div>
 <p>The mastodon switch has prompted me to personally reflect upon my own social media use. As a part of the reflection, and as an excuse to learn more about Mastodon, I made a few different accounts on my instance. I am now me, myself, and I.</p>
 <section id="main-alt" class="level3">
@@ -7368,7 +7372,7 @@ font-style: inherit;">"</span></span></code></pre></div>
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/880_BBS/images/bbs.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
+<p><img src="https://crumplab.com/blog/880_BBS/images/bbs.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <p>This weekend I followed some #Rstats folks from twitter to mastodon. I first landed at Fosstodon, and then made an account on mastodon.social, which became very slow due to server load. After digging around a bit and learning new words like #fediverse and activitypub, I decided to spin up my own instance of mastodon using <a href="http://masto.host/">masto.host</a>. So, now you can find me <a href="https://bbs.crumplab.com/@MattCrump" class="uri">https://bbs.crumplab.com/@MattCrump</a>, or <code>@MattCrump@bbs.crumplab.com</code>.</p>
@@ -7467,7 +7471,7 @@ font-style: inherit;">"</span></span></code></pre></div>
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/881_Mastodon/images/mastodon.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
+<p><img src="https://crumplab.com/blog/881_Mastodon/images/mastodon.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <p>It’s the weekend where I wake up and try new forms of social media, and mostly avoid discussing whether I should ever use social media. It’s becoming increasingly clear to me that it’s all just an excuse to make banners for posts in adobe express.</p>
@@ -7597,7 +7601,7 @@ font-style: inherit;">42</span>)</span></code></pre></div>
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/883_command_center/images/command.jpg" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
+<p><img src="https://crumplab.com/blog/883_command_center/images/command.jpg" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <p>I am multivalent about social media. And, I’m not going to hash out those valences right now.</p>
@@ -7800,7 +7804,7 @@ font-style: inherit;">'This is a test post from an R console, using the mastodon
 
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/882_JOKE/images/Journal_of_knowledge.png" class="quarto-discovered-preview-image img-fluid" style="width:100.0%"></p>
+<p><img src="https://crumplab.com/blog/882_JOKE/images/Journal_of_knowledge.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <p>Some time ago I made a journal parody account on twitter called “The Journal of Knowledge” (circa 2018). The account has been inactive for years, and I’m deleting it.</p>

@@ -135,7 +135,7 @@ Maybe something that looks like this.
 
 ::: apa
 ```{r, results="asis"}
-crumplab::bib2md("jenkinsWhenOpportunityKnocks2022","AcademicIntegrity.bib")
+crumplabr::bib2md("jenkinsWhenOpportunityKnocks2022","AcademicIntegrity.bib")
 ```
 :::
 
@@ -147,7 +147,7 @@ crumplab::bib2md("jenkinsWhenOpportunityKnocks2022","AcademicIntegrity.bib")
 
 ::: apa
 ```{r, results="asis"}
-crumplab::bib2md("hollisGhoststudentsNewWave2018","AcademicIntegrity.bib")
+crumplabr::bib2md("hollisGhoststudentsNewWave2018","AcademicIntegrity.bib")
 ```
 :::
 

@@ -15,6 +15,9 @@ categories:
   - cognition
   - teaching
   - reading list
+execute:
+  eval: false
+draft: true
 ---
 
 ```{r}
@@ -41,7 +44,7 @@ Revisiting that chapter I see that I tried two things. First, I wrote a code chu
 Here's a version of the code chunk:
 
 ```{r}
-#| eval: TRUE
+#| eval: FALSE
 #| results: "asis"
 #| messages: FALSE
 #| warning: FALSE

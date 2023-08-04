@@ -79,7 +79,7 @@ plot(as.raster(normalise(simplex)))
 
 That's fun. The output adds a border to the image, I'd like to turn that on/off.
 
-```{r}
+```{r, eval=FALSE}
 #| echo: true
 library(imager)
 simplex <- noise_simplex(c(1000, 500),
@@ -111,6 +111,7 @@ Tangent time. How to add a layer of words on top of an image. Need to be able to
 #| echo: true
 #| out.width: 100%
 library(magick)
+library(magrittr)
 simplex <- noise_simplex(c(500, 1000),
                          pertubation = 'normal',
                          pertubation_amplitude = 40) %>%
