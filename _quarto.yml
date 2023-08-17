@@ -4,6 +4,7 @@ project:
   resources:
     - "webr-serviceworker.js"
     - "webr-worker.js"
+    - /publications
 
 website:
   title: "crumplab"

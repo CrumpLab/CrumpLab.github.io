@@ -1,0 +1,82 @@
+MotorEvokedPotentialsforEarly:
+  link1:
+    name: 'onlineFirst'
+    url: 'https://journals.humankinetics.com/view/journals/mcj/aop/mc.2022-0106/mc.2022-0106.xml'
+
+vuorreSharingOrganizingResearch2021:
+  link1:
+    name: 'website'
+    url: 'https://www.crumplab.com/vertical'
+    icon: 'fas fa-globe'
+  link2:
+    name: 'github'
+    url: 'https://github.com/CrumpLab/vertical'
+    icon: 'fa fa-github'
+
+brosowskyContextualRecruitmentSelective2021:
+  link1:
+    name: 'data'
+    url: 'https://osf.io/ztcyb/'
+    icon: 'fas fa-database'
+
+crumpControllingRetrievalGeneral2020:
+  link1:
+    name: 'website'
+    url: 'https://crumplab.github.io/ITS2/'
+    icon: 'fas fa-globe'
+
+crumpReproducibleStatisticsPsychologists2020:
+  link1:
+    name: 'website'
+    url: 'https://www.crumplab.com/rstatsforpsych/'
+    icon: 'fas fa-globe'
+
+crumpAnsweringQuestionsData2019:
+  link1:
+    name: 'website'
+    url: 'https://www.crumplab.com/statistics/'
+    icon: 'fas fa-globe'
+
+crumpAnsweringQuestionsData2019b:
+  link1:
+    name: 'website'
+    url: 'https://www.crumplab.com/statisticsLab/'
+    icon: 'fas fa-globe'
+
+crumpAnsweringQuestionsData2019a:
+  link1:
+    name: 'website'
+    url: 'https://www.crumplab.com/psyc3400/'
+    icon: 'fas fa-globe'
+
+aujlaSemanticLibrarianSearch2019:
+  link1:
+    name: 'website'
+    url: 'https://www.crumplab.com/RsemanticLibrarian/'
+    icon: 'fas fa-globe'
+
+crumpInstanceTheoryPredicts2019:
+  link1:
+    name: 'website'
+    url: 'https://www.crumplab.com/EntropyTyping/'
+    icon: 'fas fa-globe'
+
+behmerCrunchingBigData2017:
+  link1:
+    name: 'data'
+    url: 'https://github.com/CrumpLab/BehmerCrump2017_BigData'
+    icon: 'fas fa-database'
+
+Crump_2017:
+  link1:
+    name: 'data'
+    url: 'https://github.com/CrumpLab/CrumpBrosowskyMilliken_QJEP'
+    icon: 'fas fa-database'
+
+crumpPreventionCorrectionPosterror2013:
+  link1:
+    name: 'data'
+    url: 'https://github.com/CrumpLab/CrumpLogan2013JEPG_data'
+    icon: 'fas fa-database'
+
+
