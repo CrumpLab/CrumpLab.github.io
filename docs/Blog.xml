@@ -15,7 +15,465 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.3.353</generator>
-<lastBuildDate>Thu, 13 Jul 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 21 Sep 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Messing around with Hugging Face’s Stable Diffusion</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/661_stable_diffusion/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>This summer I got a new laptop (Macbook Pro M2) that is capable enough to run stable diffusion locally. I finally got around to trying it out. This post is mainly notes to self, and a few pictures of processing my own drawing through the system.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/cover.jpg" class="img-fluid"></p>
+</div></div><p>There’s a host of issues with these pattern generation tools in general, especially for models that were unscrupulously trained on large sets of image data. It’s not clear to me how absolved stable diffusion is from these issues. Nevertheless, I’m trying out their tools, which are open source.</p>
+<p>So far I’ve only tried the <a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/text2img">text-to-image</a>, and <a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/img2img">image-to-image</a> pipelines using the <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">stable-diffusion-v1-5</a> model.</p>
+<p>I really like that the training image dataset is also open-source. It would take a while to actually look at the billions of images in there, but they appear to be reviewable in principle, which is much more than can be said for other tools in this space.</p>
+<p><a href="https://laion.ai/blog/laion-5b/" class="uri">https://laion.ai/blog/laion-5b/</a></p>
+<section id="getting-set-up" class="level2">
+<h2 class="anchored" data-anchor-id="getting-set-up">Getting set up</h2>
+<p>The time to get everything installed and working was surprisingly fast (half a morning). Surprising to me because I’m all thumbs at python.</p>
+<p>Here’s some breadcrumbs on what I did.</p>
+<ul>
+<li><p>started with this datacamp tutorial for a bit <a href="https://www.datacamp.com/tutorial/how-to-run-stable-diffusion" class="uri">https://www.datacamp.com/tutorial/how-to-run-stable-diffusion</a></p></li>
+<li><p>fumbled with getting python installed on my mac.</p>
+<ul>
+<li>I was surprised it wasn’t already there, but it seems apple removed python</li>
+<li>I downloaded it from the python website, but then learned that might be a bad way to do it…</li>
+<li>I also installed it using pyenv <a href="https://opensource.com/article/19/5/python-3-default-mac" class="uri">https://opensource.com/article/19/5/python-3-default-mac</a></li>
+</ul></li>
+<li><p>also had to get homebrew working <a href="https://brew.sh" class="uri">https://brew.sh</a></p></li>
+</ul>
+<p>One use-case I have is to generate visual stimuli for cognitive psych experiments, and I wanted to be able to do this programmatically using scripts. The datacamp tutorial was leading toward a GUI interface that was not for me. Fortunately, I started reading the hugging face documentation and went from there.</p>
+<p>I also live in the land of R and do most of my writing (like this blog) using Quarto. Rstudio is my main editor and it’s been ages since I used python for anything, and I never really learned it that well in the first place. Despite my shortcomings, Rstudio supports R and python code chunks in quarto documents, so I was eager to find out whether I could get stable diffusion working as a script inside a quarto document in Rstudio. It worked.</p>
+<ul>
+<li><p>read through the Stable Diffusion v1-5 Model Card instructions <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5" class="uri">https://huggingface.co/runwayml/stable-diffusion-v1-5</a></p></li>
+<li><p>Installed the Diffusers library <a href="https://github.com/huggingface/diffusers" class="uri">https://github.com/huggingface/diffusers</a></p></li>
+<li><p>Noted how to modify scripts for apple silicon <a href="https://huggingface.co/docs/diffusers/optimization/mps" class="uri">https://huggingface.co/docs/diffusers/optimization/mps</a></p>
+<ul>
+<li>using the “mps” option</li>
+</ul></li>
+</ul>
+<p>I popped this script into a quarto python code chunk and ran it:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> diffusers <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> DiffusionPipeline</span>
+<span id="cb1-2"></span>
+<span id="cb1-3">pipe <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> DiffusionPipeline.from_pretrained(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"runwayml/stable-diffusion-v1-5"</span>)</span>
+<span id="cb1-4">pipe <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pipe.to(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mps"</span>)</span>
+<span id="cb1-5"></span>
+<span id="cb1-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Recommended if your computer has &lt; 64 GB of RAM</span></span>
+<span id="cb1-7">pipe.enable_attention_slicing()</span>
+<span id="cb1-8"></span>
+<span id="cb1-9">prompt <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a photo of an astronaut riding a horse on mars"</span></span>
+<span id="cb1-10"></span>
+<span id="cb1-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># First-time "warmup" pass if PyTorch version is 1.13 (see explanation above)</span></span>
+<span id="cb1-12">_ <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pipe(prompt, num_inference_steps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb1-13"></span>
+<span id="cb1-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Results match those from the CPU device after the warmup pass.</span></span>
+<span id="cb1-15">image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pipe(prompt).images[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]</span></code></pre></div>
+<p>It took a couple minutes because it was downloading several gigabytes worth of model weights and caching them. But, impressively, once everything loaded, it only took 25 seconds to generate the astronaut picture.</p>
+<p>It is possible to download the model weights, which is what I did next.</p>
+<p><a href="https://huggingface.co/docs/diffusers/using-diffusers/loading#local-pipeline" class="uri">https://huggingface.co/docs/diffusers/using-diffusers/loading#local-pipeline</a></p>
+<p>It took about 20 minutes for everything to get downloaded.</p>
+<p>Last, read over the <a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/text2img">text-to-image</a>, and <a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/img2img">image-to-image</a> documentation and started messing about.</p>
+</section>
+<section id="text-to-image" class="level2">
+<h2 class="anchored" data-anchor-id="text-to-image">text-to-image</h2>
+<p>Here’s the script I used to generate an image from a prompt.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> diffusers <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> DiffusionPipeline</span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># folder location of the model</span></span>
+<span id="cb2-4">repo_id <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./stable-diffusion-v1-5"</span></span>
+<span id="cb2-5"></span>
+<span id="cb2-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># loader</span></span>
+<span id="cb2-7">pipe <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> DiffusionPipeline.from_pretrained(repo_id, safety_checker<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>)</span>
+<span id="cb2-8"></span>
+<span id="cb2-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># use apple silicon</span></span>
+<span id="cb2-10">pipe <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pipe.to(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mps"</span>)</span>
+<span id="cb2-11"></span>
+<span id="cb2-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Recommended if your computer has &lt; 64 GB of RAM</span></span>
+<span id="cb2-13">pipe.enable_attention_slicing()</span>
+<span id="cb2-14"></span>
+<span id="cb2-15">prompt <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A cat dressed as a detective"</span></span>
+<span id="cb2-16"></span>
+<span id="cb2-17">image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pipe(prompt,height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">400</span>,width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">400</span>,num_images_per_prompt <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)</span>
+<span id="cb2-18"></span>
+<span id="cb2-19">image_save <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image.images[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>].save(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cat_0.jpg"</span>)</span>
+<span id="cb2-20">image_save <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image.images[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>].save(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cat_1.jpg"</span>)</span>
+<span id="cb2-21">image_save <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image.images[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>].save(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cat_2.jpg"</span>)</span>
+<span id="cb2-22">image_save <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image.images[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>].save(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cat_3.jpg"</span>)</span></code></pre></div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_0.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_1.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_2.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_3.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="txt2img-then-img2img" class="level2">
+<h2 class="anchored" data-anchor-id="txt2img-then-img2img">txt2img then img2img</h2>
+<p>The txt2img pipeline creates an image from a text prompt. The img2img pipeline starts from an image, and makes another image from a prompt and the starting image. I used a script like this to have both possibilities going.</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> diffusers <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> StableDiffusionPipeline, StableDiffusionImg2ImgPipeline</span>
+<span id="cb3-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> PIL <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Image</span>
+<span id="cb3-3"></span>
+<span id="cb3-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#folder location of the model</span></span>
+<span id="cb3-5">model_id <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./stable-diffusion-v1-5"</span></span>
+<span id="cb3-6"></span>
+<span id="cb3-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># load txt2img</span></span>
+<span id="cb3-8">stable_diffusion_txt2img <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> StableDiffusionPipeline.from_pretrained(model_id, safety_checker<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>, use_safetensors<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb3-9"></span>
+<span id="cb3-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># save components so they can be reused for img2img</span></span>
+<span id="cb3-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># saves RAM</span></span>
+<span id="cb3-12">components <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> stable_diffusion_txt2img.components</span>
+<span id="cb3-13"></span>
+<span id="cb3-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># load img2img</span></span>
+<span id="cb3-15">stable_diffusion_img2img <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> StableDiffusionImg2ImgPipeline(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>components)</span>
+<span id="cb3-16"></span>
+<span id="cb3-17"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># send to apple silicon</span></span>
+<span id="cb3-18">stable_diffusion_txt2img <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> stable_diffusion_txt2img.to(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mps"</span>)</span>
+<span id="cb3-19">stable_diffusion_img2img <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> stable_diffusion_img2img.to(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mps"</span>)</span>
+<span id="cb3-20"></span>
+<span id="cb3-21"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Recommended if your computer has &lt; 64 GB of RAM</span></span>
+<span id="cb3-22">stable_diffusion_txt2img.enable_attention_slicing()</span>
+<span id="cb3-23">stable_diffusion_img2img.enable_attention_slicing()</span>
+<span id="cb3-24"></span>
+<span id="cb3-25">prompt <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a cat dressed up as a detective chief inspector"</span></span>
+<span id="cb3-26"></span>
+<span id="cb3-27"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># generate image from text2img</span></span>
+<span id="cb3-28">image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> stable_diffusion_txt2img(prompt,height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">400</span>,width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">400</span>,num_images_per_prompt <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb3-29"></span>
+<span id="cb3-30"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># run to show image</span></span>
+<span id="cb3-31">image.images[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>].show()</span>
+<span id="cb3-32"></span>
+<span id="cb3-33"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># optional load external jpg </span></span>
+<span id="cb3-34">load_image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Image.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">open</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"your_image.jpeg"</span>)</span>
+<span id="cb3-35"></span>
+<span id="cb3-36"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># img2img, need a starting image</span></span>
+<span id="cb3-37">new_image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> stable_diffusion_img2img(prompt<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cartoon art style "</span>,</span>
+<span id="cb3-38">        image<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>image.images[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>],</span>
+<span id="cb3-39">        strength <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">.9</span>,</span>
+<span id="cb3-40">        num_inference_steps <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>,</span>
+<span id="cb3-41">        guidance_scale <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>,</span>
+<span id="cb3-42">        num_images_per_prompt <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb3-43"></span>
+<span id="cb3-44">new_image.images[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>].show()</span></code></pre></div>
+</section>
+<section id="messing-with-my-own-drawings" class="level2">
+<h2 class="anchored" data-anchor-id="messing-with-my-own-drawings">Messing with my own drawings</h2>
+<p>The following are some examples of inputting a starting image that I made, and then generating variations from this starting image using stable diffusion.</p>
+<p>The upper left is the starting image. The prompt direction was to make colorful objects.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/matt_drawing.jpeg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out1.jpeg" class="img-fluid"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out2.jpeg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out3.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>No prompt direction, used a “space” in the prompt and let it take “inference steps” from the starting image.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/matt_drawing.jpeg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB0.jpeg" class="img-fluid"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB1.jpeg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB3.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>Prompt direction was to make colorful little towns</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/IMG_0137.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC0.jpeg" class="img-fluid"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC2.jpeg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC3.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>And, a last go with a longer prompt.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/matt_crop.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outE0.jpeg" class="img-fluid"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outF0.jpeg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outF3.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>That’s it for now, must get on with the day.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>stable diffusion</category>
+  <category>generative</category>
+  <category>art</category>
+  <category>python</category>
+  <category>Rstudio</category>
+  <guid>https://crumplab.com/blog/661_stable_diffusion/index.html</guid>
+  <pubDate>Thu, 21 Sep 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/661_stable_diffusion/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>A simple visual art portfolio website using Quarto</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -7793,235 +8251,6 @@ font-style: inherit;">'This is a test post from an R console, using the mastodon
   <guid>https://crumplab.com/blog/883_command_center/index.html</guid>
   <pubDate>Fri, 28 Oct 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/883_command_center/images/command.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Archiving the journal of knowledge</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/882_JOKE/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/882_JOKE/images/Journal_of_knowledge.png" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>Some time ago I made a journal parody account on twitter called “The Journal of Knowledge” (circa 2018). The account has been inactive for years, and I’m deleting it.</p>
-<p>In preparation to delete the account I made a data request to twitter, but I’m not sure what data I get before I close the account. I recently got the <code>rtweet</code> package working, so I’m going to find out if I can use it to download the old posts.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(rtweet)</span>
-<span id="cb1-2"></span>
-<span id="cb1-3">auth <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">rtweet_app</span>()</span>
-<span id="cb1-4"></span>
-<span id="cb1-5">JOKE_timeline <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> rtweet<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">get_timeline</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">user=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"journal_O_K"</span>,</span>
-<span id="cb1-6">                              <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">n =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">200</span>,</span>
-<span id="cb1-7">                              <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">token =</span> auth)</span>
-<span id="cb1-8"></span>
-<span id="cb1-9"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">saveRDS</span>(JOKE_timeline,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"journal_of_knowledge.RDS"</span>)</span></code></pre></div>
-</div>
-<p>That pulled all 173 tweets from the account into a data frame, and I saved it as an .RDS file so I can load it later. But, this did not download any of the pictures of the fake journal abstracts, and that is what I want to archive.</p>
-<p>There’s a function for screenshotting twitter posts, maybe I can use this.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">JOKE_timeline<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>id_str[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>]</span>
-<span id="cb2-2">mgk_img <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tweet_shot</span>(JOKE_timeline<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>id_str[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>], <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">zoom =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">scale =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>)</span>
-<span id="cb2-3">magick<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">image_write</span>(mgk_img,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"test.png"</span>)</span></code></pre></div>
-</div>
-<p>No, that function was deprecated.</p>
-<p>Need to roll my own.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># get urls for images to download</span></span>
-<span id="cb3-2">media_urls <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>()</span>
-<span id="cb3-3"></span>
-<span id="cb3-4"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span>(i <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">173</span>){</span>
-<span id="cb3-5">  media_urls[i] <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> JOKE_timeline<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>entities[[i]]<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>media<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>media_url</span>
-<span id="cb3-6">}</span>
-<span id="cb3-7"></span>
-<span id="cb3-8">media_urls <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> media_urls[<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">is.na</span>(media_urls) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">FALSE</span>]</span>
-<span id="cb3-9"></span>
-<span id="cb3-10"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># download all the images into folder</span></span>
-<span id="cb3-11"></span>
-<span id="cb3-12">?download.file</span>
-<span id="cb3-13"></span>
-<span id="cb3-14"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">length</span>(media_urls)){</span>
-<span id="cb3-15">  f_name <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tail</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">unlist</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">strsplit</span>(media_urls[i],<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"/"</span>)),<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb3-16">  f_path <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"images/"</span>,f_name)</span>
-<span id="cb3-17">  </span>
-<span id="cb3-18">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">download.file</span>(media_urls[i],f_path)</span>
-<span id="cb3-19">}</span></code></pre></div>
-</div>
-<p>I think I got what I wanted. Now, I just need to delete some stuff, and then maybe share a few Journal of Knowledge abstracts for posterity.</p>
-<section id="joke-abstracts" class="level2">
-<h2 class="anchored" data-anchor-id="joke-abstracts">JOKE abstracts</h2>
-<p>There were 68 abstracts posted on the account, and I was able to download all of them. Here’s a few of them.</p>
-<section id="what-is-the-answer-to-this-question-it-depends" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-the-answer-to-this-question-it-depends">What is the answer to this question? It depends</h3>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/882_JOKE/images/DgTg1uVX4AA-V_W.jpg" class="img-fluid" width="536"></p>
-</div>
-</div>
-</section>
-<section id="blah-blah-is-special-no-it-isnt" class="level3">
-<h3 class="anchored" data-anchor-id="blah-blah-is-special-no-it-isnt">Blah blah is special: No it isn’t</h3>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/882_JOKE/images/DgueZsEWsAAZBWK.jpg" class="img-fluid" width="543"></p>
-</div>
-</div>
-</section>
-<section id="the-population-is-aging" class="level3">
-<h3 class="anchored" data-anchor-id="the-population-is-aging">The population is aging</h3>
-<p>To the tune of…</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/882_JOKE/images/Dgx8n8_W0AEKEdU.jpg" class="img-fluid" width="551"></p>
-</div>
-</div>
-</section>
-<section id="journal-of-feelings" class="level3">
-<h3 class="anchored" data-anchor-id="journal-of-feelings">Journal of Feelings</h3>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/882_JOKE/images/Dh_axdNUEAE-iaE.jpg" class="img-fluid" width="538"></p>
-</div>
-</div>
-</section>
-<section id="dressing-up-research-results" class="level3">
-<h3 class="anchored" data-anchor-id="dressing-up-research-results">Dressing up research results</h3>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/882_JOKE/images/DhgMm9KU0AE9LJZ.jpg" class="img-fluid" width="536"></p>
-</div>
-</div>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>social</category>
-  <category>twitter</category>
-  <category>parody</category>
-  <guid>https://crumplab.com/blog/882_JOKE/index.html</guid>
-  <pubDate>Fri, 28 Oct 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/882_JOKE/images/Journal_of_knowledge.png" medium="image" type="image/png" height="71" width="144"/>
 </item>
 </channel>
 </rss>
