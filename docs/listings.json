@@ -31,6 +31,7 @@
   {
     "listing": "/Blog.html",
     "items": [
+      "/blog/660_music_cognition/index.html",
       "/blog/661_stable_diffusion/index.html",
       "/blog/662_quarto_portfolio/index.html",
       "/blog/663_quarto_projects/index.html",

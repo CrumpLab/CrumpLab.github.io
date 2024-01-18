@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.533">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Matt Crump">
+<meta name="dcterms.date" content="2024-01-18">
+<meta name="description" content="It’s the beginning of a new semester and i’m thinking about doing more music cognition research this round. Mostly a long ramble.">
+
+<title>crumplab - Musing about music cognition</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="crumplab - Musing about music cognition">
+<meta property="og:description" content="It’s the beginning of a new semester and i’m thinking about doing more music cognition research this round. Mostly a long ramble.">
+<meta property="og:image" content="https://crumplab.com/blog/660_music_cognition/cover.jpg">
+<meta property="og:site_name" content="crumplab">
+<meta name="twitter:title" content="crumplab - Musing about music cognition">
+<meta name="twitter:description" content="It’s the beginning of a new semester and i’m thinking about doing more music cognition research this round. Mostly a long ramble.">
+<meta name="twitter:image" content="https://crumplab.com/blog/660_music_cognition/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">crumplab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../People.html"> 
+<span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Publications.html"> 
+<span class="menu-text">Pubs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Books.html"> 
+<span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Courses.html"> 
+<span class="menu-text">Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Apps.html"> 
+<span class="menu-text">Apps</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Opportunities.html"> 
+<span class="menu-text">Join</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Fun.html"> 
+<span class="menu-text">Fun</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CrumpLab"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/@MattCrumpLab"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/MattCrumpLab"> <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> <i class="bi bi-youtube" role="img" aria-label="Youtube">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../Blog.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#musing-on-practical-applications-of-cognition-for-musicians" id="toc-musing-on-practical-applications-of-cognition-for-musicians" class="nav-link active" data-scroll-target="#musing-on-practical-applications-of-cognition-for-musicians">Musing on practical applications of cognition for musicians</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Musing about music cognition</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">music cognition</div>
+    <div class="quarto-category">homophony</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    It’s the beginning of a new semester and i’m thinking about doing more music cognition research this round. Mostly a long ramble.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Matt Crump </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 18, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="cover.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>“fragments of a dream woven together with little puzzle pieces showing a universe of possibility” - LCM_Dreamshaper_v7</p>
+</div></div><p>Wow, I haven’t posted on this blog since September 2023. I guess the Fall 2023 semester was a bit of a whirlwind.</p>
+<p>It’s 2024 now and another semester is about to start. Looking back, I’ve posted something here at the start of semesters as a part of organizing my goals and thinking for the coming months. And, here I am again doing that. This time, it’s all about music cognition.</p>
+<p>At the end of the Fall 2023 semester I was in much need of a break. I have a piano sitting in my living room that I hadn’t played in months, and whenever that happens I know that I need to re-balance some tasks so that there is time to play music. Fortunately for me, after I submitted my final grades I had no more immediate tasks, so I set about practicing piano.</p>
+<p>For extra motivation, I even started up a different blog where I post random notes, thoughts, and details about progress or practice routines that I’m working on. It’s over here at <a href="https://homophony.quest/notes.html">wall of notes</a>. Practicing piano has been so rewarding and fun!!!</p>
+<p>In my day job as a cognitive psychologist, although I’ve dabbled in music cognition, I’ve mostly stayed away from connecting my research program into that area. One reason has been that I love music so much that I wouldn’t want to make it feel like work. Also, many of the cognitive research questions I have focused on are easier to work with in other contexts.</p>
+<p>Despite my best efforts to keep these interests separate, I have a long standing pattern of intermingling them. Well before I got into cognition, I got really interested in the process of learning to play music. As a kid I spent countless hours practicing piano. And, then after becoming interested in different styles of music, classical, pop, blues, jazz, etc. spent countless more hours learning different ways to play, different ways to think about playing, and lots of time “thinking about how I think about playing”.</p>
+<p>When I started down the road of cognitive psychology, I would often draw parallels to my own experiences in learning to play instruments, and I still do that all the time. For example, a common distinction in cognition is between controlled and automatic processes. There are loads of real-world examples of this distinction, but I really “feel it” in terms of learning an instrument. Right now I’m learning to play the maj6 diminished scales as a sequence of chords, and it is slow going. Every time I try to play a chord it involves a very effortful and deliberate process of working out the chord before I play it. That’s a great example of “controlled” processing. Fortunately, “automaticity” comes with practice, and after enough practice, I can slam down those chords without thinking too much about them. The cognitive mechanisms that allow a motor skill to be produced with high fluency following various forms of practice are super interesting, and my actual research program has been working on issues like that since the beginning…just in other tasks besides learning instruments.</p>
+<p>Need to get back on track with this post.</p>
+<p>There have been a few close encounters with music cognition. I’ve read a bunch of it. When I started out as an undergrad, my honors thesis was on how people recognize the style of one second musical excerpts, so I guess that counts. When I was a postdoc with Gordon Logan, we talked about music cognition all of the time. Gordon is an avid guitar player, and he actually convinced Gibson to give us some guitars for research purposes. And, we used those guitars and did some music cognition research that resulted in a study looking at guitarists use of visual information from the fretboard while fingering chords <span class="citation" data-cites="crump2012keeping">(<a href="#ref-crump2012keeping" role="doc-biblioref">Crump, Logan, and Kimbrough 2012</a>)</span>. That was really fun, but also technically challenging in terms of subject recruitment and measuring reaction times and accuracy from guitar playing. I did another poster looking at how well guitar players can play individual notes across the fretboard, and reviewed a book about learning guitar. That’s basically it.</p>
+<p>I spent a good chunk of time publishing research on typing behavior. This was secretly a way to do abstract music cognition research (he said somewhat facetiously). I wasn’t interested in applied typing research, that is, the purpose of the research was not to figure out how to help people type faster. Typing on a computer keyboard involves coordinated finger movements, and I was interested in using typing behavior as a task to investigate the learning and memory processes involved in motor sequencing. It’s also really easy to find people who can type well, and it is really easy to measure the timing and accuracy of individual keystrokes.</p>
+<p>This year I think it’s time to finally rip off the bandaid, and lean into music cognition. I’ve been planning to do more work in this area since I arrived at Brooklyn College. For example, I was able to purchase a whack of midi-controllers from start-up funds a while ago, but I haven’t been able to find the time to actually employ them in research.</p>
+<p>There’s some technical issues that need solving, and even though I haven’t looked into this too much, I’m fairly optimistic that enough things have changed since that last time I tried this stuff, that it will be much easier now. I’m going to focus on piano as a first instrument. I know it the best, and keyboards have great MIDI implementation. The main technical issue is recording reaction times and accuracy for notes played on the piano in response to stimulus prompts. In some sense any MIDI recording device already solves this problem. But, not really for my use case.</p>
+<p>Most of the studies I conduct use a typical choice-reaction time paradigm, where a stimulus is presented on a computer screen, followed by a response on a button box or computer keyboard. For example, I might want to present D-7 as a stimulus on the screen, and then record how long it takes a person to play that chord on the piano, keeping track of the onset of each note that is played, with as much millisecond precision as possible.</p>
+<p>Back in the early 2010s I had a hacky solution to the above using a predecessor of Livecode (runtime revolution anyone…metacard…hypercard…Bueller?). Now, I would want the procedure to be web-based so that a participant could go to a website, hook up their MIDI keyboard via USB, and complete a study that way. I use the wonderful <a href="https://www.jspsych.org/7.3/">jspsych</a> javascript library for computer keyboard studies, and as far as I know there is no plugin for midi-keyboards there (but, if you know about one, please let me know). Nevertheless, I think there are javascript MIDI libraries out there now, and that I could write a plugin for jspsych. Basically, my feeling is that it’s good I waited more than a decade so that some of this stuff is easier because the programming languages got better.</p>
+<p>I’ve been more actively considering the music cognition direction since I got back into a routine piano practice habit in December. Even though I intend my <a href="https://homophony.quest/notes.html">wall of notes</a> to be mostly about music, and not cognition or music cognition, the cognition has been creeping in over the few posts, which is why in my most recent post from this morning I decided to come back over here, where it is more about cognition.</p>
+<p>In the other blog, the recent activity has been learning how to play chords for each note in the maj6 diminished scale, across all 12 keys. The scale is new to me, as with some of the chords. So, it’s been fun to have a challenge where something starts off very slow and clunky, and with practice becomes very fluid and musical.</p>
+<p>But, when I sit at the piano for hours and practice, a whole bunch of things happen, including thoughts about how what I’m doing relates to issues in cognition, and how issues in cognition relate to what I’m doing. Some of them are the usual suspects in the science of learning. For example, how should I space or mass repetitions when I practice these scales? What are the most optimal practice schedules, and so on. So, I’ve been roughing out loose connections with my piano practice and cognitive phenomena on that blog. None of those connections are new or interesting from a music cognition perspective. I’m mainly writing notes to myself and throwing words out there as part of an overall process of slowly turning my research priorities around. One of them will have to be reading a lot more about music cognition to get up to speed on developments I’ve missed.</p>
+<p>So, 2024 should have some music cognition research in store. I’m excited. I wasn’t that excited before, so that’s good I think.</p>
+<hr>
+<section id="musing-on-practical-applications-of-cognition-for-musicians" class="level2">
+<h2 class="anchored" data-anchor-id="musing-on-practical-applications-of-cognition-for-musicians">Musing on practical applications of cognition for musicians</h2>
+<p>As I’ve been blogging away on the <a href="https://homophony.quest/notes.html">wall of notes</a>, I’ve been considering how I think about connections between cognitive science and music.</p>
+<p>That blog is not anything formal at all. It’s just notes for myself. So, I’m not trying to write well, or write to any particular audience. Not too different from this blog :)</p>
+<p>And, the reason I mention this is because some of the recent posts have begun linking experiences with practicing piano to cognitive phenomena, but in making those links it seemed that I was missing some background material for different audiences. So, in the remainder of this post, I’m sketching out my perspective on what kinds of applications cognition may have for learning instruments. I I usually think in the other direction, where the question is what aspects of playing instrument could be studied so that they are informative about some aspect of cognition.</p>
+<p>As a quick aside, not that there can’t be overlapping questions of interest between basic cognitive science and practical applications for musicians, but the two domains do have some very different sorts of questions. Take playing a scale on the piano. From a cognitive perspective, the basic science questions is something like: “what processes are responsible for enabling a person to make finger movements in a planned sequence, like playing a scale on a piano, and how do those processes work?”. From a musician’s perspective, the practical question could be: “how do I get better at playing this scale so it can be played in any musical way I want in a relatively effortless way”.</p>
+<p>Cognitive/behavioral style research could be used to gain some answers to these kinds of questions, and that would involve creative experiments and collecting data on tasks like piano performance. Some of the research efforts could produce data that is insightful for both questions, or only one or none of them. For example, to really test different underlying hypotheses about processes that may be involved in motor control, it may be necessary to have piano players complete strange, or non-musical note or chord playing tasks that expose something theoretically interesting about their knowledge and ability to play piano. Although patterns in the data may be relevant to theoretical debate in cognition, they may or may not have any practical use for musicians. Similarly, it’s possible to collect data that would have clear practical value for musician’s, but that may not have much value for addressing theoretical issues (e.g., multiple theories may be consistent with the data, which means that kind of data doesn’t help adjudicate between theories). OK, onto considerations of how cognitive science can be of practical value (or not sometimes) to musicians.</p>
+<p>A first point is that I doubt cognitive science is necessary for learning to play an instrument. It seems obvious that accomplished musicians learned to play incredibly well without the benefit of a course in cognition, or by taking advice from cognitive scientists about how to practice their instruments. It’s possible that their practice techniques are consistent with principles and findings from the cognitive science of learning, but it’s clear enough to me that knowing the “science” wasn’t necessary to figure out useful techniques for practice. And, even though there are very large literatures on skill learning, and motor skill learning, and music cognition, I’m not sure there is a lot of cognitive science to consult, specifically on learning to play musical instruments, especially at a very granular level that analyses how motor movement sequences become fluid as a function of different types of practice/training/perspectives on music theory and the like.</p>
+<p>OK fine, musician’s can be musician’s without “evidence-based” “scientifically-proven” “best-most-efficient and optimal” “AI-assisted” “tech-utopia-thing-that-will-make you a supreme being” of shredding on your Chapman stick. And, ugh, sometimes I just can’t take efficiency culture. On the one hand, I have no interest in using methods from science to ruthlessly analyse my piano practicing, and then eradicate all forms of inefficiency. I just like to play. On the other hand, I’m very interested in “what’s going on” when I’m practicing and playing music, and lot’s of stuff is going on. I’ll avoid getting into the cognitive reasons I find that stuff interesting, but as a musician, I would treat any insights from music cognition research as “even more interesting stuff that is also going on”. These things invite new perspective and that can make music even more interesting and fun to play. And, if science can help me learn a scale faster, fine, that’s OK too.</p>
+<p>Without out getting into complicated details (that matter, but I’ll gloss over them), I think a behaviorism of music science would be pretty informative for musicians. Call it “applied musical behavior analysis”. Maybe this exists already, I don’t know. Behaviorism sometimes gets a bad rap from cognitive scientists (athough IMO so much of cognition isn’t very different from behaviorism, but I digress). Behaviorism was very applied and involved measuring behavior under different conditions to establish general laws (patterns in the data) useful for predicting and controlling behavior. In modern terms I guess this would just be called data-science. Measuring stuff and looking at patterns in the data for insights.</p>
+<p>Consider the following data-driven research program. Observe the practice behavior of many great instrumentalists, and compare that to the practice behavior of people who don’t get very good at their instrument. Write down all of the practice techniques that everyone uses. Assume that each practice technique has a corresponding consequence for some aspect of music performance. Practicing X technique will improve, worsen, or have no effect on Y aspect of performance. What is desired is a kind of mapping between the X practice techniques, and the Y outcomes. Then, get the data. Find a whole bunch of people to selectively practice each of the techniques. Then have them perform various outcome tests. The X techniques could be their own outcome tests as well. For example, there are all these scales to practice. Groups of people practice a particular scale until they get good at it, then they are tested on a different scale they didn’t practice. The bigger thought experiment is to add all of the chords, and all of the musical elements that could be practiced, and get “learning” data, and “transfer of training” data from large groups of participants. This kind of data set could be mined for all sort of things. And, it would be full of useful practical info for musicians (and probably also for cognitive psychologists).</p>
+<p>Here’s an example of data that might be informative for a musician. First a question. How long will it take me to learn X on the piano? Lots of musician’s might have a question like that. In my case, a current question is how long will it take me to play the Bmaj6 diminished scale using chords, and be able to play the whole scale in less than three seconds?</p>
+<p>If there was a comprehensive explanatory theory of human motor control in the context of playing an instrument, that theory would ideally be able to make predictions or give me insight into how long it would take, and how that time would change depending on how and what I practiced. Cognitive science isn’t there yet, I don’t think. At least, I don’t have a computational cogsci model app on my phone that I use as an oracle for how to practice piano (but I could be behind the times). And, I don’t want to beat up on the models too much. We have several advanced models that could be taken into the realm of piano playing, and it would be highly interesting to see what they do, and what they recommend in terms of practice. Although, I suspect the results of doing this would be more interesting to cognitive psychologists, and of less immediate practical value to a musician.</p>
+<p>For practical purposes, getting some data would be helpful…that would allow me to measure how long it takes, and then I would know. I did this a little bit recently, and posted about it over here:</p>
+<p><a href="https://homophony.quest/blog/18_1_18_24_Relearning/" class="uri">https://homophony.quest/blog/18_1_18_24_Relearning/</a></p>
+<p>Basically, I played the scale over and over again, and measured how long it took each time. The first time it took about 104 seconds, a really long time. After 10 minutes of practice I could play it in about 20 seconds. Then, a day later, after another 10 minutes of practice, I started out near 60 seconds and got down to around 12 seconds. I could use the data to predict how long it will take me to get down to 3 seconds. I could also get more practice data and see how long it actually takes me to get to 3 seconds. I could potentially collect data from multiple people on learning this scale, and all told, that data would give musician’s a heads up on how long learning that scale generally takes. Not a mind blowing scientific revelation, just generally helpful. Kind of like a “reading time” estimate on an article, or a “recovery time” estimate following a surgery. “Fluency achievement time” estimates would be useful.</p>
+<p>In the above exercise, I only practiced playing the scale in an ascending run. That’s one chord per note, going up the notes of the scale. There’s lots of other ways I could have practiced it. I could have gone up and down, or down, or up 2 down 1, or play arpeggios, or interleave other things between each chord, or go up two octaves, or practice every other chord, and so on. The number of possible practice variations is infinite. Following the data-driven research program from above, one could also get the learning curves that result from these different ways of practicing the scale. Some practice techniques may have more efficient learning curves that get a musician into the fluency zone more quickly. Or maybe not, it could be that the various ways of practicing are all basically the same. It’s an empirical question. Running a more limited experiment like that could also provide some practical information. Maybe playing arpeggios is way more beneficial for a wide variety of things than practicing playing ascending chords?</p>
+<p>Another likely possibility is that people get good at the specific thing they practice, and there isn’t too much generalization between the things they practice. This type of hyper-specificity happens all the time in other cognitive tasks. I’d be surprised if there wasn’t a great deal of specificity of learning in the domain of musical instruments too.</p>
+<p>Oh my. I didn’t get to the main things I wanted to write about, and it’s almost time to check out. I guess I’ll be back tomorrow to add some more.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-crump2012keeping" class="csl-entry" role="listitem">
+Crump, Matthew JC, Gordon D Logan, and Jerry Kimbrough. 2012. <span>“Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords.”</span> <em>Music Perception: An Interdisciplinary Journal</em> 30 (1): 37–47.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="CrumpLab/crumplab_comments" data-repo-id="R_kgDOJ0QrEQ" data-category="General" data-category-id="DIC_kwDOJ0QrEc4CXety" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+
+
+
+
+</body></html>

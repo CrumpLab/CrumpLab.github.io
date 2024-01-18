@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.533">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,8 +63,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -104,11 +112,38 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="crumplab" href="Blog.xml"><meta property="og:title" content="crumplab - Blog">
+<link rel="alternate" type="application/rss+xml" title="crumplab" href="Blog.xml" data-external="1"><meta property="og:title" content="crumplab - Blog">
 <meta property="og:description" content="Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.">
 <meta property="og:image" content="https://crumplab.com/images/blog_banner.jpg">
-<meta property="og:site-name" content="crumplab">
+<meta property="og:site_name" content="crumplab">
 <meta name="twitter:title" content="crumplab - Blog">
 <meta name="twitter:description" content="Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.">
 <meta name="twitter:image" content="https://crumplab.com/images/blog_banner.jpg">
@@ -119,9 +154,9 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">crumplab</span>
     </a>
@@ -133,72 +168,72 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./People.html" rel="" target="">
- <span class="menu-text">People</span></a>
+    <a class="nav-link" href="./People.html"> 
+<span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Publications.html" rel="" target="">
- <span class="menu-text">Pubs</span></a>
+    <a class="nav-link" href="./Publications.html"> 
+<span class="menu-text">Pubs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Books.html" rel="" target="">
- <span class="menu-text">Books</span></a>
+    <a class="nav-link" href="./Books.html"> 
+<span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Courses.html" rel="" target="">
- <span class="menu-text">Courses</span></a>
+    <a class="nav-link" href="./Courses.html"> 
+<span class="menu-text">Courses</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Apps.html" rel="" target="">
- <span class="menu-text">Apps</span></a>
+    <a class="nav-link" href="./Apps.html"> 
+<span class="menu-text">Apps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Opportunities.html" rel="" target="">
- <span class="menu-text">Join</span></a>
+    <a class="nav-link" href="./Opportunities.html"> 
+<span class="menu-text">Join</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Blog.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="./Blog.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Fun.html" rel="" target="">
- <span class="menu-text">Fun</span></a>
+    <a class="nav-link" href="./Fun.html"> 
+<span class="menu-text">Fun</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/CrumpLab" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/CrumpLab"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/@MattCrumpLab" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://fosstodon.org/@MattCrumpLab"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/MattCrumpLab" rel="" target=""><i class="bi bi-twitter" role="img" aria-label="Twitter">
+    <a class="nav-link" href="https://twitter.com/MattCrumpLab"> <i class="bi bi-twitter" role="img" aria-label="Twitter">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab" rel="" target=""><i class="bi bi-youtube" role="img" aria-label="Youtube">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> <i class="bi bi-youtube" role="img" aria-label="Youtube">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./Blog.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./Blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -208,7 +243,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(36)</span></div><div class="category" data-category="ABPsi">ABPsi <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Assisted writing">Assisted writing <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Blogging">Blogging <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ChatGPT">ChatGPT <span class="quarto-category-count">(2)</span></div><div class="category" data-category="LLMs">LLMs <span class="quarto-category-count">(7)</span></div><div class="category" data-category="OER">OER <span class="quarto-category-count">(1)</span></div><div class="category" data-category="OpenAI">OpenAI <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RSS">RSS <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RStudio">RStudio <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Reproducible research">Reproducible research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Rstats">Rstats <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Rstudio">Rstudio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Stroop">Stroop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="activitypub">activitypub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="art">art <span class="quarto-category-count">(3)</span></div><div class="category" data-category="audio">audio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bibliographies">bibliographies <span class="quarto-category-count">(1)</span></div><div class="category" data-category="black psychology">black psychology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="blogging">blogging <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cognition">cognition <span class="quarto-category-count">(3)</span></div><div class="category" data-category="eugenics">eugenics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="fonts">fonts <span class="quarto-category-count">(1)</span></div><div class="category" data-category="funkwhale">funkwhale <span class="quarto-category-count">(1)</span></div><div class="category" data-category="generative">generative <span class="quarto-category-count">(1)</span></div><div class="category" data-category="generative art">generative art <span class="quarto-category-count">(1)</span></div><div class="category" data-category="giscus">giscus <span class="quarto-category-count">(1)</span></div><div class="category" data-category="mastodon">mastodon <span class="quarto-category-count">(4)</span></div><div class="category" data-category="music">music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="parody">parody <span class="quarto-category-count">(1)</span></div><div class="category" data-category="pkgdown">pkgdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="portfolio">portfolio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="psychology">psychology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="publication list">publication list <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="reproducible research">reproducible research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="rstats">rstats <span class="quarto-category-count">(1)</span></div><div class="category" data-category="social">social <span class="quarto-category-count">(5)</span></div><div class="category" data-category="stable diffusion">stable diffusion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="teaching">teaching <span class="quarto-category-count">(4)</span></div><div class="category" data-category="twitter">twitter <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ungrading">ungrading <span class="quarto-category-count">(1)</span></div><div class="category" data-category="unplanning">unplanning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="vertical">vertical <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(37)</span></div><div class="category" data-category="ABPsi">ABPsi <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Assisted writing">Assisted writing <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Blogging">Blogging <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ChatGPT">ChatGPT <span class="quarto-category-count">(2)</span></div><div class="category" data-category="LLMs">LLMs <span class="quarto-category-count">(7)</span></div><div class="category" data-category="OER">OER <span class="quarto-category-count">(1)</span></div><div class="category" data-category="OpenAI">OpenAI <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RSS">RSS <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RStudio">RStudio <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Reproducible research">Reproducible research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Rstats">Rstats <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Rstudio">Rstudio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Stroop">Stroop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="activitypub">activitypub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="art">art <span class="quarto-category-count">(3)</span></div><div class="category" data-category="audio">audio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bibliographies">bibliographies <span class="quarto-category-count">(1)</span></div><div class="category" data-category="black psychology">black psychology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="blogging">blogging <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cognition">cognition <span class="quarto-category-count">(3)</span></div><div class="category" data-category="eugenics">eugenics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="fonts">fonts <span class="quarto-category-count">(1)</span></div><div class="category" data-category="funkwhale">funkwhale <span class="quarto-category-count">(1)</span></div><div class="category" data-category="generative">generative <span class="quarto-category-count">(1)</span></div><div class="category" data-category="generative art">generative art <span class="quarto-category-count">(1)</span></div><div class="category" data-category="giscus">giscus <span class="quarto-category-count">(1)</span></div><div class="category" data-category="homophony">homophony <span class="quarto-category-count">(1)</span></div><div class="category" data-category="mastodon">mastodon <span class="quarto-category-count">(4)</span></div><div class="category" data-category="music">music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="music cognition">music cognition <span class="quarto-category-count">(1)</span></div><div class="category" data-category="parody">parody <span class="quarto-category-count">(1)</span></div><div class="category" data-category="pkgdown">pkgdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="portfolio">portfolio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="psychology">psychology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="publication list">publication list <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="reproducible research">reproducible research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="rstats">rstats <span class="quarto-category-count">(1)</span></div><div class="category" data-category="social">social <span class="quarto-category-count">(5)</span></div><div class="category" data-category="stable diffusion">stable diffusion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="teaching">teaching <span class="quarto-category-count">(4)</span></div><div class="category" data-category="twitter">twitter <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ungrading">ungrading <span class="quarto-category-count">(1)</span></div><div class="category" data-category="unplanning">unplanning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="vertical">vertical <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -224,7 +259,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -232,7 +267,9 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 <div class="cell">
 <style type="text/css">
@@ -247,25 +284,65 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="images/blog_banner.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="images/blog_banner.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.</p>
 <div id="listing-blog-list" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="stable diffusion,generative,art,python,Rstudio" data-listing-date-sort="1695268800000" data-listing-file-modified-sort="1695301031468" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="0" data-categories="music cognition,homophony" data-listing-date-sort="1705554000000" data-listing-file-modified-sort="1705614712497" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3439">
 <div class="thumbnail">
-<p><a href="./blog/661_stable_diffusion/index.html"> <img src="./blog/661_stable_diffusion/cover.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/660_music_cognition/index.html" class="no-external"></a></p><a href="./blog/660_music_cognition/index.html" class="no-external">
+<p><img src="./blog/660_music_cognition/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/660_music_cognition/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/661_stable_diffusion/index.html">
 <h3 class="no-anchor listing-title">
-Messing around with Hugging Face’s Stable Diffusion
+<a href="./blog/660_music_cognition/index.html" class="no-external">Musing about music cognition</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/660_music_cognition/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('music cognition'); return false;">
+music cognition
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('homophony'); return false;">
+homophony
+</div>
+</div>
+<div class="listing-description">
+<a href="./blog/660_music_cognition/index.html" class="no-external">It’s the beginning of a new semester and i’m thinking about doing more music cognition research this round. Mostly a long ramble.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./blog/660_music_cognition/index.html" class="no-external">
+<div class="listing-date">
+Jan 18, 2024
+</div>
+<div class="listing-author">
+Matt Crump
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="stable diffusion,generative,art,python,Rstudio" data-listing-date-sort="1695268800000" data-listing-file-modified-sort="1695301031468" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="915">
+<div class="thumbnail">
+<p><a href="./blog/661_stable_diffusion/index.html" class="no-external"></a></p><a href="./blog/661_stable_diffusion/index.html" class="no-external">
+<p><img src="./blog/661_stable_diffusion/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/661_stable_diffusion/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./blog/661_stable_diffusion/index.html" class="no-external">Messing around with Hugging Face’s Stable Diffusion</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./blog/661_stable_diffusion/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('stable diffusion'); return false;">
 stable diffusion
@@ -283,14 +360,12 @@ python
 Rstudio
 </div>
 </div>
-<a href="./blog/661_stable_diffusion/index.html">
 <div class="listing-description">
-<p>Notes and tests on getting stable diffusion working on my laptop and then seeing what it does to some of my own drawings</p>
+<a href="./blog/661_stable_diffusion/index.html" class="no-external">Notes and tests on getting stable diffusion working on my laptop and then seeing what it does to some of my own drawings</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/661_stable_diffusion/index.html">
+<a href="./blog/661_stable_diffusion/index.html" class="no-external">
 <div class="listing-date">
 Sep 21, 2023
 </div>
@@ -300,19 +375,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Quarto,portfolio,art" data-listing-date-sort="1689220800000" data-listing-file-modified-sort="1689259577702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="2" data-categories="Quarto,portfolio,art" data-listing-date-sort="1689220800000" data-listing-file-modified-sort="1689259577702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="621">
 <div class="thumbnail">
-<p><a href="./blog/662_quarto_portfolio/index.html"> <img src="./blog/662_quarto_portfolio/images/portfolio.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/662_quarto_portfolio/index.html" class="no-external"></a></p><a href="./blog/662_quarto_portfolio/index.html" class="no-external">
+<p><img src="./blog/662_quarto_portfolio/images/portfolio.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/662_quarto_portfolio/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/662_quarto_portfolio/index.html">
 <h3 class="no-anchor listing-title">
-A simple visual art portfolio website using Quarto
+<a href="./blog/662_quarto_portfolio/index.html" class="no-external">A simple visual art portfolio website using Quarto</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/662_quarto_portfolio/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
 Quarto
@@ -324,14 +399,12 @@ portfolio
 art
 </div>
 </div>
-<a href="./blog/662_quarto_portfolio/index.html">
 <div class="listing-description">
-<p>Notes on using Quarto to create a basic portfolio website for pictures using listing pages.</p>
+<a href="./blog/662_quarto_portfolio/index.html" class="no-external">Notes on using Quarto to create a basic portfolio website for pictures using listing pages.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/662_quarto_portfolio/index.html">
+<a href="./blog/662_quarto_portfolio/index.html" class="no-external">
 <div class="listing-date">
 Jul 13, 2023
 </div>
@@ -341,19 +414,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Quarto,reproducible research,rstats" data-listing-date-sort="1687838400000" data-listing-file-modified-sort="1687897030221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="3" data-categories="Quarto,reproducible research,rstats" data-listing-date-sort="1687838400000" data-listing-file-modified-sort="1687897030221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1140">
 <div class="thumbnail">
-<p><a href="./blog/663_quarto_projects/index.html"> <img src="./blog/663_quarto_projects/cover.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/663_quarto_projects/index.html" class="no-external"></a></p><a href="./blog/663_quarto_projects/index.html" class="no-external">
+<p><img src="./blog/663_quarto_projects/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/663_quarto_projects/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/663_quarto_projects/index.html">
 <h3 class="no-anchor listing-title">
-Pondering my defaults for Quarto websites and reproducible research projects
+<a href="./blog/663_quarto_projects/index.html" class="no-external">Pondering my defaults for Quarto websites and reproducible research projects</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/663_quarto_projects/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
 Quarto
@@ -365,14 +438,12 @@ reproducible research
 rstats
 </div>
 </div>
-<a href="./blog/663_quarto_projects/index.html">
 <div class="listing-description">
-<p>Quarto websites are a great way to package and distribute assets from a reproducible research project. I’m just about to start another project, and I’m thinking about issues with how I get started.</p>
+<a href="./blog/663_quarto_projects/index.html" class="no-external">Quarto websites are a great way to package and distribute assets from a reproducible research project. I’m just about to start another project, and I’m thinking about issues with how I get started.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/663_quarto_projects/index.html">
+<a href="./blog/663_quarto_projects/index.html" class="no-external">
 <div class="listing-date">
 Jun 27, 2023
 </div>
@@ -382,19 +453,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Blogging,giscus" data-listing-date-sort="1687752000000" data-listing-file-modified-sort="1687873293514" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="4" data-categories="Blogging,giscus" data-listing-date-sort="1687752000000" data-listing-file-modified-sort="1687873293514" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="459">
 <div class="thumbnail">
-<p><a href="./blog/664_giscus/index.html"> <img src="./blog/664_giscus/cover.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/664_giscus/index.html" class="no-external"></a></p><a href="./blog/664_giscus/index.html" class="no-external">
+<p><img src="./blog/664_giscus/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/664_giscus/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/664_giscus/index.html">
 <h3 class="no-anchor listing-title">
-Adding a giscus comment section?
+<a href="./blog/664_giscus/index.html" class="no-external">Adding a giscus comment section?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/664_giscus/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Blogging'); return false;">
 Blogging
@@ -403,14 +474,12 @@ Blogging
 giscus
 </div>
 </div>
-<a href="./blog/664_giscus/index.html">
 <div class="listing-description">
-<p>Testing out adding a giscus comment section to a blog post.</p>
+<a href="./blog/664_giscus/index.html" class="no-external">Testing out adding a giscus comment section to a blog post.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/664_giscus/index.html">
+<a href="./blog/664_giscus/index.html" class="no-external">
 <div class="listing-date">
 Jun 26, 2023
 </div>
@@ -420,19 +489,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="LLMs,OpenAI,Shiny,Rstats,RStudio,Assisted writing" data-listing-date-sort="1687492800000" data-listing-file-modified-sort="1687873266988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="5" data-categories="LLMs,OpenAI,Shiny,Rstats,RStudio,Assisted writing" data-listing-date-sort="1687492800000" data-listing-file-modified-sort="1687873266988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1363">
 <div class="thumbnail">
-<p><a href="./blog/665_realworld_editing/index.html"> <img src="./blog/665_realworld_editing/cover.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/665_realworld_editing/index.html" class="no-external"></a></p><a href="./blog/665_realworld_editing/index.html" class="no-external">
+<p><img src="./blog/665_realworld_editing/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/665_realworld_editing/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/665_realworld_editing/index.html">
 <h3 class="no-anchor listing-title">
-Observations on using LLMs for checking grammar, etc.
+<a href="./blog/665_realworld_editing/index.html" class="no-external">Observations on using LLMs for checking grammar, etc.</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/665_realworld_editing/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
 LLMs
@@ -453,14 +522,12 @@ RStudio
 Assisted writing
 </div>
 </div>
-<a href="./blog/665_realworld_editing/index.html">
 <div class="listing-description">
-<p>In recent posts I’ve been making add-ins and a shiny app for writing assistance tools in R Studio, where I do most of my writing. I’m finally starting to get some usable results. Discussing some observations about the process in this post.</p>
+<a href="./blog/665_realworld_editing/index.html" class="no-external">In recent posts I’ve been making add-ins and a shiny app for writing assistance tools in R Studio, where I do most of my writing. I’m finally starting to get some usable results. Discussing some observations about the process in this post.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/665_realworld_editing/index.html">
+<a href="./blog/665_realworld_editing/index.html" class="no-external">
 <div class="listing-date">
 Jun 23, 2023
 </div>
@@ -470,25 +537,25 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1687406400000" data-listing-file-modified-sort="1687792486808" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1687406400000" data-listing-file-modified-sort="1687792486808" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1640">
 <div class="thumbnail">
-<p><a href="./blog/666_gpt_grammar/index.html"> <img src="./blog/666_gpt_grammar/cover.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/666_gpt_grammar/index.html" class="no-external"></a></p><a href="./blog/666_gpt_grammar/index.html" class="no-external">
+<p><img src="./blog/666_gpt_grammar/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/666_gpt_grammar/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/666_gpt_grammar/index.html">
 <h3 class="no-anchor listing-title">
-Scratchpad: Grammar checking Quarto documents with the OpenAI API
+<a href="./blog/666_gpt_grammar/index.html" class="no-external">Scratchpad: Grammar checking Quarto documents with the OpenAI API</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/666_gpt_grammar/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p>This is a scratchpad post. I would like better grammar checking for documents that I write in Rstudio, and I know that I could cobble something together using the OpenAI API. I’m using this post to do the cobbling, which may not result in a working solution. Fingers crossed.</p>
+<a href="./blog/666_gpt_grammar/index.html" class="no-external">This is a scratchpad post. I would like better grammar checking for documents that I write in Rstudio, and I know that I could cobble something together using the OpenAI API. I’m using this post to do the cobbling, which may not result in a working solution. Fingers crossed.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/666_gpt_grammar/index.html">
+<a href="./blog/666_gpt_grammar/index.html" class="no-external">
 <div class="listing-date">
 Jun 22, 2023
 </div>
@@ -498,19 +565,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="LLMs,Rstats,RStudio,Assisted writing" data-listing-date-sort="1687320000000" data-listing-file-modified-sort="1687873242301" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="7" data-categories="LLMs,Rstats,RStudio,Assisted writing" data-listing-date-sort="1687320000000" data-listing-file-modified-sort="1687873242301" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1478">
 <div class="thumbnail">
-<p><a href="./blog/667_GPT_editing/index.html"> <img src="./blog/667_GPT_editing/cover.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/667_GPT_editing/index.html" class="no-external"></a></p><a href="./blog/667_GPT_editing/index.html" class="no-external">
+<p><img src="./blog/667_GPT_editing/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/667_GPT_editing/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/667_GPT_editing/index.html">
 <h3 class="no-anchor listing-title">
-Prompts for editing text with GPT
+<a href="./blog/667_GPT_editing/index.html" class="no-external">Prompts for editing text with GPT</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/667_GPT_editing/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
 LLMs
@@ -525,14 +592,12 @@ RStudio
 Assisted writing
 </div>
 </div>
-<a href="./blog/667_GPT_editing/index.html">
 <div class="listing-description">
-<p>Testing out some strategies for writing assistant functions from GPT</p>
+<a href="./blog/667_GPT_editing/index.html" class="no-external">Testing out some strategies for writing assistant functions from GPT</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/667_GPT_editing/index.html">
+<a href="./blog/667_GPT_editing/index.html" class="no-external">
 <div class="listing-date">
 Jun 21, 2023
 </div>
@@ -542,19 +607,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="LLMs,Rstats,RStudio,Assisted writing" data-listing-date-sort="1687233600000" data-listing-file-modified-sort="1687873211233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="110">
+<div class="quarto-post image-right" data-index="8" data-categories="LLMs,Rstats,RStudio,Assisted writing" data-listing-date-sort="1687233600000" data-listing-file-modified-sort="1687873211233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="110" data-listing-word-count-sort="21818">
 <div class="thumbnail">
-<p><a href="./blog/668_gpt_adventure/index.html"> <img src="./blog/668_gpt_adventure/DallE_image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/668_gpt_adventure/index.html" class="no-external"></a></p><a href="./blog/668_gpt_adventure/index.html" class="no-external">
+<p><img src="./blog/668_gpt_adventure/DallE_image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/668_gpt_adventure/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/668_gpt_adventure/index.html">
 <h3 class="no-anchor listing-title">
-Choose-your-own adventure with ChatGPT
+<a href="./blog/668_gpt_adventure/index.html" class="no-external">Choose-your-own adventure with ChatGPT</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/668_gpt_adventure/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
 LLMs
@@ -569,14 +634,12 @@ RStudio
 Assisted writing
 </div>
 </div>
-<a href="./blog/668_gpt_adventure/index.html">
 <div class="listing-description">
-<p>Me fiddling around with GPT inside Rstudio to write a choose-your-own adventure story.</p>
+<a href="./blog/668_gpt_adventure/index.html" class="no-external">Me fiddling around with GPT inside Rstudio to write a choose-your-own adventure story.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/668_gpt_adventure/index.html">
+<a href="./blog/668_gpt_adventure/index.html" class="no-external">
 <div class="listing-date">
 Jun 20, 2023
 </div>
@@ -586,19 +649,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="LLMs,OpenAI,Rstats,RStudio,Assisted writing" data-listing-date-sort="1686196800000" data-listing-file-modified-sort="1687873185251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="9" data-categories="LLMs,OpenAI,Rstats,RStudio,Assisted writing" data-listing-date-sort="1686196800000" data-listing-file-modified-sort="1687873185251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1722">
 <div class="thumbnail">
-<p><a href="./blog/669_gpt_learnR/index.html"> <img src="images/crumplab.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/669_gpt_learnR/index.html" class="no-external"></a></p><a href="./blog/669_gpt_learnR/index.html" class="no-external">
+<p class="card-img-top"><img src="images/crumplab.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/669_gpt_learnR/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/669_gpt_learnR/index.html">
 <h3 class="no-anchor listing-title">
-Writing an R tutorial with GPT in RStudio
+<a href="./blog/669_gpt_learnR/index.html" class="no-external">Writing an R tutorial with GPT in RStudio</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/669_gpt_learnR/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
 LLMs
@@ -616,14 +679,12 @@ RStudio
 Assisted writing
 </div>
 </div>
-<a href="./blog/669_gpt_learnR/index.html">
 <div class="listing-description">
-<p>I’m testing out the process of writing in RStudio using addins that send prompts and receive generative text from OpenAI.</p>
+<a href="./blog/669_gpt_learnR/index.html" class="no-external">I’m testing out the process of writing in RStudio using addins that send prompts and receive generative text from OpenAI.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/669_gpt_learnR/index.html">
+<a href="./blog/669_gpt_learnR/index.html" class="no-external">
 <div class="listing-date">
 Jun 8, 2023
 </div>
@@ -633,19 +694,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="LLMs,OpenAI,Rstats,RStudio" data-listing-date-sort="1686110400000" data-listing-file-modified-sort="1687873156148" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+<div class="quarto-post image-right" data-index="10" data-categories="LLMs,OpenAI,Rstats,RStudio" data-listing-date-sort="1686110400000" data-listing-file-modified-sort="1687873156148" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2493">
 <div class="thumbnail">
-<p><a href="./blog/770_rstudio_gpt/index.html"> <img src="images/crumplab.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/770_rstudio_gpt/index.html" class="no-external"></a></p><a href="./blog/770_rstudio_gpt/index.html" class="no-external">
+<p class="card-img-top"><img src="images/crumplab.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/770_rstudio_gpt/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/770_rstudio_gpt/index.html">
 <h3 class="no-anchor listing-title">
-Using GPT for writing in R Studio
+<a href="./blog/770_rstudio_gpt/index.html" class="no-external">Using GPT for writing in R Studio</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/770_rstudio_gpt/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
 LLMs
@@ -660,14 +721,12 @@ Rstats
 RStudio
 </div>
 </div>
-<a href="./blog/770_rstudio_gpt/index.html">
 <div class="listing-description">
-<p>I’m spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio.</p>
+<a href="./blog/770_rstudio_gpt/index.html" class="no-external">I’m spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/770_rstudio_gpt/index.html">
+<a href="./blog/770_rstudio_gpt/index.html" class="no-external">
 <div class="listing-date">
 Jun 7, 2023
 </div>
@@ -677,19 +736,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="LLMs,Stroop,ChatGPT" data-listing-date-sort="1686024000000" data-listing-file-modified-sort="1687897029052" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24">
+<div class="quarto-post image-right" data-index="11" data-categories="LLMs,Stroop,ChatGPT" data-listing-date-sort="1686024000000" data-listing-file-modified-sort="1687897029052" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4651">
 <div class="thumbnail">
-<p><a href="./blog/771_GPT_Stroop/index.html"> <img src="images/crumplab.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/771_GPT_Stroop/index.html" class="no-external"></a></p><a href="./blog/771_GPT_Stroop/index.html" class="no-external">
+<p class="card-img-top"><img src="blog/771_GPT_Stroop/Stroop.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/771_GPT_Stroop/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/771_GPT_Stroop/index.html">
 <h3 class="no-anchor listing-title">
-Simulating Stroop effects with ChatGPT
+<a href="./blog/771_GPT_Stroop/index.html" class="no-external">Simulating Stroop effects with ChatGPT</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/771_GPT_Stroop/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
 LLMs
@@ -701,14 +760,12 @@ Stroop
 ChatGPT
 </div>
 </div>
-<a href="./blog/771_GPT_Stroop/index.html">
 <div class="listing-description">
-<p>This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short answer is that it can generate data in the style of a Stroop experiment without too much effort on my part.</p>
+<a href="./blog/771_GPT_Stroop/index.html" class="no-external">This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short answer is that it can generate data in the style of a Stroop experiment without too much effort on my part.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/771_GPT_Stroop/index.html">
+<a href="./blog/771_GPT_Stroop/index.html" class="no-external">
 <div class="listing-date">
 Jun 6, 2023
 </div>
@@ -718,19 +775,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="ChatGPT,LLMs" data-listing-date-sort="1676696400000" data-listing-file-modified-sort="1687873158691" data-listing-date-modified-sort="1687873158000" data-listing-reading-time-sort="17">
+<div class="quarto-post image-right" data-index="12" data-categories="ChatGPT,LLMs" data-listing-date-sort="1676696400000" data-listing-file-modified-sort="1687873158691" data-listing-date-modified-sort="1687873158000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3262">
 <div class="thumbnail">
-<p><a href="./blog/772_chatGPT/index.html"> <img src="images/crumplab.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/772_chatGPT/index.html" class="no-external"></a></p><a href="./blog/772_chatGPT/index.html" class="no-external">
+<p class="card-img-top"><img src="blog/772_chatGPT/images/redlining_brooklyn.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/772_chatGPT/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/772_chatGPT/index.html">
 <h3 class="no-anchor listing-title">
-Notes for my students on using ChatGPT
+<a href="./blog/772_chatGPT/index.html" class="no-external">Notes for my students on using ChatGPT</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/772_chatGPT/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('ChatGPT'); return false;">
 ChatGPT
@@ -739,14 +796,12 @@ ChatGPT
 LLMs
 </div>
 </div>
-<a href="./blog/772_chatGPT/index.html">
 <div class="listing-description">
-<p>I’m teaching a class on the people of NYC, and these are some notes that I made for students about ChatGPT.</p>
+<a href="./blog/772_chatGPT/index.html" class="no-external">I’m teaching a class on the people of NYC, and these are some notes that I made for students about ChatGPT.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/772_chatGPT/index.html">
+<a href="./blog/772_chatGPT/index.html" class="no-external">
 <div class="listing-date">
 Feb 18, 2023
 </div>
@@ -756,32 +811,30 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="RSS" data-listing-date-sort="1673499600000" data-listing-file-modified-sort="1687873013599" data-listing-date-modified-sort="1687873013000" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="13" data-categories="RSS" data-listing-date-sort="1673499600000" data-listing-file-modified-sort="1687873013599" data-listing-date-modified-sort="1687873013000" data-listing-reading-time-sort="3" data-listing-word-count-sort="530">
 <div class="thumbnail">
-<p><a href="./blog/774_spring2023/index.html"> <img src="./blog/774_spring2023/images/header.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/774_spring2023/index.html" class="no-external"></a></p><a href="./blog/774_spring2023/index.html" class="no-external">
+<p><img src="./blog/774_spring2023/images/header.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/774_spring2023/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/774_spring2023/index.html">
 <h3 class="no-anchor listing-title">
-Two new courses and getting into the swing with spring
+<a href="./blog/774_spring2023/index.html" class="no-external">Two new courses and getting into the swing with spring</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/774_spring2023/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('RSS'); return false;">
 RSS
 </div>
 </div>
-<a href="./blog/774_spring2023/index.html">
 <div class="listing-description">
-<p>Writing for personal motivation and organization around teaching this coming Spring semester. Odd notes about process. A narrative form to-do list. For me, sharing for fun.</p>
+<a href="./blog/774_spring2023/index.html" class="no-external">Writing for personal motivation and organization around teaching this coming Spring semester. Odd notes about process. A narrative form to-do list. For me, sharing for fun.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/774_spring2023/index.html">
+<a href="./blog/774_spring2023/index.html" class="no-external">
 <div class="listing-date">
 Jan 12, 2023
 </div>
@@ -791,19 +844,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="generative art,art" data-listing-date-sort="1668056400000" data-listing-file-modified-sort="1691151107053" data-listing-date-modified-sort="1691151107000" data-listing-reading-time-sort="15">
+<div class="quarto-post image-right" data-index="14" data-categories="generative art,art" data-listing-date-sort="1668056400000" data-listing-file-modified-sort="1691151107053" data-listing-date-modified-sort="1691151107000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2860">
 <div class="thumbnail">
-<p><a href="./blog/777_generative_art/index.html"> <img src="./blog/777_generative_art/images/Impact3.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/777_generative_art/index.html" class="no-external"></a></p><a href="./blog/777_generative_art/index.html" class="no-external">
+<p><img src="./blog/777_generative_art/images/Impact3.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/777_generative_art/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/777_generative_art/index.html">
 <h3 class="no-anchor listing-title">
-Generative art (note) collection
+<a href="./blog/777_generative_art/index.html" class="no-external">Generative art (note) collection</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/777_generative_art/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('generative art'); return false;">
 generative art
@@ -812,14 +865,12 @@ generative art
 art
 </div>
 </div>
-<a href="./blog/777_generative_art/index.html">
 <div class="listing-description">
-<p>Collecting fast notes on using #rstats and potentiall other things to generate visuals.</p>
+<a href="./blog/777_generative_art/index.html" class="no-external">Collecting fast notes on using #rstats and potentiall other things to generate visuals.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/777_generative_art/index.html">
+<a href="./blog/777_generative_art/index.html" class="no-external">
 <div class="listing-date">
 Nov 10, 2022
 </div>
@@ -829,32 +880,30 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="RSS" data-listing-date-sort="1668056400000" data-listing-file-modified-sort="1687792486836" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="15" data-categories="RSS" data-listing-date-sort="1668056400000" data-listing-file-modified-sort="1687792486836" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="2" data-listing-word-count-sort="228">
 <div class="thumbnail">
-<p><a href="./blog/776_RSS/index.html"> <img src="./blog/776_RSS/images/header.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/776_RSS/index.html" class="no-external"></a></p><a href="./blog/776_RSS/index.html" class="no-external">
+<p><img src="./blog/776_RSS/images/header.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/776_RSS/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/776_RSS/index.html">
 <h3 class="no-anchor listing-title">
-RSS feed my quarto blog
+<a href="./blog/776_RSS/index.html" class="no-external">RSS feed my quarto blog</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/776_RSS/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('RSS'); return false;">
 RSS
 </div>
 </div>
-<a href="./blog/776_RSS/index.html">
 <div class="listing-description">
-<p>Seeing what happens if I set up RSS feeds over here.</p>
+<a href="./blog/776_RSS/index.html" class="no-external">Seeing what happens if I set up RSS feeds over here.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/776_RSS/index.html">
+<a href="./blog/776_RSS/index.html" class="no-external">
 <div class="listing-date">
 Nov 10, 2022
 </div>
@@ -864,19 +913,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="funkwhale,activitypub,audio,music" data-listing-date-sort="1667970000000" data-listing-file-modified-sort="1687792486859" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="16" data-categories="funkwhale,activitypub,audio,music" data-listing-date-sort="1667970000000" data-listing-file-modified-sort="1687792486859" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="7" data-listing-word-count-sort="1294">
 <div class="thumbnail">
-<p><a href="./blog/778_funkwhale/index.html"> <img src="./blog/778_funkwhale/images/header.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/778_funkwhale/index.html" class="no-external"></a></p><a href="./blog/778_funkwhale/index.html" class="no-external">
+<p><img src="./blog/778_funkwhale/images/header.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/778_funkwhale/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/778_funkwhale/index.html">
 <h3 class="no-anchor listing-title">
-Convincing myself to run a Funkwhale pod
+<a href="./blog/778_funkwhale/index.html" class="no-external">Convincing myself to run a Funkwhale pod</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/778_funkwhale/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('funkwhale'); return false;">
 funkwhale
@@ -891,14 +940,12 @@ audio
 music
 </div>
 </div>
-<a href="./blog/778_funkwhale/index.html">
 <div class="listing-description">
-<p>Funkwhale is an audio platform thing that supports activitypub. Collecting notes about it.</p>
+<a href="./blog/778_funkwhale/index.html" class="no-external">Funkwhale is an audio platform thing that supports activitypub. Collecting notes about it.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/778_funkwhale/index.html">
+<a href="./blog/778_funkwhale/index.html" class="no-external">
 <div class="listing-date">
 Nov 9, 2022
 </div>
@@ -908,19 +955,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="social,mastodon" data-listing-date-sort="1667797200000" data-listing-file-modified-sort="1687792486862" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="17" data-categories="social,mastodon" data-listing-date-sort="1667797200000" data-listing-file-modified-sort="1687792486862" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="5" data-listing-word-count-sort="940">
 <div class="thumbnail">
-<p><a href="./blog/779_MoreMastodon/index.html"> <img src="images/crumplab.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/779_MoreMastodon/index.html" class="no-external"></a></p><a href="./blog/779_MoreMastodon/index.html" class="no-external">
+<p class="card-img-top"><img src="blog/779_MoreMastodon/images/MV5BMTUzNTYxMTUzMV5BMl5BanBnXkFtZTYwMzgxMTg4._V1_.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/779_MoreMastodon/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/779_MoreMastodon/index.html">
 <h3 class="no-anchor listing-title">
-Debriefing my mastodon migration
+<a href="./blog/779_MoreMastodon/index.html" class="no-external">Debriefing my mastodon migration</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/779_MoreMastodon/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('social'); return false;">
 social
@@ -929,14 +976,12 @@ social
 mastodon
 </div>
 </div>
-<a href="./blog/779_MoreMastodon/index.html">
 <div class="listing-description">
-<p>It’s been a wild ride on social media over the past week. I need some thought collection.</p>
+<a href="./blog/779_MoreMastodon/index.html" class="no-external">It’s been a wild ride on social media over the past week. I need some thought collection.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/779_MoreMastodon/index.html">
+<a href="./blog/779_MoreMastodon/index.html" class="no-external">
 <div class="listing-date">
 Nov 7, 2022
 </div>
@@ -946,19 +991,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="social,mastodon" data-listing-date-sort="1667275200000" data-listing-file-modified-sort="1687792486883" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="18" data-categories="social,mastodon" data-listing-date-sort="1667275200000" data-listing-file-modified-sort="1687792486883" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1095">
 <div class="thumbnail">
-<p><a href="./blog/880_BBS/index.html"> <img src="./blog/880_BBS/images/bbs.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/880_BBS/index.html" class="no-external"></a></p><a href="./blog/880_BBS/index.html" class="no-external">
+<p><img src="./blog/880_BBS/images/bbs.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/880_BBS/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/880_BBS/index.html">
 <h3 class="no-anchor listing-title">
-Spinning up a mastodon instance with masto.host: First try and notes
+<a href="./blog/880_BBS/index.html" class="no-external">Spinning up a mastodon instance with masto.host: First try and notes</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/880_BBS/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('social'); return false;">
 social
@@ -967,14 +1012,12 @@ social
 mastodon
 </div>
 </div>
-<a href="./blog/880_BBS/index.html">
 <div class="listing-description">
-<p>I decided to try mastodon from inside my own instance, and this is brief guide to what I did and the questions I still have.</p>
+<a href="./blog/880_BBS/index.html" class="no-external">I decided to try mastodon from inside my own instance, and this is brief guide to what I did and the questions I still have.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/880_BBS/index.html">
+<a href="./blog/880_BBS/index.html" class="no-external">
 <div class="listing-date">
 Nov 1, 2022
 </div>
@@ -984,19 +1027,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="social,twitter,mastodon" data-listing-date-sort="1667102400000" data-listing-file-modified-sort="1687792486885" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="19" data-categories="social,twitter,mastodon" data-listing-date-sort="1667102400000" data-listing-file-modified-sort="1687792486885" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="3" data-listing-word-count-sort="569">
 <div class="thumbnail">
-<p><a href="./blog/881_Mastodon/index.html"> <img src="./blog/881_Mastodon/images/mastodon.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/881_Mastodon/index.html" class="no-external"></a></p><a href="./blog/881_Mastodon/index.html" class="no-external">
+<p><img src="./blog/881_Mastodon/images/mastodon.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/881_Mastodon/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/881_Mastodon/index.html">
 <h3 class="no-anchor listing-title">
-Mastodon migration and getting off twitter?
+<a href="./blog/881_Mastodon/index.html" class="no-external">Mastodon migration and getting off twitter?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/881_Mastodon/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('social'); return false;">
 social
@@ -1008,14 +1051,12 @@ twitter
 mastodon
 </div>
 </div>
-<a href="./blog/881_Mastodon/index.html">
 <div class="listing-description">
-<p>Trying out Mastodon this weekend and attempting to migrate between instances using an R package.</p>
+<a href="./blog/881_Mastodon/index.html" class="no-external">Trying out Mastodon this weekend and attempting to migrate between instances using an R package.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/881_Mastodon/index.html">
+<a href="./blog/881_Mastodon/index.html" class="no-external">
 <div class="listing-date">
 Oct 30, 2022
 </div>
@@ -1025,19 +1066,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="social,twitter,mastodon" data-listing-date-sort="1666929600000" data-listing-file-modified-sort="1687792486968" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="20" data-categories="social,twitter,mastodon" data-listing-date-sort="1666929600000" data-listing-file-modified-sort="1687792486968" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="3" data-listing-word-count-sort="464">
 <div class="thumbnail">
-<p><a href="./blog/883_command_center/index.html"> <img src="./blog/883_command_center/images/command.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/883_command_center/index.html" class="no-external"></a></p><a href="./blog/883_command_center/index.html" class="no-external">
+<p><img src="./blog/883_command_center/images/command.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/883_command_center/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/883_command_center/index.html">
 <h3 class="no-anchor listing-title">
-What if I made an R command center for tweeting and tooting?
+<a href="./blog/883_command_center/index.html" class="no-external">What if I made an R command center for tweeting and tooting?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/883_command_center/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('social'); return false;">
 social
@@ -1049,14 +1090,12 @@ twitter
 mastodon
 </div>
 </div>
-<a href="./blog/883_command_center/index.html">
 <div class="listing-description">
-<p>Messing around with stuff in R on a friday Morning</p>
+<a href="./blog/883_command_center/index.html" class="no-external">Messing around with stuff in R on a friday Morning</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/883_command_center/index.html">
+<a href="./blog/883_command_center/index.html" class="no-external">
 <div class="listing-date">
 Oct 28, 2022
 </div>
@@ -1066,19 +1105,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="social,twitter,parody" data-listing-date-sort="1666929600000" data-listing-file-modified-sort="1687792486964" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="21" data-categories="social,twitter,parody" data-listing-date-sort="1666929600000" data-listing-file-modified-sort="1687792486964" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="2" data-listing-word-count-sort="350">
 <div class="thumbnail">
-<p><a href="./blog/882_JOKE/index.html"> <img src="./blog/882_JOKE/images/Journal_of_knowledge.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/882_JOKE/index.html" class="no-external"></a></p><a href="./blog/882_JOKE/index.html" class="no-external">
+<p><img src="./blog/882_JOKE/images/Journal_of_knowledge.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/882_JOKE/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/882_JOKE/index.html">
 <h3 class="no-anchor listing-title">
-Archiving the journal of knowledge
+<a href="./blog/882_JOKE/index.html" class="no-external">Archiving the journal of knowledge</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/882_JOKE/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('social'); return false;">
 social
@@ -1090,14 +1129,12 @@ twitter
 parody
 </div>
 </div>
-<a href="./blog/882_JOKE/index.html">
 <div class="listing-description">
-<p>Attempt to download some previous tweets before deleting an account.</p>
+<a href="./blog/882_JOKE/index.html" class="no-external">Attempt to download some previous tweets before deleting an account.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/882_JOKE/index.html">
+<a href="./blog/882_JOKE/index.html" class="no-external">
 <div class="listing-date">
 Oct 28, 2022
 </div>
@@ -1107,19 +1144,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="ungrading,unplanning,teaching" data-listing-date-sort="1665892800000" data-listing-file-modified-sort="1687792486990" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="22" data-categories="ungrading,unplanning,teaching" data-listing-date-sort="1665892800000" data-listing-file-modified-sort="1687792486990" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1069">
 <div class="thumbnail">
-<p><a href="./blog/885_10_16_22_unplanning/index.html"> <img src="./blog/885_10_16_22_unplanning/images/unplanning.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/885_10_16_22_unplanning/index.html" class="no-external"></a></p><a href="./blog/885_10_16_22_unplanning/index.html" class="no-external">
+<p><img src="./blog/885_10_16_22_unplanning/images/unplanning.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/885_10_16_22_unplanning/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/885_10_16_22_unplanning/index.html">
 <h3 class="no-anchor listing-title">
-Unplanning my next course prep
+<a href="./blog/885_10_16_22_unplanning/index.html" class="no-external">Unplanning my next course prep</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/885_10_16_22_unplanning/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('ungrading'); return false;">
 ungrading
@@ -1131,14 +1168,12 @@ unplanning
 teaching
 </div>
 </div>
-<a href="./blog/885_10_16_22_unplanning/index.html">
 <div class="listing-description">
-<p>Sunday morning thoughts on not overplanning while prepping a new course.</p>
+<a href="./blog/885_10_16_22_unplanning/index.html" class="no-external">Sunday morning thoughts on not overplanning while prepping a new course.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/885_10_16_22_unplanning/index.html">
+<a href="./blog/885_10_16_22_unplanning/index.html" class="no-external">
 <div class="listing-date">
 Oct 16, 2022
 </div>
@@ -1148,19 +1183,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="quarto,Rstats,vertical,Reproducible research" data-listing-date-sort="1665720000000" data-listing-file-modified-sort="1687873858688" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="23" data-categories="quarto,Rstats,vertical,Reproducible research" data-listing-date-sort="1665720000000" data-listing-file-modified-sort="1687873858688" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1304">
 <div class="thumbnail">
-<p><a href="./blog/post_886_10_14_22_quartoProjects/index.html"> <img src="./blog/post_886_10_14_22_quartoProjects/imgs/Quarto-1.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external"></a></p><a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external">
+<p><img src="./blog/post_886_10_14_22_quartoProjects/imgs/Quarto-1.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_886_10_14_22_quartoProjects/index.html">
 <h3 class="no-anchor listing-title">
-Quarto as a tool for reproducible research projects in psychology
+<a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external">Quarto as a tool for reproducible research projects in psychology</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('quarto'); return false;">
 quarto
@@ -1175,14 +1210,12 @@ vertical
 Reproducible research
 </div>
 </div>
-<a href="./blog/post_886_10_14_22_quartoProjects/index.html">
 <div class="listing-description">
-<p>Some initial reactions to using quarto as a platform for creating and communicating reproducible research projects in psychology.</p>
+<a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external">Some initial reactions to using quarto as a platform for creating and communicating reproducible research projects in psychology.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_886_10_14_22_quartoProjects/index.html">
+<a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external">
 <div class="listing-date">
 Oct 14, 2022
 </div>
@@ -1192,19 +1225,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="quarto,Rstats,blogging" data-listing-date-sort="1661400000000" data-listing-file-modified-sort="1687792487398" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="24" data-categories="quarto,Rstats,blogging" data-listing-date-sort="1661400000000" data-listing-file-modified-sort="1687792487398" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1419">
 <div class="thumbnail">
-<p><a href="./blog/post_887_8_25_22_quartoblog/index.html"> <img src="./blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external"></a></p><a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external">
+<p><img src="./blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_887_8_25_22_quartoblog/index.html">
 <h3 class="no-anchor listing-title">
-Blogging with Quarto
+<a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external">Blogging with Quarto</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('quarto'); return false;">
 quarto
@@ -1216,14 +1249,12 @@ Rstats
 blogging
 </div>
 </div>
-<a href="./blog/post_887_8_25_22_quartoblog/index.html">
 <div class="listing-description">
-<p><em>August 25th, 2022</em> - Quick tips on setting up a quarto blog using R Studio.</p>
+<a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external"><em>August 25th, 2022</em> - Quick tips on setting up a quarto blog using R Studio.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_887_8_25_22_quartoblog/index.html">
+<a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external">
 <div class="listing-date">
 Aug 25, 2022
 </div>
@@ -1233,19 +1264,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="teaching,cognition,OER" data-listing-date-sort="1661227200000" data-listing-file-modified-sort="1687792487401" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="quarto-post image-right" data-index="25" data-categories="teaching,cognition,OER" data-listing-date-sort="1661227200000" data-listing-file-modified-sort="1687792487401" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1895">
 <div class="thumbnail">
-<p><a href="./blog/post_888_8_23_22_teaching2530/index.html"> <img src="./blog/post_888_8_23_22_teaching2530/imgs/groove.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external"></a></p><a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external">
+<p><img data-src="./blog/post_888_8_23_22_teaching2530/imgs/groove.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_888_8_23_22_teaching2530/index.html">
 <h3 class="no-anchor listing-title">
-Getting back into the groove and teaching cognition
+<a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external">Getting back into the groove and teaching cognition</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
@@ -1257,14 +1288,12 @@ cognition
 OER
 </div>
 </div>
-<a href="./blog/post_888_8_23_22_teaching2530/index.html">
 <div class="listing-description">
-<p>It’s been summer time and another semester begins in a couple days. I’m blogging to get words flowing as I polish my syllabus and reflect on goals for this academic year.</p>
+<a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external">It’s been summer time and another semester begins in a couple days. I’m blogging to get words flowing as I polish my syllabus and reflect on goals for this academic year.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_888_8_23_22_teaching2530/index.html">
+<a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external">
 <div class="listing-date">
 Aug 23, 2022
 </div>
@@ -1274,32 +1303,30 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="fonts" data-listing-date-sort="1657166400000" data-listing-file-modified-sort="1687792487403" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="26" data-categories="fonts" data-listing-date-sort="1657166400000" data-listing-file-modified-sort="1687792487403" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="612">
 <div class="thumbnail">
-<p><a href="./blog/post_889_7_7_22_fonts/index.html"> <img data-src="./blog/post_889_7_7_22_fonts/imgs/moebius.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external"></a></p><a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external">
+<p><img data-src="./blog/post_889_7_7_22_fonts/imgs/moebius.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_889_7_7_22_fonts/index.html">
 <h3 class="no-anchor listing-title">
-Making fonts
+<a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external">Making fonts</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('fonts'); return false;">
 fonts
 </div>
 </div>
-<a href="./blog/post_889_7_7_22_fonts/index.html">
 <div class="listing-description">
-<p><em>July 7th, 2022</em> - Notes on making custom fonts and using them on the web.</p>
+<a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external"><em>July 7th, 2022</em> - Notes on making custom fonts and using them on the web.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_889_7_7_22_fonts/index.html">
+<a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external">
 <div class="listing-date">
 Jul 7, 2022
 </div>
@@ -1309,32 +1336,30 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="eugenics" data-listing-date-sort="1656388800000" data-listing-file-modified-sort="1691150608169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="27" data-categories="eugenics" data-listing-date-sort="1656388800000" data-listing-file-modified-sort="1691150608169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="434">
 <div class="thumbnail">
-<p><a href="./blog/post_990_6_28_22_eugenicsbooks/index.html"> <img data-src="./blog/post_990_6_28_22_eugenicsbooks/imgs/eugenics.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_990_6_28_22_eugenicsbooks/index.html" class="no-external"></a></p><a href="./blog/post_990_6_28_22_eugenicsbooks/index.html" class="no-external">
+<p><img data-src="./blog/post_990_6_28_22_eugenicsbooks/imgs/eugenics.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_990_6_28_22_eugenicsbooks/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_990_6_28_22_eugenicsbooks/index.html">
 <h3 class="no-anchor listing-title">
-A reading list on eugenics
+<a href="./blog/post_990_6_28_22_eugenicsbooks/index.html" class="no-external">A reading list on eugenics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_990_6_28_22_eugenicsbooks/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('eugenics'); return false;">
 eugenics
 </div>
 </div>
-<a href="./blog/post_990_6_28_22_eugenicsbooks/index.html">
 <div class="listing-description">
-<p>This is an annotated bibliography for books I am reading on eugenics and its connections to psychology and society.</p>
+<a href="./blog/post_990_6_28_22_eugenicsbooks/index.html" class="no-external">This is an annotated bibliography for books I am reading on eugenics and its connections to psychology and society.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_990_6_28_22_eugenicsbooks/index.html">
+<a href="./blog/post_990_6_28_22_eugenicsbooks/index.html" class="no-external">
 <div class="listing-date">
 Jun 28, 2022
 </div>
@@ -1344,19 +1369,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="bibliographies,Rstats" data-listing-date-sort="1656388800000" data-listing-file-modified-sort="1691152013091" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="28" data-categories="bibliographies,Rstats" data-listing-date-sort="1656388800000" data-listing-file-modified-sort="1691152013091" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="636">
 <div class="thumbnail">
-<p><a href="./blog/post_991_6_28_22_annotate/index.html"> <img data-src="./blog/post_991_6_28_22_annotate/imgs/annotate.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external"></a></p><a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external">
+<p><img data-src="./blog/post_991_6_28_22_annotate/imgs/annotate.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_991_6_28_22_annotate/index.html">
 <h3 class="no-anchor listing-title">
-Writing annotated bibliographies with R Markdown
+<a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external">Writing annotated bibliographies with R Markdown</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bibliographies'); return false;">
 bibliographies
@@ -1365,14 +1390,12 @@ bibliographies
 Rstats
 </div>
 </div>
-<a href="./blog/post_991_6_28_22_annotate/index.html">
 <div class="listing-description">
-<p>Trying out ways to write annotated bibliographies in R Markdown.</p>
+<a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external">Trying out ways to write annotated bibliographies in R Markdown.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_991_6_28_22_annotate/index.html">
+<a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external">
 <div class="listing-date">
 Jun 28, 2022
 </div>
@@ -1382,19 +1405,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="teaching,cognition" data-listing-date-sort="1653537600000" data-listing-file-modified-sort="1687792487428" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="29" data-categories="teaching,cognition" data-listing-date-sort="1653537600000" data-listing-file-modified-sort="1687792487428" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1429">
 <div class="thumbnail">
-<p><a href="./blog/post_994_5_26_22_cheating/index.html"> <img data-src="./blog/post_994_5_26_22_cheating/imgs/cheating.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external"></a></p><a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external">
+<p><img data-src="./blog/post_994_5_26_22_cheating/imgs/cheating.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_994_5_26_22_cheating/index.html">
 <h3 class="no-anchor listing-title">
-Brief notes on the cheating behavior literature
+<a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external">Brief notes on the cheating behavior literature</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
@@ -1403,14 +1426,12 @@ teaching
 cognition
 </div>
 </div>
-<a href="./blog/post_994_5_26_22_cheating/index.html">
 <div class="listing-description">
-<p>Notes on cheating behavior literature</p>
+<a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external">Notes on cheating behavior literature</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_994_5_26_22_cheating/index.html">
+<a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external">
 <div class="listing-date">
 May 26, 2022
 </div>
@@ -1420,19 +1441,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="teaching,cognition" data-listing-date-sort="1653019200000" data-listing-file-modified-sort="1687792487434" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="30" data-categories="teaching,cognition" data-listing-date-sort="1653019200000" data-listing-file-modified-sort="1687792487434" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2047">
 <div class="thumbnail">
-<p><a href="./blog/post_996_5_20_22_assignmentflex/index.html"> <img data-src="./blog/post_996_5_20_22_assignmentflex/imgs/teaching_warp.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external"></a></p><a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external">
+<p><img data-src="./blog/post_996_5_20_22_assignmentflex/imgs/teaching_warp.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_996_5_20_22_assignmentflex/index.html">
 <h3 class="no-anchor listing-title">
-Teaching with multiple warp zones: Increasing engagement with assignment choice
+<a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external">Teaching with multiple warp zones: Increasing engagement with assignment choice</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
@@ -1441,14 +1462,12 @@ teaching
 cognition
 </div>
 </div>
-<a href="./blog/post_996_5_20_22_assignmentflex/index.html">
 <div class="listing-description">
-<p>Some thoughts on how I implemented loads of assignment choice in my intro to cognition course this semester.</p>
+<a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external">Some thoughts on how I implemented loads of assignment choice in my intro to cognition course this semester. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_996_5_20_22_assignmentflex/index.html">
+<a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external">
 <div class="listing-date">
 May 20, 2022
 </div>
@@ -1458,19 +1477,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="Rstats,pkgdown,blogging" data-listing-date-sort="1652760000000" data-listing-file-modified-sort="1687792487449" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="31" data-categories="Rstats,pkgdown,blogging" data-listing-date-sort="1652760000000" data-listing-file-modified-sort="1687792487449" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1304">
 <div class="thumbnail">
-<p><a href="./blog/post_999_5_17_22_blogging/index.html"> <img data-src="./blog/post_999_5_17_22_blogging/imgs/blogging_with_pkgdown.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external"></a></p><a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external">
+<p><img data-src="./blog/post_999_5_17_22_blogging/imgs/blogging_with_pkgdown.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_999_5_17_22_blogging/index.html">
 <h3 class="no-anchor listing-title">
-Blogging with pkgdown?
+<a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external">Blogging with pkgdown?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Rstats'); return false;">
 Rstats
@@ -1482,14 +1501,12 @@ pkgdown
 blogging
 </div>
 </div>
-<a href="./blog/post_999_5_17_22_blogging/index.html">
 <div class="listing-description">
-<p>An attempt to blog with pkgdown, including notes to self about how I did this. It was succesful enough that I’m using pkgdown for this blog.</p>
+<a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external">An attempt to blog with pkgdown, including notes to self about how I did this. It was succesful enough that I’m using pkgdown for this blog.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_999_5_17_22_blogging/index.html">
+<a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external">
 <div class="listing-date">
 May 17, 2022
 </div>
@@ -1499,19 +1516,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="31" data-categories="Rstats,publication list" data-listing-date-sort="1652760000000" data-listing-file-modified-sort="1691150251828" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="32" data-categories="Rstats,publication list" data-listing-date-sort="1652760000000" data-listing-file-modified-sort="1691150251828" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2191">
 <div class="thumbnail">
-<p><a href="./blog/post_997_5_19_22_pubs/index.html"> <img data-src="./blog/post_997_5_19_22_pubs/imgs/publications_list.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external"></a></p><a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external">
+<p><img data-src="./blog/post_997_5_19_22_pubs/imgs/publications_list.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/post_997_5_19_22_pubs/index.html">
 <h3 class="no-anchor listing-title">
-Customizing a publication list with R Markdown
+<a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external">Customizing a publication list with R Markdown</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Rstats'); return false;">
 Rstats
@@ -1520,14 +1537,12 @@ Rstats
 publication list
 </div>
 </div>
-<a href="./blog/post_997_5_19_22_pubs/index.html">
 <div class="listing-description">
-<p>Notes on creating a customizable list of publications for an academic website using R markdown, .bib files, and other fun stuff.</p>
+<a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external">Notes on creating a customizable list of publications for an academic website using R markdown, .bib files, and other fun stuff.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/post_997_5_19_22_pubs/index.html">
+<a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external">
 <div class="listing-date">
 May 17, 2022
 </div>
@@ -1537,25 +1552,25 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="32" data-listing-date-sort="1595908800000" data-listing-file-modified-sort="1687792487013" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26">
+<div class="quarto-post image-right" data-index="33" data-listing-date-sort="1595908800000" data-listing-file-modified-sort="1687792487013" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5041">
 <div class="thumbnail">
-<p><a href="./blog/older_9999_7_28_20_OC/index.html"> <img data-src="./blog/older_9999_7_28_20_OC/imgs/OC.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external"></a></p><a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external">
+<p><img data-src="./blog/older_9999_7_28_20_OC/imgs/OC.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/older_9999_7_28_20_OC/index.html">
 <h3 class="no-anchor listing-title">
-Learning to code for Ornament and Crime Hemisphere suite
+<a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external">Learning to code for Ornament and Crime Hemisphere suite</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p>Some notes on coding for the open-source eurorack module called Ornament and Crime</p>
+<a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external">Some notes on coding for the open-source eurorack module called Ornament and Crime</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/older_9999_7_28_20_OC/index.html">
+<a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external">
 <div class="listing-date">
 Jul 28, 2020
 </div>
@@ -1565,19 +1580,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="33" data-categories="eugenics,psychology" data-listing-date-sort="1594612800000" data-listing-file-modified-sort="1687792487257" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="103">
+<div class="quarto-post image-right" data-index="34" data-categories="eugenics,psychology" data-listing-date-sort="1594612800000" data-listing-file-modified-sort="1687792487257" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="103" data-listing-word-count-sort="20538">
 <div class="thumbnail">
-<p><a href="./blog/older_9999_psych_eugenics/index.html"> <img data-src="images/crumplab.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/older_9999_psych_eugenics/index.html" class="no-external"></a></p><a href="./blog/older_9999_psych_eugenics/index.html" class="no-external">
+<p class="card-img-top"><img data-src="blog/older_9999_psych_eugenics/img/eugenics.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/older_9999_psych_eugenics/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/older_9999_psych_eugenics/index.html">
 <h3 class="no-anchor listing-title">
-Psychology and Eugenics connections
+<a href="./blog/older_9999_psych_eugenics/index.html" class="no-external">Psychology and Eugenics connections</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/older_9999_psych_eugenics/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('eugenics'); return false;">
 eugenics
@@ -1586,14 +1601,12 @@ eugenics
 psychology
 </div>
 </div>
-<a href="./blog/older_9999_psych_eugenics/index.html">
 <div class="listing-description">
-<p>Making notes and connecting dots about the pervasiveness of eugenics ideology among psychologists</p>
+<a href="./blog/older_9999_psych_eugenics/index.html" class="no-external">Making notes and connecting dots about the pervasiveness of eugenics ideology among psychologists</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/older_9999_psych_eugenics/index.html">
+<a href="./blog/older_9999_psych_eugenics/index.html" class="no-external">
 <div class="listing-date">
 Jul 13, 2020
 </div>
@@ -1603,32 +1616,30 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="34" data-categories="eugenics" data-listing-date-sort="1594094400000" data-listing-file-modified-sort="1687792487064" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="quarto-post image-right" data-index="35" data-categories="eugenics" data-listing-date-sort="1594094400000" data-listing-file-modified-sort="1687792487064" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1979">
 <div class="thumbnail">
-<p><a href="./blog/older_9999_7_7_20_EugenicMind/index.html"> <img data-src="images/crumplab.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/older_9999_7_7_20_EugenicMind/index.html" class="no-external"></a></p><a href="./blog/older_9999_7_7_20_EugenicMind/index.html" class="no-external">
+<p class="card-img-top"><img data-src="blog/older_9999_7_7_20_EugenicMind/img/ERO.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/older_9999_7_7_20_EugenicMind/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/older_9999_7_7_20_EugenicMind/index.html">
 <h3 class="no-anchor listing-title">
-The Eugenic Mind Project
+<a href="./blog/older_9999_7_7_20_EugenicMind/index.html" class="no-external">The Eugenic Mind Project</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/older_9999_7_7_20_EugenicMind/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('eugenics'); return false;">
 eugenics
 </div>
 </div>
-<a href="./blog/older_9999_7_7_20_EugenicMind/index.html">
 <div class="listing-description">
-<p>I’m reading the Eugenic Mind Project by R. A. Wilson, and making notes here.</p>
+<a href="./blog/older_9999_7_7_20_EugenicMind/index.html" class="no-external">I’m reading the Eugenic Mind Project by R. A. Wilson, and making notes here.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/older_9999_7_7_20_EugenicMind/index.html">
+<a href="./blog/older_9999_7_7_20_EugenicMind/index.html" class="no-external">
 <div class="listing-date">
 Jul 7, 2020
 </div>
@@ -1638,19 +1649,19 @@ Matt Crump
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="35" data-categories="black psychology,ABPsi" data-listing-date-sort="1593662400000" data-listing-file-modified-sort="1687792487040" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="44">
+<div class="quarto-post image-right" data-index="36" data-categories="black psychology,ABPsi" data-listing-date-sort="1593662400000" data-listing-file-modified-sort="1687792487040" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="44" data-listing-word-count-sort="8619">
 <div class="thumbnail">
-<p><a href="./blog/older_9999_7_2_20_JBP/index.html"> <img data-src="./blog/older_9999_7_2_20_JBP/JBP.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/older_9999_7_2_20_JBP/index.html" class="no-external"></a></p><a href="./blog/older_9999_7_2_20_JBP/index.html" class="no-external">
+<p><img data-src="./blog/older_9999_7_2_20_JBP/JBP.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/older_9999_7_2_20_JBP/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/older_9999_7_2_20_JBP/index.html">
 <h3 class="no-anchor listing-title">
-Reading the Journal of Black Psychology
+<a href="./blog/older_9999_7_2_20_JBP/index.html" class="no-external">Reading the Journal of Black Psychology</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/older_9999_7_2_20_JBP/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('black psychology'); return false;">
 black psychology
@@ -1659,14 +1670,12 @@ black psychology
 ABPsi
 </div>
 </div>
-<a href="./blog/older_9999_7_2_20_JBP/index.html">
 <div class="listing-description">
-<p>Reading the Journal of Black Psychology from the beginning, and writing about it here.</p>
+<a href="./blog/older_9999_7_2_20_JBP/index.html" class="no-external">Reading the Journal of Black Psychology from the beginning, and writing about it here.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/older_9999_7_2_20_JBP/index.html">
+<a href="./blog/older_9999_7_2_20_JBP/index.html" class="no-external">
 <div class="listing-date">
 Jul 2, 2020
 </div>
@@ -1768,10 +1777,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1781,8 +1789,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1795,6 +1812,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1838,6 +1969,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1863,6 +1995,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1923,6 +2081,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
