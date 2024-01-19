@@ -15,8 +15,8 @@ listing:
     - front_page/front_page.yaml
   id: front-list
   sort: "order"
-  type: default
-  grid-columns: 1
+  type: grid
+  grid-columns: 4
   categories: false
   image-align: 'right'
   image-height: '100%'
@@ -50,6 +50,11 @@ div.quarto-post .metadata {
 div.quarto-post .thumbnail {
     flex-basis: 50%;
 }
+
+p {
+    max-width: 100%;
+}
+
 ```
 
 ```{r}

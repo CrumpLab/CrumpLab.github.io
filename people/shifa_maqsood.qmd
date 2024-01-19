@@ -7,4 +7,4 @@ about:
 order: 4
 ---
 
-Shifa Maqsood is an undergraduate researcher, and Tow presidential mentoring scholar for Spring 2023.
+Shifa Maqsood is an undergraduate researcher, and Tow presidential mentoring scholar for Spring and Fall 2023.

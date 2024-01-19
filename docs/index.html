@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.533">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,8 +63,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -103,11 +111,38 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="crumplab">
 <meta property="og:description" content="Home page for the Computational Cognition Lab at Brooklyn College, run by Matt Crump">
 <meta property="og:image" content="https://crumplab.com/images/logo2.png">
-<meta property="og:site-name" content="crumplab">
+<meta property="og:site_name" content="crumplab">
 <meta property="og:image:height" content="964">
 <meta property="og:image:width" content="1000">
 <meta name="twitter:title" content="crumplab">
@@ -122,9 +157,9 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">crumplab</span>
     </a>
@@ -136,72 +171,72 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./People.html" rel="" target="">
- <span class="menu-text">People</span></a>
+    <a class="nav-link" href="./People.html"> 
+<span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Publications.html" rel="" target="">
- <span class="menu-text">Pubs</span></a>
+    <a class="nav-link" href="./Publications.html"> 
+<span class="menu-text">Pubs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Books.html" rel="" target="">
- <span class="menu-text">Books</span></a>
+    <a class="nav-link" href="./Books.html"> 
+<span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Courses.html" rel="" target="">
- <span class="menu-text">Courses</span></a>
+    <a class="nav-link" href="./Courses.html"> 
+<span class="menu-text">Courses</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Apps.html" rel="" target="">
- <span class="menu-text">Apps</span></a>
+    <a class="nav-link" href="./Apps.html"> 
+<span class="menu-text">Apps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Opportunities.html" rel="" target="">
- <span class="menu-text">Join</span></a>
+    <a class="nav-link" href="./Opportunities.html"> 
+<span class="menu-text">Join</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Blog.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./Blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Fun.html" rel="" target="">
- <span class="menu-text">Fun</span></a>
+    <a class="nav-link" href="./Fun.html"> 
+<span class="menu-text">Fun</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/CrumpLab" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/CrumpLab"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/@MattCrumpLab" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://fosstodon.org/@MattCrumpLab"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/MattCrumpLab" rel="" target=""><i class="bi bi-twitter" role="img" aria-label="Twitter">
+    <a class="nav-link" href="https://twitter.com/MattCrumpLab"> <i class="bi bi-twitter" role="img" aria-label="Twitter">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab" rel="" target=""><i class="bi bi-youtube" role="img" aria-label="Youtube">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> <i class="bi bi-youtube" role="img" aria-label="Youtube">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./Blog.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./Blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -225,7 +260,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -233,7 +268,9 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 <div class="cell">
 <style type="text/css">
@@ -252,11 +289,20 @@ div.quarto-post .metadata {
 div.quarto-post .thumbnail {
     flex-basis: 50%;
 }
+
+p {
+    max-width: 100%;
+}
+
 </style>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="images/front_banner.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="images/front_banner.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition.</p>
@@ -264,175 +310,166 @@ div.quarto-post .thumbnail {
 <p>The lab is located in the <a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php">Department of Psychology</a> at <a href="http://www.brooklyn.cuny.edu/">Brooklyn College of CUNY</a>, and affiliated with the <a href="https://ccp-cuny.github.io">Cognitive and Comparative Psychology Training area</a> of the <a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology">Psychology Doctoral program at the Graduate Center of CUNY</a>.</p>
 <section id="pages" class="level2">
 <h2 class="anchored" data-anchor-id="pages">Pages</h2>
-<div id="listing-front-list" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1687792486762" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./Blog.html"> <img src="./images/blog_banner.jpg" class="thumbnail-image" style="height: 100%;"> </a></p>
-</div>
-<div class="body">
-<a href="./Blog.html">
-<h3 class="no-anchor listing-title">
+<div id="listing-front-list" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-4">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1687792486762" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
+<a href="./Blog.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./images/blog_banner.jpg" class="thumbnail-image card-img" style="height: 100%;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Blog
-</h3>
-<div class="listing-subtitle">
+</h5>
+<div class="card-text listing-description">
+Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
 </div>
-<div class="listing-description">
-<p>Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.</p>
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./Blog.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1687792486766" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./People.html"> <p class="card-img-top"><img src="images/people_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./People.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1705672336093" data-listing-reading-time-sort="3" data-listing-word-count-sort="424">
+<a href="./People.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="images/people_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 People
-</h3>
-<div class="listing-subtitle">
+</h5>
+<div class="card-text listing-description">
+The lab is run by Dr.&nbsp;Matthew Crump and student research assistants from undergraduates to doctoral students.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
 </div>
-<div class="listing-description">
-<p>The lab is run by Dr.&nbsp;Matthew Crump and student research assistants from undergraduates to doctoral students.</p>
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./People.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1692292270387" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./Publications.html"> <p class="card-img-top"><img src="images/publications_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./Publications.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1692292270387" data-listing-reading-time-sort="2" data-listing-word-count-sort="289">
+<a href="./Publications.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="images/publications_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Publications
-</h3>
-<div class="listing-subtitle">
+</h5>
+<div class="card-text listing-description">
+Peer-reviewed publications. They should all have downloadable pdfs, and if they don’t email me.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
 </div>
-<div class="listing-description">
-<p>Peer-reviewed publications. They should all have downloadable pdfs, and if they don’t email me.</p>
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./Publications.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1690470348034" data-listing-reading-time-sort="6">
-<div class="thumbnail">
-<p><a href="./Books.html"> <p class="card-img-top"><img src="images/books_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./Books.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1690470348034" data-listing-reading-time-sort="6" data-listing-word-count-sort="1098">
+<a href="./Books.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="images/books_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Books
-</h3>
-<div class="listing-subtitle">
+</h5>
+<div class="card-text listing-description">
+Open-educational textbooks and resources developed written by Matt Crump. These resources are free to use and share.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
 </div>
-<div class="listing-description">
-<p>Open-educational textbooks and resources developed written by Matt Crump. These resources are free to use and share.</p>
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./Books.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1690469986477" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./Courses.html"> <p class="card-img-top"><img src="images/courses_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./Courses.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1690469986477" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<a href="./Courses.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="images/courses_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Courses
-</h3>
-<div class="listing-subtitle">
+</h5>
+<div class="card-text listing-description">
+A list of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. Many of them include freely shared course materials.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
 </div>
-<div class="listing-description">
-<p>A list of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. Many of them include freely shared course materials.</p>
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./Courses.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1687792486766" data-listing-reading-time-sort="6">
-<div class="thumbnail">
-<p><a href="./Opportunities.html"> <p class="card-img-top"><img src="images/opportunities_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./Opportunities.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1687792486766" data-listing-reading-time-sort="6" data-listing-word-count-sort="1152">
+<a href="./Opportunities.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="images/opportunities_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Join
-</h3>
-<div class="listing-subtitle">
+</h5>
+<div class="card-text listing-description">
+Interested in joining the lab? Check this page out.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
 </div>
-<div class="listing-description">
-<p>Interested in joining the lab? Check this page out.</p>
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./Opportunities.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1687792486763" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./Fun.html"> <p class="card-img-top"><img src="images/fun_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./Fun.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1687792486763" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<a href="./Fun.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="images/fun_banner.jpg" style="height: 100%;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Fun
-</h3>
-<div class="listing-subtitle">
+</h5>
+<div class="card-text listing-description">
+Some links to extra-curricular fun stuff like music and visual creations.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
 </div>
-<div class="listing-description">
-<p>Some links to extra-curricular fun stuff like music and visual creations.</p>
+</div>
+</div>
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./Fun.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7">
-<div class="thumbnail">
-<p><a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> <img src="images/front/crumplab_banner_youtube.jpg" class="thumbnail-image" style="height: 100%;"> </a></p>
-</div>
-<div class="body">
-<a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="7">
+<a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="images/front/crumplab_banner_youtube.jpg" class="thumbnail-image card-img" style="height: 100%;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Youtube Channel
-</h3>
-<div class="listing-subtitle">
-
+</h5>
+<div class="card-text listing-description">
+This channel contains screencasts and tutorial videos, as well as lectures for whole courses. The focus is usually on cognition or learning programming skills (R mostly) for…
 </div>
-<div class="listing-description">
-<p>This channel contains screencasts and tutorial videos, as well as lectures for whole courses. The focus is usually on cognition or learning programming skills (R mostly) for psychologists.</p>
+</div>
 </div>
 </a>
-</div>
-<div class="metadata">
-<a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> </a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
@@ -538,10 +575,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -551,8 +587,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -565,6 +610,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -608,6 +767,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -633,6 +793,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -693,6 +879,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

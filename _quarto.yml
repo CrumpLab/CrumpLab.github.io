@@ -43,7 +43,7 @@ website:
 
 format:
   html:
-    theme: minty
+    theme: cosmo
     css: styles.css
     toc: true
 

@@ -71,6 +71,24 @@
 <p>In the above exercise, I only practiced playing the scale in an ascending run. That’s one chord per note, going up the notes of the scale. There’s lots of other ways I could have practiced it. I could have gone up and down, or down, or up 2 down 1, or play arpeggios, or interleave other things between each chord, or go up two octaves, or practice every other chord, and so on. The number of possible practice variations is infinite. Following the data-driven research program from above, one could also get the learning curves that result from these different ways of practicing the scale. Some practice techniques may have more efficient learning curves that get a musician into the fluency zone more quickly. Or maybe not, it could be that the various ways of practicing are all basically the same. It’s an empirical question. Running a more limited experiment like that could also provide some practical information. Maybe playing arpeggios is way more beneficial for a wide variety of things than practicing playing ascending chords?</p>
 <p>Another likely possibility is that people get good at the specific thing they practice, and there isn’t too much generalization between the things they practice. This type of hyper-specificity happens all the time in other cognitive tasks. I’d be surprised if there wasn’t a great deal of specificity of learning in the domain of musical instruments too.</p>
 <p>Oh my. I didn’t get to the main things I wanted to write about, and it’s almost time to check out. I guess I’ll be back tomorrow to add some more.</p>
+<hr>
+<!--
+
+Forgetting, learning, retention, interference
+- what do these terms mean in the context of the process of attempting to become fluent in producing some structured patterns
+  - e.g., I know the Bmaj6 scale, I conceptually know the chords. I can play the maj6 and dim7 chords in their inversions. It is nevertheless difficult to play alternating chords. 
+  - I haven't forgotten the scale
+  - I haven't retained fluency from the end of practice episodes, and need to start again.
+  - what is being forgotten?
+  - role of interference management during play?
+
+Make a distinction between "learning" and "performance".  
+  
+Define a performance criterion. Like, be able to play such and such at 100% accuracy (notes and rhythm) at a particular speed. 
+
+
+
+-->
 
 
 
@@ -92,6 +110,7 @@ Crump, Matthew JC, Gordon D Logan, and Jerry Kimbrough. 2012. <span>“Keeping a
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/661_stable_diffusion/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -274,18 +293,21 @@ background-color: null;
 font-style: inherit;">3</span>].save(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cat_3.jpg"</span>)</span></code></pre></div>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="4">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_0.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_1.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_2.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_3.jpg" class="img-fluid"></p>
 </div>
 </div>
@@ -455,77 +477,89 @@ font-style: inherit;">0</span>].show()</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="messing-with-my-own-drawings">Messing with my own drawings</h2>
 <p>The following are some examples of inputting a starting image that I made, and then generating variations from this starting image using stable diffusion.</p>
 <p>The upper left is the starting image. The prompt direction was to make colorful objects.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/matt_drawing.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out1.jpeg" class="img-fluid"></p>
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out2.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out3.jpeg" class="img-fluid"></p>
 </div>
 </div>
 </div>
 <p>No prompt direction, used a “space” in the prompt and let it take “inference steps” from the starting image.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/matt_drawing.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB0.jpeg" class="img-fluid"></p>
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB1.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB3.jpeg" class="img-fluid"></p>
 </div>
 </div>
 </div>
 <p>Prompt direction was to make colorful little towns</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/IMG_0137.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC0.jpeg" class="img-fluid"></p>
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC2.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC3.jpeg" class="img-fluid"></p>
 </div>
 </div>
 </div>
 <p>And, a last go with a longer prompt.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/matt_crop.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outE0.jpeg" class="img-fluid"></p>
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outF0.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outF3.jpeg" class="img-fluid"></p>
 </div>
 </div>

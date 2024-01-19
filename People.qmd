@@ -46,7 +46,7 @@ knitr::include_graphics('images/people_banner.jpg')
 ### Doctoral
 
 -   [Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html) (2014 - 2019), University of Manitoba
-- [Kevonte Mitchell](https://www.mitmillconsulting.com/about) (2012 - 2023), Mit + Mill Consulting
+-   [Kevonte Mitchell](https://www.mitmillconsulting.com/about) (2012 - 2023), Mit + Mill Consulting
 
 ### Masters
 
@@ -55,6 +55,11 @@ knitr::include_graphics('images/people_banner.jpg')
 
 ### Undergraduate
 
+-   2023: Shifa Maqsood, ["Is The Self Reference Effect a Retrieval Practice Phenomenon?"](http://www.crumplab.com/self-reference/), Undergraduate Honors thesis, Tow Presidential Mentoring Scholar
+-   2023: Hao Zhu, Psyc 2001 Laboratory Experience, CUNY BA
+-   2023: Chantal Miller, Psyc 2001 Laboratory Experience
+-   2023: Cobe Liu, Psyc 2001 Laboratory Experience, Macaulay Honors
+-   2022: Wesley Huang, Undergraduate, Tow Presidential Mentoring Scholar
 -   2022: Patrick Ihejirika, ["Try and forget this image: The role of stimulus duration in directed forgetting for natural scenes"](https://www.crumplab.com/PatrickHonorsThesis/), Undergraduate MARC Honors thesis, Barry Goldwater Scholar
 -   2022: Kendra Scarlett Reynoso Moreno, Undergraduate CUNY BA Program
 -   2021: Austin Kaplan, "Explaining contingency judgments with a computational model of instance-based memory", Undergraduate Honors Thesis

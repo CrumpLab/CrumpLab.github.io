@@ -149,7 +149,25 @@ Another likely possibility is that people get good at the specific thing they pr
 
 Oh my. I didn't get to the main things I wanted to write about, and it's almost time to check out. I guess I'll be back tomorrow to add some more.
 
+-----------------------
 
+<!--
+
+Forgetting, learning, retention, interference
+- what do these terms mean in the context of the process of attempting to become fluent in producing some structured patterns
+  - e.g., I know the Bmaj6 scale, I conceptually know the chords. I can play the maj6 and dim7 chords in their inversions. It is nevertheless difficult to play alternating chords. 
+  - I haven't forgotten the scale
+  - I haven't retained fluency from the end of practice episodes, and need to start again.
+  - what is being forgotten?
+  - role of interference management during play?
+
+Make a distinction between "learning" and "performance".  
+  
+Define a performance criterion. Like, be able to play such and such at 100% accuracy (notes and rhythm) at a particular speed. 
+
+
+
+-->
 
 
 
