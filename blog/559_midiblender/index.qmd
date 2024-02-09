@@ -1,0 +1,98 @@
+---
+title: "midiblender: Experiments in genRative MIDI mangling"
+author: "Matt Crump"
+date: 2/9/24
+description: "An experimental R package for MIDI manipulation in R."
+image: "cover.jpg"
+comments:
+  giscus: 
+    repo: CrumpLab/crumplab_comments
+categories: 
+  - music cognition
+  - rstats
+  - midiblender
+  - generative music
+execute: 
+  echo: false
+---
+
+```{python, eval = FALSE}
+from diffusers import DiffusionPipeline
+from transformers import set_seed
+from PIL import Image
+import torch
+import random
+import ssl
+import os
+ssl._create_default_https_context = ssl._create_unverified_context
+
+#locate library
+#model_id = "./stable-diffusion-v1-5"
+model_id = "LCM_Dreamshaper_v7"
+
+pipeline = DiffusionPipeline.from_pretrained(
+	pretrained_model_name_or_path = "../../../../bigFiles/huggingface/LCM_Dreamshaper_v7/",custom_pipeline="latent_consistency_txt2img", custom_revision="main", revision="fb9c5d"
+)
+
+pipeline = pipeline.to("mps")
+
+# Recommended if your computer has < 64 GB of RAM
+pipeline.enable_attention_slicing("max")
+
+prompt = "giant Piano piano piano. computer retro piano music. universe situation. computer playing piano. piano synthesizers. explosions of music. cartoon. 80s cartoons. thundercats optimus prime. linocut. pianos everywhere. huge piano. bright blue sky. sunset. colorful. musical notes everywhere"
+
+for s in range(30):
+  for n in [5,10]:
+    seed = s+1
+    num_steps = n+1
+    set_seed(seed)
+    
+    image = pipeline(prompt,height = 1024,width = 1024,num_images_per_prompt = 1,num_inference_steps=num_steps)
+    
+    image_name = "images/music_{}_{}.jpeg"
+    
+    image_save = image.images[0].save(image_name.format(seed,num_steps))
+
+```
+
+![](cover.jpg){width="50%" fig-align="left"}
+
+::: column-margin
+midiblender R package logo
+:::
+
+```{r}
+#| echo: false
+html_tag_audio <- function(file, type = c("wav")) {
+  type <- match.arg(type)
+  htmltools::tags$audio(
+    controls = "",
+    htmltools::tags$source(
+      src = file,
+      type = glue::glue("audio/{type}", type = type)
+    )
+  )
+}
+
+```
+
+I've been busy on my [music blog](https://homophony.quest/notes.html), which is mostly about music, but as of late has included a lot of rstats programming stuff, some of which is becoming relevant to potential new research directions for me in music cognition. So, I thought this was worth cross-posting.
+
+I'm excited to have released a very experimental version of [midiblender](https://www.crumplab.com/midiblender/).
+
+The github repo is: <https://github.com/CrumpLab/midiblender>
+
+This is the beginnings of an #rstats package for experimental mangling of #MIDI files. I'm developing it with cross-purposes in mind. On the one hand, it is fun. On another hand, I might use some of this stuff in my own music. And, let's keep going with hands, there are some neat things in here that I'll likely use in future music cognition research. For example, the package has methods for converting MIDI into a matrix representation and back, which means MIDI becomes available for computational modeling with learning and memory models that I'm interested in testing in musical contexts.  There are also clear opportunities for controlled stimulus generation, and music analysis, but I haven't pushed much on those functions yet.
+
+This is still very hacky, but I thought it was worth sharing at this point, even though there is much more work to do.
+
+I wrote a [getting starting vignette](https://www.crumplab.com/midiblender/articles/Getting_started.html) that could be helpful for others to try stuff out.
+
+I've been posting lots of examples on my music blog that are mostly about mangling MIDI files for fun, sometimes with a little computational cognition stuff thrown in. Here's a few:
+
+- [Systematically randomizing Super Mario brothers with R](https://homophony.quest/blog/33_2_1_24_rand_mario/)
+- [Midi to matrix representation and probabilistic super mario music with R](https://homophony.quest/blog/35_2_3_24_matrix_midi/)
+- [MIDI analysis, bags of notes, and probabilistic generation](https://homophony.quest/blog/37_2_5_24_matrix_analysis/)
+- [WIP: Endless probabilistically generated mario music with midiblender](https://homophony.quest/blog/39_2_7_24_midiblender_mario/)
+- [Midi blending Canon in D probabilistically](https://homophony.quest/blog/40_2_7_24_midiblender_canon/)
+- [Analyzing and filtering note occurence by point estimation](https://homophony.quest/blog/42_2_8_24_prob_filter/)

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.533">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -255,6 +255,26 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <hr>
 <section id="r-packages" class="level1">
 <h1>R Packages</h1>
+<hr>
+<div class="columns">
+<div class="column" style="width:70%;">
+<section id="midiblender" class="level2">
+<h2 class="anchored" data-anchor-id="midiblender"><a href="https://www.crumplab.com/midiblender/">midiblender</a></h2>
+<p>midiblender: Experiments in genRative MIDI mangling</p>
+<p>This is the beginnings of an #rstats package for experimental mangling of #MIDI files.</p>
+</section>
+</div><div class="column" style="width:30%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="images/midiblender.jpg" class="img-fluid figure-img" width="100"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -603,7 +623,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

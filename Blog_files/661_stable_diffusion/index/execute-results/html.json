@@ -1,0 +1,16 @@
+{
+  "hash": "ad78b97f986f5be35389794b5d6804fe",
+  "result": {
+    "markdown": "---\ntitle: \"Messing around with Hugging Face's Stable Diffusion\"\nauthor: \"Matt Crump\"\ndate: 9/21/23\ndescription: \"Notes and tests on getting stable diffusion working on my laptop and then seeing what it does to some of my own drawings\"\nimage: \"cover.jpg\"\ncomments:\n  giscus: \n    repo: CrumpLab/crumplab_comments\ncategories: \n  - stable diffusion\n  - generative\n  - art\n  - python\n  - Rstudio\nexecute: \n  echo: false\n---\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](cover.jpg){fig-align='center' width=50%}\n:::\n:::\n\n\n\nThis summer I got a new laptop (Macbook Pro M2) that is capable enough to run stable diffusion locally. I finally got around to trying it out. This post is mainly notes to self, and a few pictures of processing my own drawing through the system.\n\nThere's a host of issues with these pattern generation tools in general, especially for models that were unscrupulously trained on large sets of image data. It's not clear to me how absolved stable diffusion is from these issues. Nevertheless, I'm trying out their tools, which are open source.\n\nSo far I've only tried the [text-to-image](https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/text2img), and [image-to-image](https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/img2img) pipelines using the [stable-diffusion-v1-5](https://huggingface.co/runwayml/stable-diffusion-v1-5) model.\n\nI really like that the training image dataset is also open-source. It would take a while to actually look at the billions of images in there, but they appear to be reviewable in principle, which is much more than can be said for other tools in this space.\n\n<https://laion.ai/blog/laion-5b/>\n\n## Set up time\n\nThe time to get everything installed and working was surprisingly fast (half a morning). Surprising to me because I'm all thumbs at python.\n\nHere's some breadcrumbs on what I did.\n\n- started with this datacamp tutorial for a bit <https://www.datacamp.com/tutorial/how-to-run-stable-diffusion>\n\n- fumbled with getting python installed on my mac.\n  - I was surprised it wasn't already there, but it seems apple removed python\n  - I downloaded it from the python website, but then learned that might be a bad way to do it...\n  - I also installed it using pyenv <https://opensource.com/article/19/5/python-3-default-mac>\n  \n- also had to get homebrew working <https://brew.sh>\n\nOne use-case I have is to generate visual stimuli for cognitive psych experiments, and I wanted to be able to do this programmatically using scripts. The datacamp tutorial was leading toward a GUI interface that was not for me. Fortunately, I started reading the hugging face documentation and went from there.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

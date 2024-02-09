@@ -14,8 +14,52 @@
 <title>crumplab</title>
 <link>https://crumplab.com/Blog.html</link>
 </image>
-<generator>quarto-1.4.533</generator>
-<lastBuildDate>Thu, 18 Jan 2024 05:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Fri, 09 Feb 2024 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>midiblender: Experiments in genRative MIDI mangling</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/559_midiblender/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/559_midiblender/cover.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>midiblender R package logo</p>
+</div></div><p>I’ve been busy on my <a href="https://homophony.quest/notes.html">music blog</a>, which is mostly about music, but as of late has included a lot of rstats programming stuff, some of which is becoming relevant to potential new research directions for me in music cognition. So, I thought this was worth cross-posting.</p>
+<p>I’m excited to have released a very experimental version of <a href="https://www.crumplab.com/midiblender/">midiblender</a>.</p>
+<p>The github repo is: <a href="https://github.com/CrumpLab/midiblender" class="uri">https://github.com/CrumpLab/midiblender</a></p>
+<p>This is the beginnings of an #rstats package for experimental mangling of #MIDI files. I’m developing it with cross-purposes in mind. On the one hand, it is fun. On another hand, I might use some of this stuff in my own music. And, let’s keep going with hands, there are some neat things in here that I’ll likely use in future music cognition research. For example, the package has methods for converting MIDI into a matrix representation and back, which means MIDI becomes available for computational modeling with learning and memory models that I’m interested in testing in musical contexts. There are also clear opportunities for controlled stimulus generation, and music analysis, but I haven’t pushed much on those functions yet.</p>
+<p>This is still very hacky, but I thought it was worth sharing at this point, even though there is much more work to do.</p>
+<p>I wrote a <a href="https://www.crumplab.com/midiblender/articles/Getting_started.html">getting starting vignette</a> that could be helpful for others to try stuff out.</p>
+<p>I’ve been posting lots of examples on my music blog that are mostly about mangling MIDI files for fun, sometimes with a little computational cognition stuff thrown in. Here’s a few:</p>
+<ul>
+<li><a href="https://homophony.quest/blog/33_2_1_24_rand_mario/">Systematically randomizing Super Mario brothers with R</a></li>
+<li><a href="https://homophony.quest/blog/35_2_3_24_matrix_midi/">Midi to matrix representation and probabilistic super mario music with R</a></li>
+<li><a href="https://homophony.quest/blog/37_2_5_24_matrix_analysis/">MIDI analysis, bags of notes, and probabilistic generation</a></li>
+<li><a href="https://homophony.quest/blog/39_2_7_24_midiblender_mario/">WIP: Endless probabilistically generated mario music with midiblender</a></li>
+<li><a href="https://homophony.quest/blog/40_2_7_24_midiblender_canon/">Midi blending Canon in D probabilistically</a></li>
+<li><a href="https://homophony.quest/blog/42_2_8_24_prob_filter/">Analyzing and filtering note occurence by point estimation</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <category>music cognition</category>
+  <category>rstats</category>
+  <category>midiblender</category>
+  <category>generative music</category>
+  <guid>https://crumplab.com/blog/559_midiblender/</guid>
+  <pubDate>Fri, 09 Feb 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/559_midiblender/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Musing about music cognition</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -905,9 +949,14 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 
 
 
+
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/663_quarto_projects/cover.jpg" class="img-fluid" width="540"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/663_quarto_projects/cover.jpg" class="img-fluid figure-img" width="540"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>This post is mainly a long ramble where I attempt to start working this morning.</p>
@@ -938,7 +987,7 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 <h2 class="anchored" data-anchor-id="making-of-a-quarto-project">Making of a Quarto project</h2>
 <p>The flavor of this project is computational modeling. Ideally, I would share the scripts and analysis, and some kind of global write-up, perhaps some slides.</p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">make a new RStudio Quarto website project.</li>
+<li><label><input type="checkbox" checked="">make a new RStudio Quarto website project.</label></li>
 </ul>
 <p>This is the vanilla Quarto website project.</p>
 <p><img src="https://crumplab.com/blog/663_quarto_projects/images/Screenshot 2023-06-27 at 10.28.58 AM.png" class="img-fluid"></p>
@@ -961,12 +1010,12 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 <span id="cb1-16">    toc: true</span></code></pre></div>
 <p>Things I usually change later:</p>
 <ul class="task-list">
-<li><p><input type="checkbox" checked="">specify a port number for website preview so that it doesn’t randomly change every time</p></li>
-<li><p><input type="checkbox" checked="">make a folder for putting things that don’t get compiled</p></li>
-<li><p><input type="checkbox" checked="">change output directory to docs for github pages</p></li>
-<li><p><input type="checkbox" checked="">change style to minty</p></li>
-<li><p><input type="checkbox" checked="">scrap the about page because I tend to put that info on the front page.</p></li>
-<li><p><input type="checkbox" checked="">add description, repo-url and site url</p></li>
+<li><p><label><input type="checkbox" checked="">specify a port number for website preview so that it doesn’t randomly change every time</label></p></li>
+<li><p><label><input type="checkbox" checked="">make a folder for putting things that don’t get compiled</label></p></li>
+<li><p><label><input type="checkbox" checked="">change output directory to docs for github pages</label></p></li>
+<li><p><label><input type="checkbox" checked="">change style to minty</label></p></li>
+<li><p><label><input type="checkbox" checked="">scrap the about page because I tend to put that info on the front page.</label></p></li>
+<li><p><label><input type="checkbox" checked="">add description, repo-url and site url</label></p></li>
 </ul>
 <p>One issue is how to translate the documents in the project to pages on the website. This can be rearranged at any time using the <code>_quarto.yml</code> file, which defines website navigation and connects individual .qmd files to the navbar at the top or on the side. For example, the two pages in the default project are given links “home” and “about” at the top of the website.</p>
 <p>In some previous projects I use a flexible starting position in terms of website structure. Quarto will automatically build sidebar links for .qmd documents. I think I’ll add that here as a starting point.</p>
@@ -1035,7 +1084,7 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-vuorre2021" class="csl-entry">
 Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Research Products as R Packages.”</span> <em>Behavior Research Methods</em> 53: 792–802. https://doi.org/<a href="https://doi.org/10.3758/s13428-020-01436-x">https://doi.org/10.3758/s13428-020-01436-x</a>.
 </div>
@@ -8023,136 +8072,6 @@ font-style: inherit;">"</span></span></code></pre></div>
   <guid>https://crumplab.com/blog/880_BBS/</guid>
   <pubDate>Tue, 01 Nov 2022 04:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/880_BBS/images/bbs.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Mastodon migration and getting off twitter?</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/881_Mastodon/</link>
-  <description><![CDATA[ 
-
-
-
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/881_Mastodon/images/mastodon.jpg" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>It’s the weekend where I wake up and try new forms of social media, and mostly avoid discussing whether I should ever use social media. It’s becoming increasingly clear to me that it’s all just an excuse to make banners for posts in adobe express.</p>
-<p>I guess my first foray into social media was BBSes back in the pre-internet days, wow. I deleted facebook years ago, but I share my drawings, paintings, and on instagram <a href="https://www.instagram.com/crumpmj/" class="uri">https://www.instagram.com/crumpmj/</a>. I’ve been on and off twitter, currently on <a href="https://twitter.com/MattCrumpLab" class="uri">https://twitter.com/MattCrumpLab</a>.</p>
-<p>I have lots of issues with twitter, including its direction under new leadership. For example, the direction described here is very disturbing, so I can see myself noping out of twitter very soon.</p>
-<p><a href="https://davetroy.medium.com/no-elon-and-jack-are-not-competitors-theyre-collaborating-3e88cde5267d" class="uri">https://davetroy.medium.com/no-elon-and-jack-are-not-competitors-theyre-collaborating-3e88cde5267d</a></p>
-<section id="enter-mastodon" class="level2">
-<h2 class="anchored" data-anchor-id="enter-mastodon">Enter Mastodon</h2>
-<p>A bunch of #rstats people I follow were migrating over to Mastodon, so I went along too and started an account on Fosstodon <a href="https://fosstodon.org/@MattCrumpLab" class="uri">https://fosstodon.org/@MattCrumpLab</a>. Mastodon had popped up here and there for me before, but I had never tried it out. <a href="https://fosstodon.org/about/more">Fosstodon</a> is a mastodon instance with lots of people interested in free and open-source software. I’m a big admirer, user, and supporter of open-source stuff, so wonderful, I joined.</p>
-<p>The user experience is similar to twitter. It’s a bit clunky for a newbie. For example, I initially had some trouble figuring out how to follow people on different instances. However, mastodon is itself a free and open-source project, run by people not algorithms (and no ads!), and they have made deliberate design decisions about user experience that seem great for making social media less toxic. For example, I couldn’t agree more with the points made in this post:</p>
-<p><a href="https://scott.mn/2022/10/29/twitter_features_mastodon_is_better_without/" class="uri">https://scott.mn/2022/10/29/twitter_features_mastodon_is_better_without/</a></p>
-</section>
-<section id="mastodon-migration" class="level2">
-<h2 class="anchored" data-anchor-id="mastodon-migration">Mastodon migration</h2>
-<p>I quickly discovered that mastodon is a fediverse of federated instances of mastodon. My understanding is that people spin up mastodon servers and create their own communities with focal interests, but because everything is running on mastodon, all the mastodon instances can follow between each other. Or something like that.</p>
-<p>I found Fosstodon to be a nice starting place, and I noticed that many of my colleagues were joining mastodon.social, so I did too <a href="https://mastodon.social/@MattCrumpLab" class="uri">https://mastodon.social/@MattCrumpLab</a>. I guess it is OK to be on two instances at the same time. First impressions are that mastodon.social has more users and the local timeline is popping. In terms of mastodon, I’m still not sure what any of this really means, but I for fun I’m going to try to migrate my account.</p>
-<p>Actually, to restate, I learned that I could programmatically access mastodon using R <a href="https://github.com/ThomasChln/mastodon" class="uri">https://github.com/ThomasChln/mastodon</a>, so intend to have fun using that library to try things between my mastodon accounts.</p>
-</section>
-<section id="trying-stuff" class="level2">
-<h2 class="anchored" data-anchor-id="trying-stuff">Trying stuff</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(mastodon)</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#login</span></span>
-<span id="cb1-4"></span>
-<span id="cb1-5">token <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">login</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'https://fosstodon.org/'</span>, my_email, my_password)</span>
-<span id="cb1-6"></span>
-<span id="cb1-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># get my id</span></span>
-<span id="cb1-8"></span>
-<span id="cb1-9">me <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">search_username</span>(token, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'MattCrumpLab'</span>)</span>
-<span id="cb1-10"></span>
-<span id="cb1-11"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># get my account</span></span>
-<span id="cb1-12"></span>
-<span id="cb1-13">my_account <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">get_account</span>(token, me[[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>]]<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>id)</span>
-<span id="cb1-14"></span>
-<span id="cb1-15"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">saveRDS</span>(my_account, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">file=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"test.RDS"</span>)</span>
-<span id="cb1-16">my_account <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">readRDS</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"test.RDS"</span>)</span>
-<span id="cb1-17"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">head</span>(my_account))</span></code></pre></div>
-</div>
-<p>These both return the same data. Spent too much time searching for how to display long R lists of things in html, but didn’t find much. The above is a short list. But, it doesn’t include my posts (statuses. How do I get those?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># didnt' work</span></span>
-<span id="cb2-2">my_timeline <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">get_timeline</span>(token, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'home'</span>)</span>
-<span id="cb2-3"></span>
-<span id="cb2-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># this worked</span></span>
-<span id="cb2-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">get_status</span>(token, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">42</span>)</span></code></pre></div>
-</div>
-<p>Hmmm, looks like I need to know that status IDs of my posts in order to get them. But, I don’t know how to get those from this R package. Oh well. Time to move on and do something else. Apparently, I can download all of my posts from my account settings, so that’s nice.</p>
-<p>In the meantime, I’m going to try a Mastodon account migration and see what happens.</p>
-
-
-</section>
-
- ]]></description>
-  <category>social</category>
-  <category>twitter</category>
-  <category>mastodon</category>
-  <guid>https://crumplab.com/blog/881_Mastodon/</guid>
-  <pubDate>Sun, 30 Oct 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/881_Mastodon/images/mastodon.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

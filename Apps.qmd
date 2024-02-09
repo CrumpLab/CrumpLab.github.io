@@ -28,6 +28,25 @@ Shiny Apps, R packages, and various things
 
 # R Packages
 
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [midiblender](https://www.crumplab.com/midiblender/)
+
+midiblender: Experiments in genRative MIDI mangling
+
+This is the beginnings of an #rstats package for experimental mangling of #MIDI files.
+:::
+
+::: {.column width="30%"}
+```{r midiblender, out.width=100, echo=F}
+knitr::include_graphics("images/midiblender.jpg")
+```
+:::
+:::
+
 ------------------------------------------------------------------------
 
 ::: columns
