@@ -1,0 +1,15 @@
+{
+  "hash": "a05a01e1b73ba68c5556b3dfffcb7796",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Quick notes on my jatos setup\"\nauthor: \"Matt Crump\"\ndate: 2/28/24\ndescription: \"Short set of notes on how I use jatos to serve experiments to the web\"\nimage: \"cover.jpg\"\ncomments:\n  giscus: \n    repo: CrumpLab/crumplab_comments\ncategories: \n  - jatos\n  - jspsych\nexecute: \n  echo: false\ndraft: true\n---\n\n::: {.cell}\n\n:::\n\n\n![](cover.jpg){width=\"50%\" fig-align=\"left\"}\n\n::: column-margin\njatos logo\n:::\n\n\n::: {.cell}\n\n:::\n\n\nThis is going to be a very quick post with pointers on the [jatos](https://www.jatos.org) setup I use to serve [jspsych](https://www.jspsych.org/7.3/) experiments to the web.\n\nIt is possible to use jatos through <https://mindprobe.eu>, but I have never tried that.\n\nInstead, I run my own jatos server on a digital ocean droplet following these instructions from the jatos documentation:\n\n- <https://www.jatos.org/JATOS-on-DigitalOcean.html>\n\nI didn't have that much experience with digital ocean, but the tutorial was enough to get things working for me. \n\nAnyway let's get into it.\n\n# Testing on a local copy of Jatos\n\n1. Start here with the getting started in 4 steps to install a local copy of jatos.\n\n <https://www.jatos.org/Get-started.html>\n \n2. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

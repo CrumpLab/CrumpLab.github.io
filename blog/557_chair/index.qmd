@@ -1,0 +1,98 @@
+---
+title: "And now for something completely different: Department Chair"
+author: "Matt Crump"
+date: 5/21/24
+description: "Very brief comments on the next three years."
+image: "cover.jpg"
+comments:
+  giscus: 
+    repo: CrumpLab/crumplab_comments
+categories: 
+  - psychology
+execute: 
+  echo: false
+---
+
+```{python, eval = FALSE}
+from diffusers import DiffusionPipeline
+from transformers import set_seed
+from PIL import Image
+import torch
+import random
+import ssl
+import os
+ssl._create_default_https_context = ssl._create_unverified_context
+
+#locate library
+#model_id = "./stable-diffusion-v1-5"
+model_id = "LCM_Dreamshaper_v7"
+
+pipeline = DiffusionPipeline.from_pretrained(
+	pretrained_model_name_or_path = "../../../../bigFiles/huggingface/LCM_Dreamshaper_v7/",custom_pipeline="latent_consistency_txt2img", custom_revision="main", revision="fb9c5d"
+)
+
+pipeline = pipeline.to("mps")
+
+# Recommended if your computer has < 64 GB of RAM
+pipeline.enable_attention_slicing("max")
+
+prompt = "room full of chairs. 80s cartoons. linocut. psychology department. lots of chairs everywhere."
+
+for s in range(30):
+  for n in [5,10]:
+    seed = s+1
+    num_steps = n+1
+    set_seed(seed)
+    
+    image = pipeline(prompt,height = 1024,width = 1024,num_images_per_prompt = 1,num_inference_steps=num_steps)
+    
+    image_name = "images/music_{}_{}.jpeg"
+    
+    image_save = image.images[0].save(image_name.format(seed,num_steps))
+
+```
+
+![](cover.jpg){width="50%" fig-align="left"}
+
+::: column-margin
+Chairs
+:::
+
+```{r}
+#| echo: false
+html_tag_audio <- function(file, type = c("wav")) {
+  type <- match.arg(type)
+  htmltools::tags$audio(
+    controls = "",
+    htmltools::tags$source(
+      src = file,
+      type = glue::glue("audio/{type}", type = type)
+    )
+  )
+}
+
+```
+
+With the support of my colleagues, I'm taking on a new role as Department Chair for a three year term. Our department has fantastic students, staff, and faculty, that are navigating the very challenging realities faced by public institutions like CUNY and Brooklyn College. There are a lot of moving parts in this new role, and I'm still not sure how much I will talk about it in forums like this blog. The most important part of my plan right now is to support our people, and make everything easier for the next chair (as has been our tradition).
+
+## On chairs and my time at Brooklyn College
+
+When I first arrived at Brooklyn College in 2011 I got an office with a desk and a bookshelf, and one chair. By the time I had lab space assigned, I needed several more chairs. But, there was a problem-- I didn't have any chairs, and my startup funds wouldn't stretch far enough to spend the money on chairs.
+
+Fortunately, I discovered that there were actually too many chairs in the psych department...they weren't everywhere... you had to discover their hiding places. And, when you found the rooms, they were full of chairs a plenty. To the ceiling of chairs. And, oftentimes, with perhaps some friendly negotiation, a chair or two could be procured from the stash(es), and be shown a new home where someone could sit in it.
+
+Many years later, during the pandemic I injured myself sitting on a kitchen chair for too long. It was a sign I needed to be more active and not sit around in chairs.
+
+Most recently, I've started organizing the chairs office, which is by itself a very interesting place. Fortunately, among the overwhelming number of things in the office, there were at least a mostly appropriate number of actual chairs...just slightly too many.
+
+It's the boxes of paperwork that go to the ceiling.
+
+And among the many balls to juggle with this new role, is cuddling up with a warm cup of tea at night and reading long sections of the CUNY Records Retention Schedule:
+
+<https://policy.cuny.edu/schedule/>
+
+I'm sure more there's more than a handful of artifacts among the piles that properly belong in a museum.
+
+![](images/museum.gif){fig-align="center"}
+
+Or, in a Department of Psychology at Brooklyn College of CUNY gallery exhibit (which is on my list of things to do).

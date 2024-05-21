@@ -1,0 +1,15 @@
+{
+  "hash": "7288823197ab418603f4eb9e3da0388f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"And now for something completely different: Department Chair\"\nauthor: \"Matt Crump\"\ndate: 5/21/24\ndescription: \"Very brief comments on the next three years.\"\nimage: \"cover.jpg\"\ncomments:\n  giscus: \n    repo: CrumpLab/crumplab_comments\ncategories: \n  - psychology\nexecute: \n  echo: false\n---\n\n::: {.cell}\n\n:::\n\n\n![](cover.jpg){width=\"50%\" fig-align=\"left\"}\n\n::: column-margin\nChairs\n:::\n\n\n::: {.cell}\n\n:::\n\n\nWith the support of my colleagues, I'm taking on a new role as Department Chair for a three year term. Our department has fantastic students, staff, and faculty, that are navigating the very challenging realities faced by public institutions like CUNY and Brooklyn College. There are a lot of moving parts in this new role, and I'm still not sure how much I will talk about it in forums like this blog. The most important part of my plan right now is to support our people, and make everything easier for the next chair (as has been our tradition).\n\n## On chairs and my time at Brooklyn College\n\nWhen I first arrived at Brooklyn College in 2011 I got an office with a desk and a bookshelf, and one chair. By the time I had lab space assigned, I needed several more chairs. But, there was a problem-- I didn't have any chairs, and my startup funds wouldn't stretch far enough to spend the money on chairs.\n\nFortunately, I discovered that there were actually too many chairs in the psych department...they weren't everywhere... you had to discover their hiding places. And, when you found the rooms, they were full of chairs a plenty. To the ceiling of chairs. And, oftentimes, with perhaps some friendly negotiation, a chair or two could be procured from the stash(es), and be shown a new home where someone could sit in it.\n\nMany years later, during the pandemic I injured myself sitting on a kitchen chair for too long. It was a sign I needed to be more active and not sit around in chairs.\n\nMost recently, I've started organizing the chairs office, which is by itself a very interesting place. Fortunately, among the overwhelming number of things in the office, there were at least a mostly appropriate number of actual chairs...just slightly too many.\n\nIt's the boxes of paperwork that go to the ceiling.\n\nAnd among the many balls to juggle with this new role, is cuddling up with a warm cup of tea at night and reading long sections of the CUNY Records Retention Schedule:\n\n<https://policy.cuny.edu/schedule/>\n\nI'm sure more there's more than a handful of artifacts among the piles that properly belong in a museum.\n\n![](images/museum.gif){fig-align=\"center\"}\n\nOr, in a Department of Psychology at Brooklyn College of CUNY gallery exhibit (which is on my list of things to do).\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

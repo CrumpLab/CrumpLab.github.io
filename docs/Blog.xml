@@ -15,7 +15,51 @@
 <link>https://crumplab.com/Blog.html</link>
 </image>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Fri, 09 Feb 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 21 May 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>And now for something completely different: Department Chair</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/557_chair/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/557_chair/cover.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Chairs</p>
+</div></div><p>With the support of my colleagues, I’m taking on a new role as Department Chair for a three year term. Our department has fantastic students, staff, and faculty, that are navigating the very challenging realities faced by public institutions like CUNY and Brooklyn College. There are a lot of moving parts in this new role, and I’m still not sure how much I will talk about it in forums like this blog. The most important part of my plan right now is to support our people, and make everything easier for the next chair (as has been our tradition).</p>
+<section id="on-chairs-and-my-time-at-brooklyn-college" class="level2">
+<h2 class="anchored" data-anchor-id="on-chairs-and-my-time-at-brooklyn-college">On chairs and my time at Brooklyn College</h2>
+<p>When I first arrived at Brooklyn College in 2011 I got an office with a desk and a bookshelf, and one chair. By the time I had lab space assigned, I needed several more chairs. But, there was a problem– I didn’t have any chairs, and my startup funds wouldn’t stretch far enough to spend the money on chairs.</p>
+<p>Fortunately, I discovered that there were actually too many chairs in the psych department…they weren’t everywhere… you had to discover their hiding places. And, when you found the rooms, they were full of chairs a plenty. To the ceiling of chairs. And, oftentimes, with perhaps some friendly negotiation, a chair or two could be procured from the stash(es), and be shown a new home where someone could sit in it.</p>
+<p>Many years later, during the pandemic I injured myself sitting on a kitchen chair for too long. It was a sign I needed to be more active and not sit around in chairs.</p>
+<p>Most recently, I’ve started organizing the chairs office, which is by itself a very interesting place. Fortunately, among the overwhelming number of things in the office, there were at least a mostly appropriate number of actual chairs…just slightly too many.</p>
+<p>It’s the boxes of paperwork that go to the ceiling.</p>
+<p>And among the many balls to juggle with this new role, is cuddling up with a warm cup of tea at night and reading long sections of the CUNY Records Retention Schedule:</p>
+<p><a href="https://policy.cuny.edu/schedule/" class="uri">https://policy.cuny.edu/schedule/</a></p>
+<p>I’m sure more there’s more than a handful of artifacts among the piles that properly belong in a museum.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/557_chair/images/museum.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Or, in a Department of Psychology at Brooklyn College of CUNY gallery exhibit (which is on my list of things to do).</p>
+
+
+</section>
+
+ ]]></description>
+  <category>psychology</category>
+  <guid>https://crumplab.com/blog/557_chair/</guid>
+  <pubDate>Tue, 21 May 2024 04:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/557_chair/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>midiblender: Experiments in genRative MIDI mangling</title>
   <dc:creator>Matt Crump</dc:creator>
@@ -7973,105 +8017,6 @@ font-style: inherit;">"</span></span></code></pre></div>
   <category>mastodon</category>
   <guid>https://crumplab.com/blog/779_MoreMastodon/</guid>
   <pubDate>Mon, 07 Nov 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Spinning up a mastodon instance with masto.host: First try and notes</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/880_BBS/</link>
-  <description><![CDATA[ 
-
-
-
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/880_BBS/images/bbs.jpg" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>This weekend I followed some #Rstats folks from twitter to mastodon. I first landed at Fosstodon, and then made an account on mastodon.social, which became very slow due to server load. After digging around a bit and learning new words like #fediverse and activitypub, I decided to spin up my own instance of mastodon using <a href="http://masto.host/">masto.host</a>. So, now you can find me <a href="https://bbs.crumplab.com/@MattCrump" class="uri">https://bbs.crumplab.com/@MattCrump</a>, or <code>@MattCrump@bbs.crumplab.com</code>.</p>
-<p>I’m not totally sure why I put myself into my own mastodon instance, but I’ll talk reasons later on. For now, this is an excuse to learn new web stuff while benefiting from a rich social network. Without further ado.</p>
-<section id="setting-up-a-mastodon-instance-on-masto.host" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-a-mastodon-instance-on-masto.host">Setting up a mastodon instance on masto.host</h2>
-<p>I saw Jon Henshaw post about running his own mastodon instance on <a href="http://masto.host/">masto.host</a>, and that seemed interesting, so I tried it:</p>
-<p><a href="https://twitter.com/henshaw/status/1587072753034842118" class="uri">https://twitter.com/henshaw/status/1587072753034842118</a></p>
-<p>Here’s what happened.</p>
-<ol type="1">
-<li>Went to <a href="http://masto.host/">masto.host</a>.</li>
-</ol>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-11-01 at 7.50.57 AM.png" class="img-fluid"></p>
-<ol start="2" type="1">
-<li>I chose the moon plan because it’s just gonna be. But, I noted that it is possible to upgrade and downgrade, so if I wanted to invite more people to my little bbs experiment I could do that. Or, if you are setting this up for a group, it seems pretty easy to grow larger (at least up to 2000 users for 89/month).</li>
-</ol>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-11-01 at 7.53.04 AM.png" class="img-fluid"></p>
-<ol start="3" type="1">
-<li>After clicking “buy now” there is a decision to use your own domain or subdomain, or a masto.host subdomain.</li>
-</ol>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-11-01 at 7.57.07 AM.png" class="img-fluid"></p>
-<p>A quick aside for domain names. I have been using R Markdown and more recently <a href="https://quarto.org">Quarto</a> for lots of purposes, including creating this website and blog. All of the source code for compiling this website and blog is in a github repository, and served from github pages. At some point I used <a href="https://www.namecheap.com">namecheap</a> to acquire my domain <code>crumplab.com</code>. This allowed me to serve my website from that domain (there is an option to use your own domain on github pages).</p>
-<p>In addition, it is possible to add subdomains. For example, I have a jatos server running on digital ocean for online experiments, which has it’s own subdomain on crumplab.com.</p>
-<p>For mastodon I chose “Your domain”, and came up with the subdomain <code>bbs.crumplab.com</code> as a throwback to the bulletin board services I used to use as a kid.</p>
-<ol start="4" type="1">
-<li>I don’t have screen shots for some of the next steps, but basically you enter your credit card information. In my case, immediately after purchasing I got a warning from mastodon that <code>bbs.crumplab.com</code> was not found on my DNS servers. Masto.host kindly gives clear instructions on what I needed to do in order to add my subdomain, which involved adding a new cname entry, and waiting for it to propagate.</li>
-<li>After masto.host detected my subdomain, it automagically created a new mastodon instance.</li>
-</ol>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-10-31 at 8.08.17 PM.png" class="img-fluid"></p>
-<p>And, when installation was finished it updated to let me know. This all took about 15 minutes from start to finish, and most of the time was waiting for DNS issues to be resolved.</p>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-10-31 at 8.21.29 PM.png" class="img-fluid"></p>
-</section>
-<section id="checking-out-the-instance" class="level2">
-<h2 class="anchored" data-anchor-id="checking-out-the-instance">Checking out the instance</h2>
-<p>My mastodon instance was now running, and I could access it by going to the subdomain <a href="https://bbs.crumplab.com/about">bbs.crumplab.com</a>.</p>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-11-01 at 8.23.27 AM.png" class="img-fluid"></p>
-<p>The next steps are to create an account for yourself, and then give yourself administrator privileges. I chose “MattCrump” for the account name, which makes me “@MattCrump@bbs.crumplab.com”.</p>
-<p>After logging in as a new user you get a default mastodon user account. I appear to be running Mastodon v 3.5.3, which is not the bleeding edge that mastodon.social is running (?). I don’t think I can edit my posts on this version, and I’m not sure yet if I can upgrade the version through masto.host.</p>
-</section>
-<section id="admin-stuff" class="level2">
-<h2 class="anchored" data-anchor-id="admin-stuff">Admin stuff</h2>
-<p>My first big question was how do I assume administrator privileges and turn off the ability of anyone to make an account on this instance. That part was easy on masto.host.</p>
-<ol type="1">
-<li>Make a user account on your instance</li>
-<li>Go to masto.host, click on the hosting domain, and then “change user role” on the server option</li>
-<li>Enter your account name and presto chango you are the admin.</li>
-</ol>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-11-01 at 8.32.52 AM.png" class="img-fluid"></p>
-<p>When you go back to your mastodon account, there are new admin options in the settings.</p>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-11-01 at 8.34.26 AM.png" class="img-fluid"></p>
-<p>The first thing I did was go to “Site Settings” and change the registration to “Nobody can sign up”</p>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-11-01 at 8.35.44 AM.png" class="img-fluid"></p>
-<p>And, that’s basically where I am at.</p>
-<p>Gonna take a break, and continue this post sometime later today.</p>
-</section>
-<section id="general-thoughts-so-far" class="level2">
-<h2 class="anchored" data-anchor-id="general-thoughts-so-far">General thoughts so far</h2>
-<p>It was very easy for me to set up a new mastodon instance. Almost too easy. For example, if I had the intention of creating an instance that other people could join, the process would be similarly easy, but I expect the realities of doing admin and moderation require a much larger time investment. I don’t have the bandwidth to think about running a larger instance right now, so I’m going to stick to learning the system in this person-sized instance.</p>
-<section id="all-by-myself" class="level3">
-<h3 class="anchored" data-anchor-id="all-by-myself">All by myself</h3>
-<p>So far the experience of being “alone” on my own instance is A OK. The default feeds work a little bit differently. My “local” feed is the same as my personal timeline, because no one else is on the instance. My home feed I guess is the same as it would be if I was on a shared instance. I see posts from the people I follow, and I see the things they are boosting. I’m not sure I totally understand what I am seeing on the federated feed, but it appears to be the people I follow, but not what they are boosting. It’s not a fire-hose of posts.</p>
-<p>I still don’t know how to add things to lists.</p>
-<p>Attempting to “micro-blog” with a personal mastodon instance has been rewarding so far, especially to prompt thinking about how I engage with social media in general, and how I curate/save/share what I’m doing. Everything I post on the instance is there, I guess for me to deal with and make decisions about.</p>
-<p>There is a great deal of topic worth engaging on, and I’m hoping this process can help me navigate my own engagement.</p>
-</section>
-</section>
-<section id="custom-emojis" class="level2">
-<h2 class="anchored" data-anchor-id="custom-emojis">Custom emojis</h2>
-<p>When I joined Fosstodon I quickly learned they have a custom emoji for R, that Mastodon.social has a custom emoji for the Rocinante, and that instances can have their own custom emojis.</p>
-<p>Clearly I must confirm.</p>
-<p>Cool, there are already lots of custom emojis on other instances, and it looks like the admin can approve use of custom emojis.</p>
-<p><img src="https://crumplab.com/blog/880_BBS/images/Screen Shot 2022-11-01 at 1.16.32 PM.png" class="img-fluid"></p>
-<p>BRB.</p>
-<p>I got Rstats and few others, but I really want <code>:blobcatfacepalm:</code>, which doesn’t appear on the list.</p>
-<p>This is helpful <a href="https://emojos.in" class="uri">https://emojos.in</a></p>
-<p>Hmmm, I have questions. I was clicking emojis and “enabling” them, but I’m not sure whether this means I can use them. I found a version of the <code>:rstats:</code> emoji and copied it, and did a test post. It worked, that’s cool.</p>
-<p>Had to manually copy <code>:blobcatfacepalm:</code>, and got it working.</p>
-
-
-</section>
-
- ]]></description>
-  <category>social</category>
-  <category>mastodon</category>
-  <guid>https://crumplab.com/blog/880_BBS/</guid>
-  <pubDate>Tue, 01 Nov 2022 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/880_BBS/images/bbs.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

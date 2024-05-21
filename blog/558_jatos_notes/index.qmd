@@ -1,0 +1,115 @@
+---
+title: "Quick notes on my jatos setup"
+author: "Matt Crump"
+date: 2/28/24
+description: "Short set of notes on how I use jatos to serve experiments to the web"
+image: "cover.jpg"
+comments:
+  giscus: 
+    repo: CrumpLab/crumplab_comments
+categories: 
+  - jatos
+  - jspsych
+execute: 
+  echo: false
+draft: true
+---
+
+```{python, eval = FALSE}
+from diffusers import DiffusionPipeline
+from transformers import set_seed
+from PIL import Image
+import torch
+import random
+import ssl
+import os
+ssl._create_default_https_context = ssl._create_unverified_context
+
+#locate library
+#model_id = "./stable-diffusion-v1-5"
+model_id = "LCM_Dreamshaper_v7"
+
+pipeline = DiffusionPipeline.from_pretrained(
+	pretrained_model_name_or_path = "../../../../bigFiles/huggingface/LCM_Dreamshaper_v7/",custom_pipeline="latent_consistency_txt2img", custom_revision="main", revision="fb9c5d"
+)
+
+pipeline = pipeline.to("mps")
+
+# Recommended if your computer has < 64 GB of RAM
+pipeline.enable_attention_slicing("max")
+
+prompt = "giant Piano piano piano. computer retro piano music. universe situation. computer playing piano. piano synthesizers. explosions of music. cartoon. 80s cartoons. thundercats optimus prime. linocut. pianos everywhere. huge piano. bright blue sky. sunset. colorful. musical notes everywhere"
+
+for s in range(30):
+  for n in [5,10]:
+    seed = s+1
+    num_steps = n+1
+    set_seed(seed)
+    
+    image = pipeline(prompt,height = 1024,width = 1024,num_images_per_prompt = 1,num_inference_steps=num_steps)
+    
+    image_name = "images/music_{}_{}.jpeg"
+    
+    image_save = image.images[0].save(image_name.format(seed,num_steps))
+
+```
+
+![](cover.jpg){width="50%" fig-align="left"}
+
+::: column-margin
+jatos logo
+:::
+
+```{r}
+#| echo: false
+html_tag_audio <- function(file, type = c("wav")) {
+  type <- match.arg(type)
+  htmltools::tags$audio(
+    controls = "",
+    htmltools::tags$source(
+      src = file,
+      type = glue::glue("audio/{type}", type = type)
+    )
+  )
+}
+
+```
+
+This is going to be a very quick post with pointers on the [jatos](https://www.jatos.org) setup I use to serve [jspsych](https://www.jspsych.org/7.3/) experiments to the web.
+
+It is possible to use jatos through <https://mindprobe.eu>, but I have never tried that.
+
+Instead, I run my own jatos server on a digital ocean droplet following these instructions from the jatos documentation:
+
+- <https://www.jatos.org/JATOS-on-DigitalOcean.html>
+
+I didn't have that much experience with digital ocean, but the tutorial was enough to get things working for me. 
+
+Anyway let's get into it.
+
+# Testing on a local copy of Jatos
+
+1. Start here with the getting started in 4 steps to install a local copy of jatos.
+
+ <https://www.jatos.org/Get-started.html>
+ 
+2. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

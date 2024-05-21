@@ -22,7 +22,9 @@ format:
 knitr::include_graphics('images/opportunities_banner.jpg')
 ```
 
-Dr. Crump has mentored students interested in cognition at all levels, including [undergraduate, master's, doctoral, and postdoctoral researchers](https://crumplab.com/People.html). The lab is always looking for students interested in human cognition (how people think, learn, remember, attend, etc.), and who want to gain research experience by learning computational techniques for running experiments and analyzing data. This page describes current opportunities for prospective students at the undergraduate, master's, doctoral levels. Interested students should also [read some of the lab publications](https://crumplab.github.io/publications/) to learn more about the research questions we are asking.
+Dr. Crump has mentored students interested in cognition at all levels, including [undergraduate, master's, doctoral, and postdoctoral researchers](https://crumplab.com/People.html). There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr. Crump is serving a three year term as Department Chair. 
+
+<!--
 
 ## Undergraduate students
 
@@ -83,3 +85,5 @@ Here is your assignment. By following these steps you will make a website, and t
 5.  Assuming you got everything up and running, then you can send me an email (mcrump\@brooklyn.cuny.edu) introducing yourself. Link to your website that you made, and tell me a little bit about why you want to join the lab and we'll set up a meeting.
 
 Email your R-script to Dr. Crump (mcrump\@brooklyn.cuny.edu) and request a time to meet about gaining research experience in the lab.
+
+-->

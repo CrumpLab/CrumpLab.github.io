@@ -55,6 +55,7 @@ knitr::include_graphics('images/people_banner.jpg')
 
 ### Undergraduate
 
+-   2024: Hao Zhu, "The psychophysics of entropy judgments for musical note sequences", Psyc 5001, CUNY BA
 -   2023: Shifa Maqsood, ["Is The Self Reference Effect a Retrieval Practice Phenomenon?"](http://www.crumplab.com/self-reference/), Undergraduate Honors thesis, Tow Presidential Mentoring Scholar
 -   2023: Hao Zhu, Psyc 2001 Laboratory Experience, CUNY BA
 -   2023: Chantal Miller, Psyc 2001 Laboratory Experience

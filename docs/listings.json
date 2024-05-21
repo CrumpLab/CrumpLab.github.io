@@ -23,13 +23,13 @@
     "listing": "/People.html",
     "items": [
       "/people/matt_crump.html",
-      "/people/drew_shives.html",
-      "/people/shifa_maqsood.html"
+      "/people/drew_shives.html"
     ]
   },
   {
     "listing": "/Blog.html",
     "items": [
+      "/blog/557_chair/index.html",
       "/blog/559_midiblender/index.html",
       "/blog/660_music_cognition/index.html",
       "/blog/661_stable_diffusion/index.html",
