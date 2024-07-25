@@ -72,34 +72,6 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-current-courses .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-url','listing-image','listing-keywords',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-description","listing-url","listing-image","listing-keywords"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-current-courses'] = new List('listing-current-courses', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-past-courses .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -271,8 +243,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#current-courses" id="toc-current-courses" class="nav-link active" data-scroll-target="#current-courses">Current Courses</a></li>
-  <li><a href="#past-courses" id="toc-past-courses" class="nav-link" data-scroll-target="#past-courses">Past Courses</a></li>
+  <li><a href="#past-courses" id="toc-past-courses" class="nav-link active" data-scroll-target="#past-courses">Past Courses</a></li>
   </ul>
 </nav>
     </div>
@@ -324,9 +295,9 @@ window.Quarto = {
 </div>
 </div>
 <p>List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.</p>
-<section id="current-courses" class="level2">
-<h2 class="anchored" data-anchor-id="current-courses">Current Courses</h2>
-<div id="listing-current-courses" class="quarto-listing quarto-listing-container-custom">
+<section id="past-courses" class="level2">
+<h2 class="anchored" data-anchor-id="past-courses">Past Courses</h2>
+<div id="listing-past-courses" class="quarto-listing quarto-listing-container-custom">
 <div class="quarto-post image-right">
 <div class="body">
 <a href="https://crumplab.com/cognition">
@@ -376,14 +347,6 @@ An introduction to programming cognitive behavioral experiments for the web usin
 <p><a href="https://crumplab.com/psyc2001"> <img src="images/jspsych-logo.jpg" class="thumbnail-image"> </a></p>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="past-courses" class="level2">
-<h2 class="anchored" data-anchor-id="past-courses">Past Courses</h2>
-<div id="listing-past-courses" class="quarto-listing quarto-listing-container-custom">
 <div class="quarto-post image-right">
 <div class="body">
 <a href="https://crumplab.github.io/peopleofnyc/">

@@ -1,3 +1,20 @@
+- title: "Psyc 2530: Introduction to Cognitive Psychology (Asynchronous Online)"
+  description: "For my students: although most of the course materials are available on the course website, this course is under development until the official start of the Fall 2023 semester."
+  url: "https://crumplab.com/cognition"
+  image: "images/2530_image.jpg"
+  keywords:
+    - Fall 2023
+    - Undergraduate
+    - OER
+
+- title: "Psyc 2001: Laboratory Experience"
+  description: "An introduction to programming cognitive behavioral experiments for the web using jspsych."
+  url: "https://crumplab.com/psyc2001"
+  image: "images/jspsych-logo.jpg"
+  keywords:
+    - Fall 2023
+    - Undergraduate
+
 - title: "MCHC 1002: People of New York City"
   description: ""
   url: "https://crumplab.github.io/peopleofnyc/"

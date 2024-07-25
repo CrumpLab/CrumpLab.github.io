@@ -2,15 +2,6 @@
 title: "Courses"
 description: "A list of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. Many of them include freely shared course materials."
 listing:
-  - id: current-courses
-    contents: 
-    - current-courses.yaml
-    sort: "order"
-    type: default
-    categories: false
-    image-align: 'right'
-    image-height: '100%'
-    template: courses/course.ejs
   - id: past-courses
     contents: 
     - past-courses.yaml
@@ -42,11 +33,6 @@ knitr::include_graphics('images/courses_banner.jpg')
 ```
 
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.
-
-## Current Courses
-
-::: {#current-courses}
-:::
 
 ## Past Courses
 
