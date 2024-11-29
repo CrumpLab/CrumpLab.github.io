@@ -14,7 +14,7 @@
 <title>crumplab</title>
 <link>https://crumplab.com/Blog.html</link>
 </image>
-<generator>quarto-1.4.549</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Tue, 21 May 2024 04:00:00 GMT</lastBuildDate>
 <item>
   <title>And now for something completely different: Department Chair</title>
@@ -717,6 +717,7 @@ font-style: inherit;">---</span></span>
 background-color: null;
 font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -726,6 +727,7 @@ font-style: inherit;">"things by Matt Crump"</span></span>
 background-color: null;
 font-style: inherit;">listing</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb2-4"><span class="at" style="color: #657422;
 background-color: null;
@@ -733,6 +735,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">contents</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> things</span></span>
@@ -742,6 +745,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">type</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> grid</span></span>
@@ -751,6 +755,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">image-height</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -762,6 +767,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">grid-columns</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
@@ -773,6 +779,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">page-size</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
@@ -784,6 +791,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">grid-item-border</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
@@ -795,14 +803,17 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">fields</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">]</span></span>
 <span id="cb2-11"><span class="at" style="color: #657422;
 background-color: null;
@@ -810,18 +821,22 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sort-ui</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">date</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">,</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">categories</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">]</span></span>
 <span id="cb2-12"><span class="at" style="color: #657422;
 background-color: null;
@@ -829,6 +844,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">categories</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
@@ -840,11 +856,13 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sort</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb2-14"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -854,6 +872,7 @@ font-style: inherit;">"date desc"</span></span>
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb2-16"><span class="at" style="color: #657422;
 background-color: null;
@@ -861,6 +880,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb2-17"><span class="at" style="color: #657422;
 background-color: null;
@@ -868,6 +888,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">page-layout</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> full</span></span>
@@ -892,6 +913,7 @@ font-style: inherit;">---</span></span>
 background-color: null;
 font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> Colorland 3</span></span>
@@ -899,6 +921,7 @@ font-style: inherit;"> Colorland 3</span></span>
 background-color: null;
 font-style: inherit;">author</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> Matt Crump</span></span>
@@ -906,6 +929,7 @@ font-style: inherit;"> Matt Crump</span></span>
 background-color: null;
 font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> ../../images/Colorlands/Colorland_3.jpeg</span></span>
@@ -913,6 +937,7 @@ font-style: inherit;"> ../../images/Colorlands/Colorland_3.jpeg</span></span>
 background-color: null;
 font-style: inherit;">description</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> Digital Work</span></span>
@@ -920,19 +945,23 @@ font-style: inherit;"> Digital Work</span></span>
 background-color: null;
 font-style: inherit;">categories</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">Colorlands</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">]</span></span>
 <span id="cb4-7"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">date</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> 2022-06-10</span></span>
@@ -940,6 +969,7 @@ font-style: inherit;"> 2022-06-10</span></span>
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb4-9"><span class="at" style="color: #657422;
 background-color: null;
@@ -947,6 +977,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb4-10"><span class="at" style="color: #657422;
 background-color: null;
@@ -954,6 +985,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">page-layout</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> full</span></span>
@@ -1196,6 +1228,7 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 background-color: null;
 font-style: inherit;">comments</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb1-2"><span class="at" style="color: #657422;
 background-color: null;
@@ -1203,6 +1236,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">giscus</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span></span>
@@ -1212,6 +1246,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">repo</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
@@ -2657,8 +2692,10 @@ font-style: inherit;">"DallE_image.jpg"</span>)</span></code></pre></div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (variable <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> sequence) {</span>
 <span id="cb1-2">  <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -2670,8 +2707,10 @@ font-style: inherit;"># code block to be executed</span></span>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -2708,8 +2747,10 @@ font-style: inherit;">"Charlie"</span>)</span>
 <span id="cb4-2"></span>
 <span id="cb4-3"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (name <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> names) {</span>
 <span id="cb4-4">  <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2772,8 +2813,10 @@ background-color: null;
 font-style: inherit;"># This creates a sequence of numbers from 1 through 10.</span></span>
 <span id="cb7-5"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -2813,8 +2856,10 @@ background-color: null;
 font-style: inherit;"># incrementing by 2 at each iteration.</span></span>
 <span id="cb9-4"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">seq</span>(<span class="at" style="color: #657422;
@@ -2874,8 +2919,10 @@ background-color: null;
 font-style: inherit;">"cherry"</span>)</span>
 <span id="cb11-7"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -2983,8 +3030,10 @@ background-color: null;
 font-style: inherit;"># Loop over numbers 1 to N</span></span>
 <span id="cb23-5"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -2996,6 +3045,7 @@ background-color: null;
 font-style: inherit;"># Check if i is a multiple of both 3 and 5</span></span>
 <span id="cb23-8">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
@@ -3027,8 +3077,10 @@ background-color: null;
 font-style: inherit;"># Check if i is a multiple of 3</span></span>
 <span id="cb23-13">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
@@ -3050,8 +3102,10 @@ background-color: null;
 font-style: inherit;"># Check if i is a multiple of 5</span></span>
 <span id="cb23-18">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
@@ -3073,6 +3127,7 @@ background-color: null;
 font-style: inherit;"># If i is not a multiple of 3 or 5, print the number itself</span></span>
 <span id="cb23-23">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> {</span>
 <span id="cb23-24">    <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3250,6 +3305,7 @@ font-style: inherit;">"Explain what is larger a pumpkin or a dinosaur?"</span></
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(){</span>
 <span id="cb6-2"></span>
 <span id="cb6-3">  <span class="co" style="color: #5E5E5E;
@@ -3356,6 +3412,7 @@ font-style: inherit;">$</span>message.content)</span>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(){</span>
 <span id="cb8-2"></span>
 <span id="cb8-3"></span>
@@ -4329,8 +4386,10 @@ font-style: inherit;"># note: responses in JSON format are requested</span></spa
 <span id="cb6-35"></span>
 <span id="cb6-36"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span>(i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -4457,6 +4516,7 @@ background-color: null;
 font-style: inherit;"># validation checks pass, write the simulated data to all_sim_data </span></span>
 <span id="cb6-60">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(test_JSON <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="cn" style="color: #8f5902;
@@ -4476,6 +4536,7 @@ font-style: inherit;">$</span>message.content)</span>
 <span id="cb6-62">    </span>
 <span id="cb6-63">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sum</span>(<span class="fu" style="color: #4758AB;
@@ -5429,8 +5490,10 @@ font-style: inherit;">"reaction_time"</span>)</span>
 <span id="cb12-47"></span>
 <span id="cb12-48"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span>(i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -5495,6 +5558,7 @@ font-style: inherit;">#validate json and proceed</span></span>
 <span id="cb12-65">  </span>
 <span id="cb12-66">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(jsonlite<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
@@ -5534,6 +5598,7 @@ background-color: null;
 font-style: inherit;"># check if tibble has correct names</span></span>
 <span id="cb12-73">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">all</span>(task_names <span class="sc" style="color: #5E5E5E;
