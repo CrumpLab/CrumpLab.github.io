@@ -1,10 +1,10 @@
 ---
 title: "Matt Crump"
-image: imgs/Crump.png
+image: imgs/Crump.jpg
 description: "Principal Investigator \n mcrump@brooklyn.cuny.edu"
 about:
   template: trestles
-  image: imgs/Crump.png
+  image: imgs/Crump.jpg
   links:
     - icon: globe
       text: Lab website
