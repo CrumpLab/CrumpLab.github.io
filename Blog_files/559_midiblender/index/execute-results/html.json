@@ -1,0 +1,17 @@
+{
+  "hash": "2f3ad14845fbf648664bbf25b83d6c17",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"midiblender: Experiments in genRative MIDI mangling\"\nauthor: \"Matt Crump\"\ndate: 2/9/24\ndescription: \"An experimental R package for MIDI manipulation in R.\"\nimage: \"cover.jpg\"\ncomments:\n  giscus: \n    repo: CrumpLab/crumplab_comments\ncategories: \n  - music cognition\n  - rstats\n  - midiblender\n  - generative music\nexecute: \n  echo: false\n---\n\n::: {.cell}\n\n:::\n\n\n![](cover.jpg){width=\"50%\" fig-align=\"left\"}\n\n::: column-margin\nmidiblender R package logo\n:::\n\n\n::: {.cell}\n\n:::\n\n\nI've been busy on my [music blog](https://homophony.quest/notes.html), which is mostly about music, but as of late has included a lot of rstats programming stuff, some of which is becoming relevant to potential new research directions for me in music cognition. So, I thought this was worth cross-posting.\n\nI'm excited to have released a very experimental version of [midiblender](https://www.crumplab.com/midiblender/).\n\nThe github repo is: <https://github.com/CrumpLab/midiblender>\n\nThis is the beginnings of an #rstats package for experimental mangling of #MIDI files. I'm developing it with cross-purposes in mind. On the one hand, it is fun. On another hand, I might use some of this stuff in my own music. And, let's keep going with hands, there are some neat things in here that I'll likely use in future music cognition research. For example, the package has methods for converting MIDI into a matrix representation and back, which means MIDI becomes available for computational modeling with learning and memory models that I'm interested in testing in musical contexts.  There are also clear opportunities for controlled stimulus generation, and music analysis, but I haven't pushed much on those functions yet.\n\nThis is still very hacky, but I thought it was worth sharing at this point, even though there is much more work to do.\n\nI wrote a [getting starting vignette](https://www.crumplab.com/midiblender/articles/Getting_started.html) that could be helpful for others to try stuff out.\n\nI've been posting lots of examples on my music blog that are mostly about mangling MIDI files for fun, sometimes with a little computational cognition stuff thrown in. Here's a few:\n\n- [Systematically randomizing Super Mario brothers with R](https://homophony.quest/blog/33_2_1_24_rand_mario/)\n- [Midi to matrix representation and probabilistic super mario music with R](https://homophony.quest/blog/35_2_3_24_matrix_midi/)\n- [MIDI analysis, bags of notes, and probabilistic generation](https://homophony.quest/blog/37_2_5_24_matrix_analysis/)\n- [WIP: Endless probabilistically generated mario music with midiblender](https://homophony.quest/blog/39_2_7_24_midiblender_mario/)\n- [Midi blending Canon in D probabilistically](https://homophony.quest/blog/40_2_7_24_midiblender_canon/)\n- [Analyzing and filtering note occurence by point estimation](https://homophony.quest/blog/42_2_8_24_prob_filter/)\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

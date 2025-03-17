@@ -61,6 +61,51 @@
   <media:content url="https://crumplab.com/blog/557_chair/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
+  <title>Quick notes on my jatos setup</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/558_jatos_notes/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/558_jatos_notes/cover.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>jatos logo</p>
+</div></div><p>This is going to be a very quick post with pointers on the <a href="https://www.jatos.org">jatos</a> setup I use to serve <a href="https://www.jspsych.org/7.3/">jspsych</a> experiments to the web.</p>
+<p>It is possible to use jatos through <a href="https://mindprobe.eu" class="uri">https://mindprobe.eu</a>, but I have never tried that.</p>
+<p>Instead, I run my own jatos server on a digital ocean droplet following these instructions from the jatos documentation:</p>
+<ul>
+<li><a href="https://www.jatos.org/JATOS-on-DigitalOcean.html" class="uri">https://www.jatos.org/JATOS-on-DigitalOcean.html</a></li>
+</ul>
+<p>I didn’t have that much experience with digital ocean, but the tutorial was enough to get things working for me.</p>
+<p>Anyway let’s get into it.</p>
+<section id="testing-on-a-local-copy-of-jatos" class="level1">
+<h1>Testing on a local copy of Jatos</h1>
+<ol type="1">
+<li>Start here with the getting started in 4 steps to install a local copy of jatos.</li>
+</ol>
+<p><a href="https://www.jatos.org/Get-started.html" class="uri">https://www.jatos.org/Get-started.html</a></p>
+<ol start="2" type="1">
+<li></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <category>jatos</category>
+  <category>jspsych</category>
+  <guid>https://crumplab.com/blog/558_jatos_notes/</guid>
+  <pubDate>Wed, 28 Feb 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/558_jatos_notes/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>midiblender: Experiments in genRative MIDI mangling</title>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/559_midiblender/</link>
@@ -5864,6 +5909,40 @@ Rothstein, Richard. 2017. <em>The Color of Law: <span>A</span> Forgotten History
   <pubDate>Sat, 18 Feb 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Testing out creating speech in noise stimuli</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/773_speech_noise/</link>
+  <description><![CDATA[ 
+
+
+
+<p><span class="citation" data-cites="frost1988">Frost, Repp, and Katz (1988)</span> conducted three experiments asking whether “speech perception can be influenced by simultaneous presentation of print?”</p>
+<p>In experiment 1 they presented individual words in an audio format that was paired with a visual form. An audio word was presented with the matching visual word, a mismatching word, or neutral stimulus (XXXXXX). The spoken word was embedded in different levels of signal matched noise (or white noise, in Experiment 3). The results from experiment one showed that matching visual words changed response bias rather than sensitivity for detecting the presence or absence of words. There was also apparently a marked subjective impression of hearing words that were presented in enveloped matched masking noise when they were simultaneously paired with matching visual words.</p>
+<p>I spun up this post to try creating example stimuli from E1 using the approach mentioned in the methods by <span class="citation" data-cites="schroeder1968">Schroeder (1968)</span>.</p>
+<p>The amplitude matched noise is created by randomly flipping the sign of each unit of the digitized waveform.</p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-R-magrittr" class="csl-entry">
+Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
+</div>
+<div id="ref-frost1988" class="csl-entry">
+Frost, Ram, Bruno H Repp, and Leonard Katz. 1988. <span>“Can Speech Perception Be Influenced by Simultaneous Presentation of Print?”</span> <em>Journal of Memory and Language</em> 27 (6): 741–55. <a href="https://doi.org/10.1016/0749-596X(88)90018-6">https://doi.org/10.1016/0749-596X(88)90018-6</a>.
+</div>
+<div id="ref-R-magick" class="csl-entry">
+Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
+</div>
+<div id="ref-schroeder1968" class="csl-entry">
+Schroeder, MRt. 1968. <span>“Reference Signal for Signal Quality Studies.”</span> <em>The Journal of the Acoustical Society of America</em> 44 (6): 17351736. <a href="https://doi.org/10.1121/1.1911323">https://doi.org/10.1121/1.1911323</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>stimuli</category>
+  <guid>https://crumplab.com/blog/773_speech_noise/</guid>
+  <pubDate>Tue, 24 Jan 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Two new courses and getting into the swing with spring</title>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/774_spring2023/</link>
@@ -5908,6 +5987,65 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
   <guid>https://crumplab.com/blog/774_spring2023/</guid>
   <pubDate>Thu, 12 Jan 2023 05:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/774_spring2023/images/header.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Testing rtoot and managing alt text for images</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/775_Rtoot_alt_text/</link>
+  <description><![CDATA[ 
+
+
+
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://crumplab.com/blog/775_Rtoot_alt_text/images/header.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expertise: Not much | Usefulness: decent | Audience: notes to self
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>Using mastodon has prompted me to get in the habit of adding alt text to images in my posts. On the one hand, mastodon makes it easy to add alt text to images, and on the other hand I’ve noticed that adding alt text can be very cumbersome especially when many images are involved, and I have plans to repost them. My understanding, at least the way I’m doing it, is the alt text has to be entered every time you post an image.</p>
+<p>I tried downloading an image that I posted with alt-text, and then re-posting it to see if the alt-text was preserved, but it was not. I was hoping mastodon might take the alt-text and embed it into the EXIF image data, and/or automatically scrape EXIF image data and use it for alt-text. This functionality is currently a <a href="https://github.com/mastodon/mastodon/issues/14903">feature request over at github issues</a>.</p>
+<p>In the meantime, I have a case where I’d like to automate the alt-text process for 13+ images. Over the weekend I used midjourney to generate fake album cover art for some basement tape tracks I’m working on. I posted each track on the <a href="https://bbs.crumplab.com/@homophony">homphony timeline</a> and for each cover art image I uploaded alt text containing brief descriptions of the image, and the midjourney prompt that I used to create the image. After a morning of fun doing this I wanted to post all of the pictures with alt-text together on my art focused account. However, I would have to manually add all of the alt-text all over again to all of the images. I didn’t do that because I didn’t have time to do that. And, I wasn’t thinking ahead about digital asset management, so I didn’t adopt a process that would allow me to repost with the images with alt-text.</p>
+<p>This post should help me with two things. I’m going to try out the new R API client for mastodon called <a href="https://github.com/schochastics/rtoot">rtoot</a>, and I should be able to download posts, images, and alt text from one account, and then repost them with alt text to another account.</p>
+<section id="rtoot" class="level2">
+<h2 class="anchored" data-anchor-id="rtoot">rtoot</h2>
+<p>I followed the instructions in the rtoot vignette to get my authentication set up.</p>
+<p>Can only get 20 statuses.</p>
+</section>
+<section id="references" class="level2">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-R-magrittr" class="csl-entry">
+Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
+</div>
+<div id="ref-R-magick" class="csl-entry">
+Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>mastodon</category>
+  <category>rtoot</category>
+  <category>alt text</category>
+  <category>midjourney</category>
+  <category>generative art</category>
+  <guid>https://crumplab.com/blog/775_Rtoot_alt_text/</guid>
+  <pubDate>Mon, 14 Nov 2022 05:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/775_Rtoot_alt_text/images/header.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Generative art (note) collection</title>
@@ -7824,264 +7962,6 @@ R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</
   <guid>https://crumplab.com/blog/777_generative_art/</guid>
   <pubDate>Thu, 10 Nov 2022 05:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/777_generative_art/images/Impact3.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>RSS feed my quarto blog</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/776_RSS/</link>
-  <description><![CDATA[ 
-
-
-
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/776_RSS/images/header.jpg" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Expertise: Not much | Usefulness: ? | Audience: notes to self
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-<p>I spent the morning coding up some ways to automate header images, not sure I saved myself time, it was equal parts fun and frustrating.</p>
-<p>This post is an an excuse to try out a simple header, and to enable RSS feeds on this blog. What will happen?</p>
-<p>Following these <a href="https://quarto.org/docs/websites/website-blog.html#rss-feed">quarto RSS</a> steps.</p>
-<section id="done" class="level2">
-<h2 class="anchored" data-anchor-id="done">Done?</h2>
-<p>That was easy. Just need to publish this and see if I can subscribe to myself?</p>
-</section>
-<section id="references" class="level2">
-
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-R-magrittr" class="csl-entry">
-Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
-</div>
-<div id="ref-R-magick" class="csl-entry">
-Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
-</div>
-</div></section></div> ]]></description>
-  <category>RSS</category>
-  <guid>https://crumplab.com/blog/776_RSS/</guid>
-  <pubDate>Thu, 10 Nov 2022 05:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/776_RSS/images/header.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Convincing myself to run a Funkwhale pod</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/778_funkwhale/</link>
-  <description><![CDATA[ 
-
-
-
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/778_funkwhale/images/header.jpg" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>Expertise: 0 Usefulness: ? Audience: notes to self</p>
-<p>I love music: listening to it and making it. I’ve had increasingly less time for music, and am trying to find more time for it. So, as a part of learning mastodon I created an account for my music interests:</p>
-<p><a href="https://bbs.crumplab.com/@homophony">https://bbs.crumplab.com/@homophony</a></p>
-<p>It’s only been a week, but I’m having lots of fun connecting with music makers on the #fediverse. This could mean more overall music, which would be great!</p>
-<p>When I first tried mastodon a week ago I had no idea about activitypub, or the broader fediverse. I didn’t realize there are many different “platforms” compatible or semi-compatible with the <a href="https://www.w3.org/TR/activitypub/">activitypub protocol</a>. This means that user accounts on one platform like mastodon can interact with user accounts on another platform like <a href="https://pixelfed.org">pixelfed</a> (open-source version of instagram for picture sharing). There a <a href="https://github.com/emilebosch/awesome-fediverse">lots of platforms in the fediverse</a>, including <a href="https://funkwhale.audio">funkwhale</a> for audio and music sharing.</p>
-<section id="funkwhale-notes" class="level2">
-<h2 class="anchored" data-anchor-id="funkwhale-notes">Funkwhale notes</h2>
-<p>Using this space for note collection on funkwhale.</p>
-<p>Main site: <a href="https://funkwhale.audio" class="uri">https://funkwhale.audio</a></p>
-<p>Funkwhale forum: <a href="https://forum.funkwhale.audio" class="uri">https://forum.funkwhale.audio</a></p>
-<p>Funkwhale on mastodon: <a href="https://fosstodon.org/@funkwhale" class="uri">https://fosstodon.org/@funkwhale</a></p>
-<p>Dashboard of Funkwhale pods <a href="https://network.funkwhale.audio/dashboards/d/overview/funkwhale-network-overview?orgId=1&amp;refresh=2h" class="uri">https://network.funkwhale.audio/dashboards/d/overview/funkwhale-network-overview?orgId=1&amp;refresh=2h</a></p>
-<p>Dev and issues: <a href="https://dev.funkwhale.audio/funkwhale" class="uri">https://dev.funkwhale.audio/funkwhale</a></p>
-</section>
-<section id="spinning-up" class="level2">
-<h2 class="anchored" data-anchor-id="spinning-up">Spinning up</h2>
-<p>Installation dev instructions <a href="https://docs.funkwhale.audio/installation/" class="uri">https://docs.funkwhale.audio/installation/</a></p>
-<p>Other instructions, possibly helpful for a droplet setup.</p>
-<p><a href="https://geek-cookbook.funkypenguin.co.nz/recipes/funkwhale/" class="uri">https://geek-cookbook.funkypenguin.co.nz/recipes/funkwhale/</a></p>
-<p>Leaving this for another time…back.</p>
-</section>
-<section id="start-trying" class="level2">
-<h2 class="anchored" data-anchor-id="start-trying">Start trying</h2>
-<p>How long will this take? I was hoping to do this all on digital ocean. Will try develop instructions. Starting at 6:42.</p>
-<p>Ok, that was super easy.</p>
-<p>I created a new Ubuntu droplet on digital ocean. Logged into the terminal by website. I followed these steps from the quick install.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt-get update</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt-get install curl</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> sh <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-c</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">$(</span><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">curl</span> <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-sSL</span> https://get.funkwhale.audio/<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">)</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span></span></code></pre></div>
-<p>Made an A name to create a new subdomain for my pod. Pressed enter a couple times to say YES during install. Took about 15 minutes, mostly waiting. Now I have a funkwhale pod. huh.</p>
-<p>What do I do with this?</p>
-<p><img src="https://crumplab.com/blog/778_funkwhale/images/Screen Shot 2022-11-12 at 7.27.54 AM.png" class="img-fluid"></p>
-</section>
-<section id="musicbrainz" class="level2">
-<h2 class="anchored" data-anchor-id="musicbrainz">musicbrainz</h2>
-<ul>
-<li>downloaded the musicbrainz app</li>
-</ul>
-<p><a href="https://musicbrainz.org/" class="uri">https://musicbrainz.org/</a></p>
-<p>Might have to use this for metadata? After making an account over here, I realize this is mostly for tagging .mp3 libraries of existing music so it is easy to upload with tags.</p>
-<p>I could add my own artist info here I guess. Not sure how useful it will be yet for adding metadata around individual tracks I create. It could be very useful, or not. Need to learn more about associating new music audio files I make with all the necessary metadata.</p>
-</section>
-<section id="issue-collection" class="level2">
-<h2 class="anchored" data-anchor-id="issue-collection">Issue collection</h2>
-<p>I have destroyed the droplet.</p>
-<ul>
-<li><p>Made my admin account “homophony”, which worked all fine and dandy. However, this meant that I couldn’t use that handle to create channels and share under that artist name.</p></li>
-<li><p>musicbrainz is interesting and complicated. I should consider listing exist discography there. It seems to be mostly for uploading digital music collections, which is not what I’m interested in doing. Funkwhale could be altogether more than I need it for. Still…curious.</p></li>
-</ul>
-<p>Restarted the droplet…waiting through the install.</p>
-<p>Got messed up with the certbot, needed to change the A name record so my subdomain pointed to the droplet.</p>
-</section>
-<section id="creating-a-channel-and-frustrations" class="level2">
-<h2 class="anchored" data-anchor-id="creating-a-channel-and-frustrations">Creating a channel and frustrations</h2>
-<p>I spent a couple hours getting the pod up and running on digital ocean, and most of that time was me making little mistakes.</p>
-<p>After I got the pod fully up and running I made sure my admin name was NOT my artist name. Then, I made an artist channel to share some tracks. There is a choice between music channels and podcast channels. I’m not planning to do any podcasting here, but the functionality for that looked good (it may integrate with podcasting services for indexing).</p>
-<p>Creating a music channel was easy, and uploading tracks was easy. And, it seemed easy to share the link to the channel so other people could listen to it. I could listen to the tracks, but for a whole day anytime I accessed the funkwhale channel as a “non-logged in” user, I got a spinning wheel. I had to allow unauthenticated users access to the api, and that seemed to have worked? I’m testing right now.</p>
-<p>Last night I almost gave up on this funkwhale thing, but I might persist just a little bit.</p>
-<p>I’m not totally sure what features I’m looking for.</p>
-<ul>
-<li><p>Ability to upload tracks and share them in a playlist</p></li>
-<li><p>Ability to get some metrics on listening</p></li>
-<li><p>Comments or notes per track? Not sure how much I want this feature.</p></li>
-</ul>
-</section>
-<section id="activitypub" class="level2">
-<h2 class="anchored" data-anchor-id="activitypub">Activitypub?</h2>
-<p>I can use mastodon to follow my account on funkwhale, and then post to my funkwhale account from mastodon; but, where does the post go? I can’t receive on funkwhale?</p>
-</section>
-<section id="embed-playlist-audio-player" class="level2">
-<h2 class="anchored" data-anchor-id="embed-playlist-audio-player">Embed playlist audio player</h2>
-<p>This part looks fun. I’m placing embed code to see if the playlist shows up here.</p>
-<iframe width="100%" height="330" scrolling="no" frameborder="no" src="https://audio.crumplab.com/front/embed.html?&amp;type=artist&amp;id=1">
-</iframe>
-<p>The embed worked, but this won’t work later if I shut down my funkwhale server.</p>
-</section>
-<section id="castopod" class="level2">
-<h2 class="anchored" data-anchor-id="castopod">Castopod</h2>
-<p>Open source software for podcasting…useful for a music channel?</p>
-<p><a href="https://code.castopod.org/adaures/castopod" class="uri">https://code.castopod.org/adaures/castopod</a></p>
-</section>
-<section id="channel-stuff" class="level2">
-<h2 class="anchored" data-anchor-id="channel-stuff">Channel stuff</h2>
-<p>I’m currently manicuring a channel to what happens with that. This is involving using midjourney to make cover art from the track notes I used to describe each piece.</p>
-<p>Not sure I will keep with funkwhale, but I like that everything is going into a structured database that I could use later.</p>
-</section>
-<section id="gitlab" class="level2">
-<h2 class="anchored" data-anchor-id="gitlab">Gitlab</h2>
-<p><a href="https://dev.funkwhale.audio/funkwhale/funkwhale/-/issues/1304" class="uri">https://dev.funkwhale.audio/funkwhale/funkwhale/-/issues/1304</a></p>
-</section>
-<section id="learn-more" class="level2">
-<h2 class="anchored" data-anchor-id="learn-more">Learn more</h2>
-<p>Lots of other OSS audio-streaming options, should check those out.</p>
-<p><a href="https://github.com/awesome-selfhosted/awesome-selfhosted#media-streaming---audio-streaming" class="uri">https://github.com/awesome-selfhosted/awesome-selfhosted#media-streaming---audio-streaming</a></p>
-</section>
-<section id="things-to-read" class="level2">
-<h2 class="anchored" data-anchor-id="things-to-read">things to read</h2>
-<p><a href="https://ins-rt.net/text/sounds-from-the-fediverse-an-introduction-to-funkwhale-a-decentralised-community-audio-platform" class="uri">https://ins-rt.net/text/sounds-from-the-fediverse-an-introduction-to-funkwhale-a-decentralised-community-audio-platform</a></p>
-<p><a href="https://ins-rt.net/text/revaluing-music-in-the-digital-economy-an-interview-with-austin-hou-from-currents" class="uri">https://ins-rt.net/text/revaluing-music-in-the-digital-economy-an-interview-with-austin-hou-from-currents</a></p>
-<p><a href="https://www.theslowmusicmovement.org/about.html" class="uri">https://www.theslowmusicmovement.org/about.html</a></p>
-
-
-</section>
-
- ]]></description>
-  <category>funkwhale</category>
-  <category>activitypub</category>
-  <category>audio</category>
-  <category>music</category>
-  <guid>https://crumplab.com/blog/778_funkwhale/</guid>
-  <pubDate>Wed, 09 Nov 2022 05:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/778_funkwhale/images/header.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Debriefing my mastodon migration</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/779_MoreMastodon/</link>
-  <description><![CDATA[ 
-
-
-
-<p>It’s almost time to get back to work, so this is going to be quick. Or, I may leave this post open and add to it throughout the day. One thing is for sure, I don’t have time to use Adobe Express to make a header for this blog post. Moving forward, I think I would like the option to have some #rstats generative art code do that for me. That way I can rip into the writing faster.</p>
-<p>About a week ago I tried Mastodon. It feels longer ago. I went from joining an instance, to learning about the fediverse, activitypub, and more, to spinning up my own instance using masto.host. So, crumplab.com got a new subdomain: <a href="https://bbs.crumplab.com" class="uri">https://bbs.crumplab.com</a></p>
-<p>As of right now this instance is closed to new accounts. But, it is possible to view the local feed, showing posts made by accounts inside the instance: <a href="https://bbs.crumplab.com/public">bbs.crumplab.com/public</a>. In general, the local feeds of other instances can be viewed in the same way (provided the instance admins approve the option).</p>
-<p>When I get time to keep my skill set up to date, I dive in, so I’m happy I happened to have a bit of time to get started with the fediverse. I’m pretty sure all of these tools will become useful for my research and teaching, as well as my students. And, I need to become semi-proficient in the tool set before it becomes usable in the lab and classroom, so I got busy learning the ropes of administering a mastodon instance, as well as operating an account. Much more important was observing and listening to the existing communities on mastodon, for tips and conventions for engaging with the fediverse. I’m very happy to meet such a wide array of engaged people who are stewards of the digital community. It’s been fun watching the migration and learn from others. For example, Danielle Navarro has shared a super helpful overview <a href="https://blog.djnavarro.net/posts/2022-11-03_what-i-know-about-mastodon/" class="uri">https://blog.djnavarro.net/posts/2022-11-03_what-i-know-about-mastodon/</a>. I’m seeing a lot of cognition folks, and even CJEP has a mastodon account!</p>
-<section id="admin-life" class="level2">
-<h2 class="anchored" data-anchor-id="admin-life">Admin life</h2>
-<p>I have lots to learn as a mastodon admin, but so far masto.host made the whole operation very easy. I started on a <a href="https://masto.host/pricing/">moon plan</a> and quickly upgraded to a planet because I can see becoming a longer term user. As I get tooled up, the next step would probably be running the instance on my own server somewhere. The main hassle I’m dealing with as an admin is blocking other instances (see this helpful list if you are looking to block instances: <a href="https://github.com/chaossocial/about/blob/master/blocked_instances.md" class="uri">https://github.com/chaossocial/about/blob/master/blocked_instances.md</a>)</p>
-<p>I did not have time to learn how to use the <a href="https://docs.joinmastodon.org/">mastodon API</a>, which is very-well documented; so, I was unable to automate the process of blocking instances. There is an <a href="https://github.com/ThomasChln/mastodon">older R client for mastodon</a>, and a brand new one in the works called <a href="https://github.com/schochastics/rtoot">rtoot</a>, which is very exciting. I’ll wait for that one before attempting to automate admin tasks.</p>
-</section>
-<section id="multiplicities" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="multiplicities">Multiplicities</h2>
-<p>If I’m being honest Multiplicity did not hold up. But, that’s OK, I still ❤️ Michael Keaton.</p>
-<div class="cell page-columns page-full">
-
-<div class="no-row-height column-margin column-container"><div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/779_MoreMastodon/images/MV5BMTUzNTYxMTUzMV5BMl5BanBnXkFtZTYwMzgxMTg4._V1_.jpg" class="img-fluid" width="164"></p>
-</div></div></div>
-<p>The mastodon switch has prompted me to personally reflect upon my own social media use. As a part of the reflection, and as an excuse to learn more about Mastodon, I made a few different accounts on my instance. I am now me, myself, and I.</p>
-<section id="main-alt" class="level3">
-<h3 class="anchored" data-anchor-id="main-alt">Main Alt</h3>
-<p>My main account is <code>@MattCrump@bbs.crumplab.com</code>, link: <a href="https://bbs.crumplab.com/@MattCrump" class="uri">https://bbs.crumplab.com/@MattCrump</a>. I’ll use this one mostly for general interest and academic related things, and to occasionally boost my other interests in visual and audio mediums.</p>
-</section>
-<section id="visual-alt" class="level3">
-<h3 class="anchored" data-anchor-id="visual-alt">Visual alt</h3>
-<p>I enjoy making visual things, so I made an alt for that <code>@MattCrumpLab@bbs.crumplab.com</code>, link: <a href="https://bbs.crumplab.com/@MattCrumpLab" class="uri">https://bbs.crumplab.com/@MattCrumpLab</a>. I sometimes shared this stuff on twitter, and am currently sharing things on instagram. But, not really into those venues. So, I’m trying out personal decentralization on mastodon. If people want to follow my visual stuff, they can do that, and won’t get spammed (to often :) ) from my main account. Plus, having an account for my visual interests seems to help me focus and curate that interest more finely. It’s fun. There is loads of interest people doing #MastoArt.</p>
-</section>
-<section id="audio-alt" class="level3">
-<h3 class="anchored" data-anchor-id="audio-alt">Audio Alt</h3>
-<p>I enjoy making music, so I made an alt for that too <code>@homophony@bbs.crumplab.com</code>, link: <a href="https://bbs.crumplab.com/@homophony" class="uri">https://bbs.crumplab.com/@homophony</a>. I’m very excited for #fediversemusic and #mastomusic.</p>
-</section>
-<section id="account-management" class="level3">
-<h3 class="anchored" data-anchor-id="account-management">Account management</h3>
-<p>I went from a few social media accounts to more accounts, what I am doing to myself?</p>
-<p>It seems to me that having multiple accounts is useful and not uncommon on mastodon and the fediverse. The benefit to me is already clear; however, I there was a learning curve to quickly managing multiple accounts. Toot! for ios is very good, it allows me fast access to any account. For example, I log in to all of my accounts AND I log in at the server level. This way I can browse my federated timeline and respond from any account. It works really well. Overall, I’m looking forward to seeing the development of more clients for the fediverse. Given the current migration pattern, I’m optimistic. Regardless, protocols over platforms seems like the way to go, especially for my use cases.</p>
-</section>
-</section>
-<section id="research-and-teaching" class="level2">
-<h2 class="anchored" data-anchor-id="research-and-teaching">Research and Teaching</h2>
-<p>Speaking of research and teaching, I need to get back to that. On the research front, I’m considering creating a user account on my instance for online experiments that we run in the lab. More on that later.</p>
-<p>On the teaching front, I’m toying with setting up a mastodon instance for a class to use for a semester. There are so many interesting ways to take this, and it would generate a whole bunch of discussion around digital citizenship issues. Mastodon is very flexible in terms of what kind of access and identity (anon) for accounts users. What about FERPA? Need to learn more.</p>
-<p>Back to it. Hug a friend.</p>
-
-
-</section>
-
- ]]></description>
-  <category>social</category>
-  <category>mastodon</category>
-  <guid>https://crumplab.com/blog/779_MoreMastodon/</guid>
-  <pubDate>Mon, 07 Nov 2022 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
