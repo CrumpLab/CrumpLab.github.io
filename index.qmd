@@ -5,12 +5,12 @@ image: images/logo2.png
 toc: false
 listing:
   contents: 
-    - Blog.qmd
-    - People.qmd
     - Publications.qmd
+    - People.qmd
     - Books.qmd
     - Courses.qmd
     - Opportunities.qmd
+    - Blog.qmd
     - Fun.qmd
     - front_page/front_page.yaml
   id: front-list

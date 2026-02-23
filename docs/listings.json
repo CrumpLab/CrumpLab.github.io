@@ -10,12 +10,12 @@
   {
     "listing": "/index.html",
     "items": [
-      "/Blog.html",
-      "/People.html",
       "/Publications.html",
+      "/People.html",
       "/Books.html",
       "/Courses.html",
       "/Opportunities.html",
+      "/Blog.html",
       "/Fun.html"
     ]
   },
