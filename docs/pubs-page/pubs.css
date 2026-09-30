@@ -1,0 +1,251 @@
+/* Publications page (Publications.qmd): the banner hero, a sticky year
+   jump bar, then each year's papers on an ASCII branch. Builds on
+   home/home.css (fonts, colours, cards) and people-page/people.css
+   (banner hero, counts). */
+
+.home .stats-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  flex-basis: 100%;
+}
+
+.home .stats-line b {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.home .pubs .card {
+  margin-bottom: 20px;
+}
+
+/* ---- one publication ---- */
+.home .prow {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+
+.home .prow[hidden] {
+  display: none;
+}
+
+.home .pyear {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--faint);
+  padding-top: 2px;
+}
+
+.home .ptitle {
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 3px;
+}
+
+.home .ptitle a:hover {
+  color: var(--accent);
+}
+
+.home .pauthors {
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.home .pauthors strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.home .pvenue {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.home .ptag {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--faint);
+  background: #f3f4f6;
+  border-radius: 4px;
+  padding: 0 6px;
+}
+
+.home .ptag-first {
+  margin-left: 0;
+}
+
+.home .ptag-soon {
+  color: #9a3f86;
+  background: #fbeaf6;
+}
+
+.home .plinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  max-width: 190px;
+}
+
+.home .pchip {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  background: #f7f7f9;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.home .pchip::before {
+  content: "[ ";
+  color: var(--faint);
+}
+
+.home .pchip::after {
+  content: " ]";
+  color: var(--faint);
+}
+
+.home .pchip:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---- copyright notice ---- */
+.home .notice {
+  background: transparent;
+  border-style: dashed;
+}
+
+.home .notice::before {
+  display: none;
+}
+
+.home .notice > p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---- year jump bar and timeline ---- */
+
+.home .yearbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 2px;
+  background: rgba(243, 244, 246, 0.92);
+  backdrop-filter: blur(6px);
+  padding: 10px 0;
+  margin-bottom: 12px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+}
+
+.home .yearbar a {
+  color: var(--muted);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.home .yearbar a:hover {
+  color: var(--ink);
+  background: #ffffff;
+}
+
+.home .yearbar a + a::before {
+  content: "·";
+  color: var(--faint);
+  margin: 0 8px 0 -6px;
+}
+
+.home .tl-year {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 8px;
+  padding: 18px 0 6px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 70px;
+}
+
+.home .tl-year:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.home .tl-label {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.home .tl-label span {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--faint);
+  letter-spacing: 0;
+}
+
+.home .tl-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+}
+
+.home .tl-branch {
+  font-family: var(--mono);
+  color: var(--faint);
+  padding-top: 2px;
+}
+
+.home .tl-item .prow {
+  grid-template-columns: minmax(0, 1fr) auto;
+  border-top: none;
+  padding: 0 0 18px;
+}
+
+.home .tl-item .pyear {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .home .tl-year {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home .tl-item .prow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home .tl-item .plinks {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .home .prow {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .home .plinks {
+    grid-column: 2;
+    justify-content: flex-start;
+    max-width: none;
+  }
+}

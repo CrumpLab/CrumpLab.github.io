@@ -37,6 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -46,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-70e5f3d6ff9ecceaff85eedbd01a7aa6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,6 +76,63 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-stats .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-category','listing-name','listing-url','listing-image','listing-about','listing-links','listing-tagline','listing-notes',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-category","listing-name","listing-url","listing-image","listing-about","listing-links","listing-tagline","listing-notes"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-stats'] = new List('listing-stats', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-apps .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-category','listing-name','listing-url','listing-image','listing-about','listing-links','listing-tagline','listing-notes',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-category","listing-name","listing-url","listing-image","listing-about","listing-links","listing-tagline","listing-notes"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-apps'] = new List('listing-apps', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
 
 <script type="text/javascript">
@@ -84,8 +143,39 @@ gtag('js', new Date());
 gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="home/home.css">
+<link rel="stylesheet" href="people-page/people.css">
+<link rel="stylesheet" href="apps-page/apps.css">
 <meta property="og:title" content="Apps – crumplab">
 <meta property="og:description" content="R packages, Shiny apps, and other open-software projects. The lab shares these resources on Github.">
 <meta property="og:image" content="https://crumplab.com/images/apps_banner.jpg">
@@ -96,7 +186,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -157,12 +247,12 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> <i class="bi bi-youtube" role="img" aria-label="Youtube">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> <i class="bi bi-youtube" role="img" aria-label="YouTube">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./Blog.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./Blog.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -174,338 +264,461 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#audio-plugins" id="toc-audio-plugins" class="nav-link active" data-scroll-target="#audio-plugins">Audio Plugins</a></li>
-  <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R Packages</a>
-  <ul class="collapse">
-  <li><a href="#crumplabr" id="toc-crumplabr" class="nav-link" data-scroll-target="#crumplabr">crumplabr</a></li>
-  </ul></li>
-  <li><a href="#shiny-apps" id="toc-shiny-apps" class="nav-link" data-scroll-target="#shiny-apps">Shiny Apps</a>
-  <ul class="collapse">
-  <li><a href="#semanticlibrarian.com" id="toc-semanticlibrarian.com" class="nav-link" data-scroll-target="#semanticlibrarian.com">semanticlibrarian.com</a></li>
-  <li><a href="#hypothesis_explorer" id="toc-hypothesis_explorer" class="nav-link" data-scroll-target="#hypothesis_explorer">hypothesis_explorer</a></li>
-  <li><a href="#indttest" id="toc-indttest" class="nav-link" data-scroll-target="#indttest">indTtest</a></li>
-  <li><a href="#pairedttest" id="toc-pairedttest" class="nav-link" data-scroll-target="#pairedttest">pairedTtest</a></li>
-  <li><a href="#simpleexperimentsim" id="toc-simpleexperimentsim" class="nav-link" data-scroll-target="#simpleexperimentsim">simpleexperimentsim</a></li>
-  </ul></li>
-  <li><a href="#r-markdown-templates" id="toc-r-markdown-templates" class="nav-link" data-scroll-target="#r-markdown-templates">R Markdown templates</a>
-  <ul class="collapse">
-  <li><a href="#nsfrmarkdown" id="toc-nsfrmarkdown" class="nav-link" data-scroll-target="#nsfrmarkdown">NSFrmarkdown</a></li>
-  <li><a href="#labjournalwebsite" id="toc-labjournalwebsite" class="nav-link" data-scroll-target="#labjournalwebsite">LabJournalWebsite</a></li>
-  <li><a href="#rmpatternlanguage" id="toc-rmpatternlanguage" class="nav-link" data-scroll-target="#rmpatternlanguage">rmpatternlanguage</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Apps</h1>
-</div>
-
-<div>
-  <div class="description">
-    R packages, Shiny apps, and other open-software projects. The lab shares these resources on Github.
-  </div>
-</div>
 
 
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<div class="cell">
-<style type="text/css">
-.quarto-title {
-    display: none;
-  }
-
-.description {
-    display: none;
-  }
-</style>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/apps_banner.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
+<div class="fp home people apps">
+<div class="people-hero">
+<p><img src="images/apps_banner.jpg" class="hero-banner img-fluid" alt="Apps"></p>
+<div class="hero-body">
+<p><span class="fp-kicker">~/crumplab/apps</span></p>
+<h1 class="visually-hidden">Apps</h1>
+<div class="fp-lead">
 <p>Shiny Apps, R packages, and various things</p>
-<hr>
-<section id="audio-plugins" class="level1">
-<h1>Audio Plugins</h1>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="minerva-space-echo" class="level2">
-<h2 class="anchored" data-anchor-id="minerva-space-echo"><a href="https://www.crumplab.com/MinervaSpaceEcho/">MINERVA Space Echo</a></h2>
-<p>An experimental audio effect (AU / VST3 for macOS) that treats Hintzman’s MINERVA II multiple-trace memory model as a tape echo.</p>
-<p>Manual: <a href="https://www.crumplab.com/MinervaSpaceEcho/" class="uri">https://www.crumplab.com/MinervaSpaceEcho/</a>, source code: <a href="https://github.com/CrumpLab/MinervaSpaceEcho" class="uri">https://github.com/CrumpLab/MinervaSpaceEcho</a></p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/minervaspaceecho.png" class="img-fluid figure-img" width="100"></p>
-</figure>
+</div>
+<div id="listing-stats" class="quarto-listing quarto-listing-container-custom">
+<div class="stats-line">
+<p><span><b>18</b> projects</span> <span><b>2</b> audio plugins</span> <span><b>8</b> R packages</span> <span><b>5</b> shiny apps</span> <span><b>3</b> R markdown templates</span></p>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 </div>
 </div>
+<div id="listing-apps" class="quarto-listing quarto-listing-container-custom">
+<div class="card c-blue app-directory">
+<div class="card-head">
+<p>
+<span class="card-label">┌─ software</span><span class="count">18</span>
+</p>
+</div>
+<div class="tools">
+<div class="filters" role="group" aria-label="Filter by type">
+<button type="button" class="filter active" data-cat="all" aria-pressed="true">
+all <span>18</span>
+</button>
+<button type="button" class="filter" data-cat="audio-plugins" aria-pressed="false">
+audio plugins <span>2</span>
+</button>
+<button type="button" class="filter" data-cat="r-packages" aria-pressed="false">
+R packages <span>8</span>
+</button>
+<button type="button" class="filter" data-cat="shiny-apps" aria-pressed="false">
+shiny apps <span>5</span>
+</button>
+<button type="button" class="filter" data-cat="r-markdown-templates" aria-pressed="false">
+R markdown templates <span>3</span>
+</button>
+</div>
+<p><label class="grep"><span>$ grep</span><input type="search" placeholder="name or description" aria-label="Search software"></label></p>
+</div>
+<div class="arow" data-cat="audio-plugins" data-search="minerva space echo  an experimental audio effect (au / vst3 for macos) that treats hintzman's minerva ii multiple-trace memory model as a tape echo.">
+<div class="arow-thumb">
+<a href="https://www.crumplab.com/MinervaSpaceEcho/"><img src="images/minervaspaceecho.png" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://www.crumplab.com/MinervaSpaceEcho/">MINERVA Space Echo</a><span class="lvl">audio plugins</span>
+</div>
+<div class="app-desc">
+<p>
+An experimental audio effect (AU / VST3 for macOS) that treats Hintzman’s MINERVA II multiple-trace memory model as a tape echo.
+</p>
 </div>
 </div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="pcasynth" class="level2">
-<h2 class="anchored" data-anchor-id="pcasynth"><a href="https://github.com/CrumpLab/PCASynth">PCASynth</a></h2>
-<p>An experimental synthesizer (VST3 for macOS) built on a principal components analysis of wav files.</p>
-<p>Source code: <a href="https://github.com/CrumpLab/PCASynth" class="uri">https://github.com/CrumpLab/PCASynth</a></p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/pcasynth.png" class="img-fluid figure-img" width="100"></p>
-</figure>
+<div class="arow-chips">
+<a class="pchip" href="https://www.crumplab.com/MinervaSpaceEcho/">manual</a><a class="pchip" href="https://github.com/CrumpLab/MinervaSpaceEcho">source</a>
 </div>
 </div>
+<div class="arow" data-cat="audio-plugins" data-search="pcasynth  an experimental synthesizer (vst3 for macos) built on a principal components analysis of wav files.">
+<div class="arow-thumb">
+<a href="https://github.com/CrumpLab/PCASynth"><img src="images/pcasynth.png" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://github.com/CrumpLab/PCASynth">PCASynth</a><span class="lvl">audio plugins</span>
+</div>
+<div class="app-desc">
+<p>
+An experimental synthesizer (VST3 for macOS) built on a principal components analysis of wav files.
+</p>
 </div>
 </div>
-</div>
-<hr>
-</section>
-<section id="r-packages" class="level1">
-<h1>R Packages</h1>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="midiblender" class="level2">
-<h2 class="anchored" data-anchor-id="midiblender"><a href="https://www.crumplab.com/midiblender/">midiblender</a></h2>
-<p>midiblender: Experiments in genRative MIDI mangling</p>
-<p>This is the beginnings of an #rstats package for experimental mangling of #MIDI files.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/midiblender.jpg" class="img-fluid figure-img" width="100"></p>
-</figure>
+<div class="arow-chips">
+<a class="pchip" href="https://github.com/CrumpLab/PCASynth">source</a>
 </div>
 </div>
+<div class="arow" data-cat="r-packages" data-search="midiblender midiblender: experiments in genrative midi mangling this is the beginnings of an #rstats package for experimental mangling of #midi files.">
+<div class="arow-thumb">
+<a href="https://www.crumplab.com/midiblender/"><img src="images/midiblender.jpg" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://www.crumplab.com/midiblender/">midiblender</a><span class="lvl">R packages</span>
+</div>
+<div class="app-tagline">
+midiblender: Experiments in genRative MIDI mangling
+</div>
+<div class="app-desc">
+<p>
+This is the beginnings of an #rstats package for experimental mangling of #MIDI files.
+</p>
 </div>
 </div>
-</div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="gptaddin" class="level2">
-<h2 class="anchored" data-anchor-id="gptaddin"><a href="https://crumplab.github.io/gptaddin/">gptaddin</a></h2>
-<p>Addins and shiny app for sending text to LLMs at OpenAI. The addins are focused on writing assistance tools. The shiny app has a grammar checker. This is an experimental package for personal use that may be helpful as a reference for others to build their own similar tools.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/gptaddin.png" class="img-fluid figure-img" width="100"></p>
-</figure>
+<div class="arow-chips">
+<a class="pchip" href="https://www.crumplab.com/midiblender/">site</a>
 </div>
 </div>
+<div class="arow" data-cat="r-packages" data-search="gptaddin  addins and shiny app for sending text to llms at openai. the addins are focused on writing assistance tools. the shiny app has a grammar checker. this is an experimental package for personal use that may be helpful as a reference for others to build their own similar tools.">
+<div class="arow-thumb">
+<a href="https://crumplab.github.io/gptaddin/"><img src="images/gptaddin.png" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.github.io/gptaddin/">gptaddin</a><span class="lvl">R packages</span>
+</div>
+<div class="app-desc">
+<p>
+Addins and shiny app for sending text to LLMs at OpenAI. The addins are focused on writing assistance tools. The shiny app has a grammar checker. This is an experimental package for personal use that may be helpful as a reference for others to build their own similar tools.
+</p>
 </div>
 </div>
-</div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="vertical" class="level2">
-<h2 class="anchored" data-anchor-id="vertical"><a href="https://crumplab.github.io/vertical/">vertical</a></h2>
-<p>R-studio project template and workflow for sharing psychological research projects in the form of a website.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/vertical.png" class="img-fluid figure-img" width="100"></p>
-</figure>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.github.io/gptaddin/">site</a>
 </div>
 </div>
+<div class="arow" data-cat="r-packages" data-search="vertical  r-studio project template and workflow for sharing psychological research projects in the form of a website.">
+<div class="arow-thumb">
+<a href="https://crumplab.github.io/vertical/"><img src="images/vertical.png" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.github.io/vertical/">vertical</a><span class="lvl">R packages</span>
+</div>
+<div class="app-desc">
+<p>
+R-studio project template and workflow for sharing psychological research projects in the form of a website.
+</p>
 </div>
 </div>
-</div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="rsemanticlibrarian" class="level2">
-<h2 class="anchored" data-anchor-id="rsemanticlibrarian"><a href="https://crumplab.github.io/RsemanticLibrarian/">RsemanticLibrarian</a></h2>
-<p>R functions for creating semantic librarians, a tool for vectorizing and visualizing semantic spaces from text</p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/sl_hex.png" class="img-fluid figure-img" width="100"></p>
-</figure>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.github.io/vertical/">site</a>
 </div>
 </div>
+<div class="arow" data-cat="r-packages" data-search="rsemanticlibrarian  r functions for creating semantic librarians, a tool for vectorizing and visualizing semantic spaces from text">
+<div class="arow-thumb">
+<a href="https://crumplab.github.io/RsemanticLibrarian/"><img src="images/sl_hex.png" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.github.io/RsemanticLibrarian/">RsemanticLibrarian</a><span class="lvl">R packages</span>
+</div>
+<div class="app-desc">
+<p>
+R functions for creating semantic librarians, a tool for vectorizing and visualizing semantic spaces from text
+</p>
 </div>
 </div>
-</div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="jspsychr" class="level2">
-<h2 class="anchored" data-anchor-id="jspsychr"><a href="https://crumplab.github.io/jspsychr/">jspsychr</a></h2>
-<p>Write and run jspsych experiments using R studio.</p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/jspsychr.png" class="img-fluid figure-img" width="100"></p>
-</figure>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.github.io/RsemanticLibrarian/">site</a>
 </div>
 </div>
+<div class="arow" data-cat="r-packages" data-search="jspsychr  write and run jspsych experiments using r studio.">
+<div class="arow-thumb">
+<a href="https://crumplab.github.io/jspsychr/"><img src="images/jspsychr.png" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.github.io/jspsychr/">jspsychr</a><span class="lvl">R packages</span>
+</div>
+<div class="app-desc">
+<p>
+Write and run jspsych experiments using R studio.
+</p>
 </div>
 </div>
-</div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="playjareyesores" class="level2">
-<h2 class="anchored" data-anchor-id="playjareyesores"><a href="https://crumplab.github.io/playjareyesores/">playjareyesores</a></h2>
-<p>Functions for detecting textual overlap (e.g., possible plagiarism) between documents <a href="https://crumplab.github.io/playjareyesores/" class="uri">https://crumplab.github.io/playjareyesores/</a></p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/playjareyesores.png" class="img-fluid figure-img" width="100"></p>
-</figure>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.github.io/jspsychr/">site</a>
 </div>
 </div>
+<div class="arow" data-cat="r-packages" data-search="playjareyesores  functions for detecting textual overlap (e.g., possible plagiarism) between documents">
+<div class="arow-thumb">
+<a href="https://crumplab.github.io/playjareyesores/"><img src="images/playjareyesores.png" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.github.io/playjareyesores/">playjareyesores</a><span class="lvl">R packages</span>
+</div>
+<div class="app-desc">
+<p>
+Functions for detecting textual overlap (e.g., possible plagiarism) between documents
+</p>
 </div>
 </div>
-</div>
-<hr>
-<div class="columns">
-<div class="column" style="width:70%;">
-<section id="conflictpower" class="level2">
-<h2 class="anchored" data-anchor-id="conflictpower"><a href="https://crumplab.github.io/conflictPower/">conflictPower</a></h2>
-<p>Monte-carlo based power analysis for cognitive control designs. <a href="https://crumplab.github.io/conflictPower/" class="uri">https://crumplab.github.io/conflictPower/</a></p>
-</section>
-</div><div class="column" style="width:30%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/ConflictPower.png" class="img-fluid figure-img" width="100"></p>
-</figure>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.github.io/playjareyesores/">site</a>
 </div>
 </div>
+<div class="arow" data-cat="r-packages" data-search="conflictpower  monte-carlo based power analysis for cognitive control designs.">
+<div class="arow-thumb">
+<a href="https://crumplab.github.io/conflictPower/"><img src="images/ConflictPower.png" alt="" loading="lazy"></a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.github.io/conflictPower/">conflictPower</a><span class="lvl">R packages</span>
+</div>
+<div class="app-desc">
+<p>
+Monte-carlo based power analysis for cognitive control designs.
+</p>
 </div>
 </div>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.github.io/conflictPower/">site</a>
 </div>
-<hr>
-<section id="crumplabr" class="level2">
-<h2 class="anchored" data-anchor-id="crumplabr"><a href="https://github.com/CrumpLab/crumplabr">crumplabr</a></h2>
-<p>A few functions used around the lab. Contains functions for the Van Selst and Jolicoeur outlier procedure. <a href="https://github.com/CrumpLab/crumplabr" class="uri">https://github.com/CrumpLab/crumplabr</a>.</p>
-<hr>
-</section>
-</section>
-<section id="shiny-apps" class="level1">
-<h1>Shiny Apps</h1>
-<hr>
-<section id="semanticlibrarian.com" class="level2">
-<h2 class="anchored" data-anchor-id="semanticlibrarian.com"><a href="https://www.semanticlibrarian.com/">semanticlibrarian.com</a></h2>
-<p>A semantic search engine for the APA abstract database (most of the Experimental journals from 1890s to 2016), formerly known as ATHENA.</p>
-<p>We (Harinder Aujla, Randy Jamieson, and Matthew Crump) use semantic vectors from BEAGLE (Jones &amp; Mewhort, 2007) to compute the similarity between abstracts, and authors, and authors and abstracts.</p>
-<ul>
-<li><a href="https://crumplab.shinyapps.io/SemanticLibrarian/" class="uri">https://crumplab.shinyapps.io/SemanticLibrarian/</a></li>
-<li>source code: <a href="https://github.com/CrumpLab/SemanticLibrarian" class="uri">https://github.com/CrumpLab/SemanticLibrarian</a></li>
-<li>Open science framework project: <a href="https://osf.io/wfcmg/" class="uri">https://osf.io/wfcmg/</a></li>
-<li>Publication: In press at Behavioral Research Methods.</li>
-</ul>
-<hr>
-</section>
-<section id="hypothesis_explorer" class="level2">
-<h2 class="anchored" data-anchor-id="hypothesis_explorer"><a href="hypothesis_explorer">hypothesis_explorer</a></h2>
-<p>A Shiny App for viewing annotations from the Hypothes.is database. Need to download and run locally.</p>
-<p><a href="https://github.com/CrumpLab/hypothesis_explorer" class="uri">https://github.com/CrumpLab/hypothesis_explorer</a></p>
-<hr>
-</section>
-<section id="indttest" class="level2">
-<h2 class="anchored" data-anchor-id="indttest"><a href="https://crumplab.shinyapps.io/indTtest/">indTtest</a></h2>
-<p>An independent samples t-test simulator.</p>
-<p><a href="https://crumplab.shinyapps.io/indTtest/" class="uri">https://crumplab.shinyapps.io/indTtest/</a></p>
-<hr>
-</section>
-<section id="pairedttest" class="level2">
-<h2 class="anchored" data-anchor-id="pairedttest"><a href="https://crumplab.shinyapps.io/pairedTtest/">pairedTtest</a></h2>
-<p>An paired samples t-test simulator.</p>
-<p><a href="https://crumplab.shinyapps.io/pairedTtest/" class="uri">https://crumplab.shinyapps.io/pairedTtest/</a></p>
-<hr>
-</section>
-<section id="simpleexperimentsim" class="level2">
-<h2 class="anchored" data-anchor-id="simpleexperimentsim"><a href="https://crumplab.shinyapps.io/simpleexperimentsim/">simpleexperimentsim</a></h2>
-<p>A simple experiment simulator with monte-carlo power analysis</p>
-<p><a href="https://crumplab.shinyapps.io/simpleexperimentsim/" class="uri">https://crumplab.shinyapps.io/simpleexperimentsim/</a></p>
-<hr>
-</section>
-</section>
-<section id="r-markdown-templates" class="level1">
-<h1>R Markdown templates</h1>
-<hr>
-<section id="nsfrmarkdown" class="level2">
-<h2 class="anchored" data-anchor-id="nsfrmarkdown"><a href="https://github.com/CrumpLab/NSFrmarkdown">NSFrmarkdown</a></h2>
-<p>An R markdown template for NSF grants</p>
-<p><a href="https://github.com/CrumpLab/NSFrmarkdown" class="uri">https://github.com/CrumpLab/NSFrmarkdown</a></p>
-<hr>
-</section>
-<section id="labjournalwebsite" class="level2">
-<h2 class="anchored" data-anchor-id="labjournalwebsite"><a href="https://github.com/CrumpLab/LabJournalWebsite">LabJournalWebsite</a></h2>
-<p><a href="https://github.com/CrumpLab/LabJournalWebsite" class="uri">https://github.com/CrumpLab/LabJournalWebsite</a></p>
-<p>Simple template for an R Markdown Website</p>
-<hr>
-</section>
-<section id="rmpatternlanguage" class="level2">
-<h2 class="anchored" data-anchor-id="rmpatternlanguage"><a href="https://github.com/CrumpLab/rmpatternlanguage">rmpatternlanguage</a></h2>
-<p>A bookdown theme reproducing the style of “A Pattern Language”.</p>
-<p><a href="https://github.com/CrumpLab/rmpatternlanguage" class="uri">https://github.com/CrumpLab/rmpatternlanguage</a></p>
-<hr>
+</div>
+<div class="arow" data-cat="r-packages" data-search="crumplabr  a few functions used around the lab. contains functions for the van selst and jolicoeur outlier procedure.">
+<div class="arow-thumb">
+<a href="https://github.com/CrumpLab/crumplabr">
+<div class="glyph-tile">
+{ R }
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://github.com/CrumpLab/crumplabr">crumplabr</a><span class="lvl">R packages</span>
+</div>
+<div class="app-desc">
+<p>
+A few functions used around the lab. Contains functions for the Van Selst and Jolicoeur outlier procedure.
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="https://github.com/CrumpLab/crumplabr">source</a>
+</div>
+</div>
+<div class="arow" data-cat="shiny-apps" data-search="semanticlibrarian.com  a semantic search engine for the apa abstract database (most of the experimental journals from 1890s to 2016), formerly known as athena. we (harinder aujla, randy jamieson, and matthew crump) use semantic vectors from beagle (jones &amp; mewhort, 2007) to compute the similarity between abstracts, and authors, and authors and abstracts.">
+<div class="arow-thumb">
+<a href="https://www.semanticlibrarian.com/">
+<div class="glyph-tile">
+app()
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://www.semanticlibrarian.com/">semanticlibrarian.com</a><span class="lvl">shiny apps</span>
+</div>
+<div class="app-desc">
+<p>
+A semantic search engine for the APA abstract database (most of the Experimental journals from 1890s to 2016), formerly known as ATHENA.
+</p>
+<p>
+We (Harinder Aujla, Randy Jamieson, and Matthew Crump) use semantic vectors from BEAGLE (Jones &amp; Mewhort, 2007) to compute the similarity between abstracts, and authors, and authors and abstracts.
+</p>
+<p class="anote">
+Publication: In press at Behavioral Research Methods.
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="https://www.semanticlibrarian.com/">site</a><a class="pchip" href="https://crumplab.shinyapps.io/SemanticLibrarian/">app</a><a class="pchip" href="https://github.com/CrumpLab/SemanticLibrarian">source</a><a class="pchip" href="https://osf.io/wfcmg/">osf</a>
+</div>
+</div>
+<div class="arow" data-cat="shiny-apps" data-search="hypothesis_explorer  a shiny app for viewing annotations from the hypothes.is database. need to download and run locally.">
+<div class="arow-thumb">
+<a href="hypothesis_explorer">
+<div class="glyph-tile">
+app()
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="hypothesis_explorer">hypothesis_explorer</a><span class="lvl">shiny apps</span>
+</div>
+<div class="app-desc">
+<p>
+A Shiny App for viewing annotations from the Hypothes.is database. Need to download and run locally.
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="hypothesis_explorer">site</a><a class="pchip" href="https://github.com/CrumpLab/hypothesis_explorer">source</a>
+</div>
+</div>
+<div class="arow" data-cat="shiny-apps" data-search="indttest  an independent samples t-test simulator.">
+<div class="arow-thumb">
+<a href="https://crumplab.shinyapps.io/indTtest/">
+<div class="glyph-tile">
+app()
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.shinyapps.io/indTtest/">indTtest</a><span class="lvl">shiny apps</span>
+</div>
+<div class="app-desc">
+<p>
+An independent samples t-test simulator.
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.shinyapps.io/indTtest/">app</a>
+</div>
+</div>
+<div class="arow" data-cat="shiny-apps" data-search="pairedttest  an paired samples t-test simulator.">
+<div class="arow-thumb">
+<a href="https://crumplab.shinyapps.io/pairedTtest/">
+<div class="glyph-tile">
+app()
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.shinyapps.io/pairedTtest/">pairedTtest</a><span class="lvl">shiny apps</span>
+</div>
+<div class="app-desc">
+<p>
+An paired samples t-test simulator.
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.shinyapps.io/pairedTtest/">app</a>
+</div>
+</div>
+<div class="arow" data-cat="shiny-apps" data-search="simpleexperimentsim  a simple experiment simulator with monte-carlo power analysis">
+<div class="arow-thumb">
+<a href="https://crumplab.shinyapps.io/simpleexperimentsim/">
+<div class="glyph-tile">
+app()
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://crumplab.shinyapps.io/simpleexperimentsim/">simpleexperimentsim</a><span class="lvl">shiny apps</span>
+</div>
+<div class="app-desc">
+<p>
+A simple experiment simulator with monte-carlo power analysis
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="https://crumplab.shinyapps.io/simpleexperimentsim/">app</a>
+</div>
+</div>
+<div class="arow" data-cat="r-markdown-templates" data-search="nsfrmarkdown  an r markdown template for nsf grants">
+<div class="arow-thumb">
+<a href="https://github.com/CrumpLab/NSFrmarkdown">
+<div class="glyph-tile">
+.Rmd
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://github.com/CrumpLab/NSFrmarkdown">NSFrmarkdown</a><span class="lvl">R markdown templates</span>
+</div>
+<div class="app-desc">
+<p>
+An R markdown template for NSF grants
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="https://github.com/CrumpLab/NSFrmarkdown">source</a>
+</div>
+</div>
+<div class="arow" data-cat="r-markdown-templates" data-search="labjournalwebsite  simple template for an r markdown website">
+<div class="arow-thumb">
+<a href="https://github.com/CrumpLab/LabJournalWebsite">
+<div class="glyph-tile">
+.Rmd
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://github.com/CrumpLab/LabJournalWebsite">LabJournalWebsite</a><span class="lvl">R markdown templates</span>
+</div>
+<div class="app-desc">
+<p>
+Simple template for an R Markdown Website
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="https://github.com/CrumpLab/LabJournalWebsite">source</a>
+</div>
+</div>
+<div class="arow" data-cat="r-markdown-templates" data-search="rmpatternlanguage  a bookdown theme reproducing the style of &quot;a pattern language&quot;.">
+<div class="arow-thumb">
+<a href="https://github.com/CrumpLab/rmpatternlanguage">
+<div class="glyph-tile">
+.Rmd
+</div>
+</a>
+</div>
+<div class="arow-main">
+<div class="arow-name">
+<a href="https://github.com/CrumpLab/rmpatternlanguage">rmpatternlanguage</a><span class="lvl">R markdown templates</span>
+</div>
+<div class="app-desc">
+<p>
+A bookdown theme reproducing the style of “A Pattern Language”.
+</p>
+</div>
+</div>
+<div class="arow-chips">
+<a class="pchip" href="https://github.com/CrumpLab/rmpatternlanguage">source</a>
+</div>
+</div>
+<p class="empty" hidden="">
+No matches.
+</p>
+</div>
+<script>
+document.querySelectorAll('.app-directory').forEach(function (card) {
+  var buttons = card.querySelectorAll('.filter'), input = card.querySelector('.grep input');
+  var rows = card.querySelectorAll('.arow'), empty = card.querySelector('.empty'), cat = 'all';
+  function apply() {
+    var q = input.value.trim().toLowerCase(), shown = 0;
+    rows.forEach(function (r) {
+      var ok = (cat === 'all' || r.dataset.cat === cat) && (!q || r.dataset.search.indexOf(q) !== -1);
+      r.hidden = !ok; if (ok) shown++;
+    });
+    empty.hidden = shown > 0;
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      cat = b.dataset.cat;
+      buttons.forEach(function (x) { var on = x === b; x.classList.toggle('active', on); x.setAttribute('aria-pressed', on); });
+      apply();
+    });
+  });
+  input.addEventListener('input', apply);
+});
+</script>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

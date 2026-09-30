@@ -1,82 +1,80 @@
 ---
 title: "People"
 description: "The lab is run by Dr. Matthew Crump and student research assistants from undergraduates to doctoral students."
+image: images/people_banner.jpg
+toc: false
+hide-title-block: true
+page-layout: custom
+css:
+  - home/home.css
+  - people-page/people.css
 listing:
-  contents: people
-  id: people_list
-  sort: "order"
-  type: grid
-  categories: false
-  image-align: 'right'
-  image-height: '100%'
-  grid-columns: 4
-  image-placeholder: 'people/imgs/placeholder.jpg'
-format:
-  html:
-    page-layout: full
+  - id: members
+    contents: people
+    sort: "order"
+    template: people-page/members.ejs
+  - id: alumni
+    contents: listings/alumni.yaml
+    sort: false
+    template: people-page/alumni-table.ejs
 ---
 
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
+::::::::::::::::: {.fp .home .people}
+::::: people-hero
+![](images/people_banner.jpg){.hero-banner fig-alt="People"}
+
+:::: hero-body
+[\~/crumplab/people]{.fp-kicker}
+
+```{=html}
+<h1 class="visually-hidden">People</h1>
 ```
 
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/people_banner.jpg')
-```
+::: fp-lead
+The lab is run by Dr. Matthew Crump and student research assistants from undergraduates to doctoral students.
+:::
+::::
+:::::
 
-## Lab Members
-
-::: {#people_list}
+::::::::::: bento
+::::::: {#pi .card .span-7 .c-pink}
+::: card-head
+[┌─ principal investigator]{.card-label} [full profile →](people/matt_crump.qmd){.fp-more}
 :::
 
-## Previous
+::::: pi
+![](people/imgs/Crump.jpg){fig-alt="Portrait of Matthew Crump"}
 
-### Postdoctoral
+:::: pi-text
+## Matthew Crump
 
--   [Lawrence Behmer](https://www.isu.edu/psych/people/faculty/facultyandstaff/lawrence-p-behmer-jr-phd.html) (2014 - 2017), Idaho State University
+[Professor · Department of Psychology · Brooklyn College of CUNY]{.pi-role}
 
-### Doctoral
+Matt Crump is a cognitive psychologist with research interests in learning, memory, attention, skill learning, semantics, and computational modeling. He runs the computational cognition lab at Brooklyn College of CUNY.
 
--   [Drew Shives](https://www.linkedin.com/in/drewshives/), goguma
--   [Nicholaus Brosowsky](https://nbrosowsky.github.io/index.html) (2014 - 2019), University of Manitoba
--   [Kevonte Mitchell](https://www.mitmillconsulting.com/about) (2012 - 2023), Mit + Mill Consulting
+::: link-chips
+[GitHub](https://github.com/CrumpLab){.chip} [Google Scholar](https://scholar.google.com/citations?user=49EVuVcAAAAJ&hl=en){.chip} [YouTube](https://www.youtube.com/c/CrumpsComputationalCognitionLab){.chip} [Brooklyn College](https://www.brooklyn.edu/faculty-staff/matthew-crump/){.chip} [The Graduate Center, CUNY](https://www.gc.cuny.edu/psychology/training-areas/cognitive-and-comparative-psychology){.chip}
+:::
+::::
+:::::
+:::::::
 
-### Masters
+::::: {#current .card .span-5 .c-blue}
+::: card-head
+[┌─ lab members]{.card-label} [about joining →](Opportunities.qmd){.fp-more}
+:::
 
--   2016: Ashot Balayan, "Subjective Confidence in the Evaluations of Typing Speed:Testing the Self-Consistency Model", Master's Thesis
--   2016: Michelle Villavicencio, "Aesthetic Preference in Dance Movement: Motor Fluency and the Mere Exposure Effect", Master's Thesis
+::: {#members}
+:::
 
-### Undergraduate
+Dr. Crump has mentored students interested in cognition at all levels, including undergraduate, master's, doctoral, and postdoctoral researchers. There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr. Crump is serving a three year term as Department Chair.
+:::::
+:::::::::::
 
--   2024: Hao Zhu, ["The psychophysics of entropy judgments for musical note sequences"](https://www.crumplab.com/midi-entropy-judgment/), Psyc 5001, CUNY BA
--   2023: Shifa Maqsood, ["Is The Self Reference Effect a Retrieval Practice Phenomenon?"](http://www.crumplab.com/self-reference/), Undergraduate Honors thesis, Tow Presidential Mentoring Scholar
--   2023: Hao Zhu, Psyc 2001 Laboratory Experience, CUNY BA
--   2023: Chantal Miller, Psyc 2001 Laboratory Experience
--   2023: Cobe Liu, Psyc 2001 Laboratory Experience, Macaulay Honors
--   2022: Wesley Huang, Undergraduate, Tow Presidential Mentoring Scholar
--   2022: Patrick Ihejirika, ["Try and forget this image: The role of stimulus duration in directed forgetting for natural scenes"](https://www.crumplab.com/PatrickHonorsThesis/), Undergraduate MARC Honors thesis, Barry Goldwater Scholar
--   2022: Kendra Scarlett Reynoso Moreno, Undergraduate CUNY BA Program
--   2021: Austin Kaplan, "Explaining contingency judgments with a computational model of instance-based memory", Undergraduate Honors Thesis
--   2019: Mark Rayev, "Deception detection through word usage and word production time in typing", Undergraduate Macaulay Honors
--   2018: [Walter Lai](https://www.linkedin.com/in/walter-lai-31395b181), Contributing author on ["Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics"](https://crumplab.github.io/EntropyTyping/index.html), currently completing a Masters in Data Science at Southern Methodist University
--   2018: Rochelle Hall, Undergraduate REU
--   2017: Chin Tan, "Examining cognitive control and information theory accounts of mid-word slowing in skilled typing", Undergraduate
--   2017: Marissa Scotto, Undergraduate REU
--   2016: Niles Uy, "A twofold investigation into the nature of dual-task interference", Honor's Thesis
--   2016: Ana Sanchez, "EEG and learning to type on a novel keyboard", REU program
--   2015: [Shawn Lauzon](https://ca.linkedin.com/public-profile/in/shawnlauzon?challengeId=AQFcIfKDBrAmIwAAAXeRzrHYBkBMThytBYhCccIDOoXwmYQi8c63SVZAcQYiJ3KmAnk1nUFkmVmCtZt_uAQLcprxdAvToBGp4g&submissionId=07d8640c-98bc-6216-77a1-f4946022cd2e), "Escape from the canyon: an objective measure of insight through convergent and divergent thinking", Independent Study
--   2015: Rebecca Colon, "Resource Demands of a Dual-Task Disrupts Skilled Typing", REU program
--   2014-2015: [Elena Dominguez](https://www.blackinneuro.com/profiles/elena-dominguez), "Explaining the list-wide proportion congruent effect", "Reliability and precision of basic and manipulated flanker tasks", MARC program, currently a [Ph.D. Candidate at UCI](https://faculty.sites.uci.edu/starklab/elena-dominguez/)
--   2014: Michael Blecher, "False-recognition by test-induced priming for non-studied lists", Independent Study
--   2014: [Niles Uy](https://www.linkedin.com/in/niles-uy?trk=public_profile_browsemap_profile-result-card_result-card_full-click), "Is the flanker task reliable?", Independent Study, went on to KU Leuven for a Masters in Statistics
--   2013: [Emily Paolillo](https://clinpsyc.sdsu.edu/emily-paolillo/), "The role of explicit and implicit knowledge in typing skill", Honor's Thesis. Completing a Ph.D. in Neuropsychology \@ UC San Diego
--   2013: Esthena Brutten, "Online investigations of contextual interference in motor learning", Independent Study
--   2013: Esthena Brutten, "Proportion congruent manipulations on Amazon's mechanical Turk", Honor's thesis
+::: section-title
+## Former lab members
+:::
+
+::: {#alumni}
+:::
+:::::::::::::::::

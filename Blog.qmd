@@ -2,37 +2,44 @@
 title: "Blog"
 description: "Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads."
 image: "images/blog_banner.jpg"
+toc: false
+hide-title-block: true
+page-layout: custom
+css:
+  - home/home.css
+  - people-page/people.css
+  - blog-page/blog.css
+include-after-body: blog-page/filter.html
 listing:
   contents: blog
   id: blog-list
   sort: "date desc"
-  type: default
-  categories: true
-  image-align: 'right'
-  image-placeholder: 'images/crumplab.png'
+  date-format: "MMM D, YYYY"
+  template: blog-page/latest.ejs
   feed: true
-format: 
-  html: 
-    page-layout: full
 ---
 
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
+:::::: {.fp .home .people .blog}
+
+::::: people-hero
+![](images/blog_banner.jpg){.hero-banner fig-alt="Blog"}
+
+::: hero-body
+[\~/crumplab/blog]{.fp-kicker}
+
+```{=html}
+<h1 class="visually-hidden">Blog</h1>
 ```
 
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/blog_banner.jpg')
-```
-
+::: fp-lead
 Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.
+:::
+
+[rss](Blog.xml){.pchip .rss}
+:::
+:::::
 
 ::: {#blog-list}
 :::
+
+::::::

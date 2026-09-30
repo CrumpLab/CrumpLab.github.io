@@ -1,0 +1,58 @@
+<script>
+/* Blog filters: category buttons, clickable tags, a grep box, and
+   #category=... links from posts (Quarto's category link format). */
+document.addEventListener('DOMContentLoaded', function () {
+  var root = document.querySelector('.blog-list');
+  if (!root) return;
+  var rows = root.querySelectorAll('.brow');
+  var buttons = root.querySelectorAll('.filter');
+  var input = root.querySelector('.grep input');
+  var status = root.querySelector('.filter-status');
+  var empty = root.querySelector('.empty');
+  var cat = 'all';
+  function apply() {
+    var q = input ? input.value.trim().toLowerCase() : '';
+    var shown = 0;
+    rows.forEach(function (r) {
+      var cats = (r.dataset.cats || '').split('|');
+      var ok = (cat === 'all' || cats.indexOf(cat) !== -1) && (!q || r.dataset.search.indexOf(q) !== -1);
+      r.hidden = !ok;
+      if (ok) shown++;
+    });
+    root.querySelectorAll('.bgroup').forEach(function (g) {
+      g.hidden = !g.querySelector('.brow:not([hidden])');
+    });
+    buttons.forEach(function (b) {
+      var on = b.dataset.cat === cat;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on);
+    });
+    if (status) {
+      status.hidden = cat === 'all';
+      var label = status.querySelector('.fs-cat');
+      var named = root.querySelector('[data-tag="' + cat + '"]');
+      if (label) label.textContent = named ? named.textContent : cat;
+    }
+    if (empty) empty.hidden = shown > 0;
+  }
+  function setCat(c) {
+    cat = c || 'all';
+    if (cat === 'all') history.replaceState(null, '', location.pathname);
+    else history.replaceState(null, '', '#category=' + encodeURIComponent(cat));
+    apply();
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { setCat(b.dataset.cat); }); });
+  root.querySelectorAll('[data-tag]').forEach(function (t) {
+    t.addEventListener('click', function (e) { e.preventDefault(); setCat(t.dataset.tag); window.scrollTo({ top: root.offsetTop - 80, behavior: 'smooth' }); });
+  });
+  root.querySelectorAll('.fs-clear').forEach(function (c) { c.addEventListener('click', function () { setCat('all'); }); });
+  if (input) input.addEventListener('input', apply);
+  function fromHash() {
+    var m = location.hash.match(/category=([^&]+)/);
+    if (m) { cat = decodeURIComponent(m[1]).toLowerCase(); apply(); }
+  }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+  apply();
+});
+</script>

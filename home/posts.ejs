@@ -1,0 +1,14 @@
+<ol class="fp-posts">
+<% for (const item of items) { %>
+<li class="fp-post">
+<% if (item.image) { %>
+<div class="fp-post-image"><a href="<%- item.path %>"><img src="<%- item.image %>" alt="" loading="lazy"></a></div>
+<% } %>
+<div class="fp-post-date"><%- item.date %></div>
+<div class="fp-post-body">
+<div class="fp-post-title"><a href="<%- item.path %>"><%- item.title %></a></div>
+<% if (item.description) { %><div class="fp-post-desc"><%- item.description %></div><% } %>
+</div>
+</li>
+<% } %>
+</ol>

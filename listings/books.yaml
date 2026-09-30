@@ -1,0 +1,115 @@
+# Books and open educational resources shown on the Books page, in page order.
+# Fields: title, url, image, tagline, description (HTML), credits (role + names),
+# notes (HTML), built, source, license + license_url, citation (HTML).
+
+- title: Instances of Cognition
+  url: https://www.crumplab.com/cognition/textbook/index.html
+  image: images/2530_image.jpg
+  description: This is a free, open-educational textbook and set of course materials for an introductory undergraduate course in cognition. The materials have been in continuous development since Fall 2021. All of the materials are CC BY-SA 4.0 creative-commons licensed and free for others to use, copy, remix, re-use.
+  built: Written in RStudio with Quarto.
+  source: https://github.com/CrumpLab/cognition
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  citation: 'Crump, M. J. C. (2022, April 21). Instances of Cognition: Questions, Methods, Findings, Explanations, Applications, and Implications.'
+- title: 'Reproducible statistics for psychologists with R: Lab Tutorials'
+  url: https://crumplab.github.io/rstatsforpsych/
+  image: images/RstatsCover.png
+  description: This is a series of labs/tutorials for a two-semester graduate-level statistics sequence in Psychology @ Brooklyn College of CUNY. The first set of 13 labs roughly tracks "Thinking with Data" (Vokey & Allen, 2018) and "Answering questions with data" (Crump et al., 2018); the second set of labs (to be written on a weekly basis during the Spring 2021 semester) roughly tracks "Experimental Design and Analysis for Psychology" (Abdi et al., 2009).
+  built: Written in Rmarkdown, and compiled with the bookdown package.
+  source: https://github.com/CrumpLab/rstatsforpsych
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  citation: 'Crump, M. J. C. (2020, December 10). Reproducible statistics for psychologists with R: Lab Tutorials. https://doi.org/10.17605/OSF.IO/KBHGA'
+- title: 'Using R for Reproducible Research: Student contributed tutorials'
+  url: https://crumplab.github.io/psyc7709_2019/book/docs/index.html
+  image: images/ReproStudentBook.png
+  description: 'These chapters were written by students in <a href="https://crumplab.github.io/psyc7709_2019/">PSYC 7709: Using R for Reproducible research</a>, Spring 2019 @ Brooklyn College of CUNY, as a part of their final project to write a tutorial about an R package.'
+  built: Written in Rmarkdown, and compiled with the bookdown package.
+  source: https://github.com/CrumpLab/psyc7709_2019
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  citation: 'Abdelrahman, K., Contreras, A., Degtyarev, Z., Deng, J., Foster, J., Franz, A., Funderburk, T., Horger, M., Kravitz, J., Lakshin A., Manigat, M., Trois, R., Vasquez, A., Vo, A., Wilson, N., and Yeremenko, M. (2019). <em>Using R for Reproducible Research: Student Contributed Tutorials.</em> (M. J. C. Crump, Ed.).'
+- title: 'Answering Questions with Data: Introductory Statistics for Psychology Students'
+  url: https://crumplab.github.io/statistics/
+  image: images/TextbookCover.png
+  description: This is a free introductory statistics textbook for undergraduates in Psychology. It is being developed as an Open Educational Resource @ Brooklyn College. It is pitched at the concepts behind statistics, and often uses simulation in R to convey foundational ideas. The writing style is sometimes a bit unconventional, and informal. It is for students who don't want to like statistics.
+  built: Written in Rmarkdown, and compiled with the bookdown package.
+  source: https://github.com/CrumpLab/statistics
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  citation: 'Crump, M. J. C., Navarro, D., & Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52'
+  credits:
+  - role: Authors
+    names: 'Matthew Crump; Chapters 2 and 4 adapted from Navarro, D.; Videos: Jeffrey Suzuki'
+- title: 'Answering Questions with Data: The Lab Manual'
+  url: https://crumplab.github.io/statisticsLab/
+  image: images/LabmanualCover.png
+  tagline: Lab activities using R, Excel, SPSS, and JAMOVI
+  description: This is the companion lab manual to our free stats book. It contains lab activities for learning how to conduct statistical tests in R, Excel, SPSS, and JAMOVI. We use open data, often from psychology papers, and show step-by-step how to solve data-analysis problems in each software package.
+  built: Written in Rmarkdown, and compiled with the bookdown package.
+  source: https://github.com/CrumpLab/statisticsLab
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  citation: 'Crump, M. J. C., Krishnan, A., Volz, S., & Chavarga, A. (2019, June 5). Answering Questions with Data: The Lab Manual for R, Excel, SPSS and Jamovi. https://doi.org/10.17605/OSF.IO/M2NPJ'
+  credits:
+  - role: Authors
+    names: Matthew Crump (R); Stephen Volz (Excel); Alla Chavarga (SPSS); Anjali Krishnan (JAMOVI)
+  notes:
+  - Some of the labs are adapated from <a href="https://sites.trinity.edu/osl">Open Stats Lab</a>, another great resource.
+- title: 'Answering Questions with Data: The Course Website'
+  url: https://crumplab.github.io/psyc3400/
+  image: images/Psyc3400.png
+  tagline: A copiable course website for introductory statistics
+  description: This website was created in R Markdown. It contains most of the course materials I use when teaching undergraduate statistics for psychology. IT includes slide decks for presentations.
+  built: Written in Rmarkdown, and compiled with the bookdown package.
+  source: https://github.com/CrumpLab/psyc3400
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  citation: 'Crump, M. J. C. (2019, June 5). Answering Questions with Data: Course Website. https://doi.org/10.17605/OSF.IO/AWXU9'
+  credits:
+  - role: Authors
+    names: Matthew Crump
+- title: Research Methods for Psychology
+  url: https://crumplab.github.io/ResearchMethods/
+  image: images/ResearchMethods.png
+  description: A free Research methods textbook for undergraduates in Psychology, creative commons license, remix, reuse, edit, contribute.
+  built: Written in Rmarkdown, and compiled with the bookdown package.
+  source: https://github.com/CrumpLab/ResearchMethods
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  credits:
+  - role: Authors
+    names: Matthew J. C. Crump, Paul C. Price, Rajiv Jhangiani, I-Chant A. Chiang, Dana C. Leighton
+- title: 'Cognitive Technologies: From Theory and Data to Application'
+  url: https://crumplab.github.io/cognitivetechnologies/book/
+  image: images/CogTech.png
+  description: <a href="https://crumplab.github.io/cognitivetechnologies/book/">A series of chapters on cognitive technologies</a> written by doctoral students who took my course on Cognitive Technologies in Spring 2018. They wrote it, I compiled it using bookdown.
+  credits:
+  - role: Editor
+    names: Crump, M. J. C
+  - role: Authors
+    names: Crump, M. J. C.; Amada, N.; Bourque, K; Brosowsky, N.; Ergun, T.; Korovatskaya, A.; Ma, X.; Seoung, Y.; Wylie, J.
+- title: Open tools for writing open interactive textbooks (and more)
+  url: https://crumplab.github.io/OER_bookdown/
+  image: images/OER.png
+  description: tutorial overview of the process I use to write books using R, R-studio, R-markdown, and compile them in bookdown. I've used this process for all of these books. Some other brief tidbits on using hypothes.is, and R-Shiny apps, also Zotero and hosting on github pages (where this website is hosted)
+  built: Written in Rmarkdown, and compiled with the bookdown package.
+  source: https://github.com/CrumpLab/OER_bookdown
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credits:
+  - role: Author
+    names: Matthew J. C. Crump
+  notes:
+  - Note this is a meta-book. The tutorial above is for you to read so you can download the source code, then compile it yourself, then edit it to make your own.
+- title: 'Programming for Psychologists: Data Creation and Analysis'
+  url: https://crumplab.github.io/programmingforpsych/
+  image: images/Programming.png
+  description: Some notes that got big enough to make a book. Beginner introduction to coding in R, Livecode, and some web-programming, for the purposes of making data with computers (programming experiments), and analyzing it in R.
+  built: Written in Rmarkdown, and compiled with the bookdown package.
+  source: https://github.com/CrumpLab/programmingforpsych
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credits:
+  - role: Author
+    names: Matthew J. C. Crump

@@ -2,9 +2,11 @@ project:
   type: website
   output-dir: docs/
   resources:
-    - "webr-serviceworker.js"
-    - "webr-worker.js"
     - /publications
+    # CNAME keeps the crumplab.com custom domain on GitHub Pages. The blog's
+    # placeholder thumbnail isn't copied automatically.
+    - CNAME
+    - images/crumplab.png
 
 website:
   title: "crumplab"
@@ -32,15 +34,23 @@ website:
         aria-label: GitHub
       - icon: youtube
         href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
-        aria-label: Youtube
+        aria-label: YouTube
       - icon: rss
         href: Blog.xml
+        aria-label: Blog RSS feed
+
+# Re-run R code only when a page's source changes. Results are stored in
+# _freeze/, which is committed so a full render doesn't re-execute old posts.
+execute:
+  freeze: auto
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: [cosmo, _assets/theme.scss]
     toc: true
+    # Pages that set `banner:` in their front matter show that image in place
+    # of the title block (see _assets/title-block.html).
+    template-partials:
+      - _assets/title-block.html
 
 editor: visual
-

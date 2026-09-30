@@ -1,0 +1,30 @@
+<%
+  var chipsFor = function (a) {
+    var main = /github\.com/.test(a.url) ? "source" : /shinyapps\.io/.test(a.url) ? "app" : "site";
+    var out = [[main, a.url]];
+    (a.links || []).forEach(function (l) {
+      var same = out.filter(function (c) { return c[1].replace(/\/$/, "") === l.url.replace(/\/$/, ""); })[0];
+      if (same) same[0] = l.label; else out.push([l.label, l.url]);
+    });
+    return out.map(function (c) { return "<a class=\"pchip\" href=\"" + c[1] + "\">" + c[0] + "</a>"; }).join("");
+  };
+  var glyph = { "Audio Plugins": "~ ∿ ~", "R Packages": "{ R }", "Shiny Apps": "app()", "R Markdown templates": ".Rmd" };
+  var thumb = function (a) {
+    return a.image ? "<img src=\"" + a.image + "\" alt=\"\" loading=\"lazy\">" : "<div class=\"glyph-tile\">" + (glyph[a.category] || "{ }") + "</div>";
+  };
+  var desc = function (a) {
+    var d = a.description || [];
+    if (typeof d === "string") d = [d];
+    return d.map(function (p) { return "<p>" + p + "</p>"; }).join("") + (a.notes || []).map(function (n) { return "<p class=\"anote\">" + n + "</p>"; }).join("");
+  };
+  var lc = function (c) { return c.split(" ").map(function (w) { return w === "R" ? w : w.toLowerCase(); }).join(" "); };
+  var slug = function (s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); };
+  var cats = [];
+  items.forEach(function (a) { if (cats.indexOf(a.category) === -1) cats.push(a.category); });
+  var inCat = function (c) { return items.filter(function (a) { return a.category === c; }); };
+%>
+<div class="stats-line">
+<span><b><%- items.length %></b> projects</span>
+<% cats.forEach(function (c) { %><span><b><%- inCat(c).length %></b> <%- lc(c) %></span>
+<% }); %>
+</div>

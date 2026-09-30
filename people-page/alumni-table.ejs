@@ -1,0 +1,46 @@
+<%
+  var who = function (a) { return a.url ? '<a href="' + a.url + '">' + a.name + '</a>' : a.name; };
+  var work = function (a) {
+    if (a.now) return '→ ' + a.now;
+    var head = (a.role ? a.role + ' ' : '') + (a.projects || []).map(function (p) {
+      return p.url ? '<a href="' + p.url + '">"' + p.title + '"</a>' : '"' + p.title + '"';
+    }).join(', ');
+    return head && a.details ? head + ', ' + a.details : (head || a.details || '');
+  };
+  var levels = [['all', 'all'], ['postdoc', 'postdoc'], ['doctoral', 'doctoral'], ['masters', "master's"], ['undergraduate', 'undergraduate']];
+  var count = function (lvl) { return lvl === 'all' ? items.length : items.filter(function (a) { return a.level === lvl; }).length; };
+  var tag = { postdoc: 'postdoc', doctoral: 'phd', masters: "master's", undergraduate: 'undergrad' };
+%>
+<div class="card span-12 c-green directory">
+<div class="card-head"><p><span class="card-label">┌─ former lab members</span><span class="count"><%- items.length %></span></p></div>
+<div class="filters" role="group" aria-label="Filter by level">
+<% levels.forEach(function (l, i) { %>
+<button type="button" class="filter<%- i === 0 ? ' active' : '' %>" data-level="<%- l[0] %>" aria-pressed="<%- i === 0 ? 'true' : 'false' %>"><%- l[1] %> <span><%- count(l[0]) %></span></button>
+<% }); %>
+</div>
+<div class="dir-table">
+<div class="dir-row dir-header"><div>year</div><div>name</div><div>level</div><div>work</div></div>
+<% items.forEach(function (a) { %>
+<div class="dir-row" data-level="<%- a.level %>">
+<div class="dir-year"><%- a.years || '' %></div>
+<div class="dir-name"><%= who(a) %></div>
+<div class="dir-level"><span class="lvl"><%- tag[a.level] %></span></div>
+<div class="dir-work"><%= work(a) %></div>
+</div>
+<% }); %>
+</div>
+</div>
+<script>
+document.querySelectorAll('.directory').forEach(function (card) {
+  var buttons = card.querySelectorAll('.filter');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lvl = b.dataset.level;
+      buttons.forEach(function (x) { var on = x === b; x.classList.toggle('active', on); x.setAttribute('aria-pressed', on); });
+      card.querySelectorAll('.dir-row[data-level]').forEach(function (r) {
+        r.hidden = lvl !== 'all' && r.dataset.level !== lvl;
+      });
+    });
+  });
+});
+</script>

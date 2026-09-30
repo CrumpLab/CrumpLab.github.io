@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>Publications – crumplab</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -31,15 +37,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-70e5f3d6ff9ecceaff85eedbd01a7aa6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,16 +85,20 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home/home.css">
+<link rel="stylesheet" href="people-page/people.css">
+<link rel="stylesheet" href="pubs-page/pubs.css">
 <meta property="og:title" content="Publications – crumplab">
 <meta property="og:description" content="Peer-reviewed publications. They should all have downloadable pdfs, and if they don’t email me.">
+<meta property="og:image" content="https://crumplab.com/images/publications_banner.jpg">
 <meta property="og:site_name" content="crumplab">
 <meta name="twitter:title" content="Publications – crumplab">
 <meta name="twitter:description" content="Peer-reviewed publications. They should all have downloadable pdfs, and if they don’t email me.">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://crumplab.com/images/publications_banner.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -148,21 +159,12 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/@MattCrumpLab"> <i class="bi bi-mastodon" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://bsky.app/profile/mattcrumplab.bsky.social"> 
-<span class="menu-text">bluesky</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> <i class="bi bi-youtube" role="img" aria-label="Youtube">
+    <a class="nav-link" href="https://www.youtube.com/c/CrumpsComputationalCognitionLab"> <i class="bi bi-youtube" role="img" aria-label="YouTube">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./Blog.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./Blog.xml"> <i class="bi bi-rss" role="img" aria-label="Blog RSS feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -174,381 +176,1630 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#forthcoming" id="toc-forthcoming" class="nav-link active" data-scroll-target="#forthcoming">Forthcoming</a></li>
-  <li><a href="#published" id="toc-published" class="nav-link" data-scroll-target="#published">Published</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Publications</h1>
+
+
+
+<div class="fp home people pubs">
+<div class="people-hero">
+<p><img src="images/publications_banner.jpg" class="hero-banner img-fluid" alt="Publications"></p>
+<div class="hero-body">
+<p><span class="fp-kicker">~/crumplab/publications</span></p>
+<h1 class="visually-hidden">Publications</h1>
+<div class="fp-lead">
+<p>Peer-reviewed publications, with downloadable PDFs for most papers. If a PDF is missing, email me.</p>
 </div>
-
-<div>
-  <div class="description">
-    Peer-reviewed publications. They should all have downloadable pdfs, and if they don’t email me.
-  </div>
-</div>
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<div class="cell">
-<style type="text/css">
-.quarto-title {
-    display: none;
-}
-
-.description {
-    display: none;
-}
-
-.publications {
-  text-indent: -10px; 
-  padding-left: 10px;
-}
-
-.publinks {
-  text-indent: 0px; 
-  padding-left: 0px;
-}
-</style>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="images/publications_banner.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
-</figure>
+<div class="stats-line">
+<span><b>56</b> publications</span><span><b>48</b> articles</span><span><b>5</b> books &amp; chapters</span><span><b>2</b> forthcoming</span><span>since <b>2006</b></span>
 </div>
 </div>
 </div>
+<nav class="yearbar" aria-label="Jump to year">
+<a href="#y2025">2025</a><a href="#y2024">2024</a><a href="#y2023">2023</a><a href="#y2021">2021</a><a href="#y2020">2020</a><a href="#y2019">2019</a><a href="#y2018">2018</a><a href="#y2017">2017</a><a href="#y2016">2016</a><a href="#y2013">2013</a><a href="#y2012">2012</a><a href="#y2011">2011</a><a href="#y2010">2010</a><a href="#y2009">2009</a><a href="#y2008">2008</a><a href="#y2007">2007</a><a href="#y2006">2006</a>
+</nav>
+<div class="card c-blue pub-timeline">
+<section class="tl-year" id="y2025">
+<div class="tl-label">
+2025<span>1 paper</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="forthcoming" data-year="2025" data-search="an instance theory of associative inference jamieson, randall k. crump, matthew j.c. accepted at american journal of psychology na 2025">
+<div class="pyear">
+2025
+</div>
+<div class="pmain">
+<div class="ptitle">
+An instance theory of associative inference
+</div>
+<div class="pauthors">
+Jamieson, R. K., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Accepted at American Journal of Psychology</em><span class="ptag">article</span><span class="ptag ptag-soon">forthcoming</span>
+</div>
+</div>
+<div class="plinks">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2024">
+<div class="tl-label">
+2024<span>1 paper</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="forthcoming" data-year="2024" data-search="instance memory models as a general computational framework for exploring language processing: bringing the lexicon to life johns, brendan t. jamieson, randall k. crump, matthew j.c. jones, michael n psyarxiv - forthcoming in linguistics vanguard na 2024">
+<div class="pyear">
+2024
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.31234/osf.io/qtmhx">Instance Memory Models as a General Computational Framework for Exploring Language Processing: Bringing the Lexicon to Life</a>
+</div>
+<div class="pauthors">
+Johns, B. T., Jamieson, R. K., <strong>Crump, M. J. C.</strong>, &amp; Jones, M. N.
+</div>
+<div class="pvenue">
+<em>PsyArXiv - Forthcoming in Linguistics Vanguard</em><span class="ptag">article</span><span class="ptag ptag-soon">forthcoming</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://doi.org/10.31234/osf.io/qtmhx">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2023">
+<div class="tl-label">
+2023<span>1 paper</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2023" data-search="motor-evoked potentials for early individual elements of an action sequence during planning reflect parallel activation processes lawrence p. behmer mathew j.c. crump kelly j. jantzen motor control na 2023">
+<div class="pyear">
+2023
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1123/mc.2022-0106">Motor-Evoked Potentials for Early Individual Elements of an Action Sequence During Planning Reflect Parallel Activation Processes</a>
+</div>
+<div class="pauthors">
+Behmer, L. P., <strong>Crump, M. J. C.</strong>, &amp; Jantzen, K. J.
+</div>
+<div class="pvenue">
+<em>Motor Control, 27</em>, 1–20<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://doi.org/10.1123/mc.2022-0106">doi</a><a class="pchip" href="https://journals.humankinetics.com/view/journals/mcj/aop/mc.2022-0106/mc.2022-0106.xml">online first</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2021">
+<div class="tl-label">
+2021<span>4 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="books" data-year="2021" data-search="instances of cognition: questions, methods, findings, explanations, applications, and implications. textbook and open educational resource crump, matthew j. c. na na 2021">
+<div class="pyear">
+2021
+</div>
+<div class="pmain">
+<div class="ptitle">
+Instances of Cognition: Questions, Methods, Findings, Explanations, Applications, and Implications. Textbook and Open educational Resource
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+crumplab.com<span class="ptag">book</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://www.crumplab.com/cognition/textbook/index.html">website</a><a class="pchip" href="https://github.com/CrumpLab/cognition">github</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2021" data-search="the negative contingency illusion: a cognitive bias leading to misjudgement of protection piech, richard m. crump, matthew jc zald, david h. na na 2021">
+<div class="pyear">
+2021
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.21203/rs.3.rs-671507/v1">The Negative Contingency Illusion: A Cognitive Bias Leading to Misjudgement of Protection</a>
+</div>
+<div class="pauthors">
+Piech, R. M., <strong>Crump, M. J. C.</strong>, &amp; Zald, D. H.
+</div>
+<div class="pvenue">
+<span class="ptag ptag-first">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://doi.org/10.21203/rs.3.rs-671507/v1">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2021" data-search="contextual recruitment of selective attention can be updated via changes in task relevance brosowsky, nicholaus p. crump, matthew j. c. canadian journal of experimental psychology na 2021">
+<div class="pyear">
+2021
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1037/cep0000221">Contextual Recruitment of Selective Attention Can Be Updated via Changes in Task Relevance</a>
+</div>
+<div class="pauthors">
+Brosowsky, N. P., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Canadian Journal of Experimental Psychology, 75</em>, 19–34<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13614/Brosowsky and Crump - 2021 - Contextual recruitment of selective attention can .pdf">pdf</a><a class="pchip" href="https://doi.org/10.1037/cep0000221">doi</a><a class="pchip" href="https://osf.io/ztcyb/">data</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2021" data-search="sharing and organizing research products as r packages vuorre, matti crump, matthew j. c. behavior research methods na 2021">
+<div class="pyear">
+2021
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.3758/s13428-020-01436-x">Sharing and Organizing Research Products as R Packages</a>
+</div>
+<div class="pauthors">
+Vuorre, M., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Behavior Research Methods, 53</em>, 792–802<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13613/Vuorre and Crump - 2021 - Sharing and organizing research products as R pack.pdf">pdf</a><a class="pchip" href="https://doi.org/10.3758/s13428-020-01436-x">doi</a><a class="pchip" href="https://www.crumplab.com/vertical">website</a><a class="pchip" href="https://github.com/CrumpLab/vertical">github</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2020">
+<div class="tl-label">
+2020<span>4 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2020" data-search="teaching undergraduate students to read empirical articles: an evaluation and revision of the qalmri method brosowsky, nicholaus parshina, olga locicero, anthony crump, matthew na na 2020">
+<div class="pyear">
+2020
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.31234/osf.io/p39sc">Teaching Undergraduate Students to Read Empirical Articles: An Evaluation and Revision of the QALMRI Method</a>
+</div>
+<div class="pauthors">
+Brosowsky, N., Parshina, O., Locicero, A., &amp; <strong>Crump, M.</strong>
+</div>
+<div class="pvenue">
+PsyArXiv<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://doi.org/10.31234/osf.io/p39sc">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="books" data-year="2020" data-search="controlling the retrieval of general vs specific semantic knowledge in the instance theory of semantic memory crump, matthew j. c. jamieson, r. k. johns, b. t. jones, m. n. na proceedings of the 42nd annual conference of the cognitive science society 2020">
+<div class="pyear">
+2020
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="publications/Crump/files/12880/Crump et al. - 2020 - Controlling the retrieval of general vs specific s.pdf">Controlling the Retrieval of General vs Specific Semantic Knowledge in the Instance Theory of Semantic Memory</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Jamieson, R. K., Johns, B. T., &amp; Jones, M. N.
+</div>
+<div class="pvenue">
+In <em>Proceedings of the 42nd Annual Conference of the Cognitive Science Society</em> (pp.&nbsp;3261–3267). Cognitive Science Society<span class="ptag">chapter</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/12880/Crump et al. - 2020 - Controlling the retrieval of general vs specific s.pdf">pdf</a><a class="pchip" href="https://crumplab.github.io/ITS2/">website</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="books" data-year="2020" data-search="reproducible statistics for psychologists with r: lab tutorials crump, matthew j. c. na na 2020">
+<div class="pyear">
+2020
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://crumplab.github.io/rstatsforpsych/">Reproducible Statistics for Psychologists with R: Lab Tutorials</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+OSF<span class="ptag">book</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://crumplab.github.io/rstatsforpsych/">link</a><a class="pchip" href="https://www.crumplab.com/rstatsforpsych/">website</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2020" data-search="production without rules: using an instance memory model to exploit structure in natural language johns, brendan t. jamieson, randall k. crump, matthew j. c. jones, michael n. mewhort, d. j. k. journal of memory and language na 2020">
+<div class="pyear">
+2020
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/ghcm2c">Production without Rules: Using an Instance Memory Model to Exploit Structure in Natural Language</a>
+</div>
+<div class="pauthors">
+Johns, B. T., Jamieson, R. K., <strong>Crump, M. J. C.</strong>, Jones, M. N., &amp; Mewhort, D. J. K.
+</div>
+<div class="pvenue">
+<em>Journal of Memory and Language, 115</em>, 104165<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13502/Johns et al. - 2020 - Production without rules Using an instance memory.pdf">pdf</a><a class="pchip" href="https://doi.org/10/ghcm2c">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2019">
+<div class="tl-label">
+2019<span>7 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2019" data-search="the semantic librarian: a search engine built from vector-space models of semantics aujla, harinder crump, matthew j. c. cook, matthew t. jamieson, randall k. behavior research methods na 2019">
+<div class="pyear">
+2019
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/gf6cmv">The Semantic Librarian: A Search Engine Built from Vector-Space Models of Semantics</a>
+</div>
+<div class="pauthors">
+Aujla, H., <strong>Crump, M. J. C.</strong>, Cook, M. T., &amp; Jamieson, R. K.
+</div>
+<div class="pvenue">
+<em>Behavior Research Methods, 51</em>(6), 2405–2418<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/9221/Aujla et al. - 2019 - The Semantic Librarian A search engine built from.pdf">pdf</a><a class="pchip" href="https://doi.org/10/gf6cmv">doi</a><a class="pchip" href="https://www.crumplab.com/RsemanticLibrarian/">website</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2019" data-search="measuring adaptive control in conflict tasks braem, senne bugg, julie m. schmidt, james r. crump, matthew j. c. weissman, daniel h. notebaert, wim egner, tobias trends in cognitive sciences na 2019">
+<div class="pyear">
+2019
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/gf48x7">Measuring Adaptive Control in Conflict Tasks</a>
+</div>
+<div class="pauthors">
+Braem, S., Bugg, J. M., Schmidt, J. R., <strong>Crump, M. J. C.</strong>, Weissman, D. H., Notebaert, W., &amp; Egner, T.
+</div>
+<div class="pvenue">
+<em>Trends in Cognitive Sciences, 23</em>(9), 769–783<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13618/Braem et al. - 2019 - Measuring Adaptive Control in Conflict Tasks.pdf">pdf</a><a class="pchip" href="https://doi.org/10/gf48x7">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2019" data-search="answering questions with data: course website crump, matthew na na 2019">
+<div class="pyear">
+2019
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/ghrn62">Answering Questions with Data: Course Website</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M.</strong>
+</div>
+<div class="pvenue">
+OSF<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://doi.org/10/ghrn62">doi</a><a class="pchip" href="https://www.crumplab.com/psyc3400/">website</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2019" data-search="answering questions with data (textbook): introductory statistics for psychology students crump, matthew navarro, danielle suzuki, jeffrey na na 2019">
+<div class="pyear">
+2019
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/ghrn59">Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M.</strong>, Navarro, D., &amp; Suzuki, J.
+</div>
+<div class="pvenue">
+OSF<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://doi.org/10/ghrn59">doi</a><a class="pchip" href="https://www.crumplab.com/statistics/">website</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2019" data-search="answering questions with data: the lab manual for r, excel, spss and jamovi crump, matthew krishnan, anjali volz, stephen chavarga, alla na na 2019">
+<div class="pyear">
+2019
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/ghrn63">Answering Questions with Data: The Lab Manual for R, Excel, SPSS and Jamovi</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M.</strong>, Krishnan, A., Volz, S., &amp; Chavarga, A.
+</div>
+<div class="pvenue">
+OSF<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="https://doi.org/10/ghrn63">doi</a><a class="pchip" href="https://www.crumplab.com/statisticsLab/">website</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2019" data-search="instance theory predicts information theory: episodic uncertainty as a determinant of keystroke dynamics. crump, matthew j. c. lai, walter brosowsky, nicholaus p. canadian journal of experimental psychology/revue canadienne de psychologie expérimentale na 2019">
+<div class="pyear">
+2019
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1037/cep0000182">Instance Theory Predicts Information Theory: Episodic Uncertainty as a Determinant of Keystroke Dynamics.</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Lai, W., &amp; Brosowsky, N. P.
+</div>
+<div class="pvenue">
+<em>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie expérimentale, 73</em>(4), 203–215<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13615/Crump et al. - 2019 - Instance theory predicts information theory Episo.pdf">pdf</a><a class="pchip" href="https://doi.org/10.1037/cep0000182">doi</a><a class="pchip" href="https://www.crumplab.com/EntropyTyping/">website</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2019" data-search="portfolio and prosper crump, matthew j. c. nature human behaviour na 2019">
+<div class="pyear">
+2019
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/ghrnn6">Portfolio and Prosper</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Nature Human Behaviour, 3</em>(10), 1008–1008<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/11464/Crump - 2019 - Portfolio and prosper.pdf">pdf</a><a class="pchip" href="https://doi.org/10/ghrnn6">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2018">
+<div class="tl-label">
+2018<span>3 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2018" data-search="parallel regulation of past, present, and future actions during sequencing. behmer, lawrence p. jantzen, kelly j. martinez, sarah walls, rachel amir-brownstein, elisabeth jaye, andrew leytze, mckaila lucier, kathleen crump, matthew j. c. journal of experimental psychology: human perception and performance na 2018">
+<div class="pyear">
+2018
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/gdznzb">Parallel Regulation of Past, Present, and Future Actions during Sequencing.</a>
+</div>
+<div class="pauthors">
+Behmer, L. P., Jantzen, K. J., Martinez, S., Walls, R., Amir-Brownstein, E., Jaye, A., Leytze, M., Lucier, K., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Journal of Experimental Psychology: Human Perception and Performance, 44</em>(8), 1147–1152<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/8938/Behmer et al. - 2018 - Parallel regulation of past, present, and future a.pdf">pdf</a><a class="pchip" href="https://doi.org/10/gdznzb">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2018" data-search="memory-guided selective attention: single experiences with conflict have long-lasting effects on cognitive control. brosowsky, nicholaus p. crump, matthew j. c. journal of experimental psychology: general na 2018">
+<div class="pyear">
+2018
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/gd2w6z">Memory-Guided Selective Attention: Single Experiences with Conflict Have Long-Lasting Effects on Cognitive Control.</a>
+</div>
+<div class="pauthors">
+Brosowsky, N. P., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Journal of Experimental Psychology: General, 147</em>(8), 1134–1153<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/8936/Brosowsky and Crump - 2018 - Memory-guided selective attention Single experien.pdf">pdf</a><a class="pchip" href="https://doi.org/10/gd2w6z">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2018" data-search="context-dependent control of attention capture: evidence from proportion congruent effects. crump, matthew j. c. milliken, bruce leboe-mcgowan, jason leboe-mcgowan, launa gao, xiaoqing canadian journal of experimental psychology/revue canadienne de psychologie expérimentale na 2018">
+<div class="pyear">
+2018
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/gdrskv">Context-Dependent Control of Attention Capture: Evidence from Proportion Congruent Effects.</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Milliken, B., Leboe-McGowan, J., Leboe-McGowan, L., &amp; Gao, X.
+</div>
+<div class="pvenue">
+<em>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie expérimentale, 72</em>(2), 91–104<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13619/Crump et al. - 2018 - Context-dependent control of attention capture Ev.pdf">pdf</a><a class="pchip" href="https://doi.org/10/gdrskv">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2017">
+<div class="tl-label">
+2017<span>5 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2017" data-search="reproducing the location-based context-specific proportion congruent effect for frequency unbiased items: a reply to hutcheon and spieler (2016) crump, matthew j. c. brosowsky, nicholaus p. milliken, bruce quarterly journal of experimental psychology na 2017">
+<div class="pyear">
+2017
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/gcx8qn">Reproducing the Location-Based Context-Specific Proportion Congruent Effect for Frequency Unbiased Items: A Reply to Hutcheon and Spieler (2016)</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Brosowsky, N. P., &amp; Milliken, B.
+</div>
+<div class="pvenue">
+<em>Quarterly Journal of Experimental Psychology, 70</em>(9), 1792–1807<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4887/Crump et al. - 2017 - Reproducing the Location-Based Context-Specific Pr.pdf">pdf</a><a class="pchip" href="https://doi.org/10/gcx8qn">doi</a><a class="pchip" href="https://github.com/CrumpLab/CrumpBrosowskyMilliken_QJEP">data</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2017" data-search="the dynamic range of response set activation during action sequencing. behmer, lawrence p. crump, matthew j. c. journal of experimental psychology: human perception and performance na 2017">
+<div class="pyear">
+2017
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/f9w78w">The Dynamic Range of Response Set Activation during Action Sequencing.</a>
+</div>
+<div class="pauthors">
+Behmer, L. P., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Journal of Experimental Psychology: Human Perception and Performance, 43</em>(3), 537–554<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4934/Behmer and Crump - 2017 - The dynamic range of response set activation durin.pdf">pdf</a><a class="pchip" href="https://doi.org/10/f9w78w">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="books" data-year="2017" data-search="crunching big data with finger tips: how typists tune their performance towards the statistics of natural language behmer, lawrence p. crump, matthew j. c. na big data in cognitive science 2017">
+<div class="pyear">
+2017
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="publications/Crump/files/4991/Behmer and Crump - 2017 - Crunching big data with finger tips How typists t.pdf">Crunching Big Data with Finger Tips: How Typists Tune Their Performance towards the Statistics of Natural Language</a>
+</div>
+<div class="pauthors">
+Behmer, L. P., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+In <em>Big Data in Cognitive Science</em> (pp.&nbsp;319–341). Routledge<span class="ptag">chapter</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4991/Behmer and Crump - 2017 - Crunching big data with finger tips How typists t.pdf">pdf</a><a class="pchip" href="https://github.com/CrumpLab/BehmerCrump2017_BigData">data</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2017" data-search="spatial knowledge during skilled action sequencing: hierarchical versus non-hierarchical representations behmer, lawrence p. crump, matthew j. c. attention, perception \&amp; psychophysics na 2017">
+<div class="pyear">
+2017
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.3758/s13414-017-1389-3">Spatial Knowledge during Skilled Action Sequencing: Hierarchical versus Non-Hierarchical Representations</a>
+</div>
+<div class="pauthors">
+Behmer, L. P., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Attention, Perception &amp;amp; Psychophysics, 79</em>, 2435–2448<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4989/Behmer and Crump - 2017 - Spatial knowledge during skilled action sequencing.pdf">pdf</a><a class="pchip" href="https://doi.org/10.3758/s13414-017-1389-3">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2017" data-search="the effect of carpal tunnel release on typing performance zumsteg, justin w. crump, matthew jc logan, gordon d. weikert, douglas r. lee, donald h. the journal of hand surgery na 2017">
+<div class="pyear">
+2017
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/f9mjkj">The Effect of Carpal Tunnel Release on Typing Performance</a>
+</div>
+<div class="pauthors">
+Zumsteg, J. W., <strong>Crump, M. J. C.</strong>, Logan, G. D., Weikert, D. R., &amp; Lee, D. H.
+</div>
+<div class="pvenue">
+<em>The Journal of hand surgery, 42</em>(1), 16–23<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13697/Zumsteg et al. - 2017 - The Effect of Carpal Tunnel Release on Typing Perf.pdf">pdf</a><a class="pchip" href="https://doi.org/10/f9mjkj">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2016">
+<div class="tl-label">
+2016<span>4 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2016" data-search="context-specific attentional sampling: intentional control as a pre-requisite for contextual control brosowsky, nicholaus p. crump, matthew j. c. consciousness and cognition na 2016">
+<div class="pyear">
+2016
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/f848wz">Context-Specific Attentional Sampling: Intentional Control as a Pre-Requisite for Contextual Control</a>
+</div>
+<div class="pauthors">
+Brosowsky, N. P., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Consciousness and Cognition, 44</em>, 146–160<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4992/Brosowsky and Crump - 2016 - Context-specific attentional sampling Intentional.pdf">pdf</a><a class="pchip" href="https://doi.org/10/f848wz">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2016" data-search="learning to selectively attend from context-specific attentional histories: a demonstration and some constraints. crump, matthew j. c. canadian journal of experimental psychology/revue canadienne de psychologie expérimentale na 2016">
+<div class="pyear">
+2016
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/gf7h25">Learning to Selectively Attend from Context-Specific Attentional Histories: A Demonstration and Some Constraints.</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie expérimentale, 70</em>(1), 59–77<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4265/Crump - 2016 - Learning to selectively attend from context-specif.pdf">pdf</a><a class="pchip" href="https://doi.org/10/gf7h25">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2016" data-search="false recognition of instruction-set lures curtis, evan t. chubala, chrissy m. spear, jackie jamieson, randall k. hockley, william e. crump, matthew j. c. memory na 2016">
+<div class="pyear">
+2016
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1080/09658211.2014.982657">False Recognition of Instruction-Set Lures</a>
+</div>
+<div class="pauthors">
+Curtis, E. T., Chubala, C. M., Spear, J., Jamieson, R. K., Hockley, W. E., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Memory, 24</em>, 32–43<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13700/Curtis et al. - 2016 - False recognition of instruction-set lures.pdf">pdf</a><a class="pchip" href="https://doi.org/10.1080/09658211.2014.982657">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="proceedings" data-year="2016" data-search="the combinatorial power of experience. johns, brendan t. jamieson, randall crump, matthew jones, michael n. mewhort, douglas jk na proceedings of the 38th annual conference of the cognitive science society. 2016">
+<div class="pyear">
+2016
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="publications/Crump/files/13699/Johns et al. - 2016 - The Combinatorial Power of Experience..pdf">The Combinatorial Power of Experience.</a>
+</div>
+<div class="pauthors">
+Johns, B. T., Jamieson, R., <strong>Crump, M.</strong>, Jones, M. N., &amp; Mewhort, D. J. K.
+</div>
+<div class="pvenue">
+In <em>Proceedings of the 38th Annual Conference of the Cognitive Science Society.</em><span class="ptag">proceedings</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13699/Johns et al. - 2016 - The Combinatorial Power of Experience..pdf">pdf</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2013">
+<div class="tl-label">
+2013<span>3 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2013" data-search="evaluating amazon's mechanical turk as a tool for experimental behavioral research crump, matthew j. c. mcdonnell, john v. gureckis, todd m. plos one na 2013">
+<div class="pyear">
+2013
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/f4qw94">Evaluating Amazon’s Mechanical Turk as a Tool for Experimental Behavioral Research</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, McDonnell, J. V., &amp; Gureckis, T. M.
+</div>
+<div class="pvenue">
+<em>PLoS ONE, 8</em>(3), e57410<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3896/Crump et al. - 2013 - Evaluating Amazon's Mechanical Turk as a Tool for .pdf">pdf</a><a class="pchip" href="https://doi.org/10/f4qw94">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2013" data-search="prevention and correction in post-error performance: an ounce of prevention, a pound of cure. crump, matthew j. c. logan, gordon d. journal of experimental psychology: general na 2013">
+<div class="pyear">
+2013
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/f46hg6">Prevention and Correction in Post-Error Performance: An Ounce of Prevention, a Pound of Cure.</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, &amp; Logan, G. D.
+</div>
+<div class="pvenue">
+<em>Journal of Experimental Psychology: General, 142</em>(3), 692–709<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4683/Crump and Logan - 2013 - Prevention and correction in post-error performanc.pdf">pdf</a><a class="pchip" href="https://doi.org/10/f46hg6">doi</a><a class="pchip" href="https://github.com/CrumpLab/CrumpLogan2013JEPG_data">data</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2013" data-search="speed–accuracy trade-off in skilled typewriting: decomposing the contributions of hierarchical control loops yamaguchi, motonori crump, matthew j. c. logan, gordon d. journal of experimental psychology: human perception and performance na 2013">
+<div class="pyear">
+2013
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1037/a0030512">Speed–Accuracy Trade-off in Skilled Typewriting: Decomposing the Contributions of Hierarchical Control Loops</a>
+</div>
+<div class="pauthors">
+Yamaguchi, M., <strong>Crump, M. J. C.</strong>, &amp; Logan, G. D.
+</div>
+<div class="pvenue">
+<em>Journal of Experimental Psychology: Human Perception and Performance, 39</em>(3), 678–699<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13701/Yamaguchi et al. - 2013 - Speed–accuracy trade-off in skilled typewriting D.pdf">pdf</a><a class="pchip" href="https://doi.org/10.1037/a0030512">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2012">
+<div class="tl-label">
+2012<span>4 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2012" data-search="in support of a distinction between voluntary and stimulus-driven control: a review of the literature on proportion congruent effects bugg, julie m. crump, matthew j. c. frontiers in psychology na 2012">
+<div class="pyear">
+2012
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.3389/fpsyg.2012.00367">In Support of a Distinction between Voluntary and Stimulus-Driven Control: A Review of the Literature on Proportion Congruent Effects</a>
+</div>
+<div class="pauthors">
+Bugg, J. M., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Frontiers in Psychology, 3</em>(367), 1–16<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3897/Bugg and Crump - 2012 - In support of a distinction between voluntary and .pdf">pdf</a><a class="pchip" href="https://doi.org/10.3389/fpsyg.2012.00367">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2012" data-search="keeping an eye on guitar skill: visual representations of guitar chords crump, matthew j. c. logan, gordon d. kimbrough, jerry music perception: an interdisciplinary journal na 2012">
+<div class="pyear">
+2012
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://www.jstor.org/stable/10.1525/mp.2012.30.1.37">Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Logan, G. D., &amp; Kimbrough, J.
+</div>
+<div class="pvenue">
+<em>Music Perception: An Interdisciplinary Journal, 30</em>(1), 37–47<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4686/Crump et al. - 2012 - Keeping an Eye on Guitar Skill Visual Representat.pdf">pdf</a><a class="pchip" href="https://www.jstor.org/stable/10.1525/mp.2012.30.1.37">link</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2012" data-search="review of guitar zero: the new musician and the science of learning crump, matthew j. c. na na 2012">
+<div class="pyear">
+2012
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1037/a0030741">Review of Guitar Zero: The New Musician and the Science of Learning</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<span class="ptag ptag-first">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13702/Crump - 2012 - Review of Guitar zero The new musician and the sc.pdf">pdf</a><a class="pchip" href="https://doi.org/10.1037/a0030741">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2012" data-search="an instance theory of associative learning jamieson, randall k. crump, matthew j. c. hannah, samuel d. learning \&amp; behavior na 2012">
+<div class="pyear">
+2012
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/dwkrm5">An Instance Theory of Associative Learning</a>
+</div>
+<div class="pauthors">
+Jamieson, R. K., <strong>Crump, M. J. C.</strong>, &amp; Hannah, S. D.
+</div>
+<div class="pvenue">
+<em>Learning &amp;amp; Behavior, 40</em>(1), 61–82<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13704/Jamieson et al. - 2012 - An instance theory of associative learning.pdf">pdf</a><a class="pchip" href="https://doi.org/10/dwkrm5">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2011">
+<div class="tl-label">
+2011<span>1 paper</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="books" data-year="2011" data-search="hierarchical control of cognitive processes: the case for skilled typewriting logan, gordon d. crump, matthew j. c. na psychology of learning and motivation 2011">
+<div class="pyear">
+2011
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="publications/Crump/files/3898/Logan and Crump - 2011 - Hierarchical control of cognitive processes The c.pdf">Hierarchical Control of Cognitive Processes: The Case for Skilled Typewriting</a>
+</div>
+<div class="pauthors">
+Logan, G. D., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+In <em>Psychology of Learning and Motivation</em> (pp.&nbsp;1–27). Elsevier<span class="ptag">chapter</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3898/Logan and Crump - 2011 - Hierarchical control of cognitive processes The c.pdf">pdf</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2010">
+<div class="tl-label">
+2010<span>7 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2010" data-search="contextual control over task-set retrieval crump, matthew j. c. logan, gordon d. attention, perception, \&amp; psychophysics na 2010">
+<div class="pyear">
+2010
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/c6psw7">Contextual Control over Task-Set Retrieval</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, &amp; Logan, G. D.
+</div>
+<div class="pvenue">
+<em>Attention, Perception, &amp;amp; Psychophysics, 72</em>(8), 2047–2053<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3904/Crump and Logan - 2010 - Contextual control over task-set retrieval.pdf">pdf</a><a class="pchip" href="https://doi.org/10/c6psw7">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2010" data-search="warning: this keyboard will deconstruct— the role of the keyboard in skilled typewriting crump, matthew j. c. logan, gordon d. psychonomic bulletin \&amp; review na 2010">
+<div class="pyear">
+2010
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/d9jmzm">Warning: This Keyboard Will Deconstruct— The Role of the Keyboard in Skilled Typewriting</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, &amp; Logan, G. D.
+</div>
+<div class="pvenue">
+<em>Psychonomic Bulletin &amp;amp; Review, 17</em>(3), 394–399<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3902/Crump and Logan - 2010 - Warning This keyboard will deconstruct— The role .pdf">pdf</a><a class="pchip" href="https://doi.org/10/d9jmzm">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2010" data-search="hierarchical control and skilled typing: evidence for word-level control over the execution of individual keystrokes. crump, matthew j. c. logan, gordon d. journal of experimental psychology: learning, memory, and cognition na 2010">
+<div class="pyear">
+2010
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/ccjxg5">Hierarchical Control and Skilled Typing: Evidence for Word-Level Control over the Execution of Individual Keystrokes.</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, &amp; Logan, G. D.
+</div>
+<div class="pvenue">
+<em>Journal of Experimental Psychology: Learning, Memory, and Cognition, 36</em>(6), 1369–1380<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4704/Crump and Logan - 2010 - Hierarchical control and skilled typing Evidence .pdf">pdf</a><a class="pchip" href="https://doi.org/10/ccjxg5">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2010" data-search="episodic contributions to sequential control: learning from a typist's touch. crump, matthew j. c. logan, gordon d. journal of experimental psychology: human perception and performance na 2010">
+<div class="pyear">
+2010
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/ccw3b5">Episodic Contributions to Sequential Control: Learning from a Typist’s Touch.</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, &amp; Logan, G. D.
+</div>
+<div class="pvenue">
+<em>Journal of Experimental Psychology: Human Perception and Performance, 36</em>(3), 662–672<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3903/Crump and Logan - 2010 - Episodic contributions to sequential control Lear.pdf">pdf</a><a class="pchip" href="https://doi.org/10/ccw3b5">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2010" data-search="a memory-based account of retrospective revaluation. jamieson, randall k. hannah, samuel d. crump, matthew j. c. canadian journal of experimental psychology/revue canadienne de psychologie expérimentale na 2010">
+<div class="pyear">
+2010
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/fn46rb">A Memory-Based Account of Retrospective Revaluation.</a>
+</div>
+<div class="pauthors">
+Jamieson, R. K., Hannah, S. D., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie expérimentale, 64</em>(3), 153–164<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3901/Jamieson et al. - 2010 - A memory-based account of retrospective revaluatio.pdf">pdf</a><a class="pchip" href="https://doi.org/10/fn46rb">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2010" data-search="do you know where your fingers have been? explicit knowledge of the spatial layout of the keyboard in skilled typists liu, xianyun crump, matthew j. c. logan, gordon d. memory \&amp; cognition na 2010">
+<div class="pyear">
+2010
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/ccq7jw">Do You Know Where Your Fingers Have Been? Explicit Knowledge of the Spatial Layout of the Keyboard in Skilled Typists</a>
+</div>
+<div class="pauthors">
+Liu, X., <strong>Crump, M. J. C.</strong>, &amp; Logan, G. D.
+</div>
+<div class="pvenue">
+<em>Memory &amp;amp; Cognition, 38</em>(4), 474–484<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3900/Liu et al. - 2010 - Do you know where your fingers have been Explicit.pdf">pdf</a><a class="pchip" href="https://doi.org/10/ccq7jw">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2010" data-search="cognitive illusions of authorship reveal hierarchical error detection in skilled typists logan, gordon d. crump, matthew j. c. science na 2010">
+<div class="pyear">
+2010
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/bktxxk">Cognitive Illusions of Authorship Reveal Hierarchical Error Detection in Skilled Typists</a>
+</div>
+<div class="pauthors">
+Logan, G. D., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Science, 330</em>(6004), 683–686<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3899/Logan and Crump - 2010 - Cognitive Illusions of Authorship Reveal Hierarchi.pdf">pdf</a><a class="pchip" href="https://doi.org/10/bktxxk">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2009">
+<div class="tl-label">
+2009<span>4 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2009" data-search="the flexibility of context-specific control: evidence for context-driven generalization of item-specific control settings crump, matthew j. c. milliken, bruce the quarterly journal of experimental psychology na 2009">
+<div class="pyear">
+2009
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1080/17470210902752096">The Flexibility of Context-Specific Control: Evidence for Context-Driven Generalization of Item-Specific Control Settings</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, &amp; Milliken, B.
+</div>
+<div class="pvenue">
+<em>The Quarterly Journal of Experimental Psychology, 62</em>(8), 1523–1532<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3908/Crump and Milliken - 2009 - The flexibility of context-specific control Evide.pdf">pdf</a><a class="pchip" href="https://doi.org/10.1080/17470210902752096">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2009" data-search="cue-interaction effects in contingency judgments using the streamed-trial procedure. hannah, samuel d. crump, matthew j. c. allan, lorraine g. siegel, shepard canadian journal of experimental psychology/revue canadienne de psychologie expérimentale na 2009">
+<div class="pyear">
+2009
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/fgwn3x">Cue-Interaction Effects in Contingency Judgments Using the Streamed-Trial Procedure.</a>
+</div>
+<div class="pauthors">
+Hannah, S. D., <strong>Crump, M. J. C.</strong>, Allan, L. G., &amp; Siegel, S.
+</div>
+<div class="pvenue">
+<em>Canadian Journal of Experimental Psychology/Revue canadienne de psychologie expérimentale, 63</em>(2), 103–112<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3907/Hannah et al. - 2009 - Cue-interaction effects in contingency judgments u.pdf">pdf</a><a class="pchip" href="https://doi.org/10/fgwn3x">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2009" data-search="the left hand doesn't know what the right hand is doing: the disruptive effects of attention to the hands in skilled typewriting logan, gordon d. crump, matthew j. c. psychological science na 2009">
+<div class="pyear">
+2009
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1111/j.1467-9280.2009.02442.x">The Left Hand Doesn’t Know What the Right Hand Is Doing: The Disruptive Effects of Attention to the Hands in Skilled Typewriting</a>
+</div>
+<div class="pauthors">
+Logan, G. D., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Psychological Science, 20</em>(10), 1296–1300<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3906/Logan and Crump - 2009 - The left hand doesn't know what the right hand Is .pdf">pdf</a><a class="pchip" href="https://doi.org/10.1111/j.1467-9280.2009.02442.x">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2009" data-search="applying signal detection theory to contingency assessment siegel, shepard allan, lorraine g. hannah, samuel d. crump, matthew j. c. comparative cognition \&amp; behavior reviews na 2009">
+<div class="pyear">
+2009
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.3819/ccbr.2009.40012">Applying Signal Detection Theory to Contingency Assessment</a>
+</div>
+<div class="pauthors">
+Siegel, S., Allan, L. G., Hannah, S. D., &amp; <strong>Crump, M. J. C.</strong>
+</div>
+<div class="pvenue">
+<em>Comparative Cognition &amp;amp; Behavior Reviews, 4</em>, 116–134<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3905/Siegel et al. - 2009 - Applying signal detection theory to contingency as.pdf">pdf</a><a class="pchip" href="https://doi.org/10.3819/ccbr.2009.40012">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2008">
+<div class="tl-label">
+2008<span>4 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2008" data-search="the psychophysics of contingency assessment. allan, lorraine g. hannah, samuel d. crump, matthew j. c. siegel, shepard journal of experimental psychology: general na 2008">
+<div class="pyear">
+2008
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.1037/0096-3445.137.2.226">The Psychophysics of Contingency Assessment.</a>
+</div>
+<div class="pauthors">
+Allan, L. G., Hannah, S. D., <strong>Crump, M. J. C.</strong>, &amp; Siegel, S.
+</div>
+<div class="pvenue">
+<em>Journal of Experimental Psychology: General, 137</em>(2), 226–243<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3911/Allan et al. - 2008 - The psychophysics of contingency assessment..pdf">pdf</a><a class="pchip" href="https://doi.org/10.1037/0096-3445.137.2.226">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2008" data-search="context-specific learning and control: the roles of awareness, task relevance, and relative salience crump, matthew j. c. vaquero, joaquín m.m. milliken, bruce consciousness and cognition na 2008">
+<div class="pyear">
+2008
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/d2fm7p">Context-Specific Learning and Control: The Roles of Awareness, Task Relevance, and Relative Salience</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Vaquero, J. M. M., &amp; Milliken, B.
+</div>
+<div class="pvenue">
+<em>Consciousness and Cognition, 17</em>(1), 22–36<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3910/Crump et al. - 2008 - Context-specific learning and control The roles o.pdf">pdf</a><a class="pchip" href="https://doi.org/10/d2fm7p">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2008" data-search="shifting views on the symbolic cueing effect: cueing attention through recent prior experience crump, matthew j. c. milliken, bruce ansari, imran psicológica na 2008">
+<div class="pyear">
+2008
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump et al. - 2008.pdf">Shifting Views on the Symbolic Cueing Effect: Cueing Attention through Recent Prior Experience</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Milliken, B., &amp; Ansari, I.
+</div>
+<div class="pvenue">
+<em>Psicológica, 29</em>(1), 97–114<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3895/Crump et al. - 2008 - Shifting views on the symbolic cueing effect Cuei.pdf">pdf</a><a class="pchip" href="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump et al. - 2008.pdf">link</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2008" data-search="probe-specific proportion task repetition effects on switching costs leboe, j. p. wong, j. crump, matthew j. c. stobbe, k. perception \&amp; psychophysics na 2008">
+<div class="pyear">
+2008
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10.3758/PP.70.6.935">Probe-Specific Proportion Task Repetition Effects on Switching Costs</a>
+</div>
+<div class="pauthors">
+Leboe, J. P., Wong, J., <strong>Crump, M. J. C.</strong>, &amp; Stobbe, K.
+</div>
+<div class="pvenue">
+<em>Perception &amp;amp; Psychophysics, 70</em>(6), 935–945<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3909/Leboe et al. - 2008 - Probe-specific proportion task repetition effects .pdf">pdf</a><a class="pchip" href="https://doi.org/10.3758/PP.70.6.935">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2007">
+<div class="tl-label">
+2007<span>2 papers</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">├─</span>
+<div class="prow" data-group="articles" data-year="2007" data-search="contingency judgements on the fly crump, matthew j. c. hannah, samuel d. allan, lorraine g. hord, lauren k. quarterly journal of experimental psychology na 2007">
+<div class="pyear">
+2007
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/b9jjc4">Contingency Judgements on the Fly</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Hannah, S. D., Allan, L. G., &amp; Hord, L. K.
+</div>
+<div class="pvenue">
+<em>Quarterly Journal of Experimental Psychology, 60</em>(6), 753–761<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/13705/Crump et al. - 2007 - Contingency judgements on the fly.pdf">pdf</a><a class="pchip" href="https://doi.org/10/b9jjc4">doi</a>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2007" data-search="contingency learning without awareness: evidence for implicit control schmidt, james r. crump, matthew j. c. cheesman, jim besner, derek consciousness and cognition na 2007">
+<div class="pyear">
+2007
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/d9bv53">Contingency Learning without Awareness: Evidence for Implicit Control</a>
+</div>
+<div class="pauthors">
+Schmidt, J. R., <strong>Crump, M. J. C.</strong>, Cheesman, J., &amp; Besner, D.
+</div>
+<div class="pvenue">
+<em>Consciousness and Cognition, 16</em>(2), 421–435<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/3912/Schmidt et al. - 2007 - Contingency learning without awareness Evidence f.pdf">pdf</a><a class="pchip" href="https://doi.org/10/d9bv53">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tl-year" id="y2006">
+<div class="tl-label">
+2006<span>1 paper</span>
+</div>
+<div class="tl-items">
+<div class="tl-item">
+<span class="tl-branch">└─</span>
+<div class="prow" data-group="articles" data-year="2006" data-search="the context-specific proportion congruent stroop effect: location as a contextual cue crump, matthew j. c. gong, zhiyu milliken, bruce psychonomic bulletin \&amp; review na 2006">
+<div class="pyear">
+2006
+</div>
+<div class="pmain">
+<div class="ptitle">
+<a href="https://doi.org/10/fpxkfs">The Context-Specific Proportion Congruent Stroop Effect: Location as a Contextual Cue</a>
+</div>
+<div class="pauthors">
+<strong>Crump, M. J. C.</strong>, Gong, Z., &amp; Milliken, B.
+</div>
+<div class="pvenue">
+<em>Psychonomic Bulletin &amp;amp; Review, 13</em>(2), 316–321<span class="ptag">article</span>
+</div>
+</div>
+<div class="plinks">
+<a class="pchip" href="publications/Crump/files/4717/Crump et al. - 2006 - The context-specific proportion congruent Stroop e.pdf">pdf</a><a class="pchip" href="https://doi.org/10/fpxkfs">doi</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="card notice">
 <p><strong>Copyright Notice:</strong> Some of the documents listed below are available for downloading. They are provided as a means to ensure timely dissemination of scholarly and technical work on a noncommercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author’s copyright. These works may not be re-posted without the explicit permission of the copyright holder.</p>
-<section id="forthcoming" class="level2">
-<h2 class="anchored" data-anchor-id="forthcoming">Forthcoming</h2>
-<div class="publications">
-<p>Jamieson, R. K., &amp; Crump, M. J. C. (2025). An instance theory of associative inference. <em>Accepted at American Journal of Psychology</em>.<span class="publinks"></span></p>
-<p>Johns, B. T., Jamieson, R. K., Crump, M. J. C., &amp; Jones, M. N. (2024). Instance memory models as a general computational framework for exploring language processing: Bringing the lexicon to life. <em>PsyArXiv - Forthcoming in Linguistics Vanguard</em>. <a href="https://doi.org/10.31234/osf.io/qtmhx" class="uri">https://doi.org/10.31234/osf.io/qtmhx</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump_In_progress/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
 </div>
-</section>
-<section id="published" class="level2">
-<h2 class="anchored" data-anchor-id="published">Published</h2>
-<div class="publications">
-<p>Behmer, L. P., Crump, M. J. C., &amp; Jantzen, K. J. (2023). Motor-evoked potentials for early individual elements of an action sequence during planning reflect parallel activation processes. <em>Motor Control</em>, <em>27</em>, 1–20. <a href="https://doi.org/10.1123/mc.2022-0106" class="uri">https://doi.org/10.1123/mc.2022-0106</a><span class="publinks"> </span></p>
-<p>Crump, M. J. C. (2021). <em>Instances of cognition: Questions, methods, findings, explanations, applications, and implications. Textbook and open educational resource</em> (1st ed.). crumplab.com.<span class="publinks"> <a href="https://www.crumplab.com/cognition/textbook/index.html"> <i class="fas fa-globe"> website </i></a> <a href="https://github.com/CrumpLab/cognition"> <i class="fa fa-github"> github </i></a></span></p>
-<p>Piech, R. M., Crump, M. J., &amp; Zald, D. H. (2021). <em>The negative contingency illusion: A cognitive bias leading to misjudgement of protection</em>. <a href="https://doi.org/10.21203/rs.3.rs-671507/v1" class="uri">https://doi.org/10.21203/rs.3.rs-671507/v1</a><span class="publinks"></span></p>
-<p>Brosowsky, N. P., &amp; Crump, M. J. C. (2021). Contextual recruitment of selective attention can be updated via changes in task relevance. <em>Canadian Journal of Experimental Psychology</em>, <em>75</em>, 19–34. <a href="https://doi.org/10.1037/cep0000221" class="uri">https://doi.org/10.1037/cep0000221</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13614/Brosowsky and Crump - 2021 - Contextual recruitment of selective attention can .pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://osf.io/ztcyb/"> <i class="fas fa-database"> data </i></a></span></p>
-<p>Vuorre, M., &amp; Crump, M. J. C. (2021). Sharing and organizing research products as r packages. <em>Behavior Research Methods</em>, <em>53</em>, 792–802. <a href="https://doi.org/10.3758/s13428-020-01436-x" class="uri">https://doi.org/10.3758/s13428-020-01436-x</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13613/Vuorre and Crump - 2021 - Sharing and organizing research products as R pack.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://www.crumplab.com/vertical"> <i class="fas fa-globe"> website </i></a> <a href="https://github.com/CrumpLab/vertical"> <i class="fa fa-github"> github </i></a></span></p>
-<p>Brosowsky, N., Parshina, O., Locicero, A., &amp; Crump, M. (2020). <em>Teaching undergraduate students to read empirical articles: An evaluation and revision of the QALMRI method</em>. <a href="https://doi.org/10.31234/osf.io/p39sc" class="uri">https://doi.org/10.31234/osf.io/p39sc</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., Jamieson, R. K., Johns, B. T., &amp; Jones, M. N. (2020). Controlling the retrieval of general vs specific semantic knowledge in the instance theory of semantic memory. In S. Denison, M. Mack, Y. Xu, &amp; B. C. Armstrong (Eds.), <em>Proceedings of the 42nd annual conference of the cognitive science society</em> (pp.&nbsp;3261–3267). Cognitive Science Society.<span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/12880/Crump et al. - 2020 - Controlling the retrieval of general vs specific s.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://crumplab.github.io/ITS2/"> <i class="fas fa-globe"> website </i></a></span></p>
-<p>Crump, M. J. C. (2020). <em>Reproducible statistics for psychologists with r: Lab tutorials</em>. OSF. <a href="https://crumplab.github.io/rstatsforpsych/" class="uri">https://crumplab.github.io/rstatsforpsych/</a><span class="publinks"> <a href="https://www.crumplab.com/rstatsforpsych/"> <i class="fas fa-globe"> website </i></a></span></p>
-<p>Johns, B. T., Jamieson, R. K., Crump, M. J. C., Jones, M. N., &amp; Mewhort, D. J. K. (2020). Production without rules: Using an instance memory model to exploit structure in natural language. <em>Journal of Memory and Language</em>, <em>115</em>, 104165. <a href="https://doi.org/ghcm2c" class="uri">https://doi.org/ghcm2c</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13502/Johns et al. - 2020 - Production without rules Using an instance memory.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Aujla, H., Crump, M. J. C., Cook, M. T., &amp; Jamieson, R. K. (2019). The semantic librarian: A search engine built from vector-space models of semantics. <em>Behavior Research Methods</em>, <em>51</em>(6), 2405–2418. <a href="https://doi.org/gf6cmv" class="uri">https://doi.org/gf6cmv</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/9221/Aujla et al. - 2019 - The Semantic Librarian A search engine built from.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://www.crumplab.com/RsemanticLibrarian/"> <i class="fas fa-globe"> website </i></a></span></p>
-<p>Braem, S., Bugg, J. M., Schmidt, J. R., Crump, M. J. C., Weissman, D. H., Notebaert, W., &amp; Egner, T. (2019). Measuring adaptive control in conflict tasks. <em>Trends in Cognitive Sciences</em>, <em>23</em>(9), 769–783. <a href="https://doi.org/gf48x7" class="uri">https://doi.org/gf48x7</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13618/Braem et al. - 2019 - Measuring Adaptive Control in Conflict Tasks.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. (2019). <em>Answering questions with data: Course website</em>. <a href="https://doi.org/ghrn62" class="uri">https://doi.org/ghrn62</a><span class="publinks"> <a href="https://www.crumplab.com/psyc3400/"> <i class="fas fa-globe"> website </i></a></span></p>
-<p>Crump, M., Navarro, D., &amp; Suzuki, J. (2019). <em>Answering questions with data (textbook): Introductory statistics for psychology students</em>. <a href="https://doi.org/ghrn59" class="uri">https://doi.org/ghrn59</a><span class="publinks"> <a href="https://www.crumplab.com/statistics/"> <i class="fas fa-globe"> website </i></a></span></p>
-<p>Crump, M., Krishnan, A., Volz, S., &amp; Chavarga, A. (2019). <em>Answering questions with data: The lab manual for r, excel, SPSS and jamovi</em>. <a href="https://doi.org/ghrn63" class="uri">https://doi.org/ghrn63</a><span class="publinks"> <a href="https://www.crumplab.com/statisticsLab/"> <i class="fas fa-globe"> website </i></a></span></p>
-<p>Crump, M. J. C., Lai, W., &amp; Brosowsky, N. P. (2019). Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>73</em>(4), 203–215. https://doi.org/<a href="http://dx.doi.org/10.1037/cep0000182" class="uri">http://dx.doi.org/10.1037/cep0000182</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13615/Crump et al. - 2019 - Instance theory predicts information theory Episo.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://www.crumplab.com/EntropyTyping/"> <i class="fas fa-globe"> website </i></a></span></p>
-<p>Crump, M. J. C. (2019). Portfolio and prosper. <em>Nature Human Behaviour</em>, <em>3</em>(10), 1008–1008. <a href="https://doi.org/ghrnn6" class="uri">https://doi.org/ghrnn6</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/11464/Crump - 2019 - Portfolio and prosper.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Behmer, L. P., Jantzen, K. J., Martinez, S., Walls, R., Amir-Brownstein, E., Jaye, A., Leytze, M., Lucier, K., &amp; Crump, M. J. C. (2018). Parallel regulation of past, present, and future actions during sequencing. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>44</em>(8), 1147–1152. <a href="https://doi.org/gdznzb" class="uri">https://doi.org/gdznzb</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/8938/Behmer et al. - 2018 - Parallel regulation of past, present, and future a.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Brosowsky, N. P., &amp; Crump, M. J. C. (2018). Memory-guided selective attention: Single experiences with conflict have long-lasting effects on cognitive control. <em>Journal of Experimental Psychology: General</em>, <em>147</em>(8), 1134–1153. <a href="https://doi.org/gd2w6z" class="uri">https://doi.org/gd2w6z</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/8936/Brosowsky and Crump - 2018 - Memory-guided selective attention Single experien.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., Milliken, B., Leboe-McGowan, J., Leboe-McGowan, L., &amp; Gao, X. (2018). Context-dependent control of attention capture: Evidence from proportion congruent effects. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>72</em>(2), 91–104. <a href="https://doi.org/gdrskv" class="uri">https://doi.org/gdrskv</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13619/Crump et al. - 2018 - Context-dependent control of attention capture Ev.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., Brosowsky, N. P., &amp; Milliken, B. (2017). Reproducing the location-based context-specific proportion congruent effect for frequency unbiased items: A reply to hutcheon and spieler (2016). <em>Quarterly Journal of Experimental Psychology</em>, <em>70</em>(9), 1792–1807. <a href="https://doi.org/gcx8qn" class="uri">https://doi.org/gcx8qn</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4887/Crump et al. - 2017 - Reproducing the Location-Based Context-Specific Pr.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://github.com/CrumpLab/CrumpBrosowskyMilliken_QJEP"> <i class="fas fa-database"> data </i></a></span></p>
-<p>Behmer, L. P., &amp; Crump, M. J. C. (2017). The dynamic range of response set activation during action sequencing. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>43</em>(3), 537–554. <a href="https://doi.org/f9w78w" class="uri">https://doi.org/f9w78w</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4934/Behmer and Crump - 2017 - The dynamic range of response set activation durin.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Behmer, L. P., &amp; Crump, M. J. C. (2017). Crunching big data with finger tips: How typists tune their performance towards the statistics of natural language. In M. N. Jones (Ed.), <em>Big data in cognitive science</em> (pp.&nbsp;319–341). Routledge.<span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4991/Behmer and Crump - 2017 - Crunching big data with finger tips How typists t.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://github.com/CrumpLab/BehmerCrump2017_BigData"> <i class="fas fa-database"> data </i></a></span></p>
-<p>Behmer, L. P., &amp; Crump, M. J. C. (2017). Spatial knowledge during skilled action sequencing: Hierarchical versus non-hierarchical representations. <em>Attention, Perception &amp; Psychophysics</em>, <em>79</em>, 2435–2448. <a href="https://doi.org/10.3758/s13414-017-1389-3" class="uri">https://doi.org/10.3758/s13414-017-1389-3</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4989/Behmer and Crump - 2017 - Spatial knowledge during skilled action sequencing.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Zumsteg, J. W., Crump, M. J., Logan, G. D., Weikert, D. R., &amp; Lee, D. H. (2017). The effect of carpal tunnel release on typing performance. <em>The Journal of Hand Surgery</em>, <em>42</em>(1), 16–23. <a href="https://doi.org/f9mjkj" class="uri">https://doi.org/f9mjkj</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13697/Zumsteg et al. - 2017 - The Effect of Carpal Tunnel Release on Typing Perf.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Brosowsky, N. P., &amp; Crump, M. J. C. (2016). Context-specific attentional sampling: Intentional control as a pre-requisite for contextual control. <em>Consciousness and Cognition</em>, <em>44</em>, 146–160. <a href="https://doi.org/f848wz" class="uri">https://doi.org/f848wz</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4992/Brosowsky and Crump - 2016 - Context-specific attentional sampling Intentional.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C. (2016). Learning to selectively attend from context-specific attentional histories: A demonstration and some constraints. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>70</em>(1), 59–77. <a href="https://doi.org/gf7h25" class="uri">https://doi.org/gf7h25</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4265/Crump - 2016 - Learning to selectively attend from context-specif.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Curtis, E. T., Chubala, C. M., Spear, J., Jamieson, R. K., Hockley, W. E., &amp; Crump, M. J. C. (2016). False recognition of instruction-set lures. <em>Memory</em>, <em>24</em>, 32–43. <a href="https://doi.org/10.1080/09658211.2014.982657" class="uri">https://doi.org/10.1080/09658211.2014.982657</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13700/Curtis et al. - 2016 - False recognition of instruction-set lures.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Johns, B. T., Jamieson, R., Crump, M., Jones, M. N., &amp; Mewhort, D. J. (2016). The combinatorial power of experience. <em>Proceedings of the 38th Annual Conference of the Cognitive Science Society.</em><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13699/Johns et al. - 2016 - The Combinatorial Power of Experience..pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., McDonnell, J. V., &amp; Gureckis, T. M. (2013). Evaluating amazon’s mechanical turk as a tool for experimental behavioral research. <em>PLoS ONE</em>, <em>8</em>(3), e57410. <a href="https://doi.org/f4qw94" class="uri">https://doi.org/f4qw94</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3896/Crump et al. - 2013 - Evaluating Amazon's Mechanical Turk as a Tool for .pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., &amp; Logan, G. D. (2013). Prevention and correction in post-error performance: An ounce of prevention, a pound of cure. <em>Journal of Experimental Psychology: General</em>, <em>142</em>(3), 692–709. <a href="https://doi.org/f46hg6" class="uri">https://doi.org/f46hg6</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4683/Crump and Logan - 2013 - Prevention and correction in post-error performanc.pdf"> <i class="fas fa-file-pdf"> pdf </i></a> <a href="https://github.com/CrumpLab/CrumpLogan2013JEPG_data"> <i class="fas fa-database"> data </i></a></span></p>
-<p>Yamaguchi, M., Crump, M. J. C., &amp; Logan, G. D. (2013). Speed–accuracy trade-off in skilled typewriting: Decomposing the contributions of hierarchical control loops. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>39</em>(3), 678–699. <a href="https://doi.org/10.1037/a0030512" class="uri">https://doi.org/10.1037/a0030512</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13701/Yamaguchi et al. - 2013 - Speed–accuracy trade-off in skilled typewriting D.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Bugg, J. M., &amp; Crump, M. J. C. (2012). In support of a distinction between voluntary and stimulus-driven control: A review of the literature on proportion congruent effects. <em>Frontiers in Psychology</em>, <em>3</em>(367), 1–16. <a href="https://doi.org/10.3389/fpsyg.2012.00367" class="uri">https://doi.org/10.3389/fpsyg.2012.00367</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3897/Bugg and Crump - 2012 - In support of a distinction between voluntary and .pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., Logan, G. D., &amp; Kimbrough, J. (2012). Keeping an eye on guitar skill: Visual representations of guitar chords. <em>Music Perception: An Interdisciplinary Journal</em>, <em>30</em>(1), 37–47. <a href="https://www.jstor.org/stable/10.1525/mp.2012.30.1.37" class="uri">https://www.jstor.org/stable/10.1525/mp.2012.30.1.37</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4686/Crump et al. - 2012 - Keeping an Eye on Guitar Skill Visual Representat.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C. (2012). <em>Review of guitar zero: The new musician and the science of learning</em>. <a href="https://doi.org/10.1037/a0030741" class="uri">https://doi.org/10.1037/a0030741</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13702/Crump - 2012 - Review of Guitar zero The new musician and the sc.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Jamieson, R. K., Crump, M. J. C., &amp; Hannah, S. D. (2012). An instance theory of associative learning. <em>Learning &amp; Behavior</em>, <em>40</em>(1), 61–82. <a href="https://doi.org/dwkrm5" class="uri">https://doi.org/dwkrm5</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13704/Jamieson et al. - 2012 - An instance theory of associative learning.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Logan, G. D., &amp; Crump, M. J. C. (2011). Hierarchical control of cognitive processes: The case for skilled typewriting. In B. H. Ross (Ed.), <em>Psychology of learning and motivation</em> (Vol. 54, pp.&nbsp;1–27). Elsevier.<span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3898/Logan and Crump - 2011 - Hierarchical control of cognitive processes The c.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., &amp; Logan, G. D. (2010). Contextual control over task-set retrieval. <em>Attention, Perception, &amp; Psychophysics</em>, <em>72</em>(8), 2047–2053. <a href="https://doi.org/c6psw7" class="uri">https://doi.org/c6psw7</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3904/Crump and Logan - 2010 - Contextual control over task-set retrieval.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., &amp; Logan, G. D. (2010). Warning: This keyboard will deconstruct— the role of the keyboard in skilled typewriting. <em>Psychonomic Bulletin &amp; Review</em>, <em>17</em>(3), 394–399. <a href="https://doi.org/d9jmzm" class="uri">https://doi.org/d9jmzm</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3902/Crump and Logan - 2010 - Warning This keyboard will deconstruct— The role .pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., &amp; Logan, G. D. (2010). Hierarchical control and skilled typing: Evidence for word-level control over the execution of individual keystrokes. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, <em>36</em>(6), 1369–1380. <a href="https://doi.org/ccjxg5" class="uri">https://doi.org/ccjxg5</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4704/Crump and Logan - 2010 - Hierarchical control and skilled typing Evidence .pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., &amp; Logan, G. D. (2010). Episodic contributions to sequential control: Learning from a typist’s touch. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>36</em>(3), 662–672. <a href="https://doi.org/ccw3b5" class="uri">https://doi.org/ccw3b5</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3903/Crump and Logan - 2010 - Episodic contributions to sequential control Lear.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Jamieson, R. K., Hannah, S. D., &amp; Crump, M. J. C. (2010). A memory-based account of retrospective revaluation. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>64</em>(3), 153–164. <a href="https://doi.org/fn46rb" class="uri">https://doi.org/fn46rb</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3901/Jamieson et al. - 2010 - A memory-based account of retrospective revaluatio.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Liu, X., Crump, M. J. C., &amp; Logan, G. D. (2010). Do you know where your fingers have been? Explicit knowledge of the spatial layout of the keyboard in skilled typists. <em>Memory &amp; Cognition</em>, <em>38</em>(4), 474–484. <a href="https://doi.org/ccq7jw" class="uri">https://doi.org/ccq7jw</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3900/Liu et al. - 2010 - Do you know where your fingers have been Explicit.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Logan, G. D., &amp; Crump, M. J. C. (2010). Cognitive illusions of authorship reveal hierarchical error detection in skilled typists. <em>Science</em>, <em>330</em>(6004), 683–686. <a href="https://doi.org/bktxxk" class="uri">https://doi.org/bktxxk</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3899/Logan and Crump - 2010 - Cognitive Illusions of Authorship Reveal Hierarchi.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., &amp; Milliken, B. (2009). The flexibility of context-specific control: Evidence for context-driven generalization of item-specific control settings. <em>The Quarterly Journal of Experimental Psychology</em>, <em>62</em>(8), 1523–1532. <a href="https://doi.org/10.1080/17470210902752096" class="uri">https://doi.org/10.1080/17470210902752096</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3908/Crump and Milliken - 2009 - The flexibility of context-specific control Evide.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Hannah, S. D., Crump, M. J. C., Allan, L. G., &amp; Siegel, S. (2009). Cue-interaction effects in contingency judgments using the streamed-trial procedure. <em>Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale</em>, <em>63</em>(2), 103–112. <a href="https://doi.org/fgwn3x" class="uri">https://doi.org/fgwn3x</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3907/Hannah et al. - 2009 - Cue-interaction effects in contingency judgments u.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Logan, G. D., &amp; Crump, M. J. C. (2009). The left hand doesn’t know what the right hand is doing: The disruptive effects of attention to the hands in skilled typewriting. <em>Psychological Science</em>, <em>20</em>(10), 1296–1300. <a href="https://doi.org/10.1111/j.1467-9280.2009.02442.x" class="uri">https://doi.org/10.1111/j.1467-9280.2009.02442.x</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3906/Logan and Crump - 2009 - The left hand doesn't know what the right hand Is .pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Siegel, S., Allan, L. G., Hannah, S. D., &amp; Crump, M. J. C. (2009). Applying signal detection theory to contingency assessment. <em>Comparative Cognition &amp; Behavior Reviews</em>, <em>4</em>, 116–134. <a href="https://doi.org/10.3819/ccbr.2009.40012" class="uri">https://doi.org/10.3819/ccbr.2009.40012</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3905/Siegel et al. - 2009 - Applying signal detection theory to contingency as.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Allan, L. G., Hannah, S. D., Crump, M. J. C., &amp; Siegel, S. (2008). The psychophysics of contingency assessment. <em>Journal of Experimental Psychology: General</em>, <em>137</em>(2), 226–243. <a href="https://doi.org/10.1037/0096-3445.137.2.226" class="uri">https://doi.org/10.1037/0096-3445.137.2.226</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3911/Allan et al. - 2008 - The psychophysics of contingency assessment..pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., Vaquero, J. M. M., &amp; Milliken, B. (2008). Context-specific learning and control: The roles of awareness, task relevance, and relative salience. <em>Consciousness and Cognition</em>, <em>17</em>(1), 22–36. <a href="https://doi.org/d2fm7p" class="uri">https://doi.org/d2fm7p</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3910/Crump et al. - 2008 - Context-specific learning and control The roles o.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., Milliken, B., &amp; Ansari, I. (2008). Shifting views on the symbolic cueing effect: Cueing attention through recent prior experience. <em>Psicológica</em>, <em>29</em>(1), 97–114. <a href="https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump%20et%20al.%20-%202008.pdf">https://CrumpLab.github.io/CognitionPerformanceLab/CrumpPubs/Crump et al.&nbsp;- 2008.pdf</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3895/Crump et al. - 2008 - Shifting views on the symbolic cueing effect Cuei.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Leboe, J. P., Wong, J., Crump, M. J. C., &amp; Stobbe, K. (2008). Probe-specific proportion task repetition effects on switching costs. <em>Perception &amp; Psychophysics</em>, <em>70</em>(6), 935–945. <a href="https://doi.org/10.3758/PP.70.6.935" class="uri">https://doi.org/10.3758/PP.70.6.935</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3909/Leboe et al. - 2008 - Probe-specific proportion task repetition effects .pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., Hannah, S. D., Allan, L. G., &amp; Hord, L. K. (2007). Contingency judgements on the fly. <em>Quarterly Journal of Experimental Psychology</em>, <em>60</em>(6), 753–761. <a href="https://doi.org/b9jjc4" class="uri">https://doi.org/b9jjc4</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/13705/Crump et al. - 2007 - Contingency judgements on the fly.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Schmidt, J. R., Crump, M. J. C., Cheesman, J., &amp; Besner, D. (2007). Contingency learning without awareness: Evidence for implicit control. <em>Consciousness and Cognition</em>, <em>16</em>(2), 421–435. <a href="https://doi.org/d9bv53" class="uri">https://doi.org/d9bv53</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/3912/Schmidt et al. - 2007 - Contingency learning without awareness Evidence f.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
-<p>Crump, M. J. C., Gong, Z., &amp; Milliken, B. (2006). The context-specific proportion congruent stroop effect: Location as a contextual cue. <em>Psychonomic Bulletin &amp; Review</em>, <em>13</em>(2), 316–321. <a href="https://doi.org/fpxkfs" class="uri">https://doi.org/fpxkfs</a><span class="publinks"> <a href="https://www.crumplab.com/publications/Crump/files/4717/Crump et al. - 2006 - The context-specific proportion congruent Stroop e.pdf"> <i class="fas fa-file-pdf"> pdf </i></a></span></p>
 </div>
 
 
-</section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/crumplab\.com");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/crumplab\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -556,185 +1807,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 
 

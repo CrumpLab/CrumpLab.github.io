@@ -1,0 +1,32 @@
+<%
+  var md = function (s) { return (s || "").replace(/\[([^\]]+)\]\(([^)]+)\)/g, "<a href=\"$2\">$1</a>"); };
+  var info = function (c) {
+    var kw = c.keywords || [];
+    var level = kw.indexOf("Doctoral") > -1 ? "doctoral" : kw.indexOf("Graduate") > -1 ? "masters" : kw.some(function (k) { return /^under/i.test(k); }) ? "undergraduate" : "other";
+    var term = kw.filter(function (k) { return /^(Fall|Spring|Summer|Winter) \d{4}$|^\d{4}-\d{4}$/.test(k); })[0] || "";
+    var oer = kw.indexOf("OER") > -1;
+    var tags = kw.filter(function (k) { return k !== "OER" && k !== term && !/^(Doctoral|Graduate|Undergraduate|Undergaduate)$/.test(k); });
+    var m = c.title.match(/^((?:Psyc|PSYC|MCHC|SOCY)[^:]*?)\s*(?::|\s-\s)\s*(.*)$/);
+    var code = m ? m[1] : "";
+    var name = m ? m[2] : c.title;
+    var mm = name.match(/^(.*?)\s*\(([^)]+)\)$/);
+    var base = mm ? mm[1] : name;
+    var mode = mm ? mm[2] : "";
+    var placeholder = !c.image || /course_placeholder/.test(c.image);
+    return { level: level, term: term, oer: oer, tags: tags, code: code, name: name, base: base, mode: mode, placeholder: placeholder };
+  };
+  var levelLabel = { undergraduate: "undergraduate", masters: "master’s", doctoral: "doctoral", other: "other" };
+  var codeTile = function (code) { return "<div class=\"code-tile\"><span>" + code.replace(/\s+/, "</span><span>") + "</span></div>"; };
+%>
+<%
+  var all = items.map(info);
+  var distinct = {};
+  all.forEach(function (x) { distinct[(x.code + "|" + x.base).toLowerCase()] = 1; });
+  var n = function (lvl) { return all.filter(function (x) { return x.level === lvl; }).length; };
+%>
+<div class="stats-line">
+<span><b><%- items.length %></b> course offerings</span>
+<span><b><%- Object.keys(distinct).length %></b> distinct courses</span>
+<span><b><%- all.filter(function (x) { return x.oer; }).length %></b> with OER materials</span>
+<span><b><%- n("undergraduate") %></b> undergraduate · <b><%- n("masters") %></b> master&#8217;s · <b><%- n("doctoral") %></b> doctoral</span>
+</div>

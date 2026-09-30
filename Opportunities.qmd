@@ -1,28 +1,86 @@
 ---
 title: "Join"
 description: "Interested in joining the lab? Check this page out."
-format:
-  html:
-    page-layout: full
+image: images/opportunities_banner.jpg
+toc: false
+hide-title-block: true
+page-layout: custom
+css:
+  - home/home.css
+  - people-page/people.css
+  - join-page/join.css
+listing:
+  - id: levels
+    contents: listings/alumni.yaml
+    sort: false
+    template: join-page/levels.ejs
 ---
 
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
+:::::: {.fp .home .people .join}
+
+::::: people-hero
+![](images/opportunities_banner.jpg){.hero-banner fig-alt="Join the lab"}
+
+::: hero-body
+[\~/crumplab/join]{.fp-kicker}
+
+```{=html}
+<h1 class="visually-hidden">Join</h1>
 ```
 
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/opportunities_banner.jpg')
+::: fp-lead
+Interested in joining the lab? Check this page out.
+:::
+:::
+:::::
+
+```{=html}
+<div class="terminal" role="img" aria-label="Lab status: limited openings until 2027">
+<div class="tbar"><span class="dots">● ● ●</span><span>join.txt</span></div>
+<pre><span class="prompt">$</span> cat join.txt
+<span class="k">lab     </span> computational cognition lab
+<span class="k">status  </span> limited openings
+<span class="k">until   </span> 2027
+<span class="k">why     </span> Dr. Crump is serving a three year term as Department Chair
+<span class="k">contact </span> <a href="mailto:mcrump@brooklyn.cuny.edu">mcrump@brooklyn.cuny.edu</a>
+<span class="prompt">$</span> <span class="cursor">█</span></pre>
+</div>
 ```
 
-Dr. Crump has mentored students interested in cognition at all levels, including [undergraduate, master's, doctoral, and postdoctoral researchers](https://crumplab.com/People.html). There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr. Crump is serving a three year term as Department Chair. 
+::::::::: bento
+
+::::: {#status .card .span-8 .plain .c-pink .status-card}
+::: card-head
+[┌─ status · limited openings 2024–2027]{.card-label}
+:::
+
+Dr. Crump has mentored students interested in cognition at all levels, including [undergraduate, master's, doctoral, and postdoctoral researchers](People.qmd). There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr. Crump is serving a three year term as Department Chair.
+:::::
+
+::::: {#mentored .card .span-4 .c-blue}
+::: card-head
+[┌─ mentored]{.card-label} [former lab members →](People.qmd){.fp-more}
+:::
+
+::: {#levels}
+:::
+:::::
+
+::::: {#contact .card .span-12 .c-green .contact-card}
+::: card-head
+[┌─ contact]{.card-label}
+:::
+
+::: contact-row
+[Matthew Crump](people/matt_crump.qmd), Professor, [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php), Brooklyn College of CUNY
+
+[mcrump\@brooklyn.cuny.edu](mailto:mcrump@brooklyn.cuny.edu){.email-chip}
+:::
+:::::
+
+:::::::::
+
+::::::
 
 <!--
 

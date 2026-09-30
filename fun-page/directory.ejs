@@ -1,0 +1,18 @@
+<%
+  var md = function (s) { return (s || "").replace(/\[([^\]]+)\]\(([^)]+)\)/g, "<a href=\"$2\">$1</a>"); };
+  var short = function (u) { return u.replace(/^https?:\/\//, "").replace(/\/$/, ""); };
+%>
+<div class="card c-yellow fun-directory">
+<div class="card-head"><p><span class="card-label">┌─ ~/fun</span><span class="count"><%- items.length %></span></p></div>
+<% items.forEach(function (f) { %>
+<div class="frow">
+<div class="frow-thumb"><a href="<%- f.url %>"><img src="<%- f.image %>" alt="" loading="lazy"></a></div>
+<div class="frow-main">
+<div class="frow-name"><a href="<%- f.url %>"><%- f.title %></a></div>
+<div class="frow-desc"><%= md(f.description) %></div>
+<div class="frow-tags"><% (f.keywords || []).forEach(function (k) { %><span>[<%- k %>]</span><% }); %></div>
+</div>
+<div class="frow-chips"><a class="pchip" href="<%- f.url %>">visit <%- short(f.url) %></a></div>
+</div>
+<% }); %>
+</div>

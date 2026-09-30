@@ -1,40 +1,40 @@
 ---
 title: "Fun"
 description: "Some links to extra-curricular fun stuff like music and visual creations."
+image: images/fun_banner.jpg
+toc: false
+hide-title-block: true
+page-layout: custom
+css:
+  - home/home.css
+  - people-page/people.css
+  - fun-page/fun.css
 listing:
-  contents: 
-    - fun.yaml
-  id: fun-list
-  sort: "order"
-  type: default
-  template: fun/fun.ejs
-  categories: false
-  image-align: 'right'
-  image-height: '100%'
-format:
-  html:
-   page-layout: full
+  - id: fun
+    contents: listings/fun.yaml
+    sort: false
+    template: fun-page/directory.ejs
 ---
 
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
+:::::: {.fp .home .people .fun}
+
+::::: people-hero
+![](images/fun_banner.jpg){.hero-banner fig-alt="Fun"}
+
+::: hero-body
+[\~/crumplab/fun]{.fp-kicker}
+
+```{=html}
+<h1 class="visually-hidden">Fun</h1>
 ```
 
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/fun_banner.jpg')
-```
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
-```
-
-::: {#fun-list}
+::: fp-lead
+Some links to extra-curricular fun stuff like music and visual creations.
 :::
+:::
+:::::
+
+::: {#fun}
+:::
+
+::::::

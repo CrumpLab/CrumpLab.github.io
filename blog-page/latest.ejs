@@ -1,0 +1,49 @@
+<%
+  var low = function (c) { return String(c).toLowerCase(); };
+  var counts = {}, labels = {}, variants = {};
+  items.forEach(function (it) { (it.categories || []).forEach(function (c) {
+    var k = low(c); counts[k] = (counts[k] || 0) + 1;
+    variants[k] = variants[k] || {}; variants[k][c] = (variants[k][c] || 0) + 1;
+  }); });
+  /* label each merged category with its most common spelling */
+  Object.keys(variants).forEach(function (k) {
+    labels[k] = Object.keys(variants[k]).sort(function (a, b) { return variants[k][b] - variants[k][a]; })[0];
+  });
+  var top = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); }).slice(0, 10);
+  var year = function (it) { var m = String(it.date || "").match(/(\d{4})\s*$/); return m ? m[1] : ""; };
+  var cats = function (it) { return (it.categories || []).map(low).join("|"); };
+  var search = function (it) { return (String(it.title || "") + " " + String(it.description || "") + " " + (it.categories || []).join(" ")).toLowerCase().replace(/<[^>]+>/g, "").replace(/"/g, ""); };
+  var tags = function (it) { return (it.categories || []).map(function (c) { return "<a class=\"btag\" href=\"#category=" + encodeURIComponent(low(c)) + "\" data-tag=\"" + low(c) + "\">" + c + "</a>"; }).join(""); };
+  var thumb = function (it) { return it.image ? "<img src=\"" + it.image + "\" alt=\"\" loading=\"lazy\">" : "<div class=\"glyph-tile\">¶</div>"; };
+  var tools = function (withGrep) {
+    var h = "<div class=\"tools\"><div class=\"filters\" role=\"group\" aria-label=\"Filter by category\"><button type=\"button\" class=\"filter active\" data-cat=\"all\" aria-pressed=\"true\">all <span>" + items.length + "</span></button>";
+    top.forEach(function (k) { h += "<button type=\"button\" class=\"filter\" data-cat=\"" + k + "\" aria-pressed=\"false\">" + labels[k] + " <span>" + counts[k] + "</span></button>"; });
+    h += "</div>";
+    if (withGrep) h += "<label class=\"grep\"><span>$ grep</span><input type=\"search\" placeholder=\"title, description, tag\" aria-label=\"Search posts\"></label>";
+    h += "</div><div class=\"filter-status\" hidden>showing posts tagged <b class=\"fs-cat\"></b> <button type=\"button\" class=\"fs-clear\">[ clear ]</button></div>";
+    return h;
+  };
+%>
+<% var latest = items.slice(0, 3); %>
+<div class="latest">
+<% latest.forEach(function (it, i) { %>
+<div class="card lcard <%- ["c-pink", "c-blue", "c-green"][i] %>">
+<a class="lthumb" href="<%- it.path %>"><%= thumb(it) %></a>
+<div class="lmeta">┌─ <%- it.date %></div>
+<h2 class="ltitle"><a href="<%- it.path %>"><%- it.title %></a></h2>
+<% if (it.description) { %><div class="bdesc"><%- it.description %></div><% } %>
+</div>
+<% }); %>
+</div>
+<div class="card c-violet blog-list">
+<div class="card-head"><p><span class="card-label">┌─ index · all posts</span><span class="count"><%- items.length %></span></p></div>
+<%= tools(true) %>
+<% items.forEach(function (it) { %>
+<div class="brow irow" data-cats="<%- cats(it) %>" data-search="<%- search(it) %>">
+<div class="bdate"><%- it.date %></div>
+<div class="btitle"><a href="<%- it.path %>"><%- it.title %></a></div>
+<div class="btags"><%= tags(it) %></div>
+</div>
+<% }); %>
+<p class="empty" hidden>No matches.</p>
+</div>
