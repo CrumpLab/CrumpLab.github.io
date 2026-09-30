@@ -1,0 +1,291 @@
+/* People page (People.qmd): the banner leads a hero card, then cards for
+   the PI and current members, then a filterable directory of former
+   members. Builds on home/home.css, which holds the fonts, colours, and
+   card styles shared with the home page. */
+
+/* ---- PI ---- */
+.home .pi {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.home .pi > p {
+  margin: 0;
+}
+
+.home .pi > p > img {
+  width: 150px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 14px;
+}
+
+.home .pi-text h2 {
+  font-size: 26px;
+  margin: 0 0 4px;
+}
+
+.home .pi-role {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--faint);
+  margin-bottom: 12px;
+}
+
+.home .pi-text > p {
+  color: #2c3039;
+  font-size: 15px;
+}
+
+.home .link-chips p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.home a.chip {
+  padding: 4px 12px;
+}
+
+.home a.chip::before {
+  display: none;
+}
+
+.home a.chip:hover {
+  border-color: var(--accent);
+}
+
+/* ---- current members ---- */
+.home .members {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.home .member {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  background: #f7f7f9;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.home .member img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.home .member-name {
+  font-weight: 600;
+}
+
+.home .member-role {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--faint);
+}
+
+.home #current > p {
+  font-size: 14.5px;
+}
+
+/* ---- former members: heading, counts, level tags ---- */
+.home .section-title h2 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 40px 0 16px;
+}
+
+.home .count {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  background: #f3f4f6;
+  border-radius: 999px;
+  padding: 0 10px;
+}
+
+.home .lvl {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--faint);
+  background: #f3f4f6;
+  border-radius: 4px;
+  padding: 0 6px;
+}
+
+/* ---- hero: banner on top, text below ---- */
+.home .people-hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.home .people-hero > p {
+  margin: 0;
+}
+
+.home .hero-banner {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+}
+
+.home .hero-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 22px 28px;
+}
+
+.home .hero-body .fp-lead p {
+  margin: 0;
+  font-size: 17px;
+}
+
+/* ---- directory ---- */
+.home #alumni {
+  grid-column: span 12;
+}
+
+.home .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.home .filter {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  background: #f7f7f9;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.home .filter::before {
+  content: "[ ";
+  color: var(--faint);
+}
+
+.home .filter::after {
+  content: " ]";
+  color: var(--faint);
+}
+
+.home .filter span {
+  color: var(--faint);
+}
+
+.home .filter.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+}
+
+.home .filter.active span,
+.home .filter.active::before,
+.home .filter.active::after {
+  color: #9aa0ab;
+}
+
+.home .dir-row {
+  display: grid;
+  grid-template-columns: 90px minmax(160px, 0.9fr) 110px minmax(0, 2.4fr);
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  align-items: baseline;
+}
+
+.home .dir-row[hidden] {
+  display: none;
+}
+
+.home .dir-header {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--faint);
+  border-top: none;
+  border-bottom: 1px solid var(--ink);
+  padding-top: 0;
+}
+
+.home .dir-header div::before {
+  content: "# ";
+}
+
+.home .dir-year {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--faint);
+}
+
+.home .dir-name {
+  font-weight: 600;
+}
+
+.home .dir-name a,
+.home .dir-work a {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+
+.home .dir-work {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .home .hero-banner {
+    aspect-ratio: 3 / 1;
+    object-position: left center;
+  }
+
+  .home .dir-header {
+    display: none;
+  }
+
+  .home .dir-row {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 4px 12px;
+  }
+
+  .home .dir-level {
+    justify-self: end;
+  }
+
+  .home .dir-work {
+    grid-column: 1 / -1;
+  }
+
+  .home .pi {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home .pi > p > img {
+    width: 120px;
+  }
+}

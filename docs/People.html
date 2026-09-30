@@ -79,20 +79,49 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-people_list .list');
+    const listingTargetEl = window.document.querySelector('#listing-members .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-execute','listing-format','listing-editor','listing-engines','listing-language','listing-title','listing-image','listing-description','listing-about','listing-order','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-website","listing-execute","listing-format","listing-editor","listing-engines","listing-language","listing-title","listing-image","listing-description","listing-about","listing-order","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-people_list'] = new List('listing-people_list', options);
+    window['quarto-listings']['listing-members'] = new List('listing-members', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-alumni .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-level','listing-name','listing-url','listing-years','listing-now','listing-projects','listing-details','listing-role',{ data: ['index'] },{ data: ['categories'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-level","listing-name","listing-url","listing-years","listing-now","listing-projects","listing-details","listing-role"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-alumni'] = new List('listing-alumni', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -145,6 +174,8 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="home/home.css">
+<link rel="stylesheet" href="people-page/people.css">
 <meta property="og:title" content="People – crumplab">
 <meta property="og:description" content="The lab is run by Dr.&nbsp;Matthew Crump and student research assistants from undergraduates to doctoral students.">
 <meta property="og:image" content="https://crumplab.com/images/people_banner.jpg">
@@ -155,7 +186,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -233,122 +264,556 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#lab-members" id="toc-lab-members" class="nav-link active" data-scroll-target="#lab-members">Lab Members</a></li>
-  <li><a href="#previous" id="toc-previous" class="nav-link" data-scroll-target="#previous">Previous</a>
-  <ul class="collapse">
-  <li><a href="#postdoctoral" id="toc-postdoctoral" class="nav-link" data-scroll-target="#postdoctoral">Postdoctoral</a></li>
-  <li><a href="#doctoral" id="toc-doctoral" class="nav-link" data-scroll-target="#doctoral">Doctoral</a></li>
-  <li><a href="#masters" id="toc-masters" class="nav-link" data-scroll-target="#masters">Masters</a></li>
-  <li><a href="#undergraduate" id="toc-undergraduate" class="nav-link" data-scroll-target="#undergraduate">Undergraduate</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block page-banner">
-<h1 class="title visually-hidden display-7">People</h1>
-<p class="page-banner-image"><img src="images/people_banner.jpg" alt=""></p>
-</header>
 
 
 
-<section id="lab-members" class="level2">
-<h2 class="anchored" data-anchor-id="lab-members">Lab Members</h2>
-<div id="listing-people_list" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1733337957562" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
-<a href="./people/matt_crump.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./people/imgs/Crump.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Matt Crump
-</h5>
-<div class="card-text listing-description delink">
-<p>Principal Investigator mcrump@brooklyn.cuny.edu</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
+<div class="fp home people">
+<div class="people-hero">
+<p><img src="images/people_banner.jpg" class="hero-banner img-fluid" alt="People"></p>
+<div class="hero-body">
+<p><span class="fp-kicker">~/crumplab/people</span></p>
+<h1 class="visually-hidden">People</h1>
+<div class="fp-lead">
+<p>The lab is run by Dr.&nbsp;Matthew Crump and student research assistants from undergraduates to doctoral students.</p>
 </div>
 </div>
 </div>
-</div></a>
+<div class="bento">
+<div id="pi" class="card span-7 c-pink">
+<div class="card-head">
+<p><span class="card-label">┌─ principal investigator</span> <a href="./people/matt_crump.html" class="fp-more">full profile →</a></p>
+</div>
+<div class="pi">
+<p><img src="people/imgs/Crump.jpg" class="img-fluid" alt="Portrait of Matthew Crump"></p>
+<section id="matthew-crump" class="level2 pi-text">
+<h2 data-anchor-id="matthew-crump">Matthew Crump</h2>
+<p><span class="pi-role">Professor · Department of Psychology · Brooklyn College of CUNY</span></p>
+<p>Matt Crump is a cognitive psychologist with research interests in learning, memory, attention, skill learning, semantics, and computational modeling. He runs the computational cognition lab at Brooklyn College of CUNY.</p>
+<div class="link-chips">
+<p><a href="https://github.com/CrumpLab" class="chip">GitHub</a> <a href="https://scholar.google.com/citations?user=49EVuVcAAAAJ&amp;hl=en" class="chip">Google Scholar</a> <a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab" class="chip">YouTube</a> <a href="https://www.brooklyn.edu/faculty-staff/matthew-crump/" class="chip">Brooklyn College</a> <a href="https://www.gc.cuny.edu/psychology/training-areas/cognitive-and-comparative-psychology" class="chip">The Graduate Center, CUNY</a></p>
+</div>
+</section>
+</div>
+</div>
+<div id="current" class="card span-5 c-blue">
+<div class="card-head">
+<p><span class="card-label">┌─ lab members</span> <a href="./Opportunities.html" class="fp-more">about joining →</a></p>
+</div>
+<div id="listing-members" class="quarto-listing quarto-listing-container-custom">
+<div class="members">
+<div class="member">
+<div class="member-photo">
+<a href="./people/matt_crump.html"><img src="./people/imgs/Crump.jpg" alt="" loading="lazy"></a>
+</div>
+<div class="member-text">
+<div class="member-name">
+<a href="./people/matt_crump.html">Matt Crump</a>
+</div>
+<div class="member-role">
+Principal Investigator
+</div>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+<p>Dr.&nbsp;Crump has mentored students interested in cognition at all levels, including undergraduate, master’s, doctoral, and postdoctoral researchers. There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr.&nbsp;Crump is serving a three year term as Department Chair.</p>
+</div>
+</div>
+<section id="former-lab-members" class="level2 section-title">
+<h2 data-anchor-id="former-lab-members">Former lab members</h2>
 </section>
-<section id="previous" class="level2">
-<h2 class="anchored" data-anchor-id="previous">Previous</h2>
-<section id="postdoctoral" class="level3">
-<h3 class="anchored" data-anchor-id="postdoctoral">Postdoctoral</h3>
-<ul>
-<li><a href="https://www.isu.edu/psych/people/faculty/facultyandstaff/lawrence-p-behmer-jr-phd.html">Lawrence Behmer</a> (2014 - 2017), Idaho State University</li>
-</ul>
-</section>
-<section id="doctoral" class="level3">
-<h3 class="anchored" data-anchor-id="doctoral">Doctoral</h3>
-<ul>
-<li><a href="https://www.linkedin.com/in/drewshives/">Drew Shives</a>, goguma</li>
-<li><a href="https://nbrosowsky.github.io/index.html">Nicholaus Brosowsky</a> (2014 - 2019), University of Manitoba</li>
-<li><a href="https://www.mitmillconsulting.com/about">Kevonte Mitchell</a> (2012 - 2023), Mit + Mill Consulting</li>
-</ul>
-</section>
-<section id="masters" class="level3">
-<h3 class="anchored" data-anchor-id="masters">Masters</h3>
-<ul>
-<li>2016: Ashot Balayan, “Subjective Confidence in the Evaluations of Typing Speed:Testing the Self-Consistency Model”, Master’s Thesis</li>
-<li>2016: Michelle Villavicencio, “Aesthetic Preference in Dance Movement: Motor Fluency and the Mere Exposure Effect”, Master’s Thesis</li>
-</ul>
-</section>
-<section id="undergraduate" class="level3">
-<h3 class="anchored" data-anchor-id="undergraduate">Undergraduate</h3>
-<ul>
-<li>2024: Hao Zhu, <a href="https://www.crumplab.com/midi-entropy-judgment/">“The psychophysics of entropy judgments for musical note sequences”</a>, Psyc 5001, CUNY BA</li>
-<li>2023: Shifa Maqsood, <a href="http://www.crumplab.com/self-reference/">“Is The Self Reference Effect a Retrieval Practice Phenomenon?”</a>, Undergraduate Honors thesis, Tow Presidential Mentoring Scholar</li>
-<li>2023: Hao Zhu, Psyc 2001 Laboratory Experience, CUNY BA</li>
-<li>2023: Chantal Miller, Psyc 2001 Laboratory Experience</li>
-<li>2023: Cobe Liu, Psyc 2001 Laboratory Experience, Macaulay Honors</li>
-<li>2022: Wesley Huang, Undergraduate, Tow Presidential Mentoring Scholar</li>
-<li>2022: Patrick Ihejirika, <a href="https://www.crumplab.com/PatrickHonorsThesis/">“Try and forget this image: The role of stimulus duration in directed forgetting for natural scenes”</a>, Undergraduate MARC Honors thesis, Barry Goldwater Scholar</li>
-<li>2022: Kendra Scarlett Reynoso Moreno, Undergraduate CUNY BA Program</li>
-<li>2021: Austin Kaplan, “Explaining contingency judgments with a computational model of instance-based memory”, Undergraduate Honors Thesis</li>
-<li>2019: Mark Rayev, “Deception detection through word usage and word production time in typing”, Undergraduate Macaulay Honors</li>
-<li>2018: <a href="https://www.linkedin.com/in/walter-lai-31395b181">Walter Lai</a>, Contributing author on <a href="https://crumplab.github.io/EntropyTyping/index.html">“Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics”</a>, currently completing a Masters in Data Science at Southern Methodist University</li>
-<li>2018: Rochelle Hall, Undergraduate REU</li>
-<li>2017: Chin Tan, “Examining cognitive control and information theory accounts of mid-word slowing in skilled typing”, Undergraduate</li>
-<li>2017: Marissa Scotto, Undergraduate REU</li>
-<li>2016: Niles Uy, “A twofold investigation into the nature of dual-task interference”, Honor’s Thesis</li>
-<li>2016: Ana Sanchez, “EEG and learning to type on a novel keyboard”, REU program</li>
-<li>2015: <a href="https://ca.linkedin.com/public-profile/in/shawnlauzon?challengeId=AQFcIfKDBrAmIwAAAXeRzrHYBkBMThytBYhCccIDOoXwmYQi8c63SVZAcQYiJ3KmAnk1nUFkmVmCtZt_uAQLcprxdAvToBGp4g&amp;submissionId=07d8640c-98bc-6216-77a1-f4946022cd2e">Shawn Lauzon</a>, “Escape from the canyon: an objective measure of insight through convergent and divergent thinking”, Independent Study</li>
-<li>2015: Rebecca Colon, “Resource Demands of a Dual-Task Disrupts Skilled Typing”, REU program</li>
-<li>2014-2015: <a href="https://www.blackinneuro.com/profiles/elena-dominguez">Elena Dominguez</a>, “Explaining the list-wide proportion congruent effect”, “Reliability and precision of basic and manipulated flanker tasks”, MARC program, currently a <a href="https://faculty.sites.uci.edu/starklab/elena-dominguez/">Ph.D.&nbsp;Candidate at UCI</a></li>
-<li>2014: Michael Blecher, “False-recognition by test-induced priming for non-studied lists”, Independent Study</li>
-<li>2014: <a href="https://www.linkedin.com/in/niles-uy?trk=public_profile_browsemap_profile-result-card_result-card_full-click">Niles Uy</a>, “Is the flanker task reliable?”, Independent Study, went on to KU Leuven for a Masters in Statistics</li>
-<li>2013: <a href="https://clinpsyc.sdsu.edu/emily-paolillo/">Emily Paolillo</a>, “The role of explicit and implicit knowledge in typing skill”, Honor’s Thesis. Completing a Ph.D.&nbsp;in Neuropsychology @ UC San Diego</li>
-<li>2013: Esthena Brutten, “Online investigations of contextual interference in motor learning”, Independent Study</li>
-<li>2013: Esthena Brutten, “Proportion congruent manipulations on Amazon’s mechanical Turk”, Honor’s thesis</li>
-</ul>
+<div id="listing-alumni" class="quarto-listing quarto-listing-container-custom">
+<div class="card span-12 c-green directory">
+<div class="card-head">
+<p>
+<span class="card-label">┌─ former lab members</span><span class="count">30</span>
+</p>
+</div>
+<div class="filters" role="group" aria-label="Filter by level">
+<button type="button" class="filter active" data-level="all" aria-pressed="true">
+all <span>30</span>
+</button>
+<button type="button" class="filter" data-level="postdoc" aria-pressed="false">
+postdoc <span>1</span>
+</button>
+<button type="button" class="filter" data-level="doctoral" aria-pressed="false">
+doctoral <span>3</span>
+</button>
+<button type="button" class="filter" data-level="masters" aria-pressed="false">
+master's <span>2</span>
+</button>
+<button type="button" class="filter" data-level="undergraduate" aria-pressed="false">
+undergraduate <span>24</span>
+</button>
+</div>
+<div class="dir-table">
+<div class="dir-row dir-header">
+<div>
+year
+</div>
+<div>
+name
+</div>
+<div>
+level
+</div>
+<div>
+work
+</div>
+</div>
+<div class="dir-row" data-level="postdoc">
+<div class="dir-year">
+2014 - 2017
+</div>
+<div class="dir-name">
+<a href="https://www.isu.edu/psych/people/faculty/facultyandstaff/lawrence-p-behmer-jr-phd.html">Lawrence Behmer</a>
+</div>
+<div class="dir-level">
+<span class="lvl">postdoc</span>
+</div>
+<div class="dir-work">
+→ Idaho State University
+</div>
+</div>
+<div class="dir-row" data-level="doctoral">
+<div class="dir-year">
+
+</div>
+<div class="dir-name">
+<a href="https://www.linkedin.com/in/drewshives/">Drew Shives</a>
+</div>
+<div class="dir-level">
+<span class="lvl">phd</span>
+</div>
+<div class="dir-work">
+→ goguma
+</div>
+</div>
+<div class="dir-row" data-level="doctoral">
+<div class="dir-year">
+2014 - 2019
+</div>
+<div class="dir-name">
+<a href="https://nbrosowsky.github.io/index.html">Nicholaus Brosowsky</a>
+</div>
+<div class="dir-level">
+<span class="lvl">phd</span>
+</div>
+<div class="dir-work">
+→ University of Manitoba
+</div>
+</div>
+<div class="dir-row" data-level="doctoral">
+<div class="dir-year">
+2012 - 2023
+</div>
+<div class="dir-name">
+<a href="https://www.mitmillconsulting.com/about">Kevonte Mitchell</a>
+</div>
+<div class="dir-level">
+<span class="lvl">phd</span>
+</div>
+<div class="dir-work">
+→ Mit + Mill Consulting
+</div>
+</div>
+<div class="dir-row" data-level="masters">
+<div class="dir-year">
+2016
+</div>
+<div class="dir-name">
+Ashot Balayan
+</div>
+<div class="dir-level">
+<span class="lvl">master's</span>
+</div>
+<div class="dir-work">
+“Subjective Confidence in the Evaluations of Typing Speed:Testing the Self-Consistency Model”, Master’s Thesis
+</div>
+</div>
+<div class="dir-row" data-level="masters">
+<div class="dir-year">
+2016
+</div>
+<div class="dir-name">
+Michelle Villavicencio
+</div>
+<div class="dir-level">
+<span class="lvl">master's</span>
+</div>
+<div class="dir-work">
+“Aesthetic Preference in Dance Movement: Motor Fluency and the Mere Exposure Effect”, Master’s Thesis
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2024
+</div>
+<div class="dir-name">
+Hao Zhu
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+<a href="https://www.crumplab.com/midi-entropy-judgment/">“The psychophysics of entropy judgments for musical note sequences”</a>, Psyc 5001, CUNY BA
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2023
+</div>
+<div class="dir-name">
+Shifa Maqsood
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+<a href="http://www.crumplab.com/self-reference/">“Is The Self Reference Effect a Retrieval Practice Phenomenon?”</a>, Undergraduate Honors thesis, Tow Presidential Mentoring Scholar
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2023
+</div>
+<div class="dir-name">
+Hao Zhu
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+Psyc 2001 Laboratory Experience, CUNY BA
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2023
+</div>
+<div class="dir-name">
+Chantal Miller
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+Psyc 2001 Laboratory Experience
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2023
+</div>
+<div class="dir-name">
+Cobe Liu
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+Psyc 2001 Laboratory Experience, Macaulay Honors
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2022
+</div>
+<div class="dir-name">
+Wesley Huang
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+Undergraduate, Tow Presidential Mentoring Scholar
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2022
+</div>
+<div class="dir-name">
+Patrick Ihejirika
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+<a href="https://www.crumplab.com/PatrickHonorsThesis/">“Try and forget this image: The role of stimulus duration in directed forgetting for natural scenes”</a>, Undergraduate MARC Honors thesis, Barry Goldwater Scholar
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2022
+</div>
+<div class="dir-name">
+Kendra Scarlett Reynoso Moreno
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+Undergraduate CUNY BA Program
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2021
+</div>
+<div class="dir-name">
+Austin Kaplan
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Explaining contingency judgments with a computational model of instance-based memory”, Undergraduate Honors Thesis
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2019
+</div>
+<div class="dir-name">
+Mark Rayev
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Deception detection through word usage and word production time in typing”, Undergraduate Macaulay Honors
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2018
+</div>
+<div class="dir-name">
+<a href="https://www.linkedin.com/in/walter-lai-31395b181">Walter Lai</a>
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+Contributing author on <a href="https://crumplab.github.io/EntropyTyping/index.html">“Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics”</a>, currently completing a Masters in Data Science at Southern Methodist University
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2018
+</div>
+<div class="dir-name">
+Rochelle Hall
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+Undergraduate REU
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2017
+</div>
+<div class="dir-name">
+Chin Tan
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Examining cognitive control and information theory accounts of mid-word slowing in skilled typing”, Undergraduate
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2017
+</div>
+<div class="dir-name">
+Marissa Scotto
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+Undergraduate REU
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2016
+</div>
+<div class="dir-name">
+Niles Uy
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“A twofold investigation into the nature of dual-task interference”, Honor’s Thesis
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2016
+</div>
+<div class="dir-name">
+Ana Sanchez
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“EEG and learning to type on a novel keyboard”, REU program
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2015
+</div>
+<div class="dir-name">
+<a href="https://ca.linkedin.com/public-profile/in/shawnlauzon?challengeId=AQFcIfKDBrAmIwAAAXeRzrHYBkBMThytBYhCccIDOoXwmYQi8c63SVZAcQYiJ3KmAnk1nUFkmVmCtZt_uAQLcprxdAvToBGp4g&amp;submissionId=07d8640c-98bc-6216-77a1-f4946022cd2e">Shawn Lauzon</a>
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Escape from the canyon: an objective measure of insight through convergent and divergent thinking”, Independent Study
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2015
+</div>
+<div class="dir-name">
+Rebecca Colon
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Resource Demands of a Dual-Task Disrupts Skilled Typing”, REU program
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2014-2015
+</div>
+<div class="dir-name">
+<a href="https://www.blackinneuro.com/profiles/elena-dominguez">Elena Dominguez</a>
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Explaining the list-wide proportion congruent effect”, “Reliability and precision of basic and manipulated flanker tasks”, MARC program, currently a <a href="https://faculty.sites.uci.edu/starklab/elena-dominguez/">Ph.D.&nbsp;Candidate at UCI</a>
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2014
+</div>
+<div class="dir-name">
+Michael Blecher
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“False-recognition by test-induced priming for non-studied lists”, Independent Study
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2014
+</div>
+<div class="dir-name">
+<a href="https://www.linkedin.com/in/niles-uy?trk=public_profile_browsemap_profile-result-card_result-card_full-click">Niles Uy</a>
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Is the flanker task reliable?”, Independent Study, went on to KU Leuven for a Masters in Statistics
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2013
+</div>
+<div class="dir-name">
+<a href="https://clinpsyc.sdsu.edu/emily-paolillo/">Emily Paolillo</a>
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“The role of explicit and implicit knowledge in typing skill”, Honor’s Thesis. Completing a Ph.D.&nbsp;in Neuropsychology @ UC San Diego
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2013
+</div>
+<div class="dir-name">
+Esthena Brutten
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Online investigations of contextual interference in motor learning”, Independent Study
+</div>
+</div>
+<div class="dir-row" data-level="undergraduate">
+<div class="dir-year">
+2013
+</div>
+<div class="dir-name">
+Esthena Brutten
+</div>
+<div class="dir-level">
+<span class="lvl">undergrad</span>
+</div>
+<div class="dir-work">
+“Proportion congruent manipulations on Amazon’s mechanical Turk”, Honor’s thesis
+</div>
+</div>
+</div>
+</div>
+<script>
+document.querySelectorAll('.directory').forEach(function (card) {
+  var buttons = card.querySelectorAll('.filter');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lvl = b.dataset.level;
+      buttons.forEach(function (x) { var on = x === b; x.classList.toggle('active', on); x.setAttribute('aria-pressed', on); });
+      card.querySelectorAll('.dir-row[data-level]').forEach(function (r) {
+        r.hidden = lvl !== 'all' && r.dataset.level !== lvl;
+      });
+    });
+  });
+});
+</script>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="alumni-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+</div>
 
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

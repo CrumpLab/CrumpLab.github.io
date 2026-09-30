@@ -1,0 +1,207 @@
+# Former lab members, newest first within each level.
+# Fields: level (postdoc | doctoral | masters | undergraduate), name, url,
+# years, and then either `now` (where they are now) or
+# role / projects / details (the text shown after the name).
+# `details` may contain HTML links.
+
+- level: postdoc
+  name: "Lawrence Behmer"
+  url: "https://www.isu.edu/psych/people/faculty/facultyandstaff/lawrence-p-behmer-jr-phd.html"
+  years: "2014 - 2017"
+  now: "Idaho State University"
+
+- level: doctoral
+  name: "Drew Shives"
+  url: "https://www.linkedin.com/in/drewshives/"
+  now: "goguma"
+
+- level: doctoral
+  name: "Nicholaus Brosowsky"
+  url: "https://nbrosowsky.github.io/index.html"
+  years: "2014 - 2019"
+  now: "University of Manitoba"
+
+- level: doctoral
+  name: "Kevonte Mitchell"
+  url: "https://www.mitmillconsulting.com/about"
+  years: "2012 - 2023"
+  now: "Mit + Mill Consulting"
+
+- level: masters
+  years: "2016"
+  name: "Ashot Balayan"
+  projects:
+    - title: "Subjective Confidence in the Evaluations of Typing Speed:Testing the Self-Consistency Model"
+  details: "Master's Thesis"
+
+- level: masters
+  years: "2016"
+  name: "Michelle Villavicencio"
+  projects:
+    - title: "Aesthetic Preference in Dance Movement: Motor Fluency and the Mere Exposure Effect"
+  details: "Master's Thesis"
+
+- level: undergraduate
+  years: "2024"
+  name: "Hao Zhu"
+  projects:
+    - title: "The psychophysics of entropy judgments for musical note sequences"
+      url: "https://www.crumplab.com/midi-entropy-judgment/"
+  details: "Psyc 5001, CUNY BA"
+
+- level: undergraduate
+  years: "2023"
+  name: "Shifa Maqsood"
+  projects:
+    - title: "Is The Self Reference Effect a Retrieval Practice Phenomenon?"
+      url: "http://www.crumplab.com/self-reference/"
+  details: "Undergraduate Honors thesis, Tow Presidential Mentoring Scholar"
+
+- level: undergraduate
+  years: "2023"
+  name: "Hao Zhu"
+  details: "Psyc 2001 Laboratory Experience, CUNY BA"
+
+- level: undergraduate
+  years: "2023"
+  name: "Chantal Miller"
+  details: "Psyc 2001 Laboratory Experience"
+
+- level: undergraduate
+  years: "2023"
+  name: "Cobe Liu"
+  details: "Psyc 2001 Laboratory Experience, Macaulay Honors"
+
+- level: undergraduate
+  years: "2022"
+  name: "Wesley Huang"
+  details: "Undergraduate, Tow Presidential Mentoring Scholar"
+
+- level: undergraduate
+  years: "2022"
+  name: "Patrick Ihejirika"
+  projects:
+    - title: "Try and forget this image: The role of stimulus duration in directed forgetting for natural scenes"
+      url: "https://www.crumplab.com/PatrickHonorsThesis/"
+  details: "Undergraduate MARC Honors thesis, Barry Goldwater Scholar"
+
+- level: undergraduate
+  years: "2022"
+  name: "Kendra Scarlett Reynoso Moreno"
+  details: "Undergraduate CUNY BA Program"
+
+- level: undergraduate
+  years: "2021"
+  name: "Austin Kaplan"
+  projects:
+    - title: "Explaining contingency judgments with a computational model of instance-based memory"
+  details: "Undergraduate Honors Thesis"
+
+- level: undergraduate
+  years: "2019"
+  name: "Mark Rayev"
+  projects:
+    - title: "Deception detection through word usage and word production time in typing"
+  details: "Undergraduate Macaulay Honors"
+
+- level: undergraduate
+  years: "2018"
+  name: "Walter Lai"
+  url: "https://www.linkedin.com/in/walter-lai-31395b181"
+  role: "Contributing author on"
+  projects:
+    - title: "Instance theory predicts information theory: Episodic uncertainty as a determinant of keystroke dynamics"
+      url: "https://crumplab.github.io/EntropyTyping/index.html"
+  details: "currently completing a Masters in Data Science at Southern Methodist University"
+
+- level: undergraduate
+  years: "2018"
+  name: "Rochelle Hall"
+  details: "Undergraduate REU"
+
+- level: undergraduate
+  years: "2017"
+  name: "Chin Tan"
+  projects:
+    - title: "Examining cognitive control and information theory accounts of mid-word slowing in skilled typing"
+  details: "Undergraduate"
+
+- level: undergraduate
+  years: "2017"
+  name: "Marissa Scotto"
+  details: "Undergraduate REU"
+
+- level: undergraduate
+  years: "2016"
+  name: "Niles Uy"
+  projects:
+    - title: "A twofold investigation into the nature of dual-task interference"
+  details: "Honor's Thesis"
+
+- level: undergraduate
+  years: "2016"
+  name: "Ana Sanchez"
+  projects:
+    - title: "EEG and learning to type on a novel keyboard"
+  details: "REU program"
+
+- level: undergraduate
+  years: "2015"
+  name: "Shawn Lauzon"
+  url: "https://ca.linkedin.com/public-profile/in/shawnlauzon?challengeId=AQFcIfKDBrAmIwAAAXeRzrHYBkBMThytBYhCccIDOoXwmYQi8c63SVZAcQYiJ3KmAnk1nUFkmVmCtZt_uAQLcprxdAvToBGp4g&submissionId=07d8640c-98bc-6216-77a1-f4946022cd2e"
+  projects:
+    - title: "Escape from the canyon: an objective measure of insight through convergent and divergent thinking"
+  details: "Independent Study"
+
+- level: undergraduate
+  years: "2015"
+  name: "Rebecca Colon"
+  projects:
+    - title: "Resource Demands of a Dual-Task Disrupts Skilled Typing"
+  details: "REU program"
+
+- level: undergraduate
+  years: "2014-2015"
+  name: "Elena Dominguez"
+  url: "https://www.blackinneuro.com/profiles/elena-dominguez"
+  projects:
+    - title: "Explaining the list-wide proportion congruent effect"
+    - title: "Reliability and precision of basic and manipulated flanker tasks"
+  details: 'MARC program, currently a <a href="https://faculty.sites.uci.edu/starklab/elena-dominguez/">Ph.D. Candidate at UCI</a>'
+
+- level: undergraduate
+  years: "2014"
+  name: "Michael Blecher"
+  projects:
+    - title: "False-recognition by test-induced priming for non-studied lists"
+  details: "Independent Study"
+
+- level: undergraduate
+  years: "2014"
+  name: "Niles Uy"
+  url: "https://www.linkedin.com/in/niles-uy?trk=public_profile_browsemap_profile-result-card_result-card_full-click"
+  projects:
+    - title: "Is the flanker task reliable?"
+  details: "Independent Study, went on to KU Leuven for a Masters in Statistics"
+
+- level: undergraduate
+  years: "2013"
+  name: "Emily Paolillo"
+  url: "https://clinpsyc.sdsu.edu/emily-paolillo/"
+  projects:
+    - title: "The role of explicit and implicit knowledge in typing skill"
+  details: "Honor's Thesis. Completing a Ph.D. in Neuropsychology @ UC San Diego"
+
+- level: undergraduate
+  years: "2013"
+  name: "Esthena Brutten"
+  projects:
+    - title: "Online investigations of contextual interference in motor learning"
+  details: "Independent Study"
+
+- level: undergraduate
+  years: "2013"
+  name: "Esthena Brutten"
+  projects:
+    - title: "Proportion congruent manipulations on Amazon's mechanical Turk"
+  details: "Honor's thesis"

@@ -215,7 +215,11 @@ body {
   background: var(--c, var(--line));
 }
 
+.home .span-3 { grid-column: span 3; }
 .home .span-4 { grid-column: span 4; }
+.home .span-5 { grid-column: span 5; }
+.home .span-7 { grid-column: span 7; }
+.home .span-9 { grid-column: span 9; }
 .home .span-6 { grid-column: span 6; }
 .home .span-8 { grid-column: span 8; }
 .home .span-12 { grid-column: span 12; }
@@ -528,9 +532,13 @@ body {
 /* ---- small screens ---- */
 
 @media (max-width: 1000px) {
+  .home .span-3,
   .home .span-4,
+  .home .span-5,
   .home .span-6,
-  .home .span-8 {
+  .home .span-7,
+  .home .span-8,
+  .home .span-9 {
     grid-column: span 12;
   }
 

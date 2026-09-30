@@ -1,0 +1,11 @@
+<div class="members">
+<% for (const item of items) { %>
+<div class="member">
+<div class="member-photo"><a href="<%- item.path %>"><img src="<%- item.image %>" alt="" loading="lazy"></a></div>
+<div class="member-text">
+<div class="member-name"><a href="<%- item.path %>"><%- item.title %></a></div>
+<div class="member-role"><%- (item.description || "").split("\n")[0] %></div>
+</div>
+</div>
+<% } %>
+</div>
