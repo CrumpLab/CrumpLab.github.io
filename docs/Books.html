@@ -37,6 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -74,6 +76,63 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-stats .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-url','listing-image','listing-description','listing-built','listing-source','listing-license','listing-license_url','listing-citation','listing-credits','listing-tagline','listing-notes',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-url","listing-image","listing-description","listing-built","listing-source","listing-license","listing-license_url","listing-citation","listing-credits","listing-tagline","listing-notes"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-stats'] = new List('listing-stats', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-books .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-url','listing-image','listing-description','listing-built','listing-source','listing-license','listing-license_url','listing-citation','listing-credits','listing-tagline','listing-notes',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-url","listing-image","listing-description","listing-built","listing-source","listing-license","listing-license_url","listing-citation","listing-credits","listing-tagline","listing-notes"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-books'] = new List('listing-books', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
 
 <script type="text/javascript">
@@ -84,7 +143,39 @@ gtag('js', new Date());
 gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="home/home.css">
+<link rel="stylesheet" href="people-page/people.css">
+<link rel="stylesheet" href="books-page/books.css">
 <meta property="og:title" content="Books – crumplab">
 <meta property="og:description" content="Open-educational textbooks and resources developed written by Matt Crump. These resources are free to use and share.">
 <meta property="og:image" content="https://crumplab.com/images/books_banner.jpg">
@@ -95,7 +186,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -173,223 +264,345 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#instances-of-cognition" id="toc-instances-of-cognition" class="nav-link active" data-scroll-target="#instances-of-cognition">Instances of Cognition</a></li>
-  <li><a href="#reproducible-statistics-for-psychologists-with-r-lab-tutorials" id="toc-reproducible-statistics-for-psychologists-with-r-lab-tutorials" class="nav-link" data-scroll-target="#reproducible-statistics-for-psychologists-with-r-lab-tutorials">Reproducible statistics for psychologists with R: Lab Tutorials</a></li>
-  <li><a href="#using-r-for-reproducible-research-student-contributed-tutorials" id="toc-using-r-for-reproducible-research-student-contributed-tutorials" class="nav-link" data-scroll-target="#using-r-for-reproducible-research-student-contributed-tutorials">Using R for Reproducible Research: Student contributed tutorials</a></li>
-  <li><a href="#answering-questions-with-data-introductory-statistics-for-psychology-students" id="toc-answering-questions-with-data-introductory-statistics-for-psychology-students" class="nav-link" data-scroll-target="#answering-questions-with-data-introductory-statistics-for-psychology-students">Answering Questions with Data: Introductory Statistics for Psychology Students</a></li>
-  <li><a href="#answering-questions-with-data-the-lab-manual" id="toc-answering-questions-with-data-the-lab-manual" class="nav-link" data-scroll-target="#answering-questions-with-data-the-lab-manual">Answering Questions with Data: The Lab Manual</a></li>
-  <li><a href="#answering-questions-with-data-the-course-website" id="toc-answering-questions-with-data-the-course-website" class="nav-link" data-scroll-target="#answering-questions-with-data-the-course-website">Answering Questions with Data: The Course Website</a></li>
-  <li><a href="#research-methods-for-psychology" id="toc-research-methods-for-psychology" class="nav-link" data-scroll-target="#research-methods-for-psychology">Research Methods for Psychology</a></li>
-  <li><a href="#cognitive-technologies-from-theory-and-data-to-application" id="toc-cognitive-technologies-from-theory-and-data-to-application" class="nav-link" data-scroll-target="#cognitive-technologies-from-theory-and-data-to-application">Cognitive Technologies: From Theory and Data to Application</a></li>
-  <li><a href="#open-tools-for-writing-open-interactive-textbooks-and-more" id="toc-open-tools-for-writing-open-interactive-textbooks-and-more" class="nav-link" data-scroll-target="#open-tools-for-writing-open-interactive-textbooks-and-more">Open tools for writing open interactive textbooks (and more)</a></li>
-  <li><a href="#programming-for-psychologists-data-creation-and-analysis" id="toc-programming-for-psychologists-data-creation-and-analysis" class="nav-link" data-scroll-target="#programming-for-psychologists-data-creation-and-analysis">Programming for Psychologists: Data Creation and Analysis</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block page-banner">
-<h1 class="title visually-hidden display-7">Books</h1>
-<p class="page-banner-image"><img src="images/books_banner.jpg" alt=""></p>
-</header>
 
 
 
+
+<div class="fp home people books">
+<div class="people-hero">
+<p><img src="images/books_banner.jpg" class="hero-banner img-fluid" alt="Books and OERs"></p>
+<div class="hero-body">
+<p><span class="fp-kicker">~/crumplab/books</span></p>
+<h1 class="visually-hidden">Books</h1>
+<div class="fp-lead">
 <p>These books were made using Quarto, or R Markdown and Bookdown. They are all free, open-source, and licensed on creative commons.</p>
-<section id="instances-of-cognition" class="level2">
-<h2 class="anchored" data-anchor-id="instances-of-cognition"><a href="https://www.crumplab.com/cognition/textbook/index.html">Instances of Cognition</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Description</strong>: This is a free, open-educational textbook and set of course materials for an introductory undergraduate course in cognition. The materials have been in continuous development since Fall 2021. All of the materials are CC BY-SA 4.0 creative-commons licensed and free for others to use, copy, remix, re-use.</p>
-<p>Written in RStudio with Quarto. The source code is available at: <a href="https://github.com/CrumpLab/cognition" class="uri">https://github.com/CrumpLab/cognition</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-SA 4.0</figcaption>
-</figure>
 </div>
-<p>Crump, M. J. C. (2022, April 21). Instances of Cognition: Questions, Methods, Findings, Explanations, Applications, and Implications.</p>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://www.crumplab.com/cognition/textbook/index.html"><img src="images/2530_image.jpg" class="img-fluid" width="200"></a></p>
+<div id="listing-stats" class="quarto-listing quarto-listing-container-custom">
+<div class="stats-line">
+<p><span><b>10</b> books &amp; resources</span> <span><b>9</b> creative-commons licensed</span> <span><b>9</b> with source on GitHub</span></p>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 </div>
-</section>
-<section id="reproducible-statistics-for-psychologists-with-r-lab-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="reproducible-statistics-for-psychologists-with-r-lab-tutorials"><a href="https://crumplab.github.io/rstatsforpsych/">Reproducible statistics for psychologists with R: Lab Tutorials</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Description</strong>: This is a series of labs/tutorials for a two-semester graduate-level statistics sequence in Psychology @ Brooklyn College of CUNY. The first set of 13 labs roughly tracks “Thinking with Data” (Vokey &amp; Allen, 2018) and “Answering questions with data” (Crump et al., 2018); the second set of labs (to be written on a weekly basis during the Spring 2021 semester) roughly tracks “Experimental Design and Analysis for Psychology” (Abdi et al., 2009).</p>
-<p>Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/rstatsforpsych" class="uri">https://github.com/CrumpLab/rstatsforpsych</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-SA 4.0</figcaption>
-</figure>
 </div>
-<p><strong>Citation:</strong> Crump, M. J. C. (2020, December 10). Reproducible statistics for psychologists with R: Lab Tutorials. https://doi.org/10.17605/OSF.IO/KBHGA</p>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/rstatsforpsych/"><img src="images/RstatsCover.png" class="img-fluid" width="200"></a></p>
+<div id="listing-books" class="quarto-listing quarto-listing-container-custom">
+<div class="card c-blue shelf-card">
+<div class="card-head">
+<p>
+<span class="card-label">┌─ shelf</span><span class="count">10</span>
+</p>
 </div>
-</div>
-</section>
-<section id="using-r-for-reproducible-research-student-contributed-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="using-r-for-reproducible-research-student-contributed-tutorials"><a href="https://crumplab.github.io/psyc7709_2019/book/docs/index.html">Using R for Reproducible Research: Student contributed tutorials</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Description</strong>: These chapters were written by students in <a href="https://crumplab.github.io/psyc7709_2019/">PSYC 7709: Using R for Reproducible research</a>, Spring 2019 @ Brooklyn College of CUNY, as a part of their final project to write a tutorial about an R package.</p>
-<p>Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/psyc7709_2019" class="uri">https://github.com/CrumpLab/psyc7709_2019</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-SA 4.0</figcaption>
-</figure>
-</div>
-<p><strong>Citation:</strong> Abdelrahman, K., Contreras, A., Degtyarev, Z., Deng, J., Foster, J., Franz, A., Funderburk, T., Horger, M., Kravitz, J., Lakshin A., Manigat, M., Trois, R., Vasquez, A., Vo, A., Wilson, N., and Yeremenko, M. (2019). <em>Using R for Reproducible Research: Student Contributed Tutorials.</em> (M. J. C. Crump, Ed.).</p>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc7709_2019/book/docs/index.html"><img src="images/ReproStudentBook.png" class="img-fluid" width="200"></a></p>
+<div class="shelf-row">
+<p><a class="shelf-book" href="#book-instances-of-cognition" title="Instances of Cognition"><img src="images/2530_image.jpg" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-reproducible-statistics-for-psychologist" title="Reproducible statistics for psychologists with R: Lab Tutorials"><img src="images/RstatsCover.png" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-using-r-for-reproducible-research-studen" title="Using R for Reproducible Research: Student contributed tutorials"><img src="images/ReproStudentBook.png" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-answering-questions-with-data-introducto" title="Answering Questions with Data: Introductory Statistics for Psychology Students"><img src="images/TextbookCover.png" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-answering-questions-with-data-the-lab-ma" title="Answering Questions with Data: The Lab Manual"><img src="images/LabmanualCover.png" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-answering-questions-with-data-the-course" title="Answering Questions with Data: The Course Website"><img src="images/Psyc3400.png" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-research-methods-for-psychology" title="Research Methods for Psychology"><img src="images/ResearchMethods.png" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-cognitive-technologies-from-theory-and-d" title="Cognitive Technologies: From Theory and Data to Application"><img src="images/CogTech.png" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-open-tools-for-writing-open-interactive-" title="Open tools for writing open interactive textbooks (and more)"><img src="images/OER.png" alt="" loading="lazy"></a></p>
+<p><a class="shelf-book" href="#book-programming-for-psychologists-data-creat" title="Programming for Psychologists: Data Creation and Analysis"><img src="images/Programming.png" alt="" loading="lazy"></a></p>
 </div>
 </div>
-</section>
-<section id="answering-questions-with-data-introductory-statistics-for-psychology-students" class="level2">
-<h2 class="anchored" data-anchor-id="answering-questions-with-data-introductory-statistics-for-psychology-students"><a href="https://crumplab.github.io/statistics/">Answering Questions with Data: Introductory Statistics for Psychology Students</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Authors</strong>: Matthew Crump; Chapters 2 and 4 adapted from Navarro, D.; Videos: Jeffrey Suzuki</p>
-<p><strong>Description</strong>: This is a free introductory statistics textbook for undergraduates in Psychology. It is being developed as an Open Educational Resource @ Brooklyn College. It is pitched at the concepts behind statistics, and often uses simulation in R to convey foundational ideas. The writing style is sometimes a bit unconventional, and informal. It is for students who don’t want to like statistics.</p>
-<p>Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/statistics" class="uri">https://github.com/CrumpLab/statistics</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-SA 4.0</figcaption>
-</figure>
+<div id="book-instances-of-cognition" class="card book c-pink">
+<div class="book-cover">
+<a href="https://www.crumplab.com/cognition/textbook/index.html"><img src="images/2530_image.jpg" alt="Cover of Instances of Cognition" loading="lazy"></a>
 </div>
-<p><strong>Citation:</strong> Crump, M. J. C., Navarro, D., &amp; Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52</p>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/statistics/"><img src="images/TextbookCover.png" class="img-fluid" width="200"></a></p>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://www.crumplab.com/cognition/textbook/index.html">Instances of Cognition</a>
+</h2>
+<div class="book-desc">
+This is a free, open-educational textbook and set of course materials for an introductory undergraduate course in cognition. The materials have been in continuous development since Fall 2021. All of the materials are CC BY-SA 4.0 creative-commons licensed and free for others to use, copy, remix, re-use.
 </div>
 </div>
-</section>
-<section id="answering-questions-with-data-the-lab-manual" class="level2">
-<h2 class="anchored" data-anchor-id="answering-questions-with-data-the-lab-manual"><a href="https://crumplab.github.io/statisticsLab/">Answering Questions with Data: The Lab Manual</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p>Lab activities using R, Excel, SPSS, and JAMOVI</p>
-<p><strong>Authors</strong>: Matthew Crump (R); Stephen Volz (Excel); Alla Chavarga (SPSS); Anjali Krishnan (JAMOVI)</p>
-<p><strong>Description</strong>: This is the companion lab manual to our free stats book. It contains lab activities for learning how to conduct statistical tests in R, Excel, SPSS, and JAMOVI. We use open data, often from psychology papers, and show step-by-step how to solve data-analysis problems in each software package.</p>
-<p>Some of the labs are adapated from <a href="https://sites.trinity.edu/osl">Open Stats Lab</a>, another great resource.</p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/statisticsLab" class="uri">https://github.com/CrumpLab/statisticsLab</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-SA 4.0</figcaption>
-</figure>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in RStudio with Quarto.
 </div>
-<p><strong>Citation</strong>: Crump, M. J. C., Krishnan, A., Volz, S., &amp; Chavarga, A. (2019, June 5). Answering Questions with Data: The Lab Manual for R, Excel, SPSS and Jamovi. https://doi.org/10.17605/OSF.IO/M2NPJ</p>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/statisticsLab/"><img src="images/LabmanualCover.png" class="img-fluid" width="200"></a></p>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/cognition">github.com/CrumpLab/cognition</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+<div class="m cite">
+<span class="k">cite</span>Crump, M. J. C. (2022, April 21). Instances of Cognition: Questions, Methods, Findings, Explanations, Applications, and Implications.
 </div>
 </div>
-</section>
-<section id="answering-questions-with-data-the-course-website" class="level2">
-<h2 class="anchored" data-anchor-id="answering-questions-with-data-the-course-website"><a href="https://crumplab.github.io/psyc3400/">Answering Questions with Data: The Course Website</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p>A copiable course website for introductory statistics</p>
-<p><strong>Authors</strong>: Matthew Crump</p>
-<p><strong>Description</strong>: This website was created in R Markdown. It contains most of the course materials I use when teaching undergraduate statistics for psychology. IT includes slide decks for presentations.</p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/psyc3400" class="uri">https://github.com/CrumpLab/psyc3400</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-SA 4.0</figcaption>
-</figure>
 </div>
-<p><strong>Citation</strong> : Crump, M. J. C. (2019, June 5). Answering Questions with Data: Course Website. https://doi.org/10.17605/OSF.IO/AWXU9</p>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/psyc3400/"><img src="images/Psyc3400.png" class="img-fluid" width="200"></a></p>
+<div id="book-reproducible-statistics-for-psychologist" class="card book c-violet">
+<div class="book-cover">
+<a href="https://crumplab.github.io/rstatsforpsych/"><img src="images/RstatsCover.png" alt="Cover of Reproducible statistics for psychologists with R: Lab Tutorials" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/rstatsforpsych/">Reproducible statistics for psychologists with R: Lab Tutorials</a>
+</h2>
+<div class="book-desc">
+This is a series of labs/tutorials for a two-semester graduate-level statistics sequence in Psychology @ Brooklyn College of CUNY. The first set of 13 labs roughly tracks “Thinking with Data” (Vokey &amp; Allen, 2018) and “Answering questions with data” (Crump et al., 2018); the second set of labs (to be written on a weekly basis during the Spring 2021 semester) roughly tracks “Experimental Design and Analysis for Psychology” (Abdi et al., 2009).
 </div>
 </div>
-</section>
-<section id="research-methods-for-psychology" class="level2">
-<h2 class="anchored" data-anchor-id="research-methods-for-psychology"><a href="https://crumplab.github.io/ResearchMethods/">Research Methods for Psychology</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Description</strong>:A free Research methods textbook for undergraduates in Psychology, creative commons license, remix, reuse, edit, contribute.</p>
-<p><strong>Authors</strong>: Matthew J. C. Crump, Paul C. Price, Rajiv Jhangiani, I-Chant A. Chiang, Dana C. Leighton</p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/ResearchMethods" class="uri">https://github.com/CrumpLab/ResearchMethods</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-NC-SA 4.0</figcaption>
-</figure>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in Rmarkdown, and compiled with the bookdown package.
 </div>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/ResearchMethods/"><img src="images/ResearchMethods.png" class="img-fluid" width="200"></a></p>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/rstatsforpsych">github.com/CrumpLab/rstatsforpsych</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+<div class="m cite">
+<span class="k">cite</span>Crump, M. J. C. (2020, December 10). Reproducible statistics for psychologists with R: Lab Tutorials. https://doi.org/10.17605/OSF.IO/KBHGA
 </div>
 </div>
-</section>
-<section id="cognitive-technologies-from-theory-and-data-to-application" class="level2">
-<h2 class="anchored" data-anchor-id="cognitive-technologies-from-theory-and-data-to-application"><a href="https://crumplab.github.io/cognitivetechnologies/book/">Cognitive Technologies: From Theory and Data to Application</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Description</strong>: <a href="https://crumplab.github.io/cognitivetechnologies/book/">A series of chapters on cognitive technologies</a> written by doctoral students who took my course on Cognitive Technologies in Spring 2018. They wrote it, I compiled it using bookdown.</p>
-<p><strong>Editor</strong>: Crump, M. J. C</p>
-<p><strong>Authors</strong>: Crump, M. J. C.; Amada, N.; Bourque, K; Brosowsky, N.; Ergun, T.; Korovatskaya, A.; Ma, X.; Seoung, Y.; Wylie, J.</p>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/cognitivetechnologies/book/"><img src="images/CogTech.png" class="img-fluid" width="200"></a></p>
+</div>
+<div id="book-using-r-for-reproducible-research-studen" class="card book c-blue">
+<div class="book-cover">
+<a href="https://crumplab.github.io/psyc7709_2019/book/docs/index.html"><img src="images/ReproStudentBook.png" alt="Cover of Using R for Reproducible Research: Student contributed tutorials" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/psyc7709_2019/book/docs/index.html">Using R for Reproducible Research: Student contributed tutorials</a>
+</h2>
+<div class="book-desc">
+These chapters were written by students in <a href="https://crumplab.github.io/psyc7709_2019/">PSYC 7709: Using R for Reproducible research</a>, Spring 2019 @ Brooklyn College of CUNY, as a part of their final project to write a tutorial about an R package.
 </div>
 </div>
-</section>
-<section id="open-tools-for-writing-open-interactive-textbooks-and-more" class="level2">
-<h2 class="anchored" data-anchor-id="open-tools-for-writing-open-interactive-textbooks-and-more"><a href="https://crumplab.github.io/OER_bookdown/">Open tools for writing open interactive textbooks (and more)</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Description</strong>: tutorial overview of the process I use to write books using R, R-studio, R-markdown, and compile them in bookdown. I’ve used this process for all of these books. Some other brief tidbits on using hypothes.is, and R-Shiny apps, also Zotero and hosting on github pages (where this website is hosted)</p>
-<p><strong>Author</strong>: Matthew J. C. Crump</p>
-<p>Note this is a meta-book. The tutorial above is for you to read so you can download the source code, then compile it yourself, then edit it to make your own.</p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/OER_bookdown" class="uri">https://github.com/CrumpLab/OER_bookdown</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-SA 4.0</figcaption>
-</figure>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in Rmarkdown, and compiled with the bookdown package.
 </div>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/OER_bookdown/"><img src="images/OER.png" class="img-fluid" width="200"></a></p>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/psyc7709_2019">github.com/CrumpLab/psyc7709_2019</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+<div class="m cite">
+<span class="k">cite</span>Abdelrahman, K., Contreras, A., Degtyarev, Z., Deng, J., Foster, J., Franz, A., Funderburk, T., Horger, M., Kravitz, J., Lakshin A., Manigat, M., Trois, R., Vasquez, A., Vo, A., Wilson, N., and Yeremenko, M. (2019). <em>Using R for Reproducible Research: Student Contributed Tutorials.</em> (M. J. C. Crump, Ed.).
 </div>
 </div>
-</section>
-<section id="programming-for-psychologists-data-creation-and-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="programming-for-psychologists-data-creation-and-analysis"><a href="https://crumplab.github.io/programmingforpsych/">Programming for Psychologists: Data Creation and Analysis</a></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Description</strong>: Some notes that got big enough to make a book. Beginner introduction to coding in R, Livecode, and some web-programming, for the purposes of making data with computers (programming experiments), and analyzing it in R.</p>
-<p><strong>Author</strong>: Matthew J. C. Crump</p>
-<p><strong>Source code</strong>: Written in Rmarkdown, and compiled with the bookdown package. The source code is located in this github repository <a href="https://github.com/CrumpLab/programmingforpsych" class="uri">https://github.com/CrumpLab/programmingforpsych</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid figure-img"></a></p>
-<figcaption>License: CC BY-SA 4.0</figcaption>
-</figure>
 </div>
-</div><div class="column pic" style="width:30%;">
-<p><a href="https://crumplab.github.io/programmingforpsych/"><img src="images/Programming.png" class="img-fluid" width="200"></a></p>
+<div id="book-answering-questions-with-data-introducto" class="card book c-green">
+<div class="book-cover">
+<a href="https://crumplab.github.io/statistics/"><img src="images/TextbookCover.png" alt="Cover of Answering Questions with Data: Introductory Statistics for Psychology Students" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/statistics/">Answering Questions with Data: Introductory Statistics for Psychology Students</a>
+</h2>
+<div class="book-desc">
+This is a free introductory statistics textbook for undergraduates in Psychology. It is being developed as an Open Educational Resource @ Brooklyn College. It is pitched at the concepts behind statistics, and often uses simulation in R to convey foundational ideas. The writing style is sometimes a bit unconventional, and informal. It is for students who don’t want to like statistics.
+</div>
+<div class="book-credit">
+<span class="k">Authors</span> Matthew Crump; Chapters 2 and 4 adapted from Navarro, D.; Videos: Jeffrey Suzuki
+</div>
+</div>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in Rmarkdown, and compiled with the bookdown package.
+</div>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/statistics">github.com/CrumpLab/statistics</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+<div class="m cite">
+<span class="k">cite</span>Crump, M. J. C., Navarro, D., &amp; Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52
+</div>
+</div>
+</div>
+<div id="book-answering-questions-with-data-the-lab-ma" class="card book c-yellow">
+<div class="book-cover">
+<a href="https://crumplab.github.io/statisticsLab/"><img src="images/LabmanualCover.png" alt="Cover of Answering Questions with Data: The Lab Manual" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/statisticsLab/">Answering Questions with Data: The Lab Manual</a>
+</h2>
+<div class="book-tagline">
+Lab activities using R, Excel, SPSS, and JAMOVI
+</div>
+<div class="book-desc">
+This is the companion lab manual to our free stats book. It contains lab activities for learning how to conduct statistical tests in R, Excel, SPSS, and JAMOVI. We use open data, often from psychology papers, and show step-by-step how to solve data-analysis problems in each software package.
+</div>
+<div class="book-credit">
+<span class="k">Authors</span> Matthew Crump (R); Stephen Volz (Excel); Alla Chavarga (SPSS); Anjali Krishnan (JAMOVI)
+</div>
+<div class="book-note">
+Some of the labs are adapated from <a href="https://sites.trinity.edu/osl">Open Stats Lab</a>, another great resource.
+</div>
+</div>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in Rmarkdown, and compiled with the bookdown package.
+</div>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/statisticsLab">github.com/CrumpLab/statisticsLab</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+<div class="m cite">
+<span class="k">cite</span>Crump, M. J. C., Krishnan, A., Volz, S., &amp; Chavarga, A. (2019, June 5). Answering Questions with Data: The Lab Manual for R, Excel, SPSS and Jamovi. https://doi.org/10.17605/OSF.IO/M2NPJ
+</div>
+</div>
+</div>
+<div id="book-answering-questions-with-data-the-course" class="card book c-orange">
+<div class="book-cover">
+<a href="https://crumplab.github.io/psyc3400/"><img src="images/Psyc3400.png" alt="Cover of Answering Questions with Data: The Course Website" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/psyc3400/">Answering Questions with Data: The Course Website</a>
+</h2>
+<div class="book-tagline">
+A copiable course website for introductory statistics
+</div>
+<div class="book-desc">
+This website was created in R Markdown. It contains most of the course materials I use when teaching undergraduate statistics for psychology. IT includes slide decks for presentations.
+</div>
+<div class="book-credit">
+<span class="k">Authors</span> Matthew Crump
+</div>
+</div>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in Rmarkdown, and compiled with the bookdown package.
+</div>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/psyc3400">github.com/CrumpLab/psyc3400</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+<div class="m cite">
+<span class="k">cite</span>Crump, M. J. C. (2019, June 5). Answering Questions with Data: Course Website. https://doi.org/10.17605/OSF.IO/AWXU9
+</div>
+</div>
+</div>
+<div id="book-research-methods-for-psychology" class="card book c-pink">
+<div class="book-cover">
+<a href="https://crumplab.github.io/ResearchMethods/"><img src="images/ResearchMethods.png" alt="Cover of Research Methods for Psychology" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/ResearchMethods/">Research Methods for Psychology</a>
+</h2>
+<div class="book-desc">
+A free Research methods textbook for undergraduates in Psychology, creative commons license, remix, reuse, edit, contribute.
+</div>
+<div class="book-credit">
+<span class="k">Authors</span> Matthew J. C. Crump, Paul C. Price, Rajiv Jhangiani, I-Chant A. Chiang, Dana C. Leighton
+</div>
+</div>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in Rmarkdown, and compiled with the bookdown package.
+</div>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/ResearchMethods">github.com/CrumpLab/ResearchMethods</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+</div>
+</div>
+</div>
+<div id="book-cognitive-technologies-from-theory-and-d" class="card book c-violet">
+<div class="book-cover">
+<a href="https://crumplab.github.io/cognitivetechnologies/book/"><img src="images/CogTech.png" alt="Cover of Cognitive Technologies: From Theory and Data to Application" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/cognitivetechnologies/book/">Cognitive Technologies: From Theory and Data to Application</a>
+</h2>
+<div class="book-desc">
+<a href="https://crumplab.github.io/cognitivetechnologies/book/">A series of chapters on cognitive technologies</a> written by doctoral students who took my course on Cognitive Technologies in Spring 2018. They wrote it, I compiled it using bookdown.
+</div>
+<div class="book-credit">
+<span class="k">Editor</span> Crump, M. J. C
+</div>
+<div class="book-credit">
+<span class="k">Authors</span> Crump, M. J. C.; Amada, N.; Bourque, K; Brosowsky, N.; Ergun, T.; Korovatskaya, A.; Ma, X.; Seoung, Y.; Wylie, J.
+</div>
+</div>
+<div class="book-meta">
+
+</div>
+</div>
+<div id="book-open-tools-for-writing-open-interactive-" class="card book c-blue">
+<div class="book-cover">
+<a href="https://crumplab.github.io/OER_bookdown/"><img src="images/OER.png" alt="Cover of Open tools for writing open interactive textbooks (and more)" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/OER_bookdown/">Open tools for writing open interactive textbooks (and more)</a>
+</h2>
+<div class="book-desc">
+tutorial overview of the process I use to write books using R, R-studio, R-markdown, and compile them in bookdown. I’ve used this process for all of these books. Some other brief tidbits on using hypothes.is, and R-Shiny apps, also Zotero and hosting on github pages (where this website is hosted)
+</div>
+<div class="book-credit">
+<span class="k">Author</span> Matthew J. C. Crump
+</div>
+<div class="book-note">
+Note this is a meta-book. The tutorial above is for you to read so you can download the source code, then compile it yourself, then edit it to make your own.
+</div>
+</div>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in Rmarkdown, and compiled with the bookdown package.
+</div>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/OER_bookdown">github.com/CrumpLab/OER_bookdown</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+</div>
+</div>
+<div id="book-programming-for-psychologists-data-creat" class="card book c-green">
+<div class="book-cover">
+<a href="https://crumplab.github.io/programmingforpsych/"><img src="images/Programming.png" alt="Cover of Programming for Psychologists: Data Creation and Analysis" loading="lazy"></a>
+</div>
+<div class="book-main">
+<h2 class="book-title">
+<a href="https://crumplab.github.io/programmingforpsych/">Programming for Psychologists: Data Creation and Analysis</a>
+</h2>
+<div class="book-desc">
+Some notes that got big enough to make a book. Beginner introduction to coding in R, Livecode, and some web-programming, for the purposes of making data with computers (programming experiments), and analyzing it in R.
+</div>
+<div class="book-credit">
+<span class="k">Author</span> Matthew J. C. Crump
+</div>
+</div>
+<div class="book-meta">
+<div class="m">
+<span class="k">built</span>Written in Rmarkdown, and compiled with the bookdown package.
+</div>
+<div class="m">
+<span class="k">source</span><a href="https://github.com/CrumpLab/programmingforpsych">github.com/CrumpLab/programmingforpsych</a>
+</div>
+<div class="m">
+<span class="k">license</span><a class="pchip" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 </div>
 
 
-</section>
 
-</main> <!-- /main -->
+
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

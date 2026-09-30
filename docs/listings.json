@@ -40,7 +40,15 @@
     ]
   },
   {
+    "listing": "/Apps.html",
+    "items": []
+  },
+  {
     "listing": "/Fun.html",
+    "items": []
+  },
+  {
+    "listing": "/Books.html",
     "items": []
   },
   {
@@ -92,5 +100,9 @@
     "items": [
       "/people/matt_crump.html"
     ]
+  },
+  {
+    "listing": "/Opportunities.html",
+    "items": []
   }
 ]

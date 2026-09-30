@@ -1,0 +1,8 @@
+<script>
+/* Posts' category tags link to the nearest listing that includes them,
+   which for blog/ is this home page. Send those links on to the Blog
+   page, whose index filters by category. */
+if (/^#category=/.test(window.location.hash)) {
+  window.location.replace('Blog.html' + window.location.hash);
+}
+</script>

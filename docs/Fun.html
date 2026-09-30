@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-fun-list .list');
+    const listingTargetEl = window.document.querySelector('#listing-fun .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-fun-list'] = new List('listing-fun-list', options);
+    window['quarto-listings']['listing-fun'] = new List('listing-fun', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -145,6 +145,9 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="home/home.css">
+<link rel="stylesheet" href="people-page/people.css">
+<link rel="stylesheet" href="fun-page/fun.css">
 <meta property="og:title" content="Fun – crumplab">
 <meta property="og:description" content="Some links to extra-curricular fun stuff like music and visual creations.">
 <meta property="og:image" content="https://crumplab.com/images/fun_banner.jpg">
@@ -155,7 +158,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -233,85 +236,79 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block page-banner">
-<h1 class="title visually-hidden display-7">Fun</h1>
-<p class="page-banner-image"><img src="images/fun_banner.jpg" alt=""></p>
-</header>
 
 
 
-<div id="listing-fun-list" class="quarto-listing quarto-listing-container-custom">
-<div class="quarto-post image-right">
-<div class="body">
-<a href="https://homophony.quest/">
-<h4 class="anchored">
-Music Stuff
-</h4>
-</a><p><a href="https://homophony.quest/"></a></p>
-<div class="listing-categories">
-<div class="listing-category" style="cursor:auto">
-<p>synthesizers</p>
-</div>
-<div class="listing-category" style="cursor:auto">
-<p>electro</p>
-</div>
-<div class="listing-category" style="cursor:auto">
-<p>jazz</p>
-</div>
-<div class="listing-category" style="cursor:auto">
-<p>other stuff</p>
+
+<div class="fp home people fun">
+<div class="people-hero">
+<p><img src="images/fun_banner.jpg" class="hero-banner img-fluid" alt="Fun"></p>
+<div class="hero-body">
+<p><span class="fp-kicker">~/crumplab/fun</span></p>
+<h1 class="visually-hidden">Fun</h1>
+<div class="fp-lead">
+<p>Some links to extra-curricular fun stuff like music and visual creations.</p>
 </div>
 </div>
+</div>
+<div id="listing-fun" class="quarto-listing quarto-listing-container-custom">
+<div class="card c-yellow fun-directory">
+<div class="card-head">
 <p>
+<span class="card-label">┌─ ~/fun</span><span class="count">2</span>
+</p>
+</div>
+<div class="frow">
+<div class="frow-thumb">
+<a href="https://homophony.quest/"><img src="images/fun/homophony.png" alt="" loading="lazy"></a>
+</div>
+<div class="frow-main">
+<div class="frow-name">
+<a href="https://homophony.quest/">Music Stuff</a>
+</div>
+<div class="frow-desc">
 I make music and sometimes post it online. Check it out at: <a href="https://homophony.quest">https://homophony.quest</a>. NEW album (2025): Ecphorizer, check it out here: <a href="https://homophony.quest/music/Ecphorizer.html">https://homophony.quest/music/Ecphorizer.html</a>
-</p>
 </div>
-<div class="thumbnail">
-<p><a href="https://homophony.quest/"> <img src="images/fun/homophony.png" class="thumbnail-image"> </a></p>
-</div>
-</div>
-<div class="quarto-post image-right">
-<div class="body">
-<a href="https://crumplab.github.io/things">
-<h4 class="anchored">
-Visual Stuff
-</h4>
-</a><p><a href="https://crumplab.github.io/things"></a></p>
-<div class="listing-categories">
-<div class="listing-category" style="cursor:auto">
-<p>painting</p>
-</div>
-<div class="listing-category" style="cursor:auto">
-<p>digital art</p>
-</div>
-<div class="listing-category" style="cursor:auto">
-<p>cartoon like things</p>
+<div class="frow-tags">
+<span>[synthesizers]</span><span>[electro]</span><span>[jazz]</span><span>[other stuff]</span>
 </div>
 </div>
-<p>
+<div class="frow-chips">
+<a class="pchip" href="https://homophony.quest/">visit homophony.quest</a>
+</div>
+</div>
+<div class="frow">
+<div class="frow-thumb">
+<a href="https://crumplab.github.io/things"><img src="images/fun/things.jpg" alt="" loading="lazy"></a>
+</div>
+<div class="frow-main">
+<div class="frow-name">
+<a href="https://crumplab.github.io/things">Visual Stuff</a>
+</div>
+<div class="frow-desc">
 When I find time to make visual things I post them here: <a href="https://crumplab.github.io/things">https://crumplab.github.io/things</a>
-</p>
 </div>
-<div class="thumbnail">
-<p><a href="https://crumplab.github.io/things"> <img src="images/fun/things.jpg" class="thumbnail-image"> </a></p>
+<div class="frow-tags">
+<span>[painting]</span><span>[digital art]</span><span>[cartoon like things]</span>
+</div>
+</div>
+<div class="frow-chips">
+<a class="pchip" href="https://crumplab.github.io/things">visit crumplab.github.io/things</a>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+</div>
 
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

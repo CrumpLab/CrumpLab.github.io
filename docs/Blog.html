@@ -86,10 +86,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-execute','listing-format','listing-editor','listing-engines','listing-language','listing-title','listing-description','listing-author','listing-date','listing-date-modified','listing-image','listing-opengraph','listing-categories','listing-path','listing-outputHref','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-comments','listing-header-includes','listing-resource_files','listing-bibliography','listing-pagetitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       page: 25,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-project","listing-website","listing-execute","listing-format","listing-editor","listing-engines","listing-language","listing-title","listing-description","listing-author","listing-date","listing-date-modified","listing-image","listing-opengraph","listing-categories","listing-path","listing-outputHref","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-comments","listing-header-includes","listing-resource_files","listing-bibliography","listing-pagetitle"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -146,6 +146,9 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="home/home.css">
+<link rel="stylesheet" href="people-page/people.css">
+<link rel="stylesheet" href="blog-page/blog.css">
 <link rel="alternate" type="application/rss+xml" title="crumplab" href="Blog.xml" data-external="1"><meta property="og:title" content="Blog – crumplab">
 <meta property="og:description" content="Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.">
 <meta property="og:image" content="https://crumplab.com/images/blog_banner.jpg">
@@ -156,7 +159,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -234,1198 +237,570 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(35)</span></div><div class="category" data-category="YWN0aXZpdHlwdWI=">activitypub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXJ0">art <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QXNzaXN0ZWQlMjB3cml0aW5n">Assisted writing <span class="quarto-category-count">(4)</span></div><div class="category" data-category="YXVkaW8=">audio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmlibGlvZ3JhcGhpZXM=">bibliographies <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmxvZ2dpbmc=">Blogging <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZ2dpbmc=">blogging <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q2hhdEdQVA==">ChatGPT <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29nbml0aW9u">cognition <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Zm9udHM=">fonts <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZnVua3doYWxl">funkwhale <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VuZXJhdGl2ZQ==">generative <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VuZXJhdGl2ZSUyMGFydA==">generative art <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VuZXJhdGl2ZSUyMG11c2lj">generative music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2lzY3Vz">giscus <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aG9tb3Bob255">homophony <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(7)</span></div><div class="category" data-category="bWFzdG9kb24=">mastodon <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bWlkaWJsZW5kZXI=">midiblender <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bXVzaWM=">music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bXVzaWMlMjBjb2duaXRpb24=">music cognition <span class="quarto-category-count">(2)</span></div><div class="category" data-category="T0VS">OER <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3BlbkFJ">OpenAI <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cGFyb2R5">parody <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGtnZG93bg==">pkgdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cG9ydGZvbGlv">portfolio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHN5Y2hvbG9neQ==">psychology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHVibGljYXRpb24lMjBsaXN0">publication list <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cXVhcnRv">quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVwcm9kdWNpYmxlJTIwcmVzZWFyY2g=">reproducible research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVwcm9kdWNpYmxlJTIwcmVzZWFyY2g=">Reproducible research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UlNT">RSS <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cnN0YXRz">rstats <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UnN0YXRz">Rstats <span class="quarto-category-count">(10)</span></div><div class="category" data-category="UnN0dWRpbw==">Rstudio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UlN0dWRpbw==">RStudio <span class="quarto-category-count">(5)</span></div><div class="category" data-category="U2hpbnk=">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c29jaWFs">social <span class="quarto-category-count">(5)</span></div><div class="category" data-category="c3RhYmxlJTIwZGlmZnVzaW9u">stable diffusion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3Ryb29w">Stroop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVhY2hpbmc=">teaching <span class="quarto-category-count">(4)</span></div><div class="category" data-category="dHdpdHRlcg==">twitter <span class="quarto-category-count">(3)</span></div><div class="category" data-category="dW5ncmFkaW5n">ungrading <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dW5wbGFubmluZw==">unplanning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dmVydGljYWw=">vertical <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block page-banner">
-<h1 class="title visually-hidden display-7">Blog</h1>
-<p class="page-banner-image"><img src="images/blog_banner.jpg" alt=""></p>
-</header>
 
 
 
+
+<div class="fp home people blog">
+<div class="people-hero">
+<p><img src="images/blog_banner.jpg" class="hero-banner img-fluid" alt="Blog"></p>
+<div class="hero-body">
+<p><span class="fp-kicker">~/crumplab/blog</span></p>
+<h1 class="visually-hidden">Blog</h1>
+<div class="fp-lead">
 <p>Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.</p>
-<div id="listing-blog-list" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cHN5Y2hvbG9neQ==" data-listing-date-sort="1716264000000" data-listing-file-modified-sort="1716295836376" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="542">
-<div class="thumbnail"><a href="./blog/557_chair/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/557_chair/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/557_chair/index.html" class="no-external">And now for something completely different: Department Chair</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHN5Y2hvbG9neQ=='); return false;">psychology</div>
-
 </div>
-<div class="delink listing-description"><a href="./blog/557_chair/index.html" class="no-external">
-<p>Very brief comments on the next three years.</p>
-</a></div>
+<p><a href="Blog.xml" class="pchip rss">rss</a></p>
 </div>
-<div class="metadata">
-<a href="./blog/557_chair/index.html" class="no-external">
-<div class="listing-date">
+</div>
+<div id="listing-blog-list" class="quarto-listing quarto-listing-container-custom">
+<div class="latest">
+<div class="card lcard c-pink">
+<a class="lthumb" href="./blog/557_chair/index.html"><img src="./blog/557_chair/cover.jpg" alt="" loading="lazy"></a>
+<div class="lmeta">
+┌─ May 21, 2024
+</div>
+<h2 class="ltitle">
+<a href="./blog/557_chair/index.html">And now for something completely different: Department Chair</a>
+</h2>
+<div class="bdesc">
+Very brief comments on the next three years.
+</div>
+</div>
+<div class="card lcard c-blue">
+<a class="lthumb" href="./blog/559_midiblender/index.html"><img src="./blog/559_midiblender/cover.jpg" alt="" loading="lazy"></a>
+<div class="lmeta">
+┌─ Feb 9, 2024
+</div>
+<h2 class="ltitle">
+<a href="./blog/559_midiblender/index.html">midiblender: Experiments in genRative MIDI mangling</a>
+</h2>
+<div class="bdesc">
+An experimental R package for MIDI manipulation in R.
+</div>
+</div>
+<div class="card lcard c-green">
+<a class="lthumb" href="./blog/660_music_cognition/index.html"><img src="./blog/660_music_cognition/cover.jpg" alt="" loading="lazy"></a>
+<div class="lmeta">
+┌─ Jan 18, 2024
+</div>
+<h2 class="ltitle">
+<a href="./blog/660_music_cognition/index.html">Musing about music cognition</a>
+</h2>
+<div class="bdesc">
+It's the beginning of a new semester and i'm thinking about doing more music cognition research this round. Mostly a long ramble.
+</div>
+</div>
+</div>
+<div class="card c-violet blog-list">
+<div class="card-head">
+<p>
+<span class="card-label">┌─ index · all posts</span><span class="count">35</span>
+</p>
+</div>
+<div class="tools">
+<div class="filters" role="group" aria-label="Filter by category">
+<button type="button" class="filter active" data-cat="all" aria-pressed="true">
+all <span>35</span>
+</button>
+<button type="button" class="filter" data-cat="rstats" aria-pressed="false">
+Rstats <span>12</span>
+</button>
+<button type="button" class="filter" data-cat="llms" aria-pressed="false">
+LLMs <span>7</span>
+</button>
+<button type="button" class="filter" data-cat="rstudio" aria-pressed="false">
+RStudio <span>6</span>
+</button>
+<button type="button" class="filter" data-cat="social" aria-pressed="false">
+social <span>5</span>
+</button>
+<button type="button" class="filter" data-cat="assisted writing" aria-pressed="false">
+Assisted writing <span>4</span>
+</button>
+<button type="button" class="filter" data-cat="mastodon" aria-pressed="false">
+mastodon <span>4</span>
+</button>
+<button type="button" class="filter" data-cat="quarto" aria-pressed="false">
+Quarto <span>4</span>
+</button>
+<button type="button" class="filter" data-cat="teaching" aria-pressed="false">
+teaching <span>4</span>
+</button>
+<button type="button" class="filter" data-cat="art" aria-pressed="false">
+art <span>3</span>
+</button>
+<button type="button" class="filter" data-cat="blogging" aria-pressed="false">
+blogging <span>3</span>
+</button>
+</div>
+<label class="grep"><span>$ grep</span><input type="search" placeholder="title, description, tag" aria-label="Search posts"></label>
+</div>
+<div class="filter-status" hidden="">
+showing posts tagged <b class="fs-cat"></b> <button type="button" class="fs-clear">[ clear ]</button>
+</div>
+<div class="brow irow" data-cats="psychology" data-search="and now for something completely different: department chair very brief comments on the next three years. psychology">
+<div class="bdate">
 May 21, 2024
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/557_chair/index.html">And now for something completely different: Department Chair</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=psychology" data-tag="psychology">psychology</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bXVzaWMlMjBjb2duaXRpb24lMkNyc3RhdHMlMkNtaWRpYmxlbmRlciUyQ2dlbmVyYXRpdmUlMjBtdXNpYw==" data-listing-date-sort="1707454800000" data-listing-file-modified-sort="1707491348341" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="491">
-<div class="thumbnail"><a href="./blog/559_midiblender/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/559_midiblender/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/559_midiblender/index.html" class="no-external">midiblender: Experiments in genRative MIDI mangling</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bXVzaWMlMjBjb2duaXRpb24='); return false;">music cognition</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cnN0YXRz'); return false;">rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWlkaWJsZW5kZXI='); return false;">midiblender</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2VuZXJhdGl2ZSUyMG11c2lj'); return false;">generative music</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/559_midiblender/index.html" class="no-external">
-<p>An experimental R package for MIDI manipulation in R.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/559_midiblender/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="music cognition|rstats|midiblender|generative music" data-search="midiblender: experiments in genrative midi mangling an experimental r package for midi manipulation in r. music cognition rstats midiblender generative music">
+<div class="bdate">
 Feb 9, 2024
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/559_midiblender/index.html">midiblender: Experiments in genRative MIDI mangling</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=music%20cognition" data-tag="music cognition">music cognition</a><a class="btag" href="#category=rstats" data-tag="rstats">rstats</a><a class="btag" href="#category=midiblender" data-tag="midiblender">midiblender</a><a class="btag" href="#category=generative%20music" data-tag="generative music">generative music</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bXVzaWMlMjBjb2duaXRpb24lMkNob21vcGhvbnk=" data-listing-date-sort="1705554000000" data-listing-file-modified-sort="1705671705474" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3569">
-<div class="thumbnail"><a href="./blog/660_music_cognition/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/660_music_cognition/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/660_music_cognition/index.html" class="no-external">Musing about music cognition</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bXVzaWMlMjBjb2duaXRpb24='); return false;">music cognition</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aG9tb3Bob255'); return false;">homophony</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/660_music_cognition/index.html" class="no-external">
-<p>It’s the beginning of a new semester and i’m thinking about doing more music cognition research this round. Mostly a long ramble.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/660_music_cognition/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="music cognition|homophony" data-search="musing about music cognition it's the beginning of a new semester and i'm thinking about doing more music cognition research this round. mostly a long ramble. music cognition homophony">
+<div class="bdate">
 Jan 18, 2024
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/660_music_cognition/index.html">Musing about music cognition</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=music%20cognition" data-tag="music cognition">music cognition</a><a class="btag" href="#category=homophony" data-tag="homophony">homophony</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="c3RhYmxlJTIwZGlmZnVzaW9uJTJDZ2VuZXJhdGl2ZSUyQ2FydCUyQ3B5dGhvbiUyQ1JzdHVkaW8=" data-listing-date-sort="1695268800000" data-listing-file-modified-sort="1695301031468" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="915">
-<div class="thumbnail"><a href="./blog/661_stable_diffusion/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/661_stable_diffusion/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/661_stable_diffusion/index.html" class="no-external">Messing around with Hugging Face’s Stable Diffusion</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhYmxlJTIwZGlmZnVzaW9u'); return false;">stable diffusion</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2VuZXJhdGl2ZQ=='); return false;">generative</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXJ0'); return false;">art</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0dWRpbw=='); return false;">Rstudio</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/661_stable_diffusion/index.html" class="no-external">
-<p>Notes and tests on getting stable diffusion working on my laptop and then seeing what it does to some of my own drawings</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/661_stable_diffusion/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="stable diffusion|generative|art|python|rstudio" data-search="messing around with hugging face's stable diffusion notes and tests on getting stable diffusion working on my laptop and then seeing what it does to some of my own drawings stable diffusion generative art python rstudio">
+<div class="bdate">
 Sep 21, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/661_stable_diffusion/index.html">Messing around with Hugging Face's Stable Diffusion</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=stable%20diffusion" data-tag="stable diffusion">stable diffusion</a><a class="btag" href="#category=generative" data-tag="generative">generative</a><a class="btag" href="#category=art" data-tag="art">art</a><a class="btag" href="#category=python" data-tag="python">python</a><a class="btag" href="#category=rstudio" data-tag="rstudio">Rstudio</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="UXVhcnRvJTJDcG9ydGZvbGlvJTJDYXJ0" data-listing-date-sort="1689220800000" data-listing-file-modified-sort="1689259577702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="621">
-<div class="thumbnail"><a href="./blog/662_quarto_portfolio/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/662_quarto_portfolio/images/portfolio.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/662_quarto_portfolio/index.html" class="no-external">A simple visual art portfolio website using Quarto</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cG9ydGZvbGlv'); return false;">portfolio</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXJ0'); return false;">art</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/662_quarto_portfolio/index.html" class="no-external">
-<p>Notes on using Quarto to create a basic portfolio website for pictures using listing pages.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/662_quarto_portfolio/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="quarto|portfolio|art" data-search="a simple visual art portfolio website using quarto notes on using quarto to create a basic portfolio website for pictures using listing pages. quarto portfolio art">
+<div class="bdate">
 Jul 13, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/662_quarto_portfolio/index.html">A simple visual art portfolio website using Quarto</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=quarto" data-tag="quarto">Quarto</a><a class="btag" href="#category=portfolio" data-tag="portfolio">portfolio</a><a class="btag" href="#category=art" data-tag="art">art</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="UXVhcnRvJTJDcmVwcm9kdWNpYmxlJTIwcmVzZWFyY2glMkNyc3RhdHM=" data-listing-date-sort="1687838400000" data-listing-file-modified-sort="1687897030221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1140">
-<div class="thumbnail"><a href="./blog/663_quarto_projects/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/663_quarto_projects/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/663_quarto_projects/index.html" class="no-external">Pondering my defaults for Quarto websites and reproducible research projects</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVwcm9kdWNpYmxlJTIwcmVzZWFyY2g='); return false;">reproducible research</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cnN0YXRz'); return false;">rstats</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/663_quarto_projects/index.html" class="no-external">
-<p>Quarto websites are a great way to package and distribute assets from a reproducible research project. I’m just about to start another project, and I’m thinking about issues with how I get started.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/663_quarto_projects/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="quarto|reproducible research|rstats" data-search="pondering my defaults for quarto websites and reproducible research projects quarto websites are a great way to package and distribute assets from a reproducible research project. i'm just about to start another project, and i'm thinking about issues with how i get started. quarto reproducible research rstats">
+<div class="bdate">
 Jun 27, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/663_quarto_projects/index.html">Pondering my defaults for Quarto websites and reproducible research projects</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=quarto" data-tag="quarto">Quarto</a><a class="btag" href="#category=reproducible%20research" data-tag="reproducible research">reproducible research</a><a class="btag" href="#category=rstats" data-tag="rstats">rstats</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="QmxvZ2dpbmclMkNnaXNjdXM=" data-listing-date-sort="1687752000000" data-listing-file-modified-sort="1687873293514" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="459">
-<div class="thumbnail"><a href="./blog/664_giscus/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/664_giscus/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/664_giscus/index.html" class="no-external">Adding a giscus comment section?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QmxvZ2dpbmc='); return false;">Blogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2lzY3Vz'); return false;">giscus</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/664_giscus/index.html" class="no-external">
-<p>Testing out adding a giscus comment section to a blog post.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/664_giscus/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="blogging|giscus" data-search="adding a giscus comment section? testing out adding a giscus comment section to a blog post. blogging giscus">
+<div class="bdate">
 Jun 26, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/664_giscus/index.html">Adding a giscus comment section?</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=blogging" data-tag="blogging">Blogging</a><a class="btag" href="#category=giscus" data-tag="giscus">giscus</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="TExNcyUyQ09wZW5BSSUyQ1NoaW55JTJDUnN0YXRzJTJDUlN0dWRpbyUyQ0Fzc2lzdGVkJTIwd3JpdGluZw==" data-listing-date-sort="1687492800000" data-listing-file-modified-sort="1687873266988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1363">
-<div class="thumbnail"><a href="./blog/665_realworld_editing/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/665_realworld_editing/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/665_realworld_editing/index.html" class="no-external">Observations on using LLMs for checking grammar, etc.</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3BlbkFJ'); return false;">OpenAI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2hpbnk='); return false;">Shiny</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbw=='); return false;">RStudio</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXNzaXN0ZWQlMjB3cml0aW5n'); return false;">Assisted writing</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/665_realworld_editing/index.html" class="no-external">
-<p>In recent posts I’ve been making add-ins and a shiny app for writing assistance tools in R Studio, where I do most of my writing. I’m finally starting to get some usable results. Discussing some observations about the process in this post.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/665_realworld_editing/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="llms|openai|shiny|rstats|rstudio|assisted writing" data-search="observations on using llms for checking grammar, etc. in recent posts i've been making add-ins and a shiny app for writing assistance tools in r studio, where i do most of my writing. i'm finally starting to get some usable results. discussing some observations about the process in this post. llms openai shiny rstats rstudio assisted writing">
+<div class="bdate">
 Jun 23, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/665_realworld_editing/index.html">Observations on using LLMs for checking grammar, etc.</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=llms" data-tag="llms">LLMs</a><a class="btag" href="#category=openai" data-tag="openai">OpenAI</a><a class="btag" href="#category=shiny" data-tag="shiny">Shiny</a><a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=rstudio" data-tag="rstudio">RStudio</a><a class="btag" href="#category=assisted%20writing" data-tag="assisted writing">Assisted writing</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1687406400000" data-listing-file-modified-sort="1687792486808" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1640">
-<div class="thumbnail"><a href="./blog/666_gpt_grammar/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/666_gpt_grammar/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/666_gpt_grammar/index.html" class="no-external">Scratchpad: Grammar checking Quarto documents with the OpenAI API</a>
-</h3>
-<div class="delink listing-description"><a href="./blog/666_gpt_grammar/index.html" class="no-external">
-<p>This is a scratchpad post. I would like better grammar checking for documents that I write in Rstudio, and I know that I could cobble something together using the OpenAI API. I’m using this post to do the cobbling, which may not result in a working solution. Fingers crossed.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/666_gpt_grammar/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="" data-search="scratchpad: grammar checking quarto documents with the openai api this is a scratchpad post. i would like better grammar checking for documents that i write in rstudio, and i know that i could cobble something together using the openai api. i'm using this post to do the cobbling, which may not result in a working solution. fingers crossed. ">
+<div class="bdate">
 Jun 22, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/666_gpt_grammar/index.html">Scratchpad: Grammar checking Quarto documents with the OpenAI API</a>
 </div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="TExNcyUyQ1JzdGF0cyUyQ1JTdHVkaW8lMkNBc3Npc3RlZCUyMHdyaXRpbmc=" data-listing-date-sort="1687320000000" data-listing-file-modified-sort="1687873242301" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1478">
-<div class="thumbnail"><a href="./blog/667_GPT_editing/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/667_GPT_editing/cover.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/667_GPT_editing/index.html" class="no-external">Prompts for editing text with GPT</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbw=='); return false;">RStudio</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXNzaXN0ZWQlMjB3cml0aW5n'); return false;">Assisted writing</div>
+<div class="btags">
 
 </div>
-<div class="delink listing-description"><a href="./blog/667_GPT_editing/index.html" class="no-external">
-<p>Testing out some strategies for writing assistant functions from GPT</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="./blog/667_GPT_editing/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="llms|rstats|rstudio|assisted writing" data-search="prompts for editing text with gpt testing out some strategies for writing assistant functions from gpt llms rstats rstudio assisted writing">
+<div class="bdate">
 Jun 21, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/667_GPT_editing/index.html">Prompts for editing text with GPT</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=llms" data-tag="llms">LLMs</a><a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=rstudio" data-tag="rstudio">RStudio</a><a class="btag" href="#category=assisted%20writing" data-tag="assisted writing">Assisted writing</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="TExNcyUyQ1JzdGF0cyUyQ1JTdHVkaW8lMkNBc3Npc3RlZCUyMHdyaXRpbmc=" data-listing-date-sort="1687233600000" data-listing-file-modified-sort="1687873211233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="110" data-listing-word-count-sort="21818">
-<div class="thumbnail"><a href="./blog/668_gpt_adventure/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/668_gpt_adventure/DallE_image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/668_gpt_adventure/index.html" class="no-external">Choose-your-own adventure with ChatGPT</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbw=='); return false;">RStudio</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXNzaXN0ZWQlMjB3cml0aW5n'); return false;">Assisted writing</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/668_gpt_adventure/index.html" class="no-external">
-<p>Me fiddling around with GPT inside Rstudio to write a choose-your-own adventure story.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/668_gpt_adventure/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="llms|rstats|rstudio|assisted writing" data-search="choose-your-own adventure with chatgpt me fiddling around with gpt inside rstudio to write a choose-your-own adventure story. llms rstats rstudio assisted writing">
+<div class="bdate">
 Jun 20, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/668_gpt_adventure/index.html">Choose-your-own adventure with ChatGPT</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=llms" data-tag="llms">LLMs</a><a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=rstudio" data-tag="rstudio">RStudio</a><a class="btag" href="#category=assisted%20writing" data-tag="assisted writing">Assisted writing</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="TExNcyUyQ09wZW5BSSUyQ1JzdGF0cyUyQ1JTdHVkaW8lMkNBc3Npc3RlZCUyMHdyaXRpbmc=" data-listing-date-sort="1686196800000" data-listing-file-modified-sort="1687873185251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1722">
-<div class="thumbnail"><a href="./blog/669_gpt_learnR/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="images/crumplab.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/669_gpt_learnR/index.html" class="no-external">Writing an R tutorial with GPT in RStudio</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3BlbkFJ'); return false;">OpenAI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbw=='); return false;">RStudio</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXNzaXN0ZWQlMjB3cml0aW5n'); return false;">Assisted writing</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/669_gpt_learnR/index.html" class="no-external">
-<p>I’m testing out the process of writing in RStudio using addins that send prompts and receive generative text from OpenAI.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/669_gpt_learnR/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="llms|openai|rstats|rstudio|assisted writing" data-search="writing an r tutorial with gpt in rstudio i'm testing out the process of writing in rstudio using addins that send prompts and receive generative text from openai. llms openai rstats rstudio assisted writing">
+<div class="bdate">
 Jun 8, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/669_gpt_learnR/index.html">Writing an R tutorial with GPT in RStudio</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=llms" data-tag="llms">LLMs</a><a class="btag" href="#category=openai" data-tag="openai">OpenAI</a><a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=rstudio" data-tag="rstudio">RStudio</a><a class="btag" href="#category=assisted%20writing" data-tag="assisted writing">Assisted writing</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="TExNcyUyQ09wZW5BSSUyQ1JzdGF0cyUyQ1JTdHVkaW8=" data-listing-date-sort="1686110400000" data-listing-file-modified-sort="1687873156148" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2493">
-<div class="thumbnail"><a href="./blog/770_rstudio_gpt/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="images/crumplab.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/770_rstudio_gpt/index.html" class="no-external">Using GPT for writing in R Studio</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3BlbkFJ'); return false;">OpenAI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbw=='); return false;">RStudio</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/770_rstudio_gpt/index.html" class="no-external">
-<p>I’m spending the morning writing addins for RStudio that interface with the OpenAI API. This should make it possible to integrate GPT as a writing aid inside RStudio.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/770_rstudio_gpt/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="llms|openai|rstats|rstudio" data-search="using gpt for writing in r studio i'm spending the morning writing addins for rstudio that interface with the openai api. this should make it possible to integrate gpt as a writing aid inside rstudio. llms openai rstats rstudio">
+<div class="bdate">
 Jun 7, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/770_rstudio_gpt/index.html">Using GPT for writing in R Studio</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=llms" data-tag="llms">LLMs</a><a class="btag" href="#category=openai" data-tag="openai">OpenAI</a><a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=rstudio" data-tag="rstudio">RStudio</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="TExNcyUyQ1N0cm9vcCUyQ0NoYXRHUFQ=" data-listing-date-sort="1686024000000" data-listing-file-modified-sort="1687897029052" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4651">
-<div class="thumbnail"><a href="./blog/771_GPT_Stroop/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="blog/771_GPT_Stroop/Stroop.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/771_GPT_Stroop/index.html" class="no-external">Simulating Stroop effects with ChatGPT</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3Ryb29w'); return false;">Stroop</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2hhdEdQVA=='); return false;">ChatGPT</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/771_GPT_Stroop/index.html" class="no-external">
-<p>This is a short post to determine how easy it would be to simulate performance in a classic human attention task using ChatGPT. The short answer is that it can generate data in the style of a Stroop experiment without too much effort on my part.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/771_GPT_Stroop/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="llms|stroop|chatgpt" data-search="simulating stroop effects with chatgpt this is a short post to determine how easy it would be to simulate performance in a classic human attention task using chatgpt. the short answer is that it can generate data in the style of a stroop experiment without too much effort on my part. llms stroop chatgpt">
+<div class="bdate">
 Jun 6, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/771_GPT_Stroop/index.html">Simulating Stroop effects with ChatGPT</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=llms" data-tag="llms">LLMs</a><a class="btag" href="#category=stroop" data-tag="stroop">Stroop</a><a class="btag" href="#category=chatgpt" data-tag="chatgpt">ChatGPT</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="Q2hhdEdQVCUyQ0xMTXM=" data-listing-date-sort="1676696400000" data-listing-file-modified-sort="1687873158691" data-listing-date-modified-sort="1687873158000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3262">
-<div class="thumbnail"><a href="./blog/772_chatGPT/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="blog/772_chatGPT/images/redlining_brooklyn.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/772_chatGPT/index.html" class="no-external">Notes for my students on using ChatGPT</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2hhdEdQVA=='); return false;">ChatGPT</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/772_chatGPT/index.html" class="no-external">
-<p>I’m teaching a class on the people of NYC, and these are some notes that I made for students about ChatGPT.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/772_chatGPT/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="chatgpt|llms" data-search="notes for my students on using chatgpt i'm teaching a class on the people of nyc, and these are some notes that i made for students about chatgpt. chatgpt llms">
+<div class="bdate">
 Feb 18, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/772_chatGPT/index.html">Notes for my students on using ChatGPT</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=chatgpt" data-tag="chatgpt">ChatGPT</a><a class="btag" href="#category=llms" data-tag="llms">LLMs</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="UlNT" data-listing-date-sort="1673499600000" data-listing-file-modified-sort="1687873013599" data-listing-date-modified-sort="1687873013000" data-listing-reading-time-sort="3" data-listing-word-count-sort="530">
-<div class="thumbnail"><a href="./blog/774_spring2023/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/774_spring2023/images/header.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/774_spring2023/index.html" class="no-external">Two new courses and getting into the swing with spring</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UlNT'); return false;">RSS</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/774_spring2023/index.html" class="no-external">
-<p>Writing for personal motivation and organization around teaching this coming Spring semester. Odd notes about process. A narrative form to-do list. For me, sharing for fun.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/774_spring2023/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="rss" data-search="two new courses and getting into the swing with spring writing for personal motivation and organization around teaching this coming spring semester. odd notes about process. a narrative form to-do list. for me, sharing for fun. rss">
+<div class="bdate">
 Jan 12, 2023
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/774_spring2023/index.html">Two new courses and getting into the swing with spring</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=rss" data-tag="rss">RSS</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="Z2VuZXJhdGl2ZSUyMGFydCUyQ2FydA==" data-listing-date-sort="1668056400000" data-listing-file-modified-sort="1691151107053" data-listing-date-modified-sort="1691151107000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2860">
-<div class="thumbnail"><a href="./blog/777_generative_art/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/777_generative_art/images/Impact3.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/777_generative_art/index.html" class="no-external">Generative art (note) collection</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2VuZXJhdGl2ZSUyMGFydA=='); return false;">generative art</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXJ0'); return false;">art</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/777_generative_art/index.html" class="no-external">
-<p>Collecting fast notes on using #rstats and potentiall other things to generate visuals.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/777_generative_art/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="generative art|art" data-search="generative art (note) collection collecting fast notes on using #rstats and potentiall other things to generate visuals. generative art art">
+<div class="bdate">
 Nov 10, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/777_generative_art/index.html">Generative art (note) collection</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=generative%20art" data-tag="generative art">generative art</a><a class="btag" href="#category=art" data-tag="art">art</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="UlNT" data-listing-date-sort="1668056400000" data-listing-file-modified-sort="1687792486836" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="2" data-listing-word-count-sort="228">
-<div class="thumbnail"><a href="./blog/776_RSS/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/776_RSS/images/header.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/776_RSS/index.html" class="no-external">RSS feed my quarto blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UlNT'); return false;">RSS</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/776_RSS/index.html" class="no-external">
-<p>Seeing what happens if I set up RSS feeds over here.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/776_RSS/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="rss" data-search="rss feed my quarto blog seeing what happens if i set up rss feeds over here. rss">
+<div class="bdate">
 Nov 10, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/776_RSS/index.html">RSS feed my quarto blog</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=rss" data-tag="rss">RSS</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="ZnVua3doYWxlJTJDYWN0aXZpdHlwdWIlMkNhdWRpbyUyQ211c2lj" data-listing-date-sort="1667970000000" data-listing-file-modified-sort="1687792486859" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="7" data-listing-word-count-sort="1294">
-<div class="thumbnail"><a href="./blog/778_funkwhale/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/778_funkwhale/images/header.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/778_funkwhale/index.html" class="no-external">Convincing myself to run a Funkwhale pod</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZnVua3doYWxl'); return false;">funkwhale</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWN0aXZpdHlwdWI='); return false;">activitypub</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXVkaW8='); return false;">audio</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bXVzaWM='); return false;">music</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/778_funkwhale/index.html" class="no-external">
-<p>Funkwhale is an audio platform thing that supports activitypub. Collecting notes about it.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/778_funkwhale/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="funkwhale|activitypub|audio|music" data-search="convincing myself to run a funkwhale pod funkwhale is an audio platform thing that supports activitypub. collecting notes about it. funkwhale activitypub audio music">
+<div class="bdate">
 Nov 9, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/778_funkwhale/index.html">Convincing myself to run a Funkwhale pod</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=funkwhale" data-tag="funkwhale">funkwhale</a><a class="btag" href="#category=activitypub" data-tag="activitypub">activitypub</a><a class="btag" href="#category=audio" data-tag="audio">audio</a><a class="btag" href="#category=music" data-tag="music">music</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="c29jaWFsJTJDbWFzdG9kb24=" data-listing-date-sort="1667797200000" data-listing-file-modified-sort="1687792486862" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="5" data-listing-word-count-sort="940">
-<div class="thumbnail"><a href="./blog/779_MoreMastodon/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="blog/779_MoreMastodon/images/MV5BMTUzNTYxMTUzMV5BMl5BanBnXkFtZTYwMzgxMTg4._V1_.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/779_MoreMastodon/index.html" class="no-external">Debriefing my mastodon migration</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c29jaWFs'); return false;">social</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFzdG9kb24='); return false;">mastodon</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/779_MoreMastodon/index.html" class="no-external">
-<p>It’s been a wild ride on social media over the past week. I need some thought collection.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/779_MoreMastodon/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="social|mastodon" data-search="debriefing my mastodon migration it's been a wild ride on social media over the past week. i need some thought collection. social mastodon">
+<div class="bdate">
 Nov 7, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/779_MoreMastodon/index.html">Debriefing my mastodon migration</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=social" data-tag="social">social</a><a class="btag" href="#category=mastodon" data-tag="mastodon">mastodon</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="c29jaWFsJTJDbWFzdG9kb24=" data-listing-date-sort="1667275200000" data-listing-file-modified-sort="1687792486883" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1095">
-<div class="thumbnail"><a href="./blog/880_BBS/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/880_BBS/images/bbs.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/880_BBS/index.html" class="no-external">Spinning up a mastodon instance with masto.host: First try and notes</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c29jaWFs'); return false;">social</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFzdG9kb24='); return false;">mastodon</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/880_BBS/index.html" class="no-external">
-<p>I decided to try mastodon from inside my own instance, and this is brief guide to what I did and the questions I still have.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/880_BBS/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="social|mastodon" data-search="spinning up a mastodon instance with masto.host: first try and notes i decided to try mastodon from inside my own instance, and this is brief guide to what i did and the questions i still have. social mastodon">
+<div class="bdate">
 Nov 1, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/880_BBS/index.html">Spinning up a mastodon instance with masto.host: First try and notes</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=social" data-tag="social">social</a><a class="btag" href="#category=mastodon" data-tag="mastodon">mastodon</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="c29jaWFsJTJDdHdpdHRlciUyQ21hc3RvZG9u" data-listing-date-sort="1667102400000" data-listing-file-modified-sort="1687792486885" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="3" data-listing-word-count-sort="569">
-<div class="thumbnail"><a href="./blog/881_Mastodon/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/881_Mastodon/images/mastodon.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/881_Mastodon/index.html" class="no-external">Mastodon migration and getting off twitter?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c29jaWFs'); return false;">social</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dHdpdHRlcg=='); return false;">twitter</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFzdG9kb24='); return false;">mastodon</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/881_Mastodon/index.html" class="no-external">
-<p>Trying out Mastodon this weekend and attempting to migrate between instances using an R package.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/881_Mastodon/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="social|twitter|mastodon" data-search="mastodon migration and getting off twitter? trying out mastodon this weekend and attempting to migrate between instances using an r package. social twitter mastodon">
+<div class="bdate">
 Oct 30, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/881_Mastodon/index.html">Mastodon migration and getting off twitter?</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=social" data-tag="social">social</a><a class="btag" href="#category=twitter" data-tag="twitter">twitter</a><a class="btag" href="#category=mastodon" data-tag="mastodon">mastodon</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="c29jaWFsJTJDdHdpdHRlciUyQ21hc3RvZG9u" data-listing-date-sort="1666929600000" data-listing-file-modified-sort="1687792486968" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="3" data-listing-word-count-sort="464">
-<div class="thumbnail"><a href="./blog/883_command_center/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/883_command_center/images/command.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/883_command_center/index.html" class="no-external">What if I made an R command center for tweeting and tooting?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c29jaWFs'); return false;">social</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dHdpdHRlcg=='); return false;">twitter</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFzdG9kb24='); return false;">mastodon</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/883_command_center/index.html" class="no-external">
-<p>Messing around with stuff in R on a friday Morning</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/883_command_center/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="social|twitter|mastodon" data-search="what if i made an r command center for tweeting and tooting? messing around with stuff in r on a friday morning social twitter mastodon">
+<div class="bdate">
 Oct 28, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/883_command_center/index.html">What if I made an R command center for tweeting and tooting?</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=social" data-tag="social">social</a><a class="btag" href="#category=twitter" data-tag="twitter">twitter</a><a class="btag" href="#category=mastodon" data-tag="mastodon">mastodon</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="c29jaWFsJTJDdHdpdHRlciUyQ3Bhcm9keQ==" data-listing-date-sort="1666929600000" data-listing-file-modified-sort="1687792486964" data-listing-date-modified-sort="1687792486000" data-listing-reading-time-sort="2" data-listing-word-count-sort="354">
-<div class="thumbnail"><a href="./blog/882_JOKE/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/882_JOKE/images/Journal_of_knowledge.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/882_JOKE/index.html" class="no-external">Archiving the journal of knowledge</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c29jaWFs'); return false;">social</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dHdpdHRlcg=='); return false;">twitter</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGFyb2R5'); return false;">parody</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/882_JOKE/index.html" class="no-external">
-<p>Attempt to download some previous tweets before deleting an account.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/882_JOKE/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="social|twitter|parody" data-search="archiving the journal of knowledge attempt to download some previous tweets before deleting an account. social twitter parody">
+<div class="bdate">
 Oct 28, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/882_JOKE/index.html">Archiving the journal of knowledge</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=social" data-tag="social">social</a><a class="btag" href="#category=twitter" data-tag="twitter">twitter</a><a class="btag" href="#category=parody" data-tag="parody">parody</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="dW5ncmFkaW5nJTJDdW5wbGFubmluZyUyQ3RlYWNoaW5n" data-listing-date-sort="1665892800000" data-listing-file-modified-sort="1687792486990" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1069">
-<div class="thumbnail"><a href="./blog/885_10_16_22_unplanning/index.html" class="no-external">
-
-<img loading="lazy" src="./blog/885_10_16_22_unplanning/images/unplanning.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/885_10_16_22_unplanning/index.html" class="no-external">Unplanning my next course prep</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('dW5ncmFkaW5n'); return false;">ungrading</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dW5wbGFubmluZw=='); return false;">unplanning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGVhY2hpbmc='); return false;">teaching</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/885_10_16_22_unplanning/index.html" class="no-external">
-<p>Sunday morning thoughts on not overplanning while prepping a new course.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/885_10_16_22_unplanning/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="ungrading|unplanning|teaching" data-search="unplanning my next course prep sunday morning thoughts on not overplanning while prepping a new course. ungrading unplanning teaching">
+<div class="bdate">
 Oct 16, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/885_10_16_22_unplanning/index.html">Unplanning my next course prep</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=ungrading" data-tag="ungrading">ungrading</a><a class="btag" href="#category=unplanning" data-tag="unplanning">unplanning</a><a class="btag" href="#category=teaching" data-tag="teaching">teaching</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="cXVhcnRvJTJDUnN0YXRzJTJDdmVydGljYWwlMkNSZXByb2R1Y2libGUlMjByZXNlYXJjaA==" data-listing-date-sort="1665720000000" data-listing-file-modified-sort="1687873858688" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1304">
-<div class="thumbnail"><a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_886_10_14_22_quartoProjects/imgs/Quarto-1.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external">Quarto as a tool for reproducible research projects in psychology</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dmVydGljYWw='); return false;">vertical</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVwcm9kdWNpYmxlJTIwcmVzZWFyY2g='); return false;">Reproducible research</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external">
-<p>Some initial reactions to using quarto as a platform for creating and communicating reproducible research projects in psychology.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_886_10_14_22_quartoProjects/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="quarto|rstats|vertical|reproducible research" data-search="quarto as a tool for reproducible research projects in psychology some initial reactions to using quarto as a platform for creating and communicating reproducible research projects in psychology. quarto rstats vertical reproducible research">
+<div class="bdate">
 Oct 14, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_886_10_14_22_quartoProjects/index.html">Quarto as a tool for reproducible research projects in psychology</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=quarto" data-tag="quarto">quarto</a><a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=vertical" data-tag="vertical">vertical</a><a class="btag" href="#category=reproducible%20research" data-tag="reproducible research">Reproducible research</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="cXVhcnRvJTJDUnN0YXRzJTJDYmxvZ2dpbmc=" data-listing-date-sort="1661400000000" data-listing-file-modified-sort="1687792487398" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1419">
-<div class="thumbnail"><a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_887_8_25_22_quartoblog/imgs/quarto.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external">Blogging with Quarto</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external">
-<p><em>August 25th, 2022</em> - Quick tips on setting up a quarto blog using R Studio.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_887_8_25_22_quartoblog/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="quarto|rstats|blogging" data-search="blogging with quarto *august 25th, 2022* - quick tips on setting up a quarto blog using r studio. quarto rstats blogging">
+<div class="bdate">
 Aug 25, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_887_8_25_22_quartoblog/index.html">Blogging with Quarto</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=quarto" data-tag="quarto">quarto</a><a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=blogging" data-tag="blogging">blogging</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="dGVhY2hpbmclMkNjb2duaXRpb24lMkNPRVI=" data-listing-date-sort="1661227200000" data-listing-file-modified-sort="1687792487401" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1895">
-<div class="thumbnail"><a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_888_8_23_22_teaching2530/imgs/groove.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external">Getting back into the groove and teaching cognition</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGVhY2hpbmc='); return false;">teaching</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29nbml0aW9u'); return false;">cognition</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T0VS'); return false;">OER</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external">
-<p>It’s been summer time and another semester begins in a couple days. I’m blogging to get words flowing as I polish my syllabus and reflect on goals for this academic year.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_888_8_23_22_teaching2530/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="teaching|cognition|oer" data-search="getting back into the groove and teaching cognition it's been summer time and another semester begins in a couple days. i'm blogging to get words flowing as i polish my syllabus and reflect on goals for this academic year. teaching cognition oer">
+<div class="bdate">
 Aug 23, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_888_8_23_22_teaching2530/index.html">Getting back into the groove and teaching cognition</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=teaching" data-tag="teaching">teaching</a><a class="btag" href="#category=cognition" data-tag="cognition">cognition</a><a class="btag" href="#category=oer" data-tag="oer">OER</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="Zm9udHM=" data-listing-date-sort="1657166400000" data-listing-file-modified-sort="1687792487403" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="612">
-<div class="thumbnail"><a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_889_7_7_22_fonts/imgs/moebius.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external">Making fonts</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Zm9udHM='); return false;">fonts</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external">
-<p><em>July 7th, 2022</em> - Notes on making custom fonts and using them on the web.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_889_7_7_22_fonts/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="fonts" data-search="making fonts *july 7th, 2022* - notes on making custom fonts and using them on the web. fonts">
+<div class="bdate">
 Jul 7, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_889_7_7_22_fonts/index.html">Making fonts</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=fonts" data-tag="fonts">fonts</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="YmlibGlvZ3JhcGhpZXMlMkNSc3RhdHM=" data-listing-date-sort="1656388800000" data-listing-file-modified-sort="1691152013091" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="636">
-<div class="thumbnail"><a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_991_6_28_22_annotate/imgs/annotate.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external">Writing annotated bibliographies with R Markdown</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmlibGlvZ3JhcGhpZXM='); return false;">bibliographies</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external">
-<p>Trying out ways to write annotated bibliographies in R Markdown.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_991_6_28_22_annotate/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="bibliographies|rstats" data-search="writing annotated bibliographies with r markdown trying out ways to write annotated bibliographies in r markdown. bibliographies rstats">
+<div class="bdate">
 Jun 28, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_991_6_28_22_annotate/index.html">Writing annotated bibliographies with R Markdown</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=bibliographies" data-tag="bibliographies">bibliographies</a><a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="dGVhY2hpbmclMkNjb2duaXRpb24=" data-listing-date-sort="1653537600000" data-listing-file-modified-sort="1687792487428" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1429">
-<div class="thumbnail"><a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_994_5_26_22_cheating/imgs/cheating.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external">Brief notes on the cheating behavior literature</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGVhY2hpbmc='); return false;">teaching</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29nbml0aW9u'); return false;">cognition</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external">
-<p>Notes on cheating behavior literature</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_994_5_26_22_cheating/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="teaching|cognition" data-search="brief notes on the cheating behavior literature notes on cheating behavior literature teaching cognition">
+<div class="bdate">
 May 26, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_994_5_26_22_cheating/index.html">Brief notes on the cheating behavior literature</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=teaching" data-tag="teaching">teaching</a><a class="btag" href="#category=cognition" data-tag="cognition">cognition</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="31" data-categories="dGVhY2hpbmclMkNjb2duaXRpb24=" data-listing-date-sort="1653019200000" data-listing-file-modified-sort="1687792487434" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2047">
-<div class="thumbnail"><a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_996_5_20_22_assignmentflex/imgs/teaching_warp.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external">Teaching with multiple warp zones: Increasing engagement with assignment choice</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGVhY2hpbmc='); return false;">teaching</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29nbml0aW9u'); return false;">cognition</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external">
-<p>Some thoughts on how I implemented loads of assignment choice in my intro to cognition course this semester.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_996_5_20_22_assignmentflex/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="teaching|cognition" data-search="teaching with multiple warp zones: increasing engagement with assignment choice some thoughts on how i implemented loads of assignment choice in my intro to cognition course this semester.  teaching cognition">
+<div class="bdate">
 May 20, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_996_5_20_22_assignmentflex/index.html">Teaching with multiple warp zones: Increasing engagement with assignment choice</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=teaching" data-tag="teaching">teaching</a><a class="btag" href="#category=cognition" data-tag="cognition">cognition</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="32" data-categories="UnN0YXRzJTJDcGtnZG93biUyQ2Jsb2dnaW5n" data-listing-date-sort="1652760000000" data-listing-file-modified-sort="1687792487449" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1304">
-<div class="thumbnail"><a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_999_5_17_22_blogging/imgs/blogging_with_pkgdown.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external">Blogging with pkgdown?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGtnZG93bg=='); return false;">pkgdown</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external">
-<p>An attempt to blog with pkgdown, including notes to self about how I did this. It was succesful enough that I’m using pkgdown for this blog.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_999_5_17_22_blogging/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="rstats|pkgdown|blogging" data-search="blogging with pkgdown? an attempt to blog with pkgdown, including notes to self about how i did this. it was succesful enough that i'm using pkgdown for this blog. rstats pkgdown blogging">
+<div class="bdate">
 May 17, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_999_5_17_22_blogging/index.html">Blogging with pkgdown?</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=pkgdown" data-tag="pkgdown">pkgdown</a><a class="btag" href="#category=blogging" data-tag="blogging">blogging</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="33" data-categories="UnN0YXRzJTJDcHVibGljYXRpb24lMjBsaXN0" data-listing-date-sort="1652760000000" data-listing-file-modified-sort="1691150251828" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2191">
-<div class="thumbnail"><a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/post_997_5_19_22_pubs/imgs/publications_list.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external">Customizing a publication list with R Markdown</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UnN0YXRz'); return false;">Rstats</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHVibGljYXRpb24lMjBsaXN0'); return false;">publication list</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external">
-<p>Notes on creating a customizable list of publications for an academic website using R markdown, .bib files, and other fun stuff.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/post_997_5_19_22_pubs/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="rstats|publication list" data-search="customizing a publication list with r markdown notes on creating a customizable list of publications for an academic website using r markdown, .bib files, and other fun stuff. rstats publication list">
+<div class="bdate">
 May 17, 2022
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/post_997_5_19_22_pubs/index.html">Customizing a publication list with R Markdown</a>
 </div>
-</a>
+<div class="btags">
+<a class="btag" href="#category=rstats" data-tag="rstats">Rstats</a><a class="btag" href="#category=publication%20list" data-tag="publication list">publication list</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="34" data-listing-date-sort="1595908800000" data-listing-file-modified-sort="1687792487013" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5041">
-<div class="thumbnail"><a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external">
-
-<img loading="lazy" data-src="./blog/older_9999_7_28_20_OC/imgs/OC.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external">Learning to code for Ornament and Crime Hemisphere suite</a>
-</h3>
-<div class="delink listing-description"><a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external">
-<p>Some notes on coding for the open-source eurorack module called Ornament and Crime</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/older_9999_7_28_20_OC/index.html" class="no-external">
-<div class="listing-date">
+<div class="brow irow" data-cats="" data-search="learning to code for ornament and crime hemisphere suite some notes on coding for the open-source eurorack module called ornament and crime ">
+<div class="bdate">
 Jul 28, 2020
 </div>
-<div class="listing-author">
-Matt Crump
+<div class="btitle">
+<a href="./blog/older_9999_7_28_20_OC/index.html">Learning to code for Ornament and Crime Hemisphere suite</a>
 </div>
-</a>
+<div class="btags">
+
 </div>
 </div>
+<p class="empty" hidden="">
+No matches.
+</p>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 <nav id="blog-list-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
 </div>
+</div>
 
 
 
 
-</main> <!-- /main -->
+
+<script>
+/* Blog filters: category buttons, clickable tags, a grep box, and
+   #category=... links from posts (Quarto's category link format). */
+document.addEventListener('DOMContentLoaded', function () {
+  var root = document.querySelector('.blog-list');
+  if (!root) return;
+  var rows = root.querySelectorAll('.brow');
+  var buttons = root.querySelectorAll('.filter');
+  var input = root.querySelector('.grep input');
+  var status = root.querySelector('.filter-status');
+  var empty = root.querySelector('.empty');
+  var cat = 'all';
+  function apply() {
+    var q = input ? input.value.trim().toLowerCase() : '';
+    var shown = 0;
+    rows.forEach(function (r) {
+      var cats = (r.dataset.cats || '').split('|');
+      var ok = (cat === 'all' || cats.indexOf(cat) !== -1) && (!q || r.dataset.search.indexOf(q) !== -1);
+      r.hidden = !ok;
+      if (ok) shown++;
+    });
+    root.querySelectorAll('.bgroup').forEach(function (g) {
+      g.hidden = !g.querySelector('.brow:not([hidden])');
+    });
+    buttons.forEach(function (b) {
+      var on = b.dataset.cat === cat;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on);
+    });
+    if (status) {
+      status.hidden = cat === 'all';
+      var label = status.querySelector('.fs-cat');
+      var named = root.querySelector('[data-tag="' + cat + '"]');
+      if (label) label.textContent = named ? named.textContent : cat;
+    }
+    if (empty) empty.hidden = shown > 0;
+  }
+  function setCat(c) {
+    cat = c || 'all';
+    if (cat === 'all') history.replaceState(null, '', location.pathname);
+    else history.replaceState(null, '', '#category=' + encodeURIComponent(cat));
+    apply();
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { setCat(b.dataset.cat); }); });
+  root.querySelectorAll('[data-tag]').forEach(function (t) {
+    t.addEventListener('click', function (e) { e.preventDefault(); setCat(t.dataset.tag); window.scrollTo({ top: root.offsetTop - 80, behavior: 'smooth' }); });
+  });
+  root.querySelectorAll('.fs-clear').forEach(function (c) { c.addEventListener('click', function () { setCat('all'); }); });
+  if (input) input.addEventListener('input', apply);
+  function fromHash() {
+    var m = location.hash.match(/category=([^&]+)/);
+    if (m) { cat = decodeURIComponent(m[1]).toLowerCase(); apply(); }
+  }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+  apply();
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

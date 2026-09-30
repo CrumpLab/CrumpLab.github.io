@@ -1,0 +1,9 @@
+<%
+  var open = items.filter(function (b) { return b.source; }).length;
+  var cc = items.filter(function (b) { return b.license; }).length;
+%>
+<div class="stats-line">
+<span><b><%- items.length %></b> books &amp; resources</span>
+<span><b><%- cc %></b> creative-commons licensed</span>
+<span><b><%- open %></b> with source on GitHub</span>
+</div>

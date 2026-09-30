@@ -1,0 +1,101 @@
+/* Fun page (Fun.qmd): the banner hero, then a compact directory of the
+   items in listings/fun.yaml. Builds on home/home.css (fonts, colours,
+   cards) and people-page/people.css (banner hero, counts). */
+
+.home .frow {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.home .frow-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #15161b;
+}
+
+.home .frow-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home .frow-name {
+  font-size: 17px;
+  font-weight: 650;
+  margin-bottom: 2px;
+}
+
+.home .frow-name a:hover {
+  color: var(--accent);
+}
+
+.home .frow-desc {
+  font-size: 14.5px;
+  color: #2c3039;
+  line-height: 1.55;
+}
+
+.home .frow-desc a {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+  word-break: break-word;
+}
+
+.home .frow-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--faint);
+}
+
+.home a.pchip {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  background: #f7f7f9;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.home .pchip::before {
+  content: "[ ";
+  color: var(--faint);
+}
+
+.home .pchip::after {
+  content: " ]";
+  color: var(--faint);
+}
+
+.home .pchip:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .home .frow {
+    grid-template-columns: 56px minmax(0, 1fr);
+  }
+
+  .home .frow-thumb {
+    width: 56px;
+    height: 56px;
+  }
+
+  .home .frow-chips {
+    grid-column: 2;
+  }
+}

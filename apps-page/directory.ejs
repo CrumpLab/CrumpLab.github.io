@@ -1,0 +1,69 @@
+<%
+  var chipsFor = function (a) {
+    var main = /github\.com/.test(a.url) ? "source" : /shinyapps\.io/.test(a.url) ? "app" : "site";
+    var out = [[main, a.url]];
+    (a.links || []).forEach(function (l) {
+      var same = out.filter(function (c) { return c[1].replace(/\/$/, "") === l.url.replace(/\/$/, ""); })[0];
+      if (same) same[0] = l.label; else out.push([l.label, l.url]);
+    });
+    return out.map(function (c) { return "<a class=\"pchip\" href=\"" + c[1] + "\">" + c[0] + "</a>"; }).join("");
+  };
+  var glyph = { "Audio Plugins": "~ ∿ ~", "R Packages": "{ R }", "Shiny Apps": "app()", "R Markdown templates": ".Rmd" };
+  var thumb = function (a) {
+    return a.image ? "<img src=\"" + a.image + "\" alt=\"\" loading=\"lazy\">" : "<div class=\"glyph-tile\">" + (glyph[a.category] || "{ }") + "</div>";
+  };
+  var desc = function (a) {
+    var d = a.about || [];
+    if (typeof d === "string") d = [d];
+    return d.map(function (p) { return "<p>" + p + "</p>"; }).join("") + (a.notes || []).map(function (n) { return "<p class=\"anote\">" + n + "</p>"; }).join("");
+  };
+  var lc = function (c) { return c.split(" ").map(function (w) { return w === "R" ? w : w.toLowerCase(); }).join(" "); };
+  var slug = function (s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); };
+  var cats = [];
+  items.forEach(function (a) { if (cats.indexOf(a.category) === -1) cats.push(a.category); });
+  var inCat = function (c) { return items.filter(function (a) { return a.category === c; }); };
+%>
+<div class="card c-blue app-directory">
+<div class="card-head"><p><span class="card-label">┌─ software</span><span class="count"><%- items.length %></span></p></div>
+<div class="tools">
+<div class="filters" role="group" aria-label="Filter by type">
+<button type="button" class="filter active" data-cat="all" aria-pressed="true">all <span><%- items.length %></span></button>
+<% cats.forEach(function (c) { %><button type="button" class="filter" data-cat="<%- slug(c) %>" aria-pressed="false"><%- lc(c) %> <span><%- inCat(c).length %></span></button><% }); %>
+</div>
+<label class="grep"><span>$ grep</span><input type="search" placeholder="name or description" aria-label="Search software"></label>
+</div>
+<% items.forEach(function (a) { %>
+<div class="arow" data-cat="<%- slug(a.category) %>" data-search="<%- (a.name + ' ' + (a.tagline || '') + ' ' + [].concat(a.about || []).join(' ')).toLowerCase().replace(/<[^>]+>/g, '') %>">
+<div class="arow-thumb"><a href="<%- a.url %>"><%= thumb(a) %></a></div>
+<div class="arow-main">
+<div class="arow-name"><a href="<%- a.url %>"><%- a.name %></a><span class="lvl"><%- lc(a.category) %></span></div>
+<% if (a.tagline) { %><div class="app-tagline"><%- a.tagline %></div><% } %>
+<div class="app-desc"><%= desc(a) %></div>
+</div>
+<div class="arow-chips"><%= chipsFor(a) %></div>
+</div>
+<% }); %>
+<p class="empty" hidden>No matches.</p>
+</div>
+<script>
+document.querySelectorAll('.app-directory').forEach(function (card) {
+  var buttons = card.querySelectorAll('.filter'), input = card.querySelector('.grep input');
+  var rows = card.querySelectorAll('.arow'), empty = card.querySelector('.empty'), cat = 'all';
+  function apply() {
+    var q = input.value.trim().toLowerCase(), shown = 0;
+    rows.forEach(function (r) {
+      var ok = (cat === 'all' || r.dataset.cat === cat) && (!q || r.dataset.search.indexOf(q) !== -1);
+      r.hidden = !ok; if (ok) shown++;
+    });
+    empty.hidden = shown > 0;
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      cat = b.dataset.cat;
+      buttons.forEach(function (x) { var on = x === b; x.classList.toggle('active', on); x.setAttribute('aria-pressed', on); });
+      apply();
+    });
+  });
+  input.addEventListener('input', apply);
+});
+</script>

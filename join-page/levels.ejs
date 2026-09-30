@@ -1,0 +1,9 @@
+<%
+  var n = function (lvl) { return items.filter(function (a) { return a.level === lvl; }).length; };
+  var rows = [["undergraduate", n("undergraduate")], ["master’s", n("masters")], ["doctoral", n("doctoral")], ["postdoctoral", n("postdoc")]];
+%>
+<div class="levels">
+<% rows.forEach(function (r, i) { %>
+<div class="level-row"><span class="sbranch"><%- i === rows.length - 1 ? "└─" : "├─" %></span><span class="lname"><%- r[0] %></span><span class="lcount"><%- r[1] %></span></div>
+<% }); %>
+</div>

@@ -1,22 +1,40 @@
 ---
 title: "Fun"
 description: "Some links to extra-curricular fun stuff like music and visual creations."
-listing:
-  contents: 
-    - listings/fun.yaml
-  id: fun-list
-  sort: "order"
-  type: default
-  template: listings/card-list.ejs
-  categories: false
-  image-align: 'right'
-  image-height: '100%'
-format:
-  html:
-   page-layout: full
-banner: images/fun_banner.jpg
 image: images/fun_banner.jpg
+toc: false
+hide-title-block: true
+page-layout: custom
+css:
+  - home/home.css
+  - people-page/people.css
+  - fun-page/fun.css
+listing:
+  - id: fun
+    contents: listings/fun.yaml
+    sort: false
+    template: fun-page/directory.ejs
 ---
 
-::: {#fun-list}
+:::::: {.fp .home .people .fun}
+
+::::: people-hero
+![](images/fun_banner.jpg){.hero-banner fig-alt="Fun"}
+
+::: hero-body
+[\~/crumplab/fun]{.fp-kicker}
+
+```{=html}
+<h1 class="visually-hidden">Fun</h1>
+```
+
+::: fp-lead
+Some links to extra-curricular fun stuff like music and visual creations.
 :::
+:::
+:::::
+
+::: {#fun}
+:::
+
+::::::

@@ -37,6 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -74,6 +76,36 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-levels .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-level','listing-name','listing-url','listing-years','listing-now','listing-projects','listing-details','listing-role',{ data: ['index'] },{ data: ['categories'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-level","listing-name","listing-url","listing-years","listing-now","listing-projects","listing-details","listing-role"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-levels'] = new List('listing-levels', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPGGT4QZ8Q"></script>
 
 <script type="text/javascript">
@@ -84,7 +116,39 @@ gtag('js', new Date());
 gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="home/home.css">
+<link rel="stylesheet" href="people-page/people.css">
+<link rel="stylesheet" href="join-page/join.css">
 <meta property="og:title" content="Join – crumplab">
 <meta property="og:description" content="Interested in joining the lab? Check this page out.">
 <meta property="og:image" content="https://crumplab.com/images/opportunities_banner.jpg">
@@ -95,7 +159,7 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -173,23 +237,78 @@ gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block page-banner">
-<h1 class="title visually-hidden display-7">Join</h1>
-<p class="page-banner-image"><img src="images/opportunities_banner.jpg" alt=""></p>
-</header>
 
 
 
-<p>Dr.&nbsp;Crump has mentored students interested in cognition at all levels, including <a href="https://crumplab.com/People.html">undergraduate, master’s, doctoral, and postdoctoral researchers</a>. There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr.&nbsp;Crump is serving a three year term as Department Chair.</p>
+
+<div class="fp home people join">
+<div class="people-hero">
+<p><img src="images/opportunities_banner.jpg" class="hero-banner img-fluid" alt="Join the lab"></p>
+<div class="hero-body">
+<p><span class="fp-kicker">~/crumplab/join</span></p>
+<h1 class="visually-hidden">Join</h1>
+<div class="fp-lead">
+<p>Interested in joining the lab? Check this page out.</p>
+</div>
+</div>
+</div>
+<div class="terminal" role="img" aria-label="Lab status: limited openings until 2027">
+<div class="tbar"><span class="dots">● ● ●</span><span>join.txt</span></div>
+<pre><span class="prompt">$</span> cat join.txt
+<span class="k">lab     </span> computational cognition lab
+<span class="k">status  </span> limited openings
+<span class="k">until   </span> 2027
+<span class="k">why     </span> Dr. Crump is serving a three year term as Department Chair
+<span class="k">contact </span> <a href="mailto:mcrump@brooklyn.cuny.edu">mcrump@brooklyn.cuny.edu</a>
+<span class="prompt">$</span> <span class="cursor">█</span></pre>
+</div>
+<div class="bento">
+<div id="status" class="card span-8 plain c-pink status-card">
+<div class="card-head">
+<p><span class="card-label">┌─ status · limited openings 2024–2027</span></p>
+</div>
+<p>Dr.&nbsp;Crump has mentored students interested in cognition at all levels, including <a href="./People.html">undergraduate, master’s, doctoral, and postdoctoral researchers</a>. There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr.&nbsp;Crump is serving a three year term as Department Chair.</p>
+</div>
+<div id="mentored" class="card span-4 c-blue">
+<div class="card-head">
+<p><span class="card-label">┌─ mentored</span> <a href="./People.html" class="fp-more">former lab members →</a></p>
+</div>
+<div id="listing-levels" class="quarto-listing quarto-listing-container-custom">
+<div class="levels">
+<div class="level-row">
+<span class="sbranch">├─</span><span class="lname">undergraduate</span><span class="lcount">24</span>
+</div>
+<div class="level-row">
+<span class="sbranch">├─</span><span class="lname">master’s</span><span class="lcount">2</span>
+</div>
+<div class="level-row">
+<span class="sbranch">├─</span><span class="lname">doctoral</span><span class="lcount">3</span>
+</div>
+<div class="level-row">
+<span class="sbranch">└─</span><span class="lname">postdoctoral</span><span class="lcount">1</span>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="levels-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+</div>
+<div id="contact" class="card span-12 c-green contact-card">
+<div class="card-head">
+<p><span class="card-label">┌─ contact</span></p>
+</div>
+<div class="contact-row">
+<p><a href="./people/matt_crump.html">Matthew Crump</a>, Professor, <a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php">Department of Psychology</a>, Brooklyn College of CUNY</p>
+<p><a href="mailto:mcrump@brooklyn.cuny.edu" class="email-chip">mcrump@brooklyn.cuny.edu</a></p>
+</div>
+</div>
+</div>
+</div>
 <!--
 
 ## Undergraduate students
@@ -256,7 +375,8 @@ Email your R-script to Dr. Crump (mcrump\@brooklyn.cuny.edu) and request a time 
 
 
 
-</main> <!-- /main -->
+
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

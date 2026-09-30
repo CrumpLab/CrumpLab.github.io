@@ -1,26 +1,47 @@
 ---
 title: "Courses"
 description: "A list of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. Many of them include freely shared course materials."
-listing:
-  - id: past-courses
-    contents: 
-    - listings/courses.yaml
-    sort: "order"
-    type: default
-    categories: false
-    image-align: 'right'
-    image-height: '100%'
-    template: listings/card-list.ejs
-format:
-  html:
-    page-layout: full
-banner: images/courses_banner.jpg
 image: images/courses_banner.jpg
+toc: false
+hide-title-block: true
+page-layout: custom
+css:
+  - home/home.css
+  - people-page/people.css
+  - courses-page/courses.css
+listing:
+  - id: stats
+    contents: listings/courses.yaml
+    sort: false
+    template: courses-page/stats.ejs
+  - id: courses
+    contents: listings/courses.yaml
+    sort: false
+    template: courses-page/levels.ejs
 ---
 
+:::::: {.fp .home .people .courses}
+
+::::: people-hero
+![](images/courses_banner.jpg){.hero-banner fig-alt="Courses"}
+
+::: hero-body
+[\~/crumplab/courses]{.fp-kicker}
+
+```{=html}
+<h1 class="visually-hidden">Courses</h1>
+```
+
+::: fp-lead
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.
-
-## Past Courses
-
-::: {#past-courses}
 :::
+
+::: {#stats}
+:::
+:::
+:::::
+
+::: {#courses}
+:::
+
+::::::

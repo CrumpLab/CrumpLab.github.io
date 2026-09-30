@@ -1,0 +1,126 @@
+# Software shown on the Apps page, in page order.
+# Fields: category (section heading), name, url, image (optional),
+# tagline, about (list of paragraphs; HTML allowed), links (label + url),
+# notes. Link labels: manual, source, app, osf, link.
+
+- category: Audio Plugins
+  name: MINERVA Space Echo
+  url: https://www.crumplab.com/MinervaSpaceEcho/
+  image: images/minervaspaceecho.png
+  about:
+  - An experimental audio effect (AU / VST3 for macOS) that treats Hintzman's MINERVA II multiple-trace memory model as a tape echo.
+  links:
+  - label: manual
+    url: https://www.crumplab.com/MinervaSpaceEcho/
+  - label: source
+    url: https://github.com/CrumpLab/MinervaSpaceEcho
+- category: Audio Plugins
+  name: PCASynth
+  url: https://github.com/CrumpLab/PCASynth
+  image: images/pcasynth.png
+  about:
+  - An experimental synthesizer (VST3 for macOS) built on a principal components analysis of wav files.
+  links:
+  - label: source
+    url: https://github.com/CrumpLab/PCASynth
+- category: R Packages
+  name: midiblender
+  url: https://www.crumplab.com/midiblender/
+  image: images/midiblender.jpg
+  tagline: 'midiblender: Experiments in genRative MIDI mangling'
+  about:
+  - 'This is the beginnings of an #rstats package for experimental mangling of #MIDI files.'
+- category: R Packages
+  name: gptaddin
+  url: https://crumplab.github.io/gptaddin/
+  image: images/gptaddin.png
+  about:
+  - Addins and shiny app for sending text to LLMs at OpenAI. The addins are focused on writing assistance tools. The shiny app has a grammar checker. This is an experimental package for personal use that may be helpful as a reference for others to build their own similar tools.
+- category: R Packages
+  name: vertical
+  url: https://crumplab.github.io/vertical/
+  image: images/vertical.png
+  about:
+  - R-studio project template and workflow for sharing psychological research projects in the form of a website.
+- category: R Packages
+  name: RsemanticLibrarian
+  url: https://crumplab.github.io/RsemanticLibrarian/
+  image: images/sl_hex.png
+  about:
+  - R functions for creating semantic librarians, a tool for vectorizing and visualizing semantic spaces from text
+- category: R Packages
+  name: jspsychr
+  url: https://crumplab.github.io/jspsychr/
+  image: images/jspsychr.png
+  about:
+  - Write and run jspsych experiments using R studio.
+- category: R Packages
+  name: playjareyesores
+  url: https://crumplab.github.io/playjareyesores/
+  image: images/playjareyesores.png
+  about:
+  - Functions for detecting textual overlap (e.g., possible plagiarism) between documents
+- category: R Packages
+  name: conflictPower
+  url: https://crumplab.github.io/conflictPower/
+  image: images/ConflictPower.png
+  about:
+  - Monte-carlo based power analysis for cognitive control designs.
+- category: R Packages
+  name: crumplabr
+  url: https://github.com/CrumpLab/crumplabr
+  about:
+  - A few functions used around the lab. Contains functions for the Van Selst and Jolicoeur outlier procedure.
+- category: Shiny Apps
+  name: semanticlibrarian.com
+  url: https://www.semanticlibrarian.com/
+  about:
+  - A semantic search engine for the APA abstract database (most of the Experimental journals from 1890s to 2016), formerly known as ATHENA.
+  - We (Harinder Aujla, Randy Jamieson, and Matthew Crump) use semantic vectors from BEAGLE (Jones & Mewhort, 2007) to compute the similarity between abstracts, and authors, and authors and abstracts.
+  links:
+  - label: app
+    url: https://crumplab.shinyapps.io/SemanticLibrarian/
+  - label: source
+    url: https://github.com/CrumpLab/SemanticLibrarian
+  - label: osf
+    url: https://osf.io/wfcmg/
+  notes:
+  - 'Publication: In press at Behavioral Research Methods.'
+- category: Shiny Apps
+  name: hypothesis_explorer
+  url: hypothesis_explorer
+  about:
+  - A Shiny App for viewing annotations from the Hypothes.is database. Need to download and run locally.
+  links:
+  - label: source
+    url: https://github.com/CrumpLab/hypothesis_explorer
+- category: Shiny Apps
+  name: indTtest
+  url: https://crumplab.shinyapps.io/indTtest/
+  about:
+  - An independent samples t-test simulator.
+- category: Shiny Apps
+  name: pairedTtest
+  url: https://crumplab.shinyapps.io/pairedTtest/
+  about:
+  - An paired samples t-test simulator.
+- category: Shiny Apps
+  name: simpleexperimentsim
+  url: https://crumplab.shinyapps.io/simpleexperimentsim/
+  about:
+  - A simple experiment simulator with monte-carlo power analysis
+- category: R Markdown templates
+  name: NSFrmarkdown
+  url: https://github.com/CrumpLab/NSFrmarkdown
+  about:
+  - An R markdown template for NSF grants
+- category: R Markdown templates
+  name: LabJournalWebsite
+  url: https://github.com/CrumpLab/LabJournalWebsite
+  about:
+  - Simple template for an R Markdown Website
+- category: R Markdown templates
+  name: rmpatternlanguage
+  url: https://github.com/CrumpLab/rmpatternlanguage
+  about:
+  - A bookdown theme reproducing the style of "A Pattern Language".

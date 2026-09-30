@@ -8,6 +8,7 @@ hide-title-block: true
 page-layout: custom
 code-copy: false
 css: home/home.css
+include-in-header: home/category-redirect.html
 execute:
   echo: false
 listing:

@@ -171,6 +171,14 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
 </script>
+<script>
+/* Posts' category tags link to the nearest listing that includes them,
+   which for blog/ is this home page. Send those links on to the Blog
+   page, whose index filters by category. */
+if (/^#category=/.test(window.location.hash)) {
+  window.location.replace('Blog.html' + window.location.hash);
+}
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>

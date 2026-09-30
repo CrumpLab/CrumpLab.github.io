@@ -1,0 +1,30 @@
+<%
+  var slug = function (t) { return 'book-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40); };
+  var short = function (u) { return u.replace(/^https?:\/\//, '').replace(/\/$/, ''); };
+%>
+<div class="card c-blue shelf-card">
+<div class="card-head"><p><span class="card-label">┌─ shelf</span><span class="count"><%- items.length %></span></p></div>
+<div class="shelf-row">
+<% items.forEach(function (b) { %>
+<a class="shelf-book" href="#<%- slug(b.title) %>" title="<%- b.title %>"><img src="<%- b.image %>" alt="" loading="lazy"></a>
+<% }); %>
+</div>
+</div>
+<% items.forEach(function (b, i) { %>
+<div class="card book <%- ['c-pink','c-violet','c-blue','c-green','c-yellow','c-orange'][i % 6] %>" id="<%- slug(b.title) %>">
+<div class="book-cover"><a href="<%- b.url %>"><img src="<%- b.image %>" alt="Cover of <%- b.title %>" loading="lazy"></a></div>
+<div class="book-main">
+<h2 class="book-title"><a href="<%- b.url %>"><%- b.title %></a></h2>
+<% if (b.tagline) { %><div class="book-tagline"><%= b.tagline %></div><% } %>
+<% if (b.description) { %><div class="book-desc"><%= b.description %></div><% } %>
+<% (b.credits || []).forEach(function (c) { %><div class="book-credit"><span class="k"><%- c.role %></span> <%- c.names %></div><% }); %>
+<% (b.notes || []).forEach(function (n) { %><div class="book-note"><%= n %></div><% }); %>
+</div>
+<div class="book-meta">
+<% if (b.built) { %><div class="m"><span class="k">built</span><%- b.built %></div><% } %>
+<% if (b.source) { %><div class="m"><span class="k">source</span><a href="<%- b.source %>"><%- short(b.source) %></a></div><% } %>
+<% if (b.license) { %><div class="m"><span class="k">license</span><a class="pchip" href="<%- b.license_url %>"><%- b.license %></a></div><% } %>
+<% if (b.citation) { %><div class="m cite"><span class="k">cite</span><%= b.citation %></div><% } %>
+</div>
+</div>
+<% }); %>
