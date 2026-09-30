@@ -14,23 +14,9 @@ listing:
 format:
   html:
     page-layout: full
+banner: images/people_banner.jpg
+image: images/people_banner.jpg
 ---
-
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-```
-
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/people_banner.jpg')
-```
 
 ## Lab Members
 

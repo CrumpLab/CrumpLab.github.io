@@ -4,23 +4,9 @@ description: "Open-educational textbooks and resources developed written by Matt
 format:
   html:
     page-layout: full
+banner: images/books_banner.jpg
+image: images/books_banner.jpg
 ---
-
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-```
-
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/books_banner.jpg')
-```
 
 These books were made using Quarto, or R Markdown and Bookdown. They are all free, open-source, and licensed on creative commons.
 
@@ -38,13 +24,7 @@ Crump, M. J. C. (2022, April 21). Instances of Cognition: Questions, Methods, Fi
 :::
 
 ::: {.column .pic width="30%"}
-<a href="https://www.crumplab.com/cognition/textbook/index.html">
-
-```{r cognitionTextbook, out.width=200, echo=F}
-knitr::include_graphics("images/2530_image.jpg")
-```
-
-</a>
+[![](images/2530_image.jpg){width="200px"}](https://www.crumplab.com/cognition/textbook/index.html)
 :::
 :::
 
@@ -62,13 +42,7 @@ Written in Rmarkdown, and compiled with the bookdown package. The source code is
 :::
 
 ::: {.column .pic width="30%"}
-<a href="https://crumplab.github.io/rstatsforpsych/">
-
-```{r rstatsTextbook, out.width=200, echo=F}
-knitr::include_graphics("images/RstatsCover.png")
-```
-
-</a>
+[![](images/RstatsCover.png){width="200px"}](https://crumplab.github.io/rstatsforpsych/)
 :::
 :::
 
@@ -86,13 +60,7 @@ Written in Rmarkdown, and compiled with the bookdown package. The source code is
 :::
 
 ::: {.column .pic width="30%"}
-<a href="https://crumplab.github.io/psyc7709_2019/book/docs/index.html">
-
-```{r rstudentbook, out.width=200, echo=F}
-knitr::include_graphics("images/ReproStudentBook.png")
-```
-
-</a>
+[![](images/ReproStudentBook.png){width="200px"}](https://crumplab.github.io/psyc7709_2019/book/docs/index.html)
 :::
 :::
 
@@ -113,13 +81,7 @@ Written in Rmarkdown, and compiled with the bookdown package. The source code is
 
 ::: {.column .pic width="30%"}
 
-<a href="https://crumplab.github.io/statistics/">
-
-```{r statsTextbook, out.width=200, echo=F}
-knitr::include_graphics("images/TextbookCover.png")
-```
-
-</a>
+[![](images/TextbookCover.png){width="200px"}](https://crumplab.github.io/statistics/)
 :::
 :::
 
@@ -144,13 +106,7 @@ Some of the labs are adapated from [Open Stats Lab](https://sites.trinity.edu/os
 
 ::: {.column .pic width="30%"}
 
-<a href="https://crumplab.github.io/statisticsLab/">
-
-```{r StatsLab, out.width=200, echo=F}
-knitr::include_graphics("images/LabmanualCover.png")
-```
-
-</a>
+[![](images/LabmanualCover.png){width="200px"}](https://crumplab.github.io/statisticsLab/)
 :::
 :::
 
@@ -173,13 +129,7 @@ A copiable course website for introductory statistics
 
 ::: {.column .pic width="30%"}
 
-<a href="https://crumplab.github.io/psyc3400/">
-
-```{r StatsWeb, out.width=200, echo=F}
-knitr::include_graphics("images/Psyc3400.png")
-```
-
-</a>
+[![](images/Psyc3400.png){width="200px"}](https://crumplab.github.io/psyc3400/)
 :::
 :::
 
@@ -197,13 +147,7 @@ knitr::include_graphics("images/Psyc3400.png")
 :::
 
 ::: {.column .pic width="30%"}
-<a href="https://crumplab.github.io/ResearchMethods/">
-
-```{r ResearchMethods, out.width=200, echo=F}
-knitr::include_graphics("images/ResearchMethods.png")
-```
-
-</a>
+[![](images/ResearchMethods.png){width="200px"}](https://crumplab.github.io/ResearchMethods/)
 :::
 :::
 
@@ -219,13 +163,7 @@ knitr::include_graphics("images/ResearchMethods.png")
 :::
 
 ::: {.column .pic width="30%"}
-<a href="https://crumplab.github.io/cognitivetechnologies/book/">
-
-```{r CogTech, out.width=200, echo=F}
-knitr::include_graphics("images/CogTech.png")
-```
-
-</a>
+[![](images/CogTech.png){width="200px"}](https://crumplab.github.io/cognitivetechnologies/book/)
 :::
 :::
 
@@ -245,13 +183,7 @@ Note this is a meta-book. The tutorial above is for you to read so you can downl
 :::
 
 ::: {.column .pic width="30%"}
-<a href="https://crumplab.github.io/OER_bookdown/">
-
-```{r OERs, out.width=200, echo=F}
-knitr::include_graphics("images/OER.png")
-```
-
-</a>
+[![](images/OER.png){width="200px"}](https://crumplab.github.io/OER_bookdown/)
 :::
 :::
 
@@ -269,12 +201,6 @@ knitr::include_graphics("images/OER.png")
 :::
 
 ::: {.column .pic width="30%"}
-<a href="https://crumplab.github.io/programmingforpsych/">
-
-```{r Programming, out.width=200, echo=F}
-knitr::include_graphics("images/Programming.png")
-```
-
-</a>
+[![](images/Programming.png){width="200px"}](https://crumplab.github.io/programmingforpsych/)
 :::
 :::

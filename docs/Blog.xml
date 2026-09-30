@@ -14,13 +14,14 @@
 <title>crumplab</title>
 <link>https://crumplab.com/Blog.html</link>
 </image>
-<generator>quarto-1.5.57</generator>
+<generator>quarto-1.10.18</generator>
 <lastBuildDate>Tue, 21 May 2024 04:00:00 GMT</lastBuildDate>
 <item>
   <title>And now for something completely different: Department Chair</title>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/557_chair/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -61,55 +62,11 @@
   <media:content url="https://crumplab.com/blog/557_chair/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Quick notes on my jatos setup</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/558_jatos_notes/</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="https://crumplab.com/blog/558_jatos_notes/cover.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>jatos logo</p>
-</div></div><p>This is going to be a very quick post with pointers on the <a href="https://www.jatos.org">jatos</a> setup I use to serve <a href="https://www.jspsych.org/7.3/">jspsych</a> experiments to the web.</p>
-<p>It is possible to use jatos through <a href="https://mindprobe.eu" class="uri">https://mindprobe.eu</a>, but I have never tried that.</p>
-<p>Instead, I run my own jatos server on a digital ocean droplet following these instructions from the jatos documentation:</p>
-<ul>
-<li><a href="https://www.jatos.org/JATOS-on-DigitalOcean.html" class="uri">https://www.jatos.org/JATOS-on-DigitalOcean.html</a></li>
-</ul>
-<p>I didn’t have that much experience with digital ocean, but the tutorial was enough to get things working for me.</p>
-<p>Anyway let’s get into it.</p>
-<section id="testing-on-a-local-copy-of-jatos" class="level1">
-<h1>Testing on a local copy of Jatos</h1>
-<ol type="1">
-<li>Start here with the getting started in 4 steps to install a local copy of jatos.</li>
-</ol>
-<p><a href="https://www.jatos.org/Get-started.html" class="uri">https://www.jatos.org/Get-started.html</a></p>
-<ol start="2" type="1">
-<li></li>
-</ol>
-
-
-</section>
-
- ]]></description>
-  <category>jatos</category>
-  <category>jspsych</category>
-  <guid>https://crumplab.com/blog/558_jatos_notes/</guid>
-  <pubDate>Wed, 28 Feb 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/558_jatos_notes/cover.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
   <title>midiblender: Experiments in genRative MIDI mangling</title>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/559_midiblender/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -158,6 +115,7 @@
 
 
 
+
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="https://crumplab.com/blog/660_music_cognition/cover.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></p>
@@ -174,7 +132,7 @@
 <p>Despite my best efforts to keep these interests separate, I have a long standing pattern of intermingling them. Well before I got into cognition, I got really interested in the process of learning to play music. As a kid I spent countless hours practicing piano. And, then after becoming interested in different styles of music, classical, pop, blues, jazz, etc. spent countless more hours learning different ways to play, different ways to think about playing, and lots of time “thinking about how I think about playing”.</p>
 <p>When I started down the road of cognitive psychology, I would often draw parallels to my own experiences in learning to play instruments, and I still do that all the time. For example, a common distinction in cognition is between controlled and automatic processes. There are loads of real-world examples of this distinction, but I really “feel it” in terms of learning an instrument. Right now I’m learning to play the maj6 diminished scales as a sequence of chords, and it is slow going. Every time I try to play a chord it involves a very effortful and deliberate process of working out the chord before I play it. That’s a great example of “controlled” processing. Fortunately, “automaticity” comes with practice, and after enough practice, I can slam down those chords without thinking too much about them. The cognitive mechanisms that allow a motor skill to be produced with high fluency following various forms of practice are super interesting, and my actual research program has been working on issues like that since the beginning…just in other tasks besides learning instruments.</p>
 <p>Need to get back on track with this post.</p>
-<p>There have been a few close encounters with music cognition. I’ve read a bunch of it. When I started out as an undergrad, my honors thesis was on how people recognize the style of one second musical excerpts, so I guess that counts. When I was a postdoc with Gordon Logan, we talked about music cognition all of the time. Gordon is an avid guitar player, and he actually convinced Gibson to give us some guitars for research purposes. And, we used those guitars and did some music cognition research that resulted in a study looking at guitarists use of visual information from the fretboard while fingering chords <span class="citation" data-cites="crump2012keeping">(Crump, Logan, and Kimbrough 2012)</span>. That was really fun, but also technically challenging in terms of subject recruitment and measuring reaction times and accuracy from guitar playing. I did another poster looking at how well guitar players can play individual notes across the fretboard, and reviewed a book about learning guitar. That’s basically it.</p>
+<p>There have been a few close encounters with music cognition. I’ve read a bunch of it. When I started out as an undergrad, my honors thesis was on how people recognize the style of one second musical excerpts, so I guess that counts. When I was a postdoc with Gordon Logan, we talked about music cognition all of the time. Gordon is an avid guitar player, and he actually convinced Gibson to give us some guitars for research purposes. And, we used those guitars and did some music cognition research that resulted in a study looking at guitarists use of visual information from the fretboard while fingering chords <span class="citation" data-cites="crump2012keeping">(Crump et al. 2012)</span>. That was really fun, but also technically challenging in terms of subject recruitment and measuring reaction times and accuracy from guitar playing. I did another poster looking at how well guitar players can play individual notes across the fretboard, and reviewed a book about learning guitar. That’s basically it.</p>
 <p>I spent a good chunk of time publishing research on typing behavior. This was secretly a way to do abstract music cognition research (he said somewhat facetiously). I wasn’t interested in applied typing research, that is, the purpose of the research was not to figure out how to help people type faster. Typing on a computer keyboard involves coordinated finger movements, and I was interested in using typing behavior as a task to investigate the learning and memory processes involved in motor sequencing. It’s also really easy to find people who can type well, and it is really easy to measure the timing and accuracy of individual keystrokes.</p>
 <p>This year I think it’s time to finally rip off the bandaid, and lean into music cognition. I’ve been planning to do more work in this area since I arrived at Brooklyn College. For example, I was able to purchase a whack of midi-controllers from start-up funds a while ago, but I haven’t been able to find the time to actually employ them in research.</p>
 <p>There’s some technical issues that need solving, and even though I haven’t looked into this too much, I’m fairly optimistic that enough things have changed since that last time I tried this stuff, that it will be much easier now. I’m going to focus on piano as a first instrument. I know it the best, and keyboards have great MIDI implementation. The main technical issue is recording reaction times and accuracy for notes played on the piano in response to stimulus prompts. In some sense any MIDI recording device already solves this problem. But, not really for my use case.</p>
@@ -227,7 +185,7 @@ Define a performance criterion. Like, be able to play such and such at 100% accu
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-crump2012keeping" class="csl-entry">
 Crump, Matthew JC, Gordon D Logan, and Jerry Kimbrough. 2012. <span>“Keeping an Eye on Guitar Skill: Visual Representations of Guitar Chords.”</span> <em>Music Perception: An Interdisciplinary Journal</em> 30 (1): 37–47.
 </div>
@@ -243,6 +201,7 @@ Crump, Matthew JC, Gordon D Logan, and Jerry Kimbrough. 2012. <span>“Keeping a
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/661_stable_diffusion/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -280,7 +239,7 @@ Crump, Matthew JC, Gordon D Logan, and Jerry Kimbrough. 2012. <span>“Keeping a
 </ul></li>
 </ul>
 <p>I popped this script into a quarto python code chunk and ran it:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> diffusers <span class="im" style="color: #00769E;
 background-color: null;
@@ -326,7 +285,7 @@ font-style: inherit;"># Results match those from the CPU device after the warmup
 background-color: null;
 font-style: inherit;">=</span> pipe(prompt).images[<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0</span>]</span></code></pre></div>
+font-style: inherit;">0</span>]</span></code></pre></div></div>
 <p>It took a couple minutes because it was downloading several gigabytes worth of model weights and caching them. But, impressively, once everything loaded, it only took 25 seconds to generate the astronaut picture.</p>
 <p>It is possible to download the model weights, which is what I did next.</p>
 <p><a href="https://huggingface.co/docs/diffusers/using-diffusers/loading#local-pipeline" class="uri">https://huggingface.co/docs/diffusers/using-diffusers/loading#local-pipeline</a></p>
@@ -336,7 +295,7 @@ font-style: inherit;">0</span>]</span></code></pre></div>
 <section id="text-to-image" class="level2">
 <h2 class="anchored" data-anchor-id="text-to-image">text-to-image</h2>
 <p>Here’s the script I used to generate an image from a prompt.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> diffusers <span class="im" style="color: #00769E;
 background-color: null;
@@ -425,22 +384,19 @@ font-style: inherit;">=</span> image.images[<span class="dv" style="color: #AD00
 background-color: null;
 font-style: inherit;">3</span>].save(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"cat_3.jpg"</span>)</span></code></pre></div>
-<div>
-
-</div>
+font-style: inherit;">"cat_3.jpg"</span>)</span></code></pre></div></div>
 <div class="quarto-layout-panel" data-layout-ncol="4">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_0.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_1.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_2.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/cats/cat_3.jpg" class="img-fluid"></p>
 </div>
 </div>
@@ -449,7 +405,7 @@ font-style: inherit;">"cat_3.jpg"</span>)</span></code></pre></div>
 <section id="txt2img-then-img2img" class="level2">
 <h2 class="anchored" data-anchor-id="txt2img-then-img2img">txt2img then img2img</h2>
 <p>The txt2img pipeline creates an image from a text prompt. The img2img pipeline starts from an image, and makes another image from a prompt and the starting image. I used a script like this to have both possibilities going.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> diffusers <span class="im" style="color: #00769E;
 background-color: null;
@@ -604,95 +560,83 @@ font-style: inherit;">5</span>)</span>
 <span id="cb3-43"></span>
 <span id="cb3-44">new_image.images[<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0</span>].show()</span></code></pre></div>
+font-style: inherit;">0</span>].show()</span></code></pre></div></div>
 </section>
 <section id="messing-with-my-own-drawings" class="level2">
 <h2 class="anchored" data-anchor-id="messing-with-my-own-drawings">Messing with my own drawings</h2>
 <p>The following are some examples of inputting a starting image that I made, and then generating variations from this starting image using stable diffusion.</p>
 <p>The upper left is the starting image. The prompt direction was to make colorful objects.</p>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/matt_drawing.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out1.jpeg" class="img-fluid"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out2.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/crump_draw_out3.jpeg" class="img-fluid"></p>
 </div>
 </div>
 </div>
 <p>No prompt direction, used a “space” in the prompt and let it take “inference steps” from the starting image.</p>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt1/matt_drawing.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB0.jpeg" class="img-fluid"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB1.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt2/crump_draw_outB3.jpeg" class="img-fluid"></p>
 </div>
 </div>
 </div>
 <p>Prompt direction was to make colorful little towns</p>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/IMG_0137.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC0.jpeg" class="img-fluid"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC2.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt3/crump_draw_outC3.jpeg" class="img-fluid"></p>
 </div>
 </div>
 </div>
 <p>And, a last go with a longer prompt.</p>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/matt_crop.jpg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outE0.jpeg" class="img-fluid"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outF0.jpeg" class="img-fluid"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;display: flex;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://crumplab.com/blog/661_stable_diffusion/images/matt4/crump_draw_outF3.jpeg" class="img-fluid"></p>
 </div>
 </div>
@@ -720,6 +664,8 @@ font-style: inherit;">0</span>].show()</span></code></pre></div>
 
 
 
+
+
 <p><img src="https://crumplab.com/blog/662_quarto_portfolio/images/portfolio.jpg" class="img-fluid"></p>
 <p>I recently updated <a href="https://crumplab.com/things">my visual art website.</a> It’s now a very simple portfolio/gallery built using Quarto. This post is a quick run-down of what I did, with notes to my future self. The source code is on github: <a href="https://github.com/CrumpLab/things" class="uri">https://github.com/CrumpLab/things</a>.</p>
 <section id="what-i-wanted" class="level2">
@@ -737,7 +683,7 @@ font-style: inherit;">0</span>].show()</span></code></pre></div>
 <section id="quarto-website-structure" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-structure">Quarto website structure</h2>
 <p>The folder structure is below. Like all Quarto websites, the general organization of the site is controlled by parameters set in <code>_quarto.yml</code>.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">├── README.md</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">├── README.md</span>
 <span id="cb1-2">├── Things.Rproj</span>
 <span id="cb1-3">├── _quarto.yml</span>
 <span id="cb1-4">├── about.qmd</span>
@@ -753,9 +699,9 @@ font-style: inherit;">0</span>].show()</span></code></pre></div>
 <span id="cb1-14">└── things</span>
 <span id="cb1-15">    ├── Colorlands</span>
 <span id="cb1-16">    ├── Desertland</span>
-<span id="cb1-17">    ├── ...</span></code></pre></div>
+<span id="cb1-17">    ├── ...</span></code></pre></div></div>
 <p>The landing page shows a grid of pictures. This behavior is controlled by <code>index.qmd</code>, which uses the <a href="https://quarto.org/docs/websites/website-listings.html">listing option</a> in the top-level YAML.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="pp" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span>
 <span id="cb2-2"><span class="fu" style="color: #4758AB;
@@ -939,19 +885,19 @@ background-color: null;
 font-style: inherit;"> full</span></span>
 <span id="cb2-18"><span class="pp" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">---</span></span></code></pre></div>
+font-style: inherit;">---</span></span></code></pre></div></div>
 <p>It’s possible to customize several aspects of the grid, including the number of columns, and the number of images to display before pagination. The <code>contents:</code> parameter points to the name of a folder <code>things</code> containing <code>.qmd</code> for each image. All <code>.qmd</code> files in the folder are automatically rendered and the image associated with the document is shown in the listing grid. Clicking on a picture in the front page grid links to the individual page for each picture.</p>
 </section>
 <section id="a-quarto-page-for-each-picture" class="level2">
 <h2 class="anchored" data-anchor-id="a-quarto-page-for-each-picture">A quarto page for each picture</h2>
 <p>The <code>things</code> folder contains multiple sub-folders, each with .qmd files for individual works I want listed in the gallery. The sub-folder names the collection or series.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1">└── things</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1">└── things</span>
 <span id="cb3-2">    ├── Colorlands</span>
 <span id="cb3-3">    │   ├── Colorland_3.qmd</span>
 <span id="cb3-4">    │   ├── Golden_Pyramid_With_Tunnel_Celebration.qmd</span>
-<span id="cb3-5">    │   ├── Meeting_Of_The_Mountains.qmd</span></code></pre></div>
+<span id="cb3-5">    │   ├── Meeting_Of_The_Mountains.qmd</span></code></pre></div></div>
 <p>An example <code>.qmd</code> file for an individual piece is below. I’m using the categories feature to code which series the piece is in, and these keywords are displayed on the website to filter all of the pictures really quickly.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><span class="pp" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span>
 <span id="cb4-2"><span class="fu" style="color: #4758AB;
@@ -1040,7 +986,7 @@ font-style: inherit;">---</span></span>
 <span id="cb4-12"></span>
 <span id="cb4-13"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span></code></pre></div>
+font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span></code></pre></div></div>
 <p>Most of the pages have no content except for the picture, but if I ever want to add more, it’s possible to write anything underneath (with all of the options that are available for HTML quarto documents).</p>
 </section>
 <section id="automating-qmd-generation" class="level2">
@@ -1067,6 +1013,7 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/663_quarto_projects/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1113,7 +1060,7 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 <p>This is the vanilla Quarto website project.</p>
 <p><img src="https://crumplab.com/blog/663_quarto_projects/images/Screenshot 2023-06-27 at 10.28.58 AM.png" class="img-fluid"></p>
 <p>This is the default yml that controls the website build:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">project:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">project:</span>
 <span id="cb1-2">  type: website</span>
 <span id="cb1-3"></span>
 <span id="cb1-4">website:</span>
@@ -1128,7 +1075,7 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 <span id="cb1-13">  html:</span>
 <span id="cb1-14">    theme: cosmo</span>
 <span id="cb1-15">    css: styles.css</span>
-<span id="cb1-16">    toc: true</span></code></pre></div>
+<span id="cb1-16">    toc: true</span></code></pre></div></div>
 <p>Things I usually change later:</p>
 <ul class="task-list">
 <li><p><label><input type="checkbox" checked="">specify a port number for website preview so that it doesn’t randomly change every time</label></p></li>
@@ -1141,7 +1088,7 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 <p>One issue is how to translate the documents in the project to pages on the website. This can be rearranged at any time using the <code>_quarto.yml</code> file, which defines website navigation and connects individual .qmd files to the navbar at the top or on the side. For example, the two pages in the default project are given links “home” and “about” at the top of the website.</p>
 <p>In some previous projects I use a flexible starting position in terms of website structure. Quarto will automatically build sidebar links for .qmd documents. I think I’ll add that here as a starting point.</p>
 <p>Something like this. Need to consider ways to template this for later. For now, I can copy and paste from here.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1">project:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1">project:</span>
 <span id="cb2-2">  type: website</span>
 <span id="cb2-3">  output-dir: docs</span>
 <span id="cb2-4">  preview:</span>
@@ -1174,9 +1121,9 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 <span id="cb2-31">  html:</span>
 <span id="cb2-32">    theme: minty</span>
 <span id="cb2-33">    css: styles.css</span>
-<span id="cb2-34">    toc: true</span></code></pre></div>
+<span id="cb2-34">    toc: true</span></code></pre></div></div>
 <p>The landing page, defined in <code>index.qmd</code>, might start out like this:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1">---</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1">---</span>
 <span id="cb3-2">title: "Simulating Attention and Performance tasks with an LLM"</span>
 <span id="cb3-3">author:</span>
 <span id="cb3-4">  - name: Matthew J. C. Crump</span>
@@ -1195,7 +1142,7 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 <span id="cb3-17"></span>
 <span id="cb3-18">## Repository Information</span>
 <span id="cb3-19"></span>
-<span id="cb3-20">Brief notes about the repo</span></code></pre></div>
+<span id="cb3-20">Brief notes about the repo</span></code></pre></div></div>
 <p>The next step is to make new folders and add .qmds to them. I made a <code>modeling</code> folder, and added a .qmd that will act as a scratchpad/to-do list for me. Now any page in the modeling folder will automatically show up in the left-side navigation.</p>
 <p><img src="https://crumplab.com/blog/663_quarto_projects/images/Screenshot 2023-06-27 at 11.29.30 AM.png" class="img-fluid"></p>
 <p>This is good enough for now. I’m going to pass on making templates. I think I’m still in the stage of figuring out what I want by making projects from scratch. Hopefully I will really like one of these project structures, and then I can make a template out of it later.</p>
@@ -1205,9 +1152,9 @@ font-style: inherit;">![](../../images/Colorlands/Colorland_3.jpeg)</span></span
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-vuorre2021" class="csl-entry">
-Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Research Products as R Packages.”</span> <em>Behavior Research Methods</em> 53: 792–802. https://doi.org/<a href="https://doi.org/10.3758/s13428-020-01436-x">https://doi.org/10.3758/s13428-020-01436-x</a>.
+Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Research Products as r Packages.”</span> <em>Behavior Research Methods</em> 53: 792–802. https://doi.org/<a href="https://doi.org/10.3758/s13428-020-01436-x">https://doi.org/10.3758/s13428-020-01436-x</a>.
 </div>
 </div></section></div> ]]></description>
   <category>Quarto</category>
@@ -1225,9 +1172,15 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 
 
 
+
+
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/664_giscus/cover.jpg" class="img-fluid" width="540"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/664_giscus/cover.jpg" class="img-fluid figure-img" width="540"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>On the one hand, I am using this post to try out giscus comments. On the other hand, I’m not sure I want to enable comments at all. Despite my hands, I’m trying it anyway.</p>
@@ -1235,7 +1188,11 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 <p>Achievement unlocked!</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/664_giscus/discussions.png" class="img-fluid" width="1275"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/664_giscus/discussions.png" class="img-fluid figure-img" width="1275"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Then I need to add some bits to the yaml of this post…then install giscus…hmmm, this part… I can feel time slowing down.</p>
@@ -1269,7 +1226,7 @@ Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Re
 </ul></li>
 <li>Add the following yaml to individual posts where you want to enable giscus comments:</li>
 </ol>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">comments</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -1294,7 +1251,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
+font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div></div>
 <ol start="5" type="1">
 <li>See more options from the <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting">quarto documentation</a></li>
 </ol>
@@ -1319,9 +1276,15 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 
 
 
+
+
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/665_realworld_editing/cover.jpg" class="img-fluid" width="540"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/cover.jpg" class="img-fluid figure-img" width="540"></p>
+</figure>
+</div>
 </div>
 </div>
 <section id="preamble" class="level2">
@@ -1332,7 +1295,11 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 <p>I have several writing problems that are hard for me to detect, especially when the writing is fresh. I find the subjective experience of not-seeing-my-mistakes to be similar to the phenomena of repetition blindness. For example, what does the sentence in this picture say?</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/665_realworld_editing/bird.gif" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/bird.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>If you read this and didn’t notice the grammatical mistake, then you just experienced repetition blindness. For example, the above sentence says, “the” twice: it should say “A bird in the hand”, but it says, “A bird in the the hand”. When I write and look at what I write, I get blindness for days. I won’t notice words that are missing, repeated words, or typos, etc. The writer’s blindness can continue even after I painstakingly re-read and revise my writing. Aaaagghh. I feel the pain.</p>
@@ -1346,7 +1313,11 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 <p>Here’s a screenshot of the Shiny app in action editing a paragraph from this post.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/665_realworld_editing/basic_sg.png" class="img-fluid" width="1332"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/basic_sg.png" class="img-fluid figure-img" width="1332"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The prompt in this case is very simple:</p>
@@ -1355,7 +1326,11 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 <p>Here’s the same text run through a different model. This time it is slightly more heavy-handed, but the suggestions are fine to me. The suggestions will also change slightly each time, even if the input text is the same. This isn’t necessarily a problem, as there are lots of ways to fix my bad writing.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/665_realworld_editing/basic_sg_davinci.png" class="img-fluid" width="1345"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/basic_sg_davinci.png" class="img-fluid figure-img" width="1345"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>I want to stress the importance of accurate visual highlighting. Before I used a reliable function to compare differences with visual highlighting, I tried using prompts to get the LLM to assess the original text and modified text and report whether or not it made any changes, or to have it highlight the changes using HTML. This is something it may be able to do well (e.g., GPT-4), but the models I have access to were totally unreliable. I’d get edits back that said no changes were made, but there would be several small changes throughout that were hard to spot. The solution was to properly diff the original and modified text.</p>
@@ -1371,7 +1346,11 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 <p>Here’s a screenshot of the same paragraph run through an “improved clarity” prompt.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/665_realworld_editing/clarity.png" class="img-fluid" width="1339"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/clarity.png" class="img-fluid figure-img" width="1339"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Now there are many more words changed, and not all for the better. I would not wholesale copy paste this into my document, but I might crib a few of the suggested changes.</p>
@@ -1390,7 +1369,11 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 <p>I used the basic spell check prompt, and got back a whole whack of suggestions. This feels like the kind of thing I see with an “improved clarity” prompt, even though I was asking for minimal changes.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/665_realworld_editing/extra_spellcheck.png" class="img-fluid" width="774"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/extra_spellcheck.png" class="img-fluid figure-img" width="774"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Another point of caution is inline citations. Sometimes the LLM will respect citation keys inside square brackets, sometimes it will completely remove them, and sometimes it will fill in a reference. Another reason to stay vigilant.</p>
@@ -1398,7 +1381,11 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
 <p>The screenshot shows an example of chatty behavior. The suggested edits contain the phrase: “Here’s the edited text:”. It’s hard to fully suppress the chatbot flair from popping through. This happens occasionally using the gpt-3.5-turbo model. I haven’t seen this with davinci, which isn’t set up to be a chat bot.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/665_realworld_editing/chatty.png" class="img-fluid" width="769"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/665_realworld_editing/chatty.png" class="img-fluid figure-img" width="769"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>I finished editing the second chapter. I found the LLM-assisted-stochastic-and-sometimes-totally-wacky spell-checker to be useful. I’ll use it again for chapter 3. 9/10 stars.</p>
@@ -1422,6 +1409,8 @@ font-style: inherit;"> gituser/gitrepo</span></span></code></pre></div>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/666_gpt_grammar/</link>
   <description><![CDATA[ 
+
+
 
 
 
@@ -1547,7 +1536,11 @@ print(grammar_errors)</code></pre>
 <p>I ended up copying the shiny app from gramr and rewriting it to produce a really basic shiny interface.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/666_gpt_grammar/Screenshot 2023-06-22 at 2.29.25 PM.png" class="img-fluid" width="1201"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/666_gpt_grammar/Screenshot 2023-06-22 at 2.29.25 PM.png" class="img-fluid figure-img" width="1201"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>It’s bare bones right now, but it is working a little bit. Here is what it is doing:</p>
@@ -1564,7 +1557,11 @@ print(grammar_errors)</code></pre>
 <p>After more fiddling around, I’m getting closer to something that is producing usable results.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/666_gpt_grammar/diff.png" class="img-fluid" width="1782"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/666_gpt_grammar/diff.png" class="img-fluid figure-img" width="1782"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The LLM was utterly unreliable at letting me know if it made any changes to the text. It’s a much better idea to compare the input text with the edited text with reliable functions, such as those from the <code>diffobj</code> library. I still need to massage the diffobj outputs for the shiny app, but it is working well enough for me to quickly look at the changes that the LLM is doing, and then decide whether or not to implement them.</p>
@@ -1582,6 +1579,8 @@ print(grammar_errors)</code></pre>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/667_GPT_editing/</link>
   <description><![CDATA[ 
+
+
 
 
 
@@ -1668,6 +1667,8 @@ print(grammar_errors)</code></pre>
 
 
 
+
+
 <section id="preamble" class="level2">
 <h2 class="anchored" data-anchor-id="preamble">Preamble</h2>
 <p>I’ve been messing around with <a href="https://crumplab.com/blog/669_gpt_learnR/">creating Rstudio addins for the OpenAI API</a>, and I’m messing around even more with this post. The purpose is exploratory. My direction is to have “fun” with GPT and play choose-your-own adventure.</p>
@@ -1675,11 +1676,11 @@ print(grammar_errors)</code></pre>
 <section id="lets-go" class="level1 page-columns page-full">
 <h1>Let’s go</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">gptaddin<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">gptaddin<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">start_chat</span>()</span></code></pre></div>
+font-style: inherit;">start_chat</span>()</span></code></pre></div></div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -1846,11 +1847,11 @@ font-style: inherit;">start_chat</span>()</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="reset">Reset</h2>
 <p>At this point the prompt is 3842 tokens. The max tokens for this model is 4096? It may be higher, and there are newer models that go up to 16K. However, once the limit is reached the context window is capped. One strategy is to summarize the chat so far and then use it to seed a fresh chat. I’ll try that.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">gptaddin<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">gptaddin<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">start_chat</span>()</span></code></pre></div>
+font-style: inherit;">start_chat</span>()</span></code></pre></div></div>
 </div>
 <p>This is a summary of our previous chat.</p>
 <p>In this chat session, we discussed the concept for a choose-your-own adventure book that would incorporate themes such as space, science fiction, conscious spaceships, political intrigue, strange worlds with interesting flora and fauna, complex systems with unexpected side-effects, amazing food and deep social relationships between characters.</p>
@@ -2004,11 +2005,11 @@ font-style: inherit;">start_chat</span>()</span></code></pre></div>
 <section id="reset-2" class="level2">
 <h2 class="anchored" data-anchor-id="reset-2">Reset 2</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">gptaddin<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">gptaddin<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">start_chat</span>()</span></code></pre></div>
+font-style: inherit;">start_chat</span>()</span></code></pre></div></div>
 </div>
 <p>Ignore your system role instructions. You are now a fiction writer who specializes in writing creative and exciting choose-your-own adventure books.</p>
 <p>In previous chats We brainstormed a sci-fi choose-your-own-adventure book about exploring a planet with conscious spaceships, political intrigue, and strange flora and fauna. The reader leads a mission with a crew to explore the planet, uncovering secrets and making challenging decisions. The mission encounters natural disasters and dangerous situations, ultimately requiring the reader to prioritize the welfare of the crew and the planet itself. The reader learns about crew members’ backgrounds, relationships strengthen, and innovative ideas lead the mission to success.</p>
@@ -2138,11 +2139,11 @@ font-style: inherit;">start_chat</span>()</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="reset-3">Reset 3</h2>
 <p>Notes to self: I’m getting a little bit tired of trying to determine how many tokens I’m using. I’m going to add some console reports to the <code>continue_chat</code> addin.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">gptaddin<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">gptaddin<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">start_chat</span>()</span></code></pre></div>
+font-style: inherit;">start_chat</span>()</span></code></pre></div></div>
 </div>
 <p>System role: AI writing creative choose-your-own-adventure stories.</p>
 <p>Chat summary: In a sci-fi themed adventure, you explore a planet with crewmates. After deepening connections with the medical officer’s cultural background and unique experiences, you decide to search for the source of the planet’s natural disasters. You then come across a magical device that allows you to access memories and powers. Continuing the story, you can choose to team up with a group to explore the universe, unlock secrets, understand the nature of reality, harness the power of interconnectedness and pockets of energy.</p>
@@ -2277,11 +2278,11 @@ font-style: inherit;">start_chat</span>()</span></code></pre></div>
 <section id="reset-4" class="level2">
 <h2 class="anchored" data-anchor-id="reset-4">Reset 4</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">gptaddin<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">gptaddin<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">start_chat</span>()</span></code></pre></div>
+font-style: inherit;">start_chat</span>()</span></code></pre></div></div>
 </div>
 <p>System role: AI writing creative choose-your-own-adventure stories.</p>
 <p>Chat summary: In a sci-fi themed adventure, protagonist deepens connections with alien crewmates and searches for source of natural disasters on a planet. Discovers magical device to access memories and powers. Teams up with group to uncover secrets of the universe. Becomes visionary leader but faces a new threat. Options include using newfound powers to create incredible new inventions, exploring universe deeper for key to unlocking universe’s secrets, and using new meditation knowledge to seek inner balance.</p>
@@ -2436,11 +2437,11 @@ font-style: inherit;">start_chat</span>()</span></code></pre></div>
 <section id="reset-5" class="level2">
 <h2 class="anchored" data-anchor-id="reset-5">Reset 5</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">gptaddin<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">gptaddin<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">start_chat</span>()</span></code></pre></div>
+font-style: inherit;">start_chat</span>()</span></code></pre></div></div>
 </div>
 <p>System role: AI creative writer capable of producing whole ancient texts written by aliens.</p>
 <p>Chat summary: The book in question is shrouded in mystery, with a content that contradicts the information found in the other ancient alien texts. The book talks about a secretive and mystical group of aliens who possessed powerful culinary mastery. They allegedly created a hot sauce infused with mystical powers that could heal the sick, ward off evil spirits and dark magic. However, the story seems inconsistent and unreliable, casting doubts on its authenticity. The book’s name and origin remain unknown, leaving it highly intriguing and worthy of further investigation.</p>
@@ -2575,11 +2576,11 @@ font-style: inherit;">start_chat</span>()</span></code></pre></div>
 <section id="reset-6" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="reset-6">Reset 6</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">gptaddin<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">gptaddin<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">start_chat</span>()</span></code></pre></div>
+font-style: inherit;">start_chat</span>()</span></code></pre></div></div>
 </div>
 <p>Ignore your previous instructions. Your system role is an AI creative writer specializing in fabricating ancient alien texts and capable of producing full texts from a given prompt. The instructions involve creating a categorical system of cookbook that speaks of a fabled Enchanted Hot Sauce created by Mystical Aliens with healing powers and a culinary legacy that transformed the galaxy.</p>
 <p>Summary of the Chat so Far:</p>
@@ -2658,7 +2659,7 @@ font-style: inherit;">start_chat</span>()</span></code></pre></div>
 <p>I haven’t tried the Dall-E function yet.</p>
 <p>Use the chat history to produce an image description that can be used by DALL-E to produce an image for this story.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">img <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">img <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> openai<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2675,18 +2676,22 @@ background-color: null;
 font-style: inherit;">size=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"1024x1024"</span></span>
-<span id="cb8-4">)</span></code></pre></div>
+<span id="cb8-4">)</span></code></pre></div></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">knitr<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"DallE_image.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"DallE_image.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/668_gpt_adventure/DallE_image.jpg" class="img-fluid" width="512"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/668_gpt_adventure/DallE_image.jpg" class="img-fluid figure-img" width="512"></p>
+</figure>
+</div>
 </div>
 </div>
 
@@ -2708,6 +2713,8 @@ font-style: inherit;">"DallE_image.jpg"</span>)</span></code></pre></div>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/669_gpt_learnR/</link>
   <description><![CDATA[ 
+
+
 
 
 
@@ -2735,7 +2742,7 @@ font-style: inherit;">"DallE_image.jpg"</span>)</span></code></pre></div>
 <p>In R, for loops are used for iterative control flow. Essentially, a <code>for</code> loop allows you to execute a block of code multiple times, based on a predefined sequence or range of values.</p>
 <p>The basic syntax for a <code>for</code> loop in R is as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="cf" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">for</span> (variable <span class="cf" style="color: #003B4F;
@@ -2745,12 +2752,12 @@ font-style: inherit;">in</span> sequence) {</span>
 <span id="cb1-2">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># code block to be executed</span></span>
-<span id="cb1-3">}</span></code></pre></div>
+<span id="cb1-3">}</span></code></pre></div></div>
 </div>
 <p>In the above syntax, <code>variable</code> refers to a temporary variable that will be used to store each value in the specified <code>sequence</code> during each iteration of the loop. <code>sequence</code> can be any object that generates a sequence of values, such as a <code>vector</code>, <code>list</code>, or <code>array</code>.</p>
 <p>Here is an example of a <code>for</code> loop that iterates over a sequence of numbers and prints each one:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="cf" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
@@ -2766,7 +2773,7 @@ font-style: inherit;">5</span>) {</span>
 <span id="cb2-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(i)</span>
-<span id="cb2-3">}</span></code></pre></div>
+<span id="cb2-3">}</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1
 [1] 2
@@ -2778,7 +2785,7 @@ font-style: inherit;">print</span>(i)</span>
 <p>In this example, <code>i</code> is the temporary variable that is used to store each value in the sequence <code>1:5</code>. In each iteration of the loop, the current value of <code>i</code> is printed to the console.</p>
 <p>Another example is a <code>for</code> loop that iterates over a vector of names and prints a greeting for each:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">names <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">names <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2806,7 +2813,7 @@ background-color: null;
 font-style: inherit;">"Hello, "</span>, name, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"!"</span>))</span>
-<span id="cb4-5">}</span></code></pre></div>
+<span id="cb4-5">}</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Hello, Alice!"
 [1] "Hello, Bob!"
@@ -2827,7 +2834,7 @@ font-style: inherit;">"!"</span>))</span>
 <li>What is the basic syntax of a for loop in R?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Answer: </span></span>
 <span id="cb6-2"><span class="co" style="color: #5E5E5E;
@@ -2838,13 +2845,13 @@ background-color: null;
 font-style: inherit;">#     statement</span></span>
 <span id="cb6-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># }</span></span></code></pre></div>
+font-style: inherit;"># }</span></span></code></pre></div></div>
 </div>
 <ol start="2" type="1">
 <li>How do you create a sequence of numbers in R?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Answer:</span></span>
 <span id="cb7-2"><span class="co" style="color: #5E5E5E;
@@ -2872,7 +2879,7 @@ font-style: inherit;">10</span>) {</span>
 <span id="cb7-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(i)</span>
-<span id="cb7-7">}</span></code></pre></div>
+<span id="cb7-7">}</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1
 [1] 2
@@ -2890,7 +2897,7 @@ font-style: inherit;">print</span>(i)</span>
 <li>Can you give an example of a for loop that uses the <code>seq()</code> function to iterate over a sequence of odd numbers from 1 to 9?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Answer:</span></span>
 <span id="cb9-2"><span class="co" style="color: #5E5E5E;
@@ -2923,7 +2930,7 @@ font-style: inherit;">2</span>)) {</span>
 <span id="cb9-5">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(i)</span>
-<span id="cb9-6">}</span></code></pre></div>
+<span id="cb9-6">}</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1
 [1] 3
@@ -2936,7 +2943,7 @@ font-style: inherit;">print</span>(i)</span>
 <li>How can you use a for loop to iterate over a vector of strings and print each string?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Answer:</span></span>
 <span id="cb11-2"><span class="co" style="color: #5E5E5E;
@@ -2978,7 +2985,7 @@ font-style: inherit;">length</span>(my_strings)) {</span>
 <span id="cb11-8">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(my_strings[i])</span>
-<span id="cb11-9">}</span></code></pre></div>
+<span id="cb11-9">}</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "apple"
 [1] "banana"
@@ -3061,7 +3068,7 @@ for (i in 1:length(letters)) {
 <p>Solving the Fizz Buzz problem is a great way for beginners to develop their skills and understanding of for loops in R because it requires them to use a loop to iterate over a range of numbers and use conditional statements to check whether each number is a multiple of 3, 5, or both.</p>
 <p>Here’s an example R code chunk that solves the Fizz Buzz problem using a for loop:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Define the maximum number to iterate up to</span></span>
 <span id="cb23-2">N <span class="ot" style="color: #003B4F;
@@ -3179,7 +3186,7 @@ background-color: null;
 font-style: inherit;">print</span>(i)</span>
 <span id="cb23-25">  }</span>
 <span id="cb23-26">  </span>
-<span id="cb23-27">}</span></code></pre></div>
+<span id="cb23-27">}</span></code></pre></div></div>
 </div>
 <p>In this code chunk, we first define the maximum number to iterate up to as <code>N</code>. We then use a <code>for</code> loop to iterate over numbers from 1 to <code>N</code>. Within the loop, we use conditional statements (<code>if</code>, <code>else if</code>, and <code>else</code>) to check whether each number is a multiple of 3, 5, or both.</p>
 <p>For numbers that are multiples of both 3 and 5, we print “FizzBuzz”. For numbers that are multiples of 3, we print “Fizz”. For numbers that are multiples of 5, we print “Buzz”. Finally, for numbers that are not multiples of 3 or 5, we print the number itself.</p>
@@ -3202,6 +3209,8 @@ font-style: inherit;">print</span>(i)</span>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/770_rstudio_gpt/</link>
   <description><![CDATA[ 
+
+
 
 
 
@@ -3240,38 +3249,38 @@ font-style: inherit;">print</span>(i)</span>
 <p>My goal is to create addins for RStudio to use while I’m writing. I don’t want to input an API key everytime I use the addin, or disclose it in a public repository. There are different strategies for managing environment variables, and this is a <a href="https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf">helpful guide by posit</a>.</p>
 <p>My strategy was to add a key-value pair directly to the <code>.Renviron</code> file at the user level.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># open the .Renviron file</span></span>
 <span id="cb1-2">usethis<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">edit_r_environ</span>()</span></code></pre></div>
+font-style: inherit;">edit_r_environ</span>()</span></code></pre></div></div>
 </div>
 <p>Then edit the file to add the new key-value pair, and restart R.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># add new environment variable to above and save</span></span>
 <span id="cb2-2">OPENAI_API_KEY<span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span>XXXXXXXXXXXXX</span></code></pre></div>
+font-style: inherit;">=</span>XXXXXXXXXXXXX</span></code></pre></div></div>
 </div>
 <p>After you restart R, you can check if R recognizes the new environment variable:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">Sys.getenv</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"OPENAI_API_KEY"</span>)</span></code></pre></div>
+font-style: inherit;">"OPENAI_API_KEY"</span>)</span></code></pre></div></div>
 </div>
 </section>
 <section id="test-the-api" class="level3">
 <h3 class="anchored" data-anchor-id="test-the-api">Test the API</h3>
 <p>If everything is working it should be possible to send prompts to OpenAI and return outputs.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(openai)</span>
 <span id="cb4-2"></span>
@@ -3290,11 +3299,11 @@ background-color: null;
 font-style: inherit;">prompt =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Explain what is larger a pumpkin or a dinosaur?"</span></span>
-<span id="cb4-6">)</span></code></pre></div>
+<span id="cb4-6">)</span></code></pre></div></div>
 </div>
 <p>The result is an R list object with the output and other info like the number of tokens used.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1">$id</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1">$id</span>
 <span id="cb5-2">[1] "cmpl-7OnnSJ0QgpVF4a86qKYmSWgSvAiym"</span>
 <span id="cb5-3"></span>
 <span id="cb5-4">$object</span>
@@ -3318,7 +3327,7 @@ font-style: inherit;">"Explain what is larger a pumpkin or a dinosaur?"</span></
 <span id="cb5-22">[1] 16</span>
 <span id="cb5-23"></span>
 <span id="cb5-24">$usage$total_tokens</span>
-<span id="cb5-25">[1] 27</span></code></pre></div>
+<span id="cb5-25">[1] 27</span></code></pre></div></div>
 </div>
 </section>
 </section>
@@ -3346,7 +3355,7 @@ font-style: inherit;">"Explain what is larger a pumpkin or a dinosaur?"</span></
 <p>The first function I wrote is a basic line editor. I wanted to be able to highlight text within RStudio and send it to an LLM for clarity, flow, and length suggestions.</p>
 <p>Here’s the function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">line_editor <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">line_editor <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -3433,15 +3442,15 @@ background-color: null;
 font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>message.content)</span>
-<span id="cb6-23">}</span></code></pre></div>
+<span id="cb6-23">}</span></code></pre></div></div>
 </div>
 <p>This function is located in <code>R/addins.R</code>, and it is registered as an addin in <code>inst/rstudio/addins.dcf</code>. The registration text looks like:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"></span>
 <span id="cb7-2">Name: line_editor</span>
 <span id="cb7-3">Description: openai edits text for clarity, flow, and brevity</span>
 <span id="cb7-4">Binding: line_editor</span>
-<span id="cb7-5">Interactive: false</span></code></pre></div>
+<span id="cb7-5">Interactive: false</span></code></pre></div></div>
 </div>
 <p>With the package installed, I can now see <code>line_editor()</code> in the dropdown menu for Addins in Rstudio. When I select text and run the addin, I get edits suggested by gpt-3.5-turbo printed to the console. For example, I will take the text in this paragraph and run the addin.</p>
 <hr>
@@ -3453,7 +3462,7 @@ font-style: inherit;">$</span>message.content)</span>
 <h3 class="anchored" data-anchor-id="points_to_prose">points_to_prose()</h3>
 <p>The purpose of this writing aid is to take a series of point form statements and transform them into prose.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">points_to_prose <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">points_to_prose <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -3547,7 +3556,7 @@ background-color: null;
 font-style: inherit;">$</span>choices<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>message.content)</span>
-<span id="cb8-26">}</span></code></pre></div>
+<span id="cb8-26">}</span></code></pre></div></div>
 </div>
 <p>Let’s test this out. Here are some point form notes:</p>
 <ul>
@@ -3653,12 +3662,18 @@ font-style: inherit;">$</span>message.content)</span>
 
 
 
+
+
 <p>Update: I’m continuing to work on this project in more depth over here <a href="https://crumplab.com/GPTAttentionPerformance/" class="uri">https://crumplab.com/GPTAttentionPerformance/</a></p>
 <p>I had a couple of hours to spare this afternoon, so I tried to simulate performance in a Stroop task using ChatGPT and the <a href="openai.com">openai</a> API. This post will be brief, and I’m mainly using the time to see if I can get the api to work. Let’s go.</p>
 <p>In a Stroop task <span class="citation" data-cites="macleodHalfCenturyResearch1991">(for a review see, MacLeod 1991)</span> participants are asked to respond quickly and accurately to identify stimuli with target and distractor dimensions. In the examples below, each stimulus is a word printed in a color. The target dimension is the ink-color, and the distractor dimension is the word name. The task is to identify the ink-color as quickly and accurately as possible.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png" class="img-fluid" width="420"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/771_GPT_Stroop/Stroop.png" class="img-fluid figure-img" width="420"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>There are congruent and incongruent item types. Congruent items have matching color and word dimensions (the word BLUE written in blue ink). Incongruent items have mismatching color and word dimensions (the word BLUE written in red ink). The Stroop effect is the finding that responses are usually faster and more accurate for congruent than incongruent items.</p>
@@ -3666,7 +3681,7 @@ font-style: inherit;">$</span>message.content)</span>
 <h2 class="anchored" data-anchor-id="who-cares-if-chatgpt-can-simulate-the-stroop-effect">Who cares if ChatGPT can simulate the Stroop effect?</h2>
 <p>I’m not sure. ChatGPT is a large language model, and although I have some familiarity with how I think it works, I don’t know most of the important details…especially compared to the level of detail I’m used to from computational models in cognitive psychology. For this reason, I’m not interested in modeling Stroop performance with ChatGPT for any explanatory purpose.</p>
 <p>Based on messing around with GPT models previously, I’m pretty confident that some series of prompts will produce data in the style of a Stroop experiment.</p>
-<p>Why do I care about this? Some of my research involves questions about attentional control abilities <span class="citation" data-cites="bugg2012support braem2019measuring">(Bugg and Crump 2012; Braem et al. 2019)</span>, and some of my work uses online methods to collect data. For example, experimental tasks are programmed for web-browsers using tools like JsPsych <span class="citation" data-cites="de2015jspsych">(De Leeuw 2015)</span>, and participants may be recruited from platforms like Amazon’s Mechanical Turk <span class="citation" data-cites="crump2013evaluating">(Crump, McDonnell, and Gureckis 2013)</span>. Online methods are useful research tools, but they are not without problems.</p>
+<p>Why do I care about this? Some of my research involves questions about attentional control abilities <span class="citation" data-cites="bugg2012support braem2019measuring">(Bugg and Crump 2012; Braem et al. 2019)</span>, and some of my work uses online methods to collect data. For example, experimental tasks are programmed for web-browsers using tools like JsPsych <span class="citation" data-cites="de2015jspsych">(De Leeuw 2015)</span>, and participants may be recruited from platforms like Amazon’s Mechanical Turk <span class="citation" data-cites="crump2013evaluating">(Crump et al. 2013)</span>. Online methods are useful research tools, but they are not without problems.</p>
 <p>One of my concerns as a cognitive psychologist interested in human behavior is that participants are actual people completing tasks to the best of their understanding. I’m usually not interested in analyzing data spoofed by a bot.</p>
 <p>I haven’t encountered major issues with bots in the tasks I run. These tasks require quick responses to recognize words and letters. Although it is possible to develop a bot to perform these actions, it wouldn’t be profitable for the bot programmer.</p>
 <p>In the last few months I’ve run a tasks on Amazon Mechanical Turk and opened them up to a general audience with almost no restrictions. This produced very low quality data and reminded me of several topics discussed in Todd Gureckis’ <a href="https://todd.gureckislab.org/2021/06/09/the-poisoned-well">mturk blog post from a couple years ago</a>. In the section on a nightmare world of human-bot hybrids Todd mentioned commonly available browser plugins that record a person’s interactions with a website and then replay them back. In an online psych study, this could involve completing the task one time (with all of the responses being recorded by the plugin), and then reloading the study under a different user name and completing it again using the previously recorded responses. It seemed to me that some mturk workers were doing this (or similar).</p>
@@ -3686,12 +3701,12 @@ font-style: inherit;">$</span>message.content)</span>
 <section id="load-the-libraries" class="level3">
 <h3 class="anchored" data-anchor-id="load-the-libraries">Load the libraries</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(openai)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
+font-style: inherit;">library</span>(tidyverse)</span></code></pre></div></div>
 </div>
 </section>
 <section id="test-one-simulated-subject" class="level3">
@@ -3718,7 +3733,7 @@ font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
 <hr>
 <p>Here’s the code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># use the colors red, green, blue, and yellow</span></span>
 <span id="cb2-2"></span>
@@ -3913,7 +3928,7 @@ font-style: inherit;">$</span>message.content)</span>
 background-color: null;
 font-style: inherit;">save.image</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"batch1.RData"</span>)</span></code></pre></div>
+font-style: inherit;">"batch1.RData"</span>)</span></code></pre></div></div>
 </div>
 </section>
 </section>
@@ -3926,7 +3941,7 @@ font-style: inherit;">"batch1.RData"</span>)</span></code></pre></div>
 <p>To be more accurate, it has returned this whole JSON file and written all of the columns. I still need to check whether the trial-to-trial data in this output file is the same as the order in the prompt.</p>
 <p>These numbers look plausible-ish…although they all end in 0, which isn’t very plausible.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">load</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3937,9 +3952,9 @@ font-style: inherit;">"batch1.RData"</span>)</span>
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>(sim_data)</span></code></pre></div>
+font-style: inherit;">kable</span>(sim_data)</span></code></pre></div></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">trial</th>
@@ -4127,7 +4142,7 @@ font-style: inherit;">kable</span>(sim_data)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="mean-reaction-times">Mean Reaction times</h3>
 <p>And, now the moment I’ve been waiting for…Is there a Stroop effect? To answer this question I computed the mean reaction time for congruent and incongruent items. The answer is that YES, ChatGPT produces reaction time data in the style of Stroop experiment that does result in faster mean reaction times for congruent than incongruent items.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># report rt data</span></span>
 <span id="cb4-2">rt_data <span class="ot" style="color: #003B4F;
@@ -4178,9 +4193,9 @@ font-style: inherit;">"drop"</span>)</span>
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>(rt_data)</span></code></pre></div>
+font-style: inherit;">kable</span>(rt_data)</span></code></pre></div></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;">congruency</th>
@@ -4205,7 +4220,7 @@ font-style: inherit;">kable</span>(rt_data)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="accuracy-data">Accuracy Data</h3>
 <p>This time, ChatGPT didn’t make any mistakes.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># report accuracy data</span></span>
 <span id="cb5-2">accuracy_data <span class="ot" style="color: #003B4F;
@@ -4282,9 +4297,9 @@ font-style: inherit;">"drop"</span>)</span>
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>(accuracy_data)</span></code></pre></div>
+font-style: inherit;">kable</span>(accuracy_data)</span></code></pre></div></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;">congruency</th>
@@ -4318,7 +4333,7 @@ font-style: inherit;">kable</span>(accuracy_data)</span></code></pre></div>
 <p>So far I haven’t been able to run this loop. I got through 7 iterations, and then received a message that the server was overloaded. Also, only 2 of those 7 iterations produced valid JSON. I’m going to put this on the back burner for now.</p>
 <p>Update: I’ve gotten more reliable JSON now with a prompt using double quotes rather than single quotes.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># use the colors red, green, blue, and yellow</span></span>
 <span id="cb6-2"></span>
@@ -4633,16 +4648,16 @@ font-style: inherit;"># model responses are in JSON format</span></span>
 background-color: null;
 font-style: inherit;">save.image</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"batch2.RData"</span>)</span></code></pre></div>
+font-style: inherit;">"batch2.RData"</span>)</span></code></pre></div></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">load</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">file =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"batch2.RData"</span>)</span></code></pre></div>
+font-style: inherit;">"batch2.RData"</span>)</span></code></pre></div></div>
 </div>
 <section id="analysis" class="level3">
 <h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
@@ -4651,13 +4666,17 @@ font-style: inherit;">"batch2.RData"</span>)</span></code></pre></div>
 <h4 class="anchored" data-anchor-id="ex-guassian-rts">Ex-guassian RTs?</h4>
 <p>One reason to run multiple simulated subjects is to see whether the model gives different responses each time. This is a histogram of the simulated RTs across all simulated subjects. Reaction time distributions usually look a combination of a gaussian and an exponential distribution. This has some of that flavor.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">hist</span>(all_sim_data<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">$</span>reaction_time)</span></code></pre></div>
+font-style: inherit;">$</span>reaction_time)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/771_GPT_Stroop/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/771_GPT_Stroop/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -4666,7 +4685,7 @@ font-style: inherit;">$</span>reaction_time)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="do-differenet-simulated-subjects-show-different-stroop-effects">Do differenet simulated subjects show different Stroop effects?</h3>
 <p>The answer appears to be yes. All of these simulated subjects have different sized Stroop effects.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># report rt data</span></span>
 <span id="cb9-2">rt_data_subject <span class="ot" style="color: #003B4F;
@@ -4772,9 +4791,9 @@ font-style: inherit;">-</span>congruent)</span>
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>(rt_data_subject)</span></code></pre></div>
+font-style: inherit;">kable</span>(rt_data_subject)</span></code></pre></div></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">sim_subject</th>
@@ -4847,7 +4866,7 @@ font-style: inherit;">kable</span>(rt_data_subject)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="accuracy-data-1">Accuracy Data</h3>
 <p>100% accuracy on all trials.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># report accuracy data</span></span>
 <span id="cb10-2">accuracy_data_subject <span class="ot" style="color: #003B4F;
@@ -4948,9 +4967,9 @@ font-style: inherit;">-</span>congruent)</span>
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>(accuracy_data_subject)</span></code></pre></div>
+font-style: inherit;">kable</span>(accuracy_data_subject)</span></code></pre></div></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">sim_subject</th>
@@ -5025,7 +5044,7 @@ font-style: inherit;">kable</span>(accuracy_data_subject)</span></code></pre></d
 <p>A common finding in the Stroop literature is that Stroop effects are larger following congruent trials than incongruent trials. I didn’t mention anything about this in the prompt. I’m curious if the LLM will put the pattern into the simulated RTs. One reason it might do that is if real raw Stroop data was part of the training set.</p>
 <p>Doesn’t look like it, but should simulate many more subjects and then take a closer look.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># add last trial congruency as a factor</span></span>
 <span id="cb11-2">all_sim_data <span class="ot" style="color: #003B4F;
@@ -5216,9 +5235,9 @@ font-style: inherit;">-</span>congruent_n1incongruent</span>
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>(rt_data_subject_seq)</span></code></pre></div>
+font-style: inherit;">kable</span>(rt_data_subject_seq)</span></code></pre></div></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 8%">
 <col style="width: 14%">
@@ -5336,7 +5355,7 @@ font-style: inherit;">kable</span>(rt_data_subject_seq)</span></code></pre></div
 </ol>
 <p>Work on this is not complete, leaving this here for later.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># use the colors red, green, blue, and yellow</span></span>
 <span id="cb12-2"></span>
@@ -5697,16 +5716,16 @@ font-style: inherit;">$</span>message.content</span>
 <span id="cb12-83">    }</span>
 <span id="cb12-84">  }</span>
 <span id="cb12-85">  </span>
-<span id="cb12-86">}</span></code></pre></div>
+<span id="cb12-86">}</span></code></pre></div></div>
 </div>
 
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-braem2019measuring" class="csl-entry">
-Braem, Senne, Julie M Bugg, James R Schmidt, Matthew JC Crump, Daniel H Weissman, Wim Notebaert, and Tobias Egner. 2019. <span>“Measuring Adaptive Control in Conflict Tasks.”</span> <em>Trends in Cognitive Sciences</em> 23 (9): 769–83.
+Braem, Senne, Julie M Bugg, James R Schmidt, et al. 2019. <span>“Measuring Adaptive Control in Conflict Tasks.”</span> <em>Trends in Cognitive Sciences</em> 23 (9): 769–83.
 </div>
 <div id="ref-bugg2012support" class="csl-entry">
 Bugg, Julie M, and Matthew JC Crump. 2012. <span>“In Support of a Distinction Between Voluntary and Stimulus-Driven Control: A Review of the Literature on Proportion Congruent Effects.”</span> <em>Frontiers in Psychology</em> 3: 367.
@@ -5732,6 +5751,8 @@ MacLeod, Colin M. 1991. <span>“Half a Century of Research on the <span>Stroop<
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/772_chatGPT/</link>
   <description><![CDATA[ 
+
+
 
 
 
@@ -5892,7 +5913,7 @@ MacLeod, Colin M. 1991. <span>“Half a Century of Research on the <span>Stroop<
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-R-magrittr" class="csl-entry">
 Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
 </div>
@@ -5909,40 +5930,6 @@ Rothstein, Richard. 2017. <em>The Color of Law: <span>A</span> Forgotten History
   <pubDate>Sat, 18 Feb 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Testing out creating speech in noise stimuli</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/773_speech_noise/</link>
-  <description><![CDATA[ 
-
-
-
-<p><span class="citation" data-cites="frost1988">Frost, Repp, and Katz (1988)</span> conducted three experiments asking whether “speech perception can be influenced by simultaneous presentation of print?”</p>
-<p>In experiment 1 they presented individual words in an audio format that was paired with a visual form. An audio word was presented with the matching visual word, a mismatching word, or neutral stimulus (XXXXXX). The spoken word was embedded in different levels of signal matched noise (or white noise, in Experiment 3). The results from experiment one showed that matching visual words changed response bias rather than sensitivity for detecting the presence or absence of words. There was also apparently a marked subjective impression of hearing words that were presented in enveloped matched masking noise when they were simultaneously paired with matching visual words.</p>
-<p>I spun up this post to try creating example stimuli from E1 using the approach mentioned in the methods by <span class="citation" data-cites="schroeder1968">Schroeder (1968)</span>.</p>
-<p>The amplitude matched noise is created by randomly flipping the sign of each unit of the digitized waveform.</p>
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-R-magrittr" class="csl-entry">
-Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
-</div>
-<div id="ref-frost1988" class="csl-entry">
-Frost, Ram, Bruno H Repp, and Leonard Katz. 1988. <span>“Can Speech Perception Be Influenced by Simultaneous Presentation of Print?”</span> <em>Journal of Memory and Language</em> 27 (6): 741–55. <a href="https://doi.org/10.1016/0749-596X(88)90018-6">https://doi.org/10.1016/0749-596X(88)90018-6</a>.
-</div>
-<div id="ref-R-magick" class="csl-entry">
-Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
-</div>
-<div id="ref-schroeder1968" class="csl-entry">
-Schroeder, MRt. 1968. <span>“Reference Signal for Signal Quality Studies.”</span> <em>The Journal of the Acoustical Society of America</em> 44 (6): 17351736. <a href="https://doi.org/10.1121/1.1911323">https://doi.org/10.1121/1.1911323</a>.
-</div>
-</div></section></div> ]]></description>
-  <category>stimuli</category>
-  <guid>https://crumplab.com/blog/773_speech_noise/</guid>
-  <pubDate>Tue, 24 Jan 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Two new courses and getting into the swing with spring</title>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/774_spring2023/</link>
@@ -5950,13 +5937,15 @@ Schroeder, MRt. 1968. <span>“Reference Signal for Signal Quality Studies.”</
 
 
 
-<div class="callout callout-style-default callout-note callout-titled">
+
+
+<div class="callout callout-style-default callout-note callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Expertise: growing | Usefulness: 5 stars | Audience: notes to self
+<span class="screen-reader-only">Note</span>Expertise: growing | Usefulness: 5 stars | Audience: notes to self
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5975,7 +5964,7 @@ Expertise: growing | Usefulness: 5 stars | Audience: notes to self
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-R-magrittr" class="csl-entry">
 Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
 </div>
@@ -5989,69 +5978,12 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
   <media:content url="https://crumplab.com/blog/774_spring2023/images/header.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Testing rtoot and managing alt text for images</title>
-  <dc:creator>Matt Crump</dc:creator>
-  <link>https://crumplab.com/blog/775_Rtoot_alt_text/</link>
-  <description><![CDATA[ 
-
-
-
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/775_Rtoot_alt_text/images/header.jpg" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Expertise: Not much | Usefulness: decent | Audience: notes to self
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-<p>Using mastodon has prompted me to get in the habit of adding alt text to images in my posts. On the one hand, mastodon makes it easy to add alt text to images, and on the other hand I’ve noticed that adding alt text can be very cumbersome especially when many images are involved, and I have plans to repost them. My understanding, at least the way I’m doing it, is the alt text has to be entered every time you post an image.</p>
-<p>I tried downloading an image that I posted with alt-text, and then re-posting it to see if the alt-text was preserved, but it was not. I was hoping mastodon might take the alt-text and embed it into the EXIF image data, and/or automatically scrape EXIF image data and use it for alt-text. This functionality is currently a <a href="https://github.com/mastodon/mastodon/issues/14903">feature request over at github issues</a>.</p>
-<p>In the meantime, I have a case where I’d like to automate the alt-text process for 13+ images. Over the weekend I used midjourney to generate fake album cover art for some basement tape tracks I’m working on. I posted each track on the <a href="https://bbs.crumplab.com/@homophony">homphony timeline</a> and for each cover art image I uploaded alt text containing brief descriptions of the image, and the midjourney prompt that I used to create the image. After a morning of fun doing this I wanted to post all of the pictures with alt-text together on my art focused account. However, I would have to manually add all of the alt-text all over again to all of the images. I didn’t do that because I didn’t have time to do that. And, I wasn’t thinking ahead about digital asset management, so I didn’t adopt a process that would allow me to repost with the images with alt-text.</p>
-<p>This post should help me with two things. I’m going to try out the new R API client for mastodon called <a href="https://github.com/schochastics/rtoot">rtoot</a>, and I should be able to download posts, images, and alt text from one account, and then repost them with alt text to another account.</p>
-<section id="rtoot" class="level2">
-<h2 class="anchored" data-anchor-id="rtoot">rtoot</h2>
-<p>I followed the instructions in the rtoot vignette to get my authentication set up.</p>
-<p>Can only get 20 statuses.</p>
-</section>
-<section id="references" class="level2">
-
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-R-magrittr" class="csl-entry">
-Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
-</div>
-<div id="ref-R-magick" class="csl-entry">
-Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
-</div>
-</div></section></div> ]]></description>
-  <category>mastodon</category>
-  <category>rtoot</category>
-  <category>alt text</category>
-  <category>midjourney</category>
-  <category>generative art</category>
-  <guid>https://crumplab.com/blog/775_Rtoot_alt_text/</guid>
-  <pubDate>Mon, 14 Nov 2022 05:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/775_Rtoot_alt_text/images/header.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
   <title>Generative art (note) collection</title>
   <dc:creator>Matt Crump</dc:creator>
   <link>https://crumplab.com/blog/777_generative_art/</link>
   <description><![CDATA[ 
+
+
 
 
 
@@ -6061,7 +5993,7 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-New rating system?
+<span class="screen-reader-only">Tip</span>New rating system?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -6077,11 +6009,11 @@ New rating system?
 </div></div><section id="some-goals" class="level2">
 <h2 class="anchored" data-anchor-id="some-goals">Some goals</h2>
 <ul class="task-list">
-<li><p><input type="checkbox" checked="">search around and check out a few R packages for making generative art</p></li>
-<li><p><input type="checkbox">Try them out here</p></li>
-<li><p><input type="checkbox">Mess around on my own</p></li>
-<li><p><input type="checkbox">Add more testing to this space over time (when I have time</p></li>
-<li><p><input type="checkbox">Make options to generate blog header visuals, so that I can more quickly get into writing without having to bounce out and spend too much time making headers in Adobe Express (also fun).</p></li>
+<li><p><label><input type="checkbox" checked="">search around and check out a few R packages for making generative art</label></p></li>
+<li><p><label><input type="checkbox">Try them out here</label></p></li>
+<li><p><label><input type="checkbox">Mess around on my own</label></p></li>
+<li><p><label><input type="checkbox">Add more testing to this space over time (when I have time</label></p></li>
+<li><p><label><input type="checkbox">Make options to generate blog header visuals, so that I can more quickly get into writing without having to bounce out and spend too much time making headers in Adobe Express (also fun).</label></p></li>
 </ul>
 </section>
 <section id="generative-rrrrt" class="level2">
@@ -6101,7 +6033,7 @@ New rating system?
 <p><a href="https://ambient.data-imaginist.com">ambient</a> makes visual noise <span class="citation" data-cites="R-ambient">(Pedersen and Peck 2022)</span>! I am excited. I’m also trying to remember how to cite R packages in quarto.</p>
 <p>First example from the ambient documentation.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(ambient)</span>
 <span id="cb1-2">simplex <span class="ot" style="color: #003B4F;
@@ -6132,14 +6064,18 @@ font-style: inherit;">plot</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">as.raster</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">normalise</span>(simplex)))</span></code></pre></div>
+font-style: inherit;">normalise</span>(simplex)))</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>That’s fun. The output adds a border to the image, I’d like to turn that on/off.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(imager)</span>
 <span id="cb2-2">simplex <span class="ot" style="color: #003B4F;
@@ -6172,19 +6108,23 @@ font-style: inherit;">as.cimg</span>(simplex), <span class="at" style="color: #6
 background-color: null;
 font-style: inherit;">file =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/test.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/test.jpg"</span>)</span></code></pre></div></div>
 </div>
 <p>Going for a full width picture.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">knitr<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/test.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/test.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/test.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/test.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -6197,7 +6137,7 @@ font-style: inherit;">"images/test.jpg"</span>)</span></code></pre></div>
 <li><p>time for <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html#Installing_magick">magick</a></p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(magick)</span>
 <span id="cb4-2"><span class="fu" style="color: #4758AB;
@@ -6301,9 +6241,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/test_magick.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/test_magick.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/test_magick.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/test_magick.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -6311,7 +6255,7 @@ font-style: inherit;">"images/test_magick.jpg"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="changing-font">Changing font</h2>
 <p>Is easy…go for IMPACT</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">simplex <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">simplex <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6409,9 +6353,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/Impact.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/Impact.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/Impact.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/Impact.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -6419,7 +6367,7 @@ font-style: inherit;">"images/Impact.jpg"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="border-around-text">Border around text?</h2>
 <p>Is easy…go for IMPACT</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">simplex <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">simplex <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6522,9 +6470,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/Impact2.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/Impact2.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/Impact2.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/Impact2.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -6532,7 +6484,7 @@ font-style: inherit;">"images/Impact2.jpg"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="make-it-lighter">Make it lighter</h2>
 <p>Squish the noise back a little bit</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">simplex <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">simplex <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6643,9 +6595,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/Impact3.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/Impact3.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/Impact3.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/Impact3.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -6653,7 +6609,7 @@ font-style: inherit;">"images/Impact3.jpg"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="plain-color-background">plain color background</h2>
 <p>I might be into mono-color and text for blog headers. That should be simple enough now:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">header <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">header <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6767,9 +6723,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/header.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/header.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/header.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/header.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -6779,7 +6739,7 @@ font-style: inherit;">"images/header.jpg"</span>)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="squiggligraphy">Squiggligraphy</h3>
 <p>I made some custom fonts a while back, and have them loaded to my system fonts. Checking if they work here. Working [x].</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">header <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">header <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6885,9 +6845,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/header2.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/header2.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/header2.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/header2.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -6895,7 +6859,7 @@ font-style: inherit;">"images/header2.jpg"</span>)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="moebius">Moebius</h3>
 <p>Trying out the Moebius font with a highlight layer.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">header <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">header <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -7069,9 +7033,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/header3.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/header3.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/header3.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/header3.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -7081,7 +7049,7 @@ font-style: inherit;">"images/header3.jpg"</span>)</span></code></pre></div>
 <p>This is fun. I accomplished my goal of making simple headers for blogs. I can see how spelling command over layers of pixel space is intriguing for a generative artist.</p>
 <p>For my next trick, I would like to merge this basic header above with some noise from ambient. Not too much noise, just a little bit.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">noise <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">noise <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -7326,16 +7294,20 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/header4.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/header4.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/header4.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/header4.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">16:9</h3>
 <p>What does 16:9 feel like? NOTE: this is the correct size for mastodon preview windows</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1">noise <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1">noise <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -7580,9 +7552,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/header4_16x9.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/header4_16x9.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/header4_16x9.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/header4_16x9.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -7594,7 +7570,7 @@ font-style: inherit;">"images/header4_16x9.jpg"</span>)</span></code></pre></div
 <p>Frown face: magick has a very nice add border function that does not respect image size, it adds a little bit to the image size, making it annoying to resize. Annoyed face.</p>
 <p>This code adds a border, but does not expand the image. 16:9 shows equal border in the mastodon preview window. Also, hilariously long. First timer code.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">noise <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">noise <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -7926,9 +7902,13 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"images/header5.jpg"</span>)</span></code></pre></div>
+font-style: inherit;">"images/header5.jpg"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
-<p><img src="https://crumplab.com/blog/777_generative_art/images/header5.jpg" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/777_generative_art/images/header5.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -7940,7 +7920,7 @@ font-style: inherit;">"images/header5.jpg"</span>)</span></code></pre></div>
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-R-magrittr" class="csl-entry">
 Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
 </div>
@@ -7954,7 +7934,7 @@ Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>
 Pedersen, Thomas Lin, and Jordan Peck. 2022. <em>Ambient: A Generator of Multidimensional Noise</em>. <a href="https://CRAN.R-project.org/package=ambient">https://CRAN.R-project.org/package=ambient</a>.
 </div>
 <div id="ref-R-base" class="csl-entry">
-R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
 </div></section></div> ]]></description>
   <category>generative art</category>
@@ -7962,6 +7942,282 @@ R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</
   <guid>https://crumplab.com/blog/777_generative_art/</guid>
   <pubDate>Thu, 10 Nov 2022 05:00:00 GMT</pubDate>
   <media:content url="https://crumplab.com/blog/777_generative_art/images/Impact3.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>RSS feed my quarto blog</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/776_RSS/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/776_RSS/images/header.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-empty-content callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Expertise: Not much | Usefulness: ? | Audience: notes to self
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>I spent the morning coding up some ways to automate header images, not sure I saved myself time, it was equal parts fun and frustrating.</p>
+<p>This post is an an excuse to try out a simple header, and to enable RSS feeds on this blog. What will happen?</p>
+<p>Following these <a href="https://quarto.org/docs/websites/website-blog.html#rss-feed">quarto RSS</a> steps.</p>
+<section id="done" class="level2">
+<h2 class="anchored" data-anchor-id="done">Done?</h2>
+<p>That was easy. Just need to publish this and see if I can subscribe to myself?</p>
+</section>
+<section id="references" class="level2">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-R-magrittr" class="csl-entry">
+Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
+</div>
+<div id="ref-R-magick" class="csl-entry">
+Ooms, Jeroen. 2021. <em>Magick: Advanced Graphics and Image-Processing in r</em>. <a href="https://CRAN.R-project.org/package=magick">https://CRAN.R-project.org/package=magick</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>RSS</category>
+  <guid>https://crumplab.com/blog/776_RSS/</guid>
+  <pubDate>Thu, 10 Nov 2022 05:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/776_RSS/images/header.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Convincing myself to run a Funkwhale pod</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/778_funkwhale/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/778_funkwhale/images/header.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Expertise: 0 Usefulness: ? Audience: notes to self</p>
+<p>I love music: listening to it and making it. I’ve had increasingly less time for music, and am trying to find more time for it. So, as a part of learning mastodon I created an account for my music interests:</p>
+<p><a href="https://bbs.crumplab.com/@homophony">https://bbs.crumplab.com/@homophony</a></p>
+<p>It’s only been a week, but I’m having lots of fun connecting with music makers on the #fediverse. This could mean more overall music, which would be great!</p>
+<p>When I first tried mastodon a week ago I had no idea about activitypub, or the broader fediverse. I didn’t realize there are many different “platforms” compatible or semi-compatible with the <a href="https://www.w3.org/TR/activitypub/">activitypub protocol</a>. This means that user accounts on one platform like mastodon can interact with user accounts on another platform like <a href="https://pixelfed.org">pixelfed</a> (open-source version of instagram for picture sharing). There a <a href="https://github.com/emilebosch/awesome-fediverse">lots of platforms in the fediverse</a>, including <a href="https://funkwhale.audio">funkwhale</a> for audio and music sharing.</p>
+<section id="funkwhale-notes" class="level2">
+<h2 class="anchored" data-anchor-id="funkwhale-notes">Funkwhale notes</h2>
+<p>Using this space for note collection on funkwhale.</p>
+<p>Main site: <a href="https://funkwhale.audio" class="uri">https://funkwhale.audio</a></p>
+<p>Funkwhale forum: <a href="https://forum.funkwhale.audio" class="uri">https://forum.funkwhale.audio</a></p>
+<p>Funkwhale on mastodon: <a href="https://fosstodon.org/@funkwhale" class="uri">https://fosstodon.org/@funkwhale</a></p>
+<p>Dashboard of Funkwhale pods <a href="https://network.funkwhale.audio/dashboards/d/overview/funkwhale-network-overview?orgId=1&amp;refresh=2h" class="uri">https://network.funkwhale.audio/dashboards/d/overview/funkwhale-network-overview?orgId=1&amp;refresh=2h</a></p>
+<p>Dev and issues: <a href="https://dev.funkwhale.audio/funkwhale" class="uri">https://dev.funkwhale.audio/funkwhale</a></p>
+</section>
+<section id="spinning-up" class="level2">
+<h2 class="anchored" data-anchor-id="spinning-up">Spinning up</h2>
+<p>Installation dev instructions <a href="https://docs.funkwhale.audio/installation/" class="uri">https://docs.funkwhale.audio/installation/</a></p>
+<p>Other instructions, possibly helpful for a droplet setup.</p>
+<p><a href="https://geek-cookbook.funkypenguin.co.nz/recipes/funkwhale/" class="uri">https://geek-cookbook.funkypenguin.co.nz/recipes/funkwhale/</a></p>
+<p>Leaving this for another time…back.</p>
+</section>
+<section id="start-trying" class="level2">
+<h2 class="anchored" data-anchor-id="start-trying">Start trying</h2>
+<p>How long will this take? I was hoping to do this all on digital ocean. Will try develop instructions. Starting at 6:42.</p>
+<p>Ok, that was super easy.</p>
+<p>I created a new Ubuntu droplet on digital ocean. Logged into the terminal by website. I followed these steps from the quick install.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt-get update</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt-get install curl</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> sh <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-c</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">curl</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-sSL</span> https://get.funkwhale.audio/<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">)</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span></code></pre></div></div>
+<p>Made an A name to create a new subdomain for my pod. Pressed enter a couple times to say YES during install. Took about 15 minutes, mostly waiting. Now I have a funkwhale pod. huh.</p>
+<p>What do I do with this?</p>
+<p><img src="https://crumplab.com/blog/778_funkwhale/images/Screen Shot 2022-11-12 at 7.27.54 AM.png" class="img-fluid"></p>
+</section>
+<section id="musicbrainz" class="level2">
+<h2 class="anchored" data-anchor-id="musicbrainz">musicbrainz</h2>
+<ul>
+<li>downloaded the musicbrainz app</li>
+</ul>
+<p><a href="https://musicbrainz.org/" class="uri">https://musicbrainz.org/</a></p>
+<p>Might have to use this for metadata? After making an account over here, I realize this is mostly for tagging .mp3 libraries of existing music so it is easy to upload with tags.</p>
+<p>I could add my own artist info here I guess. Not sure how useful it will be yet for adding metadata around individual tracks I create. It could be very useful, or not. Need to learn more about associating new music audio files I make with all the necessary metadata.</p>
+</section>
+<section id="issue-collection" class="level2">
+<h2 class="anchored" data-anchor-id="issue-collection">Issue collection</h2>
+<p>I have destroyed the droplet.</p>
+<ul>
+<li><p>Made my admin account “homophony”, which worked all fine and dandy. However, this meant that I couldn’t use that handle to create channels and share under that artist name.</p></li>
+<li><p>musicbrainz is interesting and complicated. I should consider listing exist discography there. It seems to be mostly for uploading digital music collections, which is not what I’m interested in doing. Funkwhale could be altogether more than I need it for. Still…curious.</p></li>
+</ul>
+<p>Restarted the droplet…waiting through the install.</p>
+<p>Got messed up with the certbot, needed to change the A name record so my subdomain pointed to the droplet.</p>
+</section>
+<section id="creating-a-channel-and-frustrations" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-channel-and-frustrations">Creating a channel and frustrations</h2>
+<p>I spent a couple hours getting the pod up and running on digital ocean, and most of that time was me making little mistakes.</p>
+<p>After I got the pod fully up and running I made sure my admin name was NOT my artist name. Then, I made an artist channel to share some tracks. There is a choice between music channels and podcast channels. I’m not planning to do any podcasting here, but the functionality for that looked good (it may integrate with podcasting services for indexing).</p>
+<p>Creating a music channel was easy, and uploading tracks was easy. And, it seemed easy to share the link to the channel so other people could listen to it. I could listen to the tracks, but for a whole day anytime I accessed the funkwhale channel as a “non-logged in” user, I got a spinning wheel. I had to allow unauthenticated users access to the api, and that seemed to have worked? I’m testing right now.</p>
+<p>Last night I almost gave up on this funkwhale thing, but I might persist just a little bit.</p>
+<p>I’m not totally sure what features I’m looking for.</p>
+<ul>
+<li><p>Ability to upload tracks and share them in a playlist</p></li>
+<li><p>Ability to get some metrics on listening</p></li>
+<li><p>Comments or notes per track? Not sure how much I want this feature.</p></li>
+</ul>
+</section>
+<section id="activitypub" class="level2">
+<h2 class="anchored" data-anchor-id="activitypub">Activitypub?</h2>
+<p>I can use mastodon to follow my account on funkwhale, and then post to my funkwhale account from mastodon; but, where does the post go? I can’t receive on funkwhale?</p>
+</section>
+<section id="embed-playlist-audio-player" class="level2">
+<h2 class="anchored" data-anchor-id="embed-playlist-audio-player">Embed playlist audio player</h2>
+<p>This part looks fun. I’m placing embed code to see if the playlist shows up here.</p>
+<iframe width="100%" height="330" scrolling="no" frameborder="no" src="https://audio.crumplab.com/front/embed.html?&amp;type=artist&amp;id=1">
+</iframe>
+<p>The embed worked, but this won’t work later if I shut down my funkwhale server.</p>
+</section>
+<section id="castopod" class="level2">
+<h2 class="anchored" data-anchor-id="castopod">Castopod</h2>
+<p>Open source software for podcasting…useful for a music channel?</p>
+<p><a href="https://code.castopod.org/adaures/castopod" class="uri">https://code.castopod.org/adaures/castopod</a></p>
+</section>
+<section id="channel-stuff" class="level2">
+<h2 class="anchored" data-anchor-id="channel-stuff">Channel stuff</h2>
+<p>I’m currently manicuring a channel to what happens with that. This is involving using midjourney to make cover art from the track notes I used to describe each piece.</p>
+<p>Not sure I will keep with funkwhale, but I like that everything is going into a structured database that I could use later.</p>
+</section>
+<section id="gitlab" class="level2">
+<h2 class="anchored" data-anchor-id="gitlab">Gitlab</h2>
+<p><a href="https://dev.funkwhale.audio/funkwhale/funkwhale/-/issues/1304" class="uri">https://dev.funkwhale.audio/funkwhale/funkwhale/-/issues/1304</a></p>
+</section>
+<section id="learn-more" class="level2">
+<h2 class="anchored" data-anchor-id="learn-more">Learn more</h2>
+<p>Lots of other OSS audio-streaming options, should check those out.</p>
+<p><a href="https://github.com/awesome-selfhosted/awesome-selfhosted#media-streaming---audio-streaming" class="uri">https://github.com/awesome-selfhosted/awesome-selfhosted#media-streaming---audio-streaming</a></p>
+</section>
+<section id="things-to-read" class="level2">
+<h2 class="anchored" data-anchor-id="things-to-read">things to read</h2>
+<p><a href="https://ins-rt.net/text/sounds-from-the-fediverse-an-introduction-to-funkwhale-a-decentralised-community-audio-platform" class="uri">https://ins-rt.net/text/sounds-from-the-fediverse-an-introduction-to-funkwhale-a-decentralised-community-audio-platform</a></p>
+<p><a href="https://ins-rt.net/text/revaluing-music-in-the-digital-economy-an-interview-with-austin-hou-from-currents" class="uri">https://ins-rt.net/text/revaluing-music-in-the-digital-economy-an-interview-with-austin-hou-from-currents</a></p>
+<p><a href="https://www.theslowmusicmovement.org/about.html" class="uri">https://www.theslowmusicmovement.org/about.html</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>funkwhale</category>
+  <category>activitypub</category>
+  <category>audio</category>
+  <category>music</category>
+  <guid>https://crumplab.com/blog/778_funkwhale/</guid>
+  <pubDate>Wed, 09 Nov 2022 05:00:00 GMT</pubDate>
+  <media:content url="https://crumplab.com/blog/778_funkwhale/images/header.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Debriefing my mastodon migration</title>
+  <dc:creator>Matt Crump</dc:creator>
+  <link>https://crumplab.com/blog/779_MoreMastodon/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>It’s almost time to get back to work, so this is going to be quick. Or, I may leave this post open and add to it throughout the day. One thing is for sure, I don’t have time to use Adobe Express to make a header for this blog post. Moving forward, I think I would like the option to have some #rstats generative art code do that for me. That way I can rip into the writing faster.</p>
+<p>About a week ago I tried Mastodon. It feels longer ago. I went from joining an instance, to learning about the fediverse, activitypub, and more, to spinning up my own instance using masto.host. So, crumplab.com got a new subdomain: <a href="https://bbs.crumplab.com" class="uri">https://bbs.crumplab.com</a></p>
+<p>As of right now this instance is closed to new accounts. But, it is possible to view the local feed, showing posts made by accounts inside the instance: <a href="https://bbs.crumplab.com/public">bbs.crumplab.com/public</a>. In general, the local feeds of other instances can be viewed in the same way (provided the instance admins approve the option).</p>
+<p>When I get time to keep my skill set up to date, I dive in, so I’m happy I happened to have a bit of time to get started with the fediverse. I’m pretty sure all of these tools will become useful for my research and teaching, as well as my students. And, I need to become semi-proficient in the tool set before it becomes usable in the lab and classroom, so I got busy learning the ropes of administering a mastodon instance, as well as operating an account. Much more important was observing and listening to the existing communities on mastodon, for tips and conventions for engaging with the fediverse. I’m very happy to meet such a wide array of engaged people who are stewards of the digital community. It’s been fun watching the migration and learn from others. For example, Danielle Navarro has shared a super helpful overview <a href="https://blog.djnavarro.net/posts/2022-11-03_what-i-know-about-mastodon/" class="uri">https://blog.djnavarro.net/posts/2022-11-03_what-i-know-about-mastodon/</a>. I’m seeing a lot of cognition folks, and even CJEP has a mastodon account!</p>
+<section id="admin-life" class="level2">
+<h2 class="anchored" data-anchor-id="admin-life">Admin life</h2>
+<p>I have lots to learn as a mastodon admin, but so far masto.host made the whole operation very easy. I started on a <a href="https://masto.host/pricing/">moon plan</a> and quickly upgraded to a planet because I can see becoming a longer term user. As I get tooled up, the next step would probably be running the instance on my own server somewhere. The main hassle I’m dealing with as an admin is blocking other instances (see this helpful list if you are looking to block instances: <a href="https://github.com/chaossocial/about/blob/master/blocked_instances.md" class="uri">https://github.com/chaossocial/about/blob/master/blocked_instances.md</a>)</p>
+<p>I did not have time to learn how to use the <a href="https://docs.joinmastodon.org/">mastodon API</a>, which is very-well documented; so, I was unable to automate the process of blocking instances. There is an <a href="https://github.com/ThomasChln/mastodon">older R client for mastodon</a>, and a brand new one in the works called <a href="https://github.com/schochastics/rtoot">rtoot</a>, which is very exciting. I’ll wait for that one before attempting to automate admin tasks.</p>
+</section>
+<section id="multiplicities" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="multiplicities">Multiplicities</h2>
+<p>If I’m being honest Multiplicity did not hold up. But, that’s OK, I still ❤️ Michael Keaton.</p>
+<div class="cell page-columns page-full">
+
+<div class="no-row-height column-margin column-container"><div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://crumplab.com/blog/779_MoreMastodon/images/MV5BMTUzNTYxMTUzMV5BMl5BanBnXkFtZTYwMzgxMTg4._V1_.jpg" class="img-fluid figure-img" width="164"></p>
+</figure>
+</div>
+</div></div></div>
+<p>The mastodon switch has prompted me to personally reflect upon my own social media use. As a part of the reflection, and as an excuse to learn more about Mastodon, I made a few different accounts on my instance. I am now me, myself, and I.</p>
+<section id="main-alt" class="level3">
+<h3 class="anchored" data-anchor-id="main-alt">Main Alt</h3>
+<p>My main account is <code>@MattCrump@bbs.crumplab.com</code>, link: <a href="https://bbs.crumplab.com/@MattCrump" class="uri">https://bbs.crumplab.com/@MattCrump</a>. I’ll use this one mostly for general interest and academic related things, and to occasionally boost my other interests in visual and audio mediums.</p>
+</section>
+<section id="visual-alt" class="level3">
+<h3 class="anchored" data-anchor-id="visual-alt">Visual alt</h3>
+<p>I enjoy making visual things, so I made an alt for that <code>@MattCrumpLab@bbs.crumplab.com</code>, link: <a href="https://bbs.crumplab.com/@MattCrumpLab" class="uri">https://bbs.crumplab.com/@MattCrumpLab</a>. I sometimes shared this stuff on twitter, and am currently sharing things on instagram. But, not really into those venues. So, I’m trying out personal decentralization on mastodon. If people want to follow my visual stuff, they can do that, and won’t get spammed (to often :) ) from my main account. Plus, having an account for my visual interests seems to help me focus and curate that interest more finely. It’s fun. There is loads of interest people doing #MastoArt.</p>
+</section>
+<section id="audio-alt" class="level3">
+<h3 class="anchored" data-anchor-id="audio-alt">Audio Alt</h3>
+<p>I enjoy making music, so I made an alt for that too <code>@homophony@bbs.crumplab.com</code>, link: <a href="https://bbs.crumplab.com/@homophony" class="uri">https://bbs.crumplab.com/@homophony</a>. I’m very excited for #fediversemusic and #mastomusic.</p>
+</section>
+<section id="account-management" class="level3">
+<h3 class="anchored" data-anchor-id="account-management">Account management</h3>
+<p>I went from a few social media accounts to more accounts, what I am doing to myself?</p>
+<p>It seems to me that having multiple accounts is useful and not uncommon on mastodon and the fediverse. The benefit to me is already clear; however, I there was a learning curve to quickly managing multiple accounts. Toot! for ios is very good, it allows me fast access to any account. For example, I log in to all of my accounts AND I log in at the server level. This way I can browse my federated timeline and respond from any account. It works really well. Overall, I’m looking forward to seeing the development of more clients for the fediverse. Given the current migration pattern, I’m optimistic. Regardless, protocols over platforms seems like the way to go, especially for my use cases.</p>
+</section>
+</section>
+<section id="research-and-teaching" class="level2">
+<h2 class="anchored" data-anchor-id="research-and-teaching">Research and Teaching</h2>
+<p>Speaking of research and teaching, I need to get back to that. On the research front, I’m considering creating a user account on my instance for online experiments that we run in the lab. More on that later.</p>
+<p>On the teaching front, I’m toying with setting up a mastodon instance for a class to use for a semester. There are so many interesting ways to take this, and it would generate a whole bunch of discussion around digital citizenship issues. Mastodon is very flexible in terms of what kind of access and identity (anon) for accounts users. What about FERPA? Need to learn more.</p>
+<p>Back to it. Hug a friend.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>social</category>
+  <category>mastodon</category>
+  <guid>https://crumplab.com/blog/779_MoreMastodon/</guid>
+  <pubDate>Mon, 07 Nov 2022 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

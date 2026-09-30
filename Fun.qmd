@@ -3,38 +3,20 @@ title: "Fun"
 description: "Some links to extra-curricular fun stuff like music and visual creations."
 listing:
   contents: 
-    - fun.yaml
+    - listings/fun.yaml
   id: fun-list
   sort: "order"
   type: default
-  template: fun/fun.ejs
+  template: listings/card-list.ejs
   categories: false
   image-align: 'right'
   image-height: '100%'
 format:
   html:
    page-layout: full
+banner: images/fun_banner.jpg
+image: images/fun_banner.jpg
 ---
-
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-```
-
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/fun_banner.jpg')
-```
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
-```
 
 ::: {#fun-list}
 :::

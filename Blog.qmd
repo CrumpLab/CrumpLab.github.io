@@ -14,23 +14,8 @@ listing:
 format: 
   html: 
     page-layout: full
+banner: images/blog_banner.jpg
 ---
-
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-```
-
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/blog_banner.jpg')
-```
 
 Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.
 

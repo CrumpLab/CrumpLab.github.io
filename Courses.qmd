@@ -4,33 +4,19 @@ description: "A list of current and previous courses taught at Brooklyn College 
 listing:
   - id: past-courses
     contents: 
-    - past-courses.yaml
+    - listings/courses.yaml
     sort: "order"
     type: default
     categories: false
     image-align: 'right'
     image-height: '100%'
-    template: courses/course.ejs
+    template: listings/card-list.ejs
 format:
   html:
     page-layout: full
+banner: images/courses_banner.jpg
+image: images/courses_banner.jpg
 ---
-
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-
-.description {
-    display: none;
-  }
-```
-
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/courses_banner.jpg')
-```
 
 List of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY.
 

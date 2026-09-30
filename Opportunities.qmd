@@ -4,23 +4,9 @@ description: "Interested in joining the lab? Check this page out."
 format:
   html:
     page-layout: full
+banner: images/opportunities_banner.jpg
+image: images/opportunities_banner.jpg
 ---
-
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-```
-
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/opportunities_banner.jpg')
-```
 
 Dr. Crump has mentored students interested in cognition at all levels, including [undergraduate, master's, doctoral, and postdoctoral researchers](https://crumplab.com/People.html). There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr. Crump is serving a three year term as Department Chair. 
 

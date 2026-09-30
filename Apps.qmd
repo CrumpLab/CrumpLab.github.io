@@ -4,23 +4,9 @@ description: "R packages, Shiny apps, and other open-software projects. The lab 
 format:
   html:
     page-layout: full
+banner: images/apps_banner.jpg
+image: images/apps_banner.jpg
 ---
-
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-
-.description {
-    display: none;
-  }
-```
-
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/apps_banner.jpg')
-```
 
 Shiny Apps, R packages, and various things
 
@@ -40,9 +26,7 @@ Manual: <https://www.crumplab.com/MinervaSpaceEcho/>, source code: <https://gith
 :::
 
 ::: {.column width="30%"}
-```{r minervaspaceecho, out.width=100, echo=F}
-knitr::include_graphics("images/minervaspaceecho.png")
-```
+![](images/minervaspaceecho.png){width="100px"}
 :::
 :::::
 
@@ -58,9 +42,7 @@ Source code: <https://github.com/CrumpLab/PCASynth>
 :::
 
 ::: {.column width="30%"}
-```{r pcasynth, out.width=100, echo=F}
-knitr::include_graphics("images/pcasynth.png")
-```
+![](images/pcasynth.png){width="100px"}
 :::
 :::::
 
@@ -80,9 +62,7 @@ This is the beginnings of an #rstats package for experimental mangling of #MIDI 
 :::
 
 ::: {.column width="30%"}
-```{r midiblender, out.width=100, echo=F}
-knitr::include_graphics("images/midiblender.jpg")
-```
+![](images/midiblender.jpg){width="100px"}
 :::
 :::::
 
@@ -96,9 +76,7 @@ Addins and shiny app for sending text to LLMs at OpenAI. The addins are focused 
 :::
 
 ::: {.column width="30%"}
-```{r gptaddin, out.width=100, echo=F}
-knitr::include_graphics("images/gptaddin.png")
-```
+![](images/gptaddin.png){width="100px"}
 :::
 :::::
 
@@ -112,9 +90,7 @@ R-studio project template and workflow for sharing psychological research projec
 :::
 
 ::: {.column width="30%"}
-```{r vertical, out.width=100, echo=F}
-knitr::include_graphics("images/vertical.png")
-```
+![](images/vertical.png){width="100px"}
 :::
 :::::
 
@@ -128,9 +104,7 @@ R functions for creating semantic librarians, a tool for vectorizing and visuali
 :::
 
 ::: {.column width="30%"}
-```{r rsl, out.width=100, echo=F}
-knitr::include_graphics("images/sl_hex.png")
-```
+![](images/sl_hex.png){width="100px"}
 :::
 :::::
 
@@ -144,9 +118,7 @@ Write and run jspsych experiments using R studio.
 :::
 
 ::: {.column width="30%"}
-```{r jspsychr, out.width=100, echo=F}
-knitr::include_graphics("images/jspsychr.png")
-```
+![](images/jspsychr.png){width="100px"}
 :::
 :::::
 
@@ -160,9 +132,7 @@ Functions for detecting textual overlap (e.g., possible plagiarism) between docu
 :::
 
 ::: {.column width="30%"}
-```{r playjar, out.width=100, echo=F}
-knitr::include_graphics("images/playjareyesores.png")
-```
+![](images/playjareyesores.png){width="100px"}
 :::
 :::::
 
@@ -176,9 +146,7 @@ Monte-carlo based power analysis for cognitive control designs. <https://crumpla
 :::
 
 ::: {.column width="30%"}
-```{r CP, out.width=100, echo=F}
-knitr::include_graphics("images/ConflictPower.png")
-```
+![](images/ConflictPower.png){width="100px"}
 :::
 :::::
 

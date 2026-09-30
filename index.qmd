@@ -12,7 +12,7 @@ listing:
     - Opportunities.qmd
     - Blog.qmd
     - Fun.qmd
-    - front_page/front_page.yaml
+    - listings/front-page.yaml
   id: front-list
   sort: "order"
   type: grid
@@ -23,49 +23,14 @@ listing:
 format:
   html:
     page-layout: full
+banner: images/front_banner.jpg
+banner-wide: true
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  echo= FALSE,
-  comment = "#>",
-  out.width = "100%"
-)
-```
-
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-  
-div.quarto-post .metadata {
-    display: none;
-  }
-  
-div.quarto-post .thumbnail {
-    flex-basis: 50%;
-}
-
-p {
-    max-width: 100%;
-}
-
-```
-
-```{r}
-#| echo: FALSE
-#| out.width: 100%
-knitr::include_graphics('images/front_banner.jpg')
-```
-
+::: home
 The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition.
 
-[Current and previous lab members](https://crumplab.github.io/People.html) include undergraduate, master's , doctoral, and postdoctoral researcher associates.
+[Current and previous lab members](People.qmd) include undergraduate, master's , doctoral, and postdoctoral researcher associates.
 
 The lab is located in the [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php) at [Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/), and affiliated with the [Cognitive and Comparative Psychology Training area](https://ccp-cuny.github.io) of the [Psychology Doctoral program at the Graduate Center of CUNY](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology).
 
@@ -76,7 +41,7 @@ The lab is located in the [Department of Psychology](http://www.brooklyn.cuny.ed
 
 ## Contact
 
-[Matthew Crump](https://crumplab.com/people/matt_crump.html)
+[Matthew Crump](people/matt_crump.qmd)
 
 -   Professor
 -   [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)
@@ -86,3 +51,4 @@ The lab is located in the [Department of Psychology](http://www.brooklyn.cuny.ed
 -   Phone: 718-951-5000 x. 6068
 -   email: [mcrump\@brooklyn.cuny.edu](mailto:mcrump@brooklyn.cuny.edu){.email}
 -   Lab: 4303 James Hall
+:::
