@@ -30,10 +30,6 @@ website:
       - icon: github
         href: https://github.com/CrumpLab
         aria-label: GitHub
-      - icon: mastodon
-        href: https://fosstodon.org/@MattCrumpLab
-      - text: bluesky
-        href: https://bsky.app/profile/mattcrumplab.bsky.social
       - icon: youtube
         href: https://www.youtube.com/c/CrumpsComputationalCognitionLab
         aria-label: Youtube

@@ -26,12 +26,51 @@ Shiny Apps, R packages, and various things
 
 ------------------------------------------------------------------------
 
-# R Packages
-
+# Audio Plugins
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
+::: {.column width="70%"}
+## [MINERVA Space Echo](https://www.crumplab.com/MinervaSpaceEcho/)
+
+An experimental audio effect (AU / VST3 for macOS) that treats Hintzman's MINERVA II multiple-trace memory model as a tape echo.
+
+Manual: <https://www.crumplab.com/MinervaSpaceEcho/>, source code: <https://github.com/CrumpLab/MinervaSpaceEcho>
+:::
+
+::: {.column width="30%"}
+```{r minervaspaceecho, out.width=100, echo=F}
+knitr::include_graphics("images/minervaspaceecho.png")
+```
+:::
+:::::
+
+------------------------------------------------------------------------
+
+::::: columns
+::: {.column width="70%"}
+## [PCASynth](https://github.com/CrumpLab/PCASynth)
+
+An experimental synthesizer (VST3 for macOS) built on a principal components analysis of wav files.
+
+Source code: <https://github.com/CrumpLab/PCASynth>
+:::
+
+::: {.column width="30%"}
+```{r pcasynth, out.width=100, echo=F}
+knitr::include_graphics("images/pcasynth.png")
+```
+:::
+:::::
+
+------------------------------------------------------------------------
+
+# R Packages
+
+------------------------------------------------------------------------
+
+::::: columns
 ::: {.column width="70%"}
 ## [midiblender](https://www.crumplab.com/midiblender/)
 
@@ -45,11 +84,11 @@ This is the beginnings of an #rstats package for experimental mangling of #MIDI 
 knitr::include_graphics("images/midiblender.jpg")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [gptaddin](https://crumplab.github.io/gptaddin/)
 
@@ -61,11 +100,11 @@ Addins and shiny app for sending text to LLMs at OpenAI. The addins are focused 
 knitr::include_graphics("images/gptaddin.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [vertical](https://crumplab.github.io/vertical/)
 
@@ -77,11 +116,11 @@ R-studio project template and workflow for sharing psychological research projec
 knitr::include_graphics("images/vertical.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [RsemanticLibrarian](https://crumplab.github.io/RsemanticLibrarian/)
 
@@ -93,11 +132,11 @@ R functions for creating semantic librarians, a tool for vectorizing and visuali
 knitr::include_graphics("images/sl_hex.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [jspsychr](https://crumplab.github.io/jspsychr/)
 
@@ -109,11 +148,11 @@ Write and run jspsych experiments using R studio.
 knitr::include_graphics("images/jspsychr.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [playjareyesores](https://crumplab.github.io/playjareyesores/)
 
@@ -125,11 +164,11 @@ Functions for detecting textual overlap (e.g., possible plagiarism) between docu
 knitr::include_graphics("images/playjareyesores.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [conflictPower](https://crumplab.github.io/conflictPower/)
 
@@ -141,7 +180,7 @@ Monte-carlo based power analysis for cognitive control designs. <https://crumpla
 knitr::include_graphics("images/ConflictPower.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -161,10 +200,10 @@ A semantic search engine for the APA abstract database (most of the Experimental
 
 We (Harinder Aujla, Randy Jamieson, and Matthew Crump) use semantic vectors from BEAGLE (Jones & Mewhort, 2007) to compute the similarity between abstracts, and authors, and authors and abstracts.
 
--   <https://crumplab.shinyapps.io/SemanticLibrarian/>
--   source code: <https://github.com/CrumpLab/SemanticLibrarian>
--   Open science framework project: <https://osf.io/wfcmg/>
--   Publication: In press at Behavioral Research Methods.
+- <https://crumplab.shinyapps.io/SemanticLibrarian/>
+- source code: <https://github.com/CrumpLab/SemanticLibrarian>
+- Open science framework project: <https://osf.io/wfcmg/>
+- Publication: In press at Behavioral Research Methods.
 
 ------------------------------------------------------------------------
 

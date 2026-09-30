@@ -2294,5 +2294,19 @@
     "title": "Publications",
     "section": "Forthcoming",
     "text": "Forthcoming\n\nJamieson, R. K., & Crump, M. J. C. (2025). An instance theory of associative inference. Accepted at American Journal of Psychology.\nJohns, B. T., Jamieson, R. K., Crump, M. J. C., & Jones, M. N. (2024). Instance memory models as a general computational framework for exploring language processing: Bringing the lexicon to life. PsyArXiv - Forthcoming in Linguistics Vanguard. https://doi.org/10.31234/osf.io/qtmhx   pdf"
+  },
+  {
+    "objectID": "Apps.html#minerva-space-echo",
+    "href": "Apps.html#minerva-space-echo",
+    "title": "Apps",
+    "section": "MINERVA Space Echo",
+    "text": "MINERVA Space Echo\nAn experimental audio effect (AU / VST3 for macOS) that treats Hintzman’s MINERVA II multiple-trace memory model as a tape echo.\nManual: https://www.crumplab.com/MinervaSpaceEcho/, source code: https://github.com/CrumpLab/MinervaSpaceEcho"
+  },
+  {
+    "objectID": "Apps.html#pcasynth",
+    "href": "Apps.html#pcasynth",
+    "title": "Apps",
+    "section": "PCASynth",
+    "text": "PCASynth\nAn experimental synthesizer (VST3 for macOS) built on a principal components analysis of wav files.\nSource code: https://github.com/CrumpLab/PCASynth"
   }
 ]
