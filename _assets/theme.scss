@@ -13,7 +13,7 @@ p, li, h1, .description {
 }
 
 // Banner that replaces the title on top-level pages. Its <p> wrapper gets
-// the same 70ch limit as prose, except on the home page (`banner-wide: true`).
+// the same 70ch limit as prose.
 .page-banner-image img {
   width: 100%;
   height: auto;
@@ -21,20 +21,6 @@ p, li, h1, .description {
 
 .page-banner {
   padding-top: 1em;
-}
-
-p.page-banner-wide {
-  max-width: 100%;
-}
-
-// Home page: intro text spans the full width, and the page grid hides
-// per-item metadata.
-.home p {
-  max-width: 100%;
-}
-
-#listing-front-list .metadata {
-  display: none;
 }
 
 // Publications list: hanging indent for each reference.

@@ -1,0 +1,13 @@
+<ul class="fp-cards">
+<% for (const item of items) { %>
+<li class="fp-card">
+<% if (item.image) { %>
+<div class="fp-card-image"><% if (item.url) { %><a href="<%- item.url %>"><img src="<%- item.image %>" alt="" loading="lazy"></a><% } else { %><img src="<%- item.image %>" alt="" loading="lazy"><% } %></div>
+<% } %>
+<div class="fp-card-body">
+<div class="fp-card-title"><% if (item.url) { %><a href="<%- item.url %>"><%- item.title %></a><% } else { %><%- item.title %><% } %></div>
+<% if (item.keywords) { %><div class="fp-card-tags"><% for (const k of item.keywords) { %><span class="fp-tag"><%- k %></span><% } %></div><% } %>
+</div>
+</li>
+<% } %>
+</ul>

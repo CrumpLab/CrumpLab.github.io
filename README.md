@@ -8,7 +8,8 @@ This website is built using Quarto. Run `quarto render` to build the site into `
 
 - `_quarto.yml`: site configuration (navbar, theme, freeze)
 - `_assets/`: site theme (`theme.scss`) and the banner title block (`title-block.html`)
-- `listings/`: YAML data and the card template for the Courses, Fun, and home page listings
+- `home/`: styles, listing templates, and R helpers for the home page (`index.qmd`)
+- `listings/`: YAML data and the card template for the Courses and Fun listings
 - `blog/`, `people/`, `publications/`: blog posts, lab member pages, and publication data
 - `_freeze/`: stored R results, so old pages don't re-run their code on every render
 

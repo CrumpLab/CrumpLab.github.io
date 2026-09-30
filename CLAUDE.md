@@ -17,7 +17,7 @@ Pages from the `docs/` folder on `master`, with the custom domain in `docs/CNAME
 |---|---|
 | Navbar, site title, theme | `_quarto.yml` |
 | Site-wide styles | `_assets/theme.scss` |
-| Home page cards (the "Pages" grid) | the `listing` in `index.qmd`; extra cards in `listings/front-page.yaml` |
+| Home page | `index.qmd` (sections as cards), styles in `home/home.css` |
 | Courses | `listings/courses.yaml` |
 | Fun page | `listings/fun.yaml` |
 | Apps, Books, Opportunities | the markdown in `Apps.qmd`, `Books.qmd`, `Opportunities.qmd` |
@@ -27,7 +27,8 @@ Pages from the `docs/` folder on `master`, with the custom domain in `docs/CNAME
 
 ## Conventions
 
-- **Page banners:** top-level pages set `banner: images/<name>_banner.jpg` (plus `image:` for the home grid and social cards) in their front matter; `banner-wide: true` lets it span the full page (home page). `_assets/title-block.html` shows the banner in place of the visible title. Don't add CSS or R chunks to hide titles.
+- **Page banners:** top-level pages set `banner: images/<name>_banner.jpg` (plus `image:` for social cards) in their front matter. `_assets/title-block.html` shows the banner in place of the visible title. Don't add CSS or R chunks to hide titles.
+- **Home page:** `index.qmd` is one scrolling page of cards, one per section, each linking to its full page (`page-layout: custom`, `hide-title-block: true`). Recent publications come from the .bib files through `home/helpers.R`. The latest 3 blog posts, 4 courses and the Fun items are Quarto listings using `home/posts.ejs` and `home/cards.ejs`. Books, software, and people are hand-written in `index.qmd`, so update them there when the full pages change. Card colours (`.c-pink`, `.c-violet`, ...) come from the logo's hexagon spectrum.
 - **Card listings:** Courses and Fun use `listings/card-list.ejs`. Each YAML item takes `title`, `description`, `image`, and optionally `url` and `keywords`.
 - **Apps and Books entries** use a 70/30 `columns` layout: text on the left, image on the right (`![](images/x.png){width="100px"}` for apps, `200px` for books). Copy an existing entry when adding one.
 - **Images** for top-level pages go in `images/`. Blog posts keep their images inside their own folder.

@@ -1,54 +1,196 @@
 ---
-title: crumplab
+title: "crumplab"
+pagetitle: "Computational Cognition Lab · Brooklyn College of CUNY"
 description: "Home page for the Computational Cognition Lab at Brooklyn College, run by Matt Crump"
 image: images/logo2.png
 toc: false
+hide-title-block: true
+page-layout: custom
+code-copy: false
+css: home/home.css
+execute:
+  echo: false
 listing:
-  contents: 
-    - Publications.qmd
-    - People.qmd
-    - Books.qmd
-    - Courses.qmd
-    - Opportunities.qmd
-    - Blog.qmd
-    - Fun.qmd
-    - listings/front-page.yaml
-  id: front-list
-  sort: "order"
-  type: grid
-  grid-columns: 4
-  categories: false
-  image-align: 'right'
-  image-height: '100%'
-format:
-  html:
-    page-layout: full
-banner: images/front_banner.jpg
-banner-wide: true
+  - id: latest-posts
+    contents: blog
+    sort: "date desc"
+    max-items: 3
+    date-format: "MMM D, YYYY"
+    template: home/posts.ejs
+  - id: recent-courses
+    contents: listings/courses.yaml
+    max-items: 4
+    template: home/cards.ejs
+  - id: fun-list
+    contents: listings/fun.yaml
+    template: home/cards.ejs
 ---
 
-::: home
+```{r}
+source("home/helpers.R")
+```
+
+::::::::::::::::::::::::::::::::::::::: {.fp .home}
+:::::::: fp-hero
+:::::: fp-hero-text
+[\~/crumplab]{.fp-kicker}
+
+# Computational Cognition Lab
+
+::: fp-lead
 The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition.
-
-[Current and previous lab members](People.qmd) include undergraduate, master's , doctoral, and postdoctoral researcher associates.
-
-The lab is located in the [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php) at [Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/), and affiliated with the [Cognitive and Comparative Psychology Training area](https://ccp-cuny.github.io) of the [Psychology Doctoral program at the Graduate Center of CUNY](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology).
-
-## Pages
-
-::: {#front-list}
 :::
 
-## Contact
+::: fp-chips
+[computational modeling]{.chip .c-pink} [natural language processing]{.chip .c-violet} [reproducible research]{.chip .c-blue} [big data & online methods]{.chip .c-green} [statistics, R & open source]{.chip .c-yellow} [learning, memory, attention & performance]{.chip .c-orange}
+:::
 
+::: fp-affil
+[Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php), Brooklyn College · [Cognitive and Comparative Psychology](https://ccp-cuny.github.io), Graduate Center of CUNY
+:::
+::::::
+
+::: fp-hero-art
+![](images/ccl-logo-animated.svg){fig-alt="Hexagon diagram of the lab's research areas: computational modeling, natural language processing, reproducible research, big data and online methods, statistics, R and open source, and learning, memory, attention and performance."}
+:::
+::::::::
+
+:::::::::::::::::::::::::::::::: bento
+:::: {#publications .card .span-8 .c-pink}
+::: card-head
+[┌─ publications]{.card-label} [all publications →](Publications.qmd){.fp-more}
+:::
+
+## Recent work
+
+```{r}
+#| output: asis
+recent_pubs(5)
+```
+::::
+
+::::: {#blog .card .span-4 .c-violet}
+::: card-head
+[┌─ blog]{.card-label} [all posts →](Blog.qmd){.fp-more}
+:::
+
+## Latest posts
+
+::: {#latest-posts}
+:::
+:::::
+
+::::: {#books .card .span-12 .c-blue}
+::: card-head
+[┌─ books]{.card-label} [all books →](Books.qmd){.fp-more}
+:::
+
+## Open textbooks
+
+Free, open-source books for teaching cognition, statistics, research methods, and programming, all licensed under Creative Commons.
+
+::: shelf
+[![](images/2530_image.jpg)Instances of Cognition](https://www.crumplab.com/cognition/textbook/index.html){.shelf-item} [![](images/TextbookCover.png)Answering Questions with Data](https://crumplab.github.io/statistics/){.shelf-item} [![](images/LabmanualCover.png)Answering Questions with Data: The Lab Manual](https://crumplab.github.io/statisticsLab/){.shelf-item} [![](images/RstatsCover.png)Reproducible statistics for psychologists with R](https://crumplab.github.io/rstatsforpsych/){.shelf-item} [![](images/ResearchMethods.png)Research Methods for Psychology](https://crumplab.github.io/ResearchMethods/){.shelf-item} [![](images/Programming.png)Programming for Psychologists](https://crumplab.github.io/programmingforpsych/){.shelf-item}
+:::
+:::::
+
+::::: {#courses .card .span-6 .c-green}
+::: card-head
+[┌─ courses]{.card-label} [all courses →](Courses.qmd){.fp-more}
+:::
+
+## Teaching
+
+::: {#recent-courses}
+:::
+:::::
+
+::::: {#software .card .span-6 .c-yellow}
+::: card-head
+[┌─ software]{.card-label} [all software →](Apps.qmd){.fp-more}
+:::
+
+## Apps and packages
+
+::: app-grid
+[![](images/minervaspaceecho.png)MINERVA Space Echo [audio plugin]{.fp-note}](https://www.crumplab.com/MinervaSpaceEcho/){.app} [![](images/pcasynth.png)PCASynth [audio plugin]{.fp-note}](https://github.com/CrumpLab/PCASynth){.app} [![](images/sl_hex.png)RsemanticLibrarian [R package]{.fp-note}](https://crumplab.github.io/RsemanticLibrarian/){.app} [![](images/midiblender.jpg)midiblender [R package]{.fp-note}](https://www.crumplab.com/midiblender/){.app} [![](images/vertical.png)vertical [R package]{.fp-note}](https://crumplab.github.io/vertical/){.app} [![](images/jspsychr.png)jspsychr [R package]{.fp-note}](https://crumplab.github.io/jspsychr/){.app}
+:::
+:::::
+
+:::::: {#people .card .span-4 .c-orange}
+::: card-head
+[┌─ people]{.card-label} [all people →](People.qmd){.fp-more}
+:::
+
+:::: person
+![](people/imgs/Crump.jpg){fig-alt="Portrait of Matthew Crump"}
+
+::: person-text
 [Matthew Crump](people/matt_crump.qmd)
 
--   Professor
--   [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php)
--   [Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/)
--   2900 Bedford Avenue, Brooklyn, NY 11210
--   Office: 4401 James Hall
--   Phone: 718-951-5000 x. 6068
--   email: [mcrump\@brooklyn.cuny.edu](mailto:mcrump@brooklyn.cuny.edu){.email}
--   Lab: 4303 James Hall
+Principal Investigator
 :::
+::::
+
+The lab is run by Dr. Matthew Crump and student research assistants from undergraduates to doctoral students.
+::::::
+
+:::: {#join .card .span-4 .c-pink}
+::: card-head
+[┌─ join]{.card-label} [about joining →](Opportunities.qmd){.fp-more}
+:::
+
+## Opportunities
+
+Dr. Crump has mentored students interested in cognition at all levels. There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr. Crump is serving a three year term as Department Chair.
+::::
+
+::::: {#fun .card .span-4 .c-violet}
+::: card-head
+[┌─ fun]{.card-label} [more →](Fun.qmd){.fp-more}
+:::
+
+## Elsewhere
+
+::: {#fun-list}
+:::
+:::::
+
+:::::::: {#contact .card .span-12 .card-contact}
+::: card-head
+[┌─ contact]{.card-label}
+:::
+
+:::::: contact-grid
+::: {}
+## Matthew Crump
+
+Professor, Department of Psychology\
+Brooklyn College of CUNY
+
+[mcrump\@brooklyn.cuny.edu](mailto:mcrump@brooklyn.cuny.edu)
+:::
+
+::: {}
+[address]{.contact-key}
+
+2900 Bedford Avenue\
+Brooklyn, NY 11210
+
+Office: 4401 James Hall\
+Lab: 4303 James Hall
+:::
+
+::: {}
+[phone]{.contact-key}
+
+718-951-5000 x. 6068
+
+[elsewhere]{.contact-key}
+
+[GitHub](https://github.com/CrumpLab) · [YouTube](https://www.youtube.com/c/CrumpsComputationalCognitionLab) · [Google Scholar](https://scholar.google.com/citations?user=49EVuVcAAAAJ&hl=en)
+:::
+::::::
+::::::::
+::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::

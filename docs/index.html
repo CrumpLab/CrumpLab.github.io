@@ -8,7 +8,7 @@
 
 <meta name="description" content="Home page for the Computational Cognition Lab at Brooklyn College, run by Matt Crump">
 
-<title>crumplab</title>
+<title>Computational Cognition Lab · Brooklyn College of CUNY – crumplab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-709c88ada84827509c71d82300a3e2c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44e72afd776a44e293ec3787b4d9ab8f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,20 +79,77 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-front-list .list');
+    const listingTargetEl = window.document.querySelector('#listing-latest-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      valueNames: ['listing-project','listing-website','listing-execute','listing-format','listing-editor','listing-engines','listing-language','listing-title','listing-description','listing-author','listing-date','listing-date-modified','listing-image','listing-opengraph','listing-categories','listing-path','listing-outputHref','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-comments','listing-header-includes','listing-resource_files','listing-bibliography','listing-draft','listing-pagetitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-project","listing-website","listing-execute","listing-format","listing-editor","listing-engines","listing-language","listing-title","listing-description","listing-author","listing-date","listing-date-modified","listing-image","listing-opengraph","listing-categories","listing-path","listing-outputHref","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-comments","listing-header-includes","listing-resource_files","listing-bibliography","listing-draft","listing-pagetitle"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-front-list'] = new List('listing-front-list', options);
+    window['quarto-listings']['listing-latest-posts'] = new List('listing-latest-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-recent-courses .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-url','listing-image','listing-keywords',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-url","listing-image","listing-keywords"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-recent-courses'] = new List('listing-recent-courses', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-fun-list .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-url','listing-image','listing-keywords',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-url","listing-image","listing-keywords"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-fun-list'] = new List('listing-fun-list', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -145,13 +202,14 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="crumplab">
+<link rel="stylesheet" href="home/home.css">
+<meta property="og:title" content="Computational Cognition Lab · Brooklyn College of CUNY">
 <meta property="og:description" content="Home page for the Computational Cognition Lab at Brooklyn College, run by Matt Crump">
 <meta property="og:image" content="https://crumplab.com/images/logo2.png">
 <meta property="og:site_name" content="crumplab">
 <meta property="og:image:height" content="964">
 <meta property="og:image:width" content="1000">
-<meta name="twitter:title" content="crumplab">
+<meta name="twitter:title" content="Computational Cognition Lab · Brooklyn College of CUNY">
 <meta name="twitter:description" content="Home page for the Computational Cognition Lab at Brooklyn College, run by Matt Crump">
 <meta name="twitter:image" content="https://crumplab.com/images/logo2.png">
 <meta name="twitter:image-height" content="964">
@@ -159,7 +217,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -237,215 +295,304 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block page-banner">
-<h1 class="title visually-hidden display-7">crumplab</h1>
-<p class="page-banner-image page-banner-wide"><img src="images/front_banner.jpg" alt=""></p>
-</header>
 
 
 
-<div class="home">
+
+<div class="fp home">
+<div class="fp-hero">
+<div class="fp-hero-text">
+<p><span class="fp-kicker">~/crumplab</span></p>
+<section id="computational-cognition-lab" class="level1">
+<h1>Computational Cognition Lab</h1>
+<div class="fp-lead">
 <p>The Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition.</p>
-<p><a href="./People.html">Current and previous lab members</a> include undergraduate, master’s , doctoral, and postdoctoral researcher associates.</p>
-<p>The lab is located in the <a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php">Department of Psychology</a> at <a href="http://www.brooklyn.cuny.edu/">Brooklyn College of CUNY</a>, and affiliated with the <a href="https://ccp-cuny.github.io">Cognitive and Comparative Psychology Training area</a> of the <a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology">Psychology Doctoral program at the Graduate Center of CUNY</a>.</p>
-<section id="pages" class="level2">
-<h2 class="anchored" data-anchor-id="pages">Pages</h2>
-<div id="listing-front-list" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1790730713668" data-listing-reading-time-sort="2" data-listing-word-count-sort="253">
-<a href="./Publications.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./images/publications_banner.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Publications
-</h5>
-<div class="card-text listing-description delink">
-<p>Peer-reviewed publications. They should all have downloadable pdfs, and if they don’t email me.</p>
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
+<div class="fp-chips">
+<p><span class="chip c-pink">computational modeling</span> <span class="chip c-violet">natural language processing</span> <span class="chip c-blue">reproducible research</span> <span class="chip c-green">big data &amp; online methods</span> <span class="chip c-yellow">statistics, R &amp; open source</span> <span class="chip c-orange">learning, memory, attention &amp; performance</span></p>
+</div>
+<div class="fp-affil">
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php">Department of Psychology</a>, Brooklyn College · <a href="https://ccp-cuny.github.io">Cognitive and Comparative Psychology</a>, Graduate Center of CUNY</p>
+</div>
+</section>
+</div>
+<div class="fp-hero-art">
+<p><img src="images/ccl-logo-animated.svg" class="img-fluid" alt="Hexagon diagram of the lab's research areas: computational modeling, natural language processing, reproducible research, big data and online methods, statistics, R and open source, and learning, memory, attention and performance."></p>
 </div>
 </div>
+<div class="bento">
+<div id="publications" class="card span-8 c-pink">
+<div class="card-head">
+<p><span class="card-label">┌─ publications</span> <a href="./Publications.html" class="fp-more">all publications →</a></p>
 </div>
-</div></a>
+<section id="recent-work" class="level2">
+<h2 data-anchor-id="recent-work">Recent work</h2>
+<ol class="pub-list">
+<li class="pub">
+<span class="pub-year">2025</span><span class="pub-body"><a class="pub-title" href="./Publications.html">An instance theory of associative inference</a><span class="pub-meta"><span class="pub-authors">Jamieson &amp; <strong>Crump</strong></span><span class="pub-venue">Accepted at American Journal of Psychology</span><span class="pub-status">forthcoming</span></span></span>
+</li>
+<li class="pub">
+<span class="pub-year">2024</span><span class="pub-body"><a class="pub-title" href="https://doi.org/10.31234/osf.io/qtmhx">Instance Memory Models as a General Computational Framework for Exploring Language Processing: Bringing the Lexicon to Life</a><span class="pub-meta"><span class="pub-authors">Johns, Jamieson, <strong>Crump</strong> &amp; Jones</span><span class="pub-venue">PsyArXiv - Forthcoming in Linguistics Vanguard</span><span class="pub-status">forthcoming</span></span></span>
+</li>
+<li class="pub">
+<span class="pub-year">2023</span><span class="pub-body"><a class="pub-title" href="https://doi.org/10.1123/mc.2022-0106">Motor-Evoked Potentials for Early Individual Elements of an Action Sequence During Planning Reflect Parallel Activation Processes</a><span class="pub-meta"><span class="pub-authors">Behmer, <strong>Crump</strong> &amp; Jantzen</span><span class="pub-venue">Motor Control</span></span></span>
+</li>
+<li class="pub">
+<span class="pub-year">2021</span><span class="pub-body"><a class="pub-title" href="./Publications.html">Instances of Cognition: Questions, Methods, Findings, Explanations, Applications, and Implications. Textbook and Open educational Resource</a><span class="pub-meta"><span class="pub-authors"><strong>Crump</strong></span><span class="pub-venue">crumplab.com</span></span></span>
+</li>
+<li class="pub">
+<span class="pub-year">2021</span><span class="pub-body"><a class="pub-title" href="https://doi.org/10.21203/rs.3.rs-671507/v1">The Negative Contingency Illusion: A Cognitive Bias Leading to Misjudgement of Protection</a><span class="pub-meta"><span class="pub-authors">Piech, <strong>Crump</strong> &amp; Zald</span><span class="pub-venue"></span></span></span>
+</li>
+</ol>
+</section>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1790730713667" data-listing-reading-time-sort="3" data-listing-word-count-sort="488">
-<a href="./People.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./images/people_banner.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-People
-</h5>
-<div class="card-text listing-description delink">
-<p>The lab is run by Dr.&nbsp;Matthew Crump and student research assistants from undergraduates to doctoral students.</p>
+<div id="blog" class="card span-4 c-violet">
+<div class="card-head">
+<p><span class="card-label">┌─ blog</span> <a href="./Blog.html" class="fp-more">all posts →</a></p>
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
+<section id="latest-posts" class="level2">
+<h2 data-anchor-id="latest-posts">Latest posts</h2>
+<div id="listing-latest-posts" class="quarto-listing quarto-listing-container-custom">
+<ol class="fp-posts">
+<li class="fp-post">
+<div class="fp-post-image">
+<a href="./blog/557_chair/index.html"><img src="./blog/557_chair/cover.jpg" alt="" loading="lazy"></a>
 </div>
+<div class="fp-post-date">
+May 21, 2024
 </div>
+<div class="fp-post-body">
+<div class="fp-post-title">
+<a href="./blog/557_chair/index.html">And now for something completely different: Department Chair</a>
 </div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1790730725676" data-listing-reading-time-sort="6" data-listing-word-count-sort="1035">
-<a href="./Books.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./images/books_banner.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Books
-</h5>
-<div class="card-text listing-description delink">
-<p>Open-educational textbooks and resources developed written by Matt Crump. These resources are free to use and share.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1790730809184" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
-<a href="./Courses.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./images/courses_banner.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Courses
-</h5>
-<div class="card-text listing-description delink">
-<p>A list of current and previous courses taught at Brooklyn College of CUNY and the Graduate Center of CUNY. Many of them include freely shared course materials.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
+<div class="fp-post-desc">
+Very brief comments on the next three years.
 </div>
 </div>
+</li>
+<li class="fp-post">
+<div class="fp-post-image">
+<a href="./blog/558_jatos_notes/index.html"><img src="./blog/558_jatos_notes/cover.jpg" alt="" loading="lazy"></a>
 </div>
-</div></a>
+<div class="fp-post-date">
+Feb 28, 2024
 </div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1790730713668" data-listing-reading-time-sort="6" data-listing-word-count-sort="1091">
-<a href="./Opportunities.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./images/opportunities_banner.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Join
-</h5>
-<div class="card-text listing-description delink">
-<p>Interested in joining the lab? Check this page out.</p>
+<div class="fp-post-body">
+<div class="fp-post-title">
+<a href="./blog/558_jatos_notes/index.html">Quick notes on my jatos setup</a>
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
+<div class="fp-post-desc">
+Short set of notes on how I use jatos to serve experiments to the web
 </div>
 </div>
+</li>
+<li class="fp-post">
+<div class="fp-post-image">
+<a href="./blog/559_midiblender/index.html"><img src="./blog/559_midiblender/cover.jpg" alt="" loading="lazy"></a>
 </div>
-</div></a>
+<div class="fp-post-date">
+Feb 9, 2024
 </div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1790730713666" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<a href="./Blog.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./images/blog_banner.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Blog
-</h5>
-<div class="card-text listing-description delink">
-<p>Various musings, usually about cognition, teaching, and other stuff, incomplete notes, digital breadcrumbs on scratchpads.</p>
+<div class="fp-post-body">
+<div class="fp-post-title">
+<a href="./blog/559_midiblender/index.html">midiblender: Experiments in genRative MIDI mangling</a>
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
+<div class="fp-post-desc">
+An experimental R package for MIDI manipulation in R.
 </div>
 </div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1790730809184" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<a href="./Fun.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./images/fun_banner.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Fun
-</h5>
-<div class="card-text listing-description delink">
-<p>Some links to extra-curricular fun stuff like music and visual creations.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7">
-<a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/front/crumplab_banner_youtube.jpg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Youtube Channel
-</h5>
-<div class="card-text listing-description delink">
-<p>This channel contains screencasts and tutorial videos, as well as lectures for whole courses. The focus is usually on cognition or learning programming skills (R mostly) for…</p>
-</div>
-</div>
-</div></a>
-</div>
-</div>
+</li>
+</ol>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p><a href="./people/matt_crump.html">Matthew Crump</a></p>
-<ul>
-<li>Professor</li>
-<li><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php">Department of Psychology</a></li>
-<li><a href="http://www.brooklyn.cuny.edu/">Brooklyn College of CUNY</a></li>
-<li>2900 Bedford Avenue, Brooklyn, NY 11210</li>
-<li>Office: 4401 James Hall</li>
-<li>Phone: 718-951-5000 x. 6068</li>
-<li>email: <a href="mailto:mcrump@brooklyn.cuny.edu" class="email">mcrump@brooklyn.cuny.edu</a></li>
-<li>Lab: 4303 James Hall</li>
-</ul>
+</div>
+<div id="books" class="card span-12 c-blue">
+<div class="card-head">
+<p><span class="card-label">┌─ books</span> <a href="./Books.html" class="fp-more">all books →</a></p>
+</div>
+<section id="open-textbooks" class="level2">
+<h2 data-anchor-id="open-textbooks">Open textbooks</h2>
+<p>Free, open-source books for teaching cognition, statistics, research methods, and programming, all licensed under Creative Commons.</p>
+<div class="shelf">
+<p><a href="https://www.crumplab.com/cognition/textbook/index.html" class="shelf-item"><img src="images/2530_image.jpg" class="img-fluid">Instances of Cognition</a> <a href="https://crumplab.github.io/statistics/" class="shelf-item"><img src="images/TextbookCover.png" class="img-fluid">Answering Questions with Data</a> <a href="https://crumplab.github.io/statisticsLab/" class="shelf-item"><img src="images/LabmanualCover.png" class="img-fluid">Answering Questions with Data: The Lab Manual</a> <a href="https://crumplab.github.io/rstatsforpsych/" class="shelf-item"><img src="images/RstatsCover.png" class="img-fluid">Reproducible statistics for psychologists with R</a> <a href="https://crumplab.github.io/ResearchMethods/" class="shelf-item"><img src="images/ResearchMethods.png" class="img-fluid">Research Methods for Psychology</a> <a href="https://crumplab.github.io/programmingforpsych/" class="shelf-item"><img src="images/Programming.png" class="img-fluid">Programming for Psychologists</a></p>
+</div>
 </section>
+</div>
+<div id="courses" class="card span-6 c-green">
+<div class="card-head">
+<p><span class="card-label">┌─ courses</span> <a href="./Courses.html" class="fp-more">all courses →</a></p>
+</div>
+<section id="teaching" class="level2">
+<h2 data-anchor-id="teaching">Teaching</h2>
+<div id="listing-recent-courses" class="quarto-listing quarto-listing-container-custom">
+<ul class="fp-cards">
+<li class="fp-card">
+<div class="fp-card-image">
+<a href="https://crumplab.com/cognition"><img src="images/2530_image.jpg" alt="" loading="lazy"></a>
+</div>
+<div class="fp-card-body">
+<div class="fp-card-title">
+<a href="https://crumplab.com/cognition">Psyc 2530: Introduction to Cognitive Psychology (Asynchronous Online)</a>
+</div>
+<div class="fp-card-tags">
+<span class="fp-tag">Fall 2023</span><span class="fp-tag">Undergraduate</span><span class="fp-tag">OER</span>
+</div>
+</div>
+</li>
+<li class="fp-card">
+<div class="fp-card-image">
+<a href="https://crumplab.com/psyc2001"><img src="images/jspsych-logo.jpg" alt="" loading="lazy"></a>
+</div>
+<div class="fp-card-body">
+<div class="fp-card-title">
+<a href="https://crumplab.com/psyc2001">Psyc 2001: Laboratory Experience</a>
+</div>
+<div class="fp-card-tags">
+<span class="fp-tag">Fall 2023</span><span class="fp-tag">Undergraduate</span>
+</div>
+</div>
+</li>
+<li class="fp-card">
+<div class="fp-card-image">
+<a href="https://crumplab.github.io/peopleofnyc/"><img src="images/peopleNYC.jpg" alt="" loading="lazy"></a>
+</div>
+<div class="fp-card-body">
+<div class="fp-card-title">
+<a href="https://crumplab.github.io/peopleofnyc/">MCHC 1002: People of New York City</a>
+</div>
+<div class="fp-card-tags">
+<span class="fp-tag">Spring 2023</span><span class="fp-tag">Undergraduate</span><span class="fp-tag">Macaulay Honors College</span>
+</div>
+</div>
+</li>
+<li class="fp-card">
+<div class="fp-card-image">
+<a href="https://crumplab.github.io/psyc3470"><img src="images/ads.png" alt="" loading="lazy"></a>
+</div>
+<div class="fp-card-body">
+<div class="fp-card-title">
+<a href="https://crumplab.github.io/psyc3470">Psyc 3470/SOCY 3507: Data Analytics and Data Visualization in the Social and Behavioral Sciences</a>
+</div>
+<div class="fp-card-tags">
+<span class="fp-tag">Spring 2023</span><span class="fp-tag">Undergaduate</span><span class="fp-tag">OER</span>
+</div>
+</div>
+</li>
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+</div>
+<div id="software" class="card span-6 c-yellow">
+<div class="card-head">
+<p><span class="card-label">┌─ software</span> <a href="./Apps.html" class="fp-more">all software →</a></p>
+</div>
+<section id="apps-and-packages" class="level2">
+<h2 data-anchor-id="apps-and-packages">Apps and packages</h2>
+<div class="app-grid">
+<p><a href="https://www.crumplab.com/MinervaSpaceEcho/" class="app"><img src="images/minervaspaceecho.png" class="img-fluid">MINERVA Space Echo <span class="fp-note">audio plugin</span></a> <a href="https://github.com/CrumpLab/PCASynth" class="app"><img src="images/pcasynth.png" class="img-fluid">PCASynth <span class="fp-note">audio plugin</span></a> <a href="https://crumplab.github.io/RsemanticLibrarian/" class="app"><img src="images/sl_hex.png" class="img-fluid">RsemanticLibrarian <span class="fp-note">R package</span></a> <a href="https://www.crumplab.com/midiblender/" class="app"><img src="images/midiblender.jpg" class="img-fluid">midiblender <span class="fp-note">R package</span></a> <a href="https://crumplab.github.io/vertical/" class="app"><img src="images/vertical.png" class="img-fluid">vertical <span class="fp-note">R package</span></a> <a href="https://crumplab.github.io/jspsychr/" class="app"><img src="images/jspsychr.png" class="img-fluid">jspsychr <span class="fp-note">R package</span></a></p>
+</div>
+</section>
+</div>
+<div id="people" class="card span-4 c-orange">
+<div class="card-head">
+<p><span class="card-label">┌─ people</span> <a href="./People.html" class="fp-more">all people →</a></p>
+</div>
+<div class="person">
+<p><img src="people/imgs/Crump.jpg" class="img-fluid" alt="Portrait of Matthew Crump"></p>
+<div class="person-text">
+<p><a href="./people/matt_crump.html">Matthew Crump</a></p>
+<p>Principal Investigator</p>
+</div>
+</div>
+<p>The lab is run by Dr.&nbsp;Matthew Crump and student research assistants from undergraduates to doctoral students.</p>
+</div>
+<div id="join" class="card span-4 c-pink">
+<div class="card-head">
+<p><span class="card-label">┌─ join</span> <a href="./Opportunities.html" class="fp-more">about joining →</a></p>
+</div>
+<section id="opportunities" class="level2">
+<h2 data-anchor-id="opportunities">Opportunities</h2>
+<p>Dr.&nbsp;Crump has mentored students interested in cognition at all levels. There will be limited opportunities for students to gain research experience in the lab for the 2024-2027 period, as Dr.&nbsp;Crump is serving a three year term as Department Chair.</p>
+</section>
+</div>
+<div id="fun" class="card span-4 c-violet">
+<div class="card-head">
+<p><span class="card-label">┌─ fun</span> <a href="./Fun.html" class="fp-more">more →</a></p>
+</div>
+<section id="elsewhere" class="level2">
+<h2 data-anchor-id="elsewhere">Elsewhere</h2>
+<div id="listing-fun-list" class="quarto-listing quarto-listing-container-custom">
+<ul class="fp-cards">
+<li class="fp-card">
+<div class="fp-card-image">
+<a href="https://homophony.quest/"><img src="images/fun/homophony.png" alt="" loading="lazy"></a>
+</div>
+<div class="fp-card-body">
+<div class="fp-card-title">
+<a href="https://homophony.quest/">Music Stuff</a>
+</div>
+<div class="fp-card-tags">
+<span class="fp-tag">synthesizers</span><span class="fp-tag">electro</span><span class="fp-tag">jazz</span><span class="fp-tag">other stuff</span>
+</div>
+</div>
+</li>
+<li class="fp-card">
+<div class="fp-card-image">
+<a href="https://crumplab.github.io/things"><img src="images/fun/things.jpg" alt="" loading="lazy"></a>
+</div>
+<div class="fp-card-body">
+<div class="fp-card-title">
+<a href="https://crumplab.github.io/things">Visual Stuff</a>
+</div>
+<div class="fp-card-tags">
+<span class="fp-tag">painting</span><span class="fp-tag">digital art</span><span class="fp-tag">cartoon like things</span>
+</div>
+</div>
+</li>
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+</div>
+<div id="contact" class="card span-12 card-contact">
+<div class="card-head">
+<p><span class="card-label">┌─ contact</span></p>
+</div>
+<div class="contact-grid">
+<section id="matthew-crump" class="level2">
+<h2 data-anchor-id="matthew-crump">Matthew Crump</h2>
+<p>Professor, Department of Psychology<br>
+Brooklyn College of CUNY</p>
+<p><a href="mailto:mcrump@brooklyn.cuny.edu">mcrump@brooklyn.cuny.edu</a></p>
+</section>
+<div>
+<p><span class="contact-key">address</span></p>
+<p>2900 Bedford Avenue<br>
+Brooklyn, NY 11210</p>
+<p>Office: 4401 James Hall<br>
+Lab: 4303 James Hall</p>
+</div>
+<div>
+<p><span class="contact-key">phone</span></p>
+<p>718-951-5000 x. 6068</p>
+<p><span class="contact-key">elsewhere</span></p>
+<p><a href="https://github.com/CrumpLab">GitHub</a> · <a href="https://www.youtube.com/c/CrumpsComputationalCognitionLab">YouTube</a> · <a href="https://scholar.google.com/citations?user=49EVuVcAAAAJ&amp;hl=en">Google Scholar</a></p>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -455,68 +602,6 @@ Youtube Channel
       icon: icon
     };
     anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/crumplab\.com");

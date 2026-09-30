@@ -1,7 +1,8 @@
-$if(banner)$
+$if(hide-title-block)$
+$elseif(banner)$
 <header id="title-block-header" class="quarto-title-block page-banner">
 <h1 class="title visually-hidden">$title$</h1>
-<p class="page-banner-image$if(banner-wide)$ page-banner-wide$endif$"><img src="$banner$" alt=""></p>
+<p class="page-banner-image"><img src="$banner$" alt=""></p>
 </header>
 $else$
 <header id="title-block-header" class="quarto-title-block default">
