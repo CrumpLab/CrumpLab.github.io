@@ -80,6 +80,9 @@ body {
 .home a {
   color: var(--ink);
   text-decoration: none;
+  /* The site theme sets every link to weight 400; take the surrounding
+     text's weight instead, so linked and unlinked names match. */
+  font-weight: inherit;
 }
 
 .home a:hover {
