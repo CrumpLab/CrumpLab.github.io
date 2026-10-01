@@ -343,6 +343,13 @@ body {
   color: var(--faint);
 }
 
+/* placeholder mark for posts without an image */
+.home .fp-post-image.is-placeholder img {
+  object-fit: contain;
+  background: #ffffff;
+  padding: 7px;
+}
+
 .home .fp-post-title {
   font-weight: 550;
   line-height: 1.35;

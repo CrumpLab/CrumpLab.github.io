@@ -14,7 +14,14 @@
   var cats = function (it) { return (it.categories || []).map(low).join("|"); };
   var search = function (it) { return (String(it.title || "") + " " + String(it.description || "") + " " + (it.categories || []).join(" ")).toLowerCase().replace(/<[^>]+>/g, "").replace(/"/g, ""); };
   var tags = function (it) { return (it.categories || []).map(function (c) { return "<a class=\"btag\" href=\"#category=" + encodeURIComponent(low(c)) + "\" data-tag=\"" + low(c) + "\">" + c + "</a>"; }).join(""); };
-  var thumb = function (it) { return it.image ? "<img src=\"" + it.image + "\" alt=\"\" loading=\"lazy\">" : "<div class=\"glyph-tile\">¶</div>"; };
+  /* posts without an image (or set to the placeholder) get the CCL mark */
+  var PLACEHOLDER = "images/blog-placeholder.png";
+  var isPlaceholder = function (it) { return !it.image || /blog-placeholder/.test(it.image); };
+  var thumb = function (it) {
+    return isPlaceholder(it)
+      ? "<span class=\"ph-tile\"><img src=\"" + PLACEHOLDER + "\" alt=\"\" loading=\"lazy\"></span>"
+      : "<img src=\"" + it.image + "\" alt=\"\" loading=\"lazy\">";
+  };
   var tools = function (withGrep) {
     var h = "<div class=\"tools\"><div class=\"filters\" role=\"group\" aria-label=\"Filter by category\"><button type=\"button\" class=\"filter active\" data-cat=\"all\" aria-pressed=\"true\">all <span>" + items.length + "</span></button>";
     top.forEach(function (k) { h += "<button type=\"button\" class=\"filter\" data-cat=\"" + k + "\" aria-pressed=\"false\">" + labels[k] + " <span>" + counts[k] + "</span></button>"; });

@@ -59,7 +59,7 @@
   <category>psychology</category>
   <guid>https://crumplab.com/blog/557_chair/</guid>
   <pubDate>Tue, 21 May 2024 04:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/557_chair/cover.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://crumplab.com/images/blog-placeholder.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>midiblender: Experiments in genRative MIDI mangling</title>
@@ -194,7 +194,7 @@ Crump, Matthew JC, Gordon D Logan, and Jerry Kimbrough. 2012. <span>“Keeping a
   <category>homophony</category>
   <guid>https://crumplab.com/blog/660_music_cognition/</guid>
   <pubDate>Thu, 18 Jan 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://crumplab.com/blog/660_music_cognition/cover.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://crumplab.com/images/blog-placeholder.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Messing around with Hugging Face’s Stable Diffusion</title>

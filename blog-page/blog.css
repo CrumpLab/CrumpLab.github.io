@@ -246,3 +246,20 @@
     justify-content: flex-start;
   }
 }
+
+/* placeholder mark for posts without an image: shown whole on white */
+.home .lthumb .ph-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.home .lthumb .ph-tile img {
+  width: auto;
+  height: 76%;
+  object-fit: contain;
+}

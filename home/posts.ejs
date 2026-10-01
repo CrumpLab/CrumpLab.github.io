@@ -1,9 +1,8 @@
 <ol class="fp-posts">
 <% for (const item of items) { %>
 <li class="fp-post">
-<% if (item.image) { %>
-<div class="fp-post-image"><a href="<%- item.path %>"><img src="<%- item.image %>" alt="" loading="lazy"></a></div>
-<% } %>
+<% var ph = !item.image || /blog-placeholder/.test(item.image); %>
+<div class="fp-post-image<%- ph ? " is-placeholder" : "" %>"><a href="<%- item.path %>"><img src="<%- ph ? "images/blog-placeholder.png" : item.image %>" alt="" loading="lazy"></a></div>
 <div class="fp-post-date"><%- item.date %></div>
 <div class="fp-post-body">
 <div class="fp-post-title"><a href="<%- item.path %>"><%- item.title %></a></div>

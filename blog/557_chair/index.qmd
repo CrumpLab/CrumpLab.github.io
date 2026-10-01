@@ -3,7 +3,7 @@ title: "And now for something completely different: Department Chair"
 author: "Matt Crump"
 date: 5/21/24
 description: "Very brief comments on the next three years."
-image: "cover.jpg"
+image: "../../images/blog-placeholder.png"
 comments:
   giscus: 
     repo: CrumpLab/crumplab_comments

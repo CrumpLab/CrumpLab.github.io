@@ -3,7 +3,7 @@ title: "Musing about music cognition"
 author: "Matt Crump"
 date: 1/18/24
 description: "It's the beginning of a new semester and i'm thinking about doing more music cognition research this round. Mostly a long ramble."
-image: "cover.jpg"
+image: "../../images/blog-placeholder.png"
 bibliography: references.bib
 comments:
   giscus: 
