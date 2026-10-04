@@ -17,6 +17,12 @@ execute:
 
 ![](images/portfolio.jpg)
 
+::: callout-note
+## Update
+
+The art website has moved. It is now at <https://things.instances.crumplab.com>.
+:::
+
 I recently updated [my visual art website.](https://crumplab.com/things) It's now a very simple portfolio/gallery built using Quarto. This post is a quick run-down of what I did, with notes to my future self. The source code is on github: <https://github.com/CrumpLab/things>.
 
 ## What I wanted
