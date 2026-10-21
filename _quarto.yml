@@ -7,6 +7,8 @@ project:
     # placeholder thumbnail isn't copied automatically.
     - CNAME
     - images/crumplab.png
+    # Lowercase address for the CV; forwards to /CrumpCV/ (served by the CrumpCV repo).
+    - crumpcv/index.html
 
 website:
   title: "crumplab"
@@ -22,6 +24,8 @@ website:
       - People.qmd
       - href: Publications.qmd
         text: Pubs
+      - href: https://www.crumplab.com/CrumpCV/
+        text: CV
       - Books.qmd
       - Courses.qmd
       - Apps.qmd
