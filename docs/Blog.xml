@@ -14,7 +14,7 @@
 <title>crumplab</title>
 <link>https://crumplab.com/Blog.html</link>
 </image>
-<generator>quarto-1.10.18</generator>
+<generator>quarto-1.10.19</generator>
 <lastBuildDate>Tue, 21 May 2024 04:00:00 GMT</lastBuildDate>
 <item>
   <title>And now for something completely different: Department Chair</title>
@@ -677,7 +677,7 @@ font-style: inherit;">0</span>].show()</span></code></pre></div></div>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The art website has moved. It is now at <a href="https://things.instances.crumplab.com" class="uri">https://things.instances.crumplab.com</a>.</p>
+<p>The art website has moved. It is now at <a href="https://www.crumplab.com/things/" class="uri">https://www.crumplab.com/things/</a>.</p>
 </div>
 </div>
 <p>I recently updated <a href="https://crumplab.com/things">my visual art website.</a> It’s now a very simple portfolio/gallery built using Quarto. This post is a quick run-down of what I did, with notes to my future self. The source code is on github: <a href="https://github.com/CrumpLab/things" class="uri">https://github.com/CrumpLab/things</a>.</p>
